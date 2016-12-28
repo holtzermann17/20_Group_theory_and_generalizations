@@ -1,0 +1,79 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{Subsemiautomaton}
+\pmcreated{2013-03-22 19:01:03}
+\pmmodified{2013-03-22 19:01:03}
+\pmowner{CWoo}{3771}
+\pmmodifier{CWoo}{3771}
+\pmtitle{subsemiautomaton}
+\pmrecord{7}{41888}
+\pmprivacy{1}
+\pmauthor{CWoo}{3771}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{20M35}
+\pmclassification{msc}{03D05}
+\pmclassification{msc}{68Q45}
+\pmclassification{msc}{68Q70}
+\pmdefines{strongly connected semiautomaton}
+\pmdefines{subsemiautomata}
+\pmdefines{subautomaton}
+\pmdefines{submachine}
+
+\usepackage{amssymb,amscd}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{mathrsfs}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+\usepackage{amsthm}
+% making logically defined graphics
+%%\usepackage{xypic}
+\usepackage{pst-plot}
+
+% define commands here
+\newcommand*{\abs}[1]{\left\lvert #1\right\rvert}
+\newtheorem{prop}{Proposition}
+\newtheorem{thm}{Theorem}
+\newtheorem{ex}{Example}
+\newcommand{\real}{\mathbb{R}}
+\newcommand{\pdiff}[2]{\frac{\partial #1}{\partial #2}}
+\newcommand{\mpdiff}[3]{\frac{\partial^#1 #2}{\partial #3^#1}}
+\begin{document}
+Just like groups and rings, a semiautomaton can be viewed as an algebraic structure.  As such, one may define algebraic constructs such as subalgebras and homomorphisms.  In this entry, we will briefly discuss the former.
+
+\subsubsection*{Definition}
+
+A semiautomaton $N=(T,\Gamma,\gamma)$ is said to be a \emph{subsemiautomaton} of a semiautomaton $M=(S,\Sigma,\delta)$ if $$T\subseteq S, \qquad \Gamma\subseteq \Sigma, \qquad \mbox{and} \qquad \gamma \subseteq \delta.$$  The last inclusion means the following: $\gamma(s,a)= \delta(s,a)$ for all $(s,a)\in T\times \Gamma$.  We write $N\le M$ when $N$ is a subsemiautomaton of $M$.  
+
+A subsemiautomaton $N$ of $M$ is said to be proper if $N\ne M$, and is written $N<M$.
+
+\textbf{Examples}.  Let $M=(S,\Sigma,\delta)$ be a semiautomaton.
+\begin{itemize}
+\item $M$ can be represented by its state diagram, which is just a directed graph.  Any strongly connected component of the state diagram represents a subsemiautomaton of $M$, characterized as a semiautomaton $(S',\Sigma,\delta')$ such that any state in $S'$ can be reached from any other state in $S'$.  In other words, for any $s,t\in S'$, there is a word $u$ over $\Sigma$ such that either $t\in \delta'(s,u)$, where $\delta'$ is the restriction of $\delta$ to $S'\times \Sigma$.  A semiautomaton whose state diagram is strongly connected is said to be \emph{strongly connected}.
+\item Suppose $M$ is strongly connected.  Then $M$ has no proper subsemiautomaton whose input alphabet is equal to the input alphabet of $M$.  In other words, if $N=(T,\Sigma,\gamma)\le M$, then $N=M$.  However, proper subsemiautomata of $M$ exist if we take $N=(T,\Gamma,\gamma)$ for any proper subset $\Gamma$ of $\Sigma$, provided that $|\Sigma|\ge 2$.  In this case, $\gamma$ is just the restriction of $\delta$ to the set $T\times \Gamma$.
+\item On the other hand, if $\Sigma$ is a singleton, and $M$ is strongly connected, then no proper subsemiautomata of $M$ exist.  Notice that if the transition function $\delta$ is single valued, then it is just a permutation on $S$ of order $|S|$.
+\end{itemize}
+
+\subsubsection*{Specializations to Other Machines}
+
+Computing devices derived from semiautomata such as automata and state-output machines may too be considered as algebras.  We record the definitions of subalgebras of these objects here.
+
+Note: the following notations are used: given an automaton $A=(S,\Sigma,\delta,I,F)$ and a state-output machine $M=(S,\Sigma,\Delta,\delta,\lambda)$, let $A'$ and $M'$ be the associated semiautomaton $(S,\Sigma,\delta)$.  So $A$ and $M$ may be written $(A',I,F)$ and $(M',\Delta,\lambda)$ respectively.
+
+\textbf{Definition (automaton)}.  $A=(A',I,F)$ is a \emph{subautomaton} of $B=(B',J,G)$ if 
+$$A'\le B',\qquad I\subseteq J, \qquad \mbox{and} \qquad F\subseteq G.$$
+
+\textbf{Definition (state-output machine)}.  $M=(M',\Delta,\lambda)$ is a \emph{submachine} of $N=(N',\Omega,\pi)$ if 
+$$M'\le N', \qquad \Delta \subseteq \Omega,\qquad \mbox{and } \quad \lambda \mbox{ is the restriction of }\pi\mbox{ to }S\times \Sigma,$$ where $S$ and $\Sigma$ are the state and input alphabets of $M$.
+
+\begin{thebibliography}{8}
+\bibitem{ag} A. Ginzburg, {\em Algebraic Theory of Automata}, Academic Press (1968).
+\end{thebibliography}
+%%%%%
+%%%%%
+\end{document}

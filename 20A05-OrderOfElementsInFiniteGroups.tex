@@ -1,0 +1,66 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{OrderOfElementsInFiniteGroups}
+\pmcreated{2013-03-22 16:34:02}
+\pmmodified{2013-03-22 16:34:02}
+\pmowner{rm50}{10146}
+\pmmodifier{rm50}{10146}
+\pmtitle{order of elements in finite groups}
+\pmrecord{5}{38757}
+\pmprivacy{1}
+\pmauthor{rm50}{10146}
+\pmtype{Theorem}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{20A05}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\newtheorem{thm}{Theorem}
+\newtheorem{cor}[thm]{Corollary}
+\newtheorem{lem}[thm]{Lemma}
+\newtheorem{prop}[thm]{Proposition}
+\newtheorem{ax}{Axiom}
+
+\begin{document}
+This article proves two elementary results regarding the orders of group elements in finite groups.
+
+\begin{thm} Let $G$ be a finite group, and let $a\in G$ and $b\in G$ be elements of $G$ that commute with each other. Let $m=\lvert a\rvert$, $n=\lvert b\rvert$. If $\gcd(m,n)=1$, then $mn=\lvert ab\rvert$.
+\end{thm}
+\textbf{Proof. }
+Note first that
+\[(ab)^{mn}=a^{mn}b^{mn}=(a^m)^n(b^n)^m=e_G\]
+since $a$ and $b$ commute with each other. Thus $\lvert ab\rvert \leq mn$. Now suppose $\lvert ab\rvert=k$. Then
+\[e_G=(ab)^k=(ab)^{km}=a^{km}b^{km}=b^{km}\]
+and thus $n|km$. But $\gcd(m,n)=1$, so $n|k$. Similarly, $m|k$ and thus $mn|k=\lvert ab\rvert$. These two results together imply that $mn=k$.
+
+\begin{thm} Let $G$ be a finite abelian group. If $G$ contains elements of orders $m$ and $n$, then it contains an element of order $\mathrm{lcm}(m,n)$. 
+\end{thm}
+\textbf{Proof. } 
+Choose $a$ and $b$ of orders $m$ and $n$ respectively, and write
+\[\mathrm{lcm}(m,n)=\prod p_i^{k_i}\]
+where the $p_i$ are distinct primes. Thus for each $i$, either $p_i^{k_i}\mid m$ or $p_i^{k_i}\mid n$. Thus either $a^{m/p_i^{k_i}}$ or $b^{n/p_i^{k_i}}$ has order $p_i^{k_i}$. Let this element be $c_i$. Now, the orders of the $c_i$ are pairwise coprime by construction, so 
+\[\left\lvert \prod c_i\right\rvert=\prod \left\lvert c_i\right\rvert=\mathrm{lcm}(m,n)\]
+and thus $\prod c_i$ is the required element.
+
+%%%%%
+%%%%%
+\end{document}

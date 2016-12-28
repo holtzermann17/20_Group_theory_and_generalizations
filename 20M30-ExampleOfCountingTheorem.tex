@@ -1,0 +1,43 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ExampleOfCountingTheorem}
+\pmcreated{2013-03-22 14:26:35}
+\pmmodified{2013-03-22 14:26:35}
+\pmowner{aoh45}{5079}
+\pmmodifier{aoh45}{5079}
+\pmtitle{example of counting theorem}
+\pmrecord{4}{35957}
+\pmprivacy{1}
+\pmauthor{aoh45}{5079}
+\pmtype{Example}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{20M30}
+
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amsthm}
+
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% making logically defined graphics
+%%%\usepackage{xypic}
+\begin{document}
+We shall find the number of distinct ways to colour the faces of a cube with 3 colours. We say that two colourings are distinct if one cannot be rotated so that it looks the same as the other. We find this by considering the action of the group $G$ of rotations of a cube on the set $X$ of colourings ignoring rotations. So $|X|=3^6$ and $|G|=24$. The number of distinct colourings is the number of orbits of $G$ in $X$.
+
+First we must consider what types of rotation there are in $G$. We have the identity rotation, rotations about an axis through the centre of two opposite faces, rotations about an axis through two opposite vertices, and rotations about an axis through the centre of two opposite edges. We need to find $\operatorname{stab}_g(X)$ for each $g\in G$.
+
+The identity rotation will fix all $3^6$ members of $X$. There are 6 rotations of order 4 through the centre of opposite faces, and these fix $3^3$ members of $X$ as the faces through which the axis passes can be any colour, but the other faces must all be the same colour to be fixed by this type of rotation. There are 3 rotations of order 2 through the centre of opposite faces, and these fix $3^4$ members of $X$. There are 8 rotations of order 3 through opposite vertices, and each of these fixes $3^2$ members of $X$ as the faces adjacent to each corner through which the axis passes must be the same colour. There are 6 rotations through the centre of opposite edges, and these have order 2. They each fix $3^3$ members of $X$.
+
+So we have
+\[
+\sum_{g\in G}\operatorname{stab}_g(X) = 1\cdot 3^6 + 6\cdot 3^3 + 3\cdot 3^4 + 8\cdot 3^2 + 6\cdot 3^3 = 1368
+\]
+hence
+\[
+\frac{1}{|G|}\sum_{g\in G}\operatorname{stab}_g(X) = \frac{1368}{24} = 57
+\]
+and so there are 57 distinct ways to colour a cube with three colours.
+%%%%%
+%%%%%
+\end{document}

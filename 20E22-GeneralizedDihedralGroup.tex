@@ -1,0 +1,53 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{GeneralizedDihedralGroup}
+\pmcreated{2013-03-22 14:53:28}
+\pmmodified{2013-03-22 14:53:28}
+\pmowner{yark}{2760}
+\pmmodifier{yark}{2760}
+\pmtitle{generalized dihedral group}
+\pmrecord{9}{36572}
+\pmprivacy{1}
+\pmauthor{yark}{2760}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{20E22}
+\pmsynonym{generalised dihedral group}{GeneralizedDihedralGroup}
+\pmrelated{DihedralGroup}
+\pmdefines{infinite dihedral group}
+\pmdefines{infinite dihedral}
+
+\usepackage{amssymb}
+\usepackage{amsmath}
+
+\DeclareMathOperator{\Dih}{Dih}
+\def\semidirect{\rtimes}
+\begin{document}
+\PMlinkescapeword{finite}
+\PMlinkescapeword{property}
+\PMlinkescapeword{source}
+
+Let $A$ be an abelian group.
+The \emph{generalized dihedral group} $\Dih(A)$
+is the semidirect product $A\semidirect C_2$,
+where $C_2$ is the cyclic group of order $2$,
+and the \PMlinkname{generator}{Generator} of $C_2$ maps elements of $A$ to their inverses.
+
+If $A$ is cyclic, then $\Dih(A)$ is called a dihedral group.
+The finite dihedral group $\Dih(C_n)$ is commonly denoted by $D_n$ or $D_{2n}$
+(the differing conventions being a source of confusion).
+The infinite dihedral group $\Dih(C_\infty)$ is denoted by $D_\infty$,
+and is isomorphic to 
+the free product $C_2*C_2$ of two cyclic groups of order $2$.
+
+If $A$ is an elementary abelian $2$-group, then so is $\Dih(A)$.
+If $A$ is not an elementary abelian $2$-group, then $\Dih(A)$ is non-abelian.
+
+The subgroup $A\times\{1\}$ of $\Dih(A)$ is of index $2$,
+and every element of $\Dih(A)$ that is not in this subgroup has order $2$.
+This property in fact characterizes generalized dihedral groups,
+in the sense that if a group $G$ has a subgroup $N$ of index $2$ such that all elements of the complement $G\setminus N$ are of order $2$,
+then $N$ is abelian and $G\cong \Dih(N)$.
+%%%%%
+%%%%%
+\end{document}

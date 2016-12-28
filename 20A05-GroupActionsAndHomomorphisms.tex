@@ -1,0 +1,125 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{GroupActionsAndHomomorphisms}
+\pmcreated{2013-03-22 13:18:48}
+\pmmodified{2013-03-22 13:18:48}
+\pmowner{CWoo}{3771}
+\pmmodifier{CWoo}{3771}
+\pmtitle{group actions and homomorphisms}
+\pmrecord{15}{33820}
+\pmprivacy{1}
+\pmauthor{CWoo}{3771}
+\pmtype{Derivation}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{20A05}
+%\pmkeywords{SymmetricGroup}
+%\pmkeywords{GroupHomomorphism}
+\pmrelated{GroupHomomorphism}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\begin{document}
+\textbf{Notes on group actions and homomorphisms}
+
+Let $G$ be a group, $X$ a non-empty set and $S_X$ the symmetric group 
+of $X$,
+i.e. the group of all bijective maps on $X$. $\cdot$ may denote a left 
+group
+action of $G$ on $X$.
+\begin{enumerate}
+\item
+For each $g \in G$ and $x \in X$ we define
+\begin{displaymath}
+f_g\colon X \to X, \quad x \mapsto g\cdot x \mbox{.}
+\end{displaymath}
+Since $f_{g^-1}(f_g(x)) =g^{-1} \cdot (g \cdot x) =x$ for each
+$x \in X$,
+$f_{g^-1}$ is the inverse of $f_g$. so $f_g$ is bijective and thus element of
+$S_X$. We define $F: G \to S_X, F(g) =f_g$ for all $g \in G$. This
+mapping is a group homomorphism: Let $g,h \in G, x \in X$. Then
+\begin{align*}
+F(gh)(x) &=f_{gh}(x) =(gh) \cdot x =g \cdot (h \cdot x) \\
+&=(f_g \circ f_h)(x)
+=(F(g) \circ F(h))(x)
+\end{align*}
+for all $x\in X$ implies $F(gh) =F(g) \circ F(h)$. --- The same is obviously true for a right
+group action.
+\item
+Now let $F: G \to S_x$ be a group homomorphism, and let 
+$f: G \times X \to X, (g,x) \mapsto F(g)(x)$ satisfy
+\begin{enumerate}
+\item
+$f(1_G, x) =F(1_g)(x) =x$ for all $x \in X$ and
+\item
+$f(gh, x) =F(gh)(x) =(F(g) \circ F(h)(x) =F(g)(F(h)(x)) =f(g, f(h,x))$,
+\end{enumerate}
+so $f$ is a group action induced by $F$.
+\end{enumerate}
+
+\section*{Characterization of group actions}
+Let $G$ be a group acting on a set $X$.
+Using the same notation as above, we have for each 
+$g \in \operatorname{ker}(F)$
+\begin{equation}
+F(g) =\operatorname{id}_x =f_g \Leftrightarrow g \cdot x =x, \quad \forall  x \in X \Leftrightarrow
+g \in \cup_{x \in X} G_x
+\end{equation}
+and it follows
+\begin{displaymath}
+\operatorname{ker}(F) =\bigcap_{x \in X} G_x.
+\end{displaymath}
+Let $G$ act transitively on $X$. Then for any $x \in X$, $X$ is the 
+orbit $G(x)$
+of $x$. As shown in ``conjugate stabilizer subgroups', all stabilizer 
+subgroups
+of elements $y \in G(x)$ are conjugate subgroups to $G_x$ in $G$. From 
+the above it follows that
+\begin{displaymath}
+\operatorname{ker}(F) =\bigcap_{g \in G} gG_xg^{-1}.
+\end{displaymath}
+For a faithful operation of $G$ the condition $g \cdot x =x, \;
+\forall x \in X
+\rightarrow g =1_G$ is equivalent to
+\begin{displaymath}
+\operatorname{ker}(F) =\{1_G\}
+\end{displaymath}
+and therefore $F\colon G \to S_X$ is a monomorphism.
+
+For the trivial operation of $G$ on $X$ given by $g \cdot x =x, \; \forall g \in G$
+the stabilizer subgroup $G_x$ is $G$ for all $x \in X$, and thus
+\begin{displaymath}
+\operatorname{ker}(F) =G.
+\end{displaymath}
+
+If the operation of $G$ on $X$ is free, then
+$G_x =\{1_G\}, \; \forall  x \in X$, thus the kernel of $F$ is 
+$\{1_G\}$--like for a faithful operation. But:
+
+Let $X=\{1, \ldots, n\}$ and $G=S_n$. Then the operation of $G$ on $X$ 
+given by
+\begin{displaymath}
+\pi \cdot i := \pi(i), \quad \forall i \in X,\; \pi \in S_n
+\end{displaymath}
+is faithful but not free.
+%%%%%
+%%%%%
+\end{document}

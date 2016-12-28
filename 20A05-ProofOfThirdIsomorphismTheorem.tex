@@ -1,0 +1,48 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ProofOfThirdIsomorphismTheorem}
+\pmcreated{2013-03-22 15:35:09}
+\pmmodified{2013-03-22 15:35:09}
+\pmowner{Thomas Heye}{1234}
+\pmmodifier{Thomas Heye}{1234}
+\pmtitle{proof of third isomorphism theorem}
+\pmrecord{5}{37496}
+\pmprivacy{1}
+\pmauthor{Thomas Heye}{1234}
+\pmtype{Proof}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{20A05}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\begin{document}
+We'll give a proof of  the third isomorphism theorem using the Fundamental homomorphism theorem.
+
+Let $G$ be a group, and let $K\subseteq H$ be normal subgroups of $G$. Define $p,q$ to be the natural homomorphisms from $G$ to $G/H$, $G/K$ respectively:
+\[p(g)=gH, q(g)=gK\;\forall\;g \in G.\]
+$K$ is a subset of $\ker(p)$, so there exists a unique homomorphism $\varphi\colon G/K \to G/H$ so that $\varphi \circ q=p$.
+
+$p$ is surjective, so $\varphi$ is surjective as well; hence $\operatorname{im}\varphi=G/H$. The kernel of $\varphi$ is $\ker(p)/K=H/K$. So by the first isomorphism theorem we have
+\[(G/K) / \ker(\varphi)=(G/K) / (H/K) \approx \operatorname{im}\varphi=G/H.\]
+%%%%%
+%%%%%
+\end{document}

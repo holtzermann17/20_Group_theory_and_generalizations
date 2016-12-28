@@ -1,0 +1,69 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{TransfiniteDerivedSeries}
+\pmcreated{2013-03-22 14:16:33}
+\pmmodified{2013-03-22 14:16:33}
+\pmowner{yark}{2760}
+\pmmodifier{yark}{2760}
+\pmtitle{transfinite derived series}
+\pmrecord{14}{35727}
+\pmprivacy{1}
+\pmauthor{yark}{2760}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{20F19}
+\pmclassification{msc}{20F14}
+\pmrelated{DerivedSubgroup}
+\pmdefines{perfect radical}
+\pmdefines{maximum perfect subgroup}
+\pmdefines{hypoabelianization}
+\pmdefines{hypoabelianisation}
+
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+\def\P#1{\mathcal{P}{#1}}
+\begin{document}
+\PMlinkescapeword{extension}
+\PMlinkescapeword{name}
+\PMlinkescapeword{rank}
+\PMlinkescapeword{series}
+\PMlinkescapeword{subgroup}
+\PMlinkescapeword{subgroups}
+\PMlinkescapeword{terms}
+
+The \emph{transfinite derived series} of a group is 
+an extension of its derived series, defined as follows.
+Let $G$ be a group and let $G^{(0)}=G$.
+For each ordinal $\alpha$ 
+let $G^{(\alpha+1)}$ be the derived subgroup of $G^{(\alpha)}$.
+For each limit ordinal $\delta$ 
+let $G^{(\delta)}=\bigcap_{\alpha\in\delta}G^{(\alpha)}$.
+
+Every member of the transfinite derived series of $G$ 
+is a fully invariant subgroup of $G$.
+
+The transfinite derived series eventually terminates, that is, 
+there is some ordinal $\alpha$ such that $G^{(\alpha+1)}=G^{(\alpha)}$.
+All remaining terms of the series are then equal to $G^{(\alpha)}$,
+which is called the \emph{perfect radical} or \emph{maximum perfect subgroup}
+of $G$, and is denoted $\P{G}$.
+As the name suggests, $\P{G}$ is perfect, 
+and every perfect \PMlinkname{subgroup}{Subgroup} of $G$ is a subgroup of $\P{G}$.
+A group in which the perfect radical is trivial 
+(that is, a group without any non-trivial perfect subgroups)
+is called a hypoabelian group.
+For any group $G$, the \PMlinkname{quotient}{QuotientGroup} $G/\P{G}$
+is hypoabelian, and is sometimes called the \emph{hypoabelianization} of $G$
+(by analogy with the abelianization).
+
+A group $G$ for which $G^{(n)}$ is trivial for some finite $n$ 
+is called a solvable group.
+A group $G$ for which $G^{(\omega)}$ (the intersection of the derived series)
+is trivial is called a residually solvable group.
+\PMlinkname{Free groups}{FreeGroup} of rank greater than $1$
+are examples of residually solvable groups that are not solvable.
+%%%%%
+%%%%%
+\end{document}

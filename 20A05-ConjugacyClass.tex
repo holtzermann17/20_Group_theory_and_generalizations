@@ -1,0 +1,51 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ConjugacyClass}
+\pmcreated{2013-03-22 12:18:09}
+\pmmodified{2013-03-22 12:18:09}
+\pmowner{djao}{24}
+\pmmodifier{djao}{24}
+\pmtitle{conjugacy class}
+\pmrecord{5}{31848}
+\pmprivacy{1}
+\pmauthor{djao}{24}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{20A05}
+\pmsynonym{conjugate}{ConjugacyClass}
+\pmsynonym{conjugate set}{ConjugacyClass}
+\pmsynonym{conjugate subgroup}{ConjugacyClass}
+\pmrelated{ConjugacyClassFormula}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic} 
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\begin{document}
+Two elements $g$ and $g'$ of a group $G$ are said to be {\em conjugate} if there exists $h \in G$ such that $g' = hgh^{-1}$. Conjugacy of elements is an equivalence relation, and the equivalence classes of $G$ are called {\em conjugacy classes}.
+
+Two subsets $S$ and $T$ of $G$ are said to be {\em conjugate} if there exists $g \in G$ such that
+$$
+T = \{gsg^{-1} \mid s \in S\} \subset G.
+$$
+In this situation, it is common to write $gSg^{-1}$ for $T$ to denote the fact that everything in $T$ has the form $gsg^{-1}$ for some $s \in S$. We say that two subgroups of $G$ are conjugate if they are conjugate as subsets.
+%%%%%
+%%%%%
+\end{document}

@@ -1,0 +1,48 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ASemilatticeIsACommutativeBand}
+\pmcreated{2013-03-22 12:57:28}
+\pmmodified{2013-03-22 12:57:28}
+\pmowner{mclase}{549}
+\pmmodifier{mclase}{549}
+\pmtitle{a semilattice is a commutative band}
+\pmrecord{6}{33320}
+\pmprivacy{1}
+\pmauthor{mclase}{549}
+\pmtype{Proof}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{20M99}
+\pmclassification{msc}{06A12}
+\pmrelated{Lattice}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\begin{document}
+This note explains how a semilattice is the same as a commutative band.
+
+Let $S$ be a semilattice, with partial order $<$ and each pair of elements $x$ and $y$ having a greatest lower bound $x \wedge y$.
+Then it is easy to see that the operation $\wedge$ defines a binary operation on $S$ which makes it a commutative semigroup, and that every element is idempotent since $x \wedge x = x$.
+
+Conversely, if $S$ is such a semigroup, define $x \leq y$ iff $x = xy$.  Again, it is easy to see that this defines a partial order on $S$, and that greatest lower bounds exist with respect to this partial order, and that in fact $x \wedge y = xy$.
+%%%%%
+%%%%%
+\end{document}

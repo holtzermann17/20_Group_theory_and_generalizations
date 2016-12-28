@@ -1,0 +1,53 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ComputationOfTheOrderOfoperatornameGLnmathbbFq}
+\pmcreated{2013-03-22 13:06:50}
+\pmmodified{2013-03-22 13:06:50}
+\pmowner{yark}{2760}
+\pmmodifier{yark}{2760}
+\pmtitle{computation of the order of $\operatorname{GL}(n, \mathbb{F}_q)$}
+\pmrecord{15}{33541}
+\pmprivacy{1}
+\pmauthor{yark}{2760}
+\pmtype{Proof}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{20G15}
+%\pmkeywords{general linear group}
+%\pmkeywords{finite field}
+%\pmkeywords{group order}
+\pmrelated{OrderOfTheGeneralLinearGroupOverAFiniteField}
+
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+\newcommand{\Fq}{\mathbb{F}_q}
+\newcommand{\GL}{\operatorname{GL}}
+\begin{document}
+\PMlinkescapeword{choose}
+\PMlinkescapeword{chooses}
+\PMlinkescapephrase{linearly independent}
+
+$\GL(n, \Fq)$ is the group of invertible $n \times n$ matrices
+over the finite field $\Fq$.
+Here is a proof that
+$ \lvert \GL(n, \Fq) \rvert = (q^n - 1)(q^n - q) \dotsm (q^n - q^{n-1}) $.
+
+Each element $A \in \GL(n, \Fq)$ is given by a collection of $n$
+\PMlinkname{$\Fq$-linearly independent vectors}{LinearIndependence}.
+If one chooses the first column vector of $A$ from $(\Fq)^n$
+there are $q^n$ choices, but one can't choose the zero vector
+since this would make the determinant of $A$ zero.
+So there are really only $q^n-1$ choices.
+To choose an $i$-th vector from $(\Fq)^n$
+which is linearly independent from $i-1$ already chosen
+linearly independent vectors $\lbrace V_1, \dots, V_{i-1}\rbrace$
+one must choose a vector not in
+the span of $\lbrace V_1, \dots, V_{i-1} \rbrace$.
+There are $q^{i-1}$ vectors in this span,
+so the number of choices is $q^n - q^{i-1}$.
+Thus the number of linearly independent collections of $n$ vectors in $\Fq$
+is $(q^n - 1)(q^n - q) \dotsm (q^n - q^{n-1})$.
+%%%%%
+%%%%%
+\end{document}

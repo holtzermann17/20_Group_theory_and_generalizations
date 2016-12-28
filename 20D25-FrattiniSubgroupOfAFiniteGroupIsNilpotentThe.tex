@@ -1,0 +1,43 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{FrattiniSubgroupOfAFiniteGroupIsNilpotentThe}
+\pmcreated{2013-03-22 13:16:44}
+\pmmodified{2013-03-22 13:16:44}
+\pmowner{yark}{2760}
+\pmmodifier{yark}{2760}
+\pmtitle{Frattini subgroup of a finite group is nilpotent, the}
+\pmrecord{16}{33762}
+\pmprivacy{1}
+\pmauthor{yark}{2760}
+\pmtype{Theorem}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{20D25}
+
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amsthm}
+
+\def\Frat#1{\Phi(#1)}
+\def\genby#1{{\langle #1\rangle}}
+\begin{document}
+\PMlinkescapeword{nilpotent}
+
+The Frattini subgroup of a finite group is \PMlinkname{nilpotent}{NilpotentGroup}.
+
+\begin{proof}
+Let $\Frat G$ denote the Frattini subgroup of a finite group $G$.
+Let $S$ be a Sylow subgroup of $\Frat G$.
+Then by the Frattini argument, $G=\Frat{G}N_G(S)=\genby{\Frat G\cup N_G(S)}$.
+But the Frattini subgroup is finite and formed of non-generators,
+so it follows that $G=\genby{N_G(S)}=N_G(S)$.
+Thus $S$ is normal in $G$, and therefore normal in $\Frat G$.
+The result now follows, as \PMlinkname{any finite group whose Sylow subgroups are all normal is nilpotent}{ClassificationOfFiniteNilpotentGroups}.
+\end{proof}
+
+In fact, the same proof shows that for any group $G$,
+if $\Frat G$ is finite then $\Frat G$ is nilpotent.
+
+%%%%%
+%%%%%
+\end{document}

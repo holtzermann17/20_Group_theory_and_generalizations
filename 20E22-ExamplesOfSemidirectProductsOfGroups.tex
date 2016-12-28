@@ -1,0 +1,60 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ExamplesOfSemidirectProductsOfGroups}
+\pmcreated{2013-03-22 17:22:52}
+\pmmodified{2013-03-22 17:22:52}
+\pmowner{rm50}{10146}
+\pmmodifier{rm50}{10146}
+\pmtitle{examples of semidirect products of groups}
+\pmrecord{4}{39747}
+\pmprivacy{1}
+\pmauthor{rm50}{10146}
+\pmtype{Example}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{20E22}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\newcommand{\C}{\mathbb{C}}
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\Q}{\mathbb{Q}}
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\Aut}{\operatorname{Aut}}
+\newcommand{\semidirect}{\rtimes}
+\newcommand{\cD}{\mathcal{D}}
+\begin{document}
+Suppose $H=\Z/n\Z$ and let $r$ be a generator for $H$. Let $Q=\Z/2\Z=<s>$. Define $\theta:Q\to\Aut(H)$ by $\theta(s)(r)=r^{-1}$. Let $G=H\semidirect_{\theta} Q$. Then in $G$, 
+\[srs=srs^{-1}=\theta(s)(r)=r^{-1}\]
+by the canonical equivalence of inner and outer semidirect products. So $G$ has $2n$ elements, two generators $r,s$ satisfying
+\begin{gather*}
+r^n=s^2=1\\
+srs=r^{-1}
+\end{gather*}
+and thus $G=\cD_{2n}$, the $n^{\mathrm{th}}$ dihedral group.
+
+If instead $H=\Z$, the result is the infinite dihedral group.
+
+As another example, if $G$ is a group, then the holomorph of $G$ is $G\semidirect \Aut(G)$ under the identity map from $\Aut(G)$ to itself.
+%%%%%
+%%%%%
+\end{document}

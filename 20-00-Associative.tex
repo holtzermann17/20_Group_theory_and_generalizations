@@ -1,0 +1,50 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{Associative}
+\pmcreated{2013-03-22 12:22:48}
+\pmmodified{2013-03-22 12:22:48}
+\pmowner{CWoo}{3771}
+\pmmodifier{CWoo}{3771}
+\pmtitle{associative}
+\pmrecord{11}{32150}
+\pmprivacy{1}
+\pmauthor{CWoo}{3771}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{20-00}
+\pmsynonym{associativity}{Associative}
+\pmrelated{Commutative}
+\pmrelated{Semigroup}
+\pmrelated{Group}
+\pmdefines{non-associative}
+
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+%\usepackage{psfrag}
+%\usepackage{graphicx}
+%%%\usepackage{xypic}
+\begin{document}
+Let $(S,\phi)$ be a set with binary operation $\phi$.  $\phi$ is said to be \emph{associative} over $S$ if 
+
+$$ \phi(a,\phi(b,c)) = \phi(\phi(a,b),c) $$
+
+for all $a,b,c \in S$.  
+
+Examples of associative operations are addition and multiplication over the integers (or reals), or addition or multiplication over $n \times n$ matrices.
+
+We can construct an operation which is not associative.  Let $S$ be the integers.  and define $\nu(a,b)=a^2+b$.  Then $\nu(\nu(a,b),c)=\nu(a^2+b,c)=a^4+2ba^2+b^2+c$.  But $\nu(a,\nu(b,c))=\nu(a,b^2+c)=a+b^4+2cb^2+c^2$, hence $\nu(\nu(a,b),c) \ne \nu(a,\nu(b,c))$. 
+
+Note, however, that if we were to take $S=\{0\}$, $\nu$ would be associative over $S$!.  This illustrates the fact that the set the operation is taken with respect to is very important.
+
+\paragraph{Example.}
+
+We show that the division operation over nonzero reals is non-associative.  All we need is a counter-example: so let us compare $1/(1/2)$ and $(1/1)/2$.  The first expression is equal to $2$, the second to $1/2$, hence division over the nonzero reals is not associative.
+
+\textbf{Remark.}  The property of being associative of a binary operation can be generalized to an arbitrary $n$-ary operation, where $n\ge 2$.  An $n$-ary operation $\phi$ on a set $A$ is said to be \emph{associative} if for any elements $a_1,\ldots, a_{2n-1} \in A$, we have
+$$\phi(\phi(a_1,\ldots, a_n), a_{n+1} \ldots, a_{2n-1}) = \cdots = \phi(a_1, \ldots, a_{n-1}, \phi(a_n,\ldots, a_{2n-1})).$$
+In other words, for any $i=1,\ldots, n$, if we set $b_i:=\phi (a_1,\ldots, \phi(a_i,\ldots, a_{i+n-1}),\ldots, a_{2n-1})$, then $\phi$ is associative iff $b_i=b_1$ for all $i=1,\ldots, n$.  Therefore, for instance, a ternary operation $f$ on $A$ is associative if $f(f(a,b,c),d,e)=f(a,f(b,c,d),e)=f(a,b,f(c,d,e))$.
+%%%%%
+%%%%%
+\end{document}

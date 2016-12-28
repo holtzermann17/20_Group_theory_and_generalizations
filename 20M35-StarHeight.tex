@@ -1,0 +1,74 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{StarHeight}
+\pmcreated{2013-03-22 18:57:55}
+\pmmodified{2013-03-22 18:57:55}
+\pmowner{CWoo}{3771}
+\pmmodifier{CWoo}{3771}
+\pmtitle{star height}
+\pmrecord{9}{41824}
+\pmprivacy{1}
+\pmauthor{CWoo}{3771}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{20M35}
+\pmclassification{msc}{68Q70}
+\pmrelated{StarFree}
+
+\usepackage{amssymb,amscd}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{mathrsfs}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+\usepackage{amsthm}
+% making logically defined graphics
+%%\usepackage{xypic}
+\usepackage{pst-plot}
+
+% define commands here
+\newcommand*{\abs}[1]{\left\lvert #1\right\rvert}
+\newtheorem{prop}{Proposition}
+\newtheorem{thm}{Theorem}
+\newtheorem{ex}{Example}
+\newcommand{\real}{\mathbb{R}}
+\newcommand{\pdiff}[2]{\frac{\partial #1}{\partial #2}}
+\newcommand{\mpdiff}[3]{\frac{\partial^#1 #2}{\partial #3^#1}}
+\newcommand{\h}{\operatorname{ht}}
+\begin{document}
+The \emph{star height} of a regular expression $p$ over an alphabet $\Sigma$, denoted by $\h(p)$, is defined recursively as follows:
+\begin{enumerate}
+\item $\h(\varnothing)=\h(a)=0$ for any $a\in \Sigma$;
+\item $\h(p\cup q)=\h(pq)=\max(\h(p),\h(q))$;
+\item $\h(p^*)=\h(p)+1$.
+\end{enumerate}
+
+Let $\Sigma=\lbrace a,b,c\rbrace$.  The following expressions have star height $0,1,2,3$:
+$$ (a\cup b)c  \qquad a^*b^* \qquad (a^*b)^*c \qquad ((ab^*a \cup c)^* b)^*  $$
+
+Since any regular expression $p$ describes a regular language $L(p)$, we may extend the definition of star height to regular languages.  However, since a regular language may be described by more than one regular expressions, we need to be a little careful:
+
+The \emph{star height} of a regular language $L$ is the least integer $i$ such that $L$ may be described by a regular expression of star height $i$.  In other words: $$\h(L)=\min \lbrace h(p) \mid L=L(p)\mbox{, }p\in R(\Sigma) \rbrace,$$
+where $R(\Sigma)$ is the set of all regular expressions over $\Sigma$.
+
+\textbf{Remarks}.
+\begin{itemize}
+\item Any regular language over a singleton alphabet has star height at most 1, which can be proved by the pumping lemma for regular languages.
+\item If the alphabet $\Sigma$ consists of at least two letters, then for every positive integer $n$, there is a regular language whose star height is $n$.  In fact, it can be shown that if $|\Sigma|=2$, then for every $n$, there is a regular language $L$ over $\Sigma$ such that $\h(L)=n$.
+\item It was an open question whether an algorithm exists for determining $\h(L)$ for an arbitrary regular language $L$.  In 2005, the question was resolved by D. Kirsten in the positive, and the algorithm is that of a non-deterministic finite automaton.
+\item We may also define star height on generalized regular expressions.  For a regular language $L$, define $\h_g(L)=\min \lbrace h(p) \mid L=L(p)\mbox{, }p\in R_g(\Sigma) \rbrace$, where $R_g(\Sigma)$ is the set of all generalized regular expressions.  It is clear that $\h_g(L)\le \h(L)$.  However, it is still an open question whether, for every integer $n$, there is a regular language $L$ with $\h_g(L)=n$.
+
+A star-free language has star height $0$ with respect to representations by generalized regular expressions, but may be positive with respect to representations by regular expressions, for example $L=\lbrace ab\rbrace^*$.
+\end{itemize}
+
+\begin{thebibliography}{9}
+\bibitem{AS} A. Salomaa, {\em Formal Languages}, Academic Press, New York (1973).
+\bibitem{AS1} A. Salomaa, {\em Jewels of Formal Language Theory}, Computer Science Press (1981).
+\end{thebibliography}
+%%%%%
+%%%%%
+\end{document}

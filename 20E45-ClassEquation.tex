@@ -1,0 +1,40 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ClassEquation}
+\pmcreated{2013-03-22 13:10:41}
+\pmmodified{2013-03-22 13:10:41}
+\pmowner{yark}{2760}
+\pmmodifier{yark}{2760}
+\pmtitle{class equation}
+\pmrecord{9}{33624}
+\pmprivacy{1}
+\pmauthor{yark}{2760}
+\pmtype{Theorem}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{20E45}
+\pmsynonym{conjugacy class formula}{ClassEquation}
+\pmrelated{ConjugacyClass}
+
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+\begin{document}
+The conjugacy classes of a group form a partition of its elements.
+In a finite group, this means that the order of the group is
+the sum of the number of elements of the distinct conjugacy classes.
+For an element $g$ of group $G$,
+we denote the centralizer in $G$ of $g$ by $C_G(g)$.
+The number of elements in the conjugacy class of $g$ is $[G:C_G(g)]$,
+the index of $C_G(g)$ in $G$.
+For an element $g$ of the center $Z(G)$ of $G$,
+the conjugacy class of $g$ consists of the singleton $\{g\}$.
+Putting this together gives us the \emph{class equation}
+\[
+  |G| = |Z(G)| + \sum_{i=1}^m [G:C_G(x_i)]
+\]
+where the $x_i$ are elements of
+the distinct conjugacy classes contained in $G\setminus Z(G)$.
+%%%%%
+%%%%%
+\end{document}

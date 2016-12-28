@@ -1,0 +1,45 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{MatrixRepresentation}
+\pmcreated{2013-03-22 14:53:56}
+\pmmodified{2013-03-22 14:53:56}
+\pmowner{drini}{3}
+\pmmodifier{drini}{3}
+\pmtitle{matrix representation}
+\pmrecord{9}{36581}
+\pmprivacy{1}
+\pmauthor{drini}{3}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{20C99}
+\pmrelated{PermutationRepresentation}
+
+\usepackage{graphicx}
+%%%\usepackage{xypic} 
+\usepackage{bbm}
+\newcommand{\Z}{\mathbbmss{Z}}
+\newcommand{\C}{\mathbbmss{C}}
+\newcommand{\R}{\mathbbmss{R}}
+\newcommand{\Q}{\mathbbmss{Q}}
+\newcommand{\mathbb}[1]{\mathbbmss{#1}}
+\newcommand{\figura}[1]{\begin{center}\includegraphics{#1}\end{center}}
+\newcommand{\figuraex}[2]{\begin{center}\includegraphics[#2]{#1}\end{center}}
+\newtheorem{dfn}{Definition}
+\begin{document}
+A matrix representation of a group $G$ is a group homomorphism between $G$ and $GL_n(\C)$, that is, a function
+\[ X:G\to GL_n(\C)\]
+such that 
+\begin{itemize}
+\item $X(gh)=X(g)X(h)$,
+\item $X(e)=I$
+\end{itemize}
+
+Notice that this definition is equivalent to the group representation definition when the vector space $V$ is finite dimensional over $\C$. The parameter $n$ (or in the case of a group representation, the dimension of $V$) is called the \emph{degree} of the representation.
+
+
+\begin{thebibliography}{9}
+\bibitem{sagan} Bruce E. Sagan. \emph{The Symmetric Group: Representations, Combinatorial Algorithms and Symmetric Functions.}  2a Ed. 2000. Graduate Texts in Mathematics. Springer.
+\end{thebibliography}
+%%%%%
+%%%%%
+\end{document}

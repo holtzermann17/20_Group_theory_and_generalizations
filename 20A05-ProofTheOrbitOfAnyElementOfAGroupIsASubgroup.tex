@@ -1,0 +1,42 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ProofTheOrbitOfAnyElementOfAGroupIsASubgroup}
+\pmcreated{2013-03-22 13:30:58}
+\pmmodified{2013-03-22 13:30:58}
+\pmowner{drini}{3}
+\pmmodifier{drini}{3}
+\pmtitle{Proof: The orbit of any element of a group is a subgroup}
+\pmrecord{6}{34102}
+\pmprivacy{1}
+\pmauthor{drini}{3}
+\pmtype{Proof}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{20A05}
+%\pmkeywords{group}
+%\pmkeywords{subgroup}
+\pmrelated{Group}
+\pmrelated{Subgroup}
+\pmrelated{ProofThatEveryGroupOfPrimeOrderIsCyclic}
+\pmrelated{ProofOfTheConverseOfLagrangesTheoremForCyclicGroups}
+\pmdefines{orbit}
+
+\usepackage{graphicx}
+%%%\usepackage{xypic} 
+\usepackage{bbm}
+\newcommand{\Z}{\mathbbmss{Z}}
+\newcommand{\C}{\mathbbmss{C}}
+\newcommand{\R}{\mathbbmss{R}}
+\newcommand{\Q}{\mathbbmss{Q}}
+\newcommand{\mathbb}[1]{\mathbbmss{#1}}
+\newcommand{\figura}[1]{\begin{center}\includegraphics{#1}\end{center}}
+\newcommand{\figuraex}[2]{\begin{center}\includegraphics[#2]{#1}\end{center}}
+\begin{document}
+Following is a proof that, if $G$ is a group and $g \in G$, then $\langle g \rangle \le G$. Here $\langle g \rangle$ is the orbit of $g$ and is defined as
+$$\langle g \rangle=\{g^n : n\in\Z\}$$
+
+Since $g \in \langle g \rangle$, then $\langle g \rangle$ is nonempty.
+
+Let $a,b \in \langle g \rangle$.  Then there exist $x,y \in {\mathbb Z}$ such that $a=g^x$ and $b=g^y$.  Since $ab^{-1}=g^x(g^y)^{-1}=g^xg^{-y}=g^{x-y} \in \langle g \rangle$, it follows that $\langle g \rangle \le G$.
+%%%%%
+%%%%%
+\end{document}

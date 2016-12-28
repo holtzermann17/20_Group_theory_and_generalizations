@@ -1,0 +1,76 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ExampleOfGroupsOfOrderPq}
+\pmcreated{2013-03-22 14:51:15}
+\pmmodified{2013-03-22 14:51:15}
+\pmowner{jh}{7326}
+\pmmodifier{jh}{7326}
+\pmtitle{example of groups of order pq}
+\pmrecord{4}{36526}
+\pmprivacy{1}
+\pmauthor{jh}{7326}
+\pmtype{Example}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{20D20}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\newcommand{\norm}[1]{\left\Vert#1\right\Vert}
+\newcommand{\abs}[1]{\left\vert#1\right\vert}
+\newcommand{\inn}[1]{\langle#1\rangle}
+\newcommand{\set}[1]{\{#1\}}
+\newcommand{\Integer}{\mathbb{Z}}
+\newcommand{\Rational}{\mathbb{Q}}
+\newcommand{\Real}{\mathbb{R}}
+\newcommand{\Complex}{\mathbb{C}}
+\newcommand{\Field}{\mathbb{F}}
+\newcommand{\eps}{\varepsilon}
+\newcommand{\Basis}{\mathscr{B}}
+\newcommand{\CG}{\Complex G}
+\newcommand{\Mn}{\mathcal{M}}
+\newcommand{\GL}{\mathrm{GL}}
+\newcommand{\SL}{\mathrm{SL}}
+\newcommand{\Sn}{\mathrm{S}}
+\newcommand{\Orbit}{\mathcal{O}}
+\DeclareMathOperator{\Aut}{Aut} \DeclareMathOperator{\Inn}{Inn}
+\DeclareMathOperator{\Sym}{Sym} \DeclareMathOperator{\Alt}{Alt}
+\DeclareMathOperator{\tr}{tr} \DeclareMathOperator{\Stab}{Stab}
+\DeclareMathOperator{\sgn}{sgn} \DeclareMathOperator{\Hom}{Hom}
+\DeclareMathOperator{\End}{End} \DeclareMathOperator{\Res}{Res}
+\DeclareMathOperator{\Ind}{Ind}
+\begin{document}
+As a specific example, let us classify groups of order 21. Let $G$ be a group of order 21. There is only one Sylow 7-subgroup $K$ so it is normal. The possibility of there being conjugate Sylow 3-subgroups is not ruled out. Let $x$ denote a generator for $K$, and $y$ a generator for one of the Sylow 3-subgroups $H$. Then $x^7=y^3=1$, and $yxy^{-1}=x^i$ for some $i<7$ since $K$ is normal. Now $x=y^3 x y^{-3}=y^2 x^i y^{-2}= y x^{i^2} y^{-1}=x^{i^3}$, or $i^3=1 \mod 7$. This implies $i=1,2$, or 4.
+
+Case 1: $yxy^{-1}=x$, so $G$ is abelian and isomorphic to
+$C_{21}=C_3 \times C_7$.
+
+Case 2: $yxy^{-1}=x^2$, then every product of the elements $x,y$
+can be reduced to one in the form $x^i y^j$, $0 \leq i <7$, $0
+\leq j <3$. These 21 elements are clearly distinct, so $G=\inn{x,y
+\mid x^7=y^3=1, yx=x^2y}$.
+
+Case 3: $yxy^{-1}=x^4$, then since $y^2$ is also a generator of
+$H$ and $y^2 x y^{-2}=y x^4 y^{-1}=x^{16}=x^2$, we have recovered
+case 2 above.
+%%%%%
+%%%%%
+\end{document}

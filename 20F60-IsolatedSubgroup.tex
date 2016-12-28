@@ -1,0 +1,59 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{IsolatedSubgroup}
+\pmcreated{2013-03-22 14:55:08}
+\pmmodified{2013-03-22 14:55:08}
+\pmowner{pahio}{2872}
+\pmmodifier{pahio}{2872}
+\pmtitle{isolated subgroup}
+\pmrecord{13}{36605}
+\pmprivacy{1}
+\pmauthor{pahio}{2872}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{20F60}
+\pmclassification{msc}{06A05}
+\pmrelated{RankOfValuation}
+\pmrelated{KrullValuation}
+\pmdefines{rank of ordered group}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+ \usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\theoremstyle{definition}
+\newtheorem*{thmplain}{Theorem}
+\begin{document}
+Let $G$ be a \PMlinkescapetext{multiplicative} ordered group and $F$ its subgroup. \,We call this subgroup \PMlinkescapetext{{\em isolated}} if every element $f$ of $F$ and every element $g$ of $G$ satisfy
+$$f \leqq g \leqq 1 \,\,\,\Rightarrow \,\, g\in F.$$
+
+If an ordered group $G$ has only a finite number of isolated subgroups, then the number of proper ($\neq G$) isolated subgroups of $G$ is the \PMlinkescapetext{{\em rank}} of $G$.
+
+\begin{thmplain}
+ \, Let $G$ be an abelian ordered group with \PMlinkname{order}{OrderGroup} at least 2. \,The \PMlinkescapetext{rank} of $G$ equals one iff there is an order-preserving isomorphism from $G$ onto some subgroup of the multiplicative group of real numbers.
+\end{thmplain}
+
+\begin{thebibliography}{9}
+\bibitem{Larsen & McCarthy} {\sc M. Larsen \& P. McCarthy}: {\em Multiplicative theory of ideals}. \,Academic Press. New York (1971).
+\end{thebibliography}
+%%%%%
+%%%%%
+\end{document}

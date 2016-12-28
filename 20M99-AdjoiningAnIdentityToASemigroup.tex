@@ -1,0 +1,51 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{AdjoiningAnIdentityToASemigroup}
+\pmcreated{2013-03-22 13:01:19}
+\pmmodified{2013-03-22 13:01:19}
+\pmowner{mclase}{549}
+\pmmodifier{mclase}{549}
+\pmtitle{adjoining an identity to a semigroup}
+\pmrecord{5}{33410}
+\pmprivacy{1}
+\pmauthor{mclase}{549}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{20M99}
+\pmrelated{Semigroup}
+\pmrelated{Monoid}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\begin{document}
+It is possible to formally adjoin an identity element to any semigroup to make it into a monoid.
+
+Suppose $S$ is a semigroup without an identity, and consider the set $S \cup \{1\}$ where $1$ is a symbol not in $S$.  Extend the semigroup operation from $S$ to $S \cup \{1\}$ by additionally defining:
+$$s \cdot 1 = s = 1 \cdot s, \text{for all} s \in S \cup {1}$$
+It is easy to verify that this defines a semigroup (associativity is the only thing that needs to be checked).
+
+As a matter of notation, it is customary to write $S^1$ for the semigroup $S$ with an identity adjoined in this manner, if $S$ does not already have one, and to agree that $S^1 = S$, if $S$ does already have an identity.
+
+Despite the simplicity of this construction, however, it rarely allows one to simplify a problem by considering monoids instead of semigroups.  As soon as one starts to look at the structure of the semigroup, it is almost invariably the case that one needs to consider subsemigroups and ideals of the semigroup which do not contain the identity.
+%%%%%
+%%%%%
+\end{document}

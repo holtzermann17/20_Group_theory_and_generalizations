@@ -1,0 +1,76 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{GroupHomomorphism}
+\pmcreated{2013-05-17 17:53:21}
+\pmmodified{2013-05-17 17:53:21}
+\pmowner{yark}{2760}
+\pmmodifier{unlord}{1}
+\pmtitle{group homomorphism}
+\pmrecord{27}{30719}
+\pmprivacy{1}
+\pmauthor{yark}{1}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{20A05}
+\pmsynonym{homomorphism}{GroupHomomorphism}
+\pmsynonym{homomorphism of groups}{GroupHomomorphism}
+\pmrelated{Group}
+\pmrelated{Kernel}
+\pmrelated{Subgroup}
+\pmrelated{TypesOfHomomorphisms}
+\pmrelated{KernelOfAGroupHomomorphism}
+\pmrelated{GroupActionsAndHomomorphisms}
+\pmrelated{Endomorphism2}
+\pmrelated{GroupsOfRealNumbers}
+\pmrelated{HomomorphicImageOfGroup}
+\pmdefines{epimorphism}
+\pmdefines{monomorphism}
+\pmdefines{automorphism}
+\pmdefines{endomorphism}
+\pmdefines{isomorphism}
+\pmdefines{isomorphic}
+\pmdefines{group epimorphism}
+\pmdefines{group monomorphism}
+\pmdefines{group automorphism}
+\pmdefines{group endomorphism}
+\pmdefines{group isomorphism}
+\pmdefines{epimorphism of groups}
+\pmdefines{monomorphism of groups}
+\pmdefines{automorphism of a group}
+\pmdefines{endom}
+
+\usepackage{amsfonts}
+
+\def\Z{\mathbb{Z}}
+\begin{document}
+\PMlinkescapeword{endomorphism}
+\PMlinkescapeword{structure}
+
+Let $(G,\ast)$ and $(K,\star)$ be two groups.  A \emph{group homomorphism} is a
+function $\phi\colon G \to K$ such that
+$\phi (s \ast t) = \phi(s) \star \phi(t)$ for all $s,t \in G$.
+
+A composition of group homomorphisms is again a homomorphism.
+
+Let $\phi\colon G\to K$ a group homomorphism.
+Then the kernel of $\phi$ is a normal subgroup of $G$,
+and the image of $\phi$ is a subgroup of $K$.
+Also, $\phi(g^n)=\phi(g)^n$ for all $g\in G$ and for all $n \in\Z$.
+In particular,
+taking $n=-1$ we have $\phi(g^{-1})=\phi(g)^{-1}$ for all $g \in G$,
+and taking $n=0$ we have $\phi(1_G)=1_K$,
+where $1_G$ and $1_K$ are the identity elements of $G$ and $K$,
+respectively.
+
+Some special homomorphisms have special names.
+If the homomorphism $\phi\colon G\to K$ is injective,
+we say that $\phi$ is a \emph{monomorphism},
+and if $\phi$ is surjective we call it an \emph{epimorphism}.
+When $\phi$ is both injective and surjective (that is, bijective) we call it an \emph{isomorphism}.
+In the latter case we also say that $G$ and $K$ are \emph{isomorphic}, meaning they are basically the same group (have the same structure).
+A homomorphism from $G$ on itself is called an \emph{endomorphism},
+and if it is bijective then it is called an \emph{automorphism}.
+%%%%%
+%%%%%
+ % rerender
+\end{document}

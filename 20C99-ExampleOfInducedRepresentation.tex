@@ -1,0 +1,94 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ExampleOfInducedRepresentation}
+\pmcreated{2013-03-22 14:35:43}
+\pmmodified{2013-03-22 14:35:43}
+\pmowner{rspuzio}{6075}
+\pmmodifier{rspuzio}{6075}
+\pmtitle{example of induced representation}
+\pmrecord{8}{36160}
+\pmprivacy{1}
+\pmauthor{rspuzio}{6075}
+\pmtype{Example}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{20C99}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\begin{document}
+To understand the definition of induced representation, let us work through a simple example in detail.
+
+Let $G$ be the group of permutations of three objects and let $H$ be the  subgroup of even permutations.  We have
+ $$G = \{ e, (ab), (ac), (bc), (abc), (acb) \}$$
+ $$H = \{ e, (abc), (acb) \}$$
+
+Let $V$ be the one dimensional representation of $H$.  Being one-dimensional, $V$ is spanned by a single basis vector $v$.  The action of $H$ on $V$ is given as
+ $$e v = v$$
+ $$(abc) v = \exp (2 \pi i / 3) v$$
+ $$(acb) v = \exp (4 \pi i / 3) v$$
+
+Since $H$ has half as many elements as $G$, there are exactly two cosets, $\sigma_1$ and $\sigma_2$ in $G/H$ where
+ $$\sigma_1 = \{ e, (abc), (acb) \}$$
+ $$\sigma_2 = \{ (ab), (ac), (bc) \}$$
+
+Since there are two cosets, the vector space of the induced representation consists of the direct sum of two formal translates of $V$.  A basis for this space is $\{ \sigma_1 v, \sigma_2 v \}$.
+
+We will now compute the action of $G$ on this vector space.  To do this, we need a choice of coset representatives.  Let us choose $g_1 = e$ as a representative of $\sigma_1$ and $g_2 = (ab)$ as a representative of $\sigma_2$.  As a preliminary step, we shall express the product of every element of $G$ with a coset representative as the product of a coset representative and an element of $H$.
+ $$e \cdot g_1 = e =  g_1 \cdot e$$
+ $$e \cdot g_2 = (ab) = g_2 \cdot e$$
+ $$(ab) \cdot g_1 = (ab) = g_2 \cdot e$$
+ $$(ab) \cdot g_2 = e = g_1 \cdot e$$
+ $$(bc) \cdot g_1 = (bc) = g_2 \cdot (acb)$$
+ $$(bc) \cdot g_2 = (abc) = g_1 \cdot (abc)$$
+ $$(ac) \cdot g_1 = (ac) = g_2 \cdot (abc)$$
+ $$(ac) \cdot g_2 = (acb) = g_1 \cdot (acb)$$
+ $$(abc) \cdot g_1 = (abc) = g_1 \cdot (abc)$$
+ $$(abc) \cdot g_2 = (bc) = g_2 \cdot (acb)$$
+ $$(acb) \cdot g_1 = (acb) = g_1 \cdot (acb)$$
+ $$(acb) \cdot g_2 = (ac) = g_2 \cdot (abc)$$
+We will now compute of the action of $G$ using the formula $g(\sigma v) = \tau (hv)$ given in the definition.
+ $$e (\sigma_1 v) = [e \cdot g_1] (e v) = \sigma_1 v$$
+ $$e (\sigma_2 v) = [e \cdot g_2] (e v) = \sigma_2 v$$
+ $$(ab) (\sigma_1 v) = [(ab) \cdot g_1] (e v) = \sigma_2 v$$
+ $$(ab) (\sigma_2 v) = [(ab) \cdot g_2] (e v) = \sigma_1 v$$
+ $$(bc) (\sigma_1 v) = [(bc) \cdot g_1] ((acb) v) = \exp(4 \pi i / 3) \sigma_2 v$$
+ $$(bc) (\sigma_2 v) = [(bc) \cdot g_2] ((abc) v) = \exp(2 \pi i / 3) \sigma_1 v$$
+ $$(ac) (\sigma_1 v) = [(ac) \cdot g_1] ((abc) v) = \exp(2 \pi i / 3) \sigma_2 v$$
+ $$(ac) (\sigma_2 v) = [(ac) \cdot g_2] ((acb) v) = \exp(4 \pi i / 3) \sigma_1 v$$
+ $$(abc) (\sigma_1 v) = [(abc) \cdot g_1] ((abc) v) = \exp(2 \pi i / 3) (\sigma_1 v)$$
+ $$(abc) (\sigma_2 v) = [(abc) \cdot g_2] ((acb) v) = \exp(4 \pi i / 3) (\sigma_2 v)$$
+ $$(acb) (\sigma_1 v) = [(acb) \cdot g_1] ((acb) v) = \exp(4 \pi i / 3) (\sigma_1 v)$$
+ $$(acb) (\sigma_2 v) = [(acb) \cdot g_2] ((abc) v) = \exp(2 \pi i / 3) (\sigma_2 v)$$
+Here the square brackets indicate the coset to which the group element inside the brackets belongs.  For instance, $[(ac) \cdot g_2] = [(ac) \cdot (ab)] = [(acb)] = \sigma_1$ since $(acb) \in \sigma_1$.
+
+The results of the calculation may be easier understood when expressed in matrix form
+ $$e \qquad \to \qquad \begin{pmatrix} 1 & 0 \cr 0 & 1 \end{pmatrix}$$
+ $$(ab) \qquad \to \qquad \begin{pmatrix} 0 & 1 \cr 1 & 0 \end{pmatrix}$$
+ $$(bc) \qquad \to \qquad \begin{pmatrix} 0 & \exp(2 \pi i / 3) \cr \exp(4 \pi i / 3) & 0 \end{pmatrix}$$
+ $$(ac) \qquad \to \qquad \begin{pmatrix} 0 & \exp(4 \pi i / 3) \cr \exp(2 \pi i / 3) & 0 \end{pmatrix}$$
+ $$(abc) \qquad \to \qquad \begin{pmatrix} \exp(2 \pi i / 3) & 0 \cr 0 & \exp(4 \pi i / 3) \end{pmatrix}$$
+ $$(acb) \qquad \to \qquad \begin{pmatrix} \exp(4 \pi i / 3) & 0 \cr 0 & \exp(2 \pi i / 3) \end{pmatrix}$$
+Having expressed the answer thus, it is not hard to verify that this is indeed a representation of $G$.  For instance, $(acb) \cdot (ac) = (bc)$ and
+ $$\begin{pmatrix} \exp(4 \pi i / 3) & 0 \cr 0 & \exp(2 \pi i / 3) \end{pmatrix} \begin{pmatrix} 0 & \exp(4 \pi i / 3) \cr \exp(2 \pi i / 3) & 0 \end{pmatrix} = \begin{pmatrix} 0 & \exp(2 \pi i / 3) \cr \exp(4 \pi i / 3) & 0 \end{pmatrix}$$
+%%%%%
+%%%%%
+\end{document}

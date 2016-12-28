@@ -1,0 +1,57 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{FrobeniusReciprocity}
+\pmcreated{2013-03-22 12:17:51}
+\pmmodified{2013-03-22 12:17:51}
+\pmowner{djao}{24}
+\pmmodifier{djao}{24}
+\pmtitle{Frobenius reciprocity}
+\pmrecord{7}{31842}
+\pmprivacy{1}
+\pmauthor{djao}{24}
+\pmtype{Theorem}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{20C99}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic} 
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\newcommand{\Ind}{\operatorname{Ind}}
+\newcommand{\Res}{\operatorname{Res}}
+\newcommand{\Hom}{\operatorname{Hom}}
+\begin{document}
+Let $V$ be a finite-dimensional representation of a finite group $G$, and let $W$ be a representation of a subgroup $H \subset G$. Then the characters of $V$ and $W$ satisfy the inner product relation
+$$
+(\chi_{\Ind(W)}, \chi_V) = (\chi_W, \chi_{\Res(V)})
+$$
+where $\Ind$ and $\Res$ denote the induced representation $\Ind_H^G$ and the restriction representation $\Res_H^G$.
+
+The Frobenius reciprocity theorem is often given in the stronger form which states  that $\Res$ and $\Ind$ are adjoint functors between the category of $G$--modules and the category of $H$--modules:
+$$
+\Hom_H(W, \Res(V)) = \Hom_G(\Ind(W),V),
+$$
+or, equivalently
+$$
+V \otimes \Ind(W) = \Ind(\Res(V) \otimes W).
+$$
+%%%%%
+%%%%%
+\end{document}

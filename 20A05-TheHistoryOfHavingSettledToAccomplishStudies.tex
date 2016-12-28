@@ -1,0 +1,46 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{TheHistoryOfHavingSettledToAccomplishStudies}
+\pmcreated{2013-11-27 10:59:44}
+\pmmodified{2013-11-27 10:59:44}
+\pmowner{jacou}{1000048}
+\pmmodifier{}{0}
+\pmtitle{The History of Having Settled To Accomplish Studies}
+\pmrecord{14}{40669}
+\pmprivacy{1}
+\pmauthor{jacou}{0}
+\pmtype{Proof}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{20A05}
+
+
+\begin{document}
+\newtheorem*{theorem}{Theorem}
+\begin{theorem}
+A group homomorphism preserves inverses elements. That is, for groups $(G,\ast)$ and $(K,\star)$, and a homomorphism $\phi\colon G \to K$, $\phi (x^{-1}) = \phi (x)^{-1}$.
+\end{theorem}
+
+\begin{proof}
+Fix an $x \in G$. Observe that
+
+\begin{equation}\label{eq:idG}
+\phi (x \ast x^{-1}) = \phi (1_G) = \phi (x) \star \phi (x^{-1})
+\end{equation}
+
+Recall that, for any group homomorphism $\phi\colon G \to K$,
+
+\begin{equation}\label{eq:idK}
+\phi (1_G) = 1_K  
+\end{equation}
+
+In other \PMlinkescapetext{words}, homomorphisms preserve identity. \footnote{A proof for that statement is attached to the \PMlinkescapetext{parent}.} It follows from (\ref{eq:idG}) and (\ref{eq:idK}) that
+
+\begin{equation}
+\phi (x) \star \phi (x^{-1}) = 1_K
+\end{equation}
+
+Because the inverse of any group is unique, the only value of $\phi (x^{-1})$ whose product with $\phi (x)$ is $1_K$ is, of course, $\phi (x)^{-1}$. Therefore, all group homomorphisms preserve the inverse.
+\end{proof}
+%%%%%
+%%%%%
+\end{document}

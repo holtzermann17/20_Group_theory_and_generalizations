@@ -1,0 +1,63 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{pqShuffle}
+\pmcreated{2013-03-22 13:33:59}
+\pmmodified{2013-03-22 13:33:59}
+\pmowner{mathcam}{2727}
+\pmmodifier{mathcam}{2727}
+\pmtitle{$(p,q)$ shuffle}
+\pmrecord{7}{34176}
+\pmprivacy{1}
+\pmauthor{mathcam}{2727}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{20B99}
+\pmclassification{msc}{05A05}
+\pmsynonym{shuffle}{pqShuffle}
+\pmrelated{ShuffleOfLanguages}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amsthm}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\newtheorem{df}{Definition}
+\newtheorem*{defnn}{Definition}
+\begin{document}
+\begin{defnn}
+Let $p$ and $q$ be positive natural numbers. Further,
+let $S(k)$ be the set of permutations of the numbers $\{1,\ldots, k\}$.
+A permutation $\tau\in S(p+q)$  is a $(p,q)$ \emph{shuffle}  if
+\begin{eqnarray*}
+\tau(1)< &\cdots& < \tau(p), \\
+\tau(p+1)< &\cdots& < \tau(p+q).
+\end{eqnarray*}
+The set of all  $(p,q)$ shuffles is denoted by $S(p,q)$.
+\end{defnn}
+
+It is clear that $S(p,q)\subset S(p+q)$. Since a $(p,q)$ shuffle is
+completely determined by how the $p$ first elements are mapped, the
+cardinality of $S(p,q)$ is ${p+q \choose p}$.
+The wedge product of a $p$-form and a $q$-form can be defined as a sum
+over $(p,q)$ shuffles.
+%%%%%
+%%%%%
+\end{document}

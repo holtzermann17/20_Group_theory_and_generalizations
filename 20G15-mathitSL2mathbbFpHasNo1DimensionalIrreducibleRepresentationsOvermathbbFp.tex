@@ -1,0 +1,89 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{mathitSL2mathbbFpHasNo1DimensionalIrreducibleRepresentationsOvermathbbFp}
+\pmcreated{2013-03-22 15:09:56}
+\pmmodified{2013-03-22 15:09:56}
+\pmowner{alozano}{2414}
+\pmmodifier{alozano}{2414}
+\pmtitle{$\mathit{SL}(2,\mathbb{F}_p)$ has no $1$ dimensional irreducible representations over $\mathbb{F}_p$}
+\pmrecord{7}{36915}
+\pmprivacy{1}
+\pmauthor{alozano}{2414}
+\pmtype{Theorem}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{20G15}
+%\pmkeywords{special linear group}
+%\pmkeywords{irreducible representation}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsthm}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\newtheorem{thm}{Theorem}
+\newtheorem{defn}{Definition}
+\newtheorem{prop}{Proposition}
+\newtheorem*{lemma}{Lemma}
+\newtheorem{cor}{Corollary}
+
+\theoremstyle{definition}
+\newtheorem{exa}{Example}
+
+% Some sets
+\newcommand{\Nats}{\mathbb{N}}
+\newcommand{\Ints}{\mathbb{Z}}
+\newcommand{\Reals}{\mathbb{R}}
+\newcommand{\Complex}{\mathbb{C}}
+\newcommand{\Rats}{\mathbb{Q}}
+\newcommand{\Gal}{\operatorname{Gal}}
+\newcommand{\Cl}{\operatorname{Cl}}
+\newcommand{\SL}{\operatorname{SL}}
+\newcommand{\PSL}{\operatorname{PSL}}
+\newcommand{\arrow}{\longrightarrow}
+\newcommand{\Ker}{\operatorname{Ker}}
+\newcommand{\dg}{\operatorname{deg}}
+\newcommand{\Norm}{\operatorname{Norm}}
+\newcommand{\F}{\mathbb{F}_p}
+\begin{document}
+\begin{lemma}
+The group $G=\SL(2,\F)$ has no non-trivial $1$ dimensional irreducible representations over $\F$.
+\end{lemma}
+\begin{proof}
+Notice that a $1$ dimensional representations over $\F$ is just a homomorphism:
+$$\rho \colon \SL(2,\F)\arrow \mathbb{F}_p^\times.$$
+Let $\rho$ be as above. Then there exist an induced homomorphism for the projective special linear group:
+$$\bar{\rho} \colon \PSL(2,\F) \arrow \mathbb{F}_p^\times/\{ \pm \mathit{Id} \}$$
+defined by $\bar{\rho}(A)=\rho(B) \mod \{ \pm \mathit{Id} \}$, where $B$ is any lift of $A$ to $\SL(2,\F)$ (this is well defined because $\rho(-\mathit{Id})=\pm \mathit{Id}$). Since $\PSL(2,\F)$ is simple, the image of $\bar{\rho}$ is trivial, and therefore, the image of $\rho$ is contained in $\{ \pm \mathit{Id} \}$. 
+
+However, $\SL(2,\F)$ does not have subgroups of index $2$ (a subgroup of index $2$ is normal). For our purposes, it suffices to show that:
+$$\rho\colon \SL(2,\F)\arrow \{\pm \mathit{Id} \}$$
+satisfies $\rho(-\mathit{Id})=\mathit{Id}$. Let $S\in\SL(2,\F)$ be the matrix:
+$$S=\left(%
+\begin{array}{cc}
+  0 & -1 \\
+  1 & 0 \\
+\end{array}%
+\right).$$
+Notice that $S^2=-\mathit{Id}$ and so $\rho(S^2)=(\rho(S))^2=\mathit{Id}=\rho(-\mathit{Id})$, as desired. 
+\end{proof}
+%%%%%
+%%%%%
+\end{document}

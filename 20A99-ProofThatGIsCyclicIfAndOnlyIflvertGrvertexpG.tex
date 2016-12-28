@@ -1,0 +1,51 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ProofThatGIsCyclicIfAndOnlyIflvertGrvertexpG}
+\pmcreated{2013-03-22 16:34:14}
+\pmmodified{2013-03-22 16:34:14}
+\pmowner{rm50}{10146}
+\pmmodifier{rm50}{10146}
+\pmtitle{proof that $G$ is cyclic if and only if $\lvert G \rvert=\exp(G)$}
+\pmrecord{6}{38759}
+\pmprivacy{1}
+\pmauthor{rm50}{10146}
+\pmtype{Proof}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{20A99}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\newtheorem{thm}{Theorem}
+\newtheorem{cor}[thm]{Corollary}
+\newtheorem{lem}[thm]{Lemma}
+\newtheorem{prop}[thm]{Proposition}
+\newtheorem{ax}{Axiom}
+
+\begin{document}
+\begin{thm}A finite abelian group $G$ is cyclic if and only if $\lvert G\rvert=\exp(G)$.
+\end{thm}
+\textbf{Proof. }
+$G$ is cyclic if and only if it has an element of order $\lvert G\rvert$. But $\exp(G)$ is the maximum order of any element of $G$. Thus $G$ is cyclic only if these two are equal.
+
+%%%%%
+%%%%%
+\end{document}

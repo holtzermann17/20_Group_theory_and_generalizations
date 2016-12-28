@@ -1,0 +1,56 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{FreeSemigroupWithInvolution}
+\pmcreated{2013-03-22 16:11:30}
+\pmmodified{2013-03-22 16:11:30}
+\pmowner{Mazzu}{14365}
+\pmmodifier{Mazzu}{14365}
+\pmtitle{free semigroup with involution}
+\pmrecord{8}{38283}
+\pmprivacy{1}
+\pmauthor{Mazzu}{14365}
+\pmtype{Example}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{20M10}
+\pmdefines{free semigroup with involution}
+\pmdefines{free monoid with involution}
+
+% this is the default PlanetMath preamble. as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%\usepackage{xypic} 
+
+% there are many more packages, add them here as you need them
+
+% define commands here 
+
+
+
+\begin{document}
+Let $X,X^\ddagger$ be two disjoint sets in bijective correspondence given by the map $^\ddagger:X\rightarrow X^\ddagger$. Denote by $Y=X\amalg X^\ddagger$ (here we use $\amalg$ instead of $\cup$ to remind that the union is actually a disjoint union) and by $Y^+$ the free semigroup on $Y$. We can  extend the map $^\ddagger$ to an involution $^\ddagger:Y^+\rightarrow Y^+$ on $Y^+$ in the following way: given $w\in Y^+$, we have $w=w_1w_2...w_k$ for some letters $w_i\in Y$; then we define $$w^\ddagger=w_k^\ddagger w_{k-1}^\ddagger ... w_{2}^\ddagger w_{1}^\ddagger.$$
+It is easily verified that this is the unique way to extend $^\ddagger$ to an involution on $Y$. Thus, the semigroup $(X\amalg X^\ddagger)^+$ with the involution $\ddagger$ is a semigroup with involution. Moreover, it is the \emph{free semigroup with involution} on $X$, in the sense that it solves the following universal problem: given a semigroup with involution $S$ and a map $\Phi:X\rightarrow S$, a semigroup homomorphism $\overline\Phi:(X\amalg X^\ddagger)^+\rightarrow S$ exists such that the following diagram commutes:
+$$
+\xymatrix{
+& X \ar[r]^{\iota} \ar[d]_{\Phi} & (X\amalg X^\ddagger)^+ \ar[dl]^{\overline{\Phi}} \\
+& S &
+}
+$$
+where $\iota:X\rightarrow (X\amalg X^\ddagger)^+$ is the inclusion map. It is well known from universal algebra that $(X\amalg X^\ddagger)^+$ is unique up to isomorphisms.
+
+If we use $Y^*$ instead of $Y^+$, where $Y^*=Y^+\cup\{\varepsilon\}$ and $\varepsilon$ is the empty word (i.e. the identity of the monoid $Y^*$), we obtain a monoid with involution $(X\amalg X^\ddagger)^*$ that is the \emph{free monoid with involution} on $X$.
+%%%%%
+%%%%%
+\end{document}

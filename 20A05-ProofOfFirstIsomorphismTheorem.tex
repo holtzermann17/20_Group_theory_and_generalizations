@@ -1,0 +1,99 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ProofOfFirstIsomorphismTheorem}
+\pmcreated{2013-03-22 12:39:19}
+\pmmodified{2013-03-22 12:39:19}
+\pmowner{uriw}{288}
+\pmmodifier{uriw}{288}
+\pmtitle{proof of first isomorphism theorem}
+\pmrecord{9}{32922}
+\pmprivacy{1}
+\pmauthor{uriw}{288}
+\pmtype{Proof}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{20A05}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\begin{document}
+The proof consist of several parts which we will give for
+completeness. Let $K$ denote $\ker f$. The following calculation
+validates that for every $g\in G$ and $k \in K$:
+\[
+\begin{array}{llll}
+  f(gkg^{-1}) &=& f(g) \, f(k) \, f(g)^{-1} & \text{($f$ is an homomorphism)}\\
+  &=& f(g) \, 1_H \, f(g)^{-1} & \text{(definition of $K$)}\\
+  &=& 1_H &
+\end{array}
+\]
+Hence, $gkg^{-1}$ is in $K$. Therefore, $K$ is a normal subgroup
+of $G$ and $G/K$ is well-defined.
+
+To prove the theorem we will define a map from $G/K$ to the image
+of $f$ and show that it is a function, a homomorphism and finally
+an isomorphism.
+
+Let $\theta\colon G/K \to \operatorname{Im} f$ be a map that sends the coset
+$gK$ to $f(g)$.
+
+Since $\theta$ is defined on representatives we need to show that
+it is well defined. So, let $g_1$ and $g_2$ be two elements of $G$
+that belong to the same coset (i.e. $g_1K = g_2K$). Then,
+$g_1^{-1}g_2$ is an element of $K$ and therefore
+$f(g_1^{-1}g_2)=1$ (because $K$ is the kernel of $G$). Now, the
+rules of homomorphism show that $f(g_1)^{-1}f(g_2)=1$ and that is
+equivalent to $f(g_1)=f(g_2)$ which implies the equality
+$\theta(g_1K)=\theta(g_2K)$.
+
+Next we verify that $\theta$ is a homomorphism. Take two cosets
+$g_1K$ and $g_2K$, then:
+\[
+\begin{array}{llll}
+  \theta (g_1K\cdot g_2K) &=& \theta(g_1g_2K) & \text{(operation in $G/K$)}\\
+  &=& f(g_1g_2) & \text{(definition of $\theta$)}\\
+  &=& f(g_1)f(g_2) & \text{($f$ is an homomorphism)}\\
+  &=& \theta (g_1K)\theta (g_2K)\ & \text{(definition of $\theta$)}
+\end{array}
+\]
+
+Finally, we show that $\theta$ is an isomorphism (i.e. a
+bijection). The kernel of $\theta$ consists of all cosets $gK$ in
+$G/K$ such that $f(g)=1$ but these are exactly the elements $g$
+that belong to $K$ so only the coset $K$ is in the kernel of
+$\theta$ which implies that $\theta$ is an injection. Let $h$
+be an element of $\operatorname{Im} f$ and $g$ its pre-image. Then,
+$\theta(gK)$ equals $f(g)$ thus $\theta(gK)=h$ and therefore
+$\theta$ is surjective.
+
+The theorem is proved. Some version of the theorem also states that
+the following diagram is commutative:
+\[
+\xymatrix{
+G \ar[rd]_{f} \ar[r]^{\pi} & G/K \ar[d]_{\theta} \\
+& H }
+\]
+were $\pi$ is the natural projection that takes $g\in G$ to $gK$.
+We will conclude by verifying this. Take $g$ in $G$ then,
+$\theta(\pi(g))=\theta(gK)=f(g)$ as needed.
+%%%%%
+%%%%%
+\end{document}

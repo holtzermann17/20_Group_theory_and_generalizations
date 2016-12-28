@@ -1,0 +1,63 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ResiduallymathfrakX}
+\pmcreated{2013-03-22 14:53:22}
+\pmmodified{2013-03-22 14:53:22}
+\pmowner{yark}{2760}
+\pmmodifier{yark}{2760}
+\pmtitle{residually $\mathfrak{X}$}
+\pmrecord{15}{36570}
+\pmprivacy{1}
+\pmauthor{yark}{2760}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{20E26}
+\pmrelated{AGroupsEmbedsIntoItsProfiniteCompletionIfAndOnlyIfItIsResiduallyFinite}
+\pmdefines{residually finite}
+\pmdefines{residually nilpotent}
+\pmdefines{residually solvable}
+\pmdefines{residually soluble}
+
+\usepackage{amsfonts}
+\usepackage{amssymb}
+
+\def\normal{\trianglelefteq}
+\def\X{\mathfrak{X}}
+\begin{document}
+\PMlinkescapeword{hereditary}
+\PMlinkescapeword{invariant}
+\PMlinkescapeword{isomorphic}
+\PMlinkescapeword{property}
+\PMlinkescapeword{subgroup}
+
+Let $\X$ be a property of groups,
+assumed to be an isomorphic invariant
+(that is, if a group $G$ has property $\X$,
+then every group isomorphic to $G$ also has property $\X$).
+We shall sometimes refer to groups with property $\X$ as $\X$-groups.
+
+A group $G$ is said to be \emph{residually $\X$}
+if for every $x\in G\backslash\{1\}$ there is a normal subgroup $N$ of $G$
+such that $x\notin N$ and $G/N$ has property $\X$.
+Equivalently, $G$ is residually $\X$ if and only if
+\[
+  \bigcap_{N\normal_\X G}\!\!N=\{1\},
+\]
+where $N\normal_\X G$ means that
+$N$ is normal in $G$ and $G/N$ has property $\X$.
+
+It can be shown that a group is residually $\X$
+if and only if it is isomorphic to a subdirect product of $\X$-groups.
+If $\X$ is a hereditary property 
+(that is, every \PMlinkname{subgroup}{Subgroup} of an $\X$-group is an $\X$-group),
+then a group is residually $\X$ if and only if
+it can be embedded in an unrestricted direct product of $\X$-groups.
+
+It can be shown that a group $G$ is residually solvable if and only if
+the intersection of the derived series of $G$ is trivial
+(see transfinite derived series).
+Similarly, a group $G$ is residually nilpotent if and only if
+the intersection of the lower central series of $G$ is trivial.
+%%%%%
+%%%%%
+\end{document}

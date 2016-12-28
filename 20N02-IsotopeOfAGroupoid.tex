@@ -1,0 +1,81 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{IsotopeOfAGroupoid}
+\pmcreated{2013-03-22 18:35:54}
+\pmmodified{2013-03-22 18:35:54}
+\pmowner{CWoo}{3771}
+\pmmodifier{CWoo}{3771}
+\pmtitle{isotope of a groupoid}
+\pmrecord{8}{41328}
+\pmprivacy{1}
+\pmauthor{CWoo}{3771}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{20N02}
+\pmclassification{msc}{20N05}
+\pmsynonym{isotopism}{IsotopeOfAGroupoid}
+\pmsynonym{homotopism}{IsotopeOfAGroupoid}
+\pmdefines{isotopy}
+\pmdefines{isotope}
+\pmdefines{homotopy}
+\pmdefines{homotope}
+\pmdefines{isotopic}
+\pmdefines{homotopic}
+\pmdefines{principal isotopy}
+\pmdefines{principal isotope}
+
+\usepackage{amssymb,amscd}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{mathrsfs}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+\usepackage{amsthm}
+% making logically defined graphics
+%%\usepackage{xypic}
+\usepackage{pst-plot}
+
+% define commands here
+\newcommand*{\abs}[1]{\left\lvert #1\right\rvert}
+\newtheorem{prop}{Proposition}
+\newtheorem{thm}{Theorem}
+\newtheorem{ex}{Example}
+\newcommand{\real}{\mathbb{R}}
+\newcommand{\pdiff}[2]{\frac{\partial #1}{\partial #2}}
+\newcommand{\mpdiff}[3]{\frac{\partial^#1 #2}{\partial #3^#1}}
+\begin{document}
+Let $G,H$ be \PMlinkname{groupoids}{Groupoid}.  An \emph{isotopy} $\phi$ from $G$ to $H$ is an ordered triple: $\phi=(f,g,h)$, of bijections from $G$ to $H$, such that $$f(a)g(b)=h(ab)\qquad \mbox{for all } a,b\in G.$$
+$H$ is called an \emph{isotope} of $G$ (or $H$ is \emph{isotopic} to $G$) if there is an isotopy $\phi:G\to H$.
+
+Some easy examples of isotopies: 
+\begin{enumerate}
+\item If $f:G\to H$ is an isomorphism, $(f,f,f):G\to H$ is an isotopy.  By abuse of language, we write $f=(f,f,f)$.  In particular, $(1_G,1_G,1_G):G\to G$ is an isotopy.
+\item If $\phi=(f,g,h):G\to H$ is an isotopy, then so is $$\phi^{-1}:=(f^{-1},g^{-1},h^{-1}):H\to G,$$  for if $f^{-1}(a)=c$ and $g^{-1}(b)=d$, then $ab=f(c)g(d)=h(cd)$, so that $f^{-1}(a)g^{-1}(b)=cd=h^{-1}(ab)$
+\item If $\phi=(f,g,h):G\to H$ and $\gamma=(r,s,t):H\to K$ are isotopies, then so is $$\gamma\circ \phi:=(r\circ f, s\circ g, t\circ h):G\to K,$$ for $(r\circ f)(a)(s\circ g)(b)=r(f(a))s(g(b))=t(f(a)g(b))=t(h(ab))=(t\circ h)(ab)$.
+\end{enumerate}
+
+From the examples above, it is easy to see that ``groupoids being isotopic'' on the class of groupoids is an equivalence relation, and that an isomorphism class is contained in an isotopic class.  In fact, the containment is strict.  For an example of non-isomorphic isotopic groupoids, see the reference below.  However, if $G$ is a groupoid with unity and $G$ is isotopic to a semigroup $S$, then it is isomorphic to $S$.  Other conditions making isotopic groupoids isomorphic can be found in the reference below.
+
+An isotopy of the form $(f,g,1_H):G\to H$ is called a \emph{principal isotopy}, where $1_H$ is the identity function on $H$.  $H$ is called a \emph{principal isotope} of $G$.  If $H$ is isotopic to $G$, then $H$ is isomorphic to a principal isotope $K$ of $G$.  
+\begin{proof}
+Suppose $(f,g,h):G\to H$ is an isotopy.  To construct $K$, start with elements of $G$, which will form the underlying set of $K$.  The binary operation on $K$ is defined by $$a\cdot b:= (f^{-1}\circ h)(a)(g^{-1}\circ h)(b).$$
+Then $\cdot$ is well-defined, since $f,g$ are bijective, for all pairs of elements of $G$.  Hence $K$ is a groupoid.  Furthermore, $(f^{-1}\circ h,g^{-1}\circ h,1_K):G\to K$ is an isotopy by definition, so that $K$ is a principal isotope of $G$.  Finally, $h(a\cdot b)=h(f^{-1}(h(a))g^{-1}(h(b)))=f(f^{-1}(h(a)))g(g^{-1}(h(b)))=h(a)h(b)$, showing that $h:K\to H$ is a bijective homomorphism, and hence an isomorphism.
+\end{proof}
+
+\textbf{Remark}.  In the literature, the definition of an isotope is sometimes limited to quasigroups.  However, this is not necessary, as the follow proposition suggests:
+
+\begin{prop}  Any isotope of a quasigroup is a quasigroup. \end{prop}
+\begin{proof} Suppose $(f,g,h):G\to H$ is an isotopy, and $G$ a quasigroup.  Pick $x,z\in H$.  Let $a,c\in G$ be such that $f(a)=x$ and $h(c)=z$.  Let $b\in G$ be such that $ab=c$.  Set $y=g(b)\in H$.  Then $xy=f(a)g(b)=h(ab)=h(c)=z$.  Similarly, there is $t\in H$ such that $tx=z$.  Hence $H$ is a quasigroup. \end{proof}
+
+On the other hand, an isotope of a loop may not be a loop.  Nevertheless, we sometimes say that an isotope of a loop $L$ as a loop isotopic to $L$.
+
+\begin{thebibliography}{9}
+\bibitem{RHB} R. H. Bruck: {\em A Survey of Binary Systems}.\, Springer-Verlag. New York (1966).
+\end{thebibliography}
+%%%%%
+%%%%%
+\end{document}

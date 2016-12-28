@@ -1,0 +1,70 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ProofThatGroupHomomorphismsPreserveIdentity}
+\pmcreated{2013-11-16 4:44:43}
+\pmmodified{2013-11-16 4:44:43}
+\pmowner{jacou}{1000048}
+\pmmodifier{}{0}
+\pmtitle{proof that group homomorphisms preserve identity}
+\pmrecord{9}{40667}
+\pmprivacy{1}
+\pmauthor{jacou}{0}
+\pmtype{Proof}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{20A05}
+\pmsynonym{1234}{ProofThatGroupHomomorphismsPreserveIdentity}
+\pmrelated{1234}
+\pmdefines{1234}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\begin{document}
+\newtheorem*{theorem}{Theorem}
+\begin{theorem}
+A group homomorphism preserves identity elements. 
+\end{theorem}
+\begin{proof}
+Let $\phi:G\to K$ be a group homomorphism.
+For clarity we use $\ast$ and $\star$ for the group operations of $G$ and $K$, respectively.  Also,
+denote the identities by $1_G$ and $1_H$ respectively.  
+
+
+By the definition of identity, 
+\begin{equation}\label{eq:idG}
+ 1_G\ast 1_G=1_G.
+\end{equation}
+Applying the homomorphism $\phi$ to (\ref{eq:idG}) produces:
+\begin{equation}\label{eq:idPhi}
+ \phi(1_G)\star \phi(1_G)= \phi(1_G\ast 1_G) = \phi (1_G).
+\end{equation}
+Multiply both sides of (\ref{eq:idPhi}) by the inverse of $\phi(1_G)$ in $K$,
+and use the associativity of $\star$ to produce:
+\begin{equation}
+  \phi(1_G)=(\phi(1_G))^{-1}\star \phi(1_G)\star \phi(1_G)  =  (\phi(1_G))^{-1}\star \phi(1_G)=1_K.
+\end{equation}
+\end{proof}
+
+
+%%%%%
+%%%%%
+\end{document}

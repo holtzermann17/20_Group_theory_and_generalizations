@@ -1,0 +1,79 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{CommensurableSubgroups}
+\pmcreated{2013-03-22 18:34:14}
+\pmmodified{2013-03-22 18:34:14}
+\pmowner{asteroid}{17536}
+\pmmodifier{asteroid}{17536}
+\pmtitle{commensurable subgroups}
+\pmrecord{4}{41294}
+\pmprivacy{1}
+\pmauthor{asteroid}{17536}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{20C08}
+\pmrelated{CommensurableNumbers}
+\pmdefines{commensurable}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\begin{document}
+\subsection{Definition}
+
+{\bf Definition -} Let $G$ be a group. Two subgroups $S_1, S_2 \subseteq G$ are said to be {\bf commensurable}, in which case we write $S_1 \sim S_2$, if $S_1 \cap S_2$ has finite index both in $S_1$ and in $S_2$, i.e. if $[S_1 : S_1 \cap S_2]$ and $[S_2 : S_1 \cap S_2]$ are both finite.
+
+
+This \PMlinkescapetext{property} can be interpreted informally in the following \PMlinkescapetext{way}: $S_1$ and $S_2$ are commensurable if their intersection $S_1 \cap S_2$ is ``big'' in both $S_1$ and $S_2$.
+
+\subsection{Commensurability is an equivalence relation}
+
+{\bf \PMlinkescapetext{Proposition} -} \PMlinkescapetext{Commensurability} of subgroups is an equivalence relation. In particular, if $S_1 \sim S_2$ and $S_2 \sim S_3$, then $S_1 \sim S_3$.
+
+{\bf \emph{\PMlinkescapetext{Proof}:}} Let $S_1$, $S_2$ and $S_3$ be subgroups of a group $G$.
+\begin{itemize}
+\item Reflexivity: we have that $S_1 \sim S_1$, since $[S_1: S_1] = 1$.
+\item Symmetry: is clear from the definition.
+\item Transitivity: if $S_1 \sim S_2$ and $S_2 \sim S_3$, then one has
+\begin{eqnarray*}
+[S_1:S_1 \cap S_3] & \leq & [S_1:S_1 \cap S_2 \cap S_3]\\
+& = & [S_1:S_1 \cap S_2][S_1 \cap S_2 : S_1 \cap S_2 \cap S_3]\\
+& \leq & [S_1:S_1 \cap S_2][S_2:S_2 \cap S_3]\\
+& < & \infty.
+\end{eqnarray*}
+Similarly, we can prove that $[S_3:S_1 \cap S_3] < \infty$ and therefore $S_1 \sim S_3$. $\square$
+\end{itemize}
+
+\subsection{Examples:}
+\begin{itemize}
+\item All non-zero subgroups of $\mathbb{Z}$ are commensurable with each other.
+\item All conjugacy classes of the general linear group $GL(n;\mathbb{Z})$, seen as a subgroup of $GL(n;\mathbb{Q})$, are commensurable with each other.
+\end{itemize}
+
+\begin{thebibliography}{9}
+\bibitem{krieg} A. Krieg, \emph{\PMlinkescapetext{Hecke algebras}}, Mem. Amer. Math. Soc., no. 435, vol. 87, 1990.
+\end{thebibliography}
+
+
+%%%%%
+%%%%%
+\end{document}

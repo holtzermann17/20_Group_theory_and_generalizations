@@ -1,0 +1,136 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{InverseLimit}
+\pmcreated{2013-03-22 13:54:20}
+\pmmodified{2013-03-22 13:54:20}
+\pmowner{alozano}{2414}
+\pmmodifier{alozano}{2414}
+\pmtitle{inverse limit}
+\pmrecord{10}{34655}
+\pmprivacy{1}
+\pmauthor{alozano}{2414}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{20F22}
+\pmsynonym{inverse system}{InverseLimit}
+\pmsynonym{projective limit}{InverseLimit}
+%\pmkeywords{inverse limit}
+\pmrelated{PAdicIntegers}
+\pmrelated{GaloisRepresentation}
+\pmrelated{InfiniteGaloisTheory}
+\pmrelated{ProfiniteGroup}
+\pmrelated{CategoryAssociatedToAPartialOrder}
+\pmrelated{DirectLimit}
+\pmrelated{CohomologyOfSmallCategories}
+\pmdefines{inverse limit}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsthm}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\newtheorem{thm}{Theorem}
+\newtheorem{defn}{Definition}
+\newtheorem{prop}{Proposition}
+\newtheorem{lemma}{Lemma}
+\newtheorem{cor}{Corollary}
+
+% Some sets
+\newcommand{\Nats}{\mathbb{N}}
+\newcommand{\Ints}{\mathbb{Z}}
+\newcommand{\Reals}{\mathbb{R}}
+\newcommand{\Complex}{\mathbb{C}}
+\newcommand{\Rats}{\mathbb{Q}}
+\begin{document}
+Let $\{ G_i \}_{i=0}^{\infty}$ be a sequence of groups which are
+related by a chain of surjective homomorphisms $f_i\colon G_i \to
+G_{i-1}$ such that
+$$\xymatrix{
+{G_0} & {G_1} \ar@{->}[l]_{f_1} & {G_2} \ar@{->}[l]_{f_2} & {G_3}
+\ar@{->}[l]_{f_3} & {\ldots} \ar@{->}[l]_{f_4}}$$
+
+\begin{defn} The \emph{inverse limit} of $(G_i,f_i)$, denoted by
+$$\varprojlim(G_i,f_i),\quad \text{ or }\quad \varprojlim
+G_i$$ is the subset of $\prod_{i=0}^{\infty} G_i$ formed by
+elements satisfying
+$$(\ g_0,\ g_1,\ g_2,\ g_3,\ \ldots),\ \text{with}\quad g_i\in G_i, \quad
+f_i(g_i)=g_{i-1}$$
+\end{defn}
+
+Note: The inverse limit of $G_i$ can be checked to be a subgroup
+of the product $\prod_{i=0}^{\infty} G_i$. See below for a more general definition.
+
+{\bf Examples}:
+\begin{enumerate}
+\item Let $p\in\Nats$ be a prime. Let $G_0=\{0\}$ and
+$G_i=\Ints/p^i\Ints$. Define the connecting homomorphisms $f_i$, for $i\geq 2$, to
+be ``reduction modulo $p^{i-1}$'' i.e.
+$$f_i\colon \Ints/p^i\Ints \to \Ints/p^{i-1}\Ints$$
+$$f_i(x \operatorname{mod}p^i)= x \operatorname{mod} p^{i-1}$$
+which are obviously surjective homomorphisms. The inverse limit of
+$(\Ints/p^i\Ints, f_i)$ is called the $p$-adic integers and
+denoted by
+$$\Ints_p=\varprojlim\Ints/p^i\Ints$$
+
+\item Let $E$ be an elliptic curve defined over $\Complex$. Let
+$p$ be a prime and for any natural number $n$ write $E[n]$ for the
+$n$-torsion group, i.e.
+$$E[n]=\{ Q\in E \mid n\cdot Q=O\}$$
+In this case we define $G_i=E[p^i]$, and
+$$f_i\colon E[p^i] \to E[p^{i-1}], \quad f_i(Q)=p\cdot Q$$
+The inverse limit of $(E[p^i],f_i)$ is called the Tate module of
+$E$ and denoted
+$$T_p(E)=\varprojlim E[p^i]$$
+
+\end{enumerate}
+
+The concept of inverse limit can be defined in far more
+generality. Let $(S,\leq)$ be a directed set and let $\mathcal{C}$
+be a category. Let $\{ G_{\alpha}\}_{\alpha\in S}$ be a collection
+of objects in the category $\mathcal{C}$ and let
+$$\{f_{\alpha,\beta}\colon G_{\beta} \to G_{\alpha}\mid \alpha,\beta \in S,\quad \alpha\leq\beta \}$$ be a collection of
+morphisms satisfying:
+\begin{enumerate}
+\item For all $\alpha\in S$,
+$f_{\alpha,\alpha}=\operatorname{Id}_{G_{\alpha}}$, the identity
+morphism.
+
+\item For all $\alpha,\beta,\gamma\in S$ such that $\alpha \leq
+\beta \leq \gamma$, we have $f_{\alpha,\gamma} = f_{\alpha,\beta}
+\circ f_{\beta,\gamma}$ (composition of morphisms).
+\end{enumerate}
+
+\begin{defn}
+The \emph{inverse limit} of $(\{G_{\alpha}\}_{\alpha\in
+S},\{f_{\alpha,\beta}\})$, denoted by
+$$\varprojlim (G_{\alpha},f_{\alpha,\beta}),\quad \text{ or }\quad \varprojlim
+G_{\alpha}$$ is defined to be the set of all $(g_{\alpha})\in
+\prod_{\alpha\in S} G_{\alpha}$ such that for all $\alpha,\beta
+\in S$
+$$ \alpha\leq\beta \Rightarrow
+f_{\alpha,\beta}(g_{\beta})=g_{\alpha}$$
+\end{defn}
+
+For a good example of this more general construction, see infinite
+Galois theory.
+%%%%%
+%%%%%
+\end{document}

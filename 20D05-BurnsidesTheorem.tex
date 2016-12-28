@@ -1,0 +1,61 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{BurnsidesTheorem}
+\pmcreated{2013-03-22 16:38:14}
+\pmmodified{2013-03-22 16:38:14}
+\pmowner{rm50}{10146}
+\pmmodifier{rm50}{10146}
+\pmtitle{Burnside's Theorem}
+\pmrecord{4}{38839}
+\pmprivacy{1}
+\pmauthor{rm50}{10146}
+\pmtype{Theorem}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{20D05}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\newtheorem{thm}{Theorem}
+\newtheorem{cor}{Corollary}
+\begin{document}
+\begin{thm}[Burnside's Theorem]
+
+Let $G$ be a simple group, $\sigma\in G$. Then the number of conjugates of $\sigma$ is not a prime power (unless $\sigma$ is its own conjugacy class).
+\end{thm}
+
+Proofs of this theorem are quite difficult and rely on representation theory.
+
+From this we immediately get
+\begin{cor} A group $G$ of order $p^a q^b$, where $p,q$ are prime, cannot be a nonabelian simple group.
+\end{cor}
+\begin{proof}
+Suppose it is. Then the center of $G$ is trivial, $\{e\}$, since the center is a normal subgroup and $G$ is simple nonabelian. So if $C_i$ are the nontrivial conjugacy classes, we have from the class equation that
+\[\lvert G\rvert = 1+\sum\lvert C_i\rvert\]
+Now, each $\lvert C_i\rvert$ divides $\lvert G\rvert$, but cannot be $1$ since the center is trivial. It cannot be a power of either $p$ or $q$ by Burnside's theorem. Thus $pq \mid \lvert C_i\rvert$ for each $i$ and thus $\lvert G\rvert\equiv 1\pmod {pq}$, which is a contradiction.
+\end{proof}
+
+Finally, a corollary of the above is known as the \PMlinkname{Burnside $p$-$q$ Theorem}{BurnsidePQTheorem}.
+\begin{cor} A group of order $p^aq^b$ is solvable.
+\end{cor}
+%%%%%
+%%%%%
+\end{document}

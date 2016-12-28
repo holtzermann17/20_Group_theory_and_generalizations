@@ -1,0 +1,67 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{PermutableSubgroup}
+\pmcreated{2013-03-22 16:15:47}
+\pmmodified{2013-03-22 16:15:47}
+\pmowner{yark}{2760}
+\pmmodifier{yark}{2760}
+\pmtitle{permutable subgroup}
+\pmrecord{9}{38372}
+\pmprivacy{1}
+\pmauthor{yark}{2760}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{20E07}
+\pmsynonym{quasinormal subgroup}{PermutableSubgroup}
+\pmsynonym{quasi-normal subgroup}{PermutableSubgroup}
+\pmdefines{permutable}
+\pmdefines{quasinormal}
+\pmdefines{quasi-normal}
+
+\usepackage{amssymb}
+\usepackage{amsmath}
+
+\def\per{\operatorname{per}}
+
+% The following lines should work as the command
+% \renewcommand{\bibname}{References}
+% without creating havoc when rendering an entry in
+% the page-image mode.
+\makeatletter
+\@ifundefined{bibname}{}{\renewcommand{\bibname}{References}}
+\makeatother
+\begin{document}
+\PMlinkescapephrase{permutable subgroups}
+
+Let $G$ be a group.
+A subgroup $H$ of $G$ is said to be \emph{permutable}
+if it permutes with all subgroups of $G$,
+that is, $KH=HK$ for all $K\leq G$.
+We sometimes write $H\per G$
+to indicate that $H$ is a permutable subgroup of $G$.
+
+Permutable subgroups were introduced by \PMlinkname{{\O}ystein Ore}{OysteinOre},
+who called them \emph{quasinormal} subgroups.
+
+Normal subgroups are clearly permutable.
+
+Permutable subgroups are ascendant.
+This is a result of Stonehewer\cite{stonehewer}, 
+who also showed that in a finitely generated group,
+all permutable subgroups are subnormal.
+
+\begin{thebibliography}{9}
+\bibitem{stonehewer}
+ Stewart E.\ Stonehewer,
+ {\it Permutable subgroups of infinite groups},
+ Math.\ Z.\ 125 (1972), 1--16. (This paper is \PMlinkexternal{available from GDZ}{http://gdz.sub.uni-goettingen.de/dms/resolveppn/?GDZPPN002410435}.)
+\end{thebibliography}
+
+
+
+
+
+
+%%%%%
+%%%%%
+\end{document}

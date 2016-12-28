@@ -1,0 +1,76 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{LocalFinitenessIsClosedUnderExtensionProofThat}
+\pmcreated{2013-03-22 15:36:53}
+\pmmodified{2013-03-22 15:36:53}
+\pmowner{yark}{2760}
+\pmmodifier{yark}{2760}
+\pmtitle{local finiteness is closed under extension, proof that}
+\pmrecord{6}{37538}
+\pmprivacy{1}
+\pmauthor{yark}{2760}
+\pmtype{Proof}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{20F50}
+%\pmkeywords{locally finite}
+\pmrelated{LocallyFiniteGroup}
+
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+\def\genby#1{{\left\langle #1\right\rangle}}
+\def\subgroup{\leq}
+\begin{document}
+\PMlinkescapeword{completes}
+\PMlinkescapeword{finite}
+\PMlinkescapeword{mapping}
+
+Let $G$ be a group and $N$ a normal subgroup of $G$
+such that $N$ and $G/N$ are both locally finite.
+We aim to show that $G$ is locally finite.
+Let $F$ be a finite subset of $G$.
+It suffices to show that $F$ is contained in a finite subgroup of $G$.
+
+Let $R$ be a set of coset representatives of $N$ in $G$,
+chosen so that $1\in R$.
+Let $r\colon G/N\to R$ be the function mapping cosets to their representatives,
+and let $s\colon G\to N$ be defined by $s(x)=r(xN)^{-1}x$ for all $x\in G$.
+Let $\pi\colon G\to G/N$ be the canonical projection.
+Note that for any $x\in G$ we have $x=r(xN)s(x)$.
+
+Put $A=r(\genby{\pi(F)})$, which is finite as $G/N$ is locally finite.
+Let $B=s(F\cup AA\cup A^{-1})$, let $C=B\cup B^{-1}$
+and let $$D=\{a^{-1}ca\mid a\in A\hbox{ and }c\in C\}\subseteq N.$$
+Put $H=\genby{D}$, which is finite as $N$ is locally finite.
+Note that $1\in A\subseteq R$
+and $1\in B\subseteq C\subseteq D\subseteq H\subgroup N$.
+
+For any $a_1,a_2\in A$ we have $a_1a_2=r(a_1a_2N)s(a_1a_2)\in AB$.
+Note that $D^{-1}=D$,
+and so every element of $H$ is a product of elements of $D$.
+So any element of the form $a^{-1}ha$, where $a\in A$ and $h\in H$,
+is a product of elements of the form $a^{-1}a_1^{-1}ca_1a$
+for $a_1\in A$ and $c\in C$;
+but $a_1a=a_2b$ for some $a_2\in A$ and $b\in B$,
+so $a^{-1}ha$ is a product of elements of the form 
+$b^{-1}a_2^{-1}ca_2b=b^{-1}(a_2^{-1}ca_2)b\in CDB\subseteq H$,
+and therefore $a^{-1}ha\in H$.
+
+We claim that $AH\subgroup G$.
+Let $a_1,a_2\in A$ and $h_1,h_2\in H$.
+We have $(a_1h_1)(a_2h_2)=a_1a_2(a_2^{-1}h_1a_2)h_2$.
+But, by the previous paragraph, $a_1a_2\in AB$ and $a_2^{-1}h_1a_2\in H$,
+so $a_1a_2(a_2^{-1}h_1a_2)h_2\in ABHH\subseteq AH$.
+Thus $AHAH\subseteq AH$.
+Also, $(a_1h_1)^{-1}=h_1^{-1}a_1^{-1}\in Ha_1^{-1}$.
+But $a_1^{-1}=r(a_1^{-1}N)s(a_1^{-1})\in AB$,
+so $Ha_1^{-1}\subseteq HAB\subseteq AHAH\subseteq AH$.
+Thus $(AH)^{-1}\subseteq AH$.
+It follows that $AH$ is a subgroup of $G$, and it is clearly finite.
+
+For any $x\in F$ we have $x=r(xN)s(x)\in AB$.
+So $F\subseteq AH$, which completes the proof.
+%%%%%
+%%%%%
+\end{document}

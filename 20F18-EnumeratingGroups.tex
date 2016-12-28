@@ -1,0 +1,183 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{EnumeratingGroups}
+\pmcreated{2013-03-22 15:51:35}
+\pmmodified{2013-03-22 15:51:35}
+\pmowner{Algeboy}{12884}
+\pmmodifier{Algeboy}{12884}
+\pmtitle{enumerating groups}
+\pmrecord{10}{37849}
+\pmprivacy{1}
+\pmauthor{Algeboy}{12884}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{20F18}
+%\pmkeywords{enumeration}
+%\pmkeywords{p-group}
+%\pmkeywords{nilpotent group}
+\pmrelated{EnumeratingGraphs}
+\pmrelated{EnumeratingAlgebras}
+
+\usepackage{latexsym}
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amsthm}
+
+%%\usepackage{xypic}
+
+%-----------------------------------------------------
+
+%       Standard theoremlike environments.
+
+%       Stolen directly from AMSLaTeX sample
+
+%-----------------------------------------------------
+
+%% \theoremstyle{plain} %% This is the default
+
+\newtheorem{thm}{Theorem}
+
+\newtheorem{coro}[thm]{Corollary}
+
+\newtheorem{lem}[thm]{Lemma}
+
+\newtheorem{lemma}[thm]{Lemma}
+
+\newtheorem{prop}[thm]{Proposition}
+
+\newtheorem{conjecture}[thm]{Conjecture}
+
+\newtheorem{conj}[thm]{Conjecture}
+
+\newtheorem{defn}[thm]{Definition}
+
+\newtheorem{remark}[thm]{Remark}
+
+\newtheorem{ex}[thm]{Example}
+
+
+
+%\countstyle[equation]{thm}
+
+
+
+%--------------------------------------------------
+
+%       Item references.
+
+%--------------------------------------------------
+
+
+\newcommand{\exref}[1]{Example-\ref{#1}}
+
+\newcommand{\thmref}[1]{Theorem-\ref{#1}}
+
+\newcommand{\defref}[1]{Definition-\ref{#1}}
+
+\newcommand{\eqnref}[1]{(\ref{#1})}
+
+\newcommand{\secref}[1]{Section-\ref{#1}}
+
+\newcommand{\lemref}[1]{Lemma-\ref{#1}}
+
+\newcommand{\propref}[1]{Prop\-o\-si\-tion-\ref{#1}}
+
+\newcommand{\corref}[1]{Cor\-ol\-lary-\ref{#1}}
+
+\newcommand{\figref}[1]{Fig\-ure-\ref{#1}}
+
+\newcommand{\conjref}[1]{Conjecture-\ref{#1}}
+
+
+% Normal subgroup or equal.
+
+\providecommand{\normaleq}{\unlhd}
+
+% Normal subgroup.
+
+\providecommand{\normal}{\lhd}
+
+\providecommand{\rnormal}{\rhd}
+% Divides, does not divide.
+
+\providecommand{\divides}{\mid}
+
+\providecommand{\ndivides}{\nmid}
+
+
+\providecommand{\union}{\cup}
+
+\providecommand{\bigunion}{\bigcup}
+
+\providecommand{\intersect}{\cap}
+
+\providecommand{\bigintersect}{\bigcap}
+\begin{document}
+\section{How many finite groups are there?}
+
+The current tables list the number of groups up to order 2000 [Besche, Eick, O'Brien] (2000).
+
+\begin{center}
+\input{scatter-plot-logy}
+\end{center}
+
+
+The graph is chaotic -- both figuratively and mathematically.
+Most groups are distributed along the interval at values $2^i m$ where $m$ is odd and $i$ large, for instance $i>5$.  Indeed most groups are actually of order $2^{10}=1024$.  We see this by connecting the dots of certain families of groups.
+\begin{center}
+\input{line-plots}
+\end{center}
+
+Most integers are square-free, most groups are not [Mays 1980; Miller 1930; 
+Balas 1966].
+
+An explanation for this distribution is offered by considering nilpotent groups.
+Nilpotent groups are the product of their Sylow subgroups.  So enumerating
+nilpotent groups asks to enumerating $p$-groups.  
+
+\section{How many nilpotent groups are there?}
+
+\begin{center}
+\input{Nilpotent-plot-logy}
+\end{center}
+
+\begin{thm}[Pyber, 1993]
+If $g_{nil}(N)$ is the number of nilpotent groups of order $\leq N$ and $g(N)$ the number
+of groups of order $\leq N$ then 
+\[\lim_{N\rightarrow \infty} \frac{\log g_{nil}(N)}{\log g(N)}=1.\]
+\end{thm}
+The proof bounds the number of groups with a given set of Sylow subgroups and involves
+the Classification of Finite Simple Groups.
+
+
+\begin{conj}[Pyber, 1993]
+\[\lim_{N\rightarrow \infty} \frac{g_{nil}(N)}{g(N)}=1.\]
+\end{conj}
+
+If the conjecture is true, then most groups are 2-groups.
+
+\section{The Higman and Sims bounds}
+
+\begin{thm}[Higman 1960, Sims 1964]
+The number of $p$-groups of order $p^n$, denoted, $f(p^n)$, satisfies
+	\[\frac{2}{27}n^3 + C_1 n^2 \leq \log_p f(p^n)\leq \frac{2}{27}n^3 + C_2 n^{8/3}\]
+for constants $C_1$ and $C_2$.
+\end{thm}
+
+\begin{center}
+\input{Higman-Sims-plots}
+\end{center}
+
+This result should be compared to the later work of Neretin on enumerating algebras.  The lower bound is the work of Higman and is achieved by constructing a large family of class 2 $p$-groups (called $\Phi$-class 2 groups as $\Phi(\Phi(P))=1$ where $\Phi$ is the Frattini subgroup of $P$).
+
+The $n^{8/3}$ factor has been improved to $o(n^{5/2})$ by M. Newman and
+Seeley.  Sims' suggests that it should be possible to show
+	\[\log_p f(p,n)\in \frac{2}{27}n^3 + O(n^2)\]
+(with a positive leading coefficient) which would prove Pyber's conjecture [Shalev].
+
+S. R. Blackburn's work (1992) on the number of class 3 p-groups 
+provides strong evidence that this claim is true as he demonstrates that class 3 groups also attain this lower bound.  Since class 3 groups involve the Jacobi identity (Hall-Witt identity) it is plausible to expect class c, for c less than some fixed bound, will asymptotically achieve the lower bound as well.
+%%%%%
+%%%%%
+\end{document}

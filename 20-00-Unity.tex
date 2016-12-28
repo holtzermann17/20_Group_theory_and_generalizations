@@ -1,0 +1,67 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{Unity}
+\pmcreated{2013-03-22 14:47:17}
+\pmmodified{2013-03-22 14:47:17}
+\pmowner{pahio}{2872}
+\pmmodifier{pahio}{2872}
+\pmtitle{unity}
+\pmrecord{15}{36439}
+\pmprivacy{1}
+\pmauthor{pahio}{2872}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{20-00}
+\pmclassification{msc}{16-00}
+\pmclassification{msc}{13-00}
+\pmsynonym{multiplicative identity}{Unity}
+\pmsynonym{characterization of unity}{Unity}
+\pmrelated{ZeroDivisor}
+\pmrelated{RootOfUnity}
+\pmrelated{ZeroRing}
+\pmrelated{NonZeroDivisorsOfFiniteRing}
+\pmrelated{OppositePolynomial}
+\pmdefines{non-zero unity}
+\pmdefines{nonzero unity}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+ \usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\theoremstyle{definition}
+\newtheorem*{thmplain}{Theorem}
+\begin{document}
+The {\em unity} of a ring \,$(R,\,+,\,\cdot)$\, is the multiplicative identity of the ring, if it has such. \,The unity is often denoted by $e$, $u$ or 1. \,Thus, the unity satisfies
+   $$e\cdot a \;=\; a\cdot e \;=\; a\quad\forall a\in R.$$
+
+If $R$ consists of the mere 0, then $0$ is its unity, since in every ring, \,$0\cdot a = a\cdot 0 = 0$. \,Conversely, if 0 is the unity in some ring $R$, then \,$R = \{0\}$\, (because \,$a = 0\cdot a = 0\,\,\forall a\in R$).
+
+\textbf{Note.} \,When considering a ring $R$ it is often mentioned that ``...having $1 \neq 0$'' or that ``...with non-zero unity'', sometimes only ``...with unity'' or ``...with \PMlinkescapetext{identity element}''; all these exclude the case \,$R = \{0\}$.
+
+\begin{thmplain}
+\, An element $u$ of a ring $R$ is the unity iff $u$ is an idempotent and regular element.
+\end{thmplain}
+
+{\em Proof.} \,Let $u$ be an idempotent and regular element. \,For any element $x$ of $R$ we have
+               $$ux \;=\; u^2x \;=\; u(ux),$$
+and because $u$ is no left zero divisor, it may be cancelled from the equation; thus we get \,$x = ux$. \,Similarly,\, $x = xu$. \,So $u$ is the unity of the ring.\, The other half of the \PMlinkescapetext{theorem} is apparent.
+%%%%%
+%%%%%
+\end{document}

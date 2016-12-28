@@ -1,0 +1,100 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{PolyadicSemigroup}
+\pmcreated{2013-03-22 18:37:47}
+\pmmodified{2013-03-22 18:37:47}
+\pmowner{CWoo}{3771}
+\pmmodifier{CWoo}{3771}
+\pmtitle{polyadic semigroup}
+\pmrecord{10}{41367}
+\pmprivacy{1}
+\pmauthor{CWoo}{3771}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{20N15}
+\pmclassification{msc}{20M99}
+\pmsynonym{n-semigroup}{PolyadicSemigroup}
+\pmsynonym{n-group}{PolyadicSemigroup}
+\pmdefines{$n$-semigroup}
+\pmdefines{$n$-group}
+\pmdefines{polyadic group}
+\pmdefines{covering group}
+
+\usepackage{amssymb,amscd}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{mathrsfs}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+\usepackage{amsthm}
+% making logically defined graphics
+%%\usepackage{xypic}
+\usepackage{pst-plot}
+
+% define commands here
+\newcommand*{\abs}[1]{\left\lvert #1\right\rvert}
+\newtheorem{prop}{Proposition}
+\newtheorem{thm}{Theorem}
+\newtheorem{ex}{Example}
+\newcommand{\real}{\mathbb{R}}
+\newcommand{\pdiff}[2]{\frac{\partial #1}{\partial #2}}
+\newcommand{\mpdiff}[3]{\frac{\partial^#1 #2}{\partial #3^#1}}
+\begin{document}
+Recall that a semigroup is a non-empty set, together with an associative binary operation on it.  \emph{Polyadic semigroups} are generalizations of semigroups, in that the associative binary operation is replaced by an associative $n$-ary operation.  More precisely, we have
+
+\textbf{Definition}.  Let $n$ be a positive integer at least $2$.  A \emph{$n$-semigroup} is a non-empty set $S$, together with an $n$-ary operation $f$ on $S$, such that $f$ is associative:
+$$f(f(a_1,\ldots, a_n),a_{n+1},\ldots, a_{2n-1})=f(a_1,\ldots, f(a_i,\ldots, a_{i+n-1}), \ldots, f_{2n-1})$$
+for every $i\in \lbrace 1,\ldots, n\rbrace$.  A \emph{polyadic semigroup} is an $n$-semigroup for some $n$.
+
+An $n$-semigroup $S$ (with the associated $n$-ary operation $f$) is said to be \emph{commutative} if $f$ is commutative.  An element $e\in S$ is said to be an \emph{identity element}, or an \emph{$f$-identity}, if $$f(a, e, \ldots, e)=f(e,a,\ldots,e)=\cdots = f(e,e,\ldots,a) = a$$ for all $a\in S$.  If $S$ is commutative, then $e$ is an identity in $S$ if $f(a,e,\ldots,e)=a$.
+
+Every semigroup $S$ has an $n$-semigroup structure: define $f:S^n\to S$ by 
+\begin{equation}
+f(a_1,a_n\ldots,a_n)=a_1 \cdot a_2 \cdots \cdot a_n
+\end{equation}
+The associativity of $f$ is induced from the associativity of $\cdot$. 
+
+\textbf{Definition}.  An $n$-semigroup $S$ is called an \emph{$n$-group} if, in the equation 
+\begin{equation}
+f(x_1,\ldots, x_n)=a,
+\end{equation}
+any $n-1$ of the $n$ variables $x_i$ are replaced by elements of $G$, then the equation with the remaining one variable has \emph{at least one} solution in that variable.  A \emph{polyadic group} is just an $n$-group for some integer $n$.
+
+$n$-groups are generalizations of groups.  Indeed, a $2$-group is just a group.
+\begin{proof}  Let $G$ be a $2$-group.  For $a,b\in G$, we write $ab$ instead of $f(a,b)$.  Given $a\in G$, there are $e_1,e_2\in G$ such that $ae_1=a$ and $e_2a=a$.  In addition, there are $x,y\in G$ such that $xa=e_2$ and $ay=e_1$.  So $e_2=xa = x(ae_1)=(xa)e_1= e_2e_1=e_2(ay)=(e_2a)y=ay = e_1$.
+
+Next, suppose $ae_1=ae_3=a$.  Then the equation $e_2a=a$ from the previous paragraph as well as the subsequent discussion shows that $e_1=e_2=e_3$.  This means that, for every $a\in G$, there is a unique $e_a\in G$ such that $e_a a =a e_a =a$.  Since $e_a^2 a = e_a (e_a a)=e_a a = a = a e_a = (a e_a) e_a  = a e_a^2$, we see that $e_a$ is idempotent: $e_a^2=e_a$.
+
+Now, pick any $b\in G$.  Then there is $c\in G$ such that $b=ce_a$.  So $be_a = (c e_a)e_a = c e_a^2= ce_a = b$.  From the last two paragraphs, we see that $e_a = e_b$.  This shows that there is a $e\in G$ such that $ae=ea=a$ for all $a\in G$.  In other words, $e$ is the identity with respect to the binary operation $f$.
+
+Finally, given $a\in G$, there are $b,c\in G$ such that $ab=ca=e$.  Then $c = ce = c(ab)= (ca)b=eb = b$.  In addition, if $ab_1=ab_2=e$, then, from the equation $ca=e$, we get $b_1=c=b_2$.  This shows $b$ is the unique inverse of $a$ with respect to binary operation $f$.  Hence, $G$ is a group.
+\end{proof}
+
+Every group has a structure of an $n$-group, where the $n$-ary operation $f$ on $G$ is defined by the equation (1) above.  Interestingly, Post has proved that, for every $n$-group $G$, there is a group $H$, and an injective function $\phi:G\to H$ with the following properties:
+\begin{enumerate}
+\item $\phi(G)$ generates $H$
+\item $\phi(f(a_1,\ldots,a_n))=\phi(a_1)\cdots \phi(a_n)$
+\end{enumerate}
+If we call the group $H$ with the two above properties a \emph{covering group} of $G$, then Post's theorem states that every $n$-group has a covering group.
+
+From Post's result, one has the following corollary: an $n$-semigroup $G$ is an $n$-group iff equation (2) above has \emph{exactly one} solution in the remaining variable, when $n-1$ of the $n$ variables are replaced by elements of $G$.
+
+\begin{thebibliography}{0}
+\bibitem[HB]{HB}
+R. H. Bruck,
+{\it A Survey of Binary Systems}, Springer-Verlag, 1966
+\bibitem[EP]{EP} 
+E. L. Post, 
+{\it Polyadic groups}, Trans. Amer. Math. Soc., 48, 208-350, 1940, MR 2, 128
+\bibitem[WD]{WD} 
+W. D\"{o}rnte, 
+{\it Untersuchungen \"{u}ber einen verallgemeinerten Gruppenbegriff}, Math. Z. 29, 1-19, 1928
+\end{thebibliography}
+
+%%%%%
+%%%%%
+\end{document}

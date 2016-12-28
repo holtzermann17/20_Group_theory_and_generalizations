@@ -1,0 +1,41 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{Algebra}
+\pmcreated{2013-03-22 11:48:37}
+\pmmodified{2013-03-22 11:48:37}
+\pmowner{djao}{24}
+\pmmodifier{djao}{24}
+\pmtitle{algebra}
+\pmrecord{17}{30353}
+\pmprivacy{1}
+\pmauthor{djao}{24}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{20C99}
+\pmclassification{msc}{16S99}
+\pmclassification{msc}{13B02}
+\pmdefines{subalgebra}
+
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{graphicx}
+%%%%%\usepackage{xypic}
+\begin{document}
+In this definition, all rings are assumed to be rings with identity and all ring homomorphisms are assumed to be unital.
+
+Let $R$ be a ring. An \emph{algebra} over $R$ is a ring $A$ together with a ring homomorphism $f\colon R \to Z(A)$, where $Z(A)$ denotes the center of $A$. A \emph{subalgebra} of $A$ is a subset of $A$ which is an algebra.
+
+Equivalently, an algebra over a ring $R$ is an $R$--module $A$ which is a ring and satisfies the property
+$$r\cdot(x*y) = (r\cdot x)*y = x*(r\cdot y)$$
+for all $r \in R$ and all $x,y \in A$. Here $\cdot$ denotes $R$-module multiplication and $*$ denotes ring multiplication in $A$. One passes between the two definitions as follows: given any ring homomorphism $f\colon R \longrightarrow Z(A)$, the scalar multiplication rule
+$$
+r \cdot b := f(r)*b
+$$
+makes $A$ into an $R$-module in the sense of the second definition. Conversely, if $A$ satisfies the requirements of the second definition, then the function $f\colon R \to A$ defined by $f(r) := r \cdot 1$ is a ring homomorphism from $R$ into $Z(A)$.
+%%%%%
+%%%%%
+%%%%%
+%%%%%
+%%%%%
+\end{document}

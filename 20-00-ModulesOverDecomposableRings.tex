@@ -1,0 +1,60 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ModulesOverDecomposableRings}
+\pmcreated{2013-03-22 18:50:05}
+\pmmodified{2013-03-22 18:50:05}
+\pmowner{joking}{16130}
+\pmmodifier{joking}{16130}
+\pmtitle{modules over decomposable rings}
+\pmrecord{4}{41639}
+\pmprivacy{1}
+\pmauthor{joking}{16130}
+\pmtype{Theorem}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{20-00}
+\pmclassification{msc}{16-00}
+\pmclassification{msc}{13-00}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\begin{document}
+Let $R_1,R_2$ be two, nontrivial, unital rings and $R=R_1\oplus R_2$. If $M_1$ is a $R_1$-module and $M_2$ is a $R_2$-module, then obviously $M_1\oplus M_2$ is a $R$-module via $(r,s)\cdot (m_1,m_2)=(r\cdot m_1,s\cdot m_2)$. We will show that every $R$-module can be obtain in this way.
+
+\textbf{Proposition.} If $M$ is a $R$-module, then there exist submodules $M_1,M_2\subseteq M$ such that $M=M_1\oplus M_2$ and for any $r\in R_1$, $s\in R_2$, $m_1\in M_1$ and $m_2\in M_2$ we have 
+$$(r,s)\cdot m_1=(r,0)\cdot m_1\ \ \ \ (r,s)\cdot m_2=(0,s)\cdot m_2,$$
+i.e. ring action on $M_1$ (respectively $M_2$) does not depend on $R_2$ (respectively $R_1$).
+
+\textit{Proof.} Let $e=(1,0)\in R$ and $f=(0,1)\in R$. Of course both $e,f$ are idempotents and $(1,1)=e+f$. Moreover $ef=fe=0$ and $e,f$ are central, i.e. $e,f\in \{c\in R\ \big| \ \forall_{x\in R}\ cx=xc\}$. We will use $e,f$ to construct submodules $M_1,M_2$. More precisely, let $M_1=eM$ and $M_2=fM$. Because $e,f$ are central, then it is clear that both $M_1$ and $M_2$ are submodules. We will show that $M_1+M_2=M$. Indeed, let $m\in M$. Then we have
+$$m=(1,1)\cdot m=(e+f)\cdot m=e\cdot m + f\cdot m.$$
+Thus $M_1+M_2=M$. Furthermore, assume that $m\in M_1\cap M_2$. Then there exist $m_1,m_2\in M$ such that
+$$e\cdot m_1=m=f\cdot m_2$$
+and therefore 
+$$e\cdot m_1 - f\cdot m_2=0.$$
+Now, after multiplying both sides by $e$ we obtain that
+$$0=(ee)\cdot m_1 - (ef)\cdot m_2=e\cdot m_1-0\cdot m_2=e\cdot m_1=m,$$
+thus $M_1\cap M_2=0$. This shows that $M=M_1\oplus M_2$. To finish the proof, we need to show that the ring action on $M_1$ does not depend on $R_2$ (the other case is analogous). But this is clear, since for any $(r,s)\in R$ and $m\in M$ we have
+$$(r,s)\cdot (e\cdot m)=\big( (r,s)(1,0)\big) \cdot m=(r,0)\cdot m=\big( (r,0)(1,0)\big)\cdot m=(r,0)\cdot(e\cdot m).$$
+This completes the proof. $\square$
+%%%%%
+%%%%%
+\end{document}

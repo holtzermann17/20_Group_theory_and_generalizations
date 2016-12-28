@@ -1,0 +1,50 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{CharacteristicSubgroup}
+\pmcreated{2013-03-22 12:50:56}
+\pmmodified{2013-03-22 12:50:56}
+\pmowner{yark}{2760}
+\pmmodifier{yark}{2760}
+\pmtitle{characteristic subgroup}
+\pmrecord{13}{33180}
+\pmprivacy{1}
+\pmauthor{yark}{2760}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{20A05}
+%\pmkeywords{characteristic subgroup}
+%\pmkeywords{group}
+\pmrelated{FullyInvariantSubgroup}
+\pmrelated{NormalSubgroup}
+\pmrelated{SubnormalSubgroup}
+\pmdefines{characteristic}
+
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+\DeclareMathOperator{\Char}{\,char\,}
+\begin{document}
+\PMlinkescapeword{homomorphism}
+\PMlinkescapeword{properties}
+
+If $(G,*)$ is a group, then $H$ is a \emph{characteristic subgroup} of $G$ (written $H \Char G$) if every automorphism of $G$ maps $H$ to itself.  That is, if $f\in{\rm Aut}(G)$ and $h\in H$ then $f(h)\in H$.
+
+A few properties of characteristic subgroups:
+\begin{itemize}
+\item If $H\Char G$ then $H$ is a normal subgroup of $G$.
+\item If $G$ has only one subgroup of a given cardinality then that subgroup is characteristic.
+\item If $K\Char H$ and $H\trianglelefteq G$ then $K\trianglelefteq G$. (Contrast with normality of subgroups is not transitive.)
+\item If $K\Char H$ and $H\Char G$ then $K\Char G$.
+\end{itemize}
+
+Proofs of these properties:
+\begin{itemize}
+\item Consider $H\Char G$ under the inner automorphisms of $G$.  Since every automorphism preserves $H$, in particular every inner automorphism preserves $H$, and therefore $g*h*g^{-1}\in H$ for any $g\in G$ and $h\in H$.  This is precisely the definition of a normal subgroup.
+\item Suppose $H$ is the only subgroup of $G$ of order $n$.  In general, \PMlinkname{homomorphisms}{GroupHomomorphism} take subgroups to subgroups, and of course isomorphisms take subgroups to subgroups of the same order.  But since there is only one subgroup of $G$ of order $n$, any automorphism must take $H$ to $H$, and so $H\Char G$.
+\item Take $K\Char H$ and $H\trianglelefteq G$, and consider the inner automorphisms of $G$ (automorphisms of the form $h\mapsto g*h*g^{-1}$ for some $g\in G$).  These all preserve $H$, and so are automorphisms of $H$.  But any automorphism of $H$ preserves $K$, so for any $g\in G$ and $k\in K$, $g*k*g^{-1}\in K$.
+\item Let $K\Char H$ and $H\Char G$, and let $\phi$ be an automorphism of $G$.  Since $H\Char G$, $\phi[H]=H$, so $\phi_H$, the restriction of $\phi$ to $H$ is an automorphism of $H$.  Since $K\Char H$, so $\phi_H[K]=K$.  But $\phi_H$ is just a restriction of $\phi$, so $\phi[K]=K$.  Hence $K\Char G$.
+\end{itemize}
+%%%%%
+%%%%%
+\end{document}

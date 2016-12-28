@@ -1,0 +1,54 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{Isemigroup}
+\pmcreated{2013-03-22 16:11:27}
+\pmmodified{2013-03-22 16:11:27}
+\pmowner{Mazzu}{14365}
+\pmmodifier{Mazzu}{14365}
+\pmtitle{I-semigroup}
+\pmrecord{5}{38282}
+\pmprivacy{1}
+\pmauthor{Mazzu}{14365}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{20M10}
+%\pmkeywords{semigroup}
+\pmrelated{SemigroupWithInvolution}
+\pmdefines{I-semigroup}
+\pmdefines{I-monoid}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\begin{document}
+An \emph{$I$-semigroup} [resp. \emph{$I$-monoid}] is a semigroup $S$ [resp. a monoid $M$] with a unary operation $x\mapsto x^{-1}$ defined on $S$ [resp. on $M$] such that for each $x,y\in S$ [resp. for each $x,y\in M$] $$(x^{-1})^{-1}=x,\ \ \ x=xx^{-1}x.$$
+
+Notice that $$x^{-1}xx^{-1}=x^{-1}(x^{-1})^{-1}x^{-1}=x^{-1},$$ so $x^{-1}$ is an inverse of $x$.
+
+The class of $I$-semigroups [resp. $I$-monoids] strictly contains the class of inverse semigroups [resp. inverse monoids]. In fact, the class of inverse semigroups [resp. inverse monoids] is precisely the class of $I$-semigroups with involution [resp. $I$-monoids with involution], i.e. the class of $I$-semigroups  [resp. $I$-monoids] in which the unary operation $^{-1}$ is also an involution.
+
+\begin{thebibliography}{9}
+\bibitem{b:howie} J.M. Howie, \emph{Fundamentals of Semigroup Theory}, Oxford University Press, Oxford, 1991.
+\end{thebibliography}
+%%%%%
+%%%%%
+\end{document}

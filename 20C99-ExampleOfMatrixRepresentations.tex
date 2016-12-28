@@ -1,0 +1,45 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ExampleOfMatrixRepresentations}
+\pmcreated{2013-03-22 14:53:31}
+\pmmodified{2013-03-22 14:53:31}
+\pmowner{drini}{3}
+\pmmodifier{drini}{3}
+\pmtitle{example of matrix representations}
+\pmrecord{6}{36573}
+\pmprivacy{1}
+\pmauthor{drini}{3}
+\pmtype{Example}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{20C99}
+
+\usepackage{amsmath}
+%%%\usepackage{xypic} 
+\usepackage{bbm}
+\newcommand{\Z}{\mathbbmss{Z}}
+\newcommand{\C}{\mathbbmss{C}}
+\newcommand{\R}{\mathbbmss{R}}
+\newcommand{\Q}{\mathbbmss{Q}}
+\newcommand{\mathbb}[1]{\mathbbmss{#1}}
+\newcommand{\figura}[1]{\begin{center}\includegraphics{#1}\end{center}}
+\newcommand{\figuraex}[2]{\begin{center}\includegraphics[#2]{#1}\end{center}}
+\newtheorem{dfn}{Definition}
+\begin{document}
+\textbf{Sign representation of $S_n$}\\
+Let $G=S_n$ the $n$-th symmetric group, and consider $X(\sigma) = \mathrm{sign}(\sigma)$ where $\sigma$ is any permutation in $S_n$. 
+That is, $\mathrm{sign}(\sigma)=1$ when $\sigma$ is an even permutation, and  $\mathrm{sign}(\sigma)=-1$ when $\sigma$ is an odd permutation.
+
+The function $X$ is a group homomorphism between $S_n$ and $GL(\C)=\C \setminus\{0\}$ (that is invertible matrices of size $1\times1$, which is the set of non-zero complex numbers). And thus we say that $\C\setminus\{0\}$ carries a representation of the symmetric group. 
+
+\textbf{Defining representation of $S_n$}\\
+For each $\sigma \in S_n$, let $X:S_n\to GL_n(\C)$ the function given by $X(\sigma)=(a_{ij})_{n\times n}$ where $(a_{ij})$ is the \emph{permutation matrix} given by
+\[
+a_{ij}=\begin{cases}
+1 & \text{if } \sigma(i)=j\\
+0 & \text{if } \sigma(i)\ne j\\
+\end{cases}
+\]
+Such matrices are called permutation matrices because they are obtained permuting the colums of the identity matrix. The function so defined is then a group homomorphism, and thus $GL_n(\C)$ carries a representation of the symmetric group.
+%%%%%
+%%%%%
+\end{document}

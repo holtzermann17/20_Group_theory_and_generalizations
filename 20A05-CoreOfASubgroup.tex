@@ -1,0 +1,90 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{CoreOfASubgroup}
+\pmcreated{2013-03-22 15:37:22}
+\pmmodified{2013-03-22 15:37:22}
+\pmowner{yark}{2760}
+\pmmodifier{yark}{2760}
+\pmtitle{core of a subgroup}
+\pmrecord{10}{37547}
+\pmprivacy{1}
+\pmauthor{yark}{2760}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{20A05}
+\pmsynonym{core}{CoreOfASubgroup}
+\pmsynonym{normal core}{CoreOfASubgroup}
+\pmsynonym{normal interior}{CoreOfASubgroup}
+\pmrelated{NormalClosure2}
+\pmdefines{core-free}
+\pmdefines{corefree}
+\pmdefines{normal-by-finite}
+\pmdefines{core-free subgroup}
+\pmdefines{corefree subgroup}
+\pmdefines{normal-by-finite subgroup}
+
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+\newcommand{\C}{\mathbb{C}}
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\Q}{\mathbb{Q}}
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\Z}{\mathbb{Z}}
+
+\newtheorem{theorem}{Theorem}
+
+\def\genby#1{{\left\langle #1\right\rangle}}
+\def\normal{\trianglelefteq}
+\def\subgroup{\leq}
+
+\DeclareMathOperator{\Sym}{Sym}
+
+\DeclareMathOperator{\coreop}{core}
+\def\core#1#2{{\coreop}_{#1}(#2)}
+\begin{document}
+\PMlinkescapeword{argument}
+\PMlinkescapeword{divides}
+\PMlinkescapeword{finite}
+\PMlinkescapeword{property}
+
+Let $H$ be a subgroup of a group $G$.
+
+The \emph{core} (or \emph{normal interior}, or \emph{normal core}) of $H$ in $G$ 
+is the intersection of all conjugates of $H$ in $G$:
+
+\[ \core{G}{H} = \bigcap_{x\in G}x^{-1}Hx. \]
+
+It is not hard to show that
+$\core{G}{H}$ is the largest normal subgroup of $G$ contained in $H$,
+that is, $\core{G}{H}\normal G$ and
+if $N\normal G$ and $N\subseteq H$ then $N\subseteq\core{G}{H}$.
+For this reason, some authors denote the core by $H_G$
+rather than $\core{G}{H}$,
+by analogy with the notation $H^G$ for the normal closure.
+
+If $\core{G}{H}=\{1\}$, 
+then $H$ is said to be \emph{core-free}.
+
+If $\core{G}{H}$ is of finite index in $H$,
+then $H$ is said to be \emph{normal-by-finite}.
+
+Let $\cal L$ be the set of left cosets of $H$ in $G$.
+By considering the action of $G$ on $\cal L$ it can be shown that 
+the \PMlinkname{quotient}{QuotientGroup} $G/\core{G}{H}$ embeds in the symmetric group $\Sym({\cal L})$.
+A consequence of this is that if $H$ is of finite index in $G$,
+then $\core{G}{H}$ is also of finite index in $G$,
+and $[G:\core{G}{H}]$ divides $[G:H]!$ (the factorial of $[G:H]$).
+In particular, if a simple group $S$ has a proper subgroup of finite index $n$,
+then $S$ must be of finite order dividing $n!$, 
+as the core of the subgroup is trivial.
+It also follows that 
+a group is virtually abelian if and only if it is abelian-by-finite,
+because the core of an abelian subgroup of finite index 
+is a normal abelian subgroup of finite index
+(and the same argument applies if `abelian' is replaced by 
+any other property that is inherited by subgroups).
+%%%%%
+%%%%%
+\end{document}

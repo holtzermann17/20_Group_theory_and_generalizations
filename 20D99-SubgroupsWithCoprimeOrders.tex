@@ -1,0 +1,55 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{SubgroupsWithCoprimeOrders}
+\pmcreated{2013-03-22 18:55:58}
+\pmmodified{2013-03-22 18:55:58}
+\pmowner{pahio}{2872}
+\pmmodifier{pahio}{2872}
+\pmtitle{subgroups with coprime orders}
+\pmrecord{8}{41786}
+\pmprivacy{1}
+\pmauthor{pahio}{2872}
+\pmtype{Theorem}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{20D99}
+\pmrelated{Gcd}
+\pmrelated{CycleNotation}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+ \usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\theoremstyle{definition}
+\newtheorem*{thmplain}{Theorem}
+
+\begin{document}
+If the orders of two subgroups of a group are \PMlinkname{coprime}{Coprime}, the identity element is the only common element of the subgroups.\\
+
+\emph{Proof.}\, Let $G$ and $H$ be such subgroups and $|G|$ and $|H|$ their orders.\, Then the intersection $G\!\cap\!H$ is a subgroup of both $G$ and $H$.\, By Lagrange's theorem, $|G\!\cap\!H|$ divides both $|G|$ and $|H|$ and consequently it divides also\, $\gcd(|G|,\,|H|)$\, which is 1.\, Therefore\, $|G\!\cap\!H| = 1$,\, whence the intersection contains only the identity element.\\
+
+\textbf{Example.}\, All subgroups 
+$$\{(1),\,(12)\},\quad \{(1),\,(13)\}, \quad \{(1),\,(23)\}$$
+of order 2 of the symmetric group $\mathfrak{S}_3$ have only the identity element $(1)$ common with the sole subgroup
+$$\{(1),\,(123),\,(132)\}$$
+of order 3.
+%%%%%
+%%%%%
+\end{document}

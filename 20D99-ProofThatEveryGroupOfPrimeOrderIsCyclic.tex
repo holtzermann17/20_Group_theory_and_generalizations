@@ -1,0 +1,44 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ProofThatEveryGroupOfPrimeOrderIsCyclic}
+\pmcreated{2013-03-22 13:30:55}
+\pmmodified{2013-03-22 13:30:55}
+\pmowner{Wkbj79}{1863}
+\pmmodifier{Wkbj79}{1863}
+\pmtitle{proof that every group of prime order is cyclic}
+\pmrecord{7}{34101}
+\pmprivacy{1}
+\pmauthor{Wkbj79}{1863}
+\pmtype{Proof}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{20D99}
+\pmrelated{ProofThatGInGImpliesThatLangleGRangleLeG}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\begin{document}
+The following is a proof that every group of prime order is cyclic.
+
+Let $p$ be a prime and $G$ be a group such that $|G|=p$.  Then $G$ contains more than one element.  Let $g \in G$ such that $g \ne e_G$.  Then $\langle g \rangle$ contains more than one element.  Since $\langle g \rangle \le G$, by Lagrange's theorem, $|\langle g \rangle |$ divides $p$.  Since $|\langle g \rangle |>1$ and $|\langle g \rangle |$ divides a prime, $|\langle g \rangle |=p=|G|$.  Hence, $\langle g \rangle =G$.  It follows that $G$ is cyclic.
+%%%%%
+%%%%%
+\end{document}

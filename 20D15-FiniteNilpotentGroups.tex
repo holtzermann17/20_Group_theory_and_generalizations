@@ -1,0 +1,176 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{FiniteNilpotentGroups}
+\pmcreated{2013-03-22 15:46:40}
+\pmmodified{2013-03-22 15:46:40}
+\pmowner{Algeboy}{12884}
+\pmmodifier{Algeboy}{12884}
+\pmtitle{finite nilpotent groups}
+\pmrecord{18}{37735}
+\pmprivacy{1}
+\pmauthor{Algeboy}{12884}
+\pmtype{Topic}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{20D15}
+\pmclassification{msc}{20E15}
+\pmclassification{msc}{20E34}
+%\pmkeywords{Sylow subgroups}
+%\pmkeywords{nilpotent}
+%\pmkeywords{commutator}
+\pmrelated{NilpotentGroup}
+\pmrelated{DirectProductAndRestrictedDirectProductOfGroups}
+\pmrelated{ClassificationOfFiniteNilpotentGroups}
+
+\usepackage{latexsym}
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amsthm}
+
+%%\usepackage{xypic}
+
+%-----------------------------------------------------
+
+%       Standard theoremlike environments.
+
+%       Stolen directly from AMSLaTeX sample
+
+%-----------------------------------------------------
+
+%% \theoremstyle{plain} %% This is the default
+
+\newtheorem{thm}{Theorem}
+
+\newtheorem{coro}[thm]{Corollary}
+
+\newtheorem{lem}[thm]{Lemma}
+
+\newtheorem{lemma}[thm]{Lemma}
+
+\newtheorem{prop}[thm]{Proposition}
+
+\newtheorem{conjecture}[thm]{Conjecture}
+
+\newtheorem{conj}[thm]{Conjecture}
+
+\newtheorem{defn}[thm]{Definition}
+
+\newtheorem{remark}[thm]{Remark}
+
+\newtheorem{ex}[thm]{Example}
+
+
+
+%\countstyle[equation]{thm}
+
+
+
+%--------------------------------------------------
+
+%       Item references.
+
+%--------------------------------------------------
+
+
+\newcommand{\exref}[1]{Example-\ref{#1}}
+
+\newcommand{\thmref}[1]{Theorem-\ref{#1}}
+
+\newcommand{\defref}[1]{Definition-\ref{#1}}
+
+\newcommand{\eqnref}[1]{(\ref{#1})}
+
+\newcommand{\secref}[1]{Section-\ref{#1}}
+
+\newcommand{\lemref}[1]{Lemma-\ref{#1}}
+
+\newcommand{\propref}[1]{Prop\-o\-si\-tion-\ref{#1}}
+
+\newcommand{\corref}[1]{Cor\-ol\-lary-\ref{#1}}
+
+\newcommand{\figref}[1]{Fig\-ure-\ref{#1}}
+
+\newcommand{\conjref}[1]{Conjecture-\ref{#1}}
+
+
+% Normal subgroup or equal.
+
+\providecommand{\normaleq}{\unlhd}
+
+% Normal subgroup.
+
+\providecommand{\normal}{\lhd}
+
+\providecommand{\rnormal}{\rhd}
+% Divides, does not divide.
+
+\providecommand{\divides}{\mid}
+
+\providecommand{\ndivides}{\nmid}
+
+
+\providecommand{\union}{\cup}
+
+\providecommand{\bigunion}{\bigcup}
+
+\providecommand{\intersect}{\cap}
+
+\providecommand{\bigintersect}{\bigcap}
+
+\newenvironment{example}{\textbf{Example.}  }{$\Box$}
+\begin{document}
+The study of finite nilpotent groups mostly centers around the study of $p$-groups.  This is because of the following two theorems.
+
+\begin{thm}
+\PMlinkname{Finite}{Finite} $p$-groups are nilpotent.
+\end{thm}
+\begin{proof}
+From the class equation we know the center of a finite $p$-group is non-trivial.
+Thus by induction the upper central series of a $p$-group $P$ terminates at $P$.
+So $P$ is nilpotent.
+\end{proof}
+
+
+\begin{example}
+Infinite $p$-groups may not always be nilpotent.  In the extreme there are counterexamples like the Tarski monsters $T_p$.  These are infinite $p$-groups in which every proper subgroup has order $p$.  Therefore given any two non-trivial elements $x,y$ in which $y\notin \langle x\rangle$ generate $T_p$.  In particular, the only central element is 1 so that the upper central series is trivial and therefore $T_p$ is not nilpotent. 
+
+Indeed, Tarski monsters are not in fact solvable groups which is a weaker property than nilpotent.
+\end{example}
+
+\begin{example}
+Some infinite $p$-groups are nilpotent.  Indeed, some infinite $p$-groups are even abelian such as $\mathbb{Z}_p^\infty$ -- the countable dimension vector space over the field $\mathbb{Z}_p$ -- and the Pr\"ufer group $\mathbb{Z}_{p^\infty}$ -- the inductive limit of $\mathbb{Z}_{p^n}$.
+\end{example}
+
+\begin{thm}\label{thm:nil}
+Let $G$ be a finite group.  Then all the following are equivalent.
+\begin{enumerate}
+\item\label{nil:1} $G$ is nilpotent.
+\item\label{nil:2} Every Sylow subgroup of $G$ is normal.
+\item\label{nil:3} For every prime $p\big{|}|G|$, there exists a unique Sylow $p$-subgroup of $G$.
+\item\label{nil:4} $G$ is the direct product of its Sylow subgroups.
+\end{enumerate}
+\end{thm}
+
+For the proof recal the following consequence of the Sylow theorems:
+\begin{prop}
+If $G$ is a finite group and $P$ a Sylow $p$-subgroup of $G$ then
+ \[ N_G(N_G(P)) = N_G(P).\]
+\end{prop}
+(See Subgroups Containing The Normalizers Of Sylow Subgroups Normalize Themselves)
+
+
+Now we prove Theorem \ref{thm:nil}
+\begin{proof}
+(\ref{nil:1}) implies (\ref{nil:2}).  Suppose that $G$ is nilpotent and that
+$P$ is a Sylow $p$-subgroup of $G$.  Then as $G$ is nilpotent, every subgroup of $G$ is subnormal in $G$, meaning, if $H$ is properly contained in $G$ then $N_G(H)$ properly contains $H$.  Thus $N_G(N_G(P))$ is larger than $N_G(P)$ or $N_G(P)=G$.  However because $P$ is a Sylow $p$-subgroup we know $N_G(P)=N_G(N_G(P))$ so we conclude $N_G(P)=G$.  Therefore every Sylow $p$-subgroup of $G$ is normal in $G$.
+
+(\ref{nil:2}) implies (\ref{nil:3}).  Suppose every Sylow subgroup of $G$ is normal in $G$.  Then by the Sylow theorems we know that for every prime $p$ dividing $|G|$ there is exactly one Sylow $p$-subgroup of $G$ -- as all Sylow $p$-subgroups are conjugate and here by assumption all are also normal.
+
+(\ref{nil:3}) implies (\ref{nil:4}).  Suppose that there is a unique Sylow $p$-subgroup of $G$ for every $p\big{|}|G|$.  Then by the Sylow theorems every Sylow subgroup of $G$ is normal in $G$.  Furthermore, if $P$ and $Q$ are two distinct Sylow subgroups then they they are Sylow subgroups for different primes so that by Lagrange's theorem their intersection is trivial.   Let $P_1,\dots, P_k$ the Sylow subgroups of $G$.  Then as each $P_i$ is normal in $G$ we have
+$G=P_1\cdots P_k$ and we have also demonstrated $P_1\cdots P_i\intersect P_{i+1}=1$ for $2\leq i\leq k$ therefore $G$ is the direct product of $P_1,\dots, P_k$.
+
+(\ref{nil:4}) implies (\ref{nil:1}).  Suppose that $G$ is a product of its Sylow subgroups.  Then as every Sylow subgroup is a $p$-group, $G$ is a product of nilpotent groups so $G$ itself is nilpotent.
+\end{proof}
+%%%%%
+%%%%%
+\end{document}

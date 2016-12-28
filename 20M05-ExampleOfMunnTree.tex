@@ -1,0 +1,101 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ExampleOfMunnTree}
+\pmcreated{2013-03-22 16:12:02}
+\pmmodified{2013-03-22 16:12:02}
+\pmowner{Mazzu}{14365}
+\pmmodifier{Mazzu}{14365}
+\pmtitle{example of Munn tree}
+\pmrecord{20}{38294}
+\pmprivacy{1}
+\pmauthor{Mazzu}{14365}
+\pmtype{Example}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{20M05}
+\pmclassification{msc}{20M18}
+
+% this is the default PlanetMath preamble. as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%\usepackage{xypic} 
+
+% there are many more packages, add them here as you need them
+
+\newtheorem{thm}{Theorem}
+
+
+% define commands here 
+
+\begin{document}
+\PMlinkescapeword{inverse}
+\PMlinkescapeword{graph}
+\PMlinkescapeword{right}
+\PMlinkescapeword{theory}
+\PMlinkescapeword{argument}
+\PMlinkescapeword{opposite}
+\PMlinkescapeword{representation}
+
+
+\PMlinkescapeword{reduce}
+\PMlinkescapeword{reduction}
+\PMlinkescapeword{reduced}
+
+\newcommand{\redu}{\mathrm{red}}
+
+
+
+
+\newcommand{\prefi}{\mathrm{pref}}
+
+
+\newcommand{\V}{\mathrm{V}}
+\newcommand{\E}{\mathrm{E}}
+\newcommand{\schG}{\mathcal{S}\Gamma}
+
+\newcommand{\e}{\mathrm{e}}
+\newcommand{\co}{\mathrm{c}}
+
+\newcommand{\cbra}[1]{\left( #1 \right)}
+\newcommand{\qbra}[1]{\left[ #1 \right]}
+\newcommand{\gbra}[1]{\left\{ #1 \right\}}
+\newcommand{\abra}[1]{\left\langle #1 \right\rangle}
+
+\newcommand{\mipres}[2]{\mathrm{Inv}^1\abra{#1 | #2}}
+\newcommand{\sipres}[2]{\mathrm{Inv}\abra{#1 | #2}}
+\newcommand{\mt}{\mathrm{MT}}
+
+\newcommand{\double}[1]{\cbra{#1\amalg #1^{-1}}}
+\newcommand{\doubles}[1]{\cbra{#1\amalg #1^{-1}}^\ast}
+\newcommand{\doublep}[1]{\cbra{#1\amalg #1^{-1}}^+}
+
+
+Let $X = \gbra{a, b, c}$, $w = aaa^{-1}a^{-1}a^{-1}abb^{-1}ab^{-1}bcaa^{-1}cc^{-1}$. The reduced prefix set of $w$ is
+$$\redu (\prefi(w)) = \gbra{\varepsilon, a, aa, a^{-1}, b, ab^{-1}, ac, aca, acc}.$$
+The Munn tree $\mt(w)$ is the following. 
+$$
+\xymatrix{
+                  & b         & {ab^{-1}}  \ar[d]_{b}    &  \\
+{a^{-1}} \ar[r]^{a} &  \varepsilon \ar[u]^{b} \ar[r]^{a} &  a \ar[d]^{c} \ar[r]^{a} &  {aa}\\
+ & & {ac} \ar[r]^{c} \ar[d]^{a}& {acc}\\
+ & & {aca} &
+}
+$$
+
+
+Note that we have drawn only  edges of the form $(v_1,x,v_2)$ (i.e. $\xymatrix{v_1 \ar[r]^{x} &  v_2}$) with $x\in X$, leaving implicit the existence of the opposite edges $(v_2,x^{-1},v_1)$ (i.e. $\xymatrix{v_2 \ar[r]^{x^{-1}} &  v_1}$), as usual in the diagram representation of inverse word graphs.
+%%%%%
+%%%%%
+\end{document}

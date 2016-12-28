@@ -1,0 +1,114 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{RegularExpression}
+\pmcreated{2013-03-22 12:26:56}
+\pmmodified{2013-03-22 12:26:56}
+\pmowner{CWoo}{3771}
+\pmmodifier{CWoo}{3771}
+\pmtitle{regular expression}
+\pmrecord{17}{32583}
+\pmprivacy{1}
+\pmauthor{CWoo}{3771}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{20M35}
+\pmclassification{msc}{68Q70}
+\pmrelated{RegularLanguage}
+\pmrelated{KleeneStar}
+\pmrelated{KleeneAlgebra}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\begin{document}
+A \emph{regular expression} is a particular meta-syntax for specifying regular grammars, which has many useful applications.
+
+While variations abound, fundamentally a regular expression consists of the following pieces:
+\begin{itemize}
+\item Parentheses can be used for grouping and nesting, and must contain a fully-formed regular expression.  
+\item The \verb=|= symbol can be used for denoting alternatives.  Some specifications do not provide nesting or alternatives.  
+\item There are also a number of postfix operators.  The \verb=?= operator means that the preceding element can either be present or non-present, and corresponds to a rule of the form $A\to B\,|\,\lambda$.  
+\item The \verb=*= operator means that the preceding element can be present zero or more times, and corresponds to a rule of the form $A\to BA\,|\,\lambda$.  
+\item The \verb=+= operator means that the preceding element can be present one or more times, and corresponds to a rule of the form $A\to BA\,|\,B$.  
+\end{itemize}
+Note that while these rules are not immediately in regular form, they can be transformed so that they are.
+
+Formally, let $S=\lbrace \varnothing, \cup, ^*, (, )\rbrace$ and $\Sigma$ an alphabet disjoint from $S$.  Consider the language $L(\Sigma)$ over $\Sigma\cup S$ specified below
+\begin{enumerate}
+\item $\varnothing\in L(\Sigma)$, 
+\item $a\in L(\Sigma)$ for each $a\in \Sigma$,
+\item if $u\in L(\Sigma)$, then $u^*\in L(\Sigma)$,
+\item if $u_1,u_2\in L(\Sigma)$, then $(u_1\cup u_2)$ and $(u_1u_2)$ are both in $L(\Sigma)$, and
+\item among all languages over $\Sigma\cup S$ satisfying conditions 1-4, $L(\Sigma)$ is the smallest.
+\end{enumerate}
+Then any element $u\in L(\Sigma)$ is called a \emph{regular expression} over $\Sigma$.
+
+
+Here is an example of a regular expression that specifies a grammar that generates the binary representation of all multiples of 3 (and only multiples of 3).
+
+$$ (0^*(1(01^*0)^*1)^*)^*0^* $$
+
+This specifies the context-free grammar (in BNF):
+
+\begin{center}
+\begin{eqnarray*}
+S & \verb.::=. & AB \\
+A & \verb.::=. & CD \\
+B & \verb.::=. & \verb=0=B | \lambda \\
+C & \verb.::=. & \verb=0=C | \lambda \\
+D & \verb.::=. & \verb=1=E\verb=1= \\
+E & \verb.::=. & FE | \lambda \\
+F & \verb.::=. & \verb=0=G\verb=0= \\
+G & \verb.::=. & \verb=1=G | \lambda 
+\end{eqnarray*}
+\end{center}
+
+A little further work is required to transform this grammar into an acceptable form for regular grammars, but it can be shown that this grammar (and any grammar specified by a regular expression) is equivalent to some regular grammar.
+
+One can understand the language described by a regular expression in another way, by viewing the regular expression operators as shorthand for various set-theoretic operations.  Formally, the \emph{language $L(u)$ over $\Sigma$ associated with a regular expression} $u$ over $\Sigma$ is inductively defined as follows:
+\begin{itemize}
+\item $L(\varnothing)=\varnothing$,
+\item $L(a)=\lbrace a\rbrace$ whenever $a\in \Sigma$,
+\item $L(u^*)=L(u)^*$, where the $^*$ on the right side is the Kleene star operation on sets, 
+\item $L((u_1u_2))=L(u_1)L(u_2)$, where the right side denotes the concatenation of two sets, and
+\item $L((u_1\cup u_2))=L(u_1)\cup L(u_2)$, where $\cup$ on the right side is the union operation on sets.
+\end{itemize}
+
+A language $L$ over $\Sigma$ is regular iff there is a regular expression $u$ over $\Sigma$ such that $L=L(u)$.
+
+%For example, suppose we have a regular expression describing a set of words on some alphabet $\Sigma$.  Then:
+%\begin{itemize}
+%\item A single character $s$ from $\Sigma$ denotes the language $\{s\}$ containing a single word.
+%\item Concatenation, $LL'$, denotes the language formed by concatenating any word from $L$ with any word from $L'$. 
+%\item The ``or'' operator, $L | L'$, denotes the language $L \cup L'$. 
+%\item The Kleene star operator $^*$ denotes arbitrary repetition, that is, the language 
+%\[
+%L^* = \{\}\cup L \cup LL \cup LLL \cup \cdots.
+%\]
+%\end{itemize}
+%The other common regular expression operators can easily be rewritten in terms of these basic operations. 
+
+With this interpretation, it is quite straightforward to design a non-deterministic finite automaton that recognizes the language described by a regular expression.  Of course, for computer implementations, one must transform this into a deterministic finite automaton, but there are various algorithms for doing this efficiently.  This process, production of a non-deterministic automaton and conversion to an equivalent deterministic automaton is approximately what is done in software packages implementing regular expression searching.  In fact, most such packages implement operations impossible for a finite automaton, such as requiring a later part of the string to be the same as a previous part (the language $\{A^nBA^n\text{ for }n\geq 0\}$ is not regular but can be matched by most ``regular expression'' software; such capabilities are called ``extended regular expressions''.  None of these systems are powerful enough to recognize the language of balanced parentheses.
+
+Regular expressions have many applications.  Quite often they are used for powerful string matching and substitution features in many text editors and programming languages.
+%%%%%
+%%%%%
+\end{document}

@@ -1,0 +1,78 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{StrongerHilbertTheorem90}
+\pmcreated{2013-03-22 13:50:27}
+\pmmodified{2013-03-22 13:50:27}
+\pmowner{alozano}{2414}
+\pmmodifier{alozano}{2414}
+\pmtitle{stronger Hilbert theorem 90}
+\pmrecord{6}{34577}
+\pmprivacy{1}
+\pmauthor{alozano}{2414}
+\pmtype{Theorem}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{20J06}
+\pmsynonym{Hilbert 90}{StrongerHilbertTheorem90}
+%\pmkeywords{cohomology}
+\pmrelated{HilbertTheorem90}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsthm}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\newtheorem{thm}{Theorem}
+\newtheorem{defn}{Definition}
+\newtheorem{prop}{Proposition}
+\newtheorem{lemma}{Lemma}
+\newtheorem{cor}{Corollary}
+\begin{document}
+Let $K$ be a field and let $\bar{K}$ be an algebraic closure of
+$K$. By $\bar{K}^+$ we denote the abelian group $(\bar{K},+)$ and
+similarly $\bar{K}^{\ast}=(\bar{K},\ast)$ (here the operation is
+multiplication). Also we let
+$$G_{\bar{K}/K}=\operatorname{Gal}(\bar{K}/K)$$ be the absolute
+Galois group of $K$.\\
+
+
+\begin{thm}[Hilbert 90]
+Let $K$ be a field.
+\begin{enumerate}
+\item $$ H^1(G_{\bar{K}/K},\bar{K}^+)=0$$
+
+\item $$ H^1(G_{\bar{K}/K},\bar{K}^{\ast})=0$$
+
+\item If $\operatorname{char}(K)$, the characteristic of $K$, does
+not divide $m$ (or $\operatorname{char}(K)=0$) then
+$$ H^1(G_{\bar{K}/K},{\mu}_m)\cong K^{\ast}/K^{\ast m}$$
+where ${\mu}_m$ denotes the set of all $m^{th}$-roots of unity.
+\end{enumerate}
+\end{thm}
+
+\begin{thebibliography}{9}
+\bibitem{serre} J.P. Serre, {\em Galois Cohomology},
+Springer-Verlag, New York.
+\bibitem{serre} J.P. Serre, {\em Local Fields},
+Springer-Verlag, New York.
+\end{thebibliography}
+%%%%%
+%%%%%
+\end{document}

@@ -1,0 +1,97 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{FreeSemigroup}
+\pmcreated{2013-03-22 16:11:41}
+\pmmodified{2013-03-22 16:11:41}
+\pmowner{yark}{2760}
+\pmmodifier{yark}{2760}
+\pmtitle{free semigroup}
+\pmrecord{15}{38287}
+\pmprivacy{1}
+\pmauthor{yark}{2760}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{20M10}
+\pmclassification{msc}{20M05}
+%\pmkeywords{semigroup}
+\pmrelated{Word}
+\pmdefines{word}
+\pmdefines{empty word}
+\pmdefines{free semigroup}
+\pmdefines{free monoid}
+
+\usepackage{amsfonts}
+%%\usepackage{xypic} 
+
+\newcommand{\gbra}[1]{\left\{ #1 \right\}}
+
+\begin{document}
+Let $X$ be a set.
+We define the power of $X$ in a language-theoretical manner as
+\[
+  X^n=\gbra{x_1x_2\ldots x_n\mid x_j\in X
+  \hbox{ for all }j\in\gbra{1,\ldots,n}}
+\]
+for all $n\in\mathbb{N}\setminus \gbra{0}$, and
+\[
+  X^0=\gbra{\varepsilon},
+\]
+where $\varepsilon\notin X$.
+Note that the set $X$ is not necessarily an alphabet,
+that is, it may be infinite; for example, we may choose $X=\mathbb{R}$.
+
+We define the sets $X^+$ and $X^*$ as
+\[
+  X^+=\bigcup_{n\in\mathbb{N}\setminus\gbra{0}}   X^n
+\]
+and
+\[
+  X^*=\bigcup_{n\in\mathbb{N}}   X^n  =  X^+\cup\gbra{\varepsilon}.
+\]
+The elements of $X^*$ are called \emph{words} on $X$,
+and $\varepsilon$ is called the \emph{empty word} on $X$.
+
+We define the \emph{juxtaposition} of two words $v,w\in X^*$ as 
+\[
+  vw=v_1v_2\ldots v_n w_1w_2\ldots w_m,
+\]
+where $v=v_1v_2\ldots v_n$ and $w=w_1w_2\ldots w_m$,
+with $v_i,w_j\in X$ for each $i$ and $j$.
+It is easy to see that the juxtaposition is associative,
+so if we equip $X^+$ and $X^*$ with it
+we obtain respectively a semigroup and a monoid.
+Moreover, $X^+$ is the \emph{free semigroup} on $X$ and $X^*$
+is the \emph{free monoid} on $X$,
+in the sense that they solve the following universal mapping problem:
+given a semigroup $S$ (resp.\ a monoid $M$)
+and a map $\Phi\colon X\to S$ (resp.\ $\Phi\colon X\to M$),
+a semigroup homomorphism $\overline\Phi\colon X^+\to S$
+(resp.\ a monoid homomorphism $\overline\Phi\colon X^*\to M$)
+exists such that the following diagram commutes:
+\[
+  \xymatrix{
+  & X \ar[r]^{\iota} \ar[d]_{\Phi} & X^+ \ar[dl]^{\overline{\Phi}} \\
+  & S &
+  }
+\]
+  (resp. 
+\[
+  \xymatrix{
+  & X \ar[r]^{\iota} \ar[d]_{\Phi} & X^* \ar[dl]^{\overline{\Phi}} \\
+  & M &
+  }
+\]
+), where $\iota\colon X\to X^+$ (resp.\ $\iota\colon X\to X^*$)
+is the inclusion map.
+It is well known from universal algebra
+that $X^+$ and $X^*$ are unique up to isomorphism.
+
+\begin{thebibliography}{9}
+\bibitem{b:howie}
+ J.M. Howie,
+ \it{Fundamentals of Semigroup Theory},
+ Oxford University Press, Oxford, 1991.
+\end{thebibliography}
+%%%%%
+%%%%%
+\end{document}

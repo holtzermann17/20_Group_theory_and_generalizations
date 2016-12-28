@@ -1,0 +1,52 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ProofThatAFiniteAbelianGroupHasElementWithlvertGrvertexpG}
+\pmcreated{2013-03-22 16:34:05}
+\pmmodified{2013-03-22 16:34:05}
+\pmowner{rm50}{10146}
+\pmmodifier{rm50}{10146}
+\pmtitle{proof that a finite abelian group has element with $\lvert g\rvert=\exp(G)$}
+\pmrecord{4}{38758}
+\pmprivacy{1}
+\pmauthor{rm50}{10146}
+\pmtype{Proof}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{20A99}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\newtheorem{thm}{Theorem}
+\newtheorem{cor}[thm]{Corollary}
+\newtheorem{lem}[thm]{Lemma}
+\newtheorem{prop}[thm]{Proposition}
+\newtheorem{ax}{Axiom}
+
+\begin{document}
+\begin{thm} If $G$ is a finite abelian group, then $G$ has an element of order $\exp(G)$.
+\end{thm}
+\textbf{Proof. } Write $\exp(G)=\prod p_i^{k_i}$. Since $\exp(G)$ is the least common multiple of the orders of each group element, it follows that for each $i$, there is an element whose order is a multiple of $p_i^{k_i}$, say $\lvert c_i\rvert=a_i p_i^{k_i}$. Let $d_i=c_i^{a_i}$. Then $\lvert d_i\rvert=p_i^{k_i}$. The $d_i$ thus have pairwise relatively prime orders, and thus
+\[\left\lvert\prod d_i\right\rvert=\prod\left\lvert d_i\right\rvert=\exp(G)\]
+so that $\prod d_i$ is the desired element.
+
+%%%%%
+%%%%%
+\end{document}

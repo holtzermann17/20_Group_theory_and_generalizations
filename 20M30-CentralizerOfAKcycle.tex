@@ -1,0 +1,57 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{CentralizerOfAKcycle}
+\pmcreated{2013-03-22 17:18:00}
+\pmmodified{2013-03-22 17:18:00}
+\pmowner{rm50}{10146}
+\pmmodifier{rm50}{10146}
+\pmtitle{centralizer of a k-cycle}
+\pmrecord{6}{39647}
+\pmprivacy{1}
+\pmauthor{rm50}{10146}
+\pmtype{Theorem}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{20M30}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\newtheorem{thm}{Theorem}
+\begin{document}
+\begin{thm} Let $\sigma$ be a $k$-cycle in $S_n$. Then the centralizer of $\sigma$ is
+\[C_{S_n}(\sigma)=\{\sigma^i \tau \mid 0\leq i\leq k-1, \tau\in S_{n-k}\}\]
+where $S_{n-k}$ is the subgroup of $S_n$ consisting of those permutations that fix all elements appearing in $\sigma$.
+\end{thm}
+\begin{proof}
+This is fundamentally a counting argument. It is clear that $\sigma$ commutes with each element in the set given, since $\sigma$ commutes with powers of itself and also commutes with disjoint permutations. The size of the given set is $k\cdot (n-k)!$. However, the number of conjugates of $\sigma$ is the index of $C_{S_n}(\sigma)$ in $S_n$ by the orbit-stabilizer theorem, so to determine $\lvert C_{S_n}(\sigma)\rvert$ we need only count the number of conjugates of $\sigma$, i.e. the number of $k$-cycles.
+
+In a $k$-cycle $(a_1~\ldots~a_k)$, there are $n$ choices for $a_1$, $n-1$ choices for $a_2$, and so on. So there are $n(n-1)\cdots(n-k+1)$ choices for the elements of the cycle. But this counts each cycle $k$ times, depending on which element appears as $a_1$. So the number of $k$-cycles is
+\[\frac{n(n-1)\cdots(n-k+1)}{k}\]
+
+Finally,
+\[n!=\lvert S_n\rvert = \frac{n(n-1)\cdots(n-k+1)}{k}\lvert C_{S_n}(\sigma)\rvert\]
+so that
+\[\lvert C_{S_n}(\sigma)\rvert=\frac{k\cdot n!}{n(n-1)\cdots(n-k+1)}=k\cdot (n-k)!\]
+and we see that the elements in the list above must exhaust $C_{S_n}(\sigma)$.
+\end{proof}
+%%%%%
+%%%%%
+\end{document}

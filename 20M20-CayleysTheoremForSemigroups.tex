@@ -1,0 +1,113 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{CayleysTheoremForSemigroups}
+\pmcreated{2013-03-22 19:04:37}
+\pmmodified{2013-03-22 19:04:37}
+\pmowner{Ziosilvio}{18733}
+\pmmodifier{Ziosilvio}{18733}
+\pmtitle{Cayley's theorem for semigroups}
+\pmrecord{8}{41964}
+\pmprivacy{1}
+\pmauthor{Ziosilvio}{18733}
+\pmtype{Theorem}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{20M20}
+\pmclassification{msc}{20M15}
+\pmrelated{CayleysTheorem}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\newcommand{\restrict}[2]{\left.{#1}\right|_{#2}}
+\newtheorem{theorem}{Theorem}
+\begin{document}
+Let $X$ be a set.
+We can define on $X^X$,
+the set of functions from $X$ to itself,
+a structure of semigroup by putting
+$f\otimes g=g\circ f$.
+Such semigroup is actually a monoid,
+whose identity element is the identity function of $X$.
+\begin{theorem}[Cayley's theorem for semigroups] \label{thm:cay-sg}
+For every semigroup $(S,\cdot)$
+there exist a set $X$
+and an injective map $\phi:S\to X^X$
+which is a morphism of semigroups from $(S,\cdot)$ to $(X^X,\otimes)$.
+\end{theorem}
+In other words,
+every semigroup is isomorphic to
+a semigroup of transformations of some set.
+This is an extension of Cayley's theorem on groups,
+which states that every group is isomorphic to
+a group of \emph{invertible} transformations of some set.
+
+\textit{Proof of Theorem~\ref{thm:cay-sg}.}
+The argument is similar to the one for Cayley's theorem on groups.
+Let $X=S$, the set of elements of the semigroup.
+
+First, suppose $(S,\cdot)$ is a monoid with unit $e$.
+For $s\in S$ define $f_s:S\to S$ as
+\begin{equation} \label{eq:iso}
+f_s(x)=x\cdot s\;\forall x\in S\,.
+\end{equation}
+Then for every $s,t,x\in S$ we have
+\begin{eqnarray*}
+f_{s\cdot t}(x)
+& = & x\cdot(s\cdot t) \\
+& = & (x\cdot s)\cdot t \\
+& = & f_t(x\cdot s) \\
+& = & f_t(f_s(x)) \\
+& = & (f_t\circ f_s)(x) \\
+& = & (f_s\otimes f_t)(x)\,,
+\end{eqnarray*}
+so $\phi(s)=f_s$ is a homomorphism of monoids,
+with $f_e=\mathrm{id}_S$.
+This homomorphism is injective,
+because if $f_s=f_t$,
+then $s=f_s(e)=f_t(e)=t$.
+
+Next, suppose $(S,\cdot)$ is a semigroup but not a monoid.
+Let $e\not\in S$.
+Construct a monoid $(M,\ast)$ by putting $M=S\cup\{e\}$ and defining
+\begin{displaymath}
+s\ast t=\left\{\begin{array}{ll}
+s\cdot t & \mathrm{if}\;s,t\in S, \\
+s & \mathrm{if}\;s\in S,t=e, \\
+t & \mathrm{if}\;s=e,t\in S, \\
+e & \mathrm{if}\;s=t=e. \\
+\end{array}\right.
+\end{displaymath}
+Then $(M,\ast)$ is isomorphic to a submonoid of $(M^M,\otimes)$
+as by (\ref{eq:iso}).
+For $s\in S$ put $g_s=\restrict{f_s}{S}$:
+then $g_s\in S^S$ for every $s$,
+$g_{s\cdot t}=\restrict{f_{s\ast t}}{S}$,
+and $(S,\cdot)$ is isomorphic to $(\Sigma,\otimes)$
+with $\Sigma=\{g_s\mid s\in S\}$.
+$\Box$
+
+Observe that the theorem remains valid
+if $f\otimes g$ is defined as $f\circ g$.
+In this case, the morphism $\phi$ is defined by
+$f_s(x)=s\cdot x\,\forall x\in S$.
+%%%%%
+%%%%%
+\end{document}

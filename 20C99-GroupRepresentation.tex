@@ -1,0 +1,67 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{GroupRepresentation}
+\pmcreated{2013-03-22 12:13:30}
+\pmmodified{2013-03-22 12:13:30}
+\pmowner{djao}{24}
+\pmmodifier{djao}{24}
+\pmtitle{group representation}
+\pmrecord{9}{31596}
+\pmprivacy{1}
+\pmauthor{djao}{24}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{20C99}
+\pmsynonym{representation}{GroupRepresentation}
+\pmrelated{GeneralLinearGroup}
+\pmdefines{subrepresentation}
+\pmdefines{irreducible}
+\pmdefines{faithful}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%%\usepackage{xypic} 
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\begin{document}
+Let $G$ be a group, and let $V$ be a vector space. A \emph{representation} of $G$ in $V$ is a group homomorphism $\rho\colon G \to \operatorname{GL}(V)$ from $G$ to the general linear group $\operatorname{GL}(V)$ of invertible linear transformations of $V$.
+
+Equivalently, a representation of $G$ is a vector space $V$ which is a $G$-module, that is, a (left) module over the group ring $\mathbb{Z}[G]$. The equivalence is achieved by assigning to each homomorphism $\rho\colon G \to \operatorname{GL}(V)$ the module structure whose scalar multiplication is defined by $g \cdot v := (\rho(g))(v)$, and extending linearly. Note that, although technically a group representation is a homomorphism such as $\rho$, most authors invariably denote a representation using the underlying vector space $V$, with the homomorphism being understood from context, in much the same way that vector spaces themselves are usually described as sets with the corresponding binary operations being understood from context.
+
+\paragraph{Special kinds of representations}
+
+(preserving all notation from above)
+
+A representation is \emph{faithful} if either of the following equivalent conditions is satisfied:
+\begin{itemize}
+\item $\rho\colon G \to \operatorname{GL}(V)$ is injective,
+\item $V$ is a faithful left $\mathbb{Z}[G]$--module.
+\end{itemize}
+
+A \emph{subrepresentation} of $V$ is a subspace $W$ of $V$ which is a left $\mathbb{Z}[G]$--submodule of $V$;
+ such a subspace is sometimes called a $G$-invariant subspace of $V$. Equivalently, a subrepresentation of $V$ is a subspace $W$ of $V$ with the property that
+$$
+(\rho(g))(w) \in W \text{ for all } g \in G \text{ and } w \in W.
+$$
+
+A representation $V$ is called {\em irreducible} if it has no subrepresentations other than itself and the zero module.
+%%%%%
+%%%%%
+%%%%%
+\end{document}

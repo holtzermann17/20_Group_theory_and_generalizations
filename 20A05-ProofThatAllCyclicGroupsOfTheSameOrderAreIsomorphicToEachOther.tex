@@ -1,0 +1,40 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ProofThatAllCyclicGroupsOfTheSameOrderAreIsomorphicToEachOther}
+\pmcreated{2013-03-22 13:30:41}
+\pmmodified{2013-03-22 13:30:41}
+\pmowner{Wkbj79}{1863}
+\pmmodifier{Wkbj79}{1863}
+\pmtitle{proof that all cyclic groups of the same order are isomorphic to each other}
+\pmrecord{9}{34095}
+\pmprivacy{1}
+\pmauthor{Wkbj79}{1863}
+\pmtype{Proof}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{20A05}
+
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+\usepackage{psfrag}
+\usepackage{graphicx}
+\usepackage{amsthm}
+%%\usepackage{xypic}
+\begin{document}
+The following is a proof that all cyclic groups of the same order are isomorphic to each other.
+
+\begin{proof}
+Let $G$ be a cyclic group and $g$ be a generator of $G$.  Define $\varphi \colon {\mathbb Z} \to G$ by $\varphi (c)=g^c$.  Since $\varphi(a+b)=g^{a+b}=g^ag^b=\varphi(a)\varphi(b)$, $\varphi$ is a group homomorphism.  If $h \in G$, then there exists $x \in {\mathbb Z}$ such that $h=g^x$.  Since $\varphi (x)=g^x=h$, $\varphi$ is surjective.
+
+Note that $\ker \varphi =\{c \in {\mathbb Z}\, : \, \varphi(c)=e_G\}=\{c \in {\mathbb Z}\, : \, g^c=e_G\}$.
+
+If $G$ is infinite, then $\ker \varphi = \{0\}$, and $\varphi$ is injective.  Hence, $\varphi$ is a group isomorphism, and $G \cong {\mathbb Z}$.
+
+If $G$ is finite, then let $|G|=n$.  Thus, $|g|=|\langle g \rangle |=|G|=n$.  If $g^c=e_G$, then $n$ divides $c$.  Therefore, $\ker \varphi =n{\mathbb Z}$.  By the first isomorphism theorem, $G \cong \mathbb{Z}/n\mathbb{Z}=\mathbb{Z}_n$.
+
+Let $H$ and $K$ be cyclic groups of the same order.  If $H$ and $K$ are infinite, then, by the above \PMlinkescapetext{argument}, $H \cong {\mathbb Z}$ and $K \cong {\mathbb Z}$.  If $H$ and $K$ are finite of order $n$, then, by the above \PMlinkescapetext{argument}, $H \cong {\mathbb Z}_n$ and $K \cong {\mathbb Z}_n$.  In any case, it follows that $H \cong K$.
+\end{proof}
+%%%%%
+%%%%%
+\end{document}

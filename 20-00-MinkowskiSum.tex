@@ -1,0 +1,95 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{MinkowskiSum}
+\pmcreated{2013-03-22 15:16:22}
+\pmmodified{2013-03-22 15:16:22}
+\pmowner{matte}{1858}
+\pmmodifier{matte}{1858}
+\pmtitle{Minkowski sum}
+\pmrecord{4}{37060}
+\pmprivacy{1}
+\pmauthor{matte}{1858}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{20-00}
+\pmclassification{msc}{15-00}
+\pmclassification{msc}{13-00}
+\pmclassification{msc}{16-00}
+\pmrelated{VectorSpace}
+\pmrelated{Sumset}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amsthm}
+
+\usepackage{mathrsfs}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\newcommand{\sR}[0]{\mathbb{R}}
+\newcommand{\sC}[0]{\mathbb{C}}
+\newcommand{\sN}[0]{\mathbb{N}}
+\newcommand{\sZ}[0]{\mathbb{Z}}
+
+ \usepackage{bbm}
+ \newcommand{\Z}{\mathbbmss{Z}}
+ \newcommand{\C}{\mathbbmss{C}}
+ \newcommand{\F}{\mathbbmss{F}}
+ \newcommand{\R}{\mathbbmss{R}}
+ \newcommand{\Q}{\mathbbmss{Q}}
+
+
+
+\newcommand*{\norm}[1]{\lVert #1 \rVert}
+\newcommand*{\abs}[1]{| #1 |}
+
+
+
+\newtheorem{thm}{Theorem}
+\newtheorem{defn}{Definition}
+\newtheorem{prop}{Proposition}
+\newtheorem{lemma}{Lemma}
+\newtheorem{cor}{Corollary}
+\begin{document}
+{\bf Definition}
+Suppose $A$ and $B$ are sets in a vector space $V$ over a field $K$, 
+and suppose $\lambda \in K$. Then
+\begin{eqnarray*}
+A+B&=&\{a+b \mid a\in A, b\in B\},\\
+A-B&=&\{a-b \mid a\in A, b\in B\},\\
+\lambda A&=& \{\lambda a \mid a\in A\},\\
+-A &=& (-1) A.
+\end{eqnarray*}
+The set $A+B$ is called the \emph{Minkowski sum} of $A$ and $B$. 
+If either $A$ or $B$ is a single point (a singleton), say $B=\{x\}$, then we 
+write $A+x$ instead of $A+\{x\}$. Similarly we define $A-x$, $x-A$ and $x+A$.
+
+\subsubsection*{Properties}
+Suppose $A$,$B$, $V$, and $\lambda$ are as above. Then 
+\begin{itemize}
+\item $A+B=B+A$
+\item $\lambda(A+B)=\lambda A+\lambda B$
+\item $2A\subseteq A+A$, $3A\subseteq A+A+A$, etc, 
+but in general, $A+A\neq 2A$. 
+(Consider $A=\{(0,0),(0,1)\}$ in $\sR^2$.)
+\end{itemize}
+%%%%%
+%%%%%
+\end{document}

@@ -1,0 +1,64 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{SimpleSemigroup}
+\pmcreated{2013-03-22 13:05:59}
+\pmmodified{2013-03-22 13:05:59}
+\pmowner{mclase}{549}
+\pmmodifier{mclase}{549}
+\pmtitle{simple semigroup}
+\pmrecord{7}{33521}
+\pmprivacy{1}
+\pmauthor{mclase}{549}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{20M10}
+\pmdefines{simple}
+\pmdefines{zero simple}
+\pmdefines{right simple}
+\pmdefines{left simple}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\begin{document}
+\PMlinkescapeword{structure}
+\PMlinkescapeword{theory}
+Let $S$ be a semigroup.  If $S$ has no ideals other than itself, then $S$ is said to be \emph{simple}.
+
+If $S$ has no left ideals [resp. right ideals] other than itself, then $S$ is said to be \emph{left simple} [resp. \emph{right simple}].
+
+Right simple and left simple are stronger conditions than simple.
+
+A semigroup $S$ is left simple if and only if $Sa = S$ for all $a \in S$.
+A semigroup is both left and right simple if and only if it is a group.
+
+If $S$ has a zero element $\theta$, then $0 = \{ \theta \}$ is always an ideal of $S$, so $S$ is not simple (unless it has only one element).  So in studying semigroups with a zero, a slightly weaker definition is required.
+
+Let $S$ be a semigroup with a zero.  Then $S$ is \emph{zero simple}, or $0$-simple, if the following conditions hold:
+\begin{itemize}
+\item $S^2 \neq 0$
+\item $S$ has no ideals except $0$ and $S$ itself
+\end{itemize}
+
+The condition $S^2 = 0$ really only eliminates one semigroup: the 2-element null semigroup.  Excluding this semigroup makes parts of the structure theory of semigroups cleaner.
+%%%%%
+%%%%%
+\end{document}

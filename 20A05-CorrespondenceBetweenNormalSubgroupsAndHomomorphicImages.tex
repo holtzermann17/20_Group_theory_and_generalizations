@@ -1,0 +1,63 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{CorrespondenceBetweenNormalSubgroupsAndHomomorphicImages}
+\pmcreated{2013-03-22 19:07:11}
+\pmmodified{2013-03-22 19:07:11}
+\pmowner{joking}{16130}
+\pmmodifier{joking}{16130}
+\pmtitle{correspondence between normal subgroups and homomorphic images}
+\pmrecord{4}{42014}
+\pmprivacy{1}
+\pmauthor{joking}{16130}
+\pmtype{Theorem}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{20A05}
+\pmclassification{msc}{13A15}
+\pmrelated{HomomorphicImageOfGroup}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\begin{document}
+Assume, that $G$ and $H$ are groups. If $f:G\to H$ is a group homomorphism, then the first isomorphism theorem states, that the function $F:G/\mathrm{ker}(f)\to\mathrm{im}(f)$ defined by $F(g\mathrm{ker}(f))=f(g)$ is a well-defined group isomorphism. Note that $\mathrm{ker}(f)$ is always normal in $G$.
+
+This leads to the following question: is there a correspondence between normal subgroups of $G$ and homomorphic images of $G$? We will try to answer this question, but before that, let us introduce some notion.
+
+First of all, homomorphic image $\mathrm{im}(f)$ is not only a subgroup of $H$. Actually homomorphic image contains also some data about homomorphism. This observation leads to the following definition:
+
+\textbf{Definition.} Let $G$ be a group. Pair $(H,f)$ is called \textit{a homomorphic image of $G$} iff $H$ is a group and $f:G\to H$ is a surjective group homomorphism. We will say that two homomorphic images $(H,f)$ and $(H',f')$ of $G$ are isomorphic (or equivalent), if there exists a group isomorphism $F:H\to H'$ such that $F\circ f=f'$.
+
+It is easy to see, that this isomorphism relation is actually an equivalence relation and thus we may speak about isomorphism classes of homomorphic images (which will be denoted by $[H,f]$ for homomorphic image $(H,f)$). Furthermore, if $N\subset G$ is a normal subgroup, then $(G/N,\pi_{N})$ is a homomorphic image, where $\pi_N:G\to G/N$ is a projection, i.e. $\pi_N(g)=gN$. Let
+$$\mathrm{norm}(G)=\{N\subseteq G\ |\ N\mbox{ is normal subgroup}\};$$
+$$\mathrm{h.im}(G)=\{[H,f]\ |\ (H,f)\mbox{ is a homomorphic image of }G\}.$$
+
+\textbf{Proposition.} Function $T:\mathrm{norm}(G)\to\mathrm{h.im}(G)$ defined by $T(N)=[G/N,\pi_N]$ is a bijection.
+
+\textit{Proof.} First, we will show, that $T$ is onto. Let $(H,f)$ be a homomorphic image of $G$. Let $N=\mathrm{ker}(f)$. Then (due to the first isomorphism theorem), there exists a group isomorphism $F:G/N\to H$ defined by $F(gN)=f(g)$. This shows, that $$f(g)=F(gN)=F(\pi_N(g))=(F\circ\pi_N)(g)$$ and thus $(G/N,\pi_N)$ is isomorphic to $(H,f)$. Therefore $$T(N)=[G/N,\pi_N]=[H,f],$$
+which completes this part.
+
+Now assume, that $T(N)=T(N')$ for some normal subgroups $N,N'\in\mathrm{norm}(G)$. This means, that $(G/N,\pi_N)$ and $(G/N',\pi_{N'})$ are isomorphic, i.e. there exists a group isomorphism $F:G/N\to G/N'$ such that $F\circ\pi_N=\pi_{N'}$. Let $x\in N'=\mathrm{ker}(\pi_{N'})$ and denote by $e\in G/N'$ the neutral element. Then, we have
+$$e=\pi_{N'}(x)=F(\pi_N(x))$$
+and (since $F$ is an isomorphism) this is if and only if $x\in\ker(\pi_N)=N$. Thus, we've shown that $N'\subseteq N$. Analogously (after considering $F^{-1}$) we have that $N\subseteq N'$. Therefore $N=N'$, which shows, that $T$ is injective. This completes the proof. $\square$
+%%%%%
+%%%%%
+\end{document}

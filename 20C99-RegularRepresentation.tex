@@ -1,0 +1,48 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{RegularRepresentation}
+\pmcreated{2013-03-22 12:17:40}
+\pmmodified{2013-03-22 12:17:40}
+\pmowner{djao}{24}
+\pmmodifier{djao}{24}
+\pmtitle{regular representation}
+\pmrecord{5}{31828}
+\pmprivacy{1}
+\pmauthor{djao}{24}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{20C99}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic} 
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\newcommand{\GL}{\operatorname{GL}}
+\begin{document}
+Given a group $G$, the {\em regular representation} of $G$ over a field $K$ is the representation $\rho: G \longrightarrow \GL(K^G)$ whose underlying vector space $K^G$ is the $K$--vector space of formal linear combinations of elements of $G$, defined by
+$$
+\rho(g)\left(\sum_{i=1}^n k_i g_i\right) := \sum_{i=1}^n k_i (g g_i)
+$$
+for $k_i \in K$, $g, g_i \in G$.
+
+Equivalently, the regular representation is the induced representation on $G$ of the trivial representation on the subgroup $\{1\}$ of $G$.
+%%%%%
+%%%%%
+\end{document}

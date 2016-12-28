@@ -1,0 +1,74 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{AGroupEmbedsIntoItsProfiniteCompletionIfAndOnlyIfItIsResiduallyFinite}
+\pmcreated{2013-03-22 15:15:56}
+\pmmodified{2013-03-22 15:15:56}
+\pmowner{yark}{2760}
+\pmmodifier{yark}{2760}
+\pmtitle{a group embeds into its profinite completion if and only if it is residually finite}
+\pmrecord{13}{37052}
+\pmprivacy{1}
+\pmauthor{yark}{2760}
+\pmtype{Theorem}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{20E18}
+\pmrelated{ProfiniteCompletion}
+\pmrelated{ProfiniteGroup}
+\pmrelated{ResiduallyCalP}
+
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amsthm}
+\usepackage[matrix,arrow,curve]{xy}
+\usepackage[only,trianglelefteqslant]{stmaryrd}
+
+\newcommand{\sgp}{\leqslant}
+\newcommand{\sgpf}{\leqslant_{\mathrm{f}}}
+\newcommand{\nsgp}{\trianglelefteqslant}
+\newcommand{\nsgpf}{\trianglelefteqslant_{\mathrm{f}}}
+\newcommand{\nsgpo}{\trianglelefteqslant_{\mathrm{o}}}
+\newcommand{\hir}{\mathrm{h}}
+\newcommand{\stab}{\mathrm{Stab}}
+\begin{document}
+\PMlinkescapeword{clear}
+\PMlinkescapeword{open}
+\PMlinkescapeword{theorem}
+
+Let $G$ be a group.
+
+First suppose that $G$ is residually finite, that is,
+\[
+        \mathrm{R}(G) := \bigcap_{N \nsgpf G} N = 1
+\]
+(where $N \nsgpf G$ denotes that $N$ is a normal subgroup of finite index in $G$).
+Consider the natural mapping of $G$ into its profinite completion $\hat{G}$
+given by $g \mapsto (Ng)_{N \nsgpf G}$.
+It is clear that the kernel of this map is precisely $\mathrm{R}(G)$,
+so that it is a monomorphism when $G$ is residually finite.
+
+Now suppose that $G$ embeds into its profinite completion $\hat{G}$
+and identify $G$ with a subgroup of $\hat{G}$. Now, a theorem on
+profinite groups tells us that
+\[
+        \bigcap_{N \nsgpo \hat{G}} N = 1,
+\]
+(where $N \nsgpo G$ denotes that $N$ is an \PMlinkname{open}{TopologicalSpace} normal subgroup of $G$) and since open subgroups of a profinite group have finite index, we
+have that
+\[
+        \mathrm{R}(\hat{G}) = 1,
+\]
+so $\hat{G}$ is residually finite. Then $G$ is a subgroup of a
+residually finite group, so is itself residually finite, as required.
+
+\begin{thebibliography}{99}
+
+\bibitem{ddms}
+J.~D. Dixon, M.~P.~F. du~Sautoy, A.~Mann, and D.~Segal, \emph{Analytic
+ pro-$p$ groups}, 2nd ed., Cambridge studies in advanced mathematics,
+ Cambridge University Press, 1999.
+
+\end{thebibliography}
+%%%%%
+%%%%%
+\end{document}

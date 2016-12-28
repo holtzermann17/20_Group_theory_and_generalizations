@@ -1,0 +1,47 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{Generator}
+\pmcreated{2013-03-22 13:30:39}
+\pmmodified{2013-03-22 13:30:39}
+\pmowner{Wkbj79}{1863}
+\pmmodifier{Wkbj79}{1863}
+\pmtitle{generator}
+\pmrecord{10}{34094}
+\pmprivacy{1}
+\pmauthor{Wkbj79}{1863}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{20A05}
+\pmrelated{GeneratingSetOfAGroup}
+\pmrelated{ProperGeneratorTheorem}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\begin{document}
+If $G$ is a cyclic group and $g \in G$, then $g$ is a {\sl generator \/} of $G$ if $\langle g \rangle =G$.
+
+All infinite cyclic groups have exactly $2$ generators.  To see this, let $G$ be an infinite cyclic group and $g$ be a generator of $G$.  Let $z \in \mathbb{Z}$ such that $g^z$ is a generator of $G$.  Then $\langle g^z \rangle =G$.  Then $g \in G= \langle g^z \rangle$.  Thus, there exists $n \in {\mathbb Z}$ with $g=(g^z)^n=g^{nz}$.  Therefore, $g^{nz-1}=e_G$.  Since $G$ is infinite and $|g|=|\langle g \rangle |=|G|$ must be infinity, $nz-1=0$.  Since $nz=1$ and $n$ and $z$ are integers, either $n=z=1$ or $n=z=-1$.  It follows that the only generators of $G$ are $g$ and $g^{-1}$.
+
+A finite cyclic group of order $n$ has exactly $\varphi(n)$ generators, where $\varphi$ is the Euler totient function.  To see this, let $G$ be a finite cyclic group of order $n$ and $g$ be a generator of $G$.  Then $|g|=|\langle g \rangle |=|G|=n$.  Let $z \in \mathbb{Z}$ such that $g^z$ is a generator of $G$.  By the division algorithm, there exist $q,r \in \mathbb{Z}$ with $0 \le r<n$ such that $z=qn+r$.  Thus, $g^z=g^{qn+r}=g^{qn}g^r=(g^n)^qg^r=(e_G)^qg^r=e_Gg^r=g^r$.  Since $g^r$ is a generator of $G$, it must be the case that $\langle g^r \rangle =G$.  Thus, $\displaystyle n=|G|=|\langle g^r \rangle|=|g^r|=\frac{|g|}{\gcd(r,|g|)}=\frac {n}{\gcd(r,n)}$.  Therefore, $\gcd(r,n)=1$, and the result follows.
+%%%%%
+%%%%%
+\end{document}

@@ -1,0 +1,72 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{MonomialMatrix}
+\pmcreated{2013-03-22 15:15:51}
+\pmmodified{2013-03-22 15:15:51}
+\pmowner{GrafZahl}{9234}
+\pmmodifier{GrafZahl}{9234}
+\pmtitle{monomial matrix}
+\pmrecord{5}{37050}
+\pmprivacy{1}
+\pmauthor{GrafZahl}{9234}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{20H20}
+\pmclassification{msc}{15A30}
+%\pmkeywords{matrix}
+%\pmkeywords{monomial}
+%\pmkeywords{group}
+\pmrelated{PermutationMatrix}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\newcommand{\Prod}{\prod\limits}
+\newcommand{\Sum}{\sum\limits}
+\newcommand{\mbb}{\mathbb}
+\newcommand{\mbf}{\mathbf}
+\newcommand{\mc}{\mathcal}
+\newcommand{\ol}{\overline}
+
+% Math Operators/functions
+\DeclareMathOperator{\Frob}{Frob}
+\DeclareMathOperator{\cwe}{cwe}
+\DeclareMathOperator{\we}{we}
+\DeclareMathOperator{\wt}{wt}
+\begin{document}
+Let $A$ be a matrix with entries in a field $K$. If in every \PMlinkid{row}{2464} and every
+\PMlinkid{column}{2464} of $A$ there is exactly one nonzero entry, then $A$ is a
+\emph{monomial matrix}.
+
+Obviously, a monomial matrix is a square matrix and there exists a
+rearrangement of \PMlinkescapetext{rows} and \PMlinkescapetext{columns} such that the result is a diagonal
+matrix.
+
+The $n\times n$ monomial matrices form a group under matrix
+multiplication. This group contains the $n\times n$ permutation
+matrices as a subgroup. A monomial matrix is invertible but, unlike a
+permutation matrix, not necessarily \PMlinkid{orthogonal}{1176}. The only exception is
+when $K=\mbb{F}_2$ (the finite field with $2$ elements), where the
+$n\times n$ monomial matrices and the $n\times n$ permutation matrices
+coincide.
+%%%%%
+%%%%%
+\end{document}

@@ -1,0 +1,86 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{Subcommutative}
+\pmcreated{2013-03-22 19:13:45}
+\pmmodified{2013-03-22 19:13:45}
+\pmowner{pahio}{2872}
+\pmmodifier{pahio}{2872}
+\pmtitle{subcommutative}
+\pmrecord{12}{42152}
+\pmprivacy{1}
+\pmauthor{pahio}{2872}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{20M25}
+\pmclassification{msc}{20M99}
+%\pmkeywords{subcommutative semigroup}
+%\pmkeywords{subcommutative ring}
+\pmrelated{Commutative}
+\pmrelated{Klein4Ring}
+\pmrelated{Anticommutative}
+\pmdefines{left subcommutative}
+\pmdefines{right subcommutative}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+ \usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\theoremstyle{definition}
+\newtheorem*{thmplain}{Theorem}
+
+\begin{document}
+A semigroup \,$(S,\,\cdot)$\, is said to be \emph{left subcommutative} if for any two of its elements $a$ and $b$, there exists its element $c$ such that
+\begin{align}
+ab = ca.
+\end{align}
+A semigroup \,$(S,\,\cdot)$\, is said to be \emph{right subcommutative} if for any two of its elements $a$ and $b$, there exists its element $d$ such that
+\begin{align}
+ab = bd.
+\end{align}
+If $S$ is both left subcommutative and right subcommutative, it is \emph{subcommutative}.
+
+The commutativity is a special case of all the three kinds of subcommutativity.\\
+
+\textbf{Example 1.}\, The following operation table defines a right subcommutative semigroup\, $\{0,\,1,\,2,\,3\}$\, which is not left subcommutative (e.g. $0\!\cdot\!3 = 2 \neq c\!\cdot\!0$):
+$$\begin{array}{c|cccc}
+\cdot & 0 & 1 & 2 & 3 \\
+\hline
+\;  0 & 0 & 0 & 2 & 2 \\
+\;  1 & 0 & 1 & 2 & 3 \\
+\;  2 & 0 & 0 & 2 & 2 \\
+\;  3 & 0 & 1 & 2 & 3
+\end{array}$$\\
+
+\textbf{Example 2.}\, The \PMlinkescapetext{multiplicative} group of the square matrices over a field is both left and right subcommutative (but not commutative), since the equations (1) and (2) are satisfied by 
+$$c \;=\; aba^{-1} \quad \mbox{and} \quad d\;=\; b^{-1}ab.$$\\
+
+
+
+\textbf{Remark.}\, One uses the above \PMlinkescapetext{attributes} also for a ring \,$(S,\,+,\,\cdot)$\, if its multiplicative semigroup \,$(S,\,\cdot)$\, satisfies the corresponding requirements.
+
+\begin{thebibliography}{8}
+\bibitem{LS}{\sc S. Lajos}: ``On $(m,\,n)$-ideals in subcommutative semigroups''.\, -- \emph{Elemente der Mathematik} \textbf{24} (1969).
+\bibitem{VE}{\sc V. P. Elizarov}: ``Subcommutative Q-rings''.\, -- \emph{Mathematical notes} \textbf{2} (1967).
+\end{thebibliography}
+
+%%%%%
+%%%%%
+\end{document}

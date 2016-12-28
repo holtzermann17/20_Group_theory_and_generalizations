@@ -1,0 +1,48 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{Subring}
+\pmcreated{2013-03-22 12:30:19}
+\pmmodified{2013-03-22 12:30:19}
+\pmowner{yark}{2760}
+\pmmodifier{yark}{2760}
+\pmtitle{subring}
+\pmrecord{17}{32738}
+\pmprivacy{1}
+\pmauthor{yark}{2760}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{20-00}
+\pmclassification{msc}{16-00}
+\pmclassification{msc}{13-00}
+\pmrelated{Ideal}
+\pmrelated{Ring}
+\pmrelated{Group}
+\pmrelated{Subgroup}
+\pmdefines{ideal}
+
+\usepackage{amsfonts}
+
+\newcommand{\Z}{\mathbb{Z}}
+\begin{document}
+\PMlinkescapeword{closed}
+\PMlinkescapeword{equivalent}
+\PMlinkescapeword{restricted}
+\PMlinkescapeword{properties}
+\PMlinkescapeword{property}
+\PMlinkescapeword{theory}
+
+Let $(R,+,*)$ a ring. A subring is a subset $S$ of $R$ with the operations $+$ and $*$ of $R$ restricted to $S$ and such that $S$ is a ring by itself.
+
+Notice that the restricted operations inherit the associative and distributive properties of $+$ and $*$, as well as commutativity of $+$.
+So for $(S,+,*)$ to be a ring by itself, we need that $(S,+)$ be a subgroup of $(R,+)$ and that $(S,*)$ be closed.
+The subgroup condition is equivalent to $S$ being non-empty and having the property that $x-y\in S$ for all $x,y\in S$.
+
+A subring $S$ is called a left ideal if for all $s\in S$ and all $r\in R$ we have $r*s\in S$. Right ideals are defined similarly, with $s*r$ instead of $r*s$.
+If $S$ is both a left ideal and a right ideal, then it is called a two-sided ideal. If $R$ is commutative, then all three definitions coincide. In ring theory, ideals are far more important than subrings, as they play a role analogous to normal subgroups in group theory.
+
+Example:
+
+Consider the ring $(\Z,+,\cdot$). Then $(2\Z,+,\cdot)$ is a subring, since the difference and product of two even numbers is again an even number.
+%%%%%
+%%%%%
+\end{document}

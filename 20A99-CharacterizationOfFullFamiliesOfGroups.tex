@@ -1,0 +1,53 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{CharacterizationOfFullFamiliesOfGroups}
+\pmcreated{2013-03-22 18:36:08}
+\pmmodified{2013-03-22 18:36:08}
+\pmowner{joking}{16130}
+\pmmodifier{joking}{16130}
+\pmtitle{characterization of full families of groups}
+\pmrecord{9}{41333}
+\pmprivacy{1}
+\pmauthor{joking}{16130}
+\pmtype{Derivation}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{20A99}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\begin{document}
+\textbf{Proposition.} Let $\mathcal{G}=\{G_k\}_{k\in I}$ be a family of groups. Then $\mathcal{G}$ is full if and only if for any $i,j\in I$ such that $i\neq j$ we have that any homomorphism $f:G_i\to G_j$ is trivial.
+
+\textit{Proof.} ,,$\Rightarrow$'' Assume that $f:G_i\to G_j$ is a nontrivial group homomorphism. Then define $$h:\bigoplus_{k\in I} G_k\to \bigoplus_{k\in I} G_k$$ as follows: if $t\in I$ is such that $t\neq i$ and $g\in\bigoplus_{k\in I}G_k$ is such that $g\in G_t$, then $h(g)=g$. If $g\in\bigoplus_{k\in I}G_k$ is such that $g\in G_i$, then $h(g)(j)=f(g(i))$ and $h(g)(k)=0$ for $k\neq j$. This values uniquely define $h$ and one can easily check that $h$ is not decomposable. $\square$
+
+,,$\Leftarrow$'' Assume that for any $i,j\in I$ such that $i\neq j$ we have that any homomorphism $f:G_i\to G_j$ is trivial. Let $$h:\bigoplus_{k\in I} G_k\to \bigoplus_{k\in I} G_k$$ be any homomorphism. Moreover, let $i\in I$ and $g\in\bigoplus_{k\in I} G_k$ be such that $g\in G_i$. We wish to show that $h(g)\in G_i$.
+
+So assume that $h(g)\not\in G_i$. Then there exists $j\neq i$ such that $0\neq h(g)(j)\in G_j$. Let $$\pi:\bigoplus_{k\in I} G_k\to G_j$$ be the projection and let $$u:G_i\to \bigoplus_{k\in I} G_k$$ be the natural inclusion homomorphism. Then $\pi\circ u:G_i\to G_j$ is a nontrivial group homomorphism. Contradiction. $\square$
+
+
+\textbf{Corollary.} Assume that $\{G_k\}_{k\in I}$ is a family of nontrivial groups such that $G_i$ is periodic for each $i\in I$. Moreover assume that for any $i,j\in I$ such that $i\neq j$ and any $g\in G_i$, $h\in G_j$ orders $|g|$ and $|h|$ are realitvely prime (which implies that $I$ is countable). Then $\{G_k\}_{k\in I}$ is full.
+
+\textit{Proof.} Assume that $i\neq j$ and $f:G_i\to G_j$ is a group homomorphism. Then $|f(g)|$ divides $|g|$ for any $g\in G_i$. But $f(g)\in G_j$, so $|g|$ and $|f(g)|$ are relatively prime. Thus $|f(g)|=1$, so $f(g)=0$. Therefore $f$ is trivial, which (due to proposition) completes the proof. $\square$
+%%%%%
+%%%%%
+\end{document}

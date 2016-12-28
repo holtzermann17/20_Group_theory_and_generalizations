@@ -1,0 +1,34 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ProofOfTheConverseOfLagrangesTheoremForFiniteCyclicGroups}
+\pmcreated{2013-03-22 13:30:27}
+\pmmodified{2013-03-22 13:30:27}
+\pmowner{Wkbj79}{1863}
+\pmmodifier{Wkbj79}{1863}
+\pmtitle{proof of the converse of Lagrange's theorem for finite cyclic groups}
+\pmrecord{10}{34089}
+\pmprivacy{1}
+\pmauthor{Wkbj79}{1863}
+\pmtype{Proof}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{20D99}
+\pmrelated{CyclicRing3}
+\pmrelated{ProofThatGInGImpliesThatLangleGRangleLeG}
+
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+\usepackage{psfrag}
+\usepackage{graphicx}
+\usepackage{amsthm}
+%%\usepackage{xypic}
+\begin{document}
+The following is a proof that, if $G$ is a finite cyclic group and $n$ is a nonnegative integer that is a divisor of $|G|$, then $G$ has a subgroup of order $n$.
+
+\begin{proof}
+Let $g$ be a generator of $G$.  Then $|g|=|\langle g \rangle |=|G|$.  Let $z \in {\mathbb Z}$ such that $nz=|G|=|g|$.  Consider $\langle g^z \rangle$.  Since $g \in G$, then $g^z \in G$.  Thus, $\langle g^z \rangle \le G$.  Since $\displaystyle |\langle g^z \rangle |=|g^z|=\frac {|g|}{\gcd(z,|g|)}=\frac {nz}{\gcd(z,nz)}=\frac {nz}{z}=n$, it follows that $\langle g^z \rangle$ is a subgroup of $G$ of order $n$.
+\end{proof}
+%%%%%
+%%%%%
+\end{document}

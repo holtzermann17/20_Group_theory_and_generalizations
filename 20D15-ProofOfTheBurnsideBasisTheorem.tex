@@ -1,0 +1,52 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ProofOfTheBurnsideBasisTheorem}
+\pmcreated{2013-03-22 15:46:25}
+\pmmodified{2013-03-22 15:46:25}
+\pmowner{Algeboy}{12884}
+\pmmodifier{Algeboy}{12884}
+\pmtitle{proof of the Burnside basis theorem}
+\pmrecord{12}{37731}
+\pmprivacy{1}
+\pmauthor{Algeboy}{12884}
+\pmtype{Proof}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{20D15}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\begin{document}
+Let $P$ be a $p$-group and $\Phi(P)$ its Frattini subgroup.
+
+Every maximal subgroup $Q$ of $P$ is of index $p$ in $P$ and is therefore
+normal in $P$.  Thus $P/Q\cong \mathbb{Z}_p$.  So given 
+$g\in P$, $g^p\in Q$
+which proves $P^p\leq Q$.  Likewise, $\mathbb{Z}_p$ is abelian so 
+$[P,P]\leq Q$.  As $Q$ is any maximal subgroup, it follows $[P,P]$ and
+$P^p$ lie in $\Phi(P)$.
+
+Now both $[P,P]$ and $P^p$ are characteristic subgroups of $P$ so in particular
+$F =[P,P]P^p$ is normal in $P$.  If we pass to $V=P/F$ we find that $V$ is abelian and every element has order $p$ -- that is, $V$ is a vector space over $\mathbb{Z}_p$.  So the maximal subgroups of $P$ are in a 1-1 correspondence with the hyperplanes of $V$.  As the intersection of all hyperplanes of a vector space is the origin, it follows the intersection of all maximal subgroups of $P$ is $F$.  That is, $[P,P]P^p=\Phi(P)$.
+
+%%%%%
+%%%%%
+\end{document}

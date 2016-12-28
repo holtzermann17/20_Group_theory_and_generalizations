@@ -1,0 +1,92 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ProofOfGeneralAssociativity}
+\pmcreated{2014-05-11 15:12:33}
+\pmmodified{2014-05-11 15:12:33}
+\pmowner{pahio}{2872}
+\pmmodifier{pahio}{2872}
+\pmtitle{proof of general associativity}
+\pmrecord{10}{39962}
+\pmprivacy{1}
+\pmauthor{pahio}{2872}
+\pmtype{Proof}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{20-00}
+\pmrelated{PowerSet}
+\pmrelated{Cardinality}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+ \usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\theoremstyle{definition}
+\newtheorem*{thmplain}{Theorem}
+
+\begin{document}
+\PMlinkescapeword{fixed} \PMlinkescapeword{force}
+
+We suppose that ``$\cdot$'' is an associative binary operation of the set $S$.\\
+
+Let\, $f_1\!:\,S \to 2^S$\, be the mapping
+         $$f_1(a_1) \;:=\; \{a_1\} \quad \forall a_1 \in S.$$
+We define recursively the mapping
+$$f_n\!:\,\underbrace{S\!\times\!S\!\times\!\ldots\!\times\!S}_n \to 2^S$$
+such that
+\begin{align}
+f_n(a_1,\ldots,\,a_n) \;:=\; \bigcup_{r=1}^{n-1}f_r(a_1,\ldots,\,a_r)\cdot f_{n-r}(a_{r+1},\ldots,\,a_n)
+\end{align}
+for\, $n = 2,\,3,\,4,\,\ldots$
+
+For example,
+$$f_2(a_1,a_2) \;=\; \{a_1\}\cdot\{a_2\} \;=\; \{a_1\cdot a_2\},$$
+$$f_3(a_1,a_2,a_3) \;=\; \{a_1\cdot(a_2\cdot a_3)\}\cup\{(a_1\cdot a_2)\cdot a_3\} \;=\; 
+\{a_1\cdot(a_2\cdot a_3),\,(a_1\cdot a_2)\cdot a_3\} \;=\; \{(a_1\cdot a_2)\cdot a_3\};$$
+the last equality due to the associativity.\, It's clear that always
+$$|f_1(a_1)|\;=\; 1,\qquad |f_2(a_1,a_2)| \;=\; 1,
+\qquad |f_3(a_1,a_2,a_3)| \;=\; 1.$$
+
+We shall show by induction that
+\begin{align}
+|f_n(a_1,a_2,\ldots,\,a_n)| \;=\; 1
+\end{align}
+for each positive integer $n$.\, This means that all groupings of the $n$ fixed elements using parentheses in forming the products with ``$\cdot$'' yield one single element.\\
+
+We make the induction hypothesis, that (2) is true for all\, $n < k.$
+
+Now let $z$ and $z'$ be arbitrary elements of\, $f_k(a_1,\ldots,\,a_k)$.\, 
+Then there exist the elements $x,y,x',y'$ of $S$ and the 
+integers\, $r, s \in \{1,\,\ldots,\,k\!-\!1\}$\, such that 
+$$z \;=\; x\cdot y,\quad x \in f_r(a_1,\ldots,\,a_r),\quad y \in f_{k-r}(a_{r+1},\ldots,\, a_k),$$
+$$z' \;=\; x'\cdot y',\quad x' \in f_s(a_1,\ldots,\,a_s),\quad y' \in f_{k-s}(a_{s+1},\ldots,\, a_k).$$
+If specially\, $r = s$,\, then, by the induction hypothesis,\, $x = x'$\, and\, $y = y'$,\, whence\, $z = x\cdot y = x'\cdot y' = z'$.\, If on the contrary,\, $r \neq s$,\, e.g.\, $r < s$,\, then the induction hypothesis guarantees the existence of an element $v$ of $S$ such that 
+$$f_{s-r}(a_{r+1},\ldots,\,a_s) \;=\; \{v\}$$
+and
+$$x' \;=\; x\cdot v,\quad y \;=\; v\cdot y'.$$
+Since ``$\cdot$'' is associative, we have
+$$z \;=\; x\cdot y \;=\; x\cdot(v\cdot y') \;=\; (x\cdot v)\cdot y' \;=\; x'\cdot y' \;=\; z'.$$
+Thus the equation (2) is in force for\, $n = k$.
+
+
+
+
+%%%%%
+%%%%%
+\end{document}

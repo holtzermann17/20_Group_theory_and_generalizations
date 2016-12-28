@@ -1,0 +1,62 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{CompletelySimpleSemigroup}
+\pmcreated{2013-03-22 14:35:24}
+\pmmodified{2013-03-22 14:35:24}
+\pmowner{mathcam}{2727}
+\pmmodifier{mathcam}{2727}
+\pmtitle{completely simple semigroup}
+\pmrecord{8}{36153}
+\pmprivacy{1}
+\pmauthor{mathcam}{2727}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{20M10}
+\pmdefines{primitive}
+\pmdefines{completely $0$-simple}
+\pmdefines{completely simple}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\begin{document}
+Let $S$ be a semigroup.  An idempotent $e\in S$ is \emph{primitive} if for every other idempotent $f\in S$, $ef=fe=f\not= 0\Rightarrow e=f$
+
+A semigroup $S$ (without zero) is \emph{completely \PMlinkescapetext{simple}} if it is simple and contains a primitive idempotent.
+
+A semigroup $S$ is \emph{completely $0$-simple} if it is \PMlinkname{$0$-simple}{SimpleSemigroup} and contains a primitive idempotent.
+
+Completely simple and completely $0$-simple semigroups maybe characterised by the Rees Theorem (\cite{ReesRef}, Theorem 3.2.3).
+
+Note:
+
+A semigroup (without zero) is completely simple if and only if it is regular and weakly cancellative.
+
+A simple semigroup (without zero) is completely simple if and only if it is completely regular.
+
+A $0$-simple semigroup is completely $0$-simple if and only if it is group-bound.
+
+\begin{thebibliography}{2}
+\bibitem[Ho95]{ReesRef} Howie, John M.  \emph{Fundamentals of Semigroup Theory}.  Oxford University Press, 1995.
+\end{thebibliography}
+%%%%%
+%%%%%
+\end{document}

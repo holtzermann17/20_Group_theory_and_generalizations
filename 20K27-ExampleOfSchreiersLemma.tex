@@ -1,0 +1,165 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ExampleOfSchreiersLemma}
+\pmcreated{2013-03-22 15:54:02}
+\pmmodified{2013-03-22 15:54:02}
+\pmowner{Algeboy}{12884}
+\pmmodifier{Algeboy}{12884}
+\pmtitle{example of Schreier's Lemma}
+\pmrecord{5}{37903}
+\pmprivacy{1}
+\pmauthor{Algeboy}{12884}
+\pmtype{Example}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{20K27}
+%\pmkeywords{Stabilizer chain}
+\pmrelated{LiftsTransversals}
+
+\usepackage{latexsym}
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amsthm}
+
+%%\usepackage{xypic}
+
+%-----------------------------------------------------
+
+%       Standard theoremlike environments.
+
+%       Stolen directly from AMSLaTeX sample
+
+%-----------------------------------------------------
+
+%% \theoremstyle{plain} %% This is the default
+
+\newtheorem{thm}{Theorem}
+
+\newtheorem{coro}[thm]{Corollary}
+
+\newtheorem{lem}[thm]{Lemma}
+
+\newtheorem{lemma}[thm]{Lemma}
+
+\newtheorem{prop}[thm]{Proposition}
+
+\newtheorem{conjecture}[thm]{Conjecture}
+
+\newtheorem{conj}[thm]{Conjecture}
+
+\newtheorem{defn}[thm]{Definition}
+
+\newtheorem{remark}[thm]{Remark}
+
+\newtheorem{ex}[thm]{Example}
+
+
+
+%\countstyle[equation]{thm}
+
+
+
+%--------------------------------------------------
+
+%       Item references.
+
+%--------------------------------------------------
+
+
+\newcommand{\exref}[1]{Example-\ref{#1}}
+
+\newcommand{\thmref}[1]{Theorem-\ref{#1}}
+
+\newcommand{\defref}[1]{Definition-\ref{#1}}
+
+\newcommand{\eqnref}[1]{(\ref{#1})}
+
+\newcommand{\secref}[1]{Section-\ref{#1}}
+
+\newcommand{\lemref}[1]{Lemma-\ref{#1}}
+
+\newcommand{\propref}[1]{Prop\-o\-si\-tion-\ref{#1}}
+
+\newcommand{\corref}[1]{Cor\-ol\-lary-\ref{#1}}
+
+\newcommand{\figref}[1]{Fig\-ure-\ref{#1}}
+
+\newcommand{\conjref}[1]{Conjecture-\ref{#1}}
+
+
+% Normal subgroup or equal.
+
+\providecommand{\normaleq}{\unlhd}
+
+% Normal subgroup.
+
+\providecommand{\normal}{\lhd}
+
+\providecommand{\rnormal}{\rhd}
+% Divides, does not divide.
+
+\providecommand{\divides}{\mid}
+
+\providecommand{\ndivides}{\nmid}
+
+
+\providecommand{\union}{\cup}
+
+\providecommand{\bigunion}{\bigcup}
+
+\providecommand{\intersect}{\cap}
+
+\providecommand{\bigintersect}{\bigcap}
+
+
+
+
+
+
+
+
+
+
+\begin{document}
+Let $G$ be a permutation group, that is, a subgroup of the symmetric group $Sym(\Omega)$ on the set $\Omega$.  Fix $\omega \in\Omega$.  Then 
+  \[G_\omega=\{g\in G:\omega^g=\omega\}\]
+is a subgroup of $G$, and furthermore, the orbit $\omega^G$ canonically parameterizes a transversal of $G/G_\omega$.  That is, to every coset $G_\omega g$ there corresponds precisely one image $\omega^g$ and visa-versa.  This leads to one of the most significant applications of Schreier's lemma.  
+
+\emph{Example}.
+Let $G=\langle s_1=(1,2,3,4), s_2=(1,3)\rangle$, which is a copy of $D_8$ actings the symmetries of the four corners of a square.  If we let $\omega=1$ then we know that the stabilizer $G_1$ has index 4 in $G$ and is therefore of order 2.
+
+Geometrically it is not too difficult to understand that the stabilizer $G_1$ is the subgroup $\langle (2,4)\rangle$; however, computers are not generally geometrically inclined, and so we use Schreier's lemma to conclude the same in a completely computational method.
+
+The orbit of $1$ is $\{1,2,3,4\}$ but in order to make use of Schreier's lemma we encode the orbit together with a representative of $G$ which transports $1$ to the corresponding orbit element.  For example:
+  \[1^G=\{1=1^{1},2=1^{s_1},3=2^{s_1},4=3^{s_1}\}.\]
+This translates to the following simple transversal
+ \[T=\{1,s_1,s_1^2,s_1^3\}.\]
+Notice that we have used the generators of $G$ to create the orbit so that the transversal is created as words over the generators of $G$ as given.  (This process is not unique in general, but always possible.)
+
+So we now have the ingrediants of Schreier's lemma so we use them to create a generating set for $H=G_1$.  Here $U$ is the set:
+ \[U=\{
+1 s_1(\overline{1 s_1})^{-1},1 s_2(\overline{1 s_2})^{-1},
+s_1 s_1(\overline{s_1s_1})^{-1},s_1 s_2(\overline{s_1 s_2})^{-1},
+s_1^2 s_1(\overline{s_1^2 s_1})^{-1},s_1^2 s_2(\overline{s_1^2 s_2})^{-1},
+s_1^3 s_1(\overline{s_1^3 s_1})^{-1},s_1^3 s_2(\overline{s_1^3 s_2})^{-1}
+     \}.\]
+We need to perform several multiplication to reduce this set of generators, for
+instance, $1^{s_1^3 s_2}=4^{s_2}=4$ so $\overline{s_1^3 s_2}=s_1^3$ while
+$1^{s_1^2 s_2}=3^{s_2}=1$ so $\overline{s_1^2 s_2}=1$.  Proceeding like this
+we find
+ \[U=\{1,s_2 s_1^2, 1, s_1 s_2 s_1^{-1}, 1, s_1^2 s_2, 1, s_1^3 s_2 s_1\}
+    =\{1,s_2 s_1^2, s_1 s_2 s_1^{-1}, s_1^2 s_2, s_1^3 s_2 s_1\}.\]
+Remembering these words are permutations we further find the set reduces to
+  \[U=\{ (), (2,4)\}.\]
+Finally, we must intersect $U$ with $G_1$.  At first glance this feels impossible as we do not yet know $G_1$; however, we do know that $g\in G_1$ if and only if $1^g=1$.  So we test this for each element of $U$ and find that 
+indeed each element in this case lies in $G_1$.  Therefore by Schreier's lemma,
+ \[G_1=\langle (), (2,4)\rangle.\]
+This agrees with our graphical intuition.
+
+
+Of course the value of Schreier's lemma is for sets $\Omega$ of hundreds and thousands of points, well beyond human intuition in most cases.  Recursive applications of the result allow one to build a set of generators for an entire stabilizer sequence and thus reveal the order of a permutation group -- without having to list all the elements which is an impossibly large task.  
+
+A naive recursion is not generally sufficient as the number of generators returned at each level grows multiplicatively.  However, applying some suitible filters and organizing the process (the main insight of Sims) leads to a polynomial time algorithm for establishing generators of a stabilizer chain.
+%%%%%
+%%%%%
+\end{document}

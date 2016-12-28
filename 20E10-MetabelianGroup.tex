@@ -1,0 +1,57 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{MetabelianGroup}
+\pmcreated{2013-03-22 15:36:42}
+\pmmodified{2013-03-22 15:36:42}
+\pmowner{yark}{2760}
+\pmmodifier{yark}{2760}
+\pmtitle{metabelian group}
+\pmrecord{8}{37532}
+\pmprivacy{1}
+\pmauthor{yark}{2760}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{20E10}
+\pmclassification{msc}{20F16}
+\pmsynonym{meta-abelian group}{MetabelianGroup}
+\pmrelated{AbelianGroup2}
+\pmdefines{metabelian}
+\pmdefines{meta-abelian}
+
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\begin{document}
+\PMlinkescapeword{class}
+\PMlinkescapeword{equivalent}
+\PMlinkescapeword{length}
+\PMlinkescapeword{subgroup}
+\PMlinkescapeword{subgroups}
+\PMlinkescapeword{term}
+\PMlinkescapeword{words}
+
+\section*{Definition}
+
+A \emph{metabelian group} is a group $G$ that possesses a normal subgroup $N$ such that $N$ and $G/N$ are both abelian. 
+Equivalently, $G$ is metabelian if and only if the commutator subgroup $[G,G]$ is abelian. 
+Equivalently again, $G$ is metabelian if and only if it is solvable of length at most $2$.
+
+(Note that in older literature the term tends to be used in the stronger sense that the central quotient $G/Z(G)$ is abelian. This is equivalent to being nilpotent of class at most $2$. We shall not use this sense here.)
+
+\section*{Examples}
+
+\begin{itemize}
+\item All abelian groups.
+\item All generalized dihedral groups.
+\item All groups of order less than $24$.
+\item All metacyclic groups.
+\end{itemize}
+
+\section*{Properties}
+
+\PMlinkname{Subgroups}{Subgroup}, \PMlinkname{quotients}{QuotientGroup} and (unrestricted) direct products of metabelian groups are also metabelian.
+In other words, metabelian groups form a \PMlinkname{variety}{VarietyOfGroups};
+they are, in fact, the groups in which $(w^{-1}x^{-1}wx)(y^{-1}z^{-1}yz)=(y^{-1}z^{-1}yz)(w^{-1}x^{-1}wx)$ for all elements $w$, $x$, $y$ and $z$.
+%%%%%
+%%%%%
+\end{document}

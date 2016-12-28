@@ -1,0 +1,53 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{GeneralLinearGroup}
+\pmcreated{2013-03-22 12:25:36}
+\pmmodified{2013-03-22 12:25:36}
+\pmowner{djao}{24}
+\pmmodifier{djao}{24}
+\pmtitle{general linear group}
+\pmrecord{8}{32462}
+\pmprivacy{1}
+\pmauthor{djao}{24}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{20G15}
+\pmrelated{Group}
+\pmrelated{Representation}
+\pmrelated{SpecialLinearGroup}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic} 
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\newcommand{\GL}{{\operatorname{GL}}}
+\begin{document}
+Given a vector space $V$, the {\em general linear group} $\GL(V)$ is defined to be the group of invertible linear transformations from $V$ to $V$. The group operation is defined by composition: given $T: V \longrightarrow V$ and $T': V \longrightarrow V$ in $\GL(V)$, the product $TT'$ is just the composition of the maps $T$ and $T'$.
+
+If $V = \mathbb{F}^n$ for some field $\mathbb{F}$, then the group $\GL(V)$ is often denoted $\GL(n,\mathbb{F})$ or $\GL_n(\mathbb{F})$. In this case, if one identifies each linear transformation $T: V \longrightarrow V$ with its matrix with respect to the standard basis, the group $\GL(n,\mathbb{F})$ becomes the group of invertible $n \times n$ matrices with entries in $\mathbb{F}$, under the group operation of matrix multiplication.
+
+One also discusses the general linear group on a module $M$ over some ring $R$.  There it is the set of automorphisms of $M$ as an $R$-module.  For example, one might take $\GL(\mathbb{Z}\oplus\mathbb{Z})$; this is isomorphic to the group of two-by-two matrices with integer entries having determinant $\pm 1$.  If $M$ is a general $R$-module, there need not be a natural interpretation of $\GL(M)$ as a matrix group.
+
+The general linear group is an example of a group scheme; viewing it in this way ties together the properties of $\GL(V)$ for different vector spaces $V$ and different fields $F$.  The general linear group is an algebraic group, and it is a Lie group if $V$ is a real or complex vector space. 
+
+When $V$ is a finite-dimensional Banach space, $\GL(V)$ has a natural topology coming from the operator norm; this is isomorphic to the topology coming from its embedding into the ring of matrices.  When $V$ is an infinite-dimensional vector space, some elements of $\GL(V)$ may not be continuous and one generally looks instead at the set of bounded operators.
+%%%%%
+%%%%%
+\end{document}

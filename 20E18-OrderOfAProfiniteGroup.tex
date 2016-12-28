@@ -1,0 +1,84 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{OrderOfAProfiniteGroup}
+\pmcreated{2013-03-22 15:23:39}
+\pmmodified{2013-03-22 15:23:39}
+\pmowner{mathcam}{2727}
+\pmmodifier{mathcam}{2727}
+\pmtitle{order of a profinite group}
+\pmrecord{5}{37228}
+\pmprivacy{1}
+\pmauthor{mathcam}{2727}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{20E18}
+\pmdefines{index of a profinite subgroup}
+\pmdefines{index of a profinite group}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amsthm}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\newcommand{\mc}{\mathcal}
+\newcommand{\mb}{\mathbb}
+\newcommand{\mf}{\mathfrak}
+\newcommand{\ol}{\overline}
+\newcommand{\ra}{\rightarrow}
+\newcommand{\la}{\leftarrow}
+\newcommand{\La}{\Leftarrow}
+\newcommand{\Ra}{\Rightarrow}
+\newcommand{\nor}{\vartriangleleft}
+\newcommand{\Gal}{\text{Gal}}
+\newcommand{\GL}{\text{GL}}
+\newcommand{\Z}{\mb{Z}}
+\newcommand{\R}{\mb{R}}
+\newcommand{\Q}{\mb{Q}}
+\newcommand{\C}{\mb{C}}
+\newcommand{\<}{\langle}
+\renewcommand{\>}{\rangle}
+\begin{document}
+Let $G$ be a profinite group, and let $H$ be any closed subgroup.  We define the \emph{\PMlinkescapetext{index} of $H$ in $G$} by
+
+\begin{align*}
+[G:H]=\operatorname{lcm}(\{[G/N:HN/N]\}),
+\end{align*}
+where $N$ runs over all open (and hence of finite index) subgroups of $G$, and where $\operatorname{lcm}$ is taken in the sense of the least common multiple of supernatural numbers.
+
+In particular, we can define the \emph{order of a profinite group} to be the index of the identity subgroup in $G$:
+\begin{align*}
+|G|:=[G:\{e\}].
+\end{align*}
+
+Some examples of orders of profinite groups:
+\begin{itemize}
+\item $G=\mathbb{Z}_p$, the ring of $p$-adic integers.  Since every finite quotient of $\mathbb{Z}_p$ is cyclic of $p^n$ elements (for some $n$), and every such group occurs as a quotient, we have $|G|=\operatorname{lcm}(p^n),$ where $n$ runs over all natural numbers.  Thus $|G|=p^\infty$. 
+\item $G=\widehat{\mathbb{Z}}.$  Since $G\approx\prod_p\mathbb{Z}_p$, we have $|G|=\prod_p |\mathbb{Z}_p|=\prod_p p^\infty$.  This example illustrates the limitations of this concept:  Despite being ``relatively small'' in \PMlinkescapetext{terms} of profinite groups, $\widehat{\mathbb{Z}}$ has the largest possible profinite order.
+\end{itemize}
+
+
+\begin{thebibliography}{9}
+\bibitem{Ram}[Ram] Ramakrishnan, Dinikara and Valenza, Robert. \emph{Fourier Analysis on Number Fields}. Graduate Texts in Mathematics, volume 186. Springer-Verlag, New York, NY. 1989.
+\bibitem{Ser}[Ser] Serre, J.-P. (Ion, P., translator) \emph{Galois Cohomology}. Springer, New York, NY. 1997
+\end{thebibliography}
+%%%%%
+%%%%%
+\end{document}

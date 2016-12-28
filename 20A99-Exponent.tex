@@ -1,0 +1,62 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{Exponent}
+\pmcreated{2013-03-22 13:30:21}
+\pmmodified{2013-03-22 13:30:21}
+\pmowner{Wkbj79}{1863}
+\pmmodifier{Wkbj79}{1863}
+\pmtitle{exponent}
+\pmrecord{23}{34087}
+\pmprivacy{1}
+\pmauthor{Wkbj79}{1863}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{20A99}
+\pmrelated{KummerTheory}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\begin{document}
+Let $G$ be a group with the \PMlinkescapetext{property} that there exists a positive integer $n$ such that, for every $g \in G$, $g^n=e_G$.  The {\sl exponent} of $G$, denoted $\operatorname{exp}~G$, is the smallest positive integer $m$ such that, for every $g \in G$, $g^m=e_G$.  Thus, for every finite group $G$, $\operatorname{exp}~G$ divides $|G|$.  Also, for every group $G$ that has an exponent and for every $g \in G$, $|g|$ divides $\operatorname{exp}~G$.
+
+The concept of exponent for finite groups is \PMlinkescapetext{similar} to that of \PMlinkname{characterisic}{Characteristic} for finite fields.
+
+If $G$ is a finite abelian group, then there exists $g \in G$ with $|g|=\operatorname{exp}~G$.  As a result of the \PMlinkname{fundamental theorem of finite abelian groups}{FundamentalTheoremOfFinitelyGeneratedAbelianGroups}, there exist $a_1, \ldots , a_n$ with $a_i$ dividing $a_{i+1}$ for every integer $i$ between 1 and $n$ such that $G \cong {\mathbb Z}_{a_1} \oplus \cdots \oplus {\mathbb Z}_{a_n}$.  Since, for every $c \in G$, $c^{a_n}=e_G$, then $\operatorname{exp}~G \le a_n$.  Since $|(0, \ldots , 0, 1)|=a_n$, it follows that $\operatorname{exp}~G=a_n$.
+
+Following are some examples of exponents of finite nonabelian groups.
+
+Since $|(1 2)|=2$, $|(1 2 3)|=3$, and $|S_3|=6$, it follows that $\operatorname{exp}~S_3=6$.
+
+In $Q_8=\{1, -1, i, -i, j, -j, k, -k\}$, the ring of quaternions of order eight, since $|i|=|-i|=|j|=|-j|=|k|=|-k|=4$ and $1^4=(-1)^4=1$, it follows that $\operatorname{exp}~Q_8=4$.
+
+Since the order of a product of two disjoint transpositions is 2, the order of a three cycle is 3, and the only nonidentity elements of $A_4$ are three cycles and products of two disjoint transpositions, it follows that $\operatorname{exp}~A_4=6$.
+
+Since $|(1 2 3)|=3$ and $|(1 2 3 4)|=4$, $\operatorname{exp}~S_4 \ge 12$.  Since $S_4$ has no elements of order 8, it cannot have an element of order 24.  It follows that $\operatorname{exp}~S_4=12$.
+
+Following are some examples of exponents of infinite groups.
+
+Clearly, any infinite group that has an element of infinite order does not have an exponent.  On the other hand, just because an infinite group has the \PMlinkescapetext{property} that every element has finite order does not \PMlinkescapetext{mean} that the group has an exponent.  As an example, consider $G=\mathbb{Q}/\mathbb{Z}$, which is a group under addition.  Despite that all of its elements have finite order, $G$ does not have an exponent.  This is because, for every positive integer $n$, $G$ has an element of order $n$, namely $\displaystyle \frac{1}{n}+\mathbb{Z}$.
+
+On the other hand, some infinite groups have exponents.  For example, let $\mathbb{F}_2$ denote the field having two elements.  Then $\mathbb{F}_2[x]$, the ring of all polynomials in $x$ with coefficients in $\mathbb{F}_2$, is an abelian group under addition.  Moreover, it is an infinite group; however, every nonzero element has order $2$.  Thus, $\operatorname{exp}~\mathbb{F}_2[x]=2$.
+%%%%%
+%%%%%
+\end{document}

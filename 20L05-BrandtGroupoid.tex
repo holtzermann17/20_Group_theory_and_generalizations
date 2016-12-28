@@ -1,0 +1,121 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{BrandtGroupoid}
+\pmcreated{2013-03-22 18:38:32}
+\pmmodified{2013-03-22 18:38:32}
+\pmowner{CWoo}{3771}
+\pmmodifier{CWoo}{3771}
+\pmtitle{Brandt groupoid}
+\pmrecord{18}{41383}
+\pmprivacy{1}
+\pmauthor{CWoo}{3771}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{20L05}
+\pmclassification{msc}{18B40}
+\pmrelated{GroupoidCategoryTheoretic}
+\pmrelated{ConnectedCategory}
+
+\usepackage{amssymb,amscd}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{mathrsfs}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+\usepackage{amsthm}
+% making logically defined graphics
+%%\usepackage{xypic}
+\usepackage{pst-plot}
+
+% define commands here
+\newcommand*{\abs}[1]{\left\lvert #1\right\rvert}
+\newtheorem{prop}{Proposition}
+\newtheorem{thm}{Theorem}
+\newtheorem{ex}{Example}
+\newcommand{\real}{\mathbb{R}}
+\newcommand{\pdiff}[2]{\frac{\partial #1}{\partial #2}}
+\newcommand{\mpdiff}[3]{\frac{\partial^#1 #2}{\partial #3^#1}}
+\begin{document}
+Brandt groupoids, like \PMlinkname{category theoretic groupoids}{GroupoidCategoryTheoretic}, are generalizations of groups, where a multiplication is defined, and inverses with respect to the multiplication exist for each element.  However, unlike elements of a group, each element in a Brandt groupoid behaves like an arrow, with a source and target, and multiplication of two elements only work when the target of the first element coincides with the source of the second element.
+
+\subsubsection*{Definition}
+
+A \emph{Brandt groupoid} is a non-empty set $B$, together with a partial binary operation (called a multiplication) $\cdot$ defined on it (we write $ab$ for $a\cdot b$), such that
+\begin{enumerate}
+\item For every $a\in B$, there are unique elements $e,f$ such that $ea$ and $af$ are defined, and is equal to $a$.
+\item If $ae=a$ or $ea=a$ for some $a,e\in B$, then $ee$ is defined, and is equal to $e$.
+\item For $a,b\in B$, $ab$ is defined iff there is an $e\in B$ such that $ae=a$ and $eb=b$.
+\item For $a,b,c\in B$ such that $ab$ and $bc$ are defined, then so are $(ab)c$ and $a(bc)$ and they equal.
+\item If $ea=af=e$ for some $a,e,f\in B$, then there is a $b\in B$ such that $ab$ and $ba$ are defined and $ab=e$ and $ba=f$.
+\item If $ee=e$ and $ff=f$ for some $e,f\in B$, then there is $a\in B$ such that $ea$ and $af$ are defined and are equal to $a$.
+\end{enumerate}
+
+In the definition above, we see several instances of elements $e$ such that $e^2=ee=e$.  Such elements are called \emph{idempotents}.  If we let $I$ be the set of all idempotents of $B$, then $I\ne \varnothing$ by conditions 1 and 2.
+
+\subsubsection*{Brandt Groupoids versus Categories}
+
+Brandt groupoids are intimately related to categories, as we will presently discuss.
+
+The first two conditions above imply that there are two surjective functions $s,t:B\to I$, where $t(a)$ and $s(a)$ are the unique idempotents such that $a s(a)=a$ and $t(a) a=a$.  In addition, $s(e)=t(e)=e$ for all $e\in I$.  Call $s$ the source function, $t$ the target function, and for any $a\in B$, $s(a),t(a)$ the source and the target of $a$.
+
+The third condition says that $ab$ is defined iff the source of $a$ is the equal to the target of $b$: $s(a)=t(b)$.  The fourth condition is the associativity law for the multiplication.  An easy consequence of this condition is that if $ab$ exists, then $s(b)=s(ab)$ and $t(a)=t(ab)$.
+
+Altogether, the first four conditions say that a $B$ is a small category, with $I$ its set of objects, and $G$ the set of morphisms, and composition of morphisms is just the multiplication.
+
+A morphism $a$ in $B$ is said to be an \emph{isomorphism} if there is a morphism $b$ in $G$ such that $ab,ba \in I$.  Now, $b$ is uniquely determined by $a$, so that $a$ is an isomorphism in the category theoretic sense.  
+\begin{proof}
+First notice that $s(b)=s(ab)=ab=t(ab)=t(a)$ and $t(b)=t(ba)=ba=s(ba)=s(a)$.  If $ac, ca \in I$, then $s(c)=t(a)=s(b)$ and $t(c)=s(a)=t(b)$.  So $ab=ac$ and $ba=bc$.  As a result, $c=t(c)c = t(b)c= (ba)c=b(ac)= b(ab)= b s(b)=b$.  
+\end{proof}
+$b$ is said to be the inverse of $a$, and is often written $a^{-1}$.  Condition 5 says that the category $B$ is in fact a \PMlinkname{category theoretic groupoid}{GroupoidCategoryTheoretic}.  Thus, a Brandt groupoid is a group if the multiplication is everywhere defined.
+
+Finally, condition 6 says that between every pair of objects, there is a morphism from one to the other, this is equivalent to saying that $B$ is strongly connected.  As a result, a Brandt groupoid may be equivalently defined as a small strongly connected groupoid (in the category theoretic sense).
+
+\subsubsection*{An Example}
+A Brandt groupoid may be constructed as follows: take a group $G$ and a non-empty set $I$, set $B:=I\times G\times I$, and define multiplication on $B$ as follows:
+\begin{displaymath}
+(p,x,q)(r,y,s) = \left\{
+\begin{array}{ll}
+(p,xy,s) & \textrm{if }q=r,\\
+\textrm{undefined} & \textrm{otherwise.}
+\end{array}
+\right.
+\end{displaymath}
+Then $B$ with the partial multiplication is a Brandt groupoid.  The idempotents in $B$ have the form $(p,e,p)$, where $e\in G$ is the group identity.  And for any $(p,x,q)$, its source, target, and inverse are $(q,e,q)$ and $(p,e,p)$, $(q,x^{-1},p)$ respectively.
+
+In fact, it may be shown that every Brandt groupoid is isomorphic to one constructed above (for a proof, see \PMlinkname{here}{ConstructionOfABrandtGroupoid}).
+
+\textbf{Remark}.  A non-trivial Brandt groupoid can not have a zero element, for if $0a=a0=0$ for all $a\in B$, then $a$ must be the source and target of $0$, but then $a$ would have to be unique by condition 1, which is impossible unless $B$ is trivial.  If we adjoin $0$ to a Brandt groupoid $B$, and call $S:=B\cup \lbrace 0\rbrace$, then $S$ has the structure of a semigroup.  Here's how the multiplication is defined on $S$: 
+\begin{displaymath}
+ab = \left\{
+\begin{array}{ll}
+ab & \textrm{if $ab$ is defined in $B$},\\
+0 & \textrm{otherwise, or if either $a=0$ or $b=0$}.
+\end{array}
+\right.
+\end{displaymath}
+Since the multiplication on $S$ is everywhere defined, $S$ is a groupoid.  To see that $S$ is a semigroup, we must show that associativity of the multiplication applies everywhere.  There are four cases
+\begin{itemize}
+\item 
+If both $ab$ and $bc$ are defined in $B$, they are certainly defined in $S$, and the associativity follows from condition 4.  
+\item
+If neither $ab$ nor $bc$ is defined in $B$, then $(ab)c=0c=0=a0=a(bc)$ in $S$.  
+\item
+If $ab$ is not defined in $B$, but $bc$ is, then $s(a)\ne t(b)=t(bc)$, and $(ab)c=0c=0=a(bc)$.  
+\item
+Similarly, if $ab$ is defined in $B$ but not $bc$, then $(ab)c=0=a(bc)$.
+\end{itemize}
+Thus, $S$ is a semigroup (with $0$).  In fact, Clifford showed that $S$ is completely simple.
+
+\begin{thebibliography}{9}
+\bibitem{hb} H. Brandt, \emph{Uber die Axiome des Gruppoids, Vierteljschr.  naturforsch. Ges. Zurich 85, Beiblatt (Festschrift Rudolph Fueter)}, pp. 95-104, {\bf MR2}, 218, 1940.
+\bibitem{rhb} R. H. Bruck, \emph{A Survey on Binary Systems}, Springer-Verlag, New York, 1966.
+\bibitem{nj} N. Jacobson, \emph{Theory of Rings}, American Mathematical Society, New York, 1943.
+\bibitem{ahc} A. H. Clifford, \emph{Matrix Representations of Completely Simple Semigroups}, Amer. J. Math. 70. pp. 521-526, 1948.
+\end{thebibliography}
+%%%%%
+%%%%%
+\end{document}

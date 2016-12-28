@@ -1,0 +1,377 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{CategoriesInPhysics}
+\pmcreated{2013-03-22 19:19:35}
+\pmmodified{2013-03-22 19:19:35}
+\pmowner{bci1}{20947}
+\pmmodifier{bci1}{20947}
+\pmtitle{categories in physics}
+\pmrecord{10}{42266}
+\pmprivacy{1}
+\pmauthor{bci1}{20947}
+\pmtype{Topic}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{20E07}
+\pmclassification{msc}{18-01}
+\pmrelated{CategoricalDynamics}
+
+% this is the default PlanetMath preamble. as your knowledge
+% of TeX increases, you will probably want to edit this, but
+\usepackage{amsmath, amssymb, amsfonts, amsthm, amscd, latexsym}
+%%\usepackage{xypic}
+\usepackage[mathscr]{eucal}
+% define commands here
+\theoremstyle{plain}
+\newtheorem{lemma}{Lemma}[section]
+\newtheorem{proposition}{Proposition}[section]
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{corollary}{Corollary}[section]
+\theoremstyle{definition}
+\newtheorem{definition}{Definition}[section]
+\newtheorem{example}{Example}[section]
+%\theoremstyle{remark}
+\newtheorem{remark}{Remark}[section]
+\newtheorem*{notation}{Notation}
+\newtheorem*{claim}{Claim}
+\renewcommand{\thefootnote}{\ensuremath{\fnsymbol{footnote%%@
+}}}
+\numberwithin{equation}{section}
+\newcommand{\Ad}{{\rm Ad}}
+\newcommand{\Aut}{{\rm Aut}}
+\newcommand{\Cl}{{\rm Cl}}
+\newcommand{\Co}{{\rm Co}}
+\newcommand{\DES}{{\rm DES}}
+\newcommand{\Diff}{{\rm Diff}}
+\newcommand{\Dom}{{\rm Dom}}
+\newcommand{\Hol}{{\rm Hol}}
+\newcommand{\Mon}{{\rm Mon}}
+\newcommand{\Hom}{{\rm Hom}}
+\newcommand{\Ker}{{\rm Ker}}
+\newcommand{\Ind}{{\rm Ind}}
+\newcommand{\IM}{{\rm Im}}
+\newcommand{\Is}{{\rm Is}}
+\newcommand{\ID}{{\rm id}}
+\newcommand{\GL}{{\rm GL}}
+\newcommand{\Iso}{{\rm Iso}}
+\newcommand{\Sem}{{\rm Sem}}
+\newcommand{\St}{{\rm St}}
+\newcommand{\Sym}{{\rm Sym}}
+\newcommand{\SU}{{\rm SU}}
+\newcommand{\Tor}{{\rm Tor}}
+\newcommand{\U}{{\rm U}}
+\newcommand{\A}{\mathcal A}
+\newcommand{\Ce}{\mathcal C}
+\newcommand{\D}{\mathcal D}
+\newcommand{\E}{\mathcal E}
+\newcommand{\F}{\mathcal F}
+\newcommand{\G}{\mathcal G}
+\newcommand{\Q}{\mathcal Q}
+\newcommand{\R}{\mathcal R}
+\newcommand{\cS}{\mathcal S}
+\newcommand{\cU}{\mathcal U}
+\newcommand{\W}{\mathcal W}
+\newcommand{\bA}{\mathbb{A}}
+\newcommand{\bB}{\mathbb{B}}
+\newcommand{\bC}{\mathbb{C}}
+\newcommand{\bD}{\mathbb{D}}
+\newcommand{\bE}{\mathbb{E}}
+\newcommand{\bF}{\mathbb{F}}
+\newcommand{\bG}{\mathbb{G}}
+\newcommand{\bK}{\mathbb{K}}
+\newcommand{\bM}{\mathbb{M}}
+\newcommand{\bN}{\mathbb{N}}
+\newcommand{\bO}{\mathbb{O}}
+\newcommand{\bP}{\mathbb{P}}
+\newcommand{\bR}{\mathbb{R}}
+\newcommand{\bV}{\mathbb{V}}
+\newcommand{\bZ}{\mathbb{Z}}
+\newcommand{\bfE}{\mathbf{E}}
+\newcommand{\bfX}{\mathbf{X}}
+\newcommand{\bfY}{\mathbf{Y}}
+\newcommand{\bfZ}{\mathbf{Z}}
+\renewcommand{\O}{\Omega}
+\renewcommand{\o}{\omega}
+\newcommand{\vp}{\varphi}
+\newcommand{\vep}{\varepsilon}
+\newcommand{\diag}{{\rm diag}}
+\newcommand{\grp}{{\mathbb G}}
+\newcommand{\dgrp}{{\mathbb D}}
+\newcommand{\desp}{{\mathbb D^{\rm{es}}}}
+\newcommand{\Geod}{{\rm Geod}}
+\newcommand{\geod}{{\rm geod}}
+\newcommand{\hgr}{{\mathbb H}}
+\newcommand{\mgr}{{\mathbb M}}
+\newcommand{\ob}{{\rm Ob}}
+\newcommand{\obg}{{\rm Ob(\mathbb G)}}
+\newcommand{\obgp}{{\rm Ob(\mathbb G')}}
+\newcommand{\obh}{{\rm Ob(\mathbb H)}}
+\newcommand{\Osmooth}{{\Omega^{\infty}(X,*)}}
+\newcommand{\ghomotop}{{\rho_2^{\square}}}
+\newcommand{\gcalp}{{\mathbb G(\mathcal P)}}
+\newcommand{\rf}{{R_{\mathcal F}}}
+\newcommand{\glob}{{\rm glob}}
+\newcommand{\loc}{{\rm loc}}
+\newcommand{\TOP}{{\rm TOP}}
+\newcommand{\wti}{\widetilde}
+\newcommand{\what}{\widehat}
+\renewcommand{\a}{\alpha}
+\newcommand{\be}{\beta}
+\newcommand{\ga}{\gamma}
+\newcommand{\Ga}{\Gamma}
+\newcommand{\de}{\delta}
+\newcommand{\del}{\partial}
+\newcommand{\ka}{\kappa}
+\newcommand{\si}{\sigma}
+\newcommand{\ta}{\tau}
+\newcommand{\lra}{{\longrightarrow}}
+\newcommand{\ra}{{\rightarrow}}
+\newcommand{\rat}{{\rightarrowtail}}
+\newcommand{\oset}[1]{\overset {#1}{\ra}}
+\newcommand{\osetl}[1]{\overset {#1}{\lra}}
+\newcommand{\hr}{{\hookrightarrow}}
+\begin{document}
+\section{Categories in Physics}
+
+ This is a relatively new area in mathematical and theoretical physics that is concerned with category theory applications to physics, especially non-Abelian
+categories and non-Abelian algebraic topology concepts and results in mathematical physics and physical mathematics. Applications range from QFT,
+AQFT, non-Abelian gauge theories and Quantum Gravity to complex systems, 
+\PMlinkname{categorical dynamics}{CategoricalDynamics}, 
+\PMlinkname{complex categorical dynamics}{CategoricalDynamics2}, mathematical biophysics and relational biology. Other applications are related to graph theory approaches to Quantum Chemistry. 
+
+\begin{thebibliography}{99}
+
+\bibitem{BR et al-2011}
+Brown, Ronald, Higgins, J.P. and Sivera, R. 2011. ``Nonabelian Algebraic Topology'', 690 pages,  EPS: London and Bruxelles. \PMlinkexternal{Nonabelian Algebraic Topology 2011}{http://pp-wiki.metameso.org/wiki.pl/NAAT_2011_Book_Summary};
+
+
+\bibitem{BAJ-DJ98B}
+Baez, J. and Dolan, J., 1998b, ``Categorification'', {\em Higher Category Theory, Contemporary Mathematics}, 230, Providence: AMS, 1--36.
+
+\bibitem{Baianu-Marinescu68}
+Baianu, I. and M. Marinescu: 1968, Organismic Supercategories: Towards a Unitary Theory of Systems. \emph{Bulletin of Mathematical Biophysics} \textbf{30}, 148-159.
+
+\bibitem{Baianu70}
+Baianu, I.C.: 1970, Organismic Supercategories: II. On Multistable Systems. \emph{Bulletin of Mathematical Biophysics}, \textbf{32}: 539-561.
+
+\bibitem{Baianu71a}
+Baianu,I.C.: 1971a, Organismic Supercategories and Qualitative Dynamics of Systems. \emph{Bulletin of Mathematical Biophysics}, \textbf{33} (3), 339--354.
+
+\bibitem{Baianu71b}
+Baianu, I.C.: 1971b, Categories, Functors and Quantum Algebraic Computations, in P. Suppes (ed.), In \emph{Proceed. Fourth Intl. Congress Logic-Mathematics-Philosophy of Science}, 14 pages, September 1--4, 1971. 
+
+\bibitem{ICB04b}
+Baianu, I.C. : \L ukasiewicz-Topos Models of Neural Networks, Cell Genome and Interactome Nonlinear Dynamics). CERN Preprint EXT-2004-059. \textit{Health Physics and Radiation Effects} (June 29, 2004).
+
+\bibitem{ICBs5}
+Baianu, I.C.  and D. Scripcariu: 1973, On Adjoint Dynamical Systems. \emph{The Bulletin of Mathematical Biophysics}, \textbf{35}(4), 475--486.
+
+\bibitem{BAJ-DJ2k1}
+Baez, J. \& Dolan, J., 2001, From Finite Sets to Feynman Diagrams,
+in \emph{Mathematics Unlimited -- 2001 and Beyond}, Berlin: Springer, 29--50.
+
+\bibitem{BAJ-DJ97}
+Baez, J., 1997, An Introduction to n-Categories,
+in \emph{Category Theory and Computer Science, Lecture Notes in Computer Science}, 1290, Berlin: Springer-Verlag, 1--33.
+
+\bibitem{BBGG1}
+Baianu I. C., Brown R., Georgescu G. and J. F. Glazebrook: 2006, Complex Nonlinear Biodynamics in Categories, Higher Dimensional Algebra and \L{}ukasiewicz-Moisil Topos: Transformations of Neuronal, Genetic and Neoplastic Networks.,
+\emph{Axiomathes}, \textbf{16} Nos. 1-2: 65-122.
+
+\bibitem{ICBDS73}
+Baianu, I.C. and D. Scripcariu: 1973, On Adjoint Dynamical Systems.
+\emph{Bulletin of Mathematical Biophysics}, \textbf{35}(4): 475-486.
+
+\bibitem{Bgg2}
+Baianu, I. C., Glazebrook, J. F. and G. Georgescu: 2004, Categories of Quantum Automata and N-Valued \L ukasiewicz Algebras in Relation to Dynamic Bionetworks, \textbf{(M,R)}-Systems and Their Higher Dimensional Algebra,
+\emph{Preprint of Report}.
+
+\bibitem{BHR2}
+Brown, R., Higgins, P. J. and R. Sivera,: 2007, \emph{Non-Abelian Algebraic Topology},
+\PMlinkexternal{vol.I pdf doc.}{http://www.bangor.ac.uk/~mas010/nonab-t/partI010604.pdf};
+\PMlinkexternal{Review of Part I and full contents PDF doc.}{http://planetmath.org/?op=getobj&from=lec&id=75}
+
+\bibitem{RB2k8}
+R. Brown. 2008. {\em Higher Dimensional Algebra Preprint as pdf and ps docs. at arXiv:math/0212274v6 [math.AT]}
+
+\bibitem{BP2k3}
+Brown R. and T. Porter: 2003, Category theory and higher dimensional algebra: potential descriptive tools in neuroscience, In: {\em Proceedings of the International Conference on Theoretical Neurobiology}, Delhi, February 2003, edited by Nandini Singh, National Brain Research Centre, {\em Conference Proceedings} \textbf{1}: 80-92.
+
+
+\bibitem{Chaician}
+Chaician, M. and A. Demichev. 1996. Introduction to Quantum Groups, World Scientific .
+
+\bibitem{CA94}
+Connes, A. 1994. \emph{Noncommutative geometry}. Academic Press: New York.
+
+\bibitem{CL93}
+Crane, Louis. 1993. Categorical Physics., 9 pages, \PMlinkexternal{with free download at $arXiv:hep-th/9301061$}{http://arxiv.org/PS_cache/hep-th/pdf/9301/9301061v1.pdf} 
+(``A new mathematical form for the quantum theory of gravity coupled to matter. The motivation is from the connection between CSW TQFT and the Ashtekar variables'').
+
+\bibitem{CR-LL63}
+Croisot, R. and Lesieur, L. 1963. \emph{Alg\`ebre noeth\'erienne non-commutative.}, Gauthier-Villard: Paris.
+
+\bibitem{DJ-ALEX60-71}
+Dieudonn\'e, J. and Grothendieck, A., 1960, [1971], {\em \'El\'ements de G\'eom\'etrie Alg\'ebrique}, Berlin: Springer-Verlag.
+
+\bibitem{Dixmier}
+Dixmier, J., 1981, Von Neumann Algebras, Amsterdam: North-Holland Publishing Company. [First published in French in 1957: Les Algebres d'Operateurs dans l'Espace Hilbertien, Paris: Gauthier--Villars.]
+
+\bibitem{Durdevich1}
+M. Durdevich : Geometry of quantum principal bundles I, Commun. Math. Phys. \textbf{175} (3) (1996), 457--521.
+
+\bibitem{Durdevich2}
+M. Durdevich : Geometry of quantum principal bundles II, Rev.Math. Phys. \textbf{9} (5) (1997), 531-607.
+
+\bibitem{Eh-pseudo}
+Ehresmann, C.: 1952, Structures locales et structures infinit\'esimales, \emph{C.R.A.S.} Paris \textbf{274}: 587-589.
+
+\bibitem{Eh}
+Ehresmann, C.: 1959, Cat\'egories topologiques et cat\'egories diff\'erentiables, \emph{Coll. G\'eom. Diff. Glob.} Bruxelles, pp.137-150.
+
+\bibitem{EC}
+Ehresmann, C.: 1966, Trends Toward Unity in Mathematics., \emph{Cahiers de Topologie et Geometrie Differentielle}
+\textbf{8}: 1-7.
+
+\bibitem{EML1}
+Eilenberg, S. and S. Mac Lane.: 1942, Natural Isomorphisms in Group Theory., \emph{American Mathematical Society 43}: 757-831.
+
+\bibitem{EL}
+Eilenberg, S. and S. Mac Lane: 1945, The General Theory of Natural Equivalences, \emph{Transactions of the American Mathematical Society} \textbf{58}: 231-294.
+
+\bibitem{ETH}
+Ezawa,Z.F., G. Tsitsishvilli and K. Hasebe : Noncommutative geometry, extended $W_{\infty}$ algebra and Grassmannian solitons in multicomponent Hall systems, (at arXiv:hep--th/0209198).
+
+\bibitem{GabrielNP}
+Gabriel, P. and N. Popescu: 1964, Caract\'{e}risation des cat\'egories ab\'eliennes avec g\'{e}n\'{e}rateurs et limites inductives. , \emph{CRAS Paris} \textbf{258}: 4188-4191.
+
+\bibitem{GA-RG-SM2k}
+Galli, A. \& Reyes, G. \& Sagastume, M., 2000, Completeness Theorems via the Double Dual Functor, {\em Studia Logica}, \textbf{64}, no. 1: 61--81.
+
+\bibitem{Alex3}
+Grothendieck, A. and J. Dieudon\'{e}.: 1960, El\'{e}ments de geometrie alg\'{e}brique., \emph{Publ. Inst. des Hautes Etudes de Science}, \textbf{4}.
+
+\bibitem{KDM58}
+Kan, D. M., 1958, Adjoint Functors, {\em Transactions of the American Mathematical Society} 87, 294-329.
+
+\bibitem{Krips}
+H. Krips : Measurement in Quantum Theory, \emph{The Stanford Encyclopedia of Philosophy } (Winter 1999 Edition), Edward N. Zalta (ed.)
+
+\bibitem{Land1}
+Landsman, N. P. : Compact quantum groupoids, (at arXiv:math--ph/9912006).
+
+\bibitem{LFW64}
+Lawvere, F. W., 1964, An Elementary Theory of the Category of Sets, {\em Proceedings of the National Academy of Sciences U.S.A.}, 52, 1506--1511.
+
+\bibitem{LFW65}
+Lawvere, F. W., 1965, Algebraic Theories, Algebraic Categories, and Algebraic Functors, {\em Theory of Models}, Amsterdam: North Holland, 413--418.
+
+\bibitem{LFW66}
+Lawvere, F. W.: 1966, The Category of Categories as a Foundation for Mathematics., in \emph{Proc. Conf. Categorical Algebra- La Jolla}., Eilenberg, S. et al., eds. Springer--Verlag: Berlin, Heidelberg and New York., pp. 1-20.
+
+\bibitem{LFW69b}
+Lawvere, F. W., 1969b, Adjointness in Foundations, {\em Dialectica}, \textbf{23}: 281--295.
+
+\bibitem{LFW92}
+Lawvere, F. W., 1992, Categories of Space and of Quantity, {\em The Space of Mathematics, Foundations of Communication and Cognition}, Berlin: De Gruyter, 14-30.
+
+\bibitem{LFW2k2}
+Lawvere, F. W., 2002, Categorical Algebra for Continuum Micro-Physics, {\em Journal of Pure and Applied Algebra}, 175, no. 1--3, 267--287.
+
+\bibitem{LiM-PV97}
+Li, M. and P. Vitanyi: 1997, \emph{An introduction to Kolmogorov Complexity and its Applications}, Springer Verlag: New York.
+
+\bibitem{Lofgren68}
+L\"{o}fgren, L.: 1968, An Axiomatic Explanation of Complete Self-Reproduction, \emph{Bulletin of Mathematical Biophysics}, \textbf{30}: 317-348.
+
+\bibitem{Mack1}
+K. C. H. Mackenzie : {\em Lie Groupoids and Lie Algebroids in Differential Geometry}, LMS Lect. Notes \textbf{124}, Cambridge University Press, 1987
+
+\bibitem{MCLSS48}
+MacLane, S.: 1948. Groups, categories, and duality., {\em Proc. Natl. Acad. Sci.U.S.A}, \textbf{34}: 263-267.
+
+\bibitem{MCLSS69}
+MacLane, S., 1969, Foundations for Categories and Sets, in {\em Category Theory, Homology Theory and their Applications II}, Berlin: Springer, 146--164.
+
+\bibitem{MCLS71}MacLane, S., 1971, Categorical algebra and Set-Theoretic Foundations, in {\em Axiomatic Set Theory}, Providence: AMS, 231--240.
+
+\bibitem{MLS50}
+MacLane, S., 1950, Dualities for Groups, {\em Bulletin of the American Mathematical Society}, 56, 485-516.
+
+\bibitem{MCLS96}
+MacLane, S., 1996, Structure in Mathematics. Mathematical Structuralism., {\em Philosophia Mathematica}, 4, 2, 174-183.
+
+\bibitem{MCLS98}
+MacLane, S., 1997, Categories for the Working Mathematician, 2nd edition, New York: Springer-Verlag.
+
+\bibitem{Majid1}
+Majid, S.: 1995, \emph{Foundations of Quantum Group Theory}, Cambridge Univ. Press: Cambridge, UK.
+
+\bibitem{Majid2}
+Majid, S.: 2002, \emph{A Quantum Groups Primer}, Cambridge Univ.Press: Cambridge, UK.
+
+\bibitem{MJP1999}
+May, J.P. 1999, \emph{A Concise Course in Algebraic Topology}, The University of Chicago Press: Chicago.
+
+\bibitem{MLC94}
+Mc Larty, C., 1994, Category Theory in Real Time, {\em Philosophia Mathematica}, \textbf{2}, no. 1, 36-44.
+
+\bibitem{MLC91}
+Mc Larty, C., 1991, Axiomatizing a Category of Categories, {\em Journal of Symbolic Logic}, 56, no. 4, 1243-1260.
+
+
+\bibitem{Mitchell1}
+Mitchell, B.: 1965, \emph{Theory of Categories}, Academic Press:London.
+
+\bibitem{OO31}
+Ore, O., 1931, Linear equations on non-commutative fields, {\em Ann. Math.} \textbf{32}: 463-477.
+
+
+\bibitem{PLR}
+Plymen, R.J. and P. L. Robinson: 1994, \emph{Spinors in Hilbert Space}, Cambridge Tracts in Math.
+\textbf{114}, Cambridge Univ. Press, Cambridge.
+
+\bibitem{NPop1}
+Popescu, N.: 1973, \emph{Abelian Categories with Applications to Rings and Modules.} New York and London: Academic Press., 2nd edn. 1975. \emph{(English translation by I.C. Baianu)}.
+
+\bibitem{PB70}
+Pareigis, B., 1970, Categories and Functors, New York: Academic Press.
+
+\bibitem{PMC2k4}
+Pedicchio, M. C. and Tholen, W., 2004, Categorical Foundations, Cambridge: Cambridge University Press.
+
+\bibitem{PB91}
+Peirce, B., 1991, Basic Category Theory for Computer Scientists, Cambridge: MIT Press.
+
+\bibitem{Pradines1966}
+Pradines, J.: 1966, Th\'eorie de Lie pour les groupoides diff\'erentiable, relation entre propri\'etes locales et globales, \emph{C. R. Acad Sci. Paris S\'er. A} \textbf{268}: 907-910.
+
+\bibitem{Raptis1-2k3}
+Raptis, I.: 2003, Algebraic quantisation of causal sets, \emph{Int. Jour. Theor. Phys.} \textbf{39}: 1233.
+
+\bibitem{Rieffel}
+M. A. Rieffel : Group C*--algebras as compact quantum metric spaces, \emph{Documenta Math.} \textbf{7} (2002), 605-651.
+
+\bibitem{Roberts}
+Roberts, J. E.: 2004, More lectures on algebraic quantum field theory, in A. Connes, et al. \emph{Noncommutative Geometry}, Springer: Berlin and New York.
+
+\bibitem{RRosen2}
+Rosen, R.: 1958b, The Representation of Biological Systems from the Standpoint of the Theory of Categories., \emph{ Bulletin of Mathematical Biophysics} \textbf{20}: 317-341.
+
+\bibitem{Szabo}
+Szabo, R. J.: 2003, Quantum field theory on non-commutative spaces, \emph{Phys. Rep.} \textbf{378}: 207--209.
+
+\bibitem{Varilly}
+V\'arilly, J. C.: 1997, An introduction to noncommutative geometry. (at arXiv:physics/9709045)
+
+\bibitem{Weinstein96}
+Weinstein, A.: 1996, Groupoids : unifying internal and external symmetry, \emph{Notices of the Amer. Math. Soc.} \textbf{43}: 744--752.
+
+\bibitem{WB83}
+Wess J. and J. Bagger: 1983, \emph{Supersymmetry and Supergravity}, Princeton University Press: Princeton, NJ.
+
+
+\end{thebibliography}
+
+%%%%%
+%%%%%
+\end{document}

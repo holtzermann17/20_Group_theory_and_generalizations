@@ -1,0 +1,48 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{Gmodule}
+\pmcreated{2013-03-22 14:57:53}
+\pmmodified{2013-03-22 14:57:53}
+\pmowner{rspuzio}{6075}
+\pmmodifier{rspuzio}{6075}
+\pmtitle{$G$-module}
+\pmrecord{6}{36663}
+\pmprivacy{1}
+\pmauthor{rspuzio}{6075}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{20C99}
+%\pmkeywords{group}
+%\pmkeywords{representation}
+\pmrelated{GroupRepresentation}
+\pmrelated{Group}
+
+\usepackage{graphicx}
+%%%\usepackage{xypic} 
+\usepackage{bbm}
+\newcommand{\Z}{\mathbbmss{Z}}
+\newcommand{\C}{\mathbbmss{C}}
+\newcommand{\R}{\mathbbmss{R}}
+\newcommand{\Q}{\mathbbmss{Q}}
+\newcommand{\mathbb}[1]{\mathbbmss{#1}}
+\newcommand{\figura}[1]{\begin{center}\includegraphics{#1}\end{center}}
+\newcommand{\figuraex}[2]{\begin{center}\includegraphics[#2]{#1}\end{center}}
+\newtheorem{dfn}{Definition}
+\begin{document}
+Let $V$ a vector space over some field $K$ (usually $K=\Q$ or $K=\C$).  Let $G$ 
+be a group which acts on $V$.  This means that there is an operation 
+$\psi \colon G\times V \to V$ such that
+\begin{enumerate}
+\item $gv \in V$.
+\item $g(hv) = (gh)v$
+\item $ev = v$
+\end{enumerate}
+where $gv$ stands for $\psi(g,v)$ and $e$ is the identity element of $G$.
+
+If in addition, 
+\[ g(cv + dw) = c(gv)+d(gw)\]
+for any $g\in G$, $v,w \in V$, $c,d\in K$, we say that $V$ is a $G$-module. 
+This is equivalent with the existence of a group representation from $G$ to $GL(V)$.
+%%%%%
+%%%%%
+\end{document}

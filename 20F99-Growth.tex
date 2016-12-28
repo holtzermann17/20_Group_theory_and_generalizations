@@ -1,0 +1,74 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{Growth}
+\pmcreated{2013-03-22 14:36:09}
+\pmmodified{2013-03-22 14:36:09}
+\pmowner{mathcam}{2727}
+\pmmodifier{mathcam}{2727}
+\pmtitle{growth}
+\pmrecord{8}{36172}
+\pmprivacy{1}
+\pmauthor{mathcam}{2727}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{20F99}
+\pmclassification{msc}{20E99}
+\pmrelated{GrowthOfExponentialFunction}
+\pmdefines{polynomial growth}
+\pmdefines{intermediate growth}
+\pmdefines{exponential growth}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\begin{document}
+Let $G$ be a finitely generated group with generating set $A$ (closed under inverses).
+
+For $g=a_1a_2\ldots a_m\in G$, $a_i\in A$, let $l(g)$ be the minimum value of $m$.
+
+Define $$\gamma(n)=\mid\{g\in G:l(g)\le n\}\mid$$.
+
+The function $\gamma$ is called the \emph{growth function} for $G$ with generating set $A$.  If $\gamma$ is either
+
+(a) bounded above by a polynomial function,
+
+(b) bounded below by an exponential function, or
+
+(c) neither,
+
+then this condition is preserved under changing the generating set for $G$.  Respectively, then, $G$ is said to have
+
+(a) \emph{polynomial growth},
+
+(b) \emph{exponential growth}, or
+
+(c) \emph{intermediate growth}.
+
+
+For a survey on the topic, see:
+R. I. Grigorchuk, On growth in group theory, Proceedings of the
+International Congress of Mathematicians, Kyoto 1990, Volume I,
+II (Math. Soc. Japan, 1991), pages 325 to 338.
+
+Note that, as the generating set is assumed to be closed under inverses, we need only have $G$ as a semigroup - as such, the above applies equally well in semigroup theory.
+%%%%%
+%%%%%
+\end{document}

@@ -1,0 +1,130 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{NoncommutingGraph}
+\pmcreated{2013-03-22 15:18:50}
+\pmmodified{2013-03-22 15:18:50}
+\pmowner{GrafZahl}{9234}
+\pmmodifier{GrafZahl}{9234}
+\pmtitle{non-commuting graph}
+\pmrecord{11}{37117}
+\pmprivacy{1}
+\pmauthor{GrafZahl}{9234}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{20D60}
+\pmclassification{msc}{05C25}
+\pmsynonym{non-commuting graph of a group}{NoncommutingGraph}
+\pmrelated{NonAbelianTheories}
+\pmrelated{NonAbelianStructures}
+\pmrelated{CommutativeVsNonCommutativeDynamicModelingDiagrams}
+\pmrelated{GeneralizedToposesTopoiWithManyValuedLogicSubobjectClassifiers}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+\usepackage{graphicx}
+% for neatly defining theorems and propositions
+\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\newcommand{\<}{\langle}
+\renewcommand{\>}{\rangle}
+\newcommand{\Bigcup}{\bigcup\limits}
+\newcommand{\DirectSum}{\bigoplus\limits}
+\newcommand{\Prod}{\prod\limits}
+\newcommand{\Sum}{\sum\limits}
+\newcommand{\h}{\widehat}
+\newcommand{\mbb}{\mathbb}
+\newcommand{\mbf}{\mathbf}
+\newcommand{\mc}{\mathcal}
+\newcommand{\mmm}[9]{\left(\begin{array}{rrr}#1&#2&#3\\#4&#5&#6\\#7&#8&#9\end{array}\right)}
+\newcommand{\mf}{\mathfrak}
+\newcommand{\ol}{\overline}
+
+% Math Operators/functions
+\DeclareMathOperator{\Aut}{Aut}
+\DeclareMathOperator{\End}{End}
+\DeclareMathOperator{\Frob}{Frob}
+\DeclareMathOperator{\cwe}{cwe}
+\DeclareMathOperator{\id}{id}
+\DeclareMathOperator{\mult}{mult}
+\DeclareMathOperator{\we}{we}
+\DeclareMathOperator{\wt}{wt}
+\begin{document}
+\PMlinkescapeword{associate}
+\PMlinkescapeword{square}
+Let $G$ be a non-abelian group with center $Z(G)$.  Associate a graph
+$\Gamma_G$ with $G$ whose vertices are the non-central elements
+$G\setminus Z(G)$ and whose edges join those vertices $x,y\in
+G\setminus Z(G)$ for which $xy\neq yx$. Then $\Gamma_G$ is said to be
+the \emph{non-commuting graph} of $G$.
+The non-commuting graph $\Gamma_G$ was first considered by Paul
+Erd\"os, when he posed the following problem in 1975 [B.H. Neumann,  {\sl A problem of Paul Erd\"os on
+groups,}  J. Austral. Math. Soc. Ser. A {\bf 21} (1976), 467-472]:\\
+ Let
+$G$ be a group whose non-commuting graph has no infinite complete
+subgraph. Is it true that there is a finite bound on the
+cardinalities of complete subgraphs   of $\Gamma_G$?\\
+B. H. Neumann  answered positively Erd\"os' question.\\
+The non-commuting graph $\Gamma_G$ of a non-abelian group $G$ is always connected with diameter 2 and girth 3.
+It is also Hamiltonian.  $\Gamma_G$ is planar if and only if $G$ is isomphic to the symmetric group $S_3$, or 
+the dihedral group $\mc{D}_8$ of order $8$ or the quaternion group $Q_8$ of order $8$.\\
+See 
+[Alireza Abdollahi, S. Akbari and H.R. Maimani, {\sl Non-commuting graph of a group}, Journal of Algbera, {\bf 298} (2006) 468-492.] for  proofs of these properties of $\Gamma_G$.  
+
+
+\subsection*{Examples}
+
+\subsubsection*{Symmetric group $S_3$}
+The symmetric group $S_3$ is the smallest non-abelian group. In cycle
+notation, we have
+\begin{equation*}
+S_3=\{(),(12),(13),(23),(123),(132)\}.
+\end{equation*}
+The center is trivial: $Z(S_3)=\{()\}$. The non-commuting graph in
+Figure~\ref{fig:s3} contains all possible edges except one.
+
+\begin{figure}
+\label{fig:s3}
+\begin{center}
+\includegraphics{NonCommutingGraphOfAGroup.s3.eps}
+\end{center}
+\sf\caption{Non-commuting graph of the symmetric group $S_3$}
+\end{figure}
+
+\subsubsection*{Octic group}
+The dihedral group $\mc{D}_8$, generally known as the octic group, is
+the symmetry group of the \PMlinkid{square}{1086}. If you label the vertices of the
+square from $1$ to $4$ going along the edges, the octic group may be
+seen as a \PMlinkid{subgroup}{1045} of the symmetric group $S_4$:
+\begin{equation*}
+\mc{D}_8:=\{(),(13),(24),(12)(34),(13)(24),(14)(23),(1234),(1432)\}.
+\end{equation*}
+So the octic group has \PMlinkid{order}{2871} $8$ (hence its name), and its center
+consists of the identity element and the simultaneous flip around both
+diagonals $(13)(24)$. Its non-commuting graph is given in
+Figure~\ref{fig:d4}.
+
+\begin{figure}
+\label{fig:d4}
+\begin{center}
+\includegraphics{NonCommutingGraphOfAGroup.d4.eps}
+\end{center}
+\sf\caption{Non-commuting graph of the octic group}
+\end{figure}
+%%%%%
+%%%%%
+\end{document}

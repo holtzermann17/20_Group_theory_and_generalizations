@@ -1,0 +1,110 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ZetaFunctionOfAGroup}
+\pmcreated{2013-03-22 15:16:00}
+\pmmodified{2013-03-22 15:16:00}
+\pmowner{avf}{9497}
+\pmmodifier{avf}{9497}
+\pmtitle{Zeta function of a group}
+\pmrecord{7}{37053}
+\pmprivacy{1}
+\pmauthor{avf}{9497}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{20E07}
+\pmclassification{msc}{20F69}
+\pmclassification{msc}{20F18}
+\pmrelated{Group}
+
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amsthm}
+\usepackage[matrix,arrow,curve]{xy}
+\usepackage[only,trianglelefteqslant]{stmaryrd}
+
+\newcommand{\sgp}{\leqslant}
+\newcommand{\sgpf}{\leqslant_{\mathrm{f}}}
+\newcommand{\nsgp}{\trianglelefteqslant}
+\newcommand{\nsgpf}{\trianglelefteqslant_{\mathrm{f}}}
+\newcommand{\nsgpo}{\trianglelefteqslant_{\mathrm{o}}}
+\newcommand{\hir}{\mathrm{h}}
+\newcommand{\stab}{\mathrm{Stab}}
+\begin{document}
+Let $G$ be a finitely generated group and let $\mathcal{X}$ be a
+family of finite index subgroups of $G$. Define
+\[
+        a_n(\mathcal{X}) = |\{H \in \mathcal{X} \mid |G : H| = n\}|.
+\]
+Note that these numbers are finite since a finitely generated group
+has only finitely many subgroups of a given index. We define the
+\textbf{zeta function} of the family $\mathcal{X}$ to be the formal
+Dirichlet series
+\[
+        \zeta_{\mathcal{X}}(s) = \sum_{n=1}^\infty a_n(\mathcal{X})
+        n^{-s}.
+\]
+
+Two important special cases are the zeta function counting all
+subgroups and the zeta function counting normal subgroups. Let
+$\mathcal{S}(G)$ and $\mathcal{N}(G)$ be the families of all finite
+index subgroups of $G$ and of all finite index normal subgroups of
+$G$, respectively. We write $a_n^\sgp(G) = a_n(\mathcal{S}(G))$ and
+$a_n^\nsgp(G) = a_n(\mathcal{N}(G))$ and define
+\[
+        \zeta_G^\sgp(s) = \zeta_{\mathcal{S}(G)}(s) = \sum_{H \sgpf G}
+        |G : H|^{-s},
+\]
+and
+\[
+        \zeta_G^\nsgp(s) = \zeta_{\mathcal{N}(G)}(s) = \sum_{N \nsgpf G}
+        |G : N|^{-s}.
+\]
+
+If, in addition, $G$ is nilpotent, then $\zeta_G^\sgp$ has a
+decomposition as a formal Euler product
+\[
+        \zeta_G^\sgp(s) = \prod_{p \text{ prime}}
+        \zeta_{G,p}^\sgp(s),
+\]
+where
+\[
+        \zeta_{G,p}^\sgp(s) = \sum_{i=0}^\infty a_{p^i}^\sgp(G)
+        p^{-is}.
+\]
+An analogous result holds for the normal zeta function
+$\zeta_G^\nsgp$. The result for both $\zeta_G^\sgp$ and
+$\zeta_G^\nsgp$ can be proved using properties of the profinite
+completion of $G$. However, a simpler proof for the normal zeta
+function is provided by the fact that a finite nilpotent group
+decomposes into a direct product of its Sylow subgroups. These results
+allow the zeta functions to be expressed in terms of $p$-adic
+integrals, which can in turn be used to prove (using some high-powered
+machinery) that $\zeta_{G,p}^\sgp(s)$ and $\zeta_{G,p}^\nsgp(s)$ are
+rational functions in $p$ and $p^{-s}$.
+
+In the case when $G$ is a $\mathcal{T}$-group, that is, $G$ is
+finitely generated, torsion free, and nilpotent, define $\alpha_G^\sgp$
+to be the abscissa of convergence of $\zeta_G^\sgp$. That is,
+$\alpha_G^\sgp$ is the smallest $\alpha \in \mathbb{R}$ such that
+$\zeta_G^\sgp$ defines a holomorphic function in the right half-plane
+$\{z \in \mathbb{C} \mid \Re(z) > \alpha\}$. It can then be shown that
+$\alpha_G^\sgp \leqslant \hir(G)$, where $\hir(G)$ is the Hirsch number
+of $G$. Therefore, if $G$ is a $\mathcal{T}$-group, $\zeta_G^\sgp$
+defines a holomorphic function in some right half-plane.
+
+\begin{thebibliography}{99}
+
+\bibitem{gss}
+F.~J. Grunewald, D.~Segal, and G.~C. Smith, \emph{Subgroups of finite index in
+  nilpotent groups}, Invent. math. \textbf{93} (1988), 185--223.
+
+\bibitem{ennui}
+M.~P.~F. du~Sautoy, \emph{Zeta functions of groups: the quest for order versus the flight
+  from ennui}, Groups St.\ Andrews 2001 in Oxford. Vol. I, London Math. Soc.
+  Lecture Note Ser., vol. 304, Cambridge Univ. Press, 2003, pp.~150--189.
+
+\end{thebibliography}
+%%%%%
+%%%%%
+\end{document}

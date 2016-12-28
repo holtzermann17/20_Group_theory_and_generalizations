@@ -1,0 +1,107 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{VarietyOfGroups}
+\pmcreated{2013-03-22 13:12:02}
+\pmmodified{2013-03-22 13:12:02}
+\pmowner{yark}{2760}
+\pmmodifier{yark}{2760}
+\pmtitle{variety of groups}
+\pmrecord{27}{33662}
+\pmprivacy{1}
+\pmauthor{yark}{2760}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{20E10}
+\pmclassification{msc}{20J15}
+\pmsynonym{variety}{VarietyOfGroups}
+\pmrelated{GroupVariety}
+\pmrelated{EquationalClass}
+\pmdefines{Burnside group}
+
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% The following lines should work as the command
+% \renewcommand{\bibname}{References}
+% without creating havoc when rendering an entry in 
+% the page-image mode.
+\makeatletter
+\@ifundefined{bibname}{}{\renewcommand{\bibname}{References}}
+\makeatother
+
+\begin{document}
+\PMlinkescapephrase{closed under}
+\PMlinkescapephrase{free group}
+\PMlinkescapeword{length}
+\PMlinkescapeword{satisfies}
+\PMlinkescapeword{satisfy}
+\PMlinkescapeword{theorem}
+
+\section*{Definition}
+
+A \emph{variety} of groups is the class of groups $G$
+that satisfy a given set of equationally defined relations 
+\[
+  \{\, r_i(x_1,\ldots,x_{n_i})=1 \mid i\in I \,\}
+\]
+for all elements $x_1,x_2,x_3,\ldots$ of $G$,
+where $I$ is some index set.
+
+\section*{Examples}
+
+Abelian groups are a variety defined by the equations
+$$\{[x_1,x_2]=1\},$$
+where $[x,y]=xyx^{-1}y^{-1}$.
+
+Nilpotent groups of class less than $c$ form a variety defined by
+$$\{[[\cdots[[x_1,x_2],x_3]\cdots],x_c]=1\}.$$
+Similarly, solvable groups of length less than $c$ form a variety.
+(Abelian groups are a special case of both of these.)
+Note, however, that the class of all nilpotent groups is not a variety,
+nor is the class of all solvable groups.
+
+For any positive integer $n$,
+the variety defined by $\{x_1^n=1\}$
+consists of all groups of finite exponent dividing $n$.
+For $n=1$ this gives the variety containing only the trivial groups,
+which is the smallest variety.
+
+The largest variety is the variety of all groups,
+given by an empty set of relations.
+
+\section*{Notes}
+
+By a theorem of Birkhoff\cite{birkhoff},
+a class of groups is a variety if and only if
+it is closed under taking subgroups, homomorphic images
+and unrestricted direct products
+(that is,
+every unrestricted direct product of members
+of the class $\cal C$ is in $\cal C$,
+and all subgroups and homomorphic images of members of $\cal C$
+are also in $\cal C$).
+
+A variety of groups is a full subcategory of the category of groups,
+and there is a free group on any set of elements in the variety,
+which is the usual \PMlinkname{free group}{FreeGroup}
+modulo the relations of the variety applied to all elements.
+This satisfies the usual universal property
+of the free group on groups in the variety,
+and is thus \PMlinkname{adjoint}{AdjointFunctor} to the forgetful functor
+in the category of sets.
+In the variety of abelian groups,
+the free groups are the usual free abelian groups.
+In the variety of groups satisfying $x^n=1$,
+the free groups are called \emph{Burnside groups},
+and are commonly denoted by $B(m,n)$, where $m$ is the number of generators.
+
+\begin{thebibliography}{9}
+\bibitem{birkhoff}
+ G.\ Birkhoff,
+ {\it On the structure of abstract algebras},
+ Proc.\ Cambridge Philos.\ Soc., 31 (1935), 433--454.
+\end{thebibliography}
+%%%%%
+%%%%%
+\end{document}

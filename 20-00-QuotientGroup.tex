@@ -1,0 +1,134 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{QuotientGroup}
+\pmcreated{2013-03-22 12:04:06}
+\pmmodified{2013-03-22 12:04:06}
+\pmowner{azdbacks4234}{14155}
+\pmmodifier{azdbacks4234}{14155}
+\pmtitle{quotient group}
+\pmrecord{35}{31127}
+\pmprivacy{1}
+\pmauthor{azdbacks4234}{14155}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{20-00}
+\pmsynonym{factor group}{QuotientGroup}
+\pmsynonym{quotient}{QuotientGroup}
+%\pmkeywords{normal subgroup}
+%\pmkeywords{subgroup}
+%\pmkeywords{coset}
+\pmrelated{Group}
+\pmrelated{NormalSubgroup}
+\pmrelated{Subgroup}
+\pmrelated{EquivalenceRelation}
+\pmrelated{Coset}
+\pmrelated{NaturalProjection}
+\pmdefines{left congruence modulo a subgroup}
+\pmdefines{right congruence modulo a subgroup}
+\pmdefines{index}
+
+%%packages
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amsthm}
+%%theorem environments
+\theoremstyle{plain}
+\newtheorem*{theorem*}{Theorem}
+\newtheorem*{lemma*}{Lemma}
+\newtheorem*{corollary*}{Corollary}
+\newtheorem*{proposition*}{Proposition}
+\theoremstyle{definition}
+\newtheorem*{example*}{Example}
+%math operators and commands
+\newcommand{\set}[1]{\{#1\}}
+\newcommand{\medset}[1]{\left\{#1\right\}}
+\newcommand{\bigset}[1]{\bigg\{#1\bigg\}}
+\newcommand{\abs}[1]{\vert#1\vert}
+\newcommand{\medabs}[1]{\left\vert#1\right\vert}
+\newcommand{\bigabs}[1]{\bigg\vert#1\bigg\vert}
+\newcommand{\norm}[1]{\Vert#1\Vert}
+\newcommand{\mednorm}[1]{\left\Vert#1\right\Vert}
+\newcommand{\bignorm}[1]{\bigg\Vert#1\bigg\Vert}
+\newcommand{\vbrack}[1]{\langle#1\rangle}
+\newcommand{\medvbrack}[1]{\left\langle#1\right\rangle}
+\newcommand{\bigvbrack}[1]{\bigg\langle#1\bigg\rangle}
+\DeclareMathOperator{\Aut}{Aut}
+\DeclareMathOperator{\End}{End}
+\DeclareMathOperator{\Inn}{Inn}
+\DeclareMathOperator{\supp}{supp}
+
+\begin{document}
+Before defining quotient groups, some preliminary definitions must be introduced and a few \PMlinkescapetext{propositions} established.
+
+Given a group $G$ and a subgroup $H$ of $G$, the \PMlinkid{relation}{122} $\sim_L$ on $G$ defined by $a\sim_L b$ if and only 
+if $b^{-1}a\in H$ is called \emph{left congruence modulo $H$}; similarly the relation defined by $a\sim_R b$ if 
+and only if $ab^{-1}\in H$ is called \emph{\PMlinkescapetext{right} congruence modulo $H$} (observe that these two relations coincide if $G$ is abelian). 
+\begin{proposition*}
+Left (resp. right) congruence modulo $H$ is an equivalence relation on $G$.
+\end{proposition*}
+\begin{proof}
+We will only give the proof for left congruence modulo $H$, as the \PMlinkescapetext{argument} for right congruence modulo $H$ is analogous.
+Given $a\in G$, because $H$ is a subgroup, $H$ contains the identity $e$ of $G$, so that $a^{-1}a=e\in H$; thus $a\sim_L a$, so $\sim_L$ is \PMlinkid{reflexive}{1644}. If $b\in G$ satisfies $a\sim_L b$, so that $b^{-1}a\in H$, then by the \PMlinkescapetext{closure} of $H$ under the formation of inverses, $a^{-1}b=(b^{-1}a)^{-1}\in H$, and $b\sim_L a$; thus $\sim_L$ is symmetric. Finally, if $c\in G$, $a\sim_L b$, and $b\sim_L c$, then we have $b^{-1}a,c^{-1}b\in H$, and the closure of $H$ under the binary operation of $G$ gives $c^{-1}a=(c^{-1}b)(b^{-1}a)\in H$, so that $a\sim_L c$, from which it follows that $\sim_L$ is \PMlinkid{transitive}{1669}, hence an equivalence relation.
+\end{proof}
+
+It follows from the preceding \PMlinkescapetext{proposition} that $G$ is partitioned into mutually disjoint, non-empty equivalence
+classes by left (resp. right) congruence modulo $H$, where $a,b\in G$ are in the same equivalence class if and only if $a\sim_L b$ (resp. $a\sim_R b$); focusing on left congruence modulo $H$, if we denote by $\bar{a}$ the equivalence class containing $a$ under $\sim_L$, we see that
+\begin{equation*}
+\begin{split}
+\bar{a}&=\set{b\in G\mid b\sim_L a}\\
+&=\set{b\in G\mid a^{-1}b\in H}\\
+&=\set{b\in G\mid b=ah\text{ for some }h\in H}=\set{ah\mid h\in H}\text{.}
+\end{split}
+\end{equation*}
+
+Thus the equivalence class under $\sim_L$ containing $a$ is simply the left coset $aH$ of $H$ in $G$. Similarly the equivalence class under $\sim_R$ containing $a$ is the right coset $Ha$ of $H$ in $G$ (when the binary operation of $G$ is written additively, our notation for left and right cosets becomes $a+H=\set{a+h\mid h\in H}$ and $H+a=\set{h+a\mid h\in H}$). Observe that the equivalence class under either $\sim_L$ or $\sim_R$ containing $e$ is $eH=H$. The \emph{index} of $H$ in $G$, denoted by $\abs{G:H}$, is
+the cardinality of the set $G/H$ (read ``$G$ modulo $H$" or just ``$G$ mod $H$") of left cosets of $H$ in $G$ (in fact, one may demonstrate the existence of a bijection
+between the set of left cosets of $H$ in $G$ and the set of right cosets of $H$ in $G$, so that we may well take $\abs{G:H}$ to be the cardinality of the set of right cosets of $H$ in $G$).\\  
+
+We now attempt to impose a group on $G/H$ by taking the \PMlinkescapetext{product} of the left cosets containing the elements 
+$a$ and $b$, respectively, to be the left coset containing the element $ab$; however, because this definition requires a choice of left coset representatives, there is no guarantee that it will yield a well-defined binary operation on $G/H$.  For the \PMlinkescapetext{operation} of left coset \PMlinkescapetext{multiplication} to be well-defined, we must be sure that if $a^\prime H=aH$ and $b^\prime H=bH$, i.e., if $a^\prime\in aH$ and $b^\prime\in bH$, then $a^\prime b^\prime H=abH$, i.e., that $a^\prime b^\prime\in abH$. Precisely what must be  required of the subgroup $H$ to ensure the \PMlinkescapetext{satisfaction} of the above condition is the content of the following \PMlinkescapetext{proposition}:
+
+\begin{proposition*}
+The rule $(aH,bH)\mapsto abH$ gives a well-defined binary operation on $G/H$ if and only if $H$ is a normal subgroup 
+of $G$.
+\end{proposition*} 
+\begin{proof}
+Suppose first that \PMlinkescapetext{multiplication} of left cosets is well-defined by the given rule, i.e, that given $a^\prime\in aH$ and 
+$b^\prime\in bH$, we have $a^\prime b^\prime H=abH$, and let $g\in G$ and $h\in H$. Putting $a=1$, $a^\prime=h$, and $b=b^\prime=g^{-1}$, our hypothesis gives $hg^{-1}H=eg^{-1}H=g^{-1}H$; this implies that $hg^{-1}\in g^{-1}H$, hence that $hg^{-1}=g^{-1}h^\prime$ for some $h^\prime\in H$. \PMlinkescapetext{Multiplication} on the left by $g$ gives $ghg^{-1}=h^\prime\in H$, and because $g$ and $h$ were chosen arbitrarily, we may conclude that $gHg^{-1}\subseteq H$ for all $g\in G$, from which it follows that $H\unlhd G$. Conversely, suppose $H$ is normal in $G$ and let $a^\prime\in aH$ and $b^\prime\in bH$. There exist $h_1,h_2\in H$ such that $a^\prime=ah_1$ and $b^\prime=bh_1$; now, we have
+\begin{equation*}
+a^\prime b^\prime=ah_1bh_2=a(bb^{-1})h_1bh_2
+=ab(b^{-1}h_1b)h_2\text{,}
+\end{equation*}
+and because $b^{-1}h_1b\in H$ by assumption, we see that $a^\prime b^\prime=abh$, where $h=(b^{-1}hb)h_2\in H$
+by the closure of $H$ under \PMlinkescapetext{multiplication} in $G$. Thus $a^\prime b^\prime\in abH$, and because left cosets 
+are either disjoint or equal, we may conclude that $a^\prime b^\prime H=abH$, so that multiplication
+of left cosets is indeed a well-defined binary operation on $G/H$. 
+\end{proof}
+
+The set $G/H$, where $H$ is a normal subgroup of $G$, is readily seen to form a group under the well-defined
+binary operation of left coset multiplication (the \PMlinkescapetext{satisfaction} of each group \PMlinkescapetext{axiom} follows from that of $G$), and is called a \emph{quotient} or \emph{factor group} (more specifically
+the \emph{quotient of $G$ by $H$}). We conclude with several examples of specific quotient groups.
+
+\begin{example*}
+A standard example of a quotient group is $\mathbb{Z}/n\mathbb{Z}$, the quotient of the \PMlinkescapetext{additive group} of integers by the cyclic subgroup generated by $n\in\mathbb{Z}^+$; the order of $\mathbb{Z}/n\mathbb{Z}$ is $n$, and the 
+distinct left cosets of the group are $n\mathbb{Z},1+n\mathbb{Z},\ldots,(n-1)+n\mathbb{Z}$. 
+\end{example*}
+
+\begin{example*}
+Although the group $Q_8$ is not abelian, each of its subgroups its normal, so any will suffice for the formation
+of quotient groups; the quotient $Q_8/\vbrack{-1}$, where $\vbrack{-1}=\set{1,-1}$ is the cyclic subgroup of $Q_8$ generated by $-1$, is of order $4$, with elements $\vbrack{-1},i\vbrack{-1}=\set{i,-i},k\vbrack{-1}=\set{k,-k}$ , and $j\vbrack{-1}=\set{j,-j}$. Since each non-identity element of $Q_8/\vbrack{-1}$ is of order $2$, it is isomorphic to the Klein $4$-group $V$. Because each of $\vbrack{i}$, $\vbrack{j}$, and $\vbrack{k}$ has order $4$, the quotient of $Q_8$ by any of these subgroups is necessarily cyclic of order $2$.
+\end{example*}
+
+\begin{example*}
+The center of the dihedral group $D_6$ of order $12$ (with \PMlinkid{presentation}{2182} $\vbrack{r,s\mid r^6=s^2=1,r^{-1}s=sr}$) is $\vbrack{r^3}=\set{1,r^3}$; the elements of the quotient $D_6/\vbrack{r^3}$ are $\vbrack{r^3}$, $r\vbrack{r^3}=\set{r,r^4}$, $r^2\vbrack{r^3}=\set{r^2,r^5}$, $s\vbrack{r^3}=\set{s,sr^3}$, $sr\vbrack{r^3}=\set{sr,sr^4}$, and $sr^2\vbrack{r^3}=\set{sr^2,sr^5}$; because
+\begin{equation*} 
+sr^2\vbrack{r^3}r\vbrack{r^3}=sr^3\vbrack{r^3}=s\vbrack{r^3}\neq sr\vbrack{r^3}=r\vbrack{r^3}sr^2\vbrack{r^3}\text{,}
+\end{equation*}
+$D_6/\vbrack{r^3}$ is non-abelian, hence must be isomorphic to $S_3$.
+\end{example*}
+
+%%%%%
+%%%%%
+%%%%%
+\end{document}

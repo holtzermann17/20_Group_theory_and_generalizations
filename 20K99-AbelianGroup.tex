@@ -1,0 +1,91 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{AbelianGroup}
+\pmcreated{2013-03-22 14:01:55}
+\pmmodified{2013-03-22 14:01:55}
+\pmowner{yark}{2760}
+\pmmodifier{yark}{2760}
+\pmtitle{abelian group}
+\pmrecord{25}{35107}
+\pmprivacy{1}
+\pmauthor{yark}{2760}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{20K99}
+\pmsynonym{commutative group}{AbelianGroup}
+%\pmkeywords{group}
+%\pmkeywords{abelian}
+%\pmkeywords{commutative}
+%\pmkeywords{quotient}
+\pmrelated{Group}
+\pmrelated{Klein4Group}
+\pmrelated{CommutativeSemigroup}
+\pmrelated{GeneralizedCyclicGroup}
+\pmrelated{AbelianGroupsOfOrder120}
+\pmrelated{FundamentalTheoremOfFinitelyGeneratedAbelianGroups}
+\pmrelated{NonabelianGroup}
+\pmrelated{Commutative}
+\pmrelated{MetabelianGroup}
+\pmdefines{abelian}
+\pmdefines{commutative}
+
+\usepackage{amsfonts}
+\usepackage{amsmath}
+\usepackage{amsthm}
+
+\newtheorem{thm}{Theorem}
+
+\def\Z{\mathbb{Z}}
+\begin{document}
+\PMlinkescapeword{additive}
+\PMlinkescapeword{homomorphism}
+\PMlinkescapeword{module}
+\PMlinkescapeword{modules}
+\PMlinkescapeword{properties}
+\PMlinkescapeword{subgroup}
+\PMlinkescapeword{subgroups}
+\PMlinkescapeword{theorem}
+\PMlinkescapeword{unitary}
+\PMlinkescapeword{word}
+
+Let $(G,*)$ be a group. If for any $a,b\in G$ we have
+$a*b=b*a$, we say that the group is \emph{abelian} (or \emph{commutative}).
+Abelian groups are named after Niels Henrik Abel, but the word {\it abelian} is commonly written in lowercase.
+
+Abelian groups are essentially the same thing as unitary $\Z$-\PMlinkname{modules}{Module}.
+In fact, it is often more natural to treat abelian groups as modules rather than as groups, and for this reason they are commonly written using additive notation. 
+
+Some of the basic properties of abelian groups are as follows:
+
+\begin{thm}
+Any \PMlinkname{subgroup}{Subgroup} of an abelian group is normal.
+\end{thm}
+\begin{proof}
+Let $H$ be a subgroup of the abelian group $G$. Since $ah=ha$ for any $a\in G$ and any $h\in H$ we get $aH=Ha$. That is, $H$ is normal in $G$.
+\end{proof}
+
+\begin{thm}
+Quotient groups of abelian groups are also abelian.
+\end{thm}
+\begin{proof}
+Let $H$ be a subgroup of $G$. Since $G$ is abelian, $H$ is normal and we can get the quotient group $G/H$ whose elements are the equivalence classes for 
+$a\sim b$ if $ab^{-1}\in H$.
+The operation on the quotient group is given by $aH\cdot bH=(ab)H$. But $bH\cdot aH=(ba)H =(ab)H$, therefore the quotient group is also commutative.
+\end{proof}
+
+Here is another theorem concerning abelian groups:
+
+\begin{thm} 
+If $\varphi\colon G\to G$ defined by $ \varphi(x) =x^2$ is a \PMlinkname{homomorphism}{GroupHomomorphism}, then $G$ is abelian.
+\end{thm}
+\begin{proof}
+If such a function were a homomorphism,
+we would have
+\[(xy)^2=\varphi(xy) = \varphi(x)\varphi(y)=x^2y^2\] that is, $xyxy=xxyy$.
+Left-multiplying by $x^{-1}$ and right-multiplying by $y^{-1}$ we are led to
+$yx=xy$ and thus the group is abelian.
+\end{proof}
+
+%%%%%
+%%%%%
+\end{document}

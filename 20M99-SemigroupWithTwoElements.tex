@@ -1,0 +1,74 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{SemigroupWithTwoElements}
+\pmcreated{2013-03-22 16:21:42}
+\pmmodified{2013-03-22 16:21:42}
+\pmowner{rspuzio}{6075}
+\pmmodifier{rspuzio}{6075}
+\pmtitle{semigroup with two elements}
+\pmrecord{11}{38498}
+\pmprivacy{1}
+\pmauthor{rspuzio}{6075}
+\pmtype{Example}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{20M99}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\begin{document}
+Perhaps the simplest non-trivial example of a semigroup which is not a group is a particular semigroup with two elements. The underlying set of this 
+semigroup is $\{a,b\}$ and the operation is defined as follows:
+\begin{eqnarray*}
+a \cdot a &=& a \\
+a \cdot b &=& b \\
+b \cdot a &=& b \\
+b \cdot b &=& b
+\end{eqnarray*}
+It is rather easy to check that this operation is associative, as it
+should be: 
+\begin{eqnarray*}
+a \cdot (a \cdot a) = a \cdot a =& a &= a \cdot a = (a \cdot a) \cdot a \\
+a \cdot (a \cdot b) = a \cdot b =& b &= a \cdot b = (a \cdot a) \cdot b \\
+a \cdot (b \cdot b) = a \cdot b =& b &= b \cdot b = (a \cdot b) \cdot b \\
+b \cdot (a \cdot a) = b \cdot a =& b &= a \cdot a = (a \cdot a) \cdot a \\
+a \cdot (b \cdot b) = a \cdot b =& b &= b \cdot b = (a \cdot b) \cdot b \\
+b \cdot (a \cdot b) = b \cdot b =& b &= b \cdot b = (b \cdot a) \cdot b \\
+b \cdot (b \cdot a) = b \cdot b =& b &= b \cdot a = (b \cdot b) \cdot a \\
+b \cdot (b \cdot b) = b \cdot b =& b &= b \cdot b = (b \cdot b) \cdot b
+\end{eqnarray*}
+
+It is worth noting that this semigroup is commutative and has an identity
+element, which is $a$.  It is not a group because the element $b$ does
+not have an inverse.  In fact, it is not even a cancellative semigroup
+because we cannot cancel the $b$ in the equation $a \cdot b = b \cdot b$.
+
+This semigroup also arises in various contexts.  For instance,
+if we choose $a$ to be the truth value "true" and $b$ to be the truth
+value "false" and the operation $\cdot$ to be the logical connective "and",
+we obtain this semigroup in logic.  We may also represent it by matrices
+like so:
+\[a = \left( \begin{matrix} 1 & 0 \\ 0 & 1 \end{matrix} \right) \qquad  
+b = \left( \begin{matrix} 1 & 0 \\ 0 & 0 \end{matrix} \right) \]
+%%%%%
+%%%%%
+\end{document}

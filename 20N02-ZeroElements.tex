@@ -1,0 +1,71 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ZeroElements}
+\pmcreated{2013-03-22 13:02:19}
+\pmmodified{2013-03-22 13:02:19}
+\pmowner{mclase}{549}
+\pmmodifier{mclase}{549}
+\pmtitle{zero elements}
+\pmrecord{6}{33440}
+\pmprivacy{1}
+\pmauthor{mclase}{549}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{20N02}
+\pmclassification{msc}{20M99}
+\pmrelated{Semigroup}
+\pmrelated{NullSemigroup}
+\pmrelated{AbsorbingElement}
+\pmdefines{zero}
+\pmdefines{zero element}
+\pmdefines{right zero}
+\pmdefines{left zero}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\newtheorem{prop}{Proposition}
+\begin{document}
+Let $S$ be a semigroup.  An element $z$ is called a \emph{right zero} [resp. \emph{left zero}] if $xz = z$ [resp. $zx = z$] for all $x \in S$.  
+
+An element which is both a left and a right zero is called a \emph{zero element}.
+
+A semigroup may have many left zeros or right zeros, but if it has at least one of each, then they are necessarily equal, giving a unique (two-sided) zero element.
+
+More generally, these definitions and statements are valid for a groupoid.
+
+It is customary to use the symbol $\theta$ for the zero element of a semigroup.
+
+\begin{prop} If a groupoid has a left zero $0_L$ and a right zero $0_R$, then $0_L = 0_R$. \end{prop}
+\begin{proof} $0_L=0_L 0_R = 0_R$. \end{proof}
+
+\begin{prop} If $0$ is a left zero in a semigroup $S$, then so is $x0$ for every $x\in S$.  \end{prop}
+\begin{proof}
+For any $y\in S$, $(x0)y=x(0y)=x0$.  As a result, $x0$ is a left zero of $S$.
+\end{proof}
+
+\begin{prop} If $0$ is the unique left zero in a semigroup $S$, then it is also the zero element.  \end{prop}
+\begin{proof}
+By assumption and the previous proposition, $x0$ is a left zero for every $x\in S$.  But $0$ is the unique left zero in $S$, we must have $x0=0$, which means that $0$ is a right zero element, and hence a zero element by the first proposition.
+\end{proof}
+%%%%%
+%%%%%
+\end{document}

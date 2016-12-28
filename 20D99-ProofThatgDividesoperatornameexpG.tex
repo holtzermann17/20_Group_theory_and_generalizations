@@ -1,0 +1,32 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ProofThatgDividesoperatornameexpG}
+\pmcreated{2013-03-22 13:30:35}
+\pmmodified{2013-03-22 13:30:35}
+\pmowner{Wkbj79}{1863}
+\pmmodifier{Wkbj79}{1863}
+\pmtitle{proof that $|g|$ divides $\operatorname{exp}~G$}
+\pmrecord{8}{34092}
+\pmprivacy{1}
+\pmauthor{Wkbj79}{1863}
+\pmtype{Proof}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{20D99}
+
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+\usepackage{psfrag}
+\usepackage{graphicx}
+\usepackage{amsthm}
+%%\usepackage{xypic}
+\begin{document}
+The following is a proof that, for every group $G$ that has an exponent and for every $g \in G$, $|g|$ divides $\operatorname{exp}~G$.
+
+\begin{proof}
+By the division algorithm, there exist $q,r \in {\mathbb Z}$ with $0 \le r<|g|$ such that $\operatorname{exp}~G=q|g|+r$.  Since $e_G=g^{\operatorname{exp}~G}=g^{q|g|+r}=(g^{|g|})^qg^r=(e_G)^qg^r=e_Gg^r=g^r$, by definition of the order of an element, $r$ cannot be positive.  Thus, $r=0$.  It follows that $|g|$ divides $\operatorname{exp}~G$.
+\end{proof}
+%%%%%
+%%%%%
+\end{document}

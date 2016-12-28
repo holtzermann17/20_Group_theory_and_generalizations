@@ -1,0 +1,55 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{Character}
+\pmcreated{2013-03-22 12:17:54}
+\pmmodified{2013-03-22 12:17:54}
+\pmowner{djao}{24}
+\pmmodifier{djao}{24}
+\pmtitle{character}
+\pmrecord{7}{31843}
+\pmprivacy{1}
+\pmauthor{djao}{24}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{20C99}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic} 
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\begin{document}
+Let $\rho: G \longrightarrow \operatorname{GL}(V)$ be a finite dimensional representation of a group $G$ (i.e., $V$ is a finite dimensional vector space over its scalar field $K$). The {\em character} of $\rho$ is the function $\chi_V: G \longrightarrow K$ defined by
+$$
+\chi_V(g) := \operatorname{Tr}(\rho(g))
+$$
+where $\operatorname{Tr}$ is the trace function.
+
+Properties:
+\begin{itemize}
+\item $\chi_V(g) = \chi_V(h)$ if $g$ is conjugate to $h$ in $G$. (Equivalently, a character is a class function on $G$.)
+\item If $G$ is finite, the characters of the irreducible representations of $G$ over the complex numbers form a basis of the vector space of all class functions on $G$ (with pointwise addition and scalar multiplication).
+\item Over the complex numbers, the characters of the irreducible representations of $G$ are orthonormal under the inner product
+$$
+(\chi_1, \chi_2) := \frac{1}{|G|} \sum_{g \in G} \overline{\chi_1(g)} \chi_2(g)
+$$
+\end{itemize}
+%%%%%
+%%%%%
+\end{document}

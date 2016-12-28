@@ -1,0 +1,74 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{UniquenessOfAdditiveInverseInARing}
+\pmcreated{2013-03-22 14:13:54}
+\pmmodified{2013-03-22 14:13:54}
+\pmowner{alozano}{2414}
+\pmmodifier{alozano}{2414}
+\pmtitle{uniqueness of additive inverse in a ring}
+\pmrecord{7}{35672}
+\pmprivacy{1}
+\pmauthor{alozano}{2414}
+\pmtype{Theorem}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{20-00}
+\pmclassification{msc}{16-00}
+\pmclassification{msc}{13-00}
+\pmrelated{UniquenessOfInverseForGroups}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsthm}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\newtheorem{thm}{Theorem}
+\newtheorem{defn}{Definition}
+\newtheorem{prop}{Proposition}
+\newtheorem*{lemma}{Lemma}
+\newtheorem{cor}{Corollary}
+
+% Some sets
+\newcommand{\Nats}{\mathbb{N}}
+\newcommand{\Ints}{\mathbb{Z}}
+\newcommand{\Reals}{\mathbb{R}}
+\newcommand{\Complex}{\mathbb{C}}
+\newcommand{\Rats}{\mathbb{Q}}
+\begin{document}
+\begin{lemma}
+Let $R$ be a ring, and let $a$ be any element of $R$. There exists a unique element $b$ of $R$ such that $a+b=0$, i.e. there is a unique \PMlinkname{additive inverse}{Ring} for $a$.
+\end{lemma}
+\begin{proof}
+Let $a$ be an element of $R$. By definition of ring, there exists at least one \PMlinkname{additive inverse}{Ring} of $a$, call it $b_1$, so that $a+b_1=0$. Now, suppose $b_2$ is another additive inverse of $a$, i.e. another element of $R$ such that 
+$$a+b_2=0$$
+where $0$ is the \PMlinkname{zero element}{Ring} of $R$. Let us show that $b_1=b_2$. Using properties for a ring and the above equations for $b_1$ and $b_2$
+yields
+\begin{eqnarray*}
+b_1 &=& b_1+0 \quad \text{(definition of zero)}\\
+ &=& b_1+(a+b_2) \quad (b_2 \text{ is an additive inverse of }a)\\
+ &=& (b_1+a)+b_2 \quad (\text{associativity in }R)\\
+ &=& 0+b_2 \quad (b_1\text{ is an additive inverse of }a)\\
+ &=& b_2 \quad \text{(definition of zero)}.
+\end{eqnarray*}
+Therefore, there is a unique additive inverse for $a$.
+\end{proof}
+%%%%%
+%%%%%
+\end{document}

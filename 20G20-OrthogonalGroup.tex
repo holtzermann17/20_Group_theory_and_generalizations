@@ -1,0 +1,47 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{OrthogonalGroup}
+\pmcreated{2013-03-22 12:25:54}
+\pmmodified{2013-03-22 12:25:54}
+\pmowner{djao}{24}
+\pmmodifier{djao}{24}
+\pmtitle{orthogonal group}
+\pmrecord{6}{32482}
+\pmprivacy{1}
+\pmauthor{djao}{24}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{20G20}
+\pmdefines{orthogonal transformation}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic} 
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\begin{document}
+Let $Q$ be a non-degenerate symmetric bilinear form over the real vector space $\mathbb{R}^n$. A linear transformation $T\colon V \to V$ is said to \emph{preserve} $Q$ if $Q(Tx,Ty) = Q(x,y)$ for all vectors $x,y \in V$. The subgroup of the general linear group $\operatorname{GL}(V)$ consisting of all linear transformations that preserve $Q$ is called the \emph{orthogonal group} with respect to $Q$, and denoted  $\operatorname{O}(n,Q)$.
+
+If $Q$ is also positive definite (i.e., $Q$ is an inner product), then $\operatorname{O}(n,Q)$ is equivalent to the group of invertible linear transformations that preserve the standard inner product on $\mathbb{R}^n$, and in this case the group $\operatorname{O}(n,Q)$ is usually denoted $\operatorname{O}(n)$.
+
+Elements of $\operatorname{O}(n)$ are called \emph{orthogonal transformations}. 
+One can show that a linear transformation $T$ is an orthogonal transformation if and only if $T^{-1} = T^{\operatorname{T}}$ (i.e., the inverse of $T$ equals the transpose of $T$).
+%%%%%
+%%%%%
+\end{document}

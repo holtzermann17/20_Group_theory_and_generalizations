@@ -1,0 +1,68 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{InnerAutomorphism}
+\pmcreated{2013-03-22 12:49:53}
+\pmmodified{2013-03-22 12:49:53}
+\pmowner{rmilson}{146}
+\pmmodifier{rmilson}{146}
+\pmtitle{inner automorphism}
+\pmrecord{12}{33155}
+\pmprivacy{1}
+\pmauthor{rmilson}{146}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{20A05}
+\pmsynonym{inner}{InnerAutomorphism}
+\pmdefines{conjugation}
+\pmdefines{outer}
+\pmdefines{outer automorphism}
+\pmdefines{automorphism group}
+
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\newcommand{\reals}{\mathbb{R}}
+\newcommand{\natnums}{\mathbb{N}}
+\newcommand{\cnums}{\mathbb{C}}
+\newcommand{\znums}{\mathbb{Z}}
+\newcommand{\lp}{\left(}
+\newcommand{\rp}{\right)}
+\newcommand{\lb}{\left[}
+\newcommand{\rb}{\right]}
+\newcommand{\supth}{^{\text{th}}}
+\newtheorem{proposition}{Proposition}
+\newtheorem{definition}[proposition]{Definition}
+
+\newtheorem{theorem}[proposition]{Theorem}
+\begin{document}
+Let $G$ be a group.  For every $x\in G$, we define a
+mapping
+$$\phi_x:G\rightarrow G,\quad y\mapsto x y x^{-1},\quad y\in G,$$
+called conjugation by $x$.
+It is easy to show the conjugation map is in fact, a group automorphism.
+
+An automorphism of $G$ that corresponds to conjugation by some
+$x\in G$ is called \emph{inner}. An automorphism that isn't inner is called
+an \emph{outer} automorphism.  
+
+The composition operation gives the set of all automorphisms of $G$
+the structure of a group, $\operatorname{Aut}(G)$.  The inner
+automorphisms also form a group, $\operatorname{Inn}(G)$, which is a
+normal subgroup of $\operatorname{Aut}(G)$.  Indeed, if $\phi_x,\;
+x\in G$ is an inner automorphism and $\pi:G\rightarrow G$ an arbitrary
+automorphism, then
+$$\pi\circ \phi_x \circ\pi^{-1} = \phi_{\pi(x)}.$$
+Let us also note that the mapping 
+$$x\mapsto \phi_x,\quad x\in G$$
+is a surjective group homomorphism with kernel
+$\operatorname{Z}(G)$, the centre subgroup. Consequently,
+$\operatorname{Inn}(G)$ is naturally isomorphic to the quotient of
+$G/\operatorname{Z}(G)$.
+
+Note:  the above definitions and assertions hold, mutatis mutandi, if we define 
+the conjugation action of $x\in G$ on $B$ to be the right action
+\[ y\mapsto x^{-1} y x,\quad y\in G,\]
+rather than the left action given above.
+%%%%%
+%%%%%
+\end{document}

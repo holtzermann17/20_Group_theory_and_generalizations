@@ -1,0 +1,66 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{NonisomorphicGroupsOfGivenOrder}
+\pmcreated{2013-03-22 18:56:38}
+\pmmodified{2013-03-22 18:56:38}
+\pmowner{pahio}{2872}
+\pmmodifier{pahio}{2872}
+\pmtitle{non-isomorphic groups of given order}
+\pmrecord{5}{41800}
+\pmprivacy{1}
+\pmauthor{pahio}{2872}
+\pmtype{Theorem}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{20A05}
+\pmrelated{BinomialCoefficient}
+\pmrelated{PropertiesOfConjugacy}
+\pmdefines{Landau's theorem}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+ \usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\theoremstyle{definition}
+\newtheorem*{thmplain}{Theorem}
+
+\begin{document}
+\textbf{Theorem.}\, For every positive integer $n$, there exists only a finite amount of non-isomorphic groups of order $n$.\\
+
+This assertion follows from Cayley's theorem, according to which any group of order $n$ is isomorphic with a subgroup of the symmetric group $\mathfrak{S}_n$.\, The number of non-isomorphic subgroups of $\mathfrak{S}_n$ cannot be greater than
+$${n!\!-\!1 \choose n\!-\!1}.$$\\
+
+The above theorem may be used in proving the following Landau's theorem:
+
+\textbf{Theorem (Landau).}\, For every positive integer $n$, there exists only a finite amount of finite non-isomorphic groups which contain exactly $n$ conjugacy classes of elements.\\
+
+One needs also the
+
+\textbf{Lemma.}\, If\, $n \in \mathbb{Z}_+$\, and\, $0 < r \in \mathbb{R}$,\, then there is at most a finite amount of the vectors \,$(m_1,\,m_2,\,\ldots,\,m_n)$\, consisting of positive integers such that
+$$\sum_{j=1}^n\frac{1}{m_j} \;=\; r.$$
+The lemma is easily proved by induction on $n$.
+
+
+
+
+
+%%%%%
+%%%%%
+\end{document}

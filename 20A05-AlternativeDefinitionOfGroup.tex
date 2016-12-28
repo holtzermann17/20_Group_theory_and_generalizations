@@ -1,0 +1,65 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{AlternativeDefinitionOfGroup}
+\pmcreated{2013-03-22 15:07:58}
+\pmmodified{2013-03-22 15:07:58}
+\pmowner{pahio}{2872}
+\pmmodifier{pahio}{2872}
+\pmtitle{alternative definition of group}
+\pmrecord{13}{36876}
+\pmprivacy{1}
+\pmauthor{pahio}{2872}
+\pmtype{Theorem}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{20A05}
+\pmclassification{msc}{20-00}
+\pmclassification{msc}{08A99}
+%\pmkeywords{definition}
+\pmrelated{Characterization}
+\pmrelated{ACharacterizationOfGroups}
+\pmrelated{DivisionInGroup}
+\pmrelated{MoreOnDivisionInGroups}
+\pmrelated{LoopAndQuasigroup}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+ \usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\theoremstyle{definition}
+\newtheorem*{thmplain}{Theorem}
+\begin{document}
+The below theorem gives three conditions that form alternative \PMlinkescapetext{group} postulates. \,It is not hard to show that they hold in the group defined ordinarily.
+
+\begin{thmplain}
+ \,Let the non-empty set $G$ satisfy the following three conditions:\\
+I. \,\,\,\,For every two elements $a$, $b$ of $G$ there is a unique element $ab$ of $G$.\\
+II. \,\,For every three elements $a$, $b$, $c$ of $G$ the equation\, $(ab)c = a(bc)$\, holds.\\
+III. For every two elements $a$ and $b$ of $G$ there exists at least one such element $x$ and at least one such element $y$ of $G$ that\, $xa = ay = b$.\\
+Then the set $G$ forms a group.
+\end{thmplain}
+
+{\em Proof.} \,If $a$ and $b$ are arbitrary elements, then there are at least one such $e_a$ and such $e_b$ that\, $e_aa = a$\, and\, $be_b = b$.\, There are also such $x$ and $y$ that\, $xb = e_a$\, and\, $ay = e_b$.\, Thus we have
+   $$e_a = xb = x(be_b) = (xb)e_b = e_ae_b = e_a(ay) = (e_aa)y = ay = e_b,$$
+i.e. there is a unique neutral element $e$ in $G$.\, Moreover, for any element $a$ there is at least one couple $a'$, $a''$ such that\,  $a'a = aa'' = e$.\, We then see that
+  $$a' = a'e = a'(aa'') = (a'a)a'' = ea'' = a'',$$
+i.e. $a$ has a unique neutralizing element $a'$.
+%%%%%
+%%%%%
+\end{document}

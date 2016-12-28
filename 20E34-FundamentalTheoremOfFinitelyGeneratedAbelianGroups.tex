@@ -1,0 +1,71 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{FundamentalTheoremOfFinitelyGeneratedAbelianGroups}
+\pmcreated{2013-03-22 13:54:12}
+\pmmodified{2013-03-22 13:54:12}
+\pmowner{alozano}{2414}
+\pmmodifier{alozano}{2414}
+\pmtitle{fundamental theorem of finitely generated abelian groups}
+\pmrecord{6}{34652}
+\pmprivacy{1}
+\pmauthor{alozano}{2414}
+\pmtype{Theorem}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{20E34}
+\pmsynonym{classification of finitely generated abelian groups}{FundamentalTheoremOfFinitelyGeneratedAbelianGroups}
+%\pmkeywords{finitely generated}
+%\pmkeywords{abelian group}
+\pmrelated{AbelianGroupsOfOrder120}
+\pmrelated{FinitelyGenerated}
+\pmrelated{AbelianGroup2}
+\pmdefines{fundamental theorem of finitely generated abelian groups}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsthm}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\newtheorem{thm}{Theorem}
+\newtheorem{defn}{Definition}
+\newtheorem{prop}{Proposition}
+\newtheorem{lemma}{Lemma}
+\newtheorem{cor}{Corollary}
+
+% Some sets
+\newcommand{\Nats}{\mathbb{N}}
+\newcommand{\Ints}{\mathbb{Z}}
+\newcommand{\Reals}{\mathbb{R}}
+\newcommand{\Complex}{\mathbb{C}}
+\newcommand{\Rats}{\mathbb{Q}}
+\begin{document}
+\begin{thm}[Fundamental Theorem of Finitely Generated Abelian
+Groups]
+
+Let $G$ be a finitely generated abelian group. Then there is a
+unique expression of the form: $$G\cong
+\Ints^{r}\oplus\Ints/n_1\Ints\oplus\Ints/n_2\Ints\oplus\ldots\oplus\Ints/n_s\Ints$$
+for some integers $r,n_i$ satisfying:
+$$r\geq 0;\quad \forall i, n_i\geq 2;\quad n_{i+1}\mid n_i\ \text{for }
+1\leq i\leq s-1.$$
+\end{thm}
+%%%%%
+%%%%%
+\end{document}

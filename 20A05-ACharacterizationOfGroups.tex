@@ -1,0 +1,75 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ACharacterizationOfGroups}
+\pmcreated{2013-03-22 14:45:08}
+\pmmodified{2013-03-22 14:45:08}
+\pmowner{yark}{2760}
+\pmmodifier{yark}{2760}
+\pmtitle{a characterization of groups}
+\pmrecord{10}{36391}
+\pmprivacy{1}
+\pmauthor{yark}{2760}
+\pmtype{Theorem}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{20A05}
+%\pmkeywords{group}
+\pmrelated{Group}
+\pmrelated{RegularSemigroup}
+\pmrelated{AlternativeDefinitionOfGroup}
+
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amsthm}
+
+\newtheorem*{thm*}{Theorem}
+\begin{document}
+\PMlinkescapeword{argument}
+\PMlinkescapeword{idempotent}
+\PMlinkescapephrase{idempotent element}
+\PMlinkescapeword{identity}
+\PMlinkescapeword{solution}
+\PMlinkescapeword{symmetric}
+
+\begin{thm*}
+A non-empty semigroup $S$ is a group
+if and only if
+for every $x\in S$ there is a unique $y\in S$ such that $xyx=x$.
+\end{thm*}
+
+\begin{proof}
+Suppose that $S$ is a non-empty semigroup,
+and for every $x\in S$ there is a unique $y\in S$ such that $xyx=x$.
+For each $x\in S$,
+let $x'$ denote the unique element of $S$ such that $xx'x=x$.
+Note that $x(x'xx')x=(xx'x)x'x=xx'x=x$,
+so, by uniqueness, $x'xx'=x'$,
+and therefore $x''=x$.
+
+For any $x\in S$, the element $xx'$ is \PMlinkname{idempotent}{Idempotency},
+because $(xx')^2=(xx'x)x'=xx'$.
+As $S$ is nonempty, this means that $S$ has at least one idempotent element.
+If $i\in S$ is idempotent,
+then $ix=ix(ix)'ix=ix(ix)'iix$, and so $(ix)'i=(ix)'$,
+and therefore $(ix)'=(ix)'(ix)''(ix)'=(ix)'ix(ix)'=(ix)'x(ix)'$,
+which means that $ix=(ix)''=x$.
+So every idempotent is a left identity,
+and, by a symmetric argument, a right identity.
+Therefore, $S$ has at most one idempotent element.
+Combined with the previous result,
+this means that $S$ has exactly one idempotent element,
+which we will denote by $e$.
+We have shown that $e$ is an identity,
+and that $xx'=e$ for each $x\in S$, so $S$ is a group.
+
+Conversely, if $S$ is a group
+then $xyx=x$ clearly has a unique solution, namely $y=x^{-1}$.
+\end{proof}
+
+{\bf Note.} Note that inverse semigroups do not in general
+satisfy the hypothesis of this theorem:
+in an inverse semigroup there is for each $x$ a unique $y$ such that $xyx=x$ and $yxy=y$,
+but this $y$ need not be unique as a solution of $xyx=x$ alone.
+%%%%%
+%%%%%
+\end{document}

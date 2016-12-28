@@ -1,0 +1,174 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{FreeProductWithAmalgamatedSubgroup}
+\pmcreated{2013-03-22 13:24:09}
+\pmmodified{2013-03-22 13:24:09}
+\pmowner{mathcam}{2727}
+\pmmodifier{mathcam}{2727}
+\pmtitle{free product with amalgamated subgroup}
+\pmrecord{7}{33944}
+\pmprivacy{1}
+\pmauthor{mathcam}{2727}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{20E06}
+\pmsynonym{amalgam}{FreeProductWithAmalgamatedSubgroup}
+\pmsynonym{sum with amalgamated subgroup}{FreeProductWithAmalgamatedSubgroup}
+\pmsynonym{amalgamated free product}{FreeProductWithAmalgamatedSubgroup}
+\pmrelated{AmalgamationProperty}
+\pmrelated{CategoricalPullback}
+\pmrelated{FreeProduct}
+\pmdefines{pushout of groups}
+
+%\documentclass{amsart}
+\usepackage{amsmath}
+\usepackage[all,poly,knot,dvips]{xy}
+%\usepackage{pstricks,pst-poly,pst-node,pstcol}
+
+
+\usepackage{amssymb,latexsym}
+
+\usepackage{amsthm,latexsym}
+\usepackage{eucal,latexsym}
+
+% THEOREM Environments --------------------------------------------------
+
+\newtheorem{thm}{Theorem}
+ \newtheorem*{mainthm}{Main~Theorem}
+ \newtheorem{cor}[thm]{Corollary}
+ \newtheorem{lem}[thm]{Lemma}
+ \newtheorem{prop}[thm]{Proposition}
+ \newtheorem{claim}[thm]{Claim}
+ \theoremstyle{definition}
+ \newtheorem{defn}[thm]{Definition}
+ \theoremstyle{remark}
+ \newtheorem{rem}[thm]{Remark}
+ \numberwithin{equation}{subsection}
+
+
+%---------------------  Greek letters, etc ------------------------- 
+
+\newcommand{\CA}{\mathcal{A}}
+\newcommand{\CC}{\mathcal{C}}
+\newcommand{\CM}{\mathcal{M}}
+\newcommand{\CP}{\mathcal{P}}
+\newcommand{\CS}{\mathcal{S}}
+\newcommand{\BC}{\mathbb{C}}
+\newcommand{\BN}{\mathbb{N}}
+\newcommand{\BR}{\mathbb{R}}
+\newcommand{\BZ}{\mathbb{Z}}
+\newcommand{\FF}{\mathfrak{F}}
+\newcommand{\FL}{\mathfrak{L}}
+\newcommand{\FM}{\mathfrak{M}}
+\newcommand{\Ga}{\alpha}
+\newcommand{\Gb}{\beta}
+\newcommand{\Gg}{\gamma}
+\newcommand{\GG}{\Gamma}
+\newcommand{\Gd}{\delta}
+\newcommand{\GD}{\Delta}
+\newcommand{\Ge}{\varepsilon}
+\newcommand{\Gz}{\zeta}
+\newcommand{\Gh}{\eta}
+\newcommand{\Gq}{\theta}
+\newcommand{\GQ}{\Theta}
+\newcommand{\Gi}{\iota}
+\newcommand{\Gk}{\kappa}
+\newcommand{\Gl}{\lambda}
+\newcommand{\GL}{\Lamda}
+\newcommand{\Gm}{\mu}
+\newcommand{\Gn}{\nu}
+\newcommand{\Gx}{\xi}
+\newcommand{\GX}{\Xi}
+\newcommand{\Gp}{\pi}
+\newcommand{\GP}{\Pi}
+\newcommand{\Gr}{\rho}
+\newcommand{\Gs}{\sigma}
+\newcommand{\GS}{\Sigma}
+\newcommand{\Gt}{\tau}
+\newcommand{\Gu}{\upsilon}
+\newcommand{\GU}{\Upsilon}
+\newcommand{\Gf}{\varphi}
+\newcommand{\GF}{\Phi}
+\newcommand{\Gc}{\chi}
+\newcommand{\Gy}{\psi}
+\newcommand{\GY}{\Psi}
+\newcommand{\Gw}{\omega}
+\newcommand{\GW}{\Omega}
+\newcommand{\Gee}{\epsilon}
+\newcommand{\Gpp}{\varpi}
+\newcommand{\Grr}{\varrho}
+\newcommand{\Gff}{\phi}
+\newcommand{\Gss}{\varsigma}
+
+\def\co{\colon\thinspace}
+\begin{document}
+\PMlinkescapeword{example}
+\PMlinkescapeword{examples}
+\PMlinkescapeword{free product}
+\PMlinkescapeword{free products}
+
+\begin{defn}
+Let $G_k$, $k=0,1,2$ be groups and $i_k\co G_0\to G_i$, $k=1,2$  be monomorphisms.
+The free product of $G_1$ and $G_2$ with amalgamated subgroup $G_0$,
+ is defined to be a group $G$ that has the following 
+ two properties
+ \begin{enumerate}
+ \item there are homomorphisms $j_k\co G_k\to G$,  $k=1,2$ that make the following
+ diagram commute
+$$\xymatrix{
+&{G_1}\ar[dr]^{j_1}&\\
+{G_0}\ar[ur]^{i_1}\ar[dr]_{i_2} & & {G}\\
+&{G_2}\ar[ur]_{j_2}& 
+}
+$$
+\item $G$  is universal with respect to the previous  property, that is for
+  any other group $G'$ and  homomorphisms $j_k'\co G_k\to G'$,  $k=1,2$ that
+  fit in such a commutative diagram there is a unique homomorphism $G\to G'$
+so that the following diagram commutes
+   $$\xymatrix{
+&{G_1}\ar[dr]^{j_1}\ar@/^1pc/[drr]^{j_1'}& &\\
+{G_0}\ar[ur]^{i_1}\ar[dr]_{i_2} & & {G}\ar[r]^{!}&{G'}\\
+&{G_2}\ar[ur]_{j_2}\ar@/_1pc/[urr]_{j_2'}& &
+}
+$$
+ \end{enumerate}
+\end{defn}
+
+It follows by ``general nonsense'' that the  free product 
+of $G_1$ and $G_2$ with amalgamated subgroup $G_0$, if it exists,
+is ``unique up to unique isomorphism.''  The  free product 
+of $G_1$ and $G_2$ with amalgamated subgroup $G_0$, is denoted 
+by $G_1\bigstar_{G_0} G_2$. The following theorem asserts its existence.
+
+\begin{thm}
+$G_1\bigstar_{G_0} G_2$ exists for any groups $G_k$, $k=0,1,2$  and
+  monomorphisms $i_k\co G_0\to G_i$,
+ $k=1,2$.
+ \end{thm}
+
+ \begin{proof}[\textbf{Sketch of proof}]
+   Without loss of generality assume that $G_0$ is a subgroup of $G_k$ and
+that $i_k$ is the inclusion for $k=1,2$. Let 
+$$G_k=\langle (x_{k;s})_{s\in S}\, |\, (r_{k;t})_{t\in T} \rangle$$
+be a presentation of $G_k$ for $k=1,2$.  Each $g\in G_0$ can be expressed as
+a word in the generators of $G_k$; denote that word by $w_k(g)$ and let
+$N$ be the normal closure of $\{w_1(g)w_2(g)^{-1}\,|\,g\in G_0\}$ in the \PMlinkname{free product}{FreeProduct} $G_1\bigstar G_2$. Define 
+   $$G_1\bigstar_{G_0} G_2:=G_1\bigstar G_2/N\,$$
+and for $k=0,1$ define $j_k$ to be the inclusion into the free product
+followed by the canonical projection. Clearly (1) is satisfied, while (2)
+follows from the universal properties of the free product and the quotient group. 
+ \end{proof}
+
+Notice that in the above proof it would be sufficient to divide by the relations 
+$w_1(g)w_2(g)^{-1}$ for $g$ in a generating set of $G_0$. This
+is useful in practice when one is interested in obtaining a presentation of 
+$G_1\bigstar_{G_0} G_2$.
+
+In case that the  $i_k$'s are not injective the above still goes through
+verbatim. The group thusly obtained is called a ``pushout''.
+
+Examples of free products with amalgamated subgroups are provided by Van
+Kampen's theorem.
+%%%%%
+%%%%%
+\end{document}

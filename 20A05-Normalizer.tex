@@ -1,0 +1,52 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{Normalizer}
+\pmcreated{2013-03-22 12:36:53}
+\pmmodified{2013-03-22 12:36:53}
+\pmowner{yark}{2760}
+\pmmodifier{yark}{2760}
+\pmtitle{normalizer}
+\pmrecord{15}{32873}
+\pmprivacy{1}
+\pmauthor{yark}{2760}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{20A05}
+\pmsynonym{normaliser}{Normalizer}
+\pmrelated{Centralizer}
+\pmrelated{NormalSubgroup}
+\pmrelated{NormalClosure2}
+\pmdefines{self-normalizing}
+
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+\begin{document}
+\section*{Definitions}
+
+Let $G$ be a group, and let $H \subseteq G$.
+The {\em normalizer} of $H$ in $G$, written $N_G(H)$, is the set
+\[
+  \{ g \in G \mid gHg^{-1}=H \}.
+\]
+
+A subgroup $H$ of $G$ is said to be {\em self-normalizing} if $N_G(H) = H$.
+
+\section*{Properties}
+
+$N_G(H)$ is always a subgroup of $G$,
+as it is the stabilizer of $H$ under the action $(g,H)\mapsto gHg^{-1}$
+of $G$ on the set of all subsets of $G$
+(or on the set of all subgroups of $G$, if $H$ is a subgroup).
+
+If $H$ is a subgroup of $G$, then $H\leq N_G(H)$.
+
+If $H$ is a subgroup of $G$, then $H$ is a normal subgroup of $N_G(H)$;
+in fact, $N_G(H)$ is the largest subgroup of $G$
+of which $H$ is a normal subgroup.
+In particular, if $H$ is a subgroup of $G$,
+then $H$ is normal in $G$ if and only if $N_G(H)=G$.
+%%%%%
+%%%%%
+\end{document}

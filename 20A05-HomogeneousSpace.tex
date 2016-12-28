@@ -1,0 +1,160 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{HomogeneousSpace}
+\pmcreated{2013-03-22 13:28:07}
+\pmmodified{2013-03-22 13:28:07}
+\pmowner{rmilson}{146}
+\pmmodifier{rmilson}{146}
+\pmtitle{homogeneous space}
+\pmrecord{6}{34038}
+\pmprivacy{1}
+\pmauthor{rmilson}{146}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{20A05}
+\pmdefines{action on cosets}
+\pmdefines{isotropy subgroup}
+
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\newcommand{\reals}{\mathbb{R}}
+\newcommand{\natnums}{\mathbb{N}}
+\newcommand{\cnums}{\mathbb{C}}
+\newcommand{\znums}{\mathbb{Z}}
+\newcommand{\lp}{\left(}
+\newcommand{\rp}{\right)}
+\newcommand{\lb}{\left[}
+\newcommand{\rb}{\right]}
+\newcommand{\supth}{^{\text{th}}}
+\newtheorem{proposition}{Proposition}
+\newtheorem{definition}[proposition]{Definition}
+
+\newtheorem{theorem}[proposition]{Theorem}
+
+\newcommand{\Perm}{\operatorname{Perm}}
+\newcommand{\hg}{\hat{g}}
+\begin{document}
+\paragraph{Overview and definition.}
+Let $G$ be a group acting transitively on a set $X$.  In other words,
+we consider a homomorphism $\phi:G\to\Perm(X),$ where the latter
+denotes the group of all bijections of $X$. If we consider $G$ as
+being, in some sense, the automorphisms of $X$, the transitivity
+assumption means that it is impossible to distinguish a particular
+element of $X$ from any another element.  Since the elements of $X$
+are indistinguishable, we call $X$ a \emph{homogeneous space}.
+Indeed, the concept of a homogeneous space, is logically equivalent to
+the concept of a transitive group action.
+
+\paragraph{Action on cosets.}
+Let $G$ be a group, $H<G$ a subgroup, and let $G/H$ denote the set of
+left cosets, as above.  For every $g\in G$ we consider the mapping
+$\psi_H(g):G/H \to G/H$ with action 
+$$a H \to ga H,\quad a\in G.$$
+\begin{proposition}
+The mapping $\psi_H(g)$ is a bijection.  The
+corresponding mapping $\psi_H:G\to\Perm(G/H)$ is a group homomorphism,
+specifying a transitive group action of $G$ on $G/H$.
+\end{proposition}
+Thus, $G/H$ has the natural structure of a homogeneous space.  Indeed,
+we shall see that every homogeneous space $X$ is isomorphic to $G/H$,
+for some subgroup $H$.
+
+N.B. In geometric applications, the want the homogeneous space $X$ to
+have some extra structure, like a topology or a differential
+structure.  Correspondingly, the group of automorphisms is either a
+continuous group or a Lie group.  In order for the quotient space $X$
+to have a Hausdorff topology, we need to assume that the subgroup $H$
+is closed in $G$.
+
+\paragraph{The isotropy subgroup and the basepoint identification.}
+Let $X$ be a homogeneous space. For $x\in X$, the subgroup
+$$H_x = \{ h\in G: hx = x \},$$
+consisting of all $G$-actions that fix
+$x$, is called the isotropy subgroup at the basepoint $x$.  We
+identify the space of cosets $G/H_x$ with the homogeneous space by
+means of the mapping $\tau_{x}: G/H_x \to X$, defined by
+$$\tau_{x}(aH_x) = ax,\quad a\in G.$$
+\begin{proposition}
+  The above mapping is a well-defined bijection.
+\end{proposition}
+To show that $\tau_x$ is well defined, let $a,b\in G$ be members of
+the same left coset, i.e.  there exists an $h\in H_x$ such that
+$b=ah$.  Consequently
+$$bx = a(hx) = ax,$$
+as desired.  The mapping $\tau_{x}$ is onto because the action of
+$G$ on $X$ is 
+assumed to be transitive.  To show that $\tau_x$ is one-to-one, consider
+two cosets $aH_x, bH_x,\; a,b\in G$ such that 
+$ax=bx$.  It follows that $b^{-1}a$ fixes $x$, and hence is an
+element of $H_x$. Therefore $aH_x$ and $bH_x$ are the same coset.
+
+
+\paragraph{The homogeneous space as a quotient.}  Next, let us show
+that $\tau_{x}$ is equivariant relative to the action of $G$ on $X$
+and the action of $G$ on the quotient $G/H_x$. 
+\begin{proposition}
+We have that
+$$\phi(g)\circ\tau_x = \tau_x\circ\psi_{H_x}(g)$$
+for all $g\in G$.
+\end{proposition}
+To prove this, let $g,a\in G$ be given, and note that
+$$\psi_{H_x}(g)(aH_x)=gaH_x.$$
+The latter coset corresponds under $\tau_{x}$ to the
+point $gax$, as desired.
+
+Finally, let us note that $\tau_x$ identifies the point $x\in X$ with
+the coset of the identity element $eH_x$, that is to say, with the
+subgroup $H_x$ itself.  For this reason, the point $x$ is often called
+the basepoint of the identification $\tau_x: G/H_x \to X$.
+
+\paragraph{The choice of basepoint.}
+Next, we consider the effect of the choice of basepoint on the
+quotient structure of a homogeneous space.  Let $X$ be a homogeneous
+space. 
+\begin{proposition}
+The set of all isotropy subgroups $\{ H_x : x\in X\}$ forms a
+single conjugacy class of subgroups in $G$.    
+\end{proposition}
+To show this, let $x_0,
+x_1\in X$ be given.  By the transitivity of the action we may choose a
+$\hg\in G$ such that $x_1 = \hg x_0$.  Hence, for all $h\in G$
+satisfying $hx_0 = x_0$, we have
+$$(\hg h \hg^{-1}) x_1 = \hg (h ( \hg^{-1} x_1)) = \hg x_0 = x_1.$$
+Similarly, for all $h\in H_{x_1}$ we have that $\hg^{-1} h \hg$ fixes $x_0$.
+Therefore,
+$$\hg (H_{x_0}) \hg^{-1} = H_{x_1};$$
+or what is equivalent, for all $x\in X$ and $g\in G$ we have
+$$g H_x g^{-1} = H_{gx}.$$
+
+\paragraph{Equivariance.}
+Since we can identify a homogeneous space $X$ with $G/H_x$ for every
+possible $x\in X$, it stands to reason that there exist equivariant
+bijections between the different $G/H_x$.  To  describe these, let
+$H_0, H_1<G$ be conjugate subgroups with
+$$H_1 = \hg H_0 \hg^{-1}$$
+for some fixed $\hg\in G$.  Let us set
+$$X=G/H_0,$$
+and let $x_0$ denote the identity coset $H_0$, and $x_1$
+the coset $\hg H_0$.  What is the subgroup of $G$ that fixes $x_1$?
+In other words, what are all the $h\in G$ such that
+$$h  \hg H_0 = \hg H_0,$$
+or what is equivalent, all $h\in G$ such that
+$$\hg^{-1} h \hg \in H_0.$$
+The collection of all such $h$ is
+precisely the subgroup $H_1$.  Hence, $\tau_{x_1}: G/H_1\to G/H_0$ is
+the desired equivariant bijection.  This is a well defined mapping
+from the set of $H_1$-cosets to the set of $H_0$-cosets, with action
+given by
+$$\tau_{x_1}(a H_1)=a \hg H_0,\quad a\in G.$$
+
+Let $\psi_0:
+G\to \Perm(G/H_0)$ and $\psi_1:G\to \Perm(G/H_1)$ denote the
+corresponding coset $G$-actions.  
+\begin{proposition}
+  For all $g\in G$ we have that
+  $$\tau_{x_1}\circ\psi_1(g)  =  \psi_0(g)\circ \tau_{x_1}.$$
+  \end{proposition}
+%%%%%
+%%%%%
+\end{document}

@@ -1,0 +1,41 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{Coset}
+\pmcreated{2013-03-22 12:08:10}
+\pmmodified{2013-03-22 12:08:10}
+\pmowner{djao}{24}
+\pmmodifier{djao}{24}
+\pmtitle{coset}
+\pmrecord{9}{31306}
+\pmprivacy{1}
+\pmauthor{djao}{24}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{20A05}
+\pmdefines{index}
+\pmdefines{left coset}
+\pmdefines{right coset}
+
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{graphicx}
+%%%\usepackage{xypic}
+\begin{document}
+Let $H$ be a subgroup of a group $G$, and let $a \in G$. The {\em left coset} of $a$ with respect to $H$ in $G$ is defined to be the set
+$$
+aH := \{ ah \mid h \in H \}.
+$$
+The {\em right coset} of $a$ with respect to $H$ in $G$ is defined to be the set
+$$
+Ha := \{ ha \mid h \in H \}.
+$$
+Two left cosets $aH$ and $bH$ of $H$ in $G$ are either identical or disjoint. Indeed, if $c \in aH \cap bH$, then $c = ah_1$ and $c = bh_2$ for some $h_1,h_2 \in H$, whence $b^{-1} a = h_2 h_1^{-1} \in H$. But then, given any $ah \in aH$, we have $ah = (bb^{-1})ah = b(b^{-1}a) h \in bH$, so $aH \subset bH$, and similarly $bH \subset aH$. Therefore $aH = bH$.
+
+Similarly, any two right cosets $Ha$ and $Hb$ of $H$ in $G$ are either identical or disjoint. Accordingly, the collection of left cosets (or right cosets) partitions the group $G$; the corresponding equivalence relation for left cosets can be described succintly by the relation $a \sim b$ if $a^{-1} b \in H$, and for right cosets by $a \sim b$ if $ab^{-1} \in H$.
+
+The {\em index} of $H$ in $G$, denoted $[G:H]$, is the cardinality of the set $G/H$ of left cosets of $H$ in $G$.
+%%%%%
+%%%%%
+%%%%%
+\end{document}

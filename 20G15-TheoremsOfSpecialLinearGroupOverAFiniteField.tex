@@ -1,0 +1,54 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{TheoremsOfSpecialLinearGroupOverAFiniteField}
+\pmcreated{2013-03-22 14:55:54}
+\pmmodified{2013-03-22 14:55:54}
+\pmowner{Daume}{40}
+\pmmodifier{Daume}{40}
+\pmtitle{theorems of special linear group over a finite field}
+\pmrecord{6}{36620}
+\pmprivacy{1}
+\pmauthor{Daume}{40}
+\pmtype{Theorem}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{20G15}
+\pmrelated{ProjectiveSpecialLinearGroup}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic} 
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+% The below lines should work as the command
+% \renewcommand{\bibname}{References}
+% without creating havoc when rendering an entry in
+% the page-image mode.
+\makeatletter
+\@ifundefined{bibname}{}{\renewcommand{\bibname}{References}}
+\makeatother
+\begin{document}
+Let $\mathbb{F}_q$ be the finite field with $q$ elements, and consider the special linear group $\operatorname{SL}(n, \mathbb{F}_q)$ over the field $\mathbb{F}_q$.
+\begin{enumerate}
+\item $\operatorname{SL}(n, \mathbb F_q)$ is finite. Furthermore, $\lvert \operatorname{SL}(n, \mathbb{F}_q) \rvert = \frac{1}{q-1}\prod_{i=0}^{n-1}(q^n-q^i)$.
+\item $\operatorname{SL}(n, \mathbb F_q)$ is a perfect group, meaning that $[\operatorname{SL}(n,\mathbb{F}_q),\operatorname{SL}(n,\mathbb{F}_q)] = \operatorname{SL}(n,\mathbb{F}_q)$, where $[,]$ is the commutator bracket with two  exceptions: $\operatorname{SL}(2,\mathbb{F}_2)$ and $\operatorname{SL}(2,\mathbb{F}_3)$.
+\end{enumerate}
+%%%%%
+%%%%%
+\end{document}

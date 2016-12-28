@@ -1,0 +1,71 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{GroupsInField}
+\pmcreated{2013-03-22 14:41:58}
+\pmmodified{2013-03-22 14:41:58}
+\pmowner{pahio}{2872}
+\pmmodifier{pahio}{2872}
+\pmtitle{groups in field}
+\pmrecord{24}{36311}
+\pmprivacy{1}
+\pmauthor{pahio}{2872}
+\pmtype{Topic}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{20K99}
+\pmclassification{msc}{20F99}
+\pmclassification{msc}{20A05}
+\pmclassification{msc}{12E99}
+\pmrelated{Klein4Group}
+\pmrelated{Klein4Ring}
+\pmrelated{GroupsOfRealNumbers}
+\pmdefines{additive group of the field}
+\pmdefines{multiplicative group of the field}
+\pmdefines{additive group}
+\pmdefines{multiplicative group}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\begin{document}
+If \,$(K,\,+,\,\cdot)$\, is a field, then
+\begin{itemize}
+\item $(K,\,+)$ \,is the {\em additive group of the field},
+\item $(K\!\smallsetminus\!\{0\},\,\cdot)$ \,is the {\em multiplicative group of the field}.
+\end{itemize}
+Both of these groups are Abelian.
+
+The former has always as a subgroup 
+          $$\{n\!\cdot\!1\vdots \,\,\,n\in\mathbb{Z}\},$$
+the group of the multiples of unity.\, This is, apparently, isomorphic to 
+the additive group $\mathbb{Z}$ or $\mathbb{Z}_p$ depending on whether the \PMlinkname{characteristic}{Characteristic} of the field is 0 or a prime number $p$.
+
+The multiplicative group of any field has as its subgroup the set $E$ consisting of all roots of unity in the field.\, The group $E$ has the subgroup\, $\{1,\,-1\}$\, which reduces to $\{1\}$ if the \PMlinkescapetext{characteristic} of the field is two.\, 
+
+
+\textbf{Example 1.}\, The additive group\, $(\mathbb{R},\,+)$\, of the reals is isomorphic to the multiplicative group\, $(\mathbb{R}_+,\,\cdot)$\, of the positive reals; the isomorphy is implemented e.g. by the isomorphism mapping \,$x\mapsto 2^x$.
+
+\textbf{Example 2.}\, Suppose that the \PMlinkescapetext{characteristic} of $K$ is not 2 and denote the multiplicative group of $K$ by $K^*$.\, We can consider the four functions \, $f_i\!:K^*\!\to\!K^*$\, defined by\, $f_0(x) := x$,\, 
+$f_1(x) := -x$,\, $f_2(x) := x^{-1}$,\, $f_3(x) := -x^{-1}$.\, The composition of functions is a binary operation of the set\, $G = \{f_0,\,f_1,\,f_2,\,f_3\}$,\, and we see that $G$ is isomorphic to Klein's 4-group.
+
+\textbf{Note.}\, One may also speak of the {\em additive group} of any {\em ring}.\, Every ring contains also its group of units.
+%%%%%
+%%%%%
+\end{document}

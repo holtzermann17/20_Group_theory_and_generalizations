@@ -1,0 +1,120 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{MunnTree}
+\pmcreated{2013-03-22 16:11:59}
+\pmmodified{2013-03-22 16:11:59}
+\pmowner{Mazzu}{14365}
+\pmmodifier{Mazzu}{14365}
+\pmtitle{Munn tree}
+\pmrecord{20}{38293}
+\pmprivacy{1}
+\pmauthor{Mazzu}{14365}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{20M05}
+\pmclassification{msc}{20M18}
+%\pmkeywords{free inverse semigroup}
+%\pmkeywords{free inverse monoid}
+%\pmkeywords{word problem}
+\pmrelated{SchutzenbergerGraph}
+\pmdefines{Munn tree}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+\newtheorem{thm}{Theorem}
+
+
+% define commands here
+
+\begin{document}
+\PMlinkescapeword{inverse}
+\PMlinkescapeword{graph}
+\PMlinkescapeword{right}
+\PMlinkescapeword{theory}
+\PMlinkescapeword{argument}
+
+
+\PMlinkescapeword{reduce}
+\PMlinkescapeword{reduction}
+\PMlinkescapeword{reduced}
+
+\newcommand{\virg}[1]{``#1''}
+
+\newcommand{\redu}{\mathrm{red}}
+
+\newcommand{\prefi}{\mathrm{pref}}
+
+
+\newcommand{\V}{\mathrm{V}}
+\newcommand{\E}{\mathrm{E}}
+\newcommand{\schG}{\mathcal{S}\Gamma}
+
+\newcommand{\e}{\mathrm{e}}
+\newcommand{\co}{\mathrm{c}}
+
+\newcommand{\cbra}[1]{\left( #1 \right)}
+\newcommand{\qbra}[1]{\left[ #1 \right]}
+\newcommand{\gbra}[1]{\left\{ #1 \right\}}
+\newcommand{\abra}[1]{\left\langle #1 \right\rangle}
+
+\newcommand{\mipres}[2]{\mathrm{Inv}^1\abra{#1 | #2}}
+\newcommand{\sipres}[2]{\mathrm{Inv}\abra{#1 | #2}}
+\newcommand{\mt}{\mathrm{MT}}
+\newcommand{\fim}{\mathrm{FIM}}
+\newcommand{\fis}{\mathrm{FIS}}
+
+\newcommand{\double}[1]{\cbra{#1\amalg #1^{-1}}}
+\newcommand{\doubles}[1]{\cbra{#1\amalg #1^{-1}}^\ast}
+\newcommand{\doublep}[1]{\cbra{#1\amalg #1^{-1}}^+}
+
+Let $X$ be a \emph{finite} set, and $\doubles X$ the free monoid with involution on $X$. It is well known that the elements of $\doubles X$ can be viewed as words on the alphabet $\double X$, i.e. as elements of the free monod on $\double X$.
+
+The \emph{Munn tree} of the word $w\in\doubles X$ is the $X$-inverse word graph $\mt(w)$ (or $\mt_X(w)$ if $X$ needs to be specified) with vertex and edge set respectively 
+$$\V(\mt(w))=\redu(\prefi(w))=\gbra{\redu(v)\,|\,v\in\prefi(w)},$$
+$$\E(\mt(w))=\gbra{(v,x,\redu(vx))  \in  \V(\mt(w))\times \double X \times \V(\mt(w))}.$$
+
+
+The concept of Munn tree was created to investigate the structure of the free inverse monoid. The main result about it says that it \virg{recognize} whether or not two different word in $\doubles X$ belong to the same $\rho_X$-class, where $\rho_X$ is the Wagner congruence on $X$. We recall that if $w\in\doubles X$ [resp. $w\in\doublep X$], then $[w]_{\rho_X}\in\fim(X)$ [resp. $[w]_{\rho_X}\in\fis(X)$].
+\begin{thm}[Munn]
+Let $v,w\in\doubles X$ (or $v,w\in\doublep X$). Then $[v]_{\rho_X}=[w]_{\rho_X}$ if and only if $\mt(v)=\mt(w)$
+\end{thm}
+
+As an immediate corollary of this result we obtain that the word problem in the free inverse monoid (and in the free inverse semigroup) is decidable. In fact, we can effectively build the Munn tree of an arbitrary word in $\doubles X$, and this suffice to prove wheter or not two words belong to the same $\rho_X$-class.
+
+The Munn tree reveals also some property of the $\mathcal R$-classes of elements of the free inverse monoid, where $\mathcal R$ is the right Green relation. In fact, the following result says that \virg{essentially} the Munn tree of $w\in\doubles X$ is the Sch\"{u}tzenberger graph of the $\mathcal R$-class of $[w]_{\rho_X}$.
+
+\begin{thm}
+Let $w\in\doubles X$. There exists an isomorphism (in the category of $X$-inverse word graphs) $\Phi:\mt(w)\rightarrow \schG(X;\varnothing;[w]_{\rho_X})$ between the Munn tree $\mt(w)$ and the Sch\"{u}tzenberger graph $\schG(X;\varnothing;[w]_{\rho_X})$ given by 
+$$\Phi_\V(v)=[v]_{\rho_X},\ \ \forall v\in\V(\mt(w))=\redu(\prefi(w)),$$
+$$\Phi_\E((v,x,\redu(vx)))=([v]_{\rho_X},x,[vx]_{\rho_X}),\ \ \forall (v,x,\redu(vx))\in\E(\mt(w)).$$
+\end{thm}
+
+
+
+\begin{thebibliography}{9}
+\bibitem{b:munn} W.D. Munn, \emph{Free inverse semigroups}, Proc. London Math. Soc. 30 (1974) 385-404.
+\bibitem{b:petrich} N. Petrich, \emph{Inverse Semigroups}, Wiley, New York, 1984.
+\bibitem{b:steph} J.B. Stephen, \emph{Presentation of inverse monoids}, J. Pure Appl. Algebra 63 (1990) 81-112.
+\end{thebibliography}
+
+%%%%%
+%%%%%
+\end{document}

@@ -1,0 +1,119 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{GroupsOfSmallOrder}
+\pmcreated{2013-03-22 14:47:54}
+\pmmodified{2013-03-22 14:47:54}
+\pmowner{Daume}{40}
+\pmmodifier{Daume}{40}
+\pmtitle{groups of small order}
+\pmrecord{15}{36451}
+\pmprivacy{1}
+\pmauthor{Daume}{40}
+\pmtype{Example}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{20A05}
+\pmclassification{msc}{20-00}
+\pmrelated{ExamplesOfGroups}
+
+% As your knowledge of TeX increases,
+% you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic} 
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\DeclareMathOperator{\Dic}{Dic}
+
+% The below lines should work as the command
+% \renewcommand{\bibname}{References}
+% without creating havoc when rendering an entry in
+% the page-image mode.
+\makeatletter
+\@ifundefined{bibname}{}{\renewcommand{\bibname}{References}}
+\makeatother
+\begin{document}
+\PMlinkescapeword{degree}
+
+Below is a list of all possible groups per order up to isomorphism.
+
+\textbf{Groups of prime order:}
+\begin{itemize}
+\item All groups of prime order are isomorphic to a cyclic group of that order.
+\end{itemize}
+
+\textbf{Groups of prime square order:}
+\begin{itemize}
+\item All groups of order $p^2$, where $p$ is a prime, are isomorphic to one of the following:
+\begin{itemize}
+\item $C_{p^2}$\textit{(Abelian)}: cyclic group of order $p^2$.
+\item $C_p\times C_p$\textit{(Abelian)}: elementary abelian group of order $p^2$.
+\end{itemize}
+\end{itemize}
+
+\textbf{Groups of order 1:}
+\begin{itemize}
+\item trivial group \textit{(i.e. $\{ e\}$)}.
+\end{itemize}
+
+\textbf{Groups of order 6:}
+\begin{itemize}
+\item $C_6$\textit{(Abelian)}: cyclic group of order 6.
+\item $S_3$\textit{(non-Abelian)}: symmetric group where $n=3$.
+\end{itemize}
+
+\textbf{Groups of order 8:}
+\begin{itemize}
+\item $C_8$\textit{(Abelian)}: cyclic group of order 8.
+\item $C_4\times C_2$\textit{(Abelian)}: direct product of two groups of a cyclic group of order 4 and a cyclic group of order 2.
+\item $C_2\times C_2\times C_2$\textit{(Abelian)}: direct product of three groups of a cyclic group of order 2.
+\item $D_4$\textit{(non-Abelian)}: octic group; dihedral group of degree 4.
+\item $Q_8$\textit{(non-Abelian)}: quaternion group.
+\end{itemize}
+
+\textbf{Groups of order 10:}
+\begin{itemize}
+\item $C_{10}$\textit{(Abelian)}: cyclic group of order 10.
+\item $D_5$\textit{(non-Abelian)}: dihedral group of degree 5.
+\end{itemize}
+
+\textbf{Groups of order 12:}
+\begin{itemize}
+\item $C_{12}$\textit{(Abelian)}: cyclic group of order 12.
+\item $C_2\times C_6$\textit{(Abelian)}.
+\item $A_4$\textit{(non-Abelian)}: alternating group of degree 4.
+\item $D_6$\textit{(non-Abelian)}: dihedral group of degree 6.
+\item $\Dic(C_6)$\textit{(non-Abelian)}: dicyclic group of order 12.
+This is a generalized quaternion group $Q_{12}$.
+\end{itemize}
+
+\textbf{Groups of order 14:}
+\begin{itemize}
+\item $C_{14}$\textit{(Abelian)}: cyclic group of order 14.
+\item $D_7$\textit{(non-Abelian)}: dihedral group of degree 7.
+\end{itemize}
+
+\textbf{Groups of order 15:}
+\begin{itemize}
+\item $C_{15}$\textit{(Abelian)}: cyclic group of order 15.
+\end{itemize}
+
+\begin{thebibliography}{1}
+\bibitem[PJ]{PJ} Pedersen, John: Groups of small order. \PMlinkexternal{http://www.math.usf.edu/~eclark/algctlg/small_groups.html}{http://www.math.usf.edu/~eclark/algctlg/small_groups.html}
+\end{thebibliography}
+%%%%%
+%%%%%
+\end{document}

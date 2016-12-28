@@ -1,0 +1,134 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{StructureOfmathbbZnmathbbZtimesAsAnAbelianGroup}
+\pmcreated{2013-03-22 18:42:40}
+\pmmodified{2013-03-22 18:42:40}
+\pmowner{rm50}{10146}
+\pmmodifier{rm50}{10146}
+\pmtitle{structure of $(\mathbb{Z}/n\mathbb{Z})^{\times}$ as an abelian group}
+\pmrecord{4}{41477}
+\pmprivacy{1}
+\pmauthor{rm50}{10146}
+\pmtype{Theorem}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{20A05}
+\pmclassification{msc}{20E36}
+\pmclassification{msc}{20E34}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\newcommand{\Ints}{\mathbb{Z}}
+\DeclareMathOperator{\Aut}{Aut}
+\DeclareMathOperator{\ord}{ord}
+\newcommand{\UI}[1]{(\Ints/{#1}\Ints)^{\times}}
+\newcommand{\Order}[1]{\left\lvert #1 \right\rvert}
+%% \theoremstyle{plain} %% This is the default
+\newtheorem{thm}{Theorem}
+\newtheorem{cor}[thm]{Corollary}
+\newtheorem{lem}[thm]{Lemma}
+\begin{document}
+The automorphism group of the cyclic group $C_n\cong \Ints/n\Ints$ is $\UI{n}$. This article determines the structure of $\UI{n}$ as an abelian group.
+
+\begin{thm} Let $n\geq 2$ be an integer whose factorization is $n=p_1^{a_1}p_2^{a_2}\dots  p_r^{a_r}$ where the $p_i$ are distinct primes. Then:
+\begin{enumerate}
+\item $\UI{n} \cong \UI{p_1^{a_1}}\times \UI{p_2^{a_2}}\times \dots \times \UI{p_r^{a_r}}$
+\item $\UI{p^k}$ is a cyclic group of order $p^{k-1}(p-1)$ for all odd primes $p$.
+\item $\UI{2^k}$ is the direct product of a cyclic group of order $2$ and a cyclic group of order $2^{k-2}$ for $k\geq 2$.
+\end{enumerate}
+\end{thm}
+\begin{cor} $\Aut(C_n)\cong \UI{n}$ is cyclic if and only if $n=2, 4, p^k$, or $2p^k$ for $p$ an odd prime and $k\geq 0$ an integer.
+\end{cor}
+
+\begin{proof}(of theorem)
+\newline
+(1): This is a restatement of the Chinese Remainder Theorem.
+
+(2): Note first that the result is clear for $k=1$, since then $\UI{p}$ is the multiplicative group of the finite field $\Ints/p\Ints$ and thus is cyclic (any finite subgroup of the multiplicative group of a field is cyclic). Also, $\Order{\UI{p^k}} = \phi(p^k) = p^{k-1}(p-1)$. Since $\UI{p^k}$ is abelian, it is the direct product of its $q$-primary components for each prime $q\mid \phi(p^k)$; we will show that each of those $q$-primary components is cyclic. For $q=p$, it suffices to find an element of $\UI{p^k}$ of order $p^{k-1}$. $1+p$ is such an element; see Lemma \ref{lem:1pp} below. For $q\neq p$, consider the map
+\[
+  \Ints/p^k\Ints \to \Ints/p\Ints : a + (p^k) \mapsto a+(p)
+\]
+i.e. the reduction-by-$p$ map. This is a ring homomorphism; restricting it to $\UI{p^k}$ gives a surjective group homomorphism $\pi:\UI{p^k}\to \UI{p}$. Since $\Order{\UI{p}}=p-1$, it follows that the kernel of $\pi$ has order $p^{k-1}$. Thus for $q\neq p$, the $q$-primary component of $\UI{p^k}$ must map isomorphically into $\UI{p}$ by order considerations. But $\UI{p}$ is cyclic, so the $q$-primary component is as well.
+
+Thus each $q$-primary component of $\UI{p^k}$ is cyclic and thus $\UI{p^k}$ is also cyclic.
+
+(3): The result is true for $k=2$, when $\UI{2^2}\cong V_4$, the Klein $4$-group. So assume $k\geq 3$. $5$ has exact order $2^{k-2}$ in $\UI{2^k}$ (see Lemma \ref{lem:four} below). Also by that lemma, $5^{2^{k-3}}\neq -1$ is $\UI{2^k}$, so that $5^{2^{k-3}}$ and $-1$ are two distinct elements of order $2$. Thus $\UI{2^k}$ is not cyclic, but has a cyclic subgroup of order $2^{k-2}$; the result follows.
+\end{proof}
+
+\begin{proof}(of Corollary)
+\newline
+$(\Leftarrow)$ is clear, since
+\[
+\begin{array}{ll}
+  \UI{C_2} \cong\{1\}\quad&\quad\UI{C_4}\cong C_2\\
+  \UI{C_{p^k}}\cong C_{p^{k-1}(p-1)}\quad&\quad \UI{C_{2p^k}}\cong\UI{C_2}\times\UI{C_{p^k}}\cong C_{p^{k-1}(p-1)}
+\end{array}
+\]
+$(\Rightarrow)$: Assume $\UI{n}$ is cyclic. If $n$ is a power of $2$, then by the theorem, it must be either $2$ or $4$. Otherwise, if $n$ has two distinct odd prime factors $p,q$, then $\UI{n}$ contains the direct product $\UI{p^r}\times\UI{q^s}$. But the orders of these two factor groups are both even (they are $\phi(p^r)=p^{r-1}(p-1)$ and $\phi(q^s)=q^{s-1}(q-1)$ respectively), so their direct product is not cyclic. Thus $n$ can have at most one odd prime as a factor, so that $n=2^mp^k$ for some integers $m,k$, and
+\[
+  \UI{C_n} = \UI{C_{2^m}}\times\UI{C_{p^k}}
+\]
+But the order of $\UI{C_{p^k}}$ is even, so that (since the order of $\UI{C_{2^m}}$ is also even for $m\geq 2$) we must have $m=0$ or $1$, so that $n=p^k$ or $2p^k$.
+
+\end{proof}
+The above proof used the following lemmas, which we now prove:
+\begin{lem} \label{lem:1pp} Let $p$ be an odd prime and $k>0$ a positive integer. Then $1+p$ has exact order $p^{k-1}$ in the multiplicative group $\UI{p^k}$.
+\end{lem}
+\begin{proof} The result is obvious for $k=1$, so we assume $k\geq 2$. By the binomial theorem,
+\[
+  (1+p)^{p^n} = 1+\sum_{i=1}^{p^n}\dbinom{p^n}{i}p^i
+\]
+Write $\ord_p(m)$ for the largest power of a prime $p$ dividing $m$. Then by a theorem on divisibility of prime-power binomial coefficients, 
+\[
+  \ord_p\left(\dbinom{p^n}{i}p^i\right) = n+i-\ord_p(i)
+\]
+Now, $i-\ord_p(i)$ is $1$ if $i=1$, and is at least $2$ for $i>1$ (since $p\geq 3$). We thus get
+\[
+  (1+p)^{p^n} = 1 + p^{n+1} + r p^{n+2},\quad r\in\Ints
+\]
+Setting $n=k-1$ gives $(1+p)^{p^{k-1}}\equiv 1\pod{p^{k}}$; setting $n=k-2$ gives $(1+p)^{p^{k-2}}\equiv 1+p^{k-1}\not\equiv 1\pod{p^{k}}$.
+\end{proof}
+
+\begin{lem} \label{lem:four} For $k\geq 3$, $5$ has exact order $2^{k-2}$ in the multiplicative group $\UI{2^k}$ (which has order $2^{k-1}$). Additionally, $5^{2^{k-3}}\not\equiv -1\pod{2^{k}}$.
+\end{lem}
+\begin{proof}
+The proof of this lemma is essentially identical to the proof of the preceding lemma.
+Again by the binomial theorem,
+\[
+  5^{2^n} = (1+2^2)^{2^n} = \sum_{i=1}^{2^n}\dbinom{2^n}{i}2^{2i}
+\]
+Then
+\[
+  \ord_2\left(\dbinom{2^n}{i}2^i\right) = n+2i-\ord_2(i)
+\]
+Now, $2i-\ord_2(i)$ is $2$ if $i=1$, and is at least $3$ for $i>1$. We thus get
+\[
+  5^{2^n} = 1 + 2^{n+2} + r2^{n+3},\quad r\in\Ints
+\]
+Setting $n=k-2$ gives $5^{2^{k-2}}\equiv 1\pod{2^{k}}$; setting $n=k-3$ gives $5^{2^{k-3}}\equiv 1+2^{k-1}\not\equiv \pm 1\pod{2^{k}}$. (Note that $1+2^{k-1}\not\equiv -1$ since $k\geq 3$).
+\end{proof}
+\begin{thebibliography}{10}
+\bibitem{bib:df}
+Dummit,~D.,~Foote,~R.M., \emph{Abstract Algebra, Third Edition}, Wiley, 2004.
+\end{thebibliography}
+%%%%%
+%%%%%
+\end{document}

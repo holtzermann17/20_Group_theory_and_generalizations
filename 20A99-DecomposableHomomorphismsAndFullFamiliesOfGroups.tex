@@ -1,0 +1,58 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{DecomposableHomomorphismsAndFullFamiliesOfGroups}
+\pmcreated{2013-03-22 18:36:03}
+\pmmodified{2013-03-22 18:36:03}
+\pmowner{joking}{16130}
+\pmmodifier{joking}{16130}
+\pmtitle{decomposable homomorphisms and full families of groups}
+\pmrecord{7}{41331}
+\pmprivacy{1}
+\pmauthor{joking}{16130}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{20A99}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\begin{document}
+Let $\{G_i\}_{i\in I}, \{H_i\}_{i\in I}$ be two families of groups (indexed with the same set $I$).
+
+\textbf{Definition.} We will say that a homomorphism $$f:\bigoplus_{i\in I} G_i\to \bigoplus_{i\in I} H_i$$
+is \textit{decomposable} if there exists a family of homomorphisms $\{f_i:G_i\to H_i\}_{i\in I}$ such that $$f=\bigoplus_{i\in I} f_i.$$
+
+\textbf{Remarks.} For each $j\in I$ and $g\in \bigoplus_{i\in I} G_i$ we will say that $g\in G_j$ if $g(i)=0$ for any $i\neq j$. One can easily show that any homomorphism $$f:\bigoplus_{i\in I} G_i\to \bigoplus_{i\in I} H_i$$ is decomposable if and only if for any $j\in I$ and any $g\in \bigoplus_{i\in I} G_i$ such that $g\in G_j$ we have $f(g)\in H_j$. This implies that if $f$ is an isomorphism and $f$ is decomposable, then each homomorphism in decomposition is an isomorphism and $$\bigg( \bigoplus_{i\in I}f_i\bigg) ^{-1}=\bigoplus_{i\in I}f_i^{-1}.$$ Also it is worthy to note that composition of two decomposable homomorphisms is also decomposable and
+$$\bigg( \bigoplus_{i\in I}f_i\bigg)\circ\bigg( \bigoplus_{i\in I}g_i\bigg)=\bigoplus_{i\in I}f_i\circ g_i.$$
+
+\textbf{Definition.} We will say that family of groups $\{G_i\}_{i\in I}$ is \textit{full} if each homomorphism $$f:\bigoplus_{i\in I} G_i \to \bigoplus_{i\in I} G_i$$ is decomposable.
+
+\textbf{Remark.} It is easy to see that if $\{G_i\}_{i\in I}$ is a full family of groups and $I_0\subseteq I$, then $\{G_i\}_{i\in I_0}$ is also a full family of groups.
+
+\textbf{Example.} Let $\mathcal{P}=\{p\in\mathbb{N}\ |\ p\mbox{ is prime}\}$. Then $\{\mathbb{Z}_p \}_{p\in\mathcal{P}}$ is full. Indeed, let $$f:\bigoplus_{p\in\mathcal{P}} \mathbb{Z}_{p}\to \bigoplus_{p\in\mathcal{P}} \mathbb{Z}_{p}$$ be a group homomorphism. Then, for any $q\in\mathcal{P}$ and $a\in\bigoplus_{p\in\mathcal{P}} \mathbb{Z}_{p}$ such that $a\in\mathbb{Z}_{q}$ we have that $|a|$ divides $q$ and thus $|f(a)|$ divides $q$, so it is easy to see that $f(a)\in\mathbb{Z}_{q}$. Therefore (due to first remark) $f$ is decomposable.
+
+\textbf{Counterexample.} Let $G_1, G_2$ be two copies of $\mathbb{Z}$. Then $\{G_1,G_2\}$ is not full. Indeed, let $$f:\mathbb{Z}\oplus\mathbb{Z}\to\mathbb{Z}\oplus\mathbb{Z}$$ be a group homomorphism defined by $$f(x,y)=(0,x+y).$$ Now assume that $f=f_1\oplus f_2$. Then we have:
+$$(0,1)=f(1,0)=(f_1(1),f_2(0))$$
+and so $f_2(0)=1$. Contradiction, since group homomorphisms preserve neutral elements.
+%%%%%
+%%%%%
+\end{document}

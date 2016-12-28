@@ -1,0 +1,42 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{FundamentalHomomorphismTheorem}
+\pmcreated{2013-03-22 15:35:06}
+\pmmodified{2013-03-22 15:35:06}
+\pmowner{yark}{2760}
+\pmmodifier{yark}{2760}
+\pmtitle{fundamental homomorphism theorem}
+\pmrecord{9}{37495}
+\pmprivacy{1}
+\pmauthor{yark}{2760}
+\pmtype{Theorem}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{20A05}
+
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amsthm}
+
+\newtheorem{theorem}{theorem}
+\begin{document}
+The following theorem is also true for rings (with ideals instead of normal subgroups) or modules (with submodules instead of normal subgroups).
+\begin{theorem}
+Let $G,H$ be groups, $f\colon G \to H$ a homomorphism, and let $N$ be a normal subgroup of $G$ contained in $\ker(f)$. Then there exists a unique homomorphism $h\colon G/N \to H$ so that $h \circ \varphi=f$, where $\varphi$ denotes the canonical homomorphism from $G$ to $G/N$.
+
+Furthermore, if $f$ is onto, then so is $h$; and if $\ker(f)=N$, then $h$ is injective.
+\end{theorem}
+\begin{proof}
+We'll first show the uniqueness. Let $h_1, h_2\colon G/N \to H$ functions such that $h_1 \circ \varphi=h_2 \circ \varphi$. For an element $y$ in $G/N$ there exists an element $x$ in $G$ such that $\varphi(x)=y$, so we have
+\[h_1(y)=(h_1 \circ \varphi)(x)=(h_2 \circ \varphi)(x)=h_2(y)\]
+for all $y \in G/N$, thus $h_1=h_2$.
+
+Now we define $h: G/N \to H,\; h(gN)=f(g)\;\forall\;g \in G$. We must check that the definition is \PMlinkescapetext{independent} of the given representative; so let $gN=kN$, or $k \in gN$. Since $N$ is a subset of $\ker(f)$, $g^{-1}k \in N$ implies $g^{-1}k \in \ker(f)$, hence $f(g)=f(k)$. Clearly $h \circ \varphi=f$.
+
+Since $x \in \ker(f)$ if and only if $h(xN)=1_H$, we have
+\[\ker(h)=\{xN \mid x \in \ker(f)\}=\ker(f)/N.\]
+\end{proof}
+A consequence of this is: If $f\colon G \to H$ is onto with $\ker(f)=N$, then $G/N$ and $H$ are isomorphic.
+%%%%%
+%%%%%
+\end{document}

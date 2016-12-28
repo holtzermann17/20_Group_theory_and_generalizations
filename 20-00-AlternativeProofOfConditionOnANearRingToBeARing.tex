@@ -1,0 +1,67 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{AlternativeProofOfConditionOnANearRingToBeARing}
+\pmcreated{2013-03-22 17:20:06}
+\pmmodified{2013-03-22 17:20:06}
+\pmowner{Wkbj79}{1863}
+\pmmodifier{Wkbj79}{1863}
+\pmtitle{alternative proof of condition on a near ring to be a ring}
+\pmrecord{9}{39689}
+\pmprivacy{1}
+\pmauthor{Wkbj79}{1863}
+\pmtype{Proof}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{20-00}
+\pmclassification{msc}{16-00}
+\pmclassification{msc}{13-00}
+
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{pstricks}
+\usepackage{psfrag}
+\usepackage{graphicx}
+\usepackage{amsthm}
+%%\usepackage{xypic}
+\newtheorem{thm*}{Theorem}
+
+\begin{document}
+\PMlinkescapeword{near}
+\PMlinkescapeword{combination}
+
+\begin{thm*}
+Let $(R,+,\cdot)$ be a near ring with a multiplicative identity $1$ such that the $\cdot$ also left distributes over $+$; that is, $c\cdot (a+b)=c\cdot a+c\cdot b$. Then $R$ is a ring.
+\end{thm*}
+
+\begin{proof}
+All that needs to be verified is commutativity of $+$.
+
+Let $a,b\in R$.  Consider the expression $(1+1)(a+b)$.
+
+We have:
+
+\begin{alignat*}{2}
+(1+1)(a+b) &=(1+1)a+(1+1)b & \quad \qquad \text{by left distributivity} \\
+&=1a+1a+1b+1b & \quad \qquad \text{by right distributivity} \\
+&=a+a+b+b & \quad \qquad \text{since } 1 \text{ is a multiplicative identity} \end{alignat*}
+
+On the other hand, we have:
+
+\begin{alignat*}{2}
+(1+1)(a+b) &=1(a+b)+1(a+b) & \quad \qquad \text{by right distributivity} \\
+&=a+b+a+b & \quad \qquad \text{since } 1 \text{ is a multiplicative identity} \end{alignat*}
+
+Thus, $a+a+b+b=a+b+a+b$.  Hence:
+
+\begin{alignat*}{2}
+a+b &=0+(a+b)+0 & \quad \qquad \text{since } 0 \text{ is an \PMlinkname{additive identity}{AdditiveIdentity}} \\
+&=(-a+a)+(a+b)+(b+-b) & \quad \qquad \text{by definition of \PMlinkname{additive inverse}{AdditiveInverse}} \\
+&=-a+(a+a+b+b)+-b & \quad \qquad \text{by associativity of } + \\
+&=-a+(a+b+a+b)+-b & \quad \qquad \text{since } a+a+b+b=a+b+a+b \\
+&=(-a+a)+(b+a)+(b+-b) & \quad \qquad \text{by associativity of } + \\
+&=0+(b+a)+0 & \quad \qquad \text{by definition of \PMlinkescapetext{additive inverse}} \\
+&=b+a & \quad \qquad \text{since } 0 \text{ is an \PMlinkescapetext{additive identity}} \end{alignat*}
+\end{proof}
+%%%%%
+%%%%%
+\end{document}

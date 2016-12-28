@@ -1,0 +1,108 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{DefectTheorem}
+\pmcreated{2013-03-22 18:21:43}
+\pmmodified{2013-03-22 18:21:43}
+\pmowner{Ziosilvio}{18733}
+\pmmodifier{Ziosilvio}{18733}
+\pmtitle{defect theorem}
+\pmrecord{6}{41000}
+\pmprivacy{1}
+\pmauthor{Ziosilvio}{18733}
+\pmtype{Theorem}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{20M10}
+\pmclassification{msc}{20M05}
+\pmdefines{$x^m=y^n$ has only trivial solutions over $A^\ast$}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\begin{document}
+Let $A$ be an arbitrary set,
+let $A^\ast$ be the free monoid on $A$,
+and let $X$ be a finite subset of $A^\ast$ which is not a code.
+Then the free hull $H$ of $X$ is itself finite
+and $|H|<|X|$.
+
+Observe how from the defect theorem
+follows that the equation $x^m=y^n$ over $A^\ast$
+has only the trivial solutions where $x$ and $y$ are powers of the same word:
+in fact, $x^m=y^n$ iff $\{x,y\}$ is not a code.
+
+\textit{Proof.}
+It is sufficient to prove the thesis in the case
+when $X$ does not contain the empty word on $A$.
+
+Define $f:X\to H$ such that $f(x)$ is the only $h\in H$
+such that $x\in hH^\ast$:
+$f$ is well defined because of the choice of $X$ and $H$.
+Since $X$ is finite, the thesis shall be established
+once we prove that $f$ is surjective but not injective.
+
+By hypothesis, $X$ is not a code.
+Then there exists an equation $x_1\cdots x_n=x'_1\cdots x'_m$ over $X$
+with a nontrivial solution:
+it is not restrictive to suppose that $x_1\neq x'_1$.
+Since however the factorization \emph{over $H$} is unique,
+the $h$ such that $x_1\in hH^\ast$
+is the same as the $h'$ such that $x'_1\in h'H^\ast$:
+then $f(x_1)=f(x'_1)$ with $x_1\neq x'_1$,
+so $f$ is not injective.
+
+Now suppose, for the sake of contradiction,
+that $h\in H\setminus f(X)$ exists.
+Let $K=(H\setminus\{h\})h^\ast$.
+Then any equation
+\begin{equation} \label{eq:K}
+k_1\cdots k_n=k'_1\cdots k'_m\;,k_1,\cdots,k_n,k'_1,\ldots,k'_m\in K
+\end{equation}
+can be rewritten as
+\begin{displaymath}
+h_1h^{r_1}\cdots h_nh^{r_n}=h'_1h^{s_1}\cdots h'_mh^{s_m}\;,
+h_1,\ldots,h_n,h'_1,\ldots,h'_m\in H\setminus\{h\}\;,
+\end{displaymath}
+with $k_i=h_ih^{r_i}$, $k'_i=h'_ih^{s_i}$:
+this is an equation over $H$,
+and as such, has only the trivial solution $n=m$,
+$h_i=h'_i$, $r_i=s_i$ for all $i$.
+This implies that (\ref{eq:K}) only has trivial solutions over $K$:
+by the characterization of free submonoids, $K$ is a code.
+However, $X\subseteq K^\ast$ because no element of $x$ ``starts with $h$'',
+and $K^\ast$ is a proper subset of $H^\ast$
+because the former does not contain $h$ and the latter does.
+Then $K^\ast$ is a free submonoid of $A^\ast$
+which contains $X$ and is properly contained in $H^\ast$,
+against the definition of $H$ as the free hull of $X$.
+
+\begin{thebibliography}{99}
+
+\bibitem{l97}
+M. Lothaire.
+\textit{Combinatorics on words.}
+Cambridge University Press 1997.
+
+\end{thebibliography}
+
+%%%%%
+%%%%%
+\end{document}

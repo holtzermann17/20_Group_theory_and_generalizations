@@ -1,0 +1,81 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{Exponentiation}
+\pmcreated{2013-03-22 19:08:44}
+\pmmodified{2013-03-22 19:08:44}
+\pmowner{pahio}{2872}
+\pmmodifier{pahio}{2872}
+\pmtitle{exponentiation}
+\pmrecord{9}{42047}
+\pmprivacy{1}
+\pmauthor{pahio}{2872}
+\pmtype{Topic}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{20-00}
+\pmrelated{ContinuityOfNaturalPower}
+\pmdefines{power law}
+\pmdefines{power of product}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+ \usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\theoremstyle{definition}
+\newtheorem*{thmplain}{Theorem}
+
+\begin{document}
+\PMlinkescapeword{exponents}
+
+\begin{itemize}
+\item In the entry general associativity, the notion of the \emph{power} $a^n$ for elements $a$ of a set having an associative binary operation ``$\cdot$'' and for positive integers $n$ as \PMlinkname{exponents}{GeneralPower} was defined as a generalisation of the operation.\, Then the two \emph{power laws}
+$$a^m\!\cdot\!a^n \;=\; a^{m+n}, \quad (a^m)^n \;=\; a^{mn}$$
+are \PMlinkescapetext{valid}.\, For the validity of the third well-known power law, 
+$$(a\!\cdot\!b)^n \;=\; a^n\!\cdot\!b^n,$$
+the law of \emph{power of product}, the commutativity of the operation is needed.
+
+\textbf{Example.}\,In the symmetric group $S_3$, where the group operation is not commutative, we get different results from
+$$[(123)(13)]^2 \;=\; (23)^2 \;=\; (1)$$ 
+and
+$$(123)^2(13)^2 \;=\; (132)(1) \;=\; (132)$$
+(note that in these ``products'', which \PMlinkescapetext{mean} compositions of mappings, the latter ``factor'' acts first).
+\end{itemize}
+
+
+\begin{itemize}
+\item Extending the power notion for zero and negative integer exponents requires the existence of \PMlinkid{neutral}{10539} and inverse elements ($e$ and $a^{-1}$):
+$$a^0 \;:=\; e, \qquad a^{-n} \;:=\; (a^{-1})^n$$
+The two first power laws then remain in \PMlinkescapetext{force} for all integer exponents, and if the operation is commutative, also the \PMlinkescapetext{third power law is universal}.
+\end{itemize}
+
+When the operation in question is the multiplication of real or complex numbers, the power notion may be extended for other than integer exponents.
+
+\begin{itemize}
+\item One step is to introduce \PMlinkname{fractional}{FractionalNumber} exponents by using \PMlinkname{roots}{NthRoot}; see the fraction power.
+\item The following step would be the irrational exponents, which are \PMlinkescapetext{contained} in the power functions.\, The irrational exponents are possible to introduce by utilizing the exponential function and logarithms; another way would be to define $a^\varrho$ as limit of a sequence 
+$$a^{r_1},\,a^{r_2},\,\ldots$$
+where the limit of the rational number sequence \,$r_1,\,r_2,\,\ldots$\, is $\varrho$.\, The sequence 
+$a^{r_1},\,a^{r_2},\,\ldots$ may be shown to be a Cauchy sequence.
+\item The last step were the imaginary (non-real complex) exponents $\mu$, when also the base of the power may be other than a positive real number; the one gets the so-called \emph{general power}.
+\end{itemize}
+
+%%%%%
+%%%%%
+\end{document}

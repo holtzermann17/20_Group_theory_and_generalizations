@@ -1,0 +1,98 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{VirtuallyCyclicGroup}
+\pmcreated{2013-03-22 15:47:15}
+\pmmodified{2013-03-22 15:47:15}
+\pmowner{yark}{2760}
+\pmmodifier{yark}{2760}
+\pmtitle{virtually cyclic group}
+\pmrecord{11}{37746}
+\pmprivacy{1}
+\pmauthor{yark}{2760}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{20F19}
+\pmclassification{msc}{20E22}
+\pmsynonym{cyclic-by-finite group}{VirtuallyCyclicGroup}
+\pmrelated{VirtuallyAbelian}
+\pmdefines{virtually cyclic}
+\pmdefines{cyclic-by-finite}
+\pmdefines{finite-by-cyclic group}
+\pmdefines{finite-by-cyclic}
+
+\usepackage{amsfonts}
+\usepackage{amsthm}
+
+\newtheorem*{thm*}{Theorem}
+\newtheorem*{cor*}{Corollary}
+
+\def\Z{\mathbb{Z}}
+\begin{document}
+\PMlinkescapeword{corollary}
+\PMlinkescapeword{index}
+\PMlinkescapeword{infinite}
+\PMlinkescapeword{theorem}
+\PMlinkescapeword{type}
+\PMlinkescapeword{types}
+
+A \emph{virtually cyclic group} is 
+a group that has a cyclic subgroup of finite \PMlinkname{index}{Coset}.
+Every virtually cyclic group in fact 
+has a normal cyclic subgroup of finite index
+(namely, the core of any cyclic subgroup of finite index),
+and virtually cyclic groups are therefore also known as
+\emph{cyclic-by-finite groups}.
+
+A finite-by-cyclic group 
+(that is, a group $G$ with a finite normal subgroup $N$
+such that $G/N$ is cyclic)
+is always virtually cyclic.
+To see this, note that a finite-by-cyclic group is either finite,
+in which case it is certainly virtually cyclic,
+or it is finite-by-$\Z$, 
+in which case the \PMlinkname{extension}{GroupExtension}
+\PMlinkname{splits}{SemidirectProductOfGroups}.
+
+Finite-by-\PMlinkname{dihedral}{DihedralGroup} groups 
+are also virtually cyclic.
+In fact, we have the following classification theorem:\cite{hempel}\cite{rdiat}
+
+\begin{thm*}
+Groups of the following three types are all virtually cyclic.
+Moreover, every virtually cyclic group is of exactly one of these three types.
+\begin{itemize}
+\item finite
+\item finite-by-(infinite cyclic)
+\item finite-by-(infinite dihedral)
+\end{itemize}
+\end{thm*}
+
+As an immediate corollary we have the following result:\cite{macpherson}
+
+\begin{cor*}
+Every torsion-free virtually cyclic group is either trivial or infinite cyclic.
+\end{cor*}
+
+\begin{thebibliography}{9}
+\bibitem{hempel}
+ Lemma 11.4 (pages 102--103) in:
+ John Hempel,
+ {\it 3-Manifolds},
+ American Mathematical Society, 2004,
+ ISBN 0821836951.
+\bibitem{rdiat}
+ Page 137 of:
+ Alejandro Adem, Jesus Gonzalez, Guillermo Pastor (eds.),
+ Recent developments in algebraic topology --- A conference to celebrate
+   Sam Gitler's 70th birthday, San Miguel de Allende, Mexico, December 3--6, 2003.
+\bibitem{macpherson}
+ Lemma 3.2 (pages 225--226) of:
+ Dugald Macpherson,
+ {\it Permutation Groups Whose Subgroups Have Just Finitely Many Orbits}
+ (pages 221--230 in: W.\ Charles Holland (ed.)
+  {\it Ordered Groups and Infinite Permutation Groups},
+  Kluwer Academic Publishers, 1996).
+\end{thebibliography}
+%%%%%
+%%%%%
+\end{document}

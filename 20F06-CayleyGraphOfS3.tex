@@ -1,0 +1,87 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{CayleyGraphOfS3}
+\pmcreated{2013-03-22 17:11:40}
+\pmmodified{2013-03-22 17:11:40}
+\pmowner{Wkbj79}{1863}
+\pmmodifier{Wkbj79}{1863}
+\pmtitle{Cayley graph of $S_3$}
+\pmrecord{22}{39513}
+\pmprivacy{1}
+\pmauthor{Wkbj79}{1863}
+\pmtype{Example}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{20F06}
+\pmclassification{msc}{20B30}
+\pmclassification{msc}{05C25}
+\pmrelated{SymmetricGroup}
+\pmrelated{Presentationgroup}
+
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{pstricks}
+\usepackage{psfrag}
+\usepackage{graphicx}
+\usepackage{amsthm}
+%%\usepackage{xypic}
+
+\begin{document}
+In this entry, a Cayley graph of $S_3$, the group of permutations of $\{1,2,3\}$, will be investigated.
+
+Let $\varepsilon \in S_3$ denote the identity element, $\tau \in S_3$ be a transposition, and $\gamma \in S_3$ be a \PMlinkname{three-cycle}{SymmetricGroup}.  Then $\{\tau, \gamma \}$ is a generating set of $S_3$ and $\langle\tau, \gamma \vert \tau^2=\varepsilon, \gamma^3=\varepsilon, \tau\gamma =\gamma^2\tau\rangle$ is a presentation of $S_3$.  The corresponding Cayley graph $\Gamma(S_3,\{\tau, \gamma \})$ is:
+
+\begin{center}
+\begin{pspicture}(-7,-7)(7,7)
+\pscircle(0,0){6}
+\rput[a](0,6){.}
+\rput[l](-6.05,0){.}
+\rput[r](6.05,0){.}
+\rput[b](0,-6.5){$\gamma$}
+\rput[l](-5.6,3.2){$\gamma$}
+\rput[r](5.6,3.2){$\gamma$}
+\pscircle(0,4){2}
+\rput[l](-2.4,4){$\tau$}
+\rput[r](2.4,4){$\tau$}
+\psline(-2,4)(-2.1,4.1)
+\psline(-2,4)(-1.9,4.1)
+\psline(2,4)(1.9,3.9)
+\psline(2,4)(2.1,3.9)
+\pscircle(-3.4641,-2){2}
+\rput[b](-1.6,-3.4){$\tau$}
+\rput[a](-3.6,0.24){$\tau$}
+\psline(-3.4641,0)(-3.3641,0.1)
+\psline(-3.4641,0)(-3.3641,-0.1)
+\psline(-1.732,-3)(-1.732,-3.2)
+\psline(-1.732,-3)(-1.932,-3)
+\pscircle(3.4641,-2){2}
+\rput[b](1.6,-3.4){$\tau$}
+\rput[a](3.6,0.24){$\tau$}
+\psline(3.4641,0)(3.5641,0.1)
+\psline(3.4641,0)(3.5641,-0.1)
+\psline(1.732,-3)(1.873,-2.859)
+\psline(1.732,-3)(1.532,-3)
+\pspolygon(0,2)(-1.732,-1)(1.732,-1)
+\rput[b](0,-1.5){$\gamma$}
+\rput[l](-1.1,0.9){$\gamma$}
+\rput[r](1.1,0.9){$\gamma$}
+\psdots(0,6)(0,2)(-1.732,-1)(1.732,-1)(5.196,-3)(-5.196,-3)
+\psline(-5.196,3)(-5.196,3.2)
+\psline(-5.196,3)(-4.996,3)
+\psline(0,-6)(-0.1,-6.1)
+\psline(0,-6)(-0.1,-5.9)
+\psline(5.196,3)(5.055,2.859)
+\psline(5.196,3)(5.396,3)
+\psline(0,-1)(0.1,-1.1)
+\psline(0,-1)(0.1,-0.9)
+\psline(-0.866,0.5)(-0.725,0.359)
+\psline(-0.866,0.5)(-1.066,0.5)
+\psline(0.866,0.5)(1.007,0.641)
+\psline(0.866,0.5)(0.666,0.5)
+\end{pspicture}
+\end{center}
+
+If each of the edges is assigned a \PMlinkname{length}{BasicLength} of one, then the Cayley graph is a hyperbolic metric space, as it is 2 hyperbolic.  Thus, $S_3$ is a hyperbolic group.
+%%%%%
+%%%%%
+\end{document}

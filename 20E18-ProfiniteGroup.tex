@@ -1,0 +1,64 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ProfiniteGroup}
+\pmcreated{2013-03-22 12:48:50}
+\pmmodified{2013-03-22 12:48:50}
+\pmowner{djao}{24}
+\pmmodifier{djao}{24}
+\pmtitle{profinite group}
+\pmrecord{9}{33134}
+\pmprivacy{1}
+\pmauthor{djao}{24}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{20E18}
+\pmclassification{msc}{22C05}
+\pmsynonym{profinite}{ProfiniteGroup}
+\pmrelated{InverseLimit}
+\pmdefines{profinite topology}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic} 
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\newcommand{\ilim}{\,\underset{\longleftarrow}{\lim}\,}
+\begin{document}
+\section{Definition}
+A topological group $G$ is \emph{profinite} if it is isomorphic to the inverse limit of some projective system of finite groups. In other words, $G$ is profinite if there exists a directed set $I$, a collection of finite groups $\{H_i\}_{i \in I}$, and homomorphisms $\alpha_{ij}\colon H_j \to H_i$ for each pair $i,j \in I$ with $i \leq j$, satisfying
+\begin{enumerate}
+\item $\alpha_{ii} = 1$ for all $i \in I$,
+\item $\alpha_{ij} \circ \alpha_{jk} = \alpha_{ik}$ for all $i,j,k \in I$ with $i \leq j \leq k$,
+\end{enumerate}
+with the property that:
+\begin{itemize}
+\item $G$ is isomorphic as a group to the projective limit
+$$
+\ilim H_i := \left\{\left.(h_i) \in \prod_{i \in I} H_i\ \right|\ \alpha_{ij}(h_j) = h_i\ \text{ for all }\ i \leq j\right\}
+$$
+under componentwise multiplication.
+\item The isomorphism from $G$ to $\ilim H_i$ (considered as a subspace of $\prod H_i$) is a homeomorphism of topological spaces, where each $H_i$ is given the discrete topology and $\prod H_i$ is given the product topology.
+\end{itemize}
+The topology on a profinite group is called the {\em profinite topology}.
+\section{Properties}
+One can show that a topological group is profinite if and only if it is compact and totally disconnected. Moreover, every profinite group is residually finite.
+
+%%%%%
+%%%%%
+\end{document}

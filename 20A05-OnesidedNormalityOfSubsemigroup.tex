@@ -1,0 +1,117 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{OnesidedNormalityOfSubsemigroup}
+\pmcreated{2013-03-22 16:10:41}
+\pmmodified{2013-03-22 16:10:41}
+\pmowner{lars_h}{9802}
+\pmmodifier{lars_h}{9802}
+\pmtitle{one-sided normality of subsemigroup}
+\pmrecord{6}{38265}
+\pmprivacy{1}
+\pmauthor{lars_h}{9802}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{20A05}
+\pmdefines{left-normal}
+\pmdefines{right-normal}
+\pmdefines{left-normalizer}
+\pmdefines{right-normalizer}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\begin{document}
+Let $S$ be a semigroup. A subsemigroup $N$ of $S$ is said to be 
+\emph{left-normal} if $g N \subseteq N g$ for all $g \in S$ and 
+it is said to be \emph{right-normal} if $g N \supseteq N g$ for all 
+$g \in S$.
+One may similarly define \emph{left-normalizers}
+\[
+  \mathrm{LN}_S(N) := \{ g \in S \,\mid\, gN \subseteq Ng \}
+\]
+and \emph{right-normalizers}
+\[
+  \mathrm{RN}_S(N) := \{ g \in S \,\mid\, Ng \subseteq gN \}
+  \text{.}
+\]
+
+A left-normal subgroup $N$ of a \emph{group} $S$ is automatically 
+normal, since
+\[
+  g N \subseteq
+  N g =
+  g g^{-1} N g \subseteq
+  g N g^{-1} g = g N
+  \text{.}
+\]
+In is similarly shown for general $S$ and $N$ that if some $g \in 
+\mathrm{LN}_S(N)$ has an inverse $g^{-1}$ then $g^{-1} \in 
+\mathrm{RN}_S(N)$ and vice versa. Left- and right-normalizers 
+are always closed under multiplication (hence subsemigroups) 
+and contain the identity element of $S$ if there is one.
+
+An example of a left-normal but not right-normal $N \subseteq S$ 
+can be constructed using matrices under multiplication, if one takes
+\[
+  S = \Biggl\{ \begin{pmatrix} k& m \\ 0& 1 \end{pmatrix} 
+  \Biggm| k,m \in \mathbb{Z} \Biggr\}
+  \qquad\text{and}\qquad
+  N = \Biggl\{ \begin{pmatrix} 1& n \\ 0& 1 \end{pmatrix} 
+  \Biggm| n \in \mathbb{Z} \Biggr\}
+  \text{,}
+\]
+where one may note that $N$ is a group and $S$ is a monoid.
+Since
+\begin{align*}
+  \begin{pmatrix} k& m \\ 0& 1 \end{pmatrix} 
+  \begin{pmatrix} 1& n \\ 0& 1 \end{pmatrix} ={}&
+  \begin{pmatrix} k& kn+m \\ 0& 1 \end{pmatrix} 
+  \quad\text{and}\\
+  \begin{pmatrix} 1& n \\ 0& 1 \end{pmatrix}
+  \begin{pmatrix} k& m \\ 0& 1 \end{pmatrix} ={}& 
+  \begin{pmatrix} k& n+m \\ 0& 1 \end{pmatrix} 
+\end{align*}
+it follows that $gN \subseteq Ng$ for all $g \in S$, with 
+\PMlinkname{proper inclusion}{ProperSubset} 
+when $k \neq \pm 1$.
+
+
+The definition of left and 
+\PMlinkescapetext{right} \PMlinkescapetext{normality} 
+is somewhat arbitrary in the choice of whether to call 
+something the \PMlinkescapetext{right} or left form. 
+A reference supporting the choice documented here is:
+\begin{thebibliography}{8}
+\bibitem{MR0311830}
+  Karl Heinrich \textsc{Hofmann} and Michael \textsc{Mislove}: 
+  The centralizing theorem for left normal groups of units in 
+  compact monoids,
+  \textit{Semigroup Forum} \textbf{3} (1971/72),  no.~1, 31--42. 
+\end{thebibliography}
+It may also be observed that the combination `left normal' in semigroup 
+theory frequently occurs as part of the phrase `left normal band', 
+but in that case the etymology rather seems to be that `left' qualifies 
+the phrase `normal band'.
+
+%%%%%
+%%%%%
+\end{document}

@@ -1,0 +1,47 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ProofOfCayleysTheorem}
+\pmcreated{2013-03-22 12:30:50}
+\pmmodified{2013-03-22 12:30:50}
+\pmowner{Evandar}{27}
+\pmmodifier{Evandar}{27}
+\pmtitle{proof of Cayley's theorem}
+\pmrecord{5}{32751}
+\pmprivacy{1}
+\pmauthor{Evandar}{27}
+\pmtype{Proof}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{20B99}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic} 
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\begin{document}
+Let $G$ be a group, and let $S_G$ be the permutation group of the underlying set $G$.  For each $g\in G$, define $\rho_g : G\rightarrow G$ by $\rho_g (h) = gh$.  Then $\rho_g$ is invertible with inverse $\rho_{g^{-1}}$, and so is a permutation of the set $G$.
+
+Define $\Phi :G\rightarrow S_G$ by $\Phi (g) = \rho_g$.  Then $\Phi$ is a homomorphism, since $$(\Phi (gh))(x) = \rho_{gh}(x) = ghx = \rho_g(hx) = (\rho_g\circ\rho_h)(x) = ((\Phi (g))(\Phi (h)))(x)$$
+
+And $\Phi$ is injective, since if $\Phi (g) = \Phi (h)$ then $\rho_g = \rho_h$, so $gx = hx$ for all $x\in X$, and so $g=h$ as required.
+
+So $\Phi$ is an embedding of $G$ into its own permutation group.  If $G$ is finite of order $n$, then simply numbering the elements of $G$ gives an embedding from $G$ to $S_n$.
+%%%%%
+%%%%%
+\end{document}

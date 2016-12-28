@@ -1,0 +1,99 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{TheKernelOfAGroupHomomorphismIsANormalSubgroup}
+\pmcreated{2013-03-22 17:20:34}
+\pmmodified{2013-03-22 17:20:34}
+\pmowner{alozano}{2414}
+\pmmodifier{alozano}{2414}
+\pmtitle{the kernel of a group homomorphism is a normal subgroup}
+\pmrecord{8}{39698}
+\pmprivacy{1}
+\pmauthor{alozano}{2414}
+\pmtype{Theorem}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{20A05}
+\pmrelated{KernelOfAGroupHomomorphism}
+\pmrelated{NaturalProjection}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsthm}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\newtheorem{thm}{Theorem}
+\newtheorem{defn}{Definition}
+\newtheorem{prop}{Proposition}
+\newtheorem{lemma}{Lemma}
+\newtheorem{cor}{Corollary}
+
+\theoremstyle{definition}
+\newtheorem*{exa}{Example}
+
+% Some sets
+\newcommand{\Nats}{\mathbb{N}}
+\newcommand{\Ints}{\mathbb{Z}}
+\newcommand{\Reals}{\mathbb{R}}
+\newcommand{\Complex}{\mathbb{C}}
+\newcommand{\Rats}{\mathbb{Q}}
+\newcommand{\Gal}{\operatorname{Gal}}
+\newcommand{\Cl}{\operatorname{Cl}}
+\newcommand{\SL}{\operatorname{SL}}
+\newcommand{\GL}{\operatorname{GL}}
+\newcommand{\Ker}{\operatorname{Ker}}
+\begin{document}
+\PMlinkescapeword{simple} In this entry we show the following simple lemma:
+
+\begin{lemma}
+Let $G$ and $H$ be groups (with group operations $\ast_G$, $\ast_H$ and identity elements $e_G$ and $e_H$, respectively) and let $\Phi:G\to H$ be a group homomorphism. Then, the kernel of $\Phi$, i.e.
+$$\Ker(\Phi)=\{ g\in G : \Phi(g)=e_H\},$$
+is a normal subgroup of $G$.
+\end{lemma}
+\begin{proof}
+Let $G,H$ and $\Phi$ be as in the statement of the lemma and let $g\in G$ and $k\in \Ker(\Phi)$. Then, $\Phi(k)=e_H$ by definition and:
+\begin{eqnarray*}
+\Phi(g \, \ast_G \, k \, \ast_G \, g^{-1}) &=& \Phi(g)\ast_H \Phi(k) \ast_H \Phi(g^{-1})\\
+& = & \Phi(g)\ast_H ( e_H ) \ast_H \Phi(g^{-1})\\
+& = & \Phi(g) \ast_H \Phi(g^{-1}) \\
+& = & \Phi(g) \ast_H \Phi(g)^{-1}\\
+& = & e_H,
+\end{eqnarray*}
+where we have used several times the properties of group homomorphisms and the properties of the identity element $e_H$. Thus, $\Phi(gkg^{-1})=e_H$ and $gkg^{-1}\in G$ is also an element of the kernel of $\Phi$. Since $g\in G$ and $k\in \Ker(\Phi)$ were arbitrary, it follows that $\Ker(\Phi)$ is normal in $G$.
+\end{proof}
+
+Conversely:
+
+\begin{lemma}
+Let $G$ be a group and let $K$ be a normal subgroup of $G$. Then there exists a group homomorphism $\Phi:G\to H$, for some group $H$, such that the kernel of $\Phi$ is precisely $K$.
+\end{lemma}
+\begin{proof}
+Simply set $H$ equal to the quotient group $G/K$ and define $\Phi:G \to G/K$ to be the natural projection from $G$ to $G/K$ (i.e. $\Phi$ sends $g\in G$ to the coset $gK$). Then it is clear that the kernel of $\Phi$ is precisely formed by those elements of $K$.
+\end{proof}
+
+Although the first lemma is very simple, it is very useful when one tries to prove that a subgroup is normal.
+
+\begin{exa}
+Let $F$ be a field. Let us prove that the special linear group $\SL(n,F)$ is normal inside the general linear group $\GL(n,F)$, for all $n\geq 1$. By the lemmas, it suffices to construct a homomorphism of $\GL(n,F)$ with $\SL(n,F)$ as kernel. The determinant of matrices is the homomorphism we are looking for. Indeed:
+$$\det : \GL(n,F) \to F^\times$$
+is a group homomorphism from $\GL(n,F)$ to the multiplicative group $F^\times$ and, by definition, the kernel is precisely $\SL(n,F)$, i.e. the matrices with determinant $=1$. Hence, $\SL(n,F)$ is normal in $\GL(n,F)$.
+\end{exa}
+%%%%%
+%%%%%
+\end{document}

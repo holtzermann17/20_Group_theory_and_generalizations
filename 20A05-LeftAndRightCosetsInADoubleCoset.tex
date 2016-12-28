@@ -1,0 +1,72 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{LeftAndRightCosetsInADoubleCoset}
+\pmcreated{2013-03-22 18:35:10}
+\pmmodified{2013-03-22 18:35:10}
+\pmowner{asteroid}{17536}
+\pmmodifier{asteroid}{17536}
+\pmtitle{left and right cosets in a double coset}
+\pmrecord{7}{41312}
+\pmprivacy{1}
+\pmauthor{asteroid}{17536}
+\pmtype{Theorem}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{20A05}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\begin{document}
+\PMlinkescapeword{right}
+
+Let $H$ and $K$ be subgroups of a group $G$. Every double coset $HgK$, with $g \in G$, is a union of \PMlinkname{right}{Coset} or left cosets, since
+\begin{align*}
+HgK = \bigcup_{k \in K} Hgk\; = \bigcup_{h \in H} hgK,
+\end{align*}
+but these unions need not be disjoint. In particular, from the above equality we cannot say how many right (or left) cosets fit in a double coset.
+
+The following proposition aims to clarify this.
+
+$\,$
+
+{\bf \PMlinkescapetext{Proposition} -} Let $H$ and $K$ be subgroups of a group $G$ and $g \in G$. We have that
+\begin{align*}
+HgK = \bigcup_{[k]\, \in\, (K \cap g^{-1}Hg) \backslash K} Hgk\; = \bigcup_{[h]\, \in\, H / (H \cap gKg^{-1})} hgK
+\end{align*}
+hold as disjoint unions. In particular, the number of right and left cosets in $HgK$ is respectively given by
+\begin{align*}
+\#(H \backslash HgK) = [K: K \cap g^{-1}Hg]\\
+\#(HgK/K) =[H: H \cap gKg^{-1}]
+\end{align*}
+
+\subsection{Remarks}
+
+\begin{itemize}
+\item The number of right and left cosets in a double coset does not coincide in general, not \PMlinkescapetext{even} for double cosets of the form $HgH$.
+\end{itemize}
+
+\begin{thebibliography}{9}
+\bibitem{krieg} A. Krieg, \emph{\PMlinkescapetext{Hecke algebras}}, Mem. Amer. Math. Soc., no. 435, vol. 87, 1990.
+\end{thebibliography}
+%%%%%
+%%%%%
+\end{document}

@@ -1,0 +1,65 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{AutomorphismGroupOfACyclicGroup}
+\pmcreated{2013-03-22 18:42:35}
+\pmmodified{2013-03-22 18:42:35}
+\pmowner{rm50}{10146}
+\pmmodifier{rm50}{10146}
+\pmtitle{automorphism group of a cyclic group}
+\pmrecord{6}{41475}
+\pmprivacy{1}
+\pmauthor{rm50}{10146}
+\pmtype{Theorem}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{20A05}
+\pmclassification{msc}{20F28}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\newcommand{\Ints}{\mathbb{Z}}
+\DeclareMathOperator{\Aut}{Aut}
+\newcommand{\UI}[1]{(\Ints/{#1}\Ints)^{\times}}
+\newtheorem{thm}{Theorem}
+\begin{document}
+\begin{thm} The automorphism group of the cyclic group $\Ints/n\Ints$ is $\UI{n}$, which is of order $\phi(n)$ (here $\phi$ is the Euler totient function).
+\end{thm}
+\begin{proof} Choose a generator $x$ for $\Ints/n\Ints$. If $\rho\in \Aut(\Ints/n\Ints)$, then $\rho(x) = x^a$ for some integer $a$ (defined up to multiples of $n$); further, since $x$ generates $\Ints/n\Ints$, it is clear that $a$ uniquely determines $\rho$. Write $\rho_a$ for this automorphism. Since $\rho_a$ is an automorphism, $x^a$ is also a generator, and thus $a$ and $n$ are relatively prime\footnote{
+If they were not, say $(a,n)=d$, then $(x^a)^{n/d} = (x^{a/d})^n=1$ so that $x^a$ would not generate.}. Clearly, then, every $a$ relatively prime to $n$ induces an automorphism. We can therefore define a surjective map
+\[
+  \Phi : \Aut(\Ints/n\Ints) \to \UI{n}: \rho_a\mapsto a\pmod n
+\]
+$\Phi$ is also obviously injective, so all that remains is to show that it is a group homomorphism. But for every $a,b\in\UI{n}$, we have
+\[
+  (\rho_a\circ\rho_b)(x) = \rho_a(x^b) = (x^b)^a = x^{ab} = \rho_{ab}(x)
+\]
+and thus
+\[
+  \Phi(\rho_a\circ\rho_b) = \Phi(\rho_{ab}) = ab\pmod n = \Phi(\rho_a)\Phi(\rho_b)
+\]
+\end{proof}
+\begin{thebibliography}{10}
+\bibitem{bib:df}
+Dummit,~D.,~Foote,~R.M., \emph{Abstract Algebra, Third Edition}, Wiley, 2004.
+\end{thebibliography}
+%%%%%
+%%%%%
+\end{document}

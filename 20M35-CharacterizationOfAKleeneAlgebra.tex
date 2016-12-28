@@ -1,0 +1,94 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{CharacterizationOfAKleeneAlgebra}
+\pmcreated{2013-03-22 17:02:40}
+\pmmodified{2013-03-22 17:02:40}
+\pmowner{CWoo}{3771}
+\pmmodifier{CWoo}{3771}
+\pmtitle{characterization of a Kleene algebra}
+\pmrecord{12}{39333}
+\pmprivacy{1}
+\pmauthor{CWoo}{3771}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{20M35}
+\pmclassification{msc}{68Q70}
+\pmdefines{$^*$-continuous}
+
+\usepackage{amssymb,amscd}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{mathrsfs}
+\usepackage{multicol}
+\setlength\columnsep{40pt}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+\usepackage{amsthm}
+% making logically defined graphics
+%%\usepackage{xypic}
+\usepackage{pst-plot}
+\usepackage{psfrag}
+
+% define commands here
+\newtheorem{prop}{Proposition}
+\newtheorem{thm}{Theorem}
+\newtheorem{ex}{Example}
+\newcommand{\real}{\mathbb{R}}
+\newcommand{\pdiff}[2]{\frac{\partial #1}{\partial #2}}
+\newcommand{\mpdiff}[3]{\frac{\partial^#1 #2}{\partial #3^#1}}
+\begin{document}
+Let $A$ be an idempotent semiring with a unary operator $*$ on $A$.  The following are equivalent
+\begin{enumerate}
+\item $ac+b\le c$ implies $a^*b\le c$,
+\item $ab\le b$ implies $a^*b\le b$.
+\end{enumerate}
+\begin{proof} $(1\Rightarrow 2)$.  Assume $ab\le b$.  So $ab+b=b$.  Then $(ab+b)+b=ab+(b+b)=ab+b=b$, which implies $ab+b\le b$.  By $1$, this means $a^*b\le b$ as desired.  $(2\Rightarrow 1)$.  Assume $ac+b\le c$.  Since $0\le b$, we get $ac=ac+0\le ac+b\le c$.  Consequently $a^*c \le c$.
+\end{proof}
+
+From the above observation, we see that we get an equivalent definition of a Kleene algebra if the axioms
+$$ac+b\le c\mbox{ implies }a^*b\le c\qquad \mbox{and}\qquad ca+b\le c\mbox{ implies }ba^*\le c$$
+are replaced by
+$$ab\le b\mbox{ implies }a^*b\le b\qquad \mbox{and}\qquad ba\le b\mbox{ implies }ba^*\le b.$$
+
+Let $A$ be a Kleene algebra.  Some of the interesting properties of $^*$ on $A$ are the following:
+\begin{enumerate}
+\begin{multicols}{2}{
+\item $0^*=1$.\\[-3ex]
+\item $a^n\le a^*$ for all non-negative integers $n$.\\[-3ex]
+\item $1^*a\le a$.\\[-3ex]
+\item $1^*=1$.\\[-3ex]
+\item $1+a^*=a^*$.\\[-3ex]
+\item $a\le b$ implies $a^*\le b^*$.\\[-3ex]
+\item $a^*a^*=a^*$.\\[-3ex]
+\item $a^{**}=a^*$.\\[-3ex]
+\item $1+aa^*=a^*$.\\[-3ex]
+\item $1+a^*a=a^*$.\\[-3ex]
+\item $ac\le cb$ implies $a^*c\le cb^*$.\\[-3ex]
+\item $cb\le ac$ implies $cb^*\le a^*c$.\\[-3ex]
+\item $(ab)^*a=a(ba)^*$.\\[-3ex]
+\item $1+a(ba)^*b=(ab)^*$.\\[-3ex]
+\item If $c=c^2$ and $1\le c$, then $c^*=c$.\\[-3ex]
+\item $(a+b)^*=a^*(ba^*)^*$.\\[-3ex]
+}\end{multicols}
+\end{enumerate}
+
+\textbf{Remarks}.  
+\begin{itemize}
+\item
+Properties 9 and 10 imply that the axioms $1+aa^*\le a^*$ and $1+a^*a\le a^*$ of a Kleene algebra can be replaced by these stronger ones.
+\item
+Though in the example of Kleene algebras formed by regular expressions, $$a^*=\bigcup \lbrace a^i\mid i=0,1,2,\ldots \rbrace,$$ and we see that $a^*$ is the least upper bound of the $a^i$'s, this is not a property of a general Kleene algebra.  A counterexample of this can be found in Kozen's article, see below.  He calls a Kleene algebra $K$ \emph{$^*$-continuous} if $a^*\le b$ whenever $a^i\le b$ for any $i\in \mathbb{N}\cup\lbrace0\rbrace$, and $a,b\in K$.
+\end{itemize}
+
+\begin{thebibliography}{8}
+\bibitem{dk} D. Kozen, {\em \PMlinkexternal{On Kleene Algebras and Closed Semirings}{http://www.cs.cornell.edu/~kozen/papers/kacs.ps}} (1990).
+\end{thebibliography}
+
+
+%%%%%
+%%%%%
+\end{document}

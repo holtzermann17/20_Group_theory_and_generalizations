@@ -1,0 +1,81 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ProofOfFrobeniusReciprocity}
+\pmcreated{2013-03-22 18:36:23}
+\pmmodified{2013-03-22 18:36:23}
+\pmowner{rm50}{10146}
+\pmmodifier{rm50}{10146}
+\pmtitle{proof of Frobenius reciprocity}
+\pmrecord{5}{41339}
+\pmprivacy{1}
+\pmauthor{rm50}{10146}
+\pmtype{Proof}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{20C99}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\newcommand{\Abs}[1]{\left\lvert #1\right\rvert}
+\newcommand{\ind}{\negmedspace\uparrow}
+\newcommand{\res}{\negmedspace\downarrow}
+%% \theoremstyle{plain} %% This is the default
+\newtheorem{thm}{Theorem}[section]
+\newtheorem{cor}[thm]{Corollary}
+\newtheorem{lem}[thm]{Lemma}
+\newtheorem{prop}[thm]{Proposition}
+
+\theoremstyle{definition}
+\newtheorem{defn}[thm]{Definition}
+\begin{document}
+We prove the slightly more general result
+\begin{thm} If $G$ is a finite group with subgroup $H$, $\alpha$ a class function on $H$ and $\beta$ a class function on $G$, then
+\[
+  \langle \alpha\ind_H^G,\beta \rangle_G = \langle \alpha,\beta\res_H^G\rangle_H
+\]
+\end{thm}
+Here we use $\ind_H^G$ to refer to the \PMlinkname{induction}{InducedRepresentation} to $G$ of a class function on $H$, and $\res_H^G$ to refer to the \PMlinkname{restriction}{RestrictionRepresentation} of a class function on $G$ to one on $H$.
+\begin{proof}
+\[
+  \langle\alpha\ind_H^G,\beta\rangle_G 
+  = \frac{1}{\Abs{G}}\sum_{g\in G}\left(\frac{1}{\Abs{H}}\sum_{\substack{t\in G\\t^{-1}gt\in H}}
+      \alpha(t^{-1}gt)\right)\overline{\beta(g)} 
+  = \frac{1}{\Abs{G}\Abs{H}}\sum_{t\in G}\left(\sum_{\substack{g\in G\\t^{-1}gt\in H}} 
+      \alpha(t^{-1}gt)\right)\overline{\beta(g)}
+\]
+Since $\beta$ is a class function, this is the same as
+\[
+  \frac{1}{\Abs{G}\Abs{H}} \sum_{\substack{t\in G\\g\in G\\t^{-1}gt\in H}} 
+    \alpha(t^{-1}gt)\overline{\beta(t^{-1}gt)}
+  =\frac{1}{\Abs{G}\Abs{H}}\sum_{h\in H}\sum_{\substack{t\in G\\g\in G\\t^{-1}gt=h}} 
+    \alpha(h)\overline{\beta(h)}
+\]
+Clearly for every $h\in H, t\in G$ there is a unique $g\in G$ with $t^{-1}gt=h$, so every element of $H$ is counted $\Abs{G}$ times by the \PMlinkescapetext{inner} sum. Thus the sum is equal to
+\[
+  \frac{\Abs{G}}{\Abs{G}\Abs{H}}\sum_{h\in H} \alpha(h)\overline{\beta(h)} 
+  = \frac{1}{\Abs{H}}\sum_{h\in H} \alpha(h)\overline{\beta(h)} 
+  = \langle \alpha,\beta\res_H^G\rangle_H
+\]\qedhere
+
+\end{proof}
+%%%%%
+%%%%%
+\end{document}

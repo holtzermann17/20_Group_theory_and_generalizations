@@ -1,0 +1,50 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{FullFamiliesOfHopfiancoHopfianGroups}
+\pmcreated{2013-03-22 18:36:05}
+\pmmodified{2013-03-22 18:36:05}
+\pmowner{joking}{16130}
+\pmmodifier{joking}{16130}
+\pmtitle{full families of Hopfian (co-Hopfian) groups}
+\pmrecord{7}{41332}
+\pmprivacy{1}
+\pmauthor{joking}{16130}
+\pmtype{Theorem}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{20A99}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\begin{document}
+\textbf{Proposition.} Let $\{ G_i\}_{i\in I}$ be a full family of groups. Then each $G_i$ is Hopfian (co-Hopfian) if and only if $\bigoplus_{i\in I}G_i$ is Hopfian (co-Hopfian).
+
+\textit{Proof.} ,,$\Rightarrow$'' Let $$f:\bigoplus_{i\in I}G_i\to \bigoplus_{i\in I}G_i$$ be a surjective (injective) homomorphism. Since $\{ G_i\}_{i\in I}$ is full, then there exists family of homomorphisms $\{ f_i:G_i\to G_i\}_{i\in I}$ such that $$f=\bigoplus_{i\in I} f_i.$$ Of course since $f$ is surjective (injective), then each $f_i$ is surjective (injective). Thus each $f_i$ is an isomorphism, because each $G_i$ is Hopfian (co-Hopfian). Therefore $f$ is an isomorphism, because $$f^{-1}=\bigoplus_{i\in I} f_{i}^{-1}.\ \ \square$$
+
+,,$\Leftarrow$'' Fix $j\in I$ and assume that $f_j:G_j\to G_j$ is a surjective (injective) homomorphism. For $i\in I$ such that $i\neq j$ define $f_i:G_i\to G_i$ to be any automorphism of $G_i$. Then $$\bigoplus_{i\in I} f_i:\bigoplus_{i\in I}G_i \to \bigoplus_{i\in I} G_i$$ is a surjective (injective) group homomorphism. Since $\bigoplus_{i\in I}G_i$ is Hopfian (co-Hopfian) then $\bigoplus_{i\in I}f_i$ is an isomorphism. Thus each $f_i$ is an isomorphism. In particular $f_j$ is an isomorphism, which completes the proof. $\square$
+
+\textbf{Example.} Let $\mathcal{P}=\{p\in\mathbb{N}\ |\ p\mbox{ is prime}\}$ and $\mathcal{P}_0$ be any subset of $\mathcal{P}$. Then $$\bigoplus_{p\in P_0}\mathbb{Z}_{p}$$ is both Hopfian and co-Hopfian.
+
+\textit{Proof.} It is easy to see that $\{\mathbb{Z}_{p}\}_{p\in\mathcal{P}}$ is full, so $\{\mathbb{Z}_{p}\}_{p\in\mathcal{P}_0}$ is also full. Moreover for any $p\in P_0$ the group $\mathbb{Z}_{p}$ is finite, so both Hopfian and co-Hopfian. Therefore (due to proposition) $$\bigoplus_{p\in P_0}\mathbb{Z}_{p}$$ is both Hopfian and co-Hopfian. $\square$
+%%%%%
+%%%%%
+\end{document}

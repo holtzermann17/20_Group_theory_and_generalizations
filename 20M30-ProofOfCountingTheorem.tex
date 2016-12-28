@@ -1,0 +1,49 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ProofOfCountingTheorem}
+\pmcreated{2013-03-22 12:47:07}
+\pmmodified{2013-03-22 12:47:07}
+\pmowner{n3o}{216}
+\pmmodifier{n3o}{216}
+\pmtitle{proof of counting theorem}
+\pmrecord{5}{33099}
+\pmprivacy{1}
+\pmauthor{n3o}{216}
+\pmtype{Proof}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{20M30}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\begin{document}
+Let $N$ be the cardinality of the set of all the couples $(g,x)$ such that $g \cdot x = x$. For each $g \in G$, there exist $\operatorname{stab}_g(X)$ couples with $g$ as the first element, while for each $x$, there are $|G_x|$ couples with $x$ as the second element. Hence the following equality holds:
+\[ N = \sum_{g \in G} \operatorname{stab}_g(X) = \sum_{x \in X} |G_x|. \] 
+From the orbit-stabilizer theorem it follows that:
+\[ N = |G| \sum_{x \in X} \frac{1}{|G(x)|}. \]
+Since all the $x$ belonging to the same orbit $G(x)$ contribute with
+\[ |G(x)| \frac{1}{|G(x)|} = 1 \]
+in the sum, then $\sum_{x\in X} 1/|G(x)|$ precisely equals the number of distinct orbits $s$. We have therefore
+\[ \sum_{g \in G} \operatorname{stab}_g(X) = |G| s, \]
+which proves the theorem.
+%%%%%
+%%%%%
+\end{document}

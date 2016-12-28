@@ -1,0 +1,86 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{AscendingSeries}
+\pmcreated{2013-03-22 16:14:55}
+\pmmodified{2013-03-22 16:14:55}
+\pmowner{yark}{2760}
+\pmmodifier{yark}{2760}
+\pmtitle{ascending series}
+\pmrecord{12}{38353}
+\pmprivacy{1}
+\pmauthor{yark}{2760}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{20E15}
+\pmclassification{msc}{20F22}
+\pmrelated{DescendingSeries}
+\pmrelated{SubnormalSeries}
+\pmrelated{SubnormalSubgroup}
+\pmdefines{ascending normal series}
+\pmdefines{ascendant subgroup}
+\pmdefines{ascendant}
+\pmdefines{hyperabelian group}
+\pmdefines{hyperabelian}
+\pmdefines{Gruenberg group}
+
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\def\normal{\trianglelefteq}
+\def\asc{\operatorname{asc}}
+
+\begin{document}
+\PMlinkescapeword{factor}
+\PMlinkescapeword{factors}
+\PMlinkescapeword{property}
+\PMlinkescapeword{quotient}
+\PMlinkescapeword{quotients}
+\PMlinkescapeword{satisfy}
+\PMlinkescapeword{series}
+\PMlinkescapeword{term}
+\PMlinkescapeword{terms}
+
+Let $G$ be a group.
+
+An \emph{ascending series} of $G$
+is a family $(H_\alpha)_{\alpha\le\beta}$ of subgroups of $G$,
+where $\beta$ is an ordinal,
+such that $H_0=\{1\}$ and $H_\beta=G$,
+and $H_\alpha\normal H_{\alpha+1}$ for all $\alpha<\beta$,
+and $$\bigcup_{\alpha<\delta}H_\alpha=H_\delta$$
+whenever $\delta\le\beta$ is a limit ordinal.
+
+Note that this is a generalization of the concept of a subnormal series.
+Compare also the dual concept of a descending series.
+
+Given an ascending series $(H_\alpha)_{\alpha\le\beta}$,
+the subgroups $H_\alpha$ are called the \emph{terms} of the series
+and the \PMlinkname{quotients}{QuotientGroup} $H_{\alpha+1}/H_\alpha$
+are called the \emph{factors} of the series.
+
+A subgroup of $G$ that is a term of some ascending series of $G$
+is called an \emph{ascendant subgroup} of $G$.
+The notation $H\asc G$ is sometimes used
+to indicate that $H$ is an ascendant subgroup of $G$.
+
+The groups in which every subgroup is ascendant
+are precisely the groups that satisfy the normalizer condition.
+Groups in which every cyclic subgroup is ascendant
+are called \emph{Gruenberg groups}.
+It can be shown that in a Gruenberg group,
+every finitely generated subgroup is ascendant and nilpotent
+(and so, in particular, Gruenberg groups are locally nilpotent).
+
+An ascending series of $G$
+in which all terms are normal in $G$
+is called an \emph{ascending normal series}.
+
+Let $\mathfrak{X}$ be a property of groups.
+A group is said to be \emph{hyper-$\mathfrak{X}$}
+if it has an ascending normal series
+whose factors all have property $\mathfrak{X}$.
+So, for example, a \emph{hyperabelian group}
+is a group that has an ascending normal series with abelian factors.
+Hyperabelian groups are sometimes called \emph{$SI^*$-groups}.
+%%%%%
+%%%%%
+\end{document}

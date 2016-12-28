@@ -1,0 +1,387 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{NonabelianGroup}
+\pmcreated{2013-03-22 14:02:04}
+\pmmodified{2013-03-22 14:02:04}
+\pmowner{drini}{3}
+\pmmodifier{drini}{3}
+\pmtitle{nonabelian group}
+\pmrecord{10}{35138}
+\pmprivacy{1}
+\pmauthor{drini}{3}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{20A05}
+\pmsynonym{non-abelian group}{NonabelianGroup}
+\pmsynonym{noncommutative group}{NonabelianGroup}
+\pmsynonym{non-commutative group}{NonabelianGroup}
+\pmrelated{AbelianGroup2}
+
+%fancy typeface/symbols
+%\usepackage{beton}
+%\usepackage{concmath}
+%\usepackage{stmaryrd}
+%margins
+%\usepackage{simplemargins}
+%\usepackage{multicol}
+%\setleftmargin{1in}
+%\setrightmargin{1in}
+%\settopmargin{1in}
+%\setbottommargin{1in}
+% symbols
+\usepackage{amssymb}
+\usepackage{amsfonts}
+\usepackage[mathscr]{euscript}
+\usepackage[T1]{fontenc}
+% graphics
+%\usepackage{pstricks}
+% math
+\usepackage{amsmath}
+\usepackage{amsopn}
+\usepackage{amstext}
+\usepackage{amsthm}
+% only one theoremstyle 
+%\theoremstyle{definition}   		
+%\newtheorem{exercise}{}[subsection]
+% math operators
+\DeclareMathOperator{\pipe}{{\big |} \hspace{-2.85pt} {\big |}} 
+\DeclareMathOperator{\et}{\&}
+% misc math stuff
+\newcommand{\vol}{\mathrm{vol}}
+\newcommand{\id}{\mathrm{id}}
+\newcommand{\domain}{\mathrm{domain}}
+\newcommand{\supp}{\mathrm{supp}}
+\newcommand{\diam}{\mathrm{diameter}}
+\newcommand{\incl}{\mathrm{incl}}
+\newcommand{\interior}{\mathrm{interior}}
+\newcommand{\triv}{\mathrm{triv}}
+\newcommand{\image}{\mathrm{image}}
+\newcommand{\closure}{\mathrm{closure}}
+\newcommand{\degree}{\mathrm{degree}}
+\newcommand{\im}{\mathrm{im}}
+\newcommand{\esssup}{\mathrm{ess\ sup}}
+\newcommand{\openset}{\mathrel{{\mathchoice{\rlap{$\subset$}{\;\circ}}%
+   {\rlap{$\subset$}{\;\circ}}%
+   {\rlap{$\scriptstyle\subset$}{\;\circ}}%
+   {\rlap{$\scriptscriptstyle\subset$}{\;\circ}}}}}
+
+% foreignisms
+\newcommand{\ie}{\emph{i.e.},}
+\newcommand{\Ie}{\emph{I.e.},}
+\newcommand{\cf}{\emph{cf.}}
+\newcommand{\eg}{\emph{e.g.},}
+\newcommand{\Eg}{\emph{E.g.},}
+\newcommand{\ala}{\emph{\'a la}}
+% labels for spaces
+\newcommand{\N}{\mathbf{N}}
+\newcommand{\Z}{\mathbf{Z}}
+\newcommand{\Q}{\mathbf{Q}}
+\newcommand{\C}{\mathbf{C}}
+\newcommand{\CP}{\mathbf{CP}}
+\newcommand{\RP}{\mathbf{RP}}
+\newcommand{\R}{\mathbf{R}}
+\newcommand{\Rtw}{\mathbf{R}^2}
+\newcommand{\Rth}{\mathbf{R}^3}
+\newcommand{\Rfo}{\mathbf{R}^4}
+\newcommand{\Rfi}{\mathbf{R}^5}
+\newcommand{\Rp}{\mathbf{R}^p}
+\newcommand{\Rn}{\mathbf{R}^n}
+\newcommand{\Rnmon}{\mathbf{R}^{n-1}}
+\newcommand{\Rnpon}{\mathbf{R}^{n+1}}
+\newcommand{\Rmpon}{\mathbf{R}^{m+1}}
+\newcommand{\RNpon}{\mathbf{R}^{N+1}}
+\newcommand{\Rtwn}{\mathbf{R}^{2n}}
+\newcommand{\RN}{\mathbf{R}^N}
+\newcommand{\Rm}{\mathbf{R}^m}
+\newcommand{\Hon}{\mathbf{H}^1}
+\newcommand{\Htw}{\mathbf{H}^2}
+\newcommand{\Hth}{\mathbf{H}^3}
+\newcommand{\Hn}{\mathbf{H}^n}
+\newcommand{\Torus}{\mathbf{T}}
+\newcommand{\Ttw}{\mathbf{T}^2}
+\newcommand{\Tth}{\mathbf{T}^3}
+\newcommand{\Tn}{\mathbf{T}^n}
+\newcommand{\Son}{\mathbf{S}^1}
+\newcommand{\Stw}{\mathbf{S}^2}
+\newcommand{\Sth}{\mathbf{S}^3}
+\newcommand{\Sfo}{\mathbf{S}^4}
+\newcommand{\Sfi}{\mathbf{S}^5}
+\newcommand{\SN}{\mathbf{S}^N}
+\newcommand{\Sn}{\mathbf{S}^n}
+\newcommand{\Sm}{\mathbf{S}^m}
+\newcommand{\Smmon}{\mathbf{S}^{m-1}}
+\newcommand{\Snmon}{\mathbf{S}^{n-1}}
+\newcommand{\Snmtw}{\mathbf{S}^{n-2}}
+\newcommand{\Hnmon}{\mathbf{H}^{n-1}}
+\newcommand{\Ton}{\mathbf{T}^1}
+\newcommand{\T}{\mathbf{T}}
+% differential operators
+\newcommand{\pd}[2]{\frac{\partial #1}{\partial #2}}
+\newcommand{\pkd}[3]{\frac{\partial^{#3} #1}{\partial #2^{#3}}}
+\newcommand{\dkd}[3]{\frac{d^{#3} #1}{d#2^{#3}}}
+\newcommand{\td}[2]{\frac{d #1}{d #2}}
+\newcommand{\pdat}[3]{\left . \frac{\partial #1}{\partial #2}\right|_{#3}}
+\newcommand{\dbyd}[1]{ \frac{d}{d #1}}
+
+% Fri Oct  3 11:00:53 2003 -- should check at some point to see whether the replaced versions are actually used at all, I don't think so
+\newcommand{\ddk}[3]{\frac{d^{#3} #1}{d#2^{#3}}}
+% replaces...
+\newcommand{\dbydk}[2]{ \frac{d^{#2}}{d #1^{#2}}}
+
+\newcommand{\ppk}[3]{\frac{\partial^{#3} #1}{\partial #2^{#3}}}
+% replaces...
+\newcommand{\pbypk}[2]{ \frac{\partial^{#2}}{\partial #1^{#2}}}
+
+\newcommand{\pp}[2]{\frac{\partial #1}{\partial #2}}
+% replaces...
+\newcommand{\pbyp}[1]{ \frac{\partial}{\partial #1}}
+
+\newcommand{\ddat}[3]{\left .\frac{d #1}{d #2}\right|_{#3}}
+% replaces...
+\newcommand{\dbydat}[2]{\left . \frac{d}{d #1} \right|_{#2}}
+
+\newcommand{\ppkat}[4]{\left .\frac{\partial^{#3} #1}{\partial #2^{#3}}\right|_{#4}}
+
+\newcommand{\ddkat}[4]{\left .\frac{d^{#3} #1}{d#2^{#3}}\right|_{#4}}
+
+% counters for new lists
+%\newcounter{alistctr}
+%\newcounter{Alistctr}
+\newcounter{rlistctr}
+\newcounter{Rlistctr}
+\newcounter{123listctr}
+\newcounter{123listcolonstylectr}
+
+% a,b,c    - small latin letter list
+\newenvironment{alist}{
+\indent \begin{list}{(\alph{alistctr})}{\usecounter{alistctr}}}
+                      {\end{list}\setcounter{alistctr}{0}} 
+% A,B,C    - LARGE LATIN LETTER LIST
+\newenvironment{Alist}{
+\indent \begin{list}{(\Alph{Alistctr})}{\usecounter{Alistctr}}
+                      }
+                      {\end{list}\setcounter{Alistctr}{0}}
+% i,ii,iii - small roman numeral list
+\newenvironment{rlist}{
+\indent \begin{list}{(\roman{rlistctr})}{\usecounter{rlistctr}}
+                      }
+                      {\end{list}\setcounter{rlistctr}{0}} 
+% I,II,III - large roman numeral list
+\newenvironment{Rlist}{
+\indent \begin{list}{(\Roman{Rlistctr})}{\usecounter{Rlistctr}}
+                      }
+                      {\end{list}\setcounter{Rlistctr}{0}}
+%1,2,3 - arabic numeral list
+\newenvironment{123list}{
+\indent \begin{list}{(\arabic{123listctr})}{\usecounter{123listctr}}
+                      }
+                      {\end{list}\setcounter{123listctr}{0}} 
+
+%1:,2:,3: - arabic numeral list with colon decoration
+\newenvironment{123listcolonstyle}{\indent \begin{list}{\arabic{123listcolonstylectr}:}{\usecounter{123listcolonstylectr}}}
+                      {\end{list}\setcounter{123listcolonstylectr}{0}}
+
+% environment for definitions
+\def\defn#1{\addcontentsline{toc}{subsection}{$\ast$} {\footnotesize \noindent \begin{123listcolonstyle} \setlength{\itemsep}{0em} \setlength{\topsep}{0em} \setlength{\parsep}{0em} #1 \end{123listcolonstyle}}}
+
+%environment for proofs
+\def\proof#1{\par {\footnotesize \indent \begin{tabular}{ll} #1  \end{tabular}}}
+
+%% \include{packages}
+%% \include{renewed_commands}
+%% \include{simple_theorems}
+%% \include{abbreviations}
+%% \include{spaces}
+%% \include{new_environments}
+%% \include{margins}
+%% \include{mathoperators}
+%% \include{differentiation}
+%% \include{limited_things}
+%% \include{argawarga}
+\begin{document}
+A group is said to be \emph{nonabelian}, or \emph{noncommutative}, if
+has elements which do not commute, that is, if there exist $a$ and $b$
+in the group such that $ab \neq ba$.  Equivalently, a group is
+nonabelian if there exist $a$ and $b$ in the group such that the
+commutator $[a,b]$ is not equal to the identity of the group.  There
+exist many natural nonabelian groups, with order as small as $6$.
+While any group for which the square map is a homomorphism is abelian,
+there exist nonabelian groups of order as small as $27$ for which the
+cube map is a homomorphism.
+
+In the first section we give a way to visualize the group of rotations
+of a sphere and prove that it is nonabelian.  This should be readable
+by an undergraduate student in algebra.  In the second section, we
+discuss groups admitting a cube map and show that there are small 
+nonabelian examples.  The second section is somewhat more technical 
+than the first and will require more facility with group theory, 
+especially working with finitely presented groups and the commutator 
+calculus.
+
+\section{Concrete examples of nonabelian groups}
+
+Although most number systems we use are abelian by design, there exist
+quite natural nonabelian groups.  Perhaps the simplest example to
+visualize is given by the group of rotations of a sphere.\footnote{The
+treatment we give here is informal.  For a more formal treatment of
+the group of rotations, consult the entries ``\PMlinkname{Rotation
+matrix}{RotationMatrix}'' and ``\PMlinkname{Dimension of the special
+orthogonal group}{DimensionOfTheSpecialOrthogonalGroup}''.}  We can
+compose two rotations by performing them in sequence, and we can
+invert a rotation by rotating in the opposite direction, so rotations
+do form a group.  To follow what rotation does to the sphere, imagine
+that inside is suspended a copy of Marshall Hall's classic text {\it
+The Theory of Groups}.  We will keep track of three pieces of
+information, namely, the directions that the front cover, the spine, and
+the bottom of the book face.  When the sphere is in the identity position,
+the front cover faces the reader, the spine faces the left, and the
+bottom of the book is oriented downward.
+
+In preparation for verifying that the group is not abelian, we define
+two rotations, $F$ and $R$.  First, let $F$ (for ``flip'') be the
+rotation which takes the point at the very top of the sphere and moves
+it forward through an angle of $\pi$.  For example, if we start with
+the sphere in the identity position and then perform $F$, the front
+cover will face away from the reader, the spine will remain to the
+left, and the bottom of the book will be oriented upward.  Second, let
+$R$ (for ``rotate'') be the rotation which takes the point at the
+very top of the sphere and moves it left through an angle of
+$\frac{\pi}{2}$.  If we start with the sphere in the identity position
+and then perform $R$, the front cover will continue to face the
+reader, the spine will face downward, and the bottom of the book will
+be oriented to the right.
+
+We now verify that the group of rotations is not abelian.  If we start
+with the sphere in the identity position and perform $FR$, that is,
+first $F$, then $R$, then the front cover will face away from the
+reader, the spine will face downward, and the bottom will be oriented
+to the left.  On the other hand, if we start with the sphere in the
+identity position and perform $RF$, then while the front cover will
+face away from the reader, the spine will face \emph{upward}, and the
+bottom will be oriented to the \emph{right}.  So it matters in which
+order we perform $F$ and $R$, that is, $FR \ne RF$, proving that the
+group is not abelian.
+
+Since every rotation in three-dimensional Euclidean space can be
+decomposed as a finite sequence of reflections and rotations in the
+Euclidean plane, one might hope that we can find finite nonabelian
+groups arising from objects in the plane, and in fact we can.  For
+each regular polygon, there is an associated group, the dihedral group
+$D_{2n}$, which is the group of symmetries of the polygon.  (Here $n$
+denotes the number of the sides of the polygon, and $2n$ gives the
+number of elements of the group of symmetries.)  It is generated by
+two elements, $F$ (for ``flip'') and $R$ (for ``rotate'').  These
+elements can be defined by analogy with the $F$ and $R$ above; for
+full details, consult the entry ``\PMlinkname{Dihedral
+group}{DihedralGroup}'', where flips are labelled instead by $M$ (for
+``mirror'').  If $n\ge 3$ (so we are dealing with an actual polygon
+here), it is possible to show that $FR \ne RF$.  Moreover, every group
+with order $1$, $p$, or $p^2$, where $p$ is a prime, is abelian.  Thus
+the smallest possible order for a nonabelian group is $6$.  But
+$D_{2\cdot 3}$ has $6$ elements and is nonabelian, so it is the
+smallest possible nonabelian group.
+
+\section{Small nonabelian groups admitting a cube map}
+
+When we say that a group admits $x\mapsto x^n$, we mean that the
+function $\varphi$ defined on the group by the formula $\varphi(x) =
+x^n$ is a homomorphism, that is, that is, that for any $x$ and $y$ in
+the group,
+\[
+  (xy)^n = \varphi(xy) = \varphi(x)\varphi(y) = x^ny^n.  
+\]
+If a group admits $x\mapsto x^2$, then for any $x$ and $y$ we have
+that $(xy)^2 = x^2y^2$.  Multiplying on the left by $x^{-1}$ and on
+the right by $y^{-1}$ yields the identity $yx = xy$.  Thus all such
+groups are abelian.  Moreover, the generalized commutativity and
+associativity laws for abelian groups imply that an abelian group
+admits all maps $x\mapsto x^n$.  It is therefore reasonable to wonder
+whether the converse holds.  In fact it is possible for a nonabelian
+group to admit $x\mapsto x^3$.  The smallest order for such a group is
+$27$.  It is %currently
+beyond the scope of this entry to prove that $27$ is the smallest 
+possible order, but we will give an explicit example.  
+
+Let $G$ be the group with presentation
+\[
+  G = \langle a, b, c \mid a^3, b^3, c^3, [a,c], [b,c], [a,b]c \rangle.
+\]
+This can be realized concretely as the group of upper-triangular
+matrices over $\mathbb{Z}/3\mathbb{Z}$ with $1$s on the diagonal, but for
+simplicity we shall work directly with the presentation.
+
+The first three relators tell us that each generator of the group has
+order $3$.  The next two tell us that $c$ is central --- since it
+commutes with the other two generators and commutes with itself, it
+must therefore commute with everything.  The final relator is perhaps
+the most interesting.  We can interpret it as the rewrite rule
+\[
+  ba \mapsto abc,
+\]
+that is,
+\[
+  \text{``when $b$ moves past $a$ it turns into $bc$.''}
+\]
+Thus given an element of $G$ we can always write it in the normal form
+$a^j b^k c^{\ell}$, where $0\le j, k, \ell<3$, and all such elements
+are distinct.  This proves that the cardinality of $G$ is $27$.
+Moreover, we also observe that
+\[
+  ba = abc \ne ab,
+\]
+so $G$ is not abelian.
+
+It remains to check that $G$ admits the cube map.  We will prove the
+simpler statement that $G$ has exponent $3$.  Given $x$ in $G$, we
+first normalize it, so $x = a^j b^k c^{\ell}$.  Since $c$ is in the
+center of $G$,
+\[
+  x^3 = (a^j b^k)^3 c^{3\ell} = (a^j b^k)^3 = a^j(b^k a^j)^2b^k.
+\]
+
+To normalize the word $b^k a^j$, we push each $b$ past all of the
+$a$s.  Since pushing $b$ past a \emph{single} $a$ turns it into $bc$, pushing
+it past $a^j$ turns it into $bc^j$, that is,
+\[
+  b^k a^j = b^{k-1} a^j b c^j.
+\]
+By induction it follows that
+\[
+  b^k a^j = a^j b^k c^{jk}.
+\]
+Applying this result to $x^3$, we get that
+\[
+  x^3 = a^j(a^j b^k c^{jk})^2 b^k = a^{2j} (b^ka^j) b^{2k} c^{2jk} = a^{3j} b^{3k} c^{3jk} = 1.
+\]
+Since $x^3$ is trivial for any $x$, it follows that $G$ admits the
+cube map.
+
+The other nonabelian group of order $27$ has exponent $9$ and also admits the 
+cube map.  This will be % fix this when done
+described in an attached entry.
+
+\PMlinkescapeword{algebra}
+\PMlinkescapeword{calculus}
+\PMlinkescapeword{closed}
+\PMlinkescapeword{cover}
+\PMlinkescapeword{cube}
+\PMlinkescapeword{design}
+\PMlinkescapeword{face}
+\PMlinkescapeword{faces}
+\PMlinkescapeword{information}
+\PMlinkescapeword{mean}
+\PMlinkescapeword{normalize}
+\PMlinkescapeword{object}
+\PMlinkescapeword{objects}
+\PMlinkescapeword{opposite}
+\PMlinkescapeword{orientation}
+\PMlinkescapeword{push}
+\PMlinkescapeword{right}
+\PMlinkescapeword{scope}
+\PMlinkescapeword{section}
+\PMlinkescapeword{sequence}
+\PMlinkescapeword{square}
+\PMlinkescapeword{theory}
+%%%%%
+%%%%%
+\end{document}

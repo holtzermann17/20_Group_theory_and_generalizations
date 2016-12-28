@@ -1,0 +1,38 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{Idempotency}
+\pmcreated{2013-03-22 12:27:31}
+\pmmodified{2013-03-22 12:27:31}
+\pmowner{yark}{2760}
+\pmmodifier{yark}{2760}
+\pmtitle{idempotency}
+\pmrecord{21}{32604}
+\pmprivacy{1}
+\pmauthor{yark}{2760}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{20N02}
+\pmrelated{BooleanRing}
+\pmrelated{PeriodOfMapping}
+\pmrelated{Idempotent2}
+\pmdefines{idempotent}
+
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\begin{document}
+\PMlinkescapeword{case}
+\PMlinkescapeword{cases}
+\PMlinkescapeword{lattice}
+\PMlinkescapeword{words}
+
+If $(S,*)$ is a magma, then an element $x\in S$ is said to be \emph{idempotent} if $x*x=x$.
+For example, every identity element is idempotent, and in a group this is the only idempotent element.
+An idempotent element is often just called an idempotent.
+
+If every element of the magma $(S,*)$ is idempotent, then the binary operation $*$ (or the magma itself) is said to be idempotent. For example, the $\land$ and $\lor$ operations in a \PMlinkname{lattice}{Lattice} are idempotent, because $x\land x = x$ and $x\lor x = x$ for all $x$ in the lattice.
+
+A function $f\colon D\to D$ is said to be idempotent if $f\circ f=f$. (This is just a special case of the first definition above, the magma in question being $(D^D,\circ)$, the monoid of all functions from $D$ to $D$ with the operation of function composition.) In other words, $f$ is idempotent if and only if repeated application of $f$ has the same effect as a single application: $f(f(x)) = f(x)$ for all $x\in D$. An idempotent linear transformation from a vector space to itself is called a  projection.
+%%%%%
+%%%%%
+\end{document}

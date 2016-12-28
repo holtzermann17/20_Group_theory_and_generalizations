@@ -1,0 +1,32 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ProofThatoperatornameexpGDividesG}
+\pmcreated{2013-03-22 13:30:32}
+\pmmodified{2013-03-22 13:30:32}
+\pmowner{Wkbj79}{1863}
+\pmmodifier{Wkbj79}{1863}
+\pmtitle{proof that $\operatorname{exp}~G$ divides $| G |$}
+\pmrecord{10}{34091}
+\pmprivacy{1}
+\pmauthor{Wkbj79}{1863}
+\pmtype{Proof}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{20D99}
+
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+\usepackage{psfrag}
+\usepackage{graphicx}
+\usepackage{amsthm}
+%%\usepackage{xypic}
+\begin{document}
+The following is a proof that $\operatorname{exp}~G$ divides $|G|$ for every finite group $G$.
+
+\begin{proof}
+By the division algorithm, there exist $q,r \in {\mathbb Z}$ with $0 \le r<\operatorname{exp}~G$ such that $|G|=q(\operatorname{exp}~G)+r$.  Let $g \in G$.  Then $e_G=g^{|G|}=g^{q(\operatorname{exp}~G)+r}=g^{q(\operatorname{exp}~G)}g^r=(g^{\operatorname{exp}~G})^qg^r=(e_G)^qg^r=e_Gg^r=g^r$.  Thus, for every $g \in G$, $g^r=e_G$.  By the definition of exponent, $r$ cannot be positive.  Thus, $r=0$.  It follows that $\operatorname{exp}~G$ divides $|G|$.
+\end{proof}
+%%%%%
+%%%%%
+\end{document}

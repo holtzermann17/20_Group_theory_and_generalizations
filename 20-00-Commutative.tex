@@ -1,0 +1,57 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{Commutative}
+\pmcreated{2013-03-22 12:22:45}
+\pmmodified{2013-03-22 12:22:45}
+\pmowner{CWoo}{3771}
+\pmmodifier{CWoo}{3771}
+\pmtitle{commutative}
+\pmrecord{11}{32148}
+\pmprivacy{1}
+\pmauthor{CWoo}{3771}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{20-00}
+\pmsynonym{commutativity}{Commutative}
+\pmsynonym{commutative law}{Commutative}
+\pmrelated{Associative}
+\pmrelated{AbelianGroup2}
+\pmrelated{QuantumTopos}
+\pmrelated{NonCommutativeStructureAndOperation}
+\pmrelated{Subcommutative}
+\pmdefines{non-commutative}
+
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+%\usepackage{psfrag}
+%\usepackage{graphicx}
+%%%\usepackage{xypic}
+\begin{document}
+Let $S$ be a set and $\circ$ a binary operation on it.  $\circ$ is said to be \emph{commutative} if
+
+$$a \circ b = b \circ a$$
+
+for all $a,b \in S$.
+
+Viewing $\circ$ as a function from $S\times S$ to $S$, the commutativity of $\circ$ can be notated as $$\circ(a,b)=\circ(b,a).$$
+
+Some common examples of commutative operations are 
+\begin{itemize}
+\item addition over the integers: $m+n=m+n$ for all integers $m,n$
+\item multiplication over the integers: $m\cdot n=m\cdot n$ for all integers $m,n$
+\item addition over $n \times n$ matrices, $A+B=B+A$ for all $n\times n$ matrices $A,B$, and
+\item multiplication over the reals: $rs=sr$, for all real numbers $r,s$.
+\end{itemize}
+
+A binary operation that is not commutative is said to be \emph{non-commutative}.  A common example of a non-commutative operation is the subtraction over the integers (or more generally the real numbers).  This means that, in general, $$a-b\ne b-a.$$  For instance, $2-1=1\ne -1 = 1-2$.
+
+Other examples of non-commutative binary operations can be found in the attachment below.
+
+\textbf{Remark}.  The notion of commutativity can be generalized to $n$-ary operations, where $n\ge 2$.  An $n$-ary operation $f$ on a set $A$ is said to be \emph{commutative} if 
+$$f(a_1,a_2,\ldots, a_n)=f(a_{\pi(1)},a_{\pi(2)},\ldots, a_{\pi(n)})$$ 
+for every permutation $\pi$ on $\lbrace 1,2,\ldots, n\rbrace$, and for every choice of $n$ elements $a_i$ of $A$.
+%%%%%
+%%%%%
+\end{document}

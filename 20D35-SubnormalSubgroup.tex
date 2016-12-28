@@ -1,0 +1,51 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{SubnormalSubgroup}
+\pmcreated{2013-03-22 13:16:27}
+\pmmodified{2013-03-22 13:16:27}
+\pmowner{yark}{2760}
+\pmmodifier{yark}{2760}
+\pmtitle{subnormal subgroup}
+\pmrecord{21}{33756}
+\pmprivacy{1}
+\pmauthor{yark}{2760}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{20D35}
+\pmclassification{msc}{20E15}
+\pmsynonym{subinvariant subgroup}{SubnormalSubgroup}
+\pmsynonym{attainable subgroup}{SubnormalSubgroup}
+\pmrelated{SubnormalSeries}
+\pmrelated{ClassificationOfFiniteNilpotentGroups}
+\pmrelated{NormalSubgroup}
+\pmrelated{CharacteristicSubgroup}
+\pmrelated{FullyInvariantSubgroup}
+\pmdefines{subnormal}
+\pmdefines{subnormality}
+
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+\def\normal{\triangleleft}
+\def\normaleq{\trianglelefteq}
+\def\sn{\operatorname{sn}}
+
+\begin{document}
+Let $G$ be a group, and $H$ a subgroup of $G$.
+Then $H$ is a \emph{subnormal subgroup} of $G$ 
+if there is a natural number $n$ and subgroups $H_0,\dots,H_n$ of $G$ 
+such that $$H=H_0\normal H_1\normal\cdots\normal H_n=G,$$
+where $H_i$ is a normal subgroup of $H_{i+1}$ for $i=0,\dots,n-1$.
+
+Subnormality is a \PMlinkescapetext{strictly weaker condition than normality},
+as normality of subgroups is not transitive.
+
+We may write $H\sn G$ or $H\normal\normal\, G$ or $H\!\normaleq\normaleq G$ to indicate that $H$ is a subnormal subgroup of $G$.
+
+In a nilpotent group, all subgroups are subnormal.
+
+Subnormal subgroups are ascendant and descendant.
+%%%%%
+%%%%%
+\end{document}

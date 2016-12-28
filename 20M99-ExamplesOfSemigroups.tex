@@ -1,0 +1,68 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ExamplesOfSemigroups}
+\pmcreated{2013-03-22 18:37:16}
+\pmmodified{2013-03-22 18:37:16}
+\pmowner{CWoo}{3771}
+\pmmodifier{CWoo}{3771}
+\pmtitle{examples of semigroups}
+\pmrecord{7}{41356}
+\pmprivacy{1}
+\pmauthor{CWoo}{3771}
+\pmtype{Example}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{20M99}
+\pmsynonym{group with 0}{ExamplesOfSemigroups}
+\pmdefines{group with zero}
+
+\usepackage{amssymb,amscd}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{mathrsfs}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+\usepackage{amsthm}
+% making logically defined graphics
+%%\usepackage{xypic}
+\usepackage{pst-plot}
+
+% define commands here
+\newcommand*{\abs}[1]{\left\lvert #1\right\rvert}
+\newtheorem{prop}{Proposition}
+\newtheorem{thm}{Theorem}
+\newtheorem{ex}{Example}
+\newcommand{\real}{\mathbb{R}}
+\newcommand{\pdiff}[2]{\frac{\partial #1}{\partial #2}}
+\newcommand{\mpdiff}[3]{\frac{\partial^#1 #2}{\partial #3^#1}}
+\begin{document}
+Examples of semigroups are numerous.  This entry presents some of the most common examples.
+
+\begin{enumerate}
+\item The set $\mathbb{Z}$ of integers with multiplication is a semigroup, along with many of its subsets (subsemigroups):
+\begin{enumerate}
+\item The set of non-negative integers
+\item The set of positive integers
+\item $n\mathbb{Z}$, the set of all integral multiples of an integer $n$
+\item For any prime $p$, the set of $\lbrace p^i\mid i\ge n\rbrace$, where $n$ is a non-negative integer
+\item The set of all composite integers
+\end{enumerate}
+\item $\mathbb{Z}_n$, the set of all integers modulo an integer $n$, with integer multiplication modulo $n$.  Here, we may find examples of nilpotent and idempotent elements, relative inverses, and eventually periodic elements:
+\begin{enumerate}
+\item If $n=p^m$, where $p$ is prime, then every non-zero element containing a factor of $p$ is nilpotent.  For example, if $n=16$, then $6^4=0$.
+\item If $n=2p$, where $p$ is an odd prime, then $p$ is a non-trivial idempotent element ($p^2=p$), and since $2^{p-1}\equiv 1 \pmod p$ by Fermat's little theorem, we see that $a=2^{p-2}$ is a relative inverse of $2$, as $2\cdot a \cdot 2 = 2$ and $a\cdot 2 \cdot a=a$
+\item If $n=2^m p$, where $p$ is an odd prime, and $m>1$, then $2$ is eventually periodic.  For example, $n=96$, then $2^2=4$, $2^3=8$, $2^4=16$, $2^5=32$, $2^6=64$, $2^7=32$, $2^8=64$, etc...
+\end{enumerate}
+\item The set $M_n(R)$ of $n\times n$ square matrices over a ring $R$, with matrix multiplication, is a semigroup.  Unlike the previous two examples, $M_n(R)$ is not commutative.
+\item The set $E(A)$ of functions on a set $A$, with functional composition, is a semigroup.
+\item Every group is a semigroup, as well as every monoid.
+\item If $R$ is a ring, then $R$ with the ring multiplication (ignoring addition) is a semigroup (with $0$).
+\item \emph{Group with Zero}.  A semigroup $S$ is called a \emph{group with zero} if it contains a zero element $0$, and $S-\lbrace 0\rbrace$ is a subgroup of $S$.  In $R$ in the previous example is a division ring, then $R$ with the ring multiplication is a group with zero.  If $G$ is a group, by adjoining $G$ with an extra symbol $0$, and extending the domain of group multiplication $\cdot$ by defining $0 \cdot a = a\cdot 0 =0\cdot 0:=0$ for all $a\in G$, we get a group with zero $S=G\cup \lbrace 0\rbrace$.
+\item As mentioned earlier, every monoid is a semigroup.  If $S$ is not a monoid, then it can be embedded in one: adjoin a symbol $1$ to $S$, and extend the semigroup multiplication $\cdot$ on $S$ by defining $1\cdot a = a\cdot 1 = a$ and $1\cdot 1=1$, we get a monoid $M=S\cup \lbrace 1\rbrace$ with multiplicative identity $1$.  If $S$ is already a monoid with identity $1$, then adjoining $1'$ to $S$ and repeating the remaining step above gives us a new monoid with identity $1'$.  However, $1$ is no longer an identity, as $1'=1\cdot 1'$.
+\end{enumerate}
+%%%%%
+%%%%%
+\end{document}

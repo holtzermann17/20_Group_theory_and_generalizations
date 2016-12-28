@@ -1,0 +1,79 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{MixedGroup}
+\pmcreated{2013-03-22 18:42:32}
+\pmmodified{2013-03-22 18:42:32}
+\pmowner{CWoo}{3771}
+\pmmodifier{CWoo}{3771}
+\pmtitle{mixed group}
+\pmrecord{7}{41474}
+\pmprivacy{1}
+\pmauthor{CWoo}{3771}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{20N99}
+\pmdefines{kernel}
+
+\usepackage{amssymb,amscd}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{mathrsfs}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+\usepackage{amsthm}
+% making logically defined graphics
+%%\usepackage{xypic}
+\usepackage{pst-plot}
+
+% define commands here
+\newcommand*{\abs}[1]{\left\lvert #1\right\rvert}
+\newtheorem{prop}{Proposition}
+\newtheorem{thm}{Theorem}
+\newtheorem{ex}{Example}
+\newcommand{\real}{\mathbb{R}}
+\newcommand{\pdiff}[2]{\frac{\partial #1}{\partial #2}}
+\newcommand{\mpdiff}[3]{\frac{\partial^#1 #2}{\partial #3^#1}}
+\begin{document}
+A \emph{mixed group} is a partial groupoid $G$ such that $G$ contains a non-empty subset $K$, called the \emph{kernel} of $G$, with the following conditions:
+\begin{enumerate}
+\item if $a,b\in G$, then $ab$ is defined iff $a\in K$,
+\item if $a,b\in K$ and $c\in G$, then $(ab)c=a(bc)$,
+\item if $a\in K$, then $K\subseteq aK\cap Ka$,
+\item if $a\in K$ and $b\in G$ such that $ab=b$, then $ac=c$ for all $c\in G$.
+\end{enumerate}
+
+Mixed groups are generalizations of groups, as the following proposition illustrates:
+
+\begin{prop} If $K=G$, then $G$ is a group. \end{prop}
+
+\begin{proof}
+$G$ is a groupoid by condition 1, and a semigroup by condition 2.  
+
+Now, by condition 3, given $a\in G$, there is $b\in G$ such that $ba=a$, so that $bc=c$ for all $c\in G$ by condition 4.  In other words, $b$ is a left identity of $G$.  Again, by condition 3, for every $a\in G$, there is a $d\in G$ such that $b=da$.  So $ad= a(bd)=a(da)d=(ad)^2$, so, by condition 4, $adx=x$ for all $x\in G$.  In particular, set $x=a$, we get $a=(ad)a=a(da)=ab$.  Hence, $b$ is a two-sided identity, and $G$ is a monoid.  
+
+Finally, by condition 3, for every $a\in G$, there are $c,d\in G$, such that $b=ac=da$.  So, $c=bc=(da)c=d(ac)=db=d$, showing that $a$ has a two-sided inverse.  This means that $G$ is a group.
+\end{proof}
+
+For a non-trivial example of a mixed group, let $G$ be a group and $H$ a subgroup of $G$.  Define a new multiplication $\cdot$ on $G$ as follows: $a\cdot b$ is defined iff $a\in H$, and if $a\cdot b$ is defined, it is defined as $ab$, the group multiplication of $a$ and $b$.  Then $(G,\cdot)$ is a mixed group.  Clearly, associativity of $\cdot$ is automatically satisfied.  Next, pick any $a\in H$, then, for any $b\in H$, $a^{-1}\cdot b$ and $b\cdot a^{-1}$ are both elements of $H$, so that $b\in a\cdot H\cap H\cdot a$, and condition 3 is also satisfied.  Finally, if $a\in H$ and $b\in G$ such that $a\cdot b=b$, then $a$ is the multiplicative identity of $G$, clearly $a\cdot c=c$ for all $c\in G$.
+
+\begin{thebibliography}{0}
+\bibitem{HB}
+R. H. Bruck,
+{\it A Survey of Binary Systems}, Springer-Verlag, 1966
+\bibitem{HP}
+R. Baer,
+{\it Zur Einordnung der Theorie der Mischgruppen in die Gruppentheorie}, S.-B. Heidelberg. Akad. Wiss., Math.-naturwiss. KI. 1928, 4, 13 pp
+\bibitem{HP}
+R. Baer,
+{\it \"{U}ber die Zerlegungen einer Mischgruppe nach einer Untermischgruppe}, S.-B. Heidelberg. Akad. Wiss., Math.-naturwiss. KI. 1928, 5, 13 pp
+\bibitem{HP}
+A. Loewy,
+{\it \"{U}ber abstrakt definierte Transmutationssysteme oder Mischgruppen}, J. reine angew. Math. 157, pp 239-254, 1927
+\end{thebibliography}
+%%%%%
+%%%%%
+\end{document}

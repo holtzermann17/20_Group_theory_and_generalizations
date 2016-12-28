@@ -1,0 +1,58 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{CompleteGroup}
+\pmcreated{2013-03-22 15:21:46}
+\pmmodified{2013-03-22 15:21:46}
+\pmowner{CWoo}{3771}
+\pmmodifier{CWoo}{3771}
+\pmtitle{complete group}
+\pmrecord{5}{37186}
+\pmprivacy{1}
+\pmauthor{CWoo}{3771}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{20E36}
+\pmclassification{msc}{20F28}
+
+\usepackage{amssymb,amscd}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% define commands here
+\begin{document}
+A \emph{complete group} is a group $G$ that is
+\begin{enumerate}
+\item centerless (center $Z(G)$ of $G$ is the trivial group), and
+\item any of its automorphism $g\colon G\to G$ is an inner automorphism.
+\end{enumerate}
+If a group $G$ is complete, then its group of automorphisms,
+$\operatorname{Aut}(G)$, is isomorphic to $G$.  Here's a quick
+proof.  Define $\phi\colon G\to \operatorname{Aut}(G)$ by
+$\phi(g)=g^{\#}$, where $g^{\#}(x)=gxg^{-1}$.  For $g,h\in G$,
+$(gh)^{\#}(x)=(gh)x(gh)^{-1}=g(hxh^{-1})g^{-1}=(g^{\#}h^{\#})(x)$,
+so $\phi$ is a homomorphism.  It is onto because every $\alpha\in
+\operatorname{Aut}(G)$ is inner, (=$g^{\#}$ for some $g\in G$). Finally,
+if $g^{\#}(x)=h^{\#}(x)$, then $gxg^{-1}=hxh^{-1}$, which means
+$(h^{-1}g)x=x(h^{-1}g)$, for all $x\in G$.  This implies that
+$h^{-1}g\in Z(G)=\langle e \rangle$, or $h=g$.  $\phi$ is
+one-to-one.
+\\\\
+It can be shown that all symmetric groups on $n$ letters are
+complete groups, except when $n=2$ and $6$.
+
+\begin{thebibliography}{8}
+\bibitem{rot} J. Rotman, {\em The Theory of Groups, An Introduction},
+Allyn and Bacon, Boston (1965).
+\end{thebibliography}
+%%%%%
+%%%%%
+\end{document}

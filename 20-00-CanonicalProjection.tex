@@ -1,0 +1,104 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{CanonicalProjection}
+\pmcreated{2013-03-22 13:24:26}
+\pmmodified{2013-03-22 13:24:26}
+\pmowner{Dr_Absentius}{537}
+\pmmodifier{Dr_Absentius}{537}
+\pmtitle{canonical projection}
+\pmrecord{8}{33950}
+\pmprivacy{1}
+\pmauthor{Dr_Absentius}{537}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{20-00}
+\pmdefines{canonical projection}
+
+%\documentclass{amsart}
+\usepackage{amsmath}
+%\usepackage[all,poly,knot,dvips]{xy}
+%\usepackage{pstricks,pst-poly,pst-node,pstcol}
+
+
+\usepackage{amssymb,latexsym}
+
+\usepackage{amsthm,latexsym}
+\usepackage{eucal,latexsym}
+
+% THEOREM Environments --------------------------------------------------
+
+\newtheorem{thm}{Theorem}
+ \newtheorem*{mainthm}{Main~Theorem}
+ \newtheorem{cor}[thm]{Corollary}
+ \newtheorem{lem}[thm]{Lemma}
+ \newtheorem{prop}[thm]{Proposition}
+ \newtheorem{claim}[thm]{Claim}
+ \theoremstyle{definition}
+ \newtheorem{defn}[thm]{Definition}
+ \theoremstyle{remark}
+ \newtheorem{rem}[thm]{Remark}
+ \numberwithin{equation}{subsection}
+
+
+%---------------------  Greek letters, etc ------------------------- 
+
+\newcommand{\CA}{\mathcal{A}}
+\newcommand{\CC}{\mathcal{C}}
+\newcommand{\CM}{\mathcal{M}}
+\newcommand{\CP}{\mathcal{P}}
+\newcommand{\CS}{\mathcal{S}}
+\newcommand{\BC}{\mathbb{C}}
+\newcommand{\BN}{\mathbb{N}}
+\newcommand{\BR}{\mathbb{R}}
+\newcommand{\BZ}{\mathbb{Z}}
+\newcommand{\FF}{\mathfrak{F}}
+\newcommand{\FL}{\mathfrak{L}}
+\newcommand{\FM}{\mathfrak{M}}
+\newcommand{\Ga}{\alpha}
+\newcommand{\Gb}{\beta}
+\newcommand{\Gg}{\gamma}
+\newcommand{\GG}{\Gamma}
+\newcommand{\Gd}{\delta}
+\newcommand{\GD}{\Delta}
+\newcommand{\Ge}{\varepsilon}
+\newcommand{\Gz}{\zeta}
+\newcommand{\Gh}{\eta}
+\newcommand{\Gq}{\theta}
+\newcommand{\GQ}{\Theta}
+\newcommand{\Gi}{\iota}
+\newcommand{\Gk}{\kappa}
+\newcommand{\Gl}{\lambda}
+\newcommand{\GL}{\Lamda}
+\newcommand{\Gm}{\mu}
+\newcommand{\Gn}{\nu}
+\newcommand{\Gx}{\xi}
+\newcommand{\GX}{\Xi}
+\newcommand{\Gp}{\pi}
+\newcommand{\GP}{\Pi}
+\newcommand{\Gr}{\rho}
+\newcommand{\Gs}{\sigma}
+\newcommand{\GS}{\Sigma}
+\newcommand{\Gt}{\tau}
+\newcommand{\Gu}{\upsilon}
+\newcommand{\GU}{\Upsilon}
+\newcommand{\Gf}{\varphi}
+\newcommand{\GF}{\Phi}
+\newcommand{\Gc}{\chi}
+\newcommand{\Gy}{\psi}
+\newcommand{\GY}{\Psi}
+\newcommand{\Gw}{\omega}
+\newcommand{\GW}{\Omega}
+\newcommand{\Gee}{\epsilon}
+\newcommand{\Gpp}{\varpi}
+\newcommand{\Grr}{\varrho}
+\newcommand{\Gff}{\phi}
+\newcommand{\Gss}{\varsigma}
+
+\def\co{\colon\thinspace}
+\begin{document}
+Given a group $G$ and a normal subgroup $N \lhd G$ there is an epimorphism 
+$$\pi\co G\to G/N$$
+defined by sending an element $g\in G$ to its coset $gN$. The epimorphism $\pi$ is referred to as the \emph{canonical projection}.
+%%%%%
+%%%%%
+\end{document}

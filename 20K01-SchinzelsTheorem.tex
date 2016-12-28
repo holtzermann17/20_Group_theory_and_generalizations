@@ -1,0 +1,86 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{SchinzelsTheorem}
+\pmcreated{2013-03-22 12:03:42}
+\pmmodified{2013-03-22 12:03:42}
+\pmowner{alozano}{2414}
+\pmmodifier{alozano}{2414}
+\pmtitle{Schinzel's theorem}
+\pmrecord{10}{31115}
+\pmprivacy{1}
+\pmauthor{alozano}{2414}
+\pmtype{Theorem}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{20K01}
+
+% this is the default PlanetMath preamble.  as your 
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsthm}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\newtheorem*{thm}{Theorem}
+\newtheorem{defn}{Definition}
+\newtheorem{prop}{Proposition}
+\newtheorem{lemma}{Lemma}
+\newtheorem*{cor}{Corollary}
+
+\theoremstyle{definition}
+\newtheorem{exa}{Example}
+
+% Some sets
+\newcommand{\Nats}{\mathbb{N}}
+\newcommand{\Ints}{\mathbb{Z}}
+\newcommand{\Reals}{\mathbb{R}}
+\newcommand{\Complex}{\mathbb{C}}
+\newcommand{\Rats}{\mathbb{Q}}
+\newcommand{\Gal}{\operatorname{Gal}}
+\newcommand{\Cl}{\operatorname{Cl}}
+\begin{document}
+\begin{defn}
+Let $A$ and $B$ be integers such that $(A,B)=1$ with $AB\neq \pm 1$. A prime $p$ is called a \emph{primitive divisor} of $A^n-B^n$ if $p$ divides $A^n-B^n$ but $A^m-B^m$ is not divisible by $p$ for all positive integers $m$ that are less than $n$.
+\end{defn}
+
+Or, more generally:
+
+\begin{defn}
+Let $A$ and $B$ be algebraic integers in a number field $K$ such that $(A,B)=1$ and $A/B$ is not a root of unity. A prime ideal $\wp$ of $K$ is called a \emph{primitive divisor} of $A^n-B^n$ if $\wp|A^n-B^n$ but $\wp \nmid A^m-B^m$ for all positive integers $m$ that are less than $n$.
+\end{defn}
+
+The following theorem is due to A. Schinzel (see \cite{sch}):
+
+\begin{thm}
+Let $A$ and $B$ be as before. There is an effectively computable constant $n_0$, depending only on the degree of the algebraic number $A/B$, such that $A^n-B^n$ has a primitive divisor for all $n>n_0$.
+\end{thm}
+
+By putting $B=1$ we obtain the following corollary:
+
+\begin{cor}
+Let $A\neq 0,\pm 1$ be an integer. There exists a number $n_0$ such that $A^n-1$ has a primitive divisor for all $n>n_0$. In particular, for all but finitely many integers $n$, there is a prime $p$ such that the multiplicative order of $A$ modulo $p$ is exactly $n$.
+\end{cor}
+
+\begin{thebibliography}{8}
+\bibitem{sch} A. Schinzel, {\em Primitive divisors of the expression $A^n-B^n$ in algebraic number fields}.
+Collection of articles dedicated to Helmut Hasse on his seventy-fifth birthday, II. J. Reine Angew. Math. 268/269 (1974), 27--33.
+\end{thebibliography}
+%%%%%
+%%%%%
+%%%%%
+\end{document}

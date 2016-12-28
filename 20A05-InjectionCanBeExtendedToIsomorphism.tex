@@ -1,0 +1,87 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{InjectionCanBeExtendedToIsomorphism}
+\pmcreated{2013-03-22 18:56:50}
+\pmmodified{2013-03-22 18:56:50}
+\pmowner{pahio}{2872}
+\pmmodifier{pahio}{2872}
+\pmtitle{injection can be extended to isomorphism}
+\pmrecord{10}{41804}
+\pmprivacy{1}
+\pmauthor{pahio}{2872}
+\pmtype{Theorem}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{20A05}
+\pmclassification{msc}{03E20}
+\pmrelated{Restriction}
+\pmrelated{Cardinality}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+ \usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\theoremstyle{definition}
+\newtheorem*{thmplain}{Theorem}
+\DeclareMathOperator{\card}{card}
+\begin{document}
+\PMlinkescapeword{right}
+
+\textbf{Theorem.}\, If $f$ is an injection from a set $S$ into a group $G$, then there exist a group $H$ containing $S$ and a group isomorphism \;$\varphi\!:H \to G$\; such that\; $\varphi|_S = f$.\\
+
+\emph{Proof.}\, Let $M$ be a set such that\, $\card(M) \geqq \card(G)$.\, Because\, $\card(f(S)) = \card(S)$, we have\, 
+$\card(M\!\smallsetminus\!S) \geqq \card(G\!\smallsetminus\!f(S))$,\, and therefore there exists an injection
+$$\psi\!:G\!\smallsetminus\!f(S) \to M\!\smallsetminus\!S$$
+(provided that\, $G\!\smallsetminus\!f(S) \neq \varnothing$;\, otherwise the mapping \,$f\!:S \to G$ would be a bijection).\, Define
+$$H \;:=\; S\cup\psi(G\!\smallsetminus\!f(S)),$$
+\begin{align*}
+\varphi(h) \;:=\; 
+\begin{cases}
+f(h) \qquad\mbox{for}\;\; h \in S,\\
+\psi^{-1}(h) \quad\mbox{for}\;\, h \in H\!\smallsetminus\!S.
+\end{cases}
+\end{align*}
+Then apparently,\, $\varphi\!:H \to G$\, is a bijection and\, $\varphi|_S = f$.\, Moreover, define the binary operation ``$*$'' of the set $H$ by
+\begin{align}
+h_1\ast h_2 \;:=\; \varphi^{-1}(\varphi(h_1)\!\cdot\!\varphi(h_2)).
+\end{align}
+We see first that
+\begin{align*}
+(h_1\ast h_2)\ast h_3 &\;=\; 
+\varphi^{-1}\!\left(\varphi\left(\varphi^{-1}(\varphi(h_1)\!\cdot\!\varphi(h_2))\right)\!\cdot\!\varphi(h_3)\right)\\
+                      &\;=\; \varphi^{-1}((\varphi(h_1)\!\cdot\!\varphi(h_2))\!\cdot\!\varphi(h_3))\\
+                      &\;=\; \varphi^{-1}(\varphi(h_1)\!\cdot\!(\varphi(h_2)\!\cdot\!\varphi(h_3)))\\ &\;=\; 
+\varphi^{-1}\!\left(\varphi(h_1)\!\cdot\!\varphi\left(\varphi^{-1}(\varphi(h_2)\!\cdot\!\varphi(h_3))\right)\right)\\
+                      &\;=\; h_1\ast(h_2\ast h_3).
+\end{align*}
+Secondly,
+$$h\ast\varphi^{-1}(e) \;=\; 
+\varphi^{-1}\!\left(\varphi(h)\!\cdot\!\varphi(\varphi^{-1}(e))\right) \;=\; \varphi^{-1}(\varphi(h)) \;=\; h,$$
+whence $\varphi^{-1}(e)$ is the right identity element of $H$.\, Then,
+$$h\ast \varphi^{-1}\!\left((\varphi(h))^{-1}\right) 
+\;=\; \varphi^{-1}\left(\varphi(h)\!\cdot\!\varphi\left(\varphi^{-1}(\varphi(h)^{-1})\right)\right) \;=\; \varphi^{-1}(e),$$
+and accordingly $\displaystyle\varphi^{-1}\!\left((\varphi(h))^{-1}\right)$ is the right inverse of $h$ in $H$.\, Consequently, 
+$(H,\,\ast)$ is a group.\, The equation (1) implies that
+$$\varphi(h_1\ast h_2) \;=\; \varphi(h_1)\!\cdot\!\varphi(h_2),$$
+whence $\varphi$ is an isomorphism from $H$ onto $G$.\, Q.E.D.
+
+%%%%%
+%%%%%
+\end{document}

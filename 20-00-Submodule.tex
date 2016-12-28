@@ -1,0 +1,76 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{Submodule}
+\pmcreated{2013-03-22 15:15:26}
+\pmmodified{2013-03-22 15:15:26}
+\pmowner{PrimeFan}{13766}
+\pmmodifier{PrimeFan}{13766}
+\pmtitle{submodule}
+\pmrecord{19}{37040}
+\pmprivacy{1}
+\pmauthor{PrimeFan}{13766}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{20-00}
+\pmclassification{msc}{16-00}
+\pmclassification{msc}{13-00}
+\pmrelated{SumOfIdeals}
+\pmrelated{QuotientOfIdeals}
+\pmdefines{R-submodule}
+\pmdefines{generated submodule}
+\pmdefines{generator}
+\pmdefines{sum of submodules}
+\pmdefines{product submodule}
+\pmdefines{quotient of submodules}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+ \usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\theoremstyle{definition}
+\newtheorem*{thmplain}{Theorem}
+\begin{document}
+Given a ring $R$ and a left $R$-module $T$, a subset $A$ of $T$ is called a ({\em left}) {\em submodule} of $T$, if\, $(A,\,+)$\, is a subgroup of\, $(M,\,+)$\, and\, $ra \in A$\, for all elements $r$ of $R$ and $a$ of $A$.\\
+
+\textbf{Examples}
+\begin{enumerate}
+ \item The subsets $\{0\}$ and $T$ are always submodules of the module $T$.
+ \item The set \,$\{t\in T:\,\,\,rt = t\,\,\,\forall r\in R\}$\, of all invariant elements of $T$ is a submodule of $T$.
+ \item If \,$X \subseteq T$\, and $\mathfrak{a}$ is a left ideal of $R$, then the set 
+$$\mathfrak{a}X := \{\mbox{finite}\sum_\nu a_\nu x_\nu:
+ \,\,\,a_\nu\in\mathfrak{a},\,\,x_\nu\in X\,\,\forall\nu\}$$
+is a submodule of $T$.\, Especially, $RX$ is called the submodule {\em generated} by the subset $X$; then the elements of $X$ are \emph{generators} of this submodule.
+\end{enumerate}
+
+There are some operations on submodules.\, Given the submodules $A$ and $B$ of $T$, the {\em sum}\, $A + B := \{a + b\in T:\,\,a\in A \,\land\, b\in B\}$\, and the intersection $A\cap B$ are submodules of $T$.
+
+The notion of sum may be extended for any family \,$\{A_j:\,\,j\in J\}$\, of submodules:\, the sum $\sum_{j\in J}A_j$ of submodules consists of all finite sums $\sum_j a_j$ where every $a_j$ belongs to one $A_j$ of those submodules.\, The sum of submodules as well as the intersection $\bigcap_{j\in J}A_j$ are submodules of $T$.\, The submodule $RX$ is the intersection of all submodules containing the subset $X$.
+
+If $T$ is a ring and $R$ is a subring of $T$, then $T$ is an $R$-module; then one can consider the {\em product} and the {\em quotient} of the left $R$-submodules $A$ and $B$ of $T$:
+\begin{itemize}
+\item $AB := \{\mbox{finite}\sum_\nu a_\nu b_\nu:
+ \,\,\,a_\nu\in A,\,\,b_\nu\in B\,\,\forall\nu\}$
+\item $[A:B] := \{t\in T:\,\, tB\subseteq A\}$
+\end{itemize}
+Also these are left $R$-submodules of $T$.
+%%%%%
+%%%%%
+\end{document}

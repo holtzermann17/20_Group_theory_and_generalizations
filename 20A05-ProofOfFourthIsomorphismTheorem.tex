@@ -1,0 +1,58 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ProofOfFourthIsomorphismTheorem}
+\pmcreated{2013-03-22 14:17:38}
+\pmmodified{2013-03-22 14:17:38}
+\pmowner{aoh45}{5079}
+\pmmodifier{aoh45}{5079}
+\pmtitle{proof of fourth isomorphism theorem}
+\pmrecord{9}{35749}
+\pmprivacy{1}
+\pmauthor{aoh45}{5079}
+\pmtype{Proof}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{20A05}
+
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+\newcommand{\ang}[1]{\langle{#1}\rangle}
+\begin{document}
+First we must prove that the map defined by $A\mapsto A/N$ is a bijection. Let $\theta $ denote this map, so that $\theta (A)=A/N$. Suppose $A/N = B/N$, then for any $a\in A$ we have $aN = bN$ for some $b\in B$, and so $b^{-1}a\in N\subseteq B$. Hence $A\subseteq B$, and similarly $B\subseteq A$, so $A=B$ and $\theta$ is injective.
+Now suppose $S$ is a subgroup of $G/N$ and $\phi :G\to G/N$ by $\phi (g) = gN$. Then $\phi ^{-1}(S) = \{s\in G : sN\in S\}$ is a subgroup of $G$ containing $N$ and $\theta (\phi ^{-1}(S)) = \{sN : sN\in S\} = S$, proving that $\theta$ is bijective.
+
+Now we move to the given properties:
+\begin{enumerate}
+\item $A\leq B$ iff $A/N\leq B/N$
+
+If $A\leq B$ then trivially $A/N\leq B/N $, and the converse follows from the fact that $\theta $ is bijective. 
+
+\item $A\leq B$ implies $\left| B:A\right| =\left| B/N:A/N \right| $
+
+Let $\psi $ map the cosets in $B/A $ to the cosets in $(B/N)/(A/N)$ by mapping the coset $bA$ $b\in B$ to the coset $(bN)(A/N)$. Then $\psi $ is well defined and injective because:
+\begin{align*}
+b_{1}A=b_{2}A & \iff b_{1}^{-1}b_{2}\in A\\
+ & \iff (b_{1}N)^{-1}(b_{2}N)=b_{1}^{-1}b_{2}N\in A/N\\
+ & \iff (b_{1}N)(A/N) = (b_{2}N)(A/N).
+\end{align*}
+Finally, $\psi $ is surjective since $b$ ranges over all of $B$ in $(bN)(A/N)$.
+
+\item $\ang{A,B}/N=\ang{A/N,B/N}$
+
+To show $\ang{A,B}/N\subseteq \ang{A/N,B/N}$ we need only show that if $x\in A$ or $x\in B$ then $xN\in \ang{A/N,B/N}$. The other cases are dealt with using the fact that $(xy)N=(xN)(yN)$. So suppose $x\in A$ then clearly $xN\in \ang{A/N,B/N}$ because $xN\in A/N$. Similarly for $x\in B$.
+Similarly, to show $\ang{A/N,B/N}\subseteq \ang{A,B}/N$ we need only show that if $xN\in A/N$ or $xN\in B/N$ then $x\in \ang{A,B}$. So suppose $xN\in A/N$, then $xN=aN$ for some $a\in A$, giving $a^{-1}x\in N \subseteq A$ and so $x\in A\subseteq \ang{A,B}$. Similarly for $xN\in B/N$.
+
+\item $(A\cap B)/N=(A/N)\cap (B/N)$
+
+Suppose $xN\in (A\cap B)/N$, then $xN = yN$ for some $y\in (A\cap B)$ and since $N\subseteq (A\cap B)$, $x\in (A\cap B)$. Therefore $x\in A$ and $x\in B$, and so $xN\in (A/N)\cap (B/N)$ meaning $(A\cap B)/N\subseteq (A/N)\cap (B/N)$.
+Now suppose $xN\in (A/N)\cap (B/N)$. Then $xN=aN$ for some $a\in A$, giving $a^{-1}x\in N \subseteq A$ and so $x\in A$. Similarly $x\in B$, therefore $xN\in (A\cap B)/N$ and $(A/N)\cap (B/N) \subseteq (A\cap B)/N$.
+
+\item $A\unlhd G$ iff $(A/N)\unlhd (G/N)$
+
+Suppose $A\unlhd G$. Then for any $g\in G$ we have $(gN)(A/N)(gN)^{-1}=(gAg^{-1})/N=A/N$ and so $(A/N)\unlhd (G/N)$.\\
+Conversely suppose $(A/N)\unlhd (G/N)$. Consider $\sigma\colon g\mapsto (gN)(A/N)$, the composition of the map from $G$ onto $G/N$ and the map from $G/N$ onto $(G/N)/(A/N)$. $g\in \ker \pi$ iff $(gN)(A/N)=(A/N)$ which occurs iff $gN\in A/N$ therefore $gN=aN$ for some $a\in A$. However $N$ is contained in $A$, so this statement is equivalnet to saying $g\in A$. So $A$ is the kernel of a homomorphism, hence is a normal subgroup of $G$.
+\end{enumerate}
+%%%%%
+%%%%%
+\end{document}

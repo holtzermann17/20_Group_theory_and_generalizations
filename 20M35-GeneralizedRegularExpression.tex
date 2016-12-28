@@ -1,0 +1,67 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{GeneralizedRegularExpression}
+\pmcreated{2013-03-22 19:01:34}
+\pmmodified{2013-03-22 19:01:34}
+\pmowner{CWoo}{3771}
+\pmmodifier{CWoo}{3771}
+\pmtitle{generalized regular expression}
+\pmrecord{5}{41898}
+\pmprivacy{1}
+\pmauthor{CWoo}{3771}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{20M35}
+\pmclassification{msc}{68Q70}
+
+\usepackage{amssymb,amscd}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{mathrsfs}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+\usepackage{amsthm}
+% making logically defined graphics
+%%\usepackage{xypic}
+\usepackage{pst-plot}
+
+% define commands here
+\newcommand*{\abs}[1]{\left\lvert #1\right\rvert}
+\newtheorem{prop}{Proposition}
+\newtheorem{thm}{Theorem}
+\newtheorem{ex}{Example}
+\newcommand{\real}{\mathbb{R}}
+\newcommand{\pdiff}[2]{\frac{\partial #1}{\partial #2}}
+\newcommand{\mpdiff}[3]{\frac{\partial^#1 #2}{\partial #3^#1}}
+\begin{document}
+Recall that a regular expression over an alphabet $\Sigma$ is a finite strings of symbols that are elements of $\Sigma$, together with symbols $\varnothing$, $\cup$, $\cdot$, $^*$, as well as $($ and $)$, which is put together based on a set of expression formation rules.  In a generalized regular expression, additional symbols $\cap$ and $\neg$ are tossed in also.  Formally,
+
+\textbf{Definition}.  Given an alphabet $\Sigma$, let $S$ be the set $\lbrace \varnothing, \cup, \cdot, ^*, \cap, \neg, (, ) \rbrace$, considered to be disjoint from $\Sigma$.  Let $X$ be the smallest subset of $(\Sigma\cup S)^*$ containing the following:
+\begin{itemize}
+\item any regular expression is in $X$,
+\item if $u,v\in Y$, then $(u\cap v), (\neg u)\in X$.
+\end{itemize}
+An element of $X$ is called a \emph{generalized regular expression} over $\Sigma$.
+
+Like regular expressions, every generalized regular expressions are designed to represent languages (it is clear that $\cap$ and $\neg$ are intended to mean set-theoretic intersection and complementation).  If $u$ is a generalized regular expression: 
+\begin{itemize}
+\item if $u$ is regular expression, then the language represented by $u$ as a generalized regular expression is $L(u)$, the language represented by $u$ as a regular expression;
+\item if $A$ is represented by $u$ and $B$ is represented by $v$, then $A\cap B$ is represented by $(u\cap v)$
+\item if $A$ is represented by $u$, then $\Sigma^* - A$ is represented by $(\neg u)$.
+\end{itemize}
+By induction, it is easy to see that, given a generalized regular expression $u$, there is exactly one language represented by $u$.  We denote $L(u)$ the language represented by $u$, and $\mathscr{GR}$ the family of languages represented by generalized regular expressions.
+
+Since regular languages are closed under intersection and complementation, generalized regular expressions in this regard are no powerful than regular expressions.  The symbols $\neg$ and $\cap$ are therefore extraneous.  In other words, 
+$$\mathscr{R}=\mathscr{GR},$$
+where $\mathscr{R}$ is the family of regular languages.
+
+\begin{thebibliography}{9}
+\bibitem{AS} A. Salomaa, {\em Formal Languages}, Academic Press, New York (1973).
+\end{thebibliography}
+%%%%%
+%%%%%
+\end{document}

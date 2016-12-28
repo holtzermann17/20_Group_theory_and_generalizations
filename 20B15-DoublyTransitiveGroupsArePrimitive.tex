@@ -1,0 +1,48 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{DoublyTransitiveGroupsArePrimitive}
+\pmcreated{2013-03-22 17:21:50}
+\pmmodified{2013-03-22 17:21:50}
+\pmowner{rm50}{10146}
+\pmmodifier{rm50}{10146}
+\pmtitle{doubly transitive groups are primitive}
+\pmrecord{7}{39724}
+\pmprivacy{1}
+\pmauthor{rm50}{10146}
+\pmtype{Theorem}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{20B15}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\newtheorem*{thm}{Theorem}
+\begin{document}
+\begin{thm} Every doubly transitive group is \PMlinkname{primitive}{PrimativeTransitivePermutationGroupOnASet}.
+\end{thm}
+\begin{proof}
+Let $G$ acting on $X$ be doubly transitive. To show the action is \PMlinkescapetext{primitive}, we must show that all blocks are trivial blocks; to do this, it suffices to show that any block containing more than one element is all of $X$. So choose a block $Y$ with two distinct elements $y_1, y_2$. Given an arbitrary $x\in X$, since $G$ is doubly transitive, we can choose $\sigma\in G$ such that
+\[\sigma\cdot(y_1,y_2)=(y_1,x)\]
+But then $\sigma\cdot Y\cap Y\neq\emptyset$, since $y_1$ is in both. Thus $\sigma\cdot Y=Y$, so $x\in Y$ as well. So $Y=X$ and we are done.
+\end{proof}
+%%%%%
+%%%%%
+\end{document}

@@ -1,0 +1,87 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{HallSubgroup}
+\pmcreated{2013-03-22 14:02:02}
+\pmmodified{2013-03-22 14:02:02}
+\pmowner{Algeboy}{12884}
+\pmmodifier{Algeboy}{12884}
+\pmtitle{Hall subgroup}
+\pmrecord{22}{35135}
+\pmprivacy{1}
+\pmauthor{Algeboy}{12884}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{20D20}
+\pmrelated{VeeCuhininsTheorem}
+\pmrelated{SylowTheorems}
+\pmdefines{Hall's theorem}
+\pmdefines{Hall $\pi$-subgroup}
+
+\usepackage{amssymb}
+\usepackage{amsfonts}
+\usepackage[mathscr]{euscript}
+\usepackage[T1]{fontenc}
+% graphics
+%\usepackage{pstricks}
+% math
+\usepackage{amsmath}
+\usepackage{amsopn}
+\usepackage{amstext}
+\usepackage{amsthm}
+
+\newtheorem{thm}{Theorem}
+
+\newtheorem{ex}[thm]{Example}
+\begin{document}
+Let $G$ be a finite group.  A subgroup $H$ of $G$ is said to 
+be a \emph{Hall subgroup} if $$\gcd (|H|,|G/H|)=1.$$  In other 
+words, $H$ is a Hall subgroup if the order of $H$ and its index 
+in $G$ are coprime.  These subgroups are 
+name after Philip Hall who used them to characterize solvable groups.
+
+Hall subgroups are a generalization of Sylow subgroups.  Indeed, 
+every Sylow subgroup is a Hall subgroup.  According to Sylow's 
+theorem, this means that any group of order $p^k m$, $\gcd(p,m)=1$, 
+has a Hall subgroup (of order $p^k$).
+
+A common notation used with Hall subgroups is to use the notion of
+\PMlinkname{$\pi$-groups}{PiGroupsAndPiGroups}.  Here $\pi$ is a set
+of primes and a Hall $\pi$-subgroup of a group is a subgroup which is
+also a $\pi$-group, and maximal with this property.
+
+\begin{thm}[Hall (1928)] 
+A finite group $G$ is solvable iff $G$ has a Hall $\pi$-subgroup for
+any set of primes $\pi$.
+\end{thm}
+
+The sets of primes $\pi$ in Hall's theorem can be restricted to
+the subsets of primes which divide $|G|$.
+However, this result fails for non-solvable groups.  
+
+\begin{ex}
+The group $A_5$ has no Hall $\{2,5\}$-subgroup.  That is,
+$A_5$ has no subgroup of order $20$.
+\end{ex}
+\begin{proof}
+Suppose that $A_5$ has a Hall $\{2,5\}$-subgroup $H$.  
+As $|A_5|=60$, it follows that $|H|=20$.  Thus, there
+are three cosets of $H$.  Since a group always acts
+on the cosets of a subgroup, it follows that $A_5$ acts
+on the three member set $C$ of cosets of $H$.  This induces
+a non-trivial homomorphism from $A_5$ to $S_C\cong S_3$ 
+(here, $S_C$ is the symmetric group on $C$, see 
+\PMlinkname{this}{GroupActionsAndHomomorphisms} for more detail).
+Since $A_5$ is simple, this homomorphism must be one-to-one, 
+implying that its image must have order at most $6$, an 
+impossibility.
+\end{proof}
+
+This example can also be proved by direct inspection of the subgroups of $A_5$.
+In any case, $A_5$ is non-abelian simple and therefore it is not a
+solvable group.  Thus, Hall's theorem does not apply to $A_5$.
+
+
+
+%%%%%
+%%%%%
+\end{document}

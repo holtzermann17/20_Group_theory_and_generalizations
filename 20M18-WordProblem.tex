@@ -1,0 +1,96 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{WordProblem}
+\pmcreated{2013-05-17 17:00:19}
+\pmmodified{2013-05-17 17:00:19}
+\pmowner{Mazzu}{14365}
+\pmmodifier{unlord}{1}
+\pmtitle{word problem}
+\pmrecord{11}{38301}
+\pmprivacy{1}
+\pmauthor{Mazzu}{1}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{20M18}
+\pmclassification{msc}{20M05}
+%\pmkeywords{inverse semigroup}
+%\pmkeywords{presentation}
+\pmdefines{word problem}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\begin{document}
+\PMlinkescapeword{inverse}
+\PMlinkescapeword{graph}
+\PMlinkescapeword{right}
+\PMlinkescapeword{theory}
+\PMlinkescapeword{argument}
+
+
+\newcommand{\e}{\mathrm{e}}
+\newcommand{\co}{\mathrm{c}}
+
+\newcommand{\cbra}[1]{\left( #1 \right)}
+\newcommand{\qbra}[1]{\left[ #1 \right]}
+\newcommand{\gbra}[1]{\left\{ #1 \right\}}
+\newcommand{\abra}[1]{\left\langle #1 \right\rangle}
+
+\newcommand{\gpres}[2]{\mathrm{Gp}\abra{#1 \mid #2}}
+\newcommand{\mipres}[2]{\mathrm{Inv}^1\abra{#1 \mid #2}}
+\newcommand{\sipres}[2]{\mathrm{Inv}\abra{#1 \mid #2}}
+
+\newcommand{\double}[1]{\cbra{#1\amalg #1^{-1}}}
+\newcommand{\doubles}[1]{\cbra{#1\amalg #1^{-1}}^\ast}
+\newcommand{\doublep}[1]{\cbra{#1\amalg #1^{-1}}^+}
+\newcommand{\fim}{\mathrm{FIM}}
+\newcommand{\fis}{\mathrm{FIS}}
+\newcommand{\fg}{\mathrm{FG}}
+
+Let $(X;R)$ be a presentation for the group $G=\gpres{X}{R}$. It is well known that $G$ is a quotient group of the free monoid with involution on $X$, i.e.  $G=\doubles X/\theta$ for some congruence $\theta\subseteq \doubles X\times \doubles X$.  We recall that $R\subset \doubles X$ is a set of words all representing the identity $1_G$ of the group, i.e. $[r]_\theta=1_G$ for all $r\in R$. The \emph{word problem} in the category of groups consists in establish whether or not two given words $v,w\in\doubles X$ represent the same element of $G$, i.e. whether or not $[v]_\theta=[w]_\theta$.
+
+Let $(X;T)$ be a presentation for the inverse monoid $M=\mipres{X}{T}=\doubles X/\tau$, where $\tau=(\rho_X\cup T)^\co$. The concept of presentation for inverse monoid is analogous to the group's one, but now $T$ is a binary relation on $\doubles X$, i.e. $T\subseteq\doubles X\times\doubles X$. 
+The \emph{word problem} in the category of inverse monoids consists in establish whether or not two given words $v,w\in\doubles X$ represent the same element of $M$, i.e. whether or not $[v]_\tau=[w]_\tau$.
+
+We can modify the last paragraph to introduce the \emph{word problem} in the category of inverse semigroups as well.
+
+A classical results in combinatorial group theory says that the word problem in the category of groups is undecidable, so it is  undecidable also for the larger categories of inverse semigroups and inverse monoids.
+
+
+\begin{thebibliography}{9}
+\bibitem{b:boone} W. W. Boone, \emph{Certain simple unsolvable problems in group theory}, I, II, III,
+IV, V, VI, Nederl. Akad.Wetensch Proc. Ser. A57, 231-237,492- 497 (1954), 58,
+252-256,571-577 (1955), 60, 22-27,227-232 (1957).
+\bibitem{b:lynsch} R. Lyndon and P. Schupp, \emph{Combinatorial Group Theory}, Springer-Verlag, 1977.
+\bibitem{b:novi} P.S. Novikov, \emph{On the algorithmic unsolvability of the word problem in group theory},
+Trudy Mat. Inst. Steklov 44, 1-143 (1955).
+\bibitem{b:step} J.B. Stephen, \emph{Presentation of inverse monoids}, J. Pure Appl. Algebra 63 (1990) 81-
+112.
+\end{thebibliography}
+
+
+
+
+%%%%%
+%%%%%
+% rerender, fix some typos
+\end{document}

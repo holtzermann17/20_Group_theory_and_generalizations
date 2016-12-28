@@ -1,0 +1,86 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{SupernaturalNumber}
+\pmcreated{2013-03-22 15:23:36}
+\pmmodified{2013-03-22 15:23:36}
+\pmowner{mathcam}{2727}
+\pmmodifier{mathcam}{2727}
+\pmtitle{supernatural number}
+\pmrecord{7}{37227}
+\pmprivacy{1}
+\pmauthor{mathcam}{2727}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{20E18}
+\pmdefines{gcd of supernatural numbers}
+\pmdefines{greatest commond divisor of supernatural numbers}
+\pmdefines{lcm of supernatural numbers}
+\pmdefines{least common multiple of supernatural numbers}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amsthm}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\newcommand{\mc}{\mathcal}
+\newcommand{\mb}{\mathbb}
+\newcommand{\mf}{\mathfrak}
+\newcommand{\ol}{\overline}
+\newcommand{\ra}{\rightarrow}
+\newcommand{\la}{\leftarrow}
+\newcommand{\La}{\Leftarrow}
+\newcommand{\Ra}{\Rightarrow}
+\newcommand{\nor}{\vartriangleleft}
+\newcommand{\Gal}{\text{Gal}}
+\newcommand{\GL}{\text{GL}}
+\newcommand{\Z}{\mb{Z}}
+\newcommand{\R}{\mb{R}}
+\newcommand{\Q}{\mb{Q}}
+\newcommand{\C}{\mb{C}}
+\newcommand{\<}{\langle}
+\renewcommand{\>}{\rangle}
+\begin{document}
+A supernatural number $\omega$ is a formal product 
+\begin{align*}
+\omega=\prod_{p} p^{n_p},
+\end{align*}
+where $p$ runs over all (rational) prime numbers, and the values $n_p$ are each either natural numbers or the symbol $\infty$.
+
+We note first that by the fundamental theorem of arithmetic, we can view any natural number as a supernatural number.  Supernatural numbers form a generalization of natural numbers in two ways:  First, by allowing the possibility of infinitely many prime factors, and second, by allowing any given prime to divide $\omega$ ``infinitely often,'' by taking that prime's corresponding exponent to be the symbol $\infty$.
+
+We can extend the usual $p$-adic \PMlinkescapetext{order functions} to these supernatural numbers by defining, for $\omega$ as above, $v_p(\omega)=n_p$ for each $p$.  We can then extend the notion of divisibility to supernatural numbers by declaring $\omega_1\mid\omega_2$ if $v_p(\omega_1)\leq v_p(\omega_2)$ for all $p$ (where, by definition, the symbol $\infty$ is considered greater than any natural number).  Finally, we can also generalize the notion of the least common multiple (lcm) and greatest common divisor (gcd) for (arbitrarily many) supernatural numbers, by defining
+
+\begin{align*}
+\operatorname{lcm}(\{\omega_i\})&=\prod_p p^{\sup(v_p(\omega_i))}\\
+\operatorname{gcd}(\{\omega_i\})&=\prod_p p^{\inf(v_p(\omega_i))}\\
+\end{align*}
+
+Note that the supernatural version of the definitions of divisibility, $\operatorname{lcm}$, and $\operatorname{gcd}$ carry over exactly from their corresponding notions for natural numbers, though we can now take the gcd or lcm of infinitely many natural numbers (to get a supernatural number).
+
+Supernatural numbers are used to define orders and indices of profinite groups and subgroups, in which case many of the theorems from finite group theory carry over verbatim.
+
+\begin{thebibliography}{9}
+\bibitem{Ram}[Ram] Ramakrishnan, Dinikara and Valenza, Robert.  \emph{Fourier Analysis on Number Fields}.  Graduate Texts in Mathematics, volume 186.  Springer-Verlag, New York, NY.  1989.
+\bibitem{Ser}[Ser] Serre, J.-P.  (Ion, P., translator)  \emph{Galois Cohomology}.  Springer, New York, NY.  1997
+\end{thebibliography}
+%%%%%
+%%%%%
+\end{document}

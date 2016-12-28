@@ -1,0 +1,53 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{FreeProductsAndGroupActions}
+\pmcreated{2013-03-22 17:34:56}
+\pmmodified{2013-03-22 17:34:56}
+\pmowner{rm50}{10146}
+\pmmodifier{rm50}{10146}
+\pmtitle{free products and group actions}
+\pmrecord{5}{39994}
+\pmprivacy{1}
+\pmauthor{rm50}{10146}
+\pmtype{Theorem}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{20E06}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\newtheorem{thm}{Theorem}
+
+\begin{document}
+\begin{thm} (See Lang, Exercise 54 p. 81) Suppose $G_1,\ldots G_n$ are subgroups of $G$ that generate $G$. Suppose further that $G$ acts on a set $S$ and that there are subsets $S_1,S_2,\ldots S_n\subset S$, and some $s\in S-\cup S_i$ such that for each $1\leq i\leq n$, the following holds for each $g\in G_i, g\neq e$:
+\begin{itemize}
+\item $g(S_j)\subset S_i$ if $j\neq i$, and
+\item $g(s)\in S_i$.
+\end{itemize}
+Then $G=G_1\star\ldots\star G_n$ (where $\star$ denotes the free product).
+\end{thm}
+
+\textbf{Proof:}
+Any $g\in G$ can be written $g=g_1g_2\ldots g_k$ with $g_i\in G_{j_i}, j_i\neq j_{i+1}, g_i\neq e$, since the $G_i$ generate $G$. Thus there is a surjective homomorphism $\phi:\coprod G_i\twoheadrightarrow G$ (since $\coprod G_i$, as the coproduct, has this universal property). We must show $\ker \phi$ is trivial. Choose $g_1g_2\ldots g_k$ as above. Then $g_k(s)\in S_{j_k}$, $g_{k-1}(g_k(s))\in S_{j_{k-1}}$, and so forth, so that $g_1(g_2(\ldots(g_k(s)\ldots)\in S_{j_1}$. But $e(s)=s\notin S_{j_1}$. Thus $\phi(g_1g_2\ldots g_k) \neq e$, and $\phi$ is injective.
+
+%%%%%
+%%%%%
+\end{document}

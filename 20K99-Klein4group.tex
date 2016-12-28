@@ -1,0 +1,367 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{Klein4group}
+\pmcreated{2013-03-22 12:49:02}
+\pmmodified{2013-03-22 12:49:02}
+\pmowner{Algeboy}{12884}
+\pmmodifier{Algeboy}{12884}
+\pmtitle{Klein 4-group}
+\pmrecord{26}{33139}
+\pmprivacy{1}
+\pmauthor{Algeboy}{12884}
+\pmtype{Topic}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{20K99}
+\pmsynonym{Klein four-group}{Klein4group}
+\pmsynonym{Viergruppe}{Klein4group}
+\pmrelated{GroupsInField}
+\pmrelated{Klein4Ring}
+\pmrelated{PrimeResidueClass}
+\pmrelated{AbelianGroup2}
+
+\usepackage{latexsym}
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amsthm}
+
+%%\usepackage{xypic}
+\DeclareMathOperator{\Aut}{Aut }
+
+%-----------------------------------------------------
+
+%       Standard theoremlike environments.
+
+%       Stolen directly from AMSLaTeX sample
+
+%-----------------------------------------------------
+
+%% \theoremstyle{plain} %% This is the default
+
+\newtheorem{thm}{Theorem}
+
+\newtheorem{coro}[thm]{Corollary}
+
+\newtheorem{lem}[thm]{Lemma}
+
+\newtheorem{lemma}[thm]{Lemma}
+
+\newtheorem{prop}[thm]{Proposition}
+
+\newtheorem{conjecture}[thm]{Conjecture}
+
+\newtheorem{conj}[thm]{Conjecture}
+
+\newtheorem{defn}[thm]{Definition}
+
+\newtheorem{remark}[thm]{Remark}
+
+\newtheorem{ex}[thm]{Example}
+
+
+
+%\countstyle[equation]{thm}
+
+
+
+%--------------------------------------------------
+
+%       Item references.
+
+%--------------------------------------------------
+
+
+\newcommand{\exref}[1]{Example-\ref{#1}}
+
+\newcommand{\thmref}[1]{Theorem-\ref{#1}}
+
+\newcommand{\defref}[1]{Definition-\ref{#1}}
+
+\newcommand{\eqnref}[1]{(\ref{#1})}
+
+\newcommand{\secref}[1]{Section-\ref{#1}}
+
+\newcommand{\lemref}[1]{Lemma-\ref{#1}}
+
+\newcommand{\propref}[1]{Prop\-o\-si\-tion-\ref{#1}}
+
+\newcommand{\corref}[1]{Cor\-ol\-lary-\ref{#1}}
+
+\newcommand{\figref}[1]{Fig\-ure-\ref{#1}}
+
+\newcommand{\conjref}[1]{Conjecture-\ref{#1}}
+
+
+% Normal subgroup or equal.
+
+\providecommand{\normaleq}{\unlhd}
+
+% Normal subgroup.
+
+\providecommand{\normal}{\lhd}
+
+\providecommand{\rnormal}{\rhd}
+% Divides, does not divide.
+
+\providecommand{\divides}{\mid}
+
+\providecommand{\ndivides}{\nmid}
+
+
+\providecommand{\union}{\cup}
+
+\providecommand{\bigunion}{\bigcup}
+
+\providecommand{\intersect}{\cap}
+
+\providecommand{\bigintersect}{\bigcap}
+
+
+
+
+
+
+
+
+
+
+\begin{document}
+The \emph{Klein 4-group} is the subgroup $V$ (Vierergruppe) of
+$S_4$ (see symmetric group) consisting of the following
+4 permutations:  
+$$(),\; (12)(34),\; (13)(24),\; (14)(23).$$
+(see cycle notation). This is an
+abelian group, isomorphic to the product $\mathbb{Z}_2\oplus \mathbb{Z}_2$.
+The group is named after \PMlinkexternal{Felix  Klein}{http://www-gap.dcs.st-and.ac.uk/~history/Mathematicians/Klein.html},
+a pioneering figure in the field of geometric group theory.
+
+\section{Klein 4-group as a symmetry group}
+
+The group $V$ is isomorphic to the automorphism group of various planar
+graphs, including graphs of 4 vertices.  Yet we have
+
+\begin{prop}
+$V$ is not the automorphism group of a simple graph.
+\end{prop}
+\begin{proof}
+Suppose $V$ is the automorphism group of a simple graph $G$.
+Because $V$ contains the permutations $(12)(34)$, $(13)(24)$ and $(14)(23)$
+it follows the degree of every vertex is the same -- we can map
+every vertex to every other.  So $G$ is a regular graph on 4 vertices.
+This makes $G$ isomorphic to one of the following 4 graphs:
+\[
+\begin{xy}<10mm,0mm>:<0mm,10mm>::
+( 0, 0) *+{1} = "1";
+( 1, 0) *+{2} = "2";
+( 1, 1) *+{3} = "3";
+( 0, 1) *+{4} = "4";
+\end{xy}
+\qquad
+\begin{xy}<10mm,0mm>:<0mm,10mm>::
+( 0, 0) *+{1} = "1";
+( 1, 0) *+{2} = "2";
+( 1, 1) *+{3} = "3";
+( 0, 1) *+{4} = "4";
+"1"; "2" **@{-};
+"3"; "4" **@{-};
+\end{xy}
+\qquad
+\begin{xy}<10mm,0mm>:<0mm,10mm>::
+( 0, 0) *+{1} = "1";
+( 1, 0) *+{2} = "2";
+( 1, 1) *+{3} = "3";
+( 0, 1) *+{4} = "4";
+"1"; "2" **@{-};
+"2"; "3" **@{-};
+"3"; "4" **@{-};
+"4"; "1" **@{-};
+\end{xy}
+\qquad
+\begin{xy}<10mm,0mm>:<0mm,10mm>::
+( 0, 0) *+{1} = "1";
+( 1, 0) *+{2} = "2";
+(-0.5,0.86) *+{3} = "3";
+(-0.5,-0.86) *+{4} = "4";
+"1"; "2" **@{-};
+"1"; "3" **@{-};
+"1"; "4" **@{-};
+"2"; "3" **@{-};
+"2"; "4" **@{-};
+"3"; "4" **@{-};
+\end{xy}.
+\]  
+In order the automorphism groups of these graphs are $S_4$, 
+$\langle (12),(34)\rangle$, $\langle (12),(1234)\rangle$ and $S_4$.
+None of these are $V$, though the second is isomorphic to $V$.
+\end{proof}
+
+Though $V$ cannot be realized as an automorphism group of a planar graph
+it can be realized as the set of symmetries of a polygon, in particular,
+a non-square rectangle.
+\[
+\begin{xy}<10mm,0mm>:<0mm,10mm>::
+( 0, 0) *+{1} = "1";
+( 2, 0) *+{2} = "2";
+( 2, 1) *+{3} = "3";
+( 0, 1) *+{4} = "4";
+"1"; "2" **@{-};
+"2"; "3" **@{-};
+"3"; "4" **@{-};
+"4"; "1" **@{-};
+\end{xy}
+\]
+We can rotate by $180^\circ$ which corresponds to the permutation
+$(13)(24)$.  We can also flip the rectangle over the horizontal diagonal
+which gives the permutation $(14)(23)$, and finally also over the vertical
+diagonal which gives  the permutation $(12)(34)$.
+\[
+\begin{xy}<10mm,0mm>:<0mm,10mm>::
+( 0, 0) *+{3} = "1";
+( 2, 0) *+{4} = "2";
+( 2, 1) *+{1} = "3";
+( 0, 1) *+{2} = "4";
+"1"; "2" **@{-};
+"2"; "3" **@{-};
+"3"; "4" **@{-};
+"4"; "1" **@{-};
+\end{xy},
+\quad
+\begin{xy}<10mm,0mm>:<0mm,10mm>::
+( 0, 0) *+{4} = "1";
+( 2, 0) *+{3} = "2";
+( 2, 1) *+{2} = "3";
+( 0, 1) *+{1} = "4";
+"1"; "2" **@{-};
+"2"; "3" **@{-};
+"3"; "4" **@{-};
+"4"; "1" **@{-};
+\end{xy},
+\quad
+\begin{xy}<10mm,0mm>:<0mm,10mm>::
+( 0, 0) *+{2} = "1";
+( 2, 0) *+{1} = "2";
+( 2, 1) *+{4} = "3";
+( 0, 1) *+{3} = "4";
+"1"; "2" **@{-};
+"2"; "3" **@{-};
+"3"; "4" **@{-};
+"4"; "1" **@{-};
+\end{xy}.
+\]
+An important corollary to this realization is
+\begin{prop}\label{prop:d8}
+Given a square with vertices labeled in any way by $\{1,2,3,4\}$, then the
+full symmetry group (the dihedral group of order 8, $D_8$) contains $V$.
+\end{prop}
+
+
+\section{Klein 4-group as a vector space}
+
+As $V$ is isomorphic to $\mathbb{Z}_2\oplus \mathbb{Z}_2$ it is a 2-dimensional
+vector space over the Galois field $\mathbb{Z}_2$.  The projective geometry
+of $V$ -- equivalently, the lattice of subgroups -- is given in the following
+Hasse diagam:
+\[
+\begin{xy} <10mm,0mm>:<0mm,10mm>::
+(0,0)	*+{\langle ()\rangle}	="1.1";
+(-2,1)	*+{\langle (12)(34)\rangle}	="2.1";
+(0,1)	*+{\langle (13)(24)\rangle}	="3.1";
+(2,1)	*+{\langle (14)(23)\rangle}	="4.1";
+(0,2)	*+{V}	="5.1";
+"2.1";	"1.1"	**@{-};
+"3.1";	"1.1"	**@{-};
+"4.1";	"1.1"	**@{-};
+"5.1";	"4.1"	**@{-};
+"5.1";	"3.1"	**@{-};
+"5.1";	"2.1"	**@{-};
+\end{xy}
+\]
+The automorphism group of a vector space is called the general linear
+group and so in our context $\Aut V\cong GL(2,2)$.  As we can interchange
+any basis of a vector space we can label the elements $e_1=(12)(34)$,
+$e_2=(13)(24)$ and $e_3=(14)(23)$ so that we have the permutations
+$(e_1,e_2)$ and $(e_2,e_3)$ and so we generate all permutations on
+$\{e_1,e_2,e_3\}$.  This proves:
+
+\begin{prop}\label{prop:agl}
+$\Aut V\cong GL(2,2)\cong S_3$.  Furthermore, the affine linear group
+of $V$ is $AGL(2,2)=V\rtimes S_3$.
+\end{prop}
+
+\section{Klein 4-group as a normal subgroup}
+
+Because $V$ is a subgroup of $S_4$ we can consider its conjugates.  Because
+conjugation in $S_4$ respects the cycle structure.  From this we see that
+the conjugacy class in $S_4$ of every element of $V$ lies again in $V$.  Thus
+$V$ is normal.  This now allows us to combine both of the previous sections
+to outline the exceptional nature (amongst $S_n$ families) of $S_4$.  We 
+collect these into
+
+\begin{thm}
+\begin{enumerate}
+\item $V$ is a normal subgroup of $S_4$.
+\item $V$ is contained in $A_4$ and so it is a normal subgroup of $A_4$.
+\item $V$ is the Sylow 2-subgroup of $A_4$.
+\item $V$ is the intersection of all Sylow 2-subgroups of $S_4$, that is,
+the $2$-core of $S_4$.
+\item $S_4/V\cong S_3$.
+\item $S_4\cong AGL(2,2)\cong V\rtimes S_3$.
+\end{enumerate}
+\end{thm}
+\begin{proof}
+We have already argued that $V$ is normal in $S_4$.  Upon inspecting the
+elements of $V$ we see $V$ contains only even permutations so $V\leq A_4$
+and consequently $V$ is normal in $A_4$ as well.  As $|A_4|=12$ and $|V|=4$
+we establish $V$ is a Sylow 2-subgroup of $A_4$.  But $V$ is normal so it
+the Sylow 2-subgroup of $A_4$ (Sylow subgroups are conjugate.)  
+
+Now notice that the dihedral group $D_8$ acts on a square and so it is
+represented as a permutation group on 4 vertices, so $D_8$ embeds in $S_4$.
+As $|D_8|=8$ and $|S_4|=24$, $D_8$ is a Sylow 2-subgroup of $S_4$ and so
+all Sylow 2-subgroups of $S_4$ are embeddings of $D_8$ (in particular various
+relabellings of the vertices of the square.)  But by Proposition \ref{prop:d8}
+we know that each embedding contains $V$.  As there are 3 non-equal 
+embeddings of $D_8$ (think of the 3 non-equal labellings of a square) we 
+know that the intersection of these $D_8$ is a proper subgroup of $D_8$.
+As $V$ is a maximal subgroup of each $D_8$ and contained in each, $V$ is
+the intersection of all these embeddings.
+
+Now the action of $S_4$ by conjugation on the Sylow 2-subgroups $D_8$
+permutes all 3 (again Sylow subgroups are conjugate) so $S_4\mapsto S_3$.
+Indeed, $V$ is in the kernel of this action as $V$ is in each $D_8$.
+Indeed a three cycle $(123)$ permutes the $D_8$'s with no fixed point
+(consider the relabellings) and $(12)$ fixes only one.  So $S_4$ maps 
+onto $S_3$ and so the kernel is precisely $V$.  Thus $S_4/V=S_3$.
+
+Now we can embed $S_3$ into $S_4$ as $\langle (123),(12)\rangle$ so 
+$V\intersect S_3=1$, $VS_3=S_4$ so $S_4=V\ltimes S_3$.  Finally, $AGL(2,2)$
+acts transitively on the four points of the vector space $V$ so 
+$AGL(2,2)$ embeds in $S_4$.  And by Proposition \ref{prop:agl} we conclude
+$S_4\cong AGL(2,2)$.
+\end{proof}
+
+We can make similar arguments about subgroups of symmetries for 
+larger regular polygons.  Likewise for other 2-dimensional vector spaces
+we can establish similar structural properties.  However it is only
+when we study we involve $V$ that we find these two methods intersect
+in a this exceptionally parallel fashion.  Thus we establish the exceptional
+structure of $S_4$.  For all other $S_n$'s, $A_n$ is the only proper normal
+subgroup.
+
+We can view the properties of our theorem in a geometric way as follows:
+$S_4$ is the group of symmetries of a tetrahedron. There is an induced  action 
+of  $S_4$ on the six edges of the tetrahedron. Observing that this action preserves incidence relations one gets an action of $S_4$ on the three pairs 
+of opposite edges.
+
+\section{Other properties}
+
+$V$ is non-cyclic and of smallest possible order with this property.
+
+$V$ is transitive and regular.  Indeed $V$ is the (unique) regular representation of 
+$\mathbb{Z}_2\oplus \mathbb{Z}_2$.  The other 3 subgroups of $S_4$ which are isomorphic to 
+$\mathbb{Z}_2\oplus \mathbb{Z}_2$ are not transitive.
+
+$V$ is the symmetry group of the Riemannian curvature tensor.
+%%%%%
+%%%%%
+\end{document}

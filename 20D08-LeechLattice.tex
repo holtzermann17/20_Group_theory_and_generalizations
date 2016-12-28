@@ -1,0 +1,88 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{LeechLattice}
+\pmcreated{2013-03-22 18:43:23}
+\pmmodified{2013-03-22 18:43:23}
+\pmowner{monster}{22721}
+\pmmodifier{monster}{22721}
+\pmtitle{Leech lattice}
+\pmrecord{7}{41491}
+\pmprivacy{1}
+\pmauthor{monster}{22721}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{20D08}
+\pmclassification{msc}{20B25}
+\pmclassification{msc}{11H56}
+\pmclassification{msc}{11H06}
+\pmclassification{msc}{51E10}
+\pmrelated{BinaryGolayCode}
+\pmrelated{MiracleOctadGenerator}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\newcommand{\gc}{\mathcal{G}_{24}}
+
+\begin{document}
+\PMlinkescapeword{words}
+
+The Leech lattice is the unique \PMlinkname{even}{EvenLattice} unimodular lattice of \PMlinkname{dimension}{Dimension2} 24 having no elements of norm 2.  Its \PMlinkname{automorphism group}{EquivalentCode} is the largest Conway group $Co_0$ (sometimes denoted by $\cdot 0$).  The quotient of $Co_0$ by its center is called $Co_1$, a sporadic simple group.  
+
+The construction of the Leech lattice below depends on the existence of the extended binary Golay code $\gc$ (for a construction of the latter, see miracle octad generator).
+
+\section{Construction of the Leech lattice}
+
+Let $\Omega = \{1,2,\ldots,24\}$ and assume we have constructed the Golay \PMlinkescapetext{code} $\gc$ on $\Omega$.  The Leech lattice $\Lambda$ is the set of all points $$\frac{1}{\sqrt{8}}(x_1, x_2, \ldots, x_{24})$$ in $\mathbb{R}^{24}$ where each $x_i$ is an integer, such that
+\begin{itemize}
+\item{For some integer $m$, we have $x_i \equiv x_j \equiv m \pmod{2}$ for all $i, j \in \Omega$;}
+\item{For any integer $n$, the set of coordinates $\{i \in \Omega: x_i \equiv n \pmod{4}\}$ is in $\gc$;}
+\item{$\sum_{i \in\Omega} x_i \equiv 4m \pmod{8}$.}
+\end{itemize}
+
+\section{Properties of the Leech lattice}
+1. The Leech lattice $\Lambda$ is an \PMlinkescapetext{even} unimodular lattice; in other words:
+\begin{itemize}
+\item{The set $\Lambda$ spans all of $\mathbb{R}^{24}$ as an $\mathbb{R}$-vector space.}
+\item{For any $x,y \in \Lambda$, the scalar product $x \cdot y$ is an integer.}
+\item{For any $x \in \Lambda$, the norm $x \cdot x$ is an even integer.}
+\item{The volume of the fundamental parallelogram of $\Lambda$ is 1.}
+\end{itemize}
+
+2. Let $\Lambda(n) = \{x \in \Lambda: x \cdot x = 2n \}$.  Then $|\Lambda(0)| = 1$, $|\Lambda(1)| = 0$, $|\Lambda(2)| = 196560$, $|\Lambda(3)| = 16773120$, $|\Lambda(4)| = 398034000$.
+
+3. The \PMlinkname{automorphism group}{EquivalentCode} $\mbox{Aut}(\Lambda)$ is the largest Conway group $Co_0$ with order $8\,315\,553\,613\,086\,720\,000 = 2^{22} \cdot 3^9 \cdot 5^4 \cdot 7^2 \cdot 11 \cdot 13 \cdot 23$. 
+
+4. The group $Co_0$ acts \PMlinkname{transitively}{LeftAction} on the sets $\Lambda(2)$, $\Lambda(3)$, $\Lambda(4)$.  For $n=2,3$, the imprimitivity blocks of the action of $Co_0$ on $\Lambda(n)$ are the sets $\{x, -x\}$ where $x \in \Lambda(n)$.  The imprimitivity blocks of the action of $Co_0$ on $\Lambda(4)$ are sets of 48 vectors called \emph{\PMlinkescapetext{coordinate frames}}.  Any two distinct vectors in a \PMlinkescapetext{coordinate frame} are either \PMlinkescapetext{opposite} or orthogonal, and are \PMlinkname{congruent}{QuotientGroup} modulo $2\Lambda$.
+
+5. Any vector in $\Lambda$ is \PMlinkescapetext{congruent} modulo $2\Lambda$ to a vector in $\Lambda(n)$ for one of $n = 0,2,3,4$.  The imprimitivity blocks of the action of $Co_0$ on these sets account for all \PMlinkname{classes}{EquivalenceClass} of $\Lambda / 2 \Lambda$: $$1 + |\Lambda(2)|/2 + |\Lambda(3)|/2 + |\Lambda(4)|/48 = 2^{24} = |\Lambda / 2 \Lambda|.$$ 
+
+
+
+
+
+\begin{thebibliography}{9}
+\bibitem{splag} J. H. Conway and N. J. A. Sloane. Sphere Packings, Lattices, and Groups. Springer-Verlag, 1999.
+\end{thebibliography}
+
+%%%%%
+%%%%%
+\end{document}

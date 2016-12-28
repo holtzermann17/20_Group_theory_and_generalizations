@@ -1,0 +1,76 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{LocallyCyclicGroup}
+\pmcreated{2013-03-22 13:47:12}
+\pmmodified{2013-03-22 13:47:12}
+\pmowner{yark}{2760}
+\pmmodifier{yark}{2760}
+\pmtitle{locally cyclic group}
+\pmrecord{24}{34497}
+\pmprivacy{1}
+\pmauthor{yark}{2760}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{20K99}
+\pmclassification{msc}{20E25}
+\pmsynonym{locally cyclic}{LocallyCyclicGroup}
+\pmsynonym{generalized cyclic group}{LocallyCyclicGroup}
+\pmsynonym{generalized cyclic}{LocallyCyclicGroup}
+\pmsynonym{generalised cyclic}{LocallyCyclicGroup}
+\pmsynonym{generalised cyclic group}{LocallyCyclicGroup}
+\pmrelated{CyclicGroup}
+\pmrelated{AbelianGroup2}
+\pmrelated{Group}
+\pmrelated{LocallyCalP}
+
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+\def\genby#1{{\left\langle #1\right\rangle}}
+
+\newcommand{\R}[0]{\mathbb{R}}
+\newcommand{\C}[0]{\mathbb{C}}
+\newcommand{\Q}[0]{\mathbb{Q}}
+\newcommand{\N}[0]{\mathbb{N}}
+\newcommand{\Z}[0]{\mathbb{Z}}
+
+\newtheorem{theorem}{Theorem}
+\begin{document}
+\PMlinkescapeword{clear}
+\PMlinkescapeword{equivalent}
+\PMlinkescapeword{generates}
+\PMlinkescapeword{properties}
+\PMlinkescapeword{quotient}
+\PMlinkescapeword{quotients}
+\PMlinkescapeword{subgroup}
+\PMlinkescapeword{subgroups}
+
+\section*{Definition}
+
+A {\em locally cyclic} group is a group in which every finite subset generates a cyclic subgroup.
+
+\section*{Properties}
+
+From the definition we see that every finitely generated locally cyclic group
+(and, in particular, every finite locally cyclic group) is cyclic.
+
+The following can all be shown to be equivalent for a group $G$:
+
+\begin{itemize}
+\item $G$ is locally cyclic.
+\item For all $a,b\in G$, the \PMlinkname{subgroup}{Subgroup} $\genby{a,b}$ is cyclic.
+\item $G$ is the union of a chain of cyclic subgroups.
+\item The lattice of subgroups of $G$ is \PMlinkname{distributive}{DistributiveLattice}.
+\item $G$ embeds in $\Q$ or $\Q/\Z$.
+\item $G$ is isomorphic to a subgroup of a \PMlinkname{quotient}{QuotientGroup} of $\Q$.
+\item $G$ is \PMlinkname{involved in}{SectionOfAGroup} $\Q$.
+\end{itemize}
+
+From the last of these equivalent properties it is clear that
+every locally cyclic group is countable and abelian,
+and that subgroups and quotients
+of locally cyclic groups are locally cyclic.
+%%%%%
+%%%%%
+\end{document}

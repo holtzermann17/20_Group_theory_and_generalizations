@@ -1,0 +1,158 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{MyhillNerodeTheoremForSemigroups}
+\pmcreated{2014-05-14 17:29:14}
+\pmmodified{2014-05-14 17:29:14}
+\pmowner{Ziosilvio}{18733}
+\pmmodifier{Ziosilvio}{18733}
+\pmtitle{Myhill-Nerode theorem for semigroups}
+\pmrecord{5}{41748}
+\pmprivacy{1}
+\pmauthor{Ziosilvio}{18733}
+\pmtype{Theorem}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{20M35}
+\pmclassification{msc}{68Q70}
+\pmdefines{recognizable subset of a semigroup}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\begin{document}
+\newtheorem{theorem}{Theorem}
+
+Let $S$ be a semigroup.
+$X\subseteq S$ is \emph{recognizable}
+if it is union of classes of a congruence $\chi$
+such that $S/\chi$ is finite.
+
+In the rest of the entry,
+$\equiv_X$ will be the syntactic congruence of $X$,
+and $\mathcal{N}_X$ its Nerode equivalence.
+\begin{theorem}[Myhill-Nerode theorem for semigroups] \label{thm:mn}
+Let $S$ be a semigroup and let $X\subseteq S$.
+The following are equivalent.
+\begin{enumerate}
+\item \label{it:rec}
+$X$ is recognizable.
+\item \label{it:morph}
+There exist a finite semigroup $T$ and a morphism $\phi:S\to T$
+such that $X=\phi^{-1}(\phi(X))$.
+\item \label{it:syn}
+The syntactic semigroup of $X$ is finite.
+\item \label{it:right}
+There exists an equivalence relation $\sim$ on $S$ such that
+\begin{itemize}
+\item $S/\sim$ is finite and
+\item $s_1\sim s_2$ implies $s_1t\sim s_2t$.
+\end{itemize}
+\item \label{it:nerode}
+The quotient set $S/\mathcal{N}_X$ is finite.
+\end{enumerate}
+\end{theorem}
+Theorem~\ref{thm:mn} generalizes Myhill-Nerode theorem for languages
+to subsets of generic, not necessarily free, semigroups.
+In fact, as a consequence of Theorem~\ref{thm:mn},
+a language on a finite alphabet is recognizable in the sense given above
+if and only if it is recognizable by a DFA.
+
+The equivalence of points~\ref{it:rec}, \ref{it:morph} and~\ref{it:syn}
+is attributed to John Myhill,
+while the equivalence of points~\ref{it:rec}, \ref{it:right} and~\ref{it:nerode}
+is attributed to Anil Nerode.
+
+\emph{Proof of Theorem~\ref{thm:mn}.}
+
+\ref{it:rec} $\Rightarrow$ \ref{it:morph}.
+Given a congruence $\chi$ such that
+$|S/\chi|<\infty$ and $X$ is union of classes of $\chi$,
+choose $T$ as the quotient semigroup $S/\chi$
+and $\phi$ as the natural homomorphism mapping $s$ to $[s]_\chi$.
+
+\ref{it:morph} $\Rightarrow$ \ref{it:syn}.
+Given a morphism of semigroups $\phi:S\to T$
+with $T$ finite and $X=\phi^{-1}(\phi(X))$,
+put $s\chi t$ iff $\phi(s)=\phi(t)$.
+
+Since $\phi$ is a morphism, $\chi$ is a congruence;
+moreover, $X=\phi^{-1}(\phi(X))$ means that
+$X$ is union of classes of $\chi$-equivalence.
+By the maximality property of syntactic congruence,
+the number of classes of $\equiv_X$
+does not exceed the number of classes of $\chi$,
+which in turn does not exceed the number of elements of $T$.
+
+\ref{it:syn} $\Rightarrow$ \ref{it:rec}.
+Straightforward from $X$ being union of classes of $\equiv_X$.
+
+\ref{it:syn} $\Rightarrow$ \ref{it:right}.
+Straightforward from $\equiv_X$ satisfying the second requirement.
+
+\ref{it:right} $\Rightarrow$ \ref{it:nerode}.
+Straightforward from the maximality property of Nerode equivalence.
+
+\ref{it:nerode} $\Rightarrow$ \ref{it:syn}.
+Let
+\begin{equation} \label{eq:nerode-finite}
+S/\mathcal{N}_X
+=\left\{[\xi_1]_{\mathcal{N}_X},\ldots,[\xi_K]_{\mathcal{N}_X}\right\}\;.
+\end{equation}
+Since $s_1\equiv_X s_2$ iff $\ell s_1\mathcal{N}_X \ell s_2$
+for every $\ell \in S$,
+determining $[s]_{\equiv_X}$
+is the same as determining $[\ell s]_{\mathcal{N}_X}$
+as $\ell$ varies in $S$,
+\emph{plus the class $[s]_{\mathcal{N}_X}$}.
+(This additional class takes into account the possibility
+that $s \not \in [\ell s]_{\mathcal{N}_X}$ for any $\ell \in S$,
+which cannot be excluded \emph{a priori}:
+do not forget that $S$ is not required to be a monoid.)
+
+But since $s_1\mathcal{N}_Xs_2$ implies $s_1t\mathcal{N}_Xs_2t$,
+if $[\ell_1]_{\mathcal{N}_X}=[\ell_2]_{\mathcal{N}_X}$
+then $[\ell_1 s]_{\mathcal{N}_X}=[\ell_2 s]_{\mathcal{N}_X}$ as well.
+To determine $[s]_{\equiv_X}$
+it is thus sufficient to determine the $[\xi_i s]_{\mathcal{N}_X}$
+for $1\leq i\leq K$,
+plus $[s]_{\mathcal{N}_X}$.
+
+We can thus identify the class $[s]_{\equiv_X}$
+with the sequence
+\begin{math}
+\left(
+[\xi_1 s]_{\mathcal{N}_X},\ldots,[\xi_K s]_{\mathcal{N}_X},[s]_{\mathcal{N}_X}
+\right).
+\end{math}
+Then the number of classes of $\equiv_X$
+cannot exceed that of $(K+1)$-ples of classes of $\mathcal{N}_X$,
+which is $K^{K+1}$.
+\hfill$\Box$
+
+\begin{thebibliography}{99}
+A. de Luca and S. Varricchio.
+\emph{Finiteness and Regularity in Semigroups and Formal Languages.}
+Springer Verlag, Heidelberg 1999.
+\end{thebibliography}
+
+%%%%%
+%%%%%
+\end{document}

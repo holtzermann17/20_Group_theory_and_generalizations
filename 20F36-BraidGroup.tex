@@ -1,0 +1,79 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{BraidGroup}
+\pmcreated{2013-03-22 13:51:51}
+\pmmodified{2013-03-22 13:51:51}
+\pmowner{bwebste}{988}
+\pmmodifier{bwebste}{988}
+\pmtitle{braid group}
+\pmrecord{15}{34604}
+\pmprivacy{1}
+\pmauthor{bwebste}{988}
+\pmtype{Topic}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{20F36}
+\pmsynonym{Artin's braid group}{BraidGroup}
+\pmrelated{Tangle}
+\pmdefines{pure braid group}
+\pmdefines{braid}
+\pmdefines{configuration space}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic} 
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\begin{document}
+Let $C_n$ be the space of unordered $n$-tuples of distinct points in the complex plane.  The braid group $B_n$ is the fundamental group of $C_n$.
+
+A closed path $\gamma$ on this space is a set of $n$ paths $\gamma_i:[0,1]\to\mathbb{C}$ with $\gamma_i(t)\neq\gamma_j(t)$, and $\gamma_i(1)=\gamma_{\sigma(i)}(0)$, where $\sigma$ is some permutation of $\{1,\ldots,n\}$.  Drawing the graphs of all these paths in 3 space, what we see is $n$ strands between the $z=0$ and $z=1$ planes, possibly tangled, with composition given by stacking these braids on top of each other.  Homotopy corresponds to isotopy of the braid, homotopies of the strands such that none of them cross.  This is the origin of the name ``braid group''
+
+The braid group determines a homomorphism $\phi : B_n \to S_n$, where $S_n$ is the symmetric group on $n$ letters. For $\gamma \in B_n$, we get an element of $S_n$ from map sending $i \mapsto \gamma_i(1)$. This works because of our requirement on the points that the braids start and end, and since our homotopies fix basepoints. The kernel of $\phi$ consists of the braids that bring each strand to its original order. This kernel gives us the \textbf{pure braid group on n strands}, and is denoted by $P_n$. Hence, we have a short exact sequence
+\[ 1 \to P_n \to B_n \to S_n \to 1. \]
+
+We can also describe braid groups in more generality. Let $M$ be a manifold. The configuration space of $n$ ordered points on $M$ is defined to be $F_n(M) = \{(a_1,\ldots,a_n) \in M^n \mid a_i \neq a_j \mbox{for} i \neq j\}$. The group $S_n$ acts on $F_n(M)$ by permuting coordinates, and the corresponding quotient space $C_n(M) = F_n(M) / S_n$ is called the configuration space of $n$ unordered points on $M$. In the case that $M = \mathbb{C}$, we obtain the regular and pure braid groups as $\pi_1(C_n(M))$ and $\pi_1(F_n(M))$ respectively.
+
+The group $B_n$ can be given the following presentation. The presentation was given in Artin's first paper~\cite{Artin} on the braid group. Label the braids $1$ through $n$ as before. Let $\sigma_i$ be the braid that twists strands $i$ and $i+1$, with $i$ passing beneath $i+1$. Then the $\sigma_i$ generate $B_n$, and the only relations needed are
+\[
+\begin{array}{cccl}
+\sigma_i \sigma_j & = & \sigma_j \sigma_i & \mbox{for } \: |i - j| \geq 2 , \: 1 \leq i,j \leq n-1 \\
+\sigma_i \sigma_{i+1} \sigma_i & = & \sigma_{i+1} \sigma_i \sigma_{i+1} & \mbox{for } \: 1 \leq i \leq n-2\\
+\end{array}
+\]
+
+The pure braid group has a presentation with
+\[ \mbox{generators} a_{ij} = \sigma_{j-1} \sigma_{j-2} \cdots \sigma_{i+1} \sigma_{i}^2 \sigma_{i+1}^{-1} \cdots \sigma_{j-2}^{-1} \sigma_{j-1}^{-1} \mbox{ for } 1 \leq i < j \leq n \]
+that is, $a_{ij}$ wraps the ith strand around the jth strand, and defining relations
+\[
+a_{rs}^{-1}a_{ij}a_{rs} = 
+\begin{cases}
+a_{ij} & \text{if $ i < r < s < j \mbox{ or } r < s < i < j$}\\
+a_{rj}a_{ij}a_{rj}^{-1} & \text{if $r < i = s < j$}\\
+a_{rj}a_{sj}a_{ij}a_{sj}^{-1}a_{rj}^{-1} & \text{if $i = r < s < j$}\\
+a_{rj}a_{sj}a_{rj}^{-1}a_{sj}^{-1}a_{ij}a_{sj}a_{rj}a_{sj}^{-1}a_{rj}^{-1} & \text{if $ r < i < s < j$}
+\end{cases}
+\]
+
+\begin{thebibliography}{9}
+\bibitem{Artin} E. Artin {\em Theorie der Z\"opfe}. Abh. Math. Sem. Univ. Hamburg 4(1925), 42-72.
+\bibitem{Hansen} V.L. Hansen {\em Braids and Coverings}. London Mathematical Society Student Texts 18. Cambridge University Press. 1989.
+\end{thebibliography}
+%%%%%
+%%%%%
+\end{document}

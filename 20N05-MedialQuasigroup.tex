@@ -1,0 +1,51 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{MedialQuasigroup}
+\pmcreated{2013-03-22 16:27:33}
+\pmmodified{2013-03-22 16:27:33}
+\pmowner{rspuzio}{6075}
+\pmmodifier{rspuzio}{6075}
+\pmtitle{medial quasigroup}
+\pmrecord{5}{38617}
+\pmprivacy{1}
+\pmauthor{rspuzio}{6075}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{20N05}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\begin{document}
+A \emph{medial quasigroup} is a quasigroup such that, for any choice of four elements $a,b,c,d$, one has
+ \[ (a \cdot b) \cdot (c \cdot d) = (a \cdot c) \cdot (b\cdot d) .\]
+
+Any commutative quasigroup is trivially a medial quasigroup.  A nontrivial class of examples may be constructed as follows.  Take a commutative group $(G,+)$ and two automorphisms $f, g \colon G \to G$ which commute with each other, and an element $c$ of $G$.  Then, if we define an operation $\cdot \colon G \times G \to G$ as 
+ \[ x \cdot y = f(a) + g(b) + c ,\]
+$(G,\cdot)$ is a medial quasigroup.
+
+Reference:
+
+ V. D. Belousov, Fundamentals of the theory of quasigroups and loops (in Russian)
+%%%%%
+%%%%%
+\end{document}

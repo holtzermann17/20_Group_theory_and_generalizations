@@ -1,0 +1,43 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ProfiniteCompletion}
+\pmcreated{2013-03-22 15:15:54}
+\pmmodified{2013-03-22 15:15:54}
+\pmowner{yark}{2760}
+\pmmodifier{yark}{2760}
+\pmtitle{profinite completion}
+\pmrecord{10}{37051}
+\pmprivacy{1}
+\pmauthor{yark}{2760}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{20E18}
+\pmrelated{AGroupsEmbedsIntoItsProfiniteCompletionIfAndOnlyIfItIsResiduallyFinite}
+
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amsthm}
+\usepackage[matrix,arrow,curve]{xy}
+\usepackage[only,trianglelefteqslant]{stmaryrd}
+
+\newcommand{\sgp}{\leqslant}
+\newcommand{\sgpf}{\leqslant_{\mathrm{f}}}
+\newcommand{\nsgp}{\trianglelefteqslant}
+\newcommand{\nsgpf}{\trianglelefteqslant_{\mathrm{f}}}
+\newcommand{\nsgpo}{\trianglelefteqslant_{\mathrm{o}}}
+\newcommand{\hir}{\mathrm{h}}
+\newcommand{\stab}{\mathrm{Stab}}
+\begin{document}
+The \emph{profinite completion} of a group $G$
+is defined to be the profinite group
+\[
+  \hat{G} = \varprojlim_{N \nsgpf G} G/N,
+\]
+where $N \nsgpf G$ means that $N$ is a normal subgroup of finite index in $G$.
+
+A group embeds into its profinite completion
+if and only if it is residually finite.
+%%%%%
+%%%%%
+\end{document}

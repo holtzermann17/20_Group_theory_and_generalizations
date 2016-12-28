@@ -1,0 +1,69 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{InverseOfAProduct}
+\pmcreated{2015-01-30 21:19:19}
+\pmmodified{2015-01-30 21:19:19}
+\pmowner{pahio}{2872}
+\pmmodifier{pahio}{2872}
+\pmtitle{inverse of a product}
+\pmrecord{17}{36575}
+\pmprivacy{1}
+\pmauthor{pahio}{2872}
+\pmtype{Theorem}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{20A05}
+\pmclassification{msc}{20-00}
+\pmsynonym{inverse of a product in group}{InverseOfAProduct}
+\pmsynonym{inverse of product}{InverseOfAProduct}
+%\pmkeywords{inverse}
+%\pmkeywords{group operation}
+\pmrelated{InverseOfCompositionOfFunctions}
+\pmrelated{GeneralAssociativity}
+\pmrelated{Division}
+\pmrelated{InverseNumber}
+\pmrelated{OrderOfProducts}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+ \usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\theoremstyle{definition}
+\newtheorem*{thmplain}{Theorem}
+\begin{document}
+\begin{thmplain}
+ \,If $a$ and $b$ are arbitrary elements of the group \,$(G,*)$, then the inverse of $a*b$ is 
+\begin{align}  
+      (a*b)^{-1} = b^{-1}*a^{-1}.
+\end{align}
+\end{thmplain}
+
+{\em Proof.}\, Let the neutral element of the group, which may be proved unique, be\, $e$.\, Using only the group postulates we obtain
+   $$(a*b)*(b^{-1}*a^{-1}) = a*(b*(b^{-1}*a^{-1})) = 
+a*((b*b^{-1})*a^{-1}) = a*(e*a^{-1}) = a*a^{-1} = e,$$
+   $$(b^{-1}*a^{-1})*(a*b) = b^{-1}*(a^{-1}*(a*b)) = b^{-1}*((a^{-1}*a)*b) = 
+b^{-1}*(e*b) = b^{-1}*b = e,$$
+Q.E.D.
+
+\textbf{Note.}\, The \PMlinkescapetext{formula} (1) may be by induction extended to the form
+$$(a_1*\cdots*a_n)^{-1} = a_n^{-1}*\cdots*a_1^{-1}.$$
+%%%%%
+%%%%%
+\end{document}

@@ -1,0 +1,153 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{MiracleOctadGenerator}
+\pmcreated{2013-03-22 18:43:14}
+\pmmodified{2013-03-22 18:43:14}
+\pmowner{monster}{22721}
+\pmmodifier{monster}{22721}
+\pmtitle{miracle octad generator}
+\pmrecord{8}{41488}
+\pmprivacy{1}
+\pmauthor{monster}{22721}
+\pmtype{Derivation}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{20B25}
+\pmclassification{msc}{20B20}
+\pmclassification{msc}{51E10}
+\pmclassification{msc}{94B05}
+\pmsynonym{MOG}{MiracleOctadGenerator}
+\pmrelated{hexacode}
+\pmrelated{LeechLattice}
+\pmrelated{Hexacode}
+\pmdefines{miracle octad generator}
+\pmdefines{MOG}
+\pmdefines{octad}
+\pmdefines{dodecad}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\newcommand{\gc}{\mathcal{G}_{24}}
+\newcommand{\F}{\mathbb{F}}
+\newcommand{\w}{\omega}
+\newcommand{\W}{\overline{\omega}}
+\newcommand{\cw}[6]{#1#2\,\,#3#4\,\,#5#6}
+\newtheorem{fact}{Fact}
+\begin{document}
+\PMlinkescapeword{Generator}
+\PMlinkescapeword{row}
+\PMlinkescapeword{rows}
+\PMlinkescapeword{column}
+\PMlinkescapeword{columns}
+\PMlinkescapeword{top}
+\PMlinkescapeword{bottom}
+\PMlinkescapeword{satisfy}
+\PMlinkescapeword{side}
+\PMlinkescapeword{diagram}
+\PMlinkescapeword{contains}
+\PMlinkescapeword{diagrams}
+\PMlinkescapeword{sums}
+\PMlinkescapeword{imply}
+\PMlinkescapeword{number}
+\PMlinkescapeword{Labels}
+\PMlinkescapeword{labels}
+\PMlinkescapeword{calculate}
+\PMlinkescapeword{words}
+\PMlinkescapeword{way}
+\PMlinkescapeword{complete}
+\PMlinkescapeword{necessary}
+\PMlinkescapeword{sum}
+\PMlinkescapeword{code}
+
+The Miracle Octad Generator (MOG) is a construction of the [24,12,8] extended binary Golay code $\gc$.  It makes use of the hexacode.  The notation [24,12,8] indicates that this linear code has \PMlinkname{length}{LinearCode} 24, \PMlinkname{dimension}{LinearCode} 12, and \PMlinkname{minimum weight}{MinimumDistance} 8.  
+
+The construction is originally due to R. T. Curtis (\cite{cur1}, \cite{cur2}).  The description of the MOG below is taken from \cite{splag}, Chapter 11.  A proof that the construction gives a [24,12,8] code is given below.  A proof of the uniqueness of the binary Golay code (up to permutation of the coordinates) can be found in \cite{sporadic}, Chapter 5. 
+
+\section{Construction}
+
+The MOG consists of a rectangular array of 4 rows and 6 columns.  The rows of the MOG are labelled with elements of $\F_4$ (the field of 4 elements).  The labels are $0,1,\w,\W$ from top to bottom, where $\w$ is a cube root of unity.  The code $\gc$ consists of subsets $S$ of the 24 squares of the array which satisfy the following conditions:
+\begin{itemize}
+\item{the parities of the number of elements in $S$ in each of the 6 columns, and in the top row, are the same}
+\item{the sums of the row labels for elements of $S$ in each column form an element of the hexacode.}
+\end{itemize}
+For example:
+$$\begin{array}{ccccccc}
+0 &  &* &  &  &* &   \\
+1 &  &* &  &  &  &*  \\
+\w&  &  &  &* &* &*  \\
+\W&  &  &  &* &  &   \\
+  &0 &1 &0 &1 &\w&\W
+\end{array}$$
+In a MOG diagram, asterisks indicate a subset of the 24 squares.  On the left side, we have written the row labels, and at the bottom we have written the column sums for our subset.  For the subset above, each of the columns, as well as the top row, contains 2 elements, and the column sums $\cw{0}{1}{0}{1}{\w}{\W}$ form an element of the hexacode.  Hence, this subset of the MOG is an element of $\gc$.
+
+Notation: For $S$ any subset of the MOG, let us write $\Sigma(S)$ for the element of $\F_4^6$ corresponding to the column sums.  Hence, the second condition above says that $\Sigma(S)$ is in the hexacode for any $S \in \gc$.
+
+When we say that a column is ``even'' or ``odd'', we are referring to the \PMlinkescapetext{parity} of the number of elements of $S$ in the column.  When we speak of the ``sum'' of a column, we are referring to the sum of the row labels of $S$ for that column, i.e., the component of $\Sigma(S)$ for that column.
+
+\section{Proof that the construction gives a [24,12,8] code}
+
+Let us note a few \PMlinkescapetext{simple} facts about $\gc$ and the MOG.
+
+\begin{fact}
+$\gc$ is an \PMlinkname{even}{EvenCode} linear code of \PMlinkescapetext{length} 24 over $\F_2$, and is closed under complementation.
+\end{fact}
+This follows from the linearity of the two conditions above (which in turn follows from the linearity of the hexacode), and the fact that the \PMlinkescapetext{parities} and column sums do not change under complementation.
+
+\begin{fact}
+If an even column has sum 0, then it contains 0 or 4 elements.  If an odd column has sum 0, then the top row entry is in the column iff the column consists of exactly 1 element (and otherwise it consists of exactly 3 elements).
+\end{fact}
+
+\begin{fact}
+If an even column has nonzero sum, then it consists of 2 elements.  If an odd column has nonzero sum, then the top row entry is in the column iff the column consists of exactly 3 elements (and otherwise it consists of exactly 1 element).
+\end{fact}
+
+From these facts, we can show that $\gc$ is a doubly even code (the weight of any element is divisible by 4).  Let $S$ be an element of $\gc$.  If the columns of $S$ are even, then it is clear that $|S|$ is divisible by 4.  Suppose the columns of $S$ are odd.  Let $t_1$ (resp., $t_3$) denote the number of columns consisting of 1 (resp., 3) elements, for which the top row is filled.  Let $u_1$ (resp., $u_3$) denote the number of columns consisting of 1 (resp., 3) elements, for which the top row is empty.  The defining conditions of $\gc$ imply that $t_1 + t_3$ is odd.  By Fact 2, the number of 0's in $\Sigma(S)$ is equal to $t_1 + u_3$, which is therefore even by a property of the hexacode.  So $t_3 + u_3$ is odd. Since there are 6 columns, we have $t_1 + t_3 + u_1 + u_3 = 6$.  Hence 
+\begin{eqnarray*} 
+|S|&     =  & 3t_3 + 3u_3 + t_1 + u_1 \\
+   & = & 3t_3 + 3u_3 + t_1 + (6 - t_1 - t_3 - u_3)\\
+   & = & 2(t_3 + u_3) + 6\\
+   & \equiv & 0 \pmod{4}.
+\end{eqnarray*}
+
+Furthermore, it is not difficult to see that an element of weight 4 is impossible, hence the minimum weight of $\gc$ is 8.  So the only possible weights of elements of $\gc$ are 0, 8, 12, 16, and 24.
+
+To calculate the \PMlinkescapetext{dimension} of $\gc$, we need to count the number of elements of each weight.  Weights 0 and 24 are obvious, and the counts for weight 8 and weight 16 are the same.  So we need only count weights 8 and 12.  This is not difficult using the defining conditions above, and knowledge of the hexacode; the final result is that the number of elements of weights 0,8,12,16,and 24 are 1, 759, 2576, 759, and 1, respectively, for a total of 4096 = $2^{12}$.  Hence $\gc$ has \PMlinkescapetext{dimension} 12, so it is a [24,12,8] code.
+
+\section{Further facts about the binary Golay code}
+
+Elements of $\gc$ of weight 8 are called \emph{octads}.  Elements of $\gc$ of weight 12 are called \emph{dodecads}.
+
+The octads of $\gc$ form a (5,8,24) Steiner system.  In other words, given any 5 squares in the MOG, there is a unique way to add 3 squares to form an octad.  To complete an octad, it is necessary to solve \PMlinkname{3-problems}{hexacode} or \PMlinkname{5-problems}{hexacode} for the hexacode.  For a detailed procedure, see (\cite{splag}, 11.6).
+
+The automorphism group of $\gc$ is the largest Mathieu group $M_{24}$, one of the sporadic simple groups.  
+
+The code $\gc$ is used in the construction of the Leech \PMlinkname{lattice}{LatticeInMathbbRn}, whose automorphism group is the largest Conway group $Co_0$ (sometimes written $\cdot 0$).  The quotient of $Co_0$ by its center, called $Co_1$, is a sporadic simple group.  The group $Co_1$ plays an important role in the construction of the monster group, the largest sporadic simple group of all.
+
+\begin{thebibliography}{9}
+\bibitem{splag} J. H. Conway and N. J. A. Sloane. Sphere Packings, Lattices, and Groups.  Springer-Verlag, 1999.
+\bibitem{sporadic} Robert L. Griess, Jr.  Twelve Sporadic Groups.  Springer-Verlag, 1998.
+\bibitem{cur1} R. T. Curtis.  On subgroups of $\cdot 0$, I: lattice stabilizers.  Journal of Algebra, 27 (1973), 549-573.
+\bibitem{cur2} R. T. Curtis.  A new combinatorial approach to $M_{24}$. Proceedings of the Cambridge Philosophical Society 79 (1976), 25-42.
+\end{thebibliography}
+%%%%%
+%%%%%
+\end{document}

@@ -1,0 +1,79 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{HamiltonianGroup}
+\pmcreated{2013-03-22 15:36:14}
+\pmmodified{2013-03-22 15:36:14}
+\pmowner{yark}{2760}
+\pmmodifier{yark}{2760}
+\pmtitle{Hamiltonian group}
+\pmrecord{15}{37520}
+\pmprivacy{1}
+\pmauthor{yark}{2760}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{20F24}
+\pmclassification{msc}{20F18}
+\pmclassification{msc}{20F50}
+\pmsynonym{Hamilton group}{HamiltonianGroup}
+\pmdefines{Dedekind group}
+\pmdefines{quasi-Hamiltonian group}
+\pmdefines{Hamiltonian}
+
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsthm}
+
+\newtheorem*{cor*}{Corollary}
+\newtheorem*{thm*}{Theorem}
+
+% The below lines should work as the command
+% \renewcommand{\bibname}{References}
+% without creating havoc when rendering an entry in 
+% the page-image mode.
+\makeatletter
+\@ifundefined{bibname}{}{\renewcommand{\bibname}{References}}
+\makeatother
+\begin{document}
+\PMlinkescapeword{class}
+\PMlinkescapeword{form}
+\PMlinkescapeword{finite}
+\PMlinkescapeword{hamiltonian}
+\PMlinkescapeword{infinite}
+\PMlinkescapeword{length}
+\PMlinkescapeword{structure}
+\PMlinkescapeword{subgroup}
+\PMlinkescapeword{subgroups}
+\PMlinkescapeword{theorem}
+
+A \emph{Hamiltonian group} is a non-abelian group in which all \PMlinkname{subgroups}{Subgroup} are normal.
+
+Richard Dedekind investigated finite Hamiltonian groups in 1895, and proved that they all contain a copy of the quaternion group $Q_8$ of order $8$ (see the structure theorem below). He named them in honour of William Hamilton, the discoverer of quaternions.
+
+Groups in which all subgroups are normal (that is, groups that are either abelian or Hamiltonian) are sometimes called \emph{Dedekind groups}, or \emph{quasi-Hamiltonian groups}.
+
+The following structure theorem was proved in its full form by Baer\cite{baer}, but Dedekind already came close to it in his original paper\cite{dedekind}.
+
+\begin{thm*}
+A group is Hamiltonian if and only if it is isomorphic to $Q_8\times P$
+for some periodic abelian group $P$ that has no element of order $4$.
+\end{thm*}
+
+In particular, Hamiltonian groups are always periodic (in fact, locally finite), nilpotent of class $2$, and solvable of length $2$.
+
+From the structure theorem one can also see that the only Hamiltonian \PMlinkname{$p$-groups}{PGroup4} are $2$-groups of the form $Q_8\times B$,
+where $B$ is an elementary abelian $2$-group.
+
+\begin{thebibliography}{9}
+\bibitem{baer}
+ R.\ Baer,
+ {\it Situation der Untergruppen und Struktur der Gruppe},
+ S.\ B.\ Heidelberg.\ Akad.\ Wiss. 2 (1933), 12--17.
+\bibitem{dedekind}
+ R.\ Dedekind,
+ {\it Ueber Gruppen, deren s\"ammtliche Theiler Normaltheiler sind},
+ Mathematische Annalen 48 (1897), 548--561. (This paper is
+\PMlinkexternal{available from GDZ}{http://gdz.sub.uni-goettingen.de/dms/resolveppn/?GDZPPN002256258}.)
+\end{thebibliography}
+%%%%%
+%%%%%
+\end{document}

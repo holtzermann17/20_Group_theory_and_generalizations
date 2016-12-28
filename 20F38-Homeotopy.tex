@@ -1,0 +1,62 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{Homeotopy}
+\pmcreated{2013-03-22 15:41:54}
+\pmmodified{2013-03-22 15:41:54}
+\pmowner{juanman}{12619}
+\pmmodifier{juanman}{12619}
+\pmtitle{homeotopy}
+\pmrecord{17}{37642}
+\pmprivacy{1}
+\pmauthor{juanman}{12619}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{20F38}
+\pmsynonym{mapping class group}{Homeotopy}
+%\pmkeywords{homotopy group functor}
+\pmrelated{isotopy}
+\pmrelated{group}
+\pmrelated{homeomorphism}
+\pmrelated{Group}
+\pmrelated{Isotopy}
+\pmrelated{Homeomorphism}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\begin{document}
+Let $X$ be a topological Hausdorff space. Let ${\rm Homeo}(X)$ be the group of homeomorphisms $X\to X$, which can be also turn into a topological space by means of the compact-open topology. And let $\pi_k$ be the k-th homotopy group functor. 
+
+Then the {\bf k-th homeotopy} is defined as:
+$${\cal{H}}_k(X)=\pi_k({\rm Homeo}(X))$$
+that is, the group of homotopy classes of maps $S^k\to {\rm Homeo}(X)$.
+Which is different from $\pi_k(X)$, the group of homotopy classes of maps $S^k\to X$.
+
+One important result for any low dimensional topologist is that for a surface $F$
+$${\cal{H}}_0(F)={\rm Out}(\pi_1(F))$$
+which is the $F$'s extended mapping class group.
+
+{\bf Reference}
+
+G.S. McCarty, {\it Homeotopy groups}, Trans. A.M.S. 106(1963)293-304.
+%%%%%
+%%%%%
+\end{document}

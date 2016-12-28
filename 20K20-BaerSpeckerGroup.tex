@@ -1,0 +1,61 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{BaerSpeckerGroup}
+\pmcreated{2013-03-22 15:29:18}
+\pmmodified{2013-03-22 15:29:18}
+\pmowner{CWoo}{3771}
+\pmmodifier{CWoo}{3771}
+\pmtitle{Baer-Specker group}
+\pmrecord{13}{37344}
+\pmprivacy{1}
+\pmauthor{CWoo}{3771}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{20K20}
+\pmsynonym{Specker group}{BaerSpeckerGroup}
+
+\usepackage{amssymb,amscd}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% define commands here
+\begin{document}
+Let $A$ be a non-empty set, and $G$ an abelian group.  The set $K$
+of all functions from $A$ to $G$ is an abelian group, with addition
+defined elementwise by $(f+g)(x)=f(x)+g(x)$.  The zero element is
+the function that sends all elements of $A$ into $0$ of $G$, and the
+negative of an element $f$ is a function defined by
+$(-f)(x)=-(f(x))$.
+
+When $A=\mathbb{N}$, the set of natural numbers, and $G=\mathbb{Z}$,
+$K$ as defined above is called the \emph{Baer-Specker group}.  Any
+element of $K$, being a function from $\mathbb{N}$ to $\mathbb{Z}$,
+can be expressed as an infinite sequence $(
+x_1,x_2,\ldots,x_n,\ldots)$, and the elementwise addition on $K$ can
+be realized as componentwise addition on the sequences: $$(
+x_1,x_2,\ldots,x_n,\ldots)+( y_1,y_2,\ldots,y_n,\ldots)=
+(x_1+y_1,x_2+y_2,\ldots,x_n+y_n,\ldots).$$ An alternative
+characterization of the Baer-Specker group $K$ is that it can be
+viewed as the countably infinite direct product of copies of
+$\mathbb{Z}$:
+$$K=\mathbb{Z}^{\mathbb{N}}\cong\mathbb{Z}^{\aleph_0}= \prod_{\aleph_0}\mathbb{Z}.$$
+
+The Baer-Specker group is an important example of a torsion-free
+abelian group whose rank is infinite.  It is not a free abelian
+group, but any of its countable subgroup is free (abelian).
+
+\begin{thebibliography}{6}
+\bibitem{dh} P. A. Griffith, {\it Infinite Abelian Group Theory}, The University of Chicago Press (1970)
+\end{thebibliography}
+%%%%%
+%%%%%
+\end{document}

@@ -1,0 +1,53 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ProofOfPropertiesOfHopfianAndCoHopfianGroups}
+\pmcreated{2013-03-22 18:31:17}
+\pmmodified{2013-03-22 18:31:17}
+\pmowner{joking}{16130}
+\pmmodifier{joking}{16130}
+\pmtitle{proof of properties of Hopfian and co-Hopfian groups}
+\pmrecord{6}{41214}
+\pmprivacy{1}
+\pmauthor{joking}{16130}
+\pmtype{Proof}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{20F99}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\begin{document}
+\textbf{Proposition}. A group $G$ is Hopfian if and only if every surjective homomorphism $G\to G$ is an automorphism.
+
+\textit{Proof}. ``$\Rightarrow$'' Assume that $\psi:G\to G$ is a surjective homomorpism such that $\psi$ is not an automorphism, which means that $\mathrm{Ker}(\psi)$ is nontrivial. Then (due to the First Isomorphism Theorem) $G/\mathrm{Ker}(\psi)$ is isomorphic to $\mathrm{Im}(\psi)=G$. Contradiction, since $G$ is Hopfian.
+
+``$\Leftarrow$'' Assume that $G$ is not Hopfian. Then there exists nontrivial normal subgroup $H$ of $G$ and an isomorphism $\phi:G/H\to G$. Let $\pi:G\to G/H$ be the quotient homomorphism. Then obviously $\pi\circ\phi:G\to G$ is a surjective homomorphism, but $\mathrm{Ker}(\pi\circ\phi)=H$ is nontrivial, therefore $\pi\circ\phi$ is not an automorphism. Contradiction. $\square$
+
+
+\textbf{Proposition}. A group $G$ is co-Hopfian if and only if every injective homomorphism $G\to G$ is an automorphism.
+
+\textit{Proof}. ``$\Rightarrow$'' Assume that $\psi:G\to G$ is an injective homomorphism which is not an automorphism. Therefore $\mathrm{Im}(\psi)$ is a proper subgroup of $G$, therefore (since $\mathrm{Ker}(\psi)=\{e\}$ and due to the First Isomorphism Theorem) $G$ is isomorphic to its proper subgroup, namely $\mathrm{Im}(\psi)$. Contradiction, since $G$ is co-Hopfian.
+
+``$\Leftarrow$'' Assume that $G$ is not co-Hopfian. Then there exists a proper subgroup $H$ of $G$ and an isomorphism $\phi:G\to H$. Let $i:H\to G$ be an inclusion homomorphism. Then $i\circ\phi:G\to G$ is an injective homomorphism which is not onto (because $i$ is not). Contradiction. $\square$
+%%%%%
+%%%%%
+\end{document}

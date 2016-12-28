@@ -1,0 +1,149 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{CategoryOfPathsOnAGraph}
+\pmcreated{2013-03-22 16:45:54}
+\pmmodified{2013-03-22 16:45:54}
+\pmowner{rspuzio}{6075}
+\pmmodifier{rspuzio}{6075}
+\pmtitle{category of paths on a graph}
+\pmrecord{18}{38992}
+\pmprivacy{1}
+\pmauthor{rspuzio}{6075}
+\pmtype{Example}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{20L05}
+\pmclassification{msc}{18B40}
+\pmrelated{IndexOfCategories}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\begin{document}
+A nice class of illustrative examples of some notions of category theory 
+is provided by categories of paths on a graph.
+
+Let $G$ be an undirected graph.  Denote the set of vertices of $G$ by ``$V$'' 
+and denote the set of edges of $G$ by ``$E$''.  
+
+A path of the graph $G$ is an ordered tuplet of vertices $(x_1, x_2, \ldots x_n)$
+such that, for all $i$ between $1$ and $n-1$, there exists an edge connecting
+$x_i$ and $x_{i+i}$.  As a special case, we allow trivial paths which consist
+of a  single vertex --- soon we will see that these in fact play an important 
+role as identity elements in our category.
+
+In our category, the vertices of the graph will be the objects and the 
+morphisms will be paths; given two of these objects $a$ and $b$, we set 
+$\operatorname{Hom}(a,b)$ to be the set of all paths $(x_1, x_2, \ldots x_n)$ 
+such that $x_1 = a$ and $x_n = b$.  Given an object $a$, we set $1_a = (a)$, 
+the trivial path mentioned above.
+
+To finish specifying our category, we need to specify the composition operation.
+This operation will be the concatenation of paths, which is defined as follows:
+Given a path $(x_1, x_2, \ldots, x_n) \in \operatorname{Hom}(a,b)$ and a path
+$(y_1, y_2, \ldots, y_m) \in \operatorname{Hom}(a,b)$, we set 
+\[
+a \circ b = (x_1, x_2, \ldots x_n, y_2, \ldots, y_m).\] 
+(Remember that $x_n = y_1 = b$.)  To have a bona fide category, we need to 
+check that this choice satisfies the defining properties (A1 - A3 in the 
+entry \PMlinkid{category}{965}).  This is rather easily verified.  
+
+\textbf{A1:} Given a morphism $(x_1, x_2, \ldots x_n)$, it can only
+belong to $\operatorname{Hom}(a,b)$ if $x_1 = a$ and $x_n = b$, hence
+$\operatorname{Hom}(a,b) \cup \operatorname{Hom}(c,d) = \emptyset$ unless
+$a = c$ and $b = d$.
+
+\textbf{A2:}  Suppose that we have four objects $a,b,c,d$ and three 
+morphisms, $(x_1, x_2, \ldots x_n) \in \operatorname{Hom}(a,b)$,
+$(y_1, y_2, \ldots y_m) \in \operatorname{Hom}(b,c)$, and 
+$(z_1, z_2, \ldots z_k) \in \operatorname{Hom}(c,d)$.  Then,
+by the definition of the operation $\circ$ given above,
+\begin{align*}
+((x_1, x_2, \ldots, x_n) \circ 
+(&y_1, y_2, \ldots, y_m)) \circ
+(z_1, z_2, \ldots, z_k) \\ &= 
+(x_1, x_2, \ldots, x_n, y_2, \ldots, y_m) \circ
+(z_1, z_2, \ldots, z_k) \\ &=
+(x_1, x_2, \ldots, x_n, y_2, \ldots, y_m, z_2, \ldots, z_k) \\
+(x_1, x_2, \ldots, x_n) \circ 
+(&(y_1, y_2, \ldots, y_m)  \circ
+(z_1, z_2, \ldots, z_k)) \\ &= 
+(x_1, x_2, \ldots, x_n) \circ 
+(y_1, y_2, \ldots, y_m, z_2, \ldots, z_k) \\ &=
+(x_1, x_2, \ldots, x_n, y_2, \ldots, y_m, z_2, \ldots, z_k).
+\end{align*}
+Since these two quantities are equal, the operation is associative.
+
+\textbf{A3:}  It is easy enough to check that paths with a single
+vertex act as identity elements:
+\begin{align*}
+(x_1) \circ (x_1, x_2, \ldots, x_n) &= (x_1, x_2, \ldots, x_n) \\
+(x_1, x_2, \ldots, x_n) \circ (x_n) &= (x_1, x_2, \ldots, x_n)
+\end{align*}
+
+It is also possible to consider the equivalence class of paths 
+modulo retracing.  To introduce this category, we first define
+a binary relation $\approx$ on the class of paths as follows:
+Let $A$ and $B$ be any two paths such that the right endpoint 
+of $A$ is the same as the left endpoint of $B$, i.e. $A \in 
+\operatorname{Hom}(a,b)$ and $B \in \operatorname{Hom}(b,c)$
+for some vertices $a,b,c$ of our graph.  Let $d$ be any vertex 
+which shares an edge with $d$.  Then we set $A \circ B \approx
+A \circ (c, d, c) \circ B$.
+
+Let $\sim$ be the smallest equivalence relations which contains
+$\approx$.  We will call this equivalence relation \emph{retracing}.
+
+As defined above, it may not intuitively obvious what this 
+equivalence amounts to.  To this end, we may consider a different
+description.  Define the \emph{reversal} of a path to be the
+path obtained by reversing the order of the vertices traversed:
+\[
+ (x_1, x_2, \ldots, x_{n-1}, x_n) ^{-1} = 
+ (x_n, x_{n-1}, \ldots, x_2, x_1)
+\]
+Then we may show that two paths are equivalent under retracing
+if they may both be obtained from a third path by inserting
+terms of the form $XX^{-1}$.  In symbols, we claim that $A \sim B$
+if there exists an integer $nï¼ž0$ and paths $X_1, \ldots X_{n+1}, 
+Y_1, \ldots Y_{n-1}, Z_1, \ldots Z_n$ such that 
+\[
+ A = X_1 \circ X_1^{-1} \circ Z_1 \circ X_2 \circ X_2^{-1} \circ 
+ \cdots \circ X_{n-1} \circ X_{n-1}^{-1} \circ Z_n \circ X_n \circ
+ X_n^{-1} \circ Z_n \circ X_{n+1} \circ X_{n+1}^{-1}
+\]
+and
+\[
+ B = Y_1 \circ Y_1^{-1} \circ Z_1 \circ Y_2 \circ Y_2^{-1} \circ 
+ \cdots \circ Y_{n-1} \circ Y_{n-1}^{-1} \circ Z_n \circ Y_n \circ
+ Y_n^{-1} \circ Z_n \circ Y_{n+1} \circ Y_{n+1}^{-1}
+\]
+This characterization explains the choice of the term ``retracing'' ---
+we do not change the equivalence class of the path if we happen to 
+wander off somewhere in the course of following the path but then
+backtrack and pick the path up again where we left off on our
+digression.
+
+Rather than presenting a detailed formal proof, we will sketch how
+the two definitions may be shown to be equivalent.
+%%%%%
+%%%%%
+\end{document}

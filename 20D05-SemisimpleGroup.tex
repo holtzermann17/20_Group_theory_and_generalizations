@@ -1,0 +1,193 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{SemisimpleGroup}
+\pmcreated{2013-03-22 13:17:07}
+\pmmodified{2013-03-22 13:17:07}
+\pmowner{Algeboy}{12884}
+\pmmodifier{Algeboy}{12884}
+\pmtitle{semisimple group}
+\pmrecord{6}{33771}
+\pmprivacy{1}
+\pmauthor{Algeboy}{12884}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{20D05}
+\pmrelated{socle}
+\pmdefines{semi-simple group}
+\pmdefines{semisimple group}
+
+\usepackage{latexsym}
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amsthm}
+
+%%\usepackage{xypic}
+
+%-----------------------------------------------------
+
+%       Standard theoremlike environments.
+
+%       Stolen directly from AMSLaTeX sample
+
+%-----------------------------------------------------
+
+%% \theoremstyle{plain} %% This is the default
+
+\newtheorem{thm}{Theorem}
+
+\newtheorem{coro}[thm]{Corollary}
+
+\newtheorem{lem}[thm]{Lemma}
+
+\newtheorem{lemma}[thm]{Lemma}
+
+\newtheorem{prop}[thm]{Proposition}
+
+\newtheorem{conjecture}[thm]{Conjecture}
+
+\newtheorem{conj}[thm]{Conjecture}
+
+\newtheorem{defn}[thm]{Definition}
+
+\newtheorem{remark}[thm]{Remark}
+
+\newtheorem{ex}[thm]{Example}
+
+
+
+%\countstyle[equation]{thm}
+
+
+
+%--------------------------------------------------
+
+%       Item references.
+
+%--------------------------------------------------
+
+
+\newcommand{\exref}[1]{Example-\ref{#1}}
+
+\newcommand{\thmref}[1]{Theorem-\ref{#1}}
+
+\newcommand{\defref}[1]{Definition-\ref{#1}}
+
+\newcommand{\eqnref}[1]{(\ref{#1})}
+
+\newcommand{\secref}[1]{Section-\ref{#1}}
+
+\newcommand{\lemref}[1]{Lemma-\ref{#1}}
+
+\newcommand{\propref}[1]{Prop\-o\-si\-tion-\ref{#1}}
+
+\newcommand{\corref}[1]{Cor\-ol\-lary-\ref{#1}}
+
+\newcommand{\figref}[1]{Fig\-ure-\ref{#1}}
+
+\newcommand{\conjref}[1]{Conjecture-\ref{#1}}
+
+
+% Normal subgroup or equal.
+
+\providecommand{\normaleq}{\unlhd}
+
+% Normal subgroup.
+
+\providecommand{\normal}{\lhd}
+
+\providecommand{\rnormal}{\rhd}
+% Divides, does not divide.
+
+\providecommand{\divides}{\mid}
+
+\providecommand{\ndivides}{\nmid}
+
+
+\providecommand{\union}{\cup}
+
+\providecommand{\bigunion}{\bigcup}
+
+\providecommand{\intersect}{\cap}
+
+\providecommand{\bigintersect}{\bigcap}
+
+
+
+
+
+
+
+
+
+
+\begin{document}
+In group theory the use of the phrase \emph{semi-simple group} is used sparingly.
+Standard texts on group theory including \cite{Aschbacher, Gorenstein} avoid
+the term altogether.  Other texts provide precise definitions which are nevertheless 
+not equivalent \cite{Robinson, Suzuki}.  In general it is preferable to use 
+other terms to describe the class of groups being considered as there is 
+no uniform convention.  However, below is a list of possible uses of for
+the phrase \emph{semi-simple group}.
+
+\begin{enumerate}
+\item A group is \emph{semi-simple} if it has no non-trivial normal abelian 
+subgroups \cite[p. 89]{Robinson}.
+
+\item A group $G$ is \emph{semi-simple} if $G'=G$ and $G/Z(G)$ is a direct 
+product of non-abelian simple groups \cite[Def. 6.1]{Suzuki}.
+
+\item A product of simple groups may be called \emph{semi-simple}.  Depending
+on application, the simple groups may be further restricted to finite simple groups
+and may also exclude the abelian simple groups.
+
+\item A Lie group whose associated Lie algebra is a semi-simple Lie algebra may
+be called a \emph{semi-simple} group and more specifically, a 
+\emph{semi-simple Lie group}.
+\end{enumerate}
+
+
+\textbf{Connections with algebra}
+
+The use of \emph{semi-simple} in the study of algebras, representation theory, and modules
+is far more precise owing to the fact that the various possible definitions are generally 
+equivalent.
+
+For example.  In a finite dimensional associative algebra $A$, if $A$ it is a product of 
+simple algebras then the Jacobson radical is trivial.  In contrast, if $A$ has trivial
+Jacobson radical then it is a direct product of simple algebras.  Thus $A$ may be 
+called \emph{semi-simple} if either: $A$ is a direct product of simple algebras or
+$A$ has trivial Jacobson radical.
+
+
+The analogue fails for groups.  For instance.  If a group is defined as semi-simple
+by virtue of having no non-trivial normal abelian subgroups then $S_n$ is semi-simple
+for all $n>5$.  However, $S_n$ is not a product of simple groups.
+
+
+
+\bibliographystyle{amsplain}
+\begin{thebibliography}{10}
+
+\bibitem{Aschbacher}
+Aschbacher, M. 
+\emph{Finite group theory} Cambridge studies in advanced mathematics 10, 
+Cambridge University Press, Cambridge, (1986).
+
+\bibitem{Gorenstein}
+Gorenstein, D.
+\emph{Finite groups} Chelsea Publishing Company, New York, (1980).
+
+\bibitem{Robinson}
+Robinson, D. J.S.
+\emph{A course in the theory of groups} Ed. 2, GTM 80, Springer, New York, (1996).
+
+\bibitem{Suzuki}
+Suzuki, M.
+\emph{Group Theory I,II}, (English) Springer-verlag, Berlin (1982, 1986).
+
+
+\end{thebibliography}
+%%%%%
+%%%%%
+\end{document}

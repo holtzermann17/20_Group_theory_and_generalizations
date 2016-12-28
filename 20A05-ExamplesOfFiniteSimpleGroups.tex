@@ -1,0 +1,106 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ExamplesOfFiniteSimpleGroups}
+\pmcreated{2013-03-22 13:07:54}
+\pmmodified{2013-03-22 13:07:54}
+\pmowner{mathcam}{2727}
+\pmmodifier{mathcam}{2727}
+\pmtitle{examples of finite simple groups}
+\pmrecord{15}{33568}
+\pmprivacy{1}
+\pmauthor{mathcam}{2727}
+\pmtype{Example}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{20A05}
+\pmclassification{msc}{20E32}
+\pmrelated{ExamplesOfGroups}
+\pmrelated{SimplicityOfA_n}
+\pmrelated{JankoGroups}
+\pmdefines{alternating group}
+
+\usepackage{amssymb, amsmath, amsthm}
+\newtheorem{thm}{Theorem}
+
+\theoremstyle{definition}
+\newtheorem*{defn}{Definition}
+\theoremstyle{definition}
+\newtheorem*{rem}{Remark}
+
+\theoremstyle{definition}
+\newtheorem*{nott}{Notation}
+
+\newtheorem{lemma}{Lemma}
+\newtheorem{cor}{Corollary}
+\newtheorem*{eg}{Example}
+\newtheorem*{ex}{Exercise}
+\newtheorem*{prop}{Proposition}
+
+
+\newcommand{\RR}{\mathbb{R}}
+\newcommand{\QQ}{\mathbb{Q}}
+\newcommand{\ZZ}{\mathbb{Z}}
+\newcommand{\NN}{\mathbb{N}}
+\newcommand{\leftbb}{[ \! [}
+\newcommand{\rightbb}{] \! ]}
+\newcommand{\bt}{\begin{thm}}
+\newcommand{\et}{\end{thm}}
+\newcommand{\Rel}{\mathbf{R}}
+\newcommand{\er}{\thicksim}
+\newcommand{\sqle}{\sqsubseteq}
+\newcommand{\floor}[1]{\lfloor{#1}\rfloor}
+\newcommand{\ceil}[1]{\lceil{#1}\rceil}
+\begin{document}
+\PMlinkescapeword{degree}
+\PMlinkescapeword{prime}
+\PMlinkescapeword{radicals}
+\PMlinkescapeword{type}
+
+{\it This entry is under construction.  If I take too long to finish it, nag me about it, or fill in the rest yourself.}
+
+All groups considered here are finite.
+
+It is now widely believed that the classification of all finite simple groups up to isomorphism is finished.  The proof runs for at least 10,000 printed pages, and as of the writing of this entry, has not yet been published in its entirety. 
+
+\paragraph{Abelian groups}
+\begin{itemize}
+\item
+The first trivial example of simple groups are the cyclic groups of \PMlinkname{prime}{Prime} order.  It is not difficult to see (say, by Cauchy's theorem) that these are the only abelian simple groups.
+\end{itemize}
+
+\paragraph{Alternating groups}
+\begin{itemize}
+\item
+The \emph{alternating group} on $n$ symbols is the set of all even permutations of $S_n$, the symmetric group on $n$ symbols.  It is usually denoted by $A_n$, or sometimes by $\operatorname{Alt}(n)$. This is a normal subgroup of $S_n$, namely the kernel of the homomorphism that sends every even permutation to $1$ and the odd permutations to $-1$.  Because every permutation is either even or odd, and there is a bijection between the two (multiply every even permutation by a transposition), the index of $A_n$ in $S_n$ is $2$.  $A_3$ is simple because it only has three elements, and the simplicity of $A_n$ for $n \geq 5$ can be proved by an elementary argument.  The simplicity of the alternating groups is an important fact that \'Evariste Galois required in order to prove the insolubility by radicals of the general polynomial of degree higher than four.  It is worth noting that some common sources of normal subgroups, namely centers and commutators, are therefore uninteresting in $A_n$ for $n\geq 3$.  Specifically, $[A_n,A_n]=A_n$ and $A_n$ has trivial center for $n\geq 3$.
+\end{itemize}
+
+\paragraph{Groups of Lie type}
+\begin{itemize}
+\item
+Projective special linear groups
+
+\item
+Other groups of Lie type.
+
+\end{itemize}
+
+\paragraph{Sporadic groups}
+There are twenty-six sporadic groups (no more, no less!) that do not fit into any of the infinite sequences of simple groups considered above.  These often arise as the group of automorphisms of strongly regular graphs.
+\begin{itemize}
+
+\item
+Mathieu groups.  
+%(What's that guys' name)  
+
+\item 
+Janko groups.
+
+\item
+The baby monster.
+
+\item
+The monster.
+%Maybe mention the moonshine conjecture here
+\end{itemize}
+%%%%%
+%%%%%
+\end{document}

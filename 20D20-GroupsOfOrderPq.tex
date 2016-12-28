@@ -1,0 +1,65 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{GroupsOfOrderPq}
+\pmcreated{2013-03-22 12:51:05}
+\pmmodified{2013-03-22 12:51:05}
+\pmowner{yark}{2760}
+\pmmodifier{yark}{2760}
+\pmtitle{groups of order pq}
+\pmrecord{22}{33183}
+\pmprivacy{1}
+\pmauthor{yark}{2760}
+\pmtype{Example}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{20D20}
+\pmrelated{SylowTheorems}
+\pmrelated{SemidirectProductOfGroups}
+
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+\DeclareMathOperator{\Aut}{Aut}
+\def\Integer{\mathbb{Z}}
+\def\inn#1{{\langle #1\rangle}}
+\def\set#1{{\{#1\}}}
+\begin{document}
+\PMlinkescapeword{class}
+\PMlinkescapeword{classes}
+\PMlinkescapeword{divide}
+\PMlinkescapeword{divides}
+\PMlinkescapeword{prime}
+\PMlinkescapeword{primes}
+\PMlinkescapeword{subgroup}
+\PMlinkescapeword{subgroups}
+
+We can use Sylow's theorems to examine a group $G$ of order $pq$, where $p$ and $q$ are \PMlinkname{primes}{Prime} and $p<q$.
+
+Let $n_p$ and $n_q$ denote, respectively, the number of Sylow $p$-subgroups and Sylow $q$-subgroups of $G$.
+
+Sylow's theorems tell us that 
+$n_q=1+kq$ for some integer $k$
+and $n_q$ divides $pq$.
+But $p$ and $q$ are prime and $p<q$, so this implies that $n_q=1$.
+So there is exactly one Sylow $q$-subgroup, which is therefore normal (indeed, fully invariant) in $G$.
+
+Denoting the Sylow $q$-subgroup by $Q$, and letting $P$ be a Sylow $p$-subgroup, then $Q\cap P=\{1\}$ and $QP=G$, so $G$ is a semidirect product of $Q$ and $P$. In particular, if there is only one Sylow $p$-subgroup, then $G$ is a direct product of $Q$ and $P$, and is therefore cyclic.
+
+Given $G=Q \rtimes P$, it remains to determine the action of $P$ on $Q$ by conjugation. There are two cases:
+
+Case 1: If $p$ does not divide $q-1$, then since $n_p=1+mp$ cannot equal $q$ we must have $n_p=1$, and so $P$ is a normal subgroup of $G$. This gives $G=C_p \times C_q$ a direct product, which is isomorphic to the cyclic group $C_{pq}$.
+
+Case 2: If $p$ divides $q-1$,
+then $\Aut(Q) \cong C_{q-1}$ has a unique \PMlinkname{subgroup}{Subgroup} $P'$ of order $p$,
+where $P'=\set{x \mapsto x^i \mid i \in \Integer/q \Integer, i^p=1}$.
+Let $a$ and $b$ be generators for $P$ and $Q$ respectively,
+and suppose the action of $a$ on $Q$ by conjugation is $x \mapsto x^{i_0}$,
+where $i_0 \neq 1$ in $\Integer/q \Integer$.
+Then $G=\inn{a,b \mid a^p=b^q=1, aba^{-1}=b^{i_0}}$.
+Choosing a different $i_0$
+amounts to choosing a different generator $a$ for $P$,
+and hence does not result in a new isomorphism class.
+So there are exactly two isomorphism classes of groups of order $pq$.
+%%%%%
+%%%%%
+\end{document}

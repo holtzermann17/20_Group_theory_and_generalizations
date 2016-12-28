@@ -1,0 +1,61 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{FiniteSubgroup}
+\pmcreated{2013-03-22 18:57:02}
+\pmmodified{2013-03-22 18:57:02}
+\pmowner{pahio}{2872}
+\pmmodifier{pahio}{2872}
+\pmtitle{finite subgroup}
+\pmrecord{5}{41808}
+\pmprivacy{1}
+\pmauthor{pahio}{2872}
+\pmtype{Theorem}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{20A05}
+\pmsynonym{criterion for finite subgroup}{FiniteSubgroup}
+\pmsynonym{finite subgroup criterion}{FiniteSubgroup}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+ \usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\theoremstyle{definition}
+\newtheorem*{thmplain}{Theorem}
+
+\begin{document}
+\textbf{Theorem.}\, A non-empty finite subset $K$ of a group $G$ is a subgroup of $G$ if and only if 
+\begin{align}
+xy \in K \quad\mbox{for all}\quad x,\,y \in K.
+\end{align}
+
+
+\emph{Proof.}\, The condition (1) is apparently true if $K$ is a subgroup.\, Conversely, suppose that a nonempty finite subset $K$ of the group $G$ satisfies (1).\, Let $a$ and $b$ be arbitrary elements of $K$.\, By (1), all (\PMlinkescapetext{positive}) powers of $b$ belong to $K$.\, Because of the finiteness of $K$, there exist positive integers $r,\,s$ such that
+$$b^r \;=\; b^s, \quad r \;>\; s\!+\!1.$$
+By (1), 
+$$K \;\ni\; b^{r-s-1} \;=\; b^{r-s}b^{-1} \;=\; eb^{-1} \;=\; b^{-1}.$$
+Thus also\, $ab^{-1} \in K$,\, whence, by the theorem of the \PMlinkid{parent entry}{1045}, $K$ is a subgroup of $G$.\\
+
+
+\textbf{Example.}\, The multiplicative group $G$ of all nonzero complex numbers has the finite multiplicative subset 
+\,$\{1,\,-1,\,i,\,-i\}$,\, which has to be a subgroup of $G$.
+%%%%%
+%%%%%
+\end{document}

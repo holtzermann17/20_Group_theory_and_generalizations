@@ -1,0 +1,142 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{FCgroup}
+\pmcreated{2013-03-22 14:52:28}
+\pmmodified{2013-03-22 14:52:28}
+\pmowner{yark}{2760}
+\pmmodifier{yark}{2760}
+\pmtitle{FC-group}
+\pmrecord{22}{36551}
+\pmprivacy{1}
+\pmauthor{yark}{2760}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{20F24}
+\pmsynonym{FC group}{FCgroup}
+%\pmkeywords{group}
+%\pmkeywords{conjugacy}
+\pmdefines{FC}
+\pmdefines{locally normal}
+\pmdefines{locally normal group}
+\pmdefines{locally finite and normal}
+\pmdefines{locally finite and normal group}
+\pmdefines{BFC-group}
+\pmdefines{BFC group}
+\pmdefines{BFC}
+\pmdefines{finite-by-abelian}
+\pmdefines{finite-by-abelian group}
+\pmdefines{centre-by-finite group}
+\pmdefines{center-by-finite group}
+\pmdefines{central-by-finite group}
+\pmdefines{centre-by}
+
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsthm}
+
+\newtheorem{corollary}{Corollary}
+\newtheorem{theorem}{Theorem}
+
+\DeclareMathOperator{\Tor}{Tor}
+
+% The below lines should work as the command
+% \renewcommand{\bibname}{References}
+% without creating havoc when rendering an entry in
+% the page-image mode.
+\makeatletter
+\@ifundefined{bibname}{}{\renewcommand{\bibname}{References}}
+\makeatother
+\begin{document}
+\PMlinkescapeword{equivalent}
+\PMlinkescapeword{fixed}
+\PMlinkescapeword{hamiltonian}
+\PMlinkescapeword{index}
+\PMlinkescapephrase{locally finite}
+\PMlinkescapeword{properties}
+\PMlinkescapeword{quotient}
+\PMlinkescapeword{subgroup}
+\PMlinkescapeword{term}
+\PMlinkescapeword{theorem}
+
+An \emph{FC-group} is a group in which every element has only finitely many conjugates. Equivalently, a group $G$ is an FC-group if and only if the centralizer $C_G(x)$ is of finite index in $G$ for each $x\in G$.
+
+All finite groups and all abelian groups are obviously FC-groups.
+Further examples of FC-groups can be obtained by taking restricted direct products of such groups.
+
+The term {\it FC-group} was introduced by Baer\cite{baer};
+the {\it FC} is simply a mnemonic for the definition involving finite conjugacy classes.
+
+\section{Some theorems}
+
+\begin{theorem}
+Every \PMlinkname{subgroup}{Subgroup} of an FC-group is an FC-group.
+\end{theorem}
+
+\begin{theorem}
+Every homomorphic image of an FC-group is an FC-group.
+\end{theorem}
+
+\begin{theorem}
+Every restricted direct product of FC-groups is an FC-group.
+\end{theorem}
+
+\begin{theorem}
+Every periodic FC-group is \PMlinkname{locally finite}{LocallyFiniteGroup}.
+\end{theorem}
+
+\begin{theorem}
+Let $G$ be an FC-group.
+The elements of finite order in $G$ form a subgroup,
+which will be denoted by $\Tor(G)$.
+The subgroup $\Tor(G)$ is a periodic FC-group,
+and the \PMlinkname{quotient}{QuotientGroup} $G/\Tor(G)$ is a torsion-free abelian group.
+\end{theorem}
+
+\begin{corollary}
+Every torsion-free FC-group is abelian.
+\end{corollary}
+
+\begin{theorem}
+If $G$ is a finitely generated FC-group,
+then $G/Z(G)$ and $\Tor(G)$ are both finite.
+\end{theorem}
+
+\begin{theorem}
+Every FC-group is a subdirect product of a periodic FC-group
+and a torsion-free abelian group.
+\end{theorem}
+
+From Theorem 4 above it follows that a group $G$ is a periodic FC-group
+if and only if every finite subset of $G$ has a finite normal closure.
+For this reason, periodic FC-groups are sometimes called \emph{locally normal} (or \emph{locally finite and normal}) groups.
+
+\section*{Stronger properties}
+
+The following two properties are sometimes encountered,
+both of which are somewhat stronger than being an FC-group.
+For finitely generated groups they are in fact equivalent to being an FC-group,
+by Theorem 6 above.
+
+A \emph{BFC-group} is a group $G$ such that every conjugacy class of elements of $G$ has at most $n$ elements, for some fixed integer $n$.
+B.~H.~Neumann showed\cite{neumann} that $G$ is a BFC-group if and only if its commutator subgroup $[G,G]$ is finite
+(which in turn is easily shown to be equivalent to $G$ being \emph{finite-by-abelian}, that is,
+having a finite normal subgroup $N$ such that $G/N$ is abelian).
+
+A \emph{centre-by-finite} (or \emph{central-by-finite}) group
+is a group $G$ such that the central quotient $G/Z(G)$ is finite.
+A centre-by-finite group is necessarily a BFC-group,
+because the centralizer of any element contains the centre.
+
+\begin{thebibliography}{9}
+\bibitem{baer}
+ R.\ Baer,
+ {\it Finiteness properties of groups},
+ Duke Math.\ J.\ 15 (1948), 1021--1032.
+\bibitem{neumann}
+ B.\ H.\ Neumann,
+ {\it Groups covered by permutable subsets},
+ J.\ London Math.\ Soc. 29 (1954), 236--248.
+\end{thebibliography}
+%%%%%
+%%%%%
+\end{document}

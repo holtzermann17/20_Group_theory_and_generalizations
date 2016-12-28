@@ -1,0 +1,431 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{TwoIsomorphicGroups}
+\pmcreated{2013-03-22 15:52:28}
+\pmmodified{2013-03-22 15:52:28}
+\pmowner{Wkbj79}{1863}
+\pmmodifier{Wkbj79}{1863}
+\pmtitle{two isomorphic groups}
+\pmrecord{10}{37871}
+\pmprivacy{1}
+\pmauthor{Wkbj79}{1863}
+\pmtype{Example}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{20B30}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\begin{document}
+\PMlinkescapeword{block}
+\PMlinkescapeword{calculate}
+\PMlinkescapeword{complete}
+\PMlinkescapeword{completes}
+\PMlinkescapeword{right}
+\PMlinkescapeword{structure}
+
+The set of $3\operatorname{x}3$ permutation matrices form a group under matrix multiplication.  This example demonstrates that fact and develops the multiplication table and compares it to $S_3$.  Although there are alternative ways to fill in the table, this example serves to help the beginner.  Here we will see that the two groups have the
+same structure.  We begin by defining the elements of our group.
+
+$\begin{array}{cc}
+\hspace{45mm}
+I=\left( \begin{array}{ccc}
+1 & 0 & 0 \\
+0 & 1 & 0 \\
+0 & 0 & 1
+\end{array} \right )
+
+&
+
+R=\left( \begin{array}{ccc}
+1 & 0 & 0 \\
+0 & 0 & 1 \\
+0 & 1 & 0
+\end{array} \right ) \\ \\
+
+\hspace{45mm}
+
+A=\left( \begin{array}{ccc}
+0 & 1 & 0 \\
+0 & 0 & 1 \\
+1 & 0 & 0
+\end{array} \right )
+
+&
+
+S=\left( \begin{array}{ccc}
+0 & 0 & 1 \\
+0 & 1 & 0 \\
+1 & 0 & 0
+\end{array} \right )
+\\
+\\
+
+\hspace{45mm}
+
+ B=\left( \begin{array}{ccc}
+0 & 0 & 1 \\
+1 & 0 & 0 \\
+0 & 1 & 0
+\end{array} \right )
+
+&
+
+T=\left( \begin{array}{ccc}
+0 & 1 & 0 \\
+1 & 0 & 0 \\
+0 & 0 & 1
+\end{array} \right )
+
+\end{array}$
+
+Here, our group is just $P_3=\{I,A,B,R,S,T\}$.  Now, we can start to multiply and then fill in the table.
+First, we calculate the square of each elements.
+
+\begin{displaymath}
+A^2=\left( \begin{array}{ccc}
+0 & 1 & 0 \\
+0 & 0 & 1 \\
+1 & 0 & 0
+\end{array} \right )
+\left( \begin{array}{ccc}
+0 & 1 & 0 \\
+0 & 0 & 1 \\
+1 & 0 & 0
+\end{array} \right )=
+\left( \begin{array}{ccc}
+0 & 0 & 1 \\
+1 & 0 & 0 \\
+0 & 1 & 0
+\end{array} \right )=B
+\end{displaymath}
+
+\begin{displaymath}
+B^2=\left( \begin{array}{ccc}
+0 & 0 & 1 \\
+1 & 0 & 0 \\
+0 & 1 & 0
+\end{array} \right )
+\left( \begin{array}{ccc}
+0 & 0 & 1 \\
+1 & 0 & 0\\
+0 & 1 & 0
+\end{array} \right )=
+\left( \begin{array}{ccc}
+0 & 1 & 0 \\
+0 & 0 & 1 \\
+1 & 0 & 0
+\end{array} \right )=A
+\end{displaymath}
+
+\begin{displaymath}
+R^2=\left( \begin{array}{ccc}
+1 & 0 & 0 \\
+0 & 0 & 1\\
+0 & 1 & 0
+\end{array} \right )
+\left( \begin{array}{ccc}
+1 & 0 & 0 \\
+0 & 0 & 1\\
+0 & 1 & 0
+\end{array} \right )=
+\left( \begin{array}{ccc}
+1 & 0 & 0 \\
+0 & 1 & 0\\
+0 & 0 & 1
+\end{array} \right )=I
+\end{displaymath}
+
+\begin{displaymath}
+S^2=\left( \begin{array}{ccc}
+0 & 0 & 1 \\
+0 & 1 & 0\\
+1 & 0 & 0
+\end{array} \right )
+\left( \begin{array}{ccc}
+0 & 0 & 1 \\
+0 & 1 & 0\\
+1 & 0 & 0
+\end{array} \right )=
+\left( \begin{array}{ccc}
+1 & 0 & 0 \\
+0 & 1 & 0\\
+0 & 0 & 1
+\end{array} \right )=I
+\end{displaymath}
+
+\begin{displaymath}
+T^2=\left( \begin{array}{ccc}
+0 & 1 & 0 \\
+1 & 0 & 0\\
+0 & 0 & 1
+\end{array} \right )
+\left( \begin{array}{ccc}
+0 & 1 & 0 \\
+1 & 0 & 0\\
+0 & 0 & 1
+\end{array} \right )=
+\left( \begin{array}{ccc}
+1 & 0 & 0 \\
+0 & 1 & 0\\
+0 & 0 & 1
+\end{array} \right )=I
+\end{displaymath}
+
+Now starting with the upper left $3\operatorname{x}3$ block, we go through the table.
+
+\begin{displaymath}
+AB=\left( \begin{array}{ccc}
+0 & 1 & 0 \\
+0 & 0 & 1\\
+1 & 0 & 0
+\end{array} \right )
+\left( \begin{array}{ccc}
+0 & 0 & 1 \\
+1 & 0 & 0\\
+0 & 1 & 0
+\end{array} \right )=
+\left( \begin{array}{ccc}
+1 & 0 & 0 \\
+0 & 1 & 0\\
+0 & 0 & 1
+\end{array} \right )=I
+\end{displaymath}
+
+\begin{displaymath}
+BA= \left( \begin{array}{ccc}
+0 & 0 & 1 \\
+1 & 0 & 0\\
+0 & 1 & 0
+\end{array} \right )
+\left( \begin{array}{ccc}
+0 & 1 & 0 \\
+0 & 0 & 1\\
+1 & 0 & 0
+\end{array} \right )=
+\left( \begin{array}{ccc}
+1 & 0 & 0 \\
+0 & 1 & 0\\
+0 & 0 & 1
+\end{array} \right )=I
+\end{displaymath}
+
+We can complete the upper left $3\operatorname{x}3$ block of the table and complete diagonal using the above values.  We note that no row or column can have a repeated elements which follows from the \PMlinkescapetext{algebraic structure} of a group.  Next, we work on the upper right $3\operatorname{x}3$ block of the table.
+
+\begin{displaymath}
+AR=\left( \begin{array}{ccc}
+0 & 1 & 0 \\
+0 & 0 & 1 \\
+1 & 0 & 0
+\end{array} \right )
+\left( \begin{array}{ccc}
+1 & 0 & 0 \\
+0 & 0 & 1 \\
+0 & 1 & 0
+\end{array} \right )=
+\left( \begin{array}{ccc}
+0 & 0 & 1 \\
+0 & 1 & 0 \\
+1 & 0 & 0
+\end{array} \right )=S
+\end{displaymath}
+
+\begin{displaymath}
+AS=\left( \begin{array}{ccc}
+0 & 1 & 0 \\
+0 & 0 & 1 \\
+1 & 0 & 0
+\end{array} \right )
+\left( \begin{array}{ccc}
+0 & 0 & 1 \\
+0 & 1 & 0 \\
+1 & 0 & 0
+\end{array} \right )=
+\left( \begin{array}{ccc}
+0 & 1 & 0 \\
+1 & 0 & 0 \\
+0 & 0 & 1
+\end{array} \right )=T
+\end{displaymath}
+
+Now we can complete the upper right 3 x 3 block of the table.  Next, we work on the lower left $3\operatorname{x}3$ block of the table.
+
+\begin{displaymath}
+RA= \left( \begin{array}{ccc}
+1 & 0 & 0 \\
+0 & 0 & 1 \\
+0 & 1 & 0
+\end{array} \right )
+\left( \begin{array}{ccc}
+0 & 1 & 0 \\
+0 & 0 & 1 \\
+1 & 0 & 0
+\end{array} \right )=
+\left( \begin{array}{ccc}
+0 & 1 & 0 \\
+1 & 0 & 0 \\
+0 & 0 & 1
+\end{array} \right )=T
+\end{displaymath}
+
+\begin{displaymath}
+RB= \left( \begin{array}{ccc}
+1 & 0 & 0 \\
+0 & 0 & 1 \\
+0 & 1 & 0
+\end{array} \right )
+\left( \begin{array}{ccc}
+0 & 0 & 1 \\
+1 & 0 & 0 \\
+0 & 1 & 0
+\end{array} \right )=
+\left( \begin{array}{ccc}
+0 & 0 & 1 \\
+0 & 1 & 0 \\
+1 & 0 & 0
+\end{array} \right )=S
+\end{displaymath}
+
+\begin{displaymath}
+SA= \left( \begin{array}{ccc}
+0 & 0 & 1 \\
+0 & 1 & 0 \\
+1 & 0 & 0
+\end{array} \right )
+\left( \begin{array}{ccc}
+0 & 1 & 0 \\
+0 & 0 & 1 \\
+1 & 0 & 0
+\end{array} \right )=
+\left( \begin{array}{ccc}
+1 & 0 & 0 \\
+0 & 0 & 1 \\
+0 & 1 & 0
+\end{array} \right )=R
+\end{displaymath}
+
+Now we can complete the lower left $3\operatorname{x}3$ block of the table.  Finally, we work on the lower right $3\operatorname{x}3$ block of the table.
+
+\begin{displaymath}
+RS=\left( \begin{array}{ccc}
+1 & 0 & 0 \\
+0 & 0 & 1 \\
+0 & 1 & 0
+\end{array} \right )
+\left( \begin{array}{ccc}
+0 & 0 & 1 \\
+0 & 1 & 0 \\
+1 & 0 & 0
+\end{array} \right )
+= \left( \begin{array}{ccc}
+0 & 0 & 1 \\
+1 & 0 & 0 \\
+0 & 1 & 0
+\end{array} \right )=B
+\end{displaymath}
+
+\begin{displaymath}
+SR=\left( \begin{array}{ccc}
+0 & 0 & 1 \\
+0 & 1 & 0 \\
+1 & 0 & 0
+\end{array} \right )
+\left( \begin{array}{ccc}
+1 & 0 & 0 \\
+0 & 0 & 1 \\
+0 & 1 & 0
+\end{array} \right )
+= \left( \begin{array}{ccc}
+0 & 1 & 0 \\
+1 & 0 & 0 \\
+0 & 0 & 1
+\end{array} \right )=A
+\end{displaymath}
+
+This completes the multiplication and the table is given below.
+
+\begin{center}
+$\begin{array}{|c||c|c|c|c|c|c|}
+\hline
+ & I & A & B & R & S & T \\
+\hline \hline
+I & I & A & B & R & S & T \\
+\hline
+A & A & B & I & S & T & R \\
+\hline
+B & B & I & A & T & R & S\\
+\hline
+R & R & T & S & I & B & A\\
+\hline
+S & S & R & T & A & I & B\\
+\hline
+T & T & S & R & B & A & I\\
+\hline
+\end{array}$
+\end{center}
+
+Next, we want to compare this table to the symmetric group $S_3$.  We begin as before by defining the elements
+as follows.
+
+$$e={ 1\ 2\ 3 \choose 1\ 2\ 3} \hspace{20mm} r={ 1\ 2\ 3 \choose 2\ 1\ 3}$$
+$$a={ 1\ 2\ 3 \choose 2\ 3\ 1} \hspace{20mm} s={ 1\ 2\ 3 \choose 3\ 2\ 1}$$
+$$b={ 1\ 2\ 3 \choose 3\ 1\ 2} \hspace{20mm} t={ 1\ 2\ 3 \choose 1\ 3\ 2}$$
+
+The multiplication table for this group is obtained within the entry symmetric group on three letters.  The table is:
+
+\begin{center}
+$\begin{array}{|c||c|c|c|c|c|c|}
+\hline
+ & e & a & b & r & s & t \\
+\hline
+e & e & a & b & r & s & t \\
+\hline
+a & a & b & e & s & t & r \\
+\hline
+b & b & e & a & t & r & s\\
+\hline
+r & r & t & s & e & b & a\\
+\hline
+s & s & r & t & a & e & b\\
+\hline
+t & t & s & r & b & a & e\\
+\hline
+\end{array}$
+\end{center}
+
+Define the following homomorphism $\varphi \colon S_3 \to P_3$ by the following:
+
+$\varphi(e)=I$;
+
+$\varphi(a)=A$;
+
+$\varphi(b)=B$;
+
+$\varphi(r)=R$;
+
+$\varphi(s)=S$;
+
+$\varphi(t)=T$.
+
+Since $\varphi$ is a bijection, we conclude that $P_3$ and $S_3$ are isomorphic.
+%%%%%
+%%%%%
+\end{document}

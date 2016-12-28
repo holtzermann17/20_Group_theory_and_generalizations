@@ -1,0 +1,146 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ExampleOfANonfullyInvariantSubgroup}
+\pmcreated{2013-03-22 16:06:26}
+\pmmodified{2013-03-22 16:06:26}
+\pmowner{Algeboy}{12884}
+\pmmodifier{Algeboy}{12884}
+\pmtitle{example of a non-fully invariant subgroup}
+\pmrecord{7}{38172}
+\pmprivacy{1}
+\pmauthor{Algeboy}{12884}
+\pmtype{Example}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{20D99}
+
+\usepackage{latexsym}
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amsthm}
+
+%%\usepackage{xypic}
+
+%-----------------------------------------------------
+
+%       Standard theoremlike environments.
+
+%       Stolen directly from AMSLaTeX sample
+
+%-----------------------------------------------------
+
+%% \theoremstyle{plain} %% This is the default
+
+\newtheorem{thm}{Theorem}
+
+\newtheorem{coro}[thm]{Corollary}
+
+\newtheorem{lem}[thm]{Lemma}
+
+\newtheorem{lemma}[thm]{Lemma}
+
+\newtheorem{prop}[thm]{Proposition}
+
+\newtheorem{conjecture}[thm]{Conjecture}
+
+\newtheorem{conj}[thm]{Conjecture}
+
+\newtheorem{defn}[thm]{Definition}
+
+\newtheorem{remark}[thm]{Remark}
+
+\newtheorem{ex}[thm]{Example}
+
+
+
+%\countstyle[equation]{thm}
+
+
+
+%--------------------------------------------------
+
+%       Item references.
+
+%--------------------------------------------------
+
+
+\newcommand{\exref}[1]{Example-\ref{#1}}
+
+\newcommand{\thmref}[1]{Theorem-\ref{#1}}
+
+\newcommand{\defref}[1]{Definition-\ref{#1}}
+
+\newcommand{\eqnref}[1]{(\ref{#1})}
+
+\newcommand{\secref}[1]{Section-\ref{#1}}
+
+\newcommand{\lemref}[1]{Lemma-\ref{#1}}
+
+\newcommand{\propref}[1]{Prop\-o\-si\-tion-\ref{#1}}
+
+\newcommand{\corref}[1]{Cor\-ol\-lary-\ref{#1}}
+
+\newcommand{\figref}[1]{Fig\-ure-\ref{#1}}
+
+\newcommand{\conjref}[1]{Conjecture-\ref{#1}}
+
+
+% Normal subgroup or equal.
+
+\providecommand{\normaleq}{\unlhd}
+
+% Normal subgroup.
+
+\providecommand{\normal}{\lhd}
+
+\providecommand{\rnormal}{\rhd}
+% Divides, does not divide.
+
+\providecommand{\divides}{\mid}
+
+\providecommand{\ndivides}{\nmid}
+
+
+\providecommand{\union}{\cup}
+
+\providecommand{\bigunion}{\bigcup}
+
+\providecommand{\intersect}{\cap}
+
+\providecommand{\bigintersect}{\bigcap}
+
+
+
+
+
+
+
+
+
+
+\begin{document}
+Every fully invariant subgroup is characteristic, but some characteristic subgroups need not be fully invariant.  For example, the center of a group is characteristic but not always fully invariant.  We pursue a single example.
+
+Recall the dihedral group of order $2n$, denoted $D_{2n}$, can be considered as the symmetries of a regular $n$-gon.  If we consider a regular hexagon, so $n=6$, and label the vertices counterclockwise from 1 to 6 we can then encode each symmetry as a permutation on 6 points.  So a rotation by $\pi/3$ can be encoded as the permutation $\rho = (123456)$ and the reflection fixing the axis through the vertices 1 and 4 can be encoded as $\phi = (26)(35)$.  Indeed these two permutations generate a permutation group isomorphic to $D_{12}$.
+
+The center of a dihedral group of order $2n$ is trivial if $n$ is odd, and of order 2 if $n>2$ is even (if $n=2$ it is the entire group $D_4\cong \mathbb{Z}_2\oplus\mathbb{Z}_2$, see the remark below).  Specifically, if $\rho$ is a rotation of order $n$, and $n=2m$, then $\langle \rho^m\rangle$ is the center of $D_{2n}$.  (Note this is the only rotation or order 2, and in particular it is always a rotation by $\pi$.)
+So when $n=6$, the center is $\langle (14)(25)(36)\rangle$.
+
+Now fix $n=6$ and note the following assignment of generators determines an endomorphism $f:D_{12}\rightarrow D_{12}$:
+\[(123456)\mapsto (26)(35),\quad (26)(35)\mapsto (14)(25)(36).\]
+Note that image $K:=\langle (26)(35),(14)(25)(36)\rangle\cong \mathbb{Z}_2\oplus \mathbb{Z}_2$, as $(14)(25)(36)$ is central in $D_{12}$ and the generators of
+$K$ are distinct elements of order $2$.  [This can be proved with the relations of the dihedral group.]
+
+\begin{remark}
+Geometrically we note that the kernel of the homomorphism is $\langle \rho^2\rangle$ -- the group of rotations of order 3.  So if we quotient by the kernel we are identifying the three inscribed (non-square) rectangles of the hexagon (1245, 2356 and 3461).  The symmetry group of a non-square rectangle is none other than $\mathbb{Z}_2\oplus\mathbb{Z}_2$, sometimes called $D_{4}$.
+\end{remark}
+
+Now the center is mapped via $f$ to the subgroup $\langle (26)(35)\rangle$ so 
+$f(Z(D_{12}))$ is not contained in $Z(D_{12})$ proving $Z(D_{12})$ is not fully-invariant.
+
+Of course the example applies without serious modification to the dihedral groups on $2m$-gons, where $m>1$ is odd.  Here a generally offending endomorphism may be described with a composition of maps (the first leaves the center invariant, the second swaps the basis of the image of the first thus moving the image of the center):
+\[\rho\mapsto \rho^m\mapsto \phi,\qquad \phi\mapsto \phi\mapsto \rho^m.\]
+As $m$ is odd and the center, $\langle \rho^m\rangle$, has order 2, it follows $\langle\rho^m\rangle$ maps to $\langle \rho^m\rangle$ under the first map, and then can be interchanged with a reflection to violate the condition of full invariance.  If $m$ is even then the center lies in the kernel of the first map so no such trick can be played.
+%%%%%
+%%%%%
+\end{document}

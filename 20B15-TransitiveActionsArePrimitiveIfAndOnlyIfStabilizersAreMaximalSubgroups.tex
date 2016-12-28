@@ -1,0 +1,54 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{TransitiveActionsArePrimitiveIfAndOnlyIfStabilizersAreMaximalSubgroups}
+\pmcreated{2013-03-22 17:19:07}
+\pmmodified{2013-03-22 17:19:07}
+\pmowner{rm50}{10146}
+\pmmodifier{rm50}{10146}
+\pmtitle{transitive actions are primitive if and only if stabilizers are maximal subgroups}
+\pmrecord{6}{39669}
+\pmprivacy{1}
+\pmauthor{rm50}{10146}
+\pmtype{Theorem}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{20B15}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\newtheorem{thm}{Theorem}
+\DeclareMathOperator{\Stab}{Stab}
+\begin{document}
+\begin{thm} If $G$ is transitive on the set $A$, then $G$ is primitive on $A$ if and only if for each $a\in A$, $G_a$ is a maximal subgroup of $G$. Here $G_a=\Stab_G(a)$ is the stabilizer of $a\in A$.
+\end{thm}
+\begin{proof}
+First claim that if $G$ is transitive on $A$ and $B\subset A$ is a \PMlinkname{block}{BlockSystem} with $a\in B$, then $G_B=\{\sigma\in G\ \mid\ \sigma(B)=B\}$ is a subgroup of $G$ containing $G_a$. It is obvious that $G_B$ is a subgroup, since
+\begin{gather*}
+\sigma\in G_B\Rightarrow \sigma(B)=B\Rightarrow \sigma^{-1}(\sigma(B))=\sigma^{-1}(B)\Rightarrow B=\sigma^{-1}(B)\Rightarrow \sigma^{-1}\in G_B\\
+\sigma,\tau\in G_B \Rightarrow (\sigma\tau)(B)=\sigma(\tau(B))=\sigma(B)=B\Rightarrow \sigma\tau\in G_B
+\end{gather*}
+But also, if $\sigma\in G_a$ for $a\in B$, then $\sigma(a)=a$, so $\sigma(B)\cap B\neq \emptyset$ and thus $\sigma(B)=B$ since $B$ is a block system and thus $\sigma\in G_B$. This proves the claim.
+
+To prove the theorem, note that for each $a\in A$, there is by the claim a $1-1$ correspondence between \PMlinkescapetext{blocks} containing $a$ and subgroups of $G$ containing $G_a$. Thus, $G$ is primitive on $A$ if and only if all blocks are either of size $1$ or equal to $A$, if and only if any group containing $G_a$ is either $G_a$ itself or $G$, if and only if for all $a\in A$, $G_a$ is maximal in $G$.
+\end{proof}
+%%%%%
+%%%%%
+\end{document}

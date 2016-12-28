@@ -1,0 +1,53 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{LeftIdentityAndRightIdentity}
+\pmcreated{2013-03-22 13:02:05}
+\pmmodified{2013-03-22 13:02:05}
+\pmowner{mclase}{549}
+\pmmodifier{mclase}{549}
+\pmtitle{left identity and right identity}
+\pmrecord{5}{33435}
+\pmprivacy{1}
+\pmauthor{mclase}{549}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{20N02}
+\pmclassification{msc}{20M99}
+\pmrelated{IdentityElement}
+\pmrelated{Unity}
+\pmdefines{left identity}
+\pmdefines{right identity}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\begin{document}
+Let $G$ be a groupoid.  An element $e \in G$ is called a \emph{left identity element} if $ex = x$ for all $x \in G$.  Similarly, $e$ is a \emph{right identity element} if $xe = x$ for all $x \in G$.
+
+An element which is both a left and a right identity is an identity element.
+
+A groupoid may have more than one left identify element: in fact the operation 
+defined by $x y = y$ for all $x, y \in G$ defines a groupoid (in fact, a semigroup) on any set $G$, and every element is a left identity.
+
+But as soon as a groupoid has both a left and a right identity, they are necessarily unique and equal.  For if $e$ is a left identity and $f$ is a right identity, then $f = ef = e$.
+%%%%%
+%%%%%
+\end{document}

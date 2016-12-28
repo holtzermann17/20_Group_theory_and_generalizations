@@ -1,0 +1,52 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{CancellativeSemigroup}
+\pmcreated{2013-03-22 14:25:09}
+\pmmodified{2013-03-22 14:25:09}
+\pmowner{yark}{2760}
+\pmmodifier{yark}{2760}
+\pmtitle{cancellative semigroup}
+\pmrecord{9}{35926}
+\pmprivacy{1}
+\pmauthor{yark}{2760}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{20M10}
+\pmsynonym{cancellation semigroup}{CancellativeSemigroup}
+\pmrelated{CancellationIdeal}
+\pmdefines{cancellative}
+\pmdefines{weakly cancellative}
+\pmdefines{left cancellative}
+\pmdefines{right cancellative}
+\pmdefines{weakly cancellative semigroup}
+\pmdefines{left cancellative semigroup}
+\pmdefines{right cancellative semigroup}
+
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amsthm}
+
+\begin{document}
+Let $S$ be a semigroup.
+
+$S$ is \emph{left cancellative} if, for all $a,b,c\in S$, $ab=ac\Rightarrow b=c$\\
+$S$ is \emph{right cancellative} if, for all $a,b,c\in S$, $ba=ca\Rightarrow b=c$
+
+$S$ is \emph{cancellative} if it is both left and right cancellative.
+
+\section{Relationship to some other types of semigroup}
+This is a generalisation of groups, and in fact being cancellative is a necessary condition for a semigroup to be embeddable in a group.
+
+Note that a non-empty semigroup is a group if and only if it is cancellative and regular.
+
+$S$ is \emph{weakly cancellative} if, for all $a,b,c\in S$, $(ab=ac~\&~ba=ca)\Rightarrow b=c$
+
+A semigroup is completely simple if and only if it is weakly cancellative and regular.
+
+\section{Individual elements}
+An element $x\in S$ is called \emph{left cancellative} if, for all $b,c\in S$, $xb=xc\Rightarrow b=c$\\
+An element $x\in S$ is called \emph{right cancellative} if, for all $b,c\in S$, $bx=cx\Rightarrow b=c$
+%%%%%
+%%%%%
+\end{document}

@@ -1,0 +1,64 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{IdealOfElementsWithFiniteOrder}
+\pmcreated{2013-03-22 17:52:30}
+\pmmodified{2013-03-22 17:52:30}
+\pmowner{pahio}{2872}
+\pmmodifier{pahio}{2872}
+\pmtitle{ideal of elements with finite order}
+\pmrecord{8}{40355}
+\pmprivacy{1}
+\pmauthor{pahio}{2872}
+\pmtype{Theorem}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{20A05}
+\pmclassification{msc}{16D25}
+\pmrelated{OrderGroup}
+\pmrelated{Lcm}
+\pmrelated{Multiple}
+\pmrelated{OrdersOfElementsInIntegralDomain}
+\pmrelated{CharacteristicOfFiniteRing}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+ \usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\theoremstyle{definition}
+\newtheorem*{thmplain}{Theorem}
+\DeclareMathOperator{\lcm}{lcm}
+\begin{document}
+\textbf{Theorem.}\, The set of all elements of a ring, which have a finite order in the additive group of the ring, is a (two-sided) ideal of the ring.\\
+
+{\em Proof.}\, Let $S$ be the set of the elements with finite order in the ring $R$.\, Denote by $o(x)$ the order of $x$.\, Take arbitrary elements $a,\,b$ of the set $S$.
+
+If\; $\lcm(o(a),\,o(b)) = n = ko(a) = lo(b)$,\, then
+$$n(a-b) = na-nb = ko(a)a-lo(b)b = k\cdot0-l\cdot0 = 0-0 = 0.$$
+Thus\, $o(a-b) \leqq n < \infty$\, and so\, $a-b \in S$.
+
+For any element $r$ of $R$ we have
+$$o(a)(ra) = \underbrace{ra+ra+\ldots+ra}_{o(a)} = r(\underbrace{a+a+\ldots+a}_{o(a)}) =
+r(o(a)a) = r\cdot0 = 0.$$
+Therefore, $o(ra) \leqq o(a) < \infty$\, and $ra \in S$.\, Similarly,\, $ar \in S$.
+
+Since $S$ satisfies the conditions for an ideal, the theorem has been proven.
+%%%%%
+%%%%%
+\end{document}

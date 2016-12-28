@@ -1,0 +1,81 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{WagnerPrestonRepresentationTheorem}
+\pmcreated{2013-03-22 16:11:16}
+\pmmodified{2013-03-22 16:11:16}
+\pmowner{Mazzu}{14365}
+\pmmodifier{Mazzu}{14365}
+\pmtitle{Wagner-Preston representation theorem}
+\pmrecord{10}{38275}
+\pmprivacy{1}
+\pmauthor{Mazzu}{14365}
+\pmtype{Theorem}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{20M18}
+%\pmkeywords{Inverse Semigroups}
+\pmdefines{representation by bijective partial maps}
+\pmdefines{faithful representation}
+\pmdefines{Wagner-Preston representation}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% THEOREM Environments --------------------------------------------------
+
+\newtheorem{thm}{Theorem}
+
+% define commands here
+
+\begin{document}
+\PMlinkescapeword{representation}
+
+
+\newcommand{\domi}{\mathrm{dom}}
+\newcommand{\rang}{\mathrm{ran}}
+\newcommand{\FFF}{\mathfrak{F}}
+\newcommand{\III}{\mathfrak{I}}
+\newcommand{\cbra}[1]{\left( #1 \right)}
+\newcommand{\qbra}[1]{\left[ #1 \right]}
+\newcommand{\gbra}[1]{\left\{ #1 \right\}}
+\newcommand{\abra}[1]{\left\langle #1 \right\rangle}
+
+
+Let $S$ be an inverse semigroup and $X$ a set. An inverse semigroup homomorphism $\phi:S\rightarrow\III(X)$, where $\III(X)$ denotes the symmetric inverse semigroup, is called a \emph{representation} of $S$ by bijective partial maps on $X$. The representation is said to be \emph{faithful} if $\phi$ is a monomorphism, i.e. it is injective.
+
+Given $s\in S$, we define $\rho_s\in\III(S)$ as the bijective partial map with domain 
+$$\domi(\rho_s)=Ss^{-1}=\gbra{ts^{-1}\,|\,t\in S}$$ 
+and defined by
+$$\rho_s(t)=ts,\ \ \forall t\in \domi(\rho_s).$$
+Then the map $s\mapsto\rho_s$ is a representation  called the \emph{Wagner-Preston representation} of $S$. The following result, due to Wagner and Preston, is analogous to the Cayley representation theorem for groups.\\
+
+
+
+
+\begin{thm}[\textbf{Wagner-Preston representation theorem}]
+The Wagner-Preston representation of an inverse semigroup is faithful.
+\end{thm}
+
+\begin{thebibliography}{9}
+\bibitem{b:petrich} N. Petrich, \emph{Inverse Semigroups}, Wiley, New York, 1984.
+\bibitem{b:pres} G.B. Preston, \emph{Representation of inverse semi-groups}, J. London Math. Soc. 29 (1954), 411-419.
+\end{thebibliography}
+%%%%%
+%%%%%
+\end{document}

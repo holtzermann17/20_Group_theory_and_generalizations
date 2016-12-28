@@ -1,0 +1,39 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{FourthIsomorphismTheorem}
+\pmcreated{2013-03-22 14:00:52}
+\pmmodified{2013-03-22 14:00:52}
+\pmowner{bwebste}{988}
+\pmmodifier{bwebste}{988}
+\pmtitle{fourth isomorphism theorem}
+\pmrecord{16}{34917}
+\pmprivacy{1}
+\pmauthor{bwebste}{988}
+\pmtype{Theorem}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{20A05}
+\pmsynonym{correspondence theorem}{FourthIsomorphismTheorem}
+\pmsynonym{lattice isomorphism theorem}{FourthIsomorphismTheorem}
+
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+\def\ang#1{\langle{#1}\rangle}
+
+\newtheorem{thm}{Theorem}
+\begin{document}
+\begin{thm}[The Fourth Isomorphism Theorem]
+Let $G$ be a group and $N\unlhd G$. There is a bijection between $G(N)$, the set of subgroups of $G$ containing $N$, and the set of subgroups of $G/N$ defined by $A\rightarrow A/N$. Moreover, for any two subgroups $A,B$ 
+in $G(N)$, we have
+\begin{enumerate}
+\item $A\leq B$ if and only if $A/N\leq B/N$,
+\item $A\leq B$ implies $|B:A|=|B/N:A/N|$,
+\item $\ang{A,B}/N=\ang{A/N,B/N}$,
+\item $(A\cap B)/N=(A/N)\cap (B/N)$, and
+\item $A\unlhd G$ if and only if  $(A/N)\unlhd (G/N)$.
+\end{enumerate}
+\end{thm}
+%%%%%
+%%%%%
+\end{document}

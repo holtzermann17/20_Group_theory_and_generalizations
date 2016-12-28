@@ -1,0 +1,72 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{EstimationOfIndexOfIntersectionSubgroup}
+\pmcreated{2013-03-22 18:56:46}
+\pmmodified{2013-03-22 18:56:46}
+\pmowner{pahio}{2872}
+\pmmodifier{pahio}{2872}
+\pmtitle{estimation of index of intersection subgroup}
+\pmrecord{5}{41803}
+\pmprivacy{1}
+\pmauthor{pahio}{2872}
+\pmtype{Theorem}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{20D99}
+\pmsynonym{index of intersection subgroup}{EstimationOfIndexOfIntersectionSubgroup}
+%\pmkeywords{index of subgroup}
+%\pmkeywords{intersection of subgroups}
+\pmrelated{LogicalAnd}
+\pmrelated{Cardinality}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+ \usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\DeclareMathOperator{\card}{card}
+\theoremstyle{definition}
+\newtheorem*{thmplain}{Theorem}
+
+\begin{document}
+\textbf{Theorem.}\, If $H_1,\,H_2,\,\ldots,\,H_n$ are subgroups of $G$, then
+$$\left[G:\bigcap_{i=1}^nH_i\right] \leqq \prod_{i=1}^n[G:H_i].$$\\
+
+\emph{Proof.}\, We prove here only the case \,$n = 2$;\, the general case may be handled by the induction.
+
+Let\, $H_1\!\cap\!H_2 := K$.\, Let $R$ be the set of the right cosets of $K$ and $R_i$ the set of the right cosets of 
+$H_i$\, ($i = 1,\,2$).\, Define the relation $\varrho$ from $R$ to $R_1\!\times\!R_2$ as
+$$\varrho \;:=\; \{\left(Kx,\,(H_1x,\,H_2x)\right)\vdots\;\; x \in G \}.$$
+We then have the \PMlinkname{equivalent}{Equivalent3} conditions
+$$Kx \;=\; Ky,$$
+$$xy^{-1} \in K,$$
+$$xy^{-1} \in H_1 \quad\land\quad xy^{-1} \in H_2,$$
+$$H_1x \;=\; H_1y \quad\land\quad H_2x \;=\; H_2y,$$
+$$(H_1x,\,H_2x) \;=\; (H_1y,\,H_2y),$$
+whence $\varrho$ is a mapping and \PMlinkescapetext{even} injective,\; $\varrho:\, R \to R_1\!\times\!R_2$.\, i.e. it is a bijection from $R$ onto the subset \,$\{\varrho(x)\vdots\;\; x \in R\}$\, of $R_1\!\times\!R_2$.\, Therefore,
+$$\card(R) \;\leqq\; \card(R_1\!\times\!R_2) \;=\; \card(R_1)\cdot\card(R_2).$$\\
+
+
+As a consequence one obtains the
+
+\textbf{Theorem (Poincar\'e}).\, The index of the intersection of finitely many subgroups with finite \PMlinkname{indices}{Coset} is finite.
+
+
+%%%%%
+%%%%%
+\end{document}

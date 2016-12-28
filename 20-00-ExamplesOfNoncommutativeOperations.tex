@@ -1,0 +1,69 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ExamplesOfNoncommutativeOperations}
+\pmcreated{2013-03-22 15:03:04}
+\pmmodified{2013-03-22 15:03:04}
+\pmowner{yark}{2760}
+\pmmodifier{yark}{2760}
+\pmtitle{examples of non-commutative operations}
+\pmrecord{10}{36768}
+\pmprivacy{1}
+\pmauthor{yark}{2760}
+\pmtype{Example}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{20-00}
+
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\C}{\mathbb{C}}
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\Q}{\mathbb{Q}}
+\begin{document}
+A standard example of a non-commutative operation is matrix multiplication. Consider the following two integer matrices:
+\[
+A=\begin{pmatrix}
+1 & 1\\
+0&1
+\end{pmatrix},\qquad
+B=\begin{pmatrix}
+0 & 1\\
+0 & 1
+\end{pmatrix}
+\]
+
+If we compute $AB$ we get 
+\[
+AB=\begin{pmatrix}
+0 & 2 \\
+0 & 1
+\end{pmatrix}
+\]
+but if we compute $BA$ we have
+\[
+BA=\begin{pmatrix}
+0 & 1 \\
+0 & 1
+\end{pmatrix}.
+\]
+
+Since $AB\neq BA$ we conclude that matrix product is not commutative.
+
+Operations do not necessarily have to operate on numbers. Another classic example is function composition. Let $f$ and $g$ be real functions given by
+\[
+f(x) = x^2,\qquad g(x) = 2x.
+\]
+
+We see that
+\[
+(f\circ g)(x) = f(g(x)) = (2x)^2 = 4x^2,
+\]
+but 
+\[
+(g \circ f )(x) = g(f(x)) = 2(x^2) = 2x^2.
+\]
+Since we got different functions, we conclude that function composition is not commutative.
+%%%%%
+%%%%%
+\end{document}

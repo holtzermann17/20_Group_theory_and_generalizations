@@ -1,0 +1,60 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{AlternatingGroupHasIndex2InTheSymmetricGroupThe}
+\pmcreated{2013-03-22 16:48:49}
+\pmmodified{2013-03-22 16:48:49}
+\pmowner{yesitis}{13730}
+\pmmodifier{yesitis}{13730}
+\pmtitle{alternating group has index 2 in the symmetric group, the}
+\pmrecord{8}{39048}
+\pmprivacy{1}
+\pmauthor{yesitis}{13730}
+\pmtype{Proof}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{20-00}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\begin{document}
+We prove that the alternating group $A_n$ has index 2 in the symmetric group $S_n$, i.e., $A_n$ has the same cardinality as its complement $S_n\setminus A_n$. The proof is function-theoretic. Its idea is similar to the proof in the parent topic, but the focus is less on algebraic aspect.
+
+
+Let $\pi\in S_n\setminus A_n$. Define $\pi:S_n \setminus A_n\rightarrow A_n$ by $\pi(\sigma)=\pi\sigma$, where $\pi\sigma$ is the product of $\pi$ and $\sigma$.
+
+One-to-one:
+\begin{equation*}
+\pi(\sigma)=\pi(\delta) \Longrightarrow \sigma=\delta
+\end{equation*}
+since $\pi^{-1}$ exists and $\pi^{-1}\pi\sigma=\pi^{-1}\pi\delta$.
+
+Onto:
+Given $\alpha\in A_n$, there exists an element in $S_n\setminus A_n$, namely $\lambda=\pi^{-1}\alpha$, such that
+\begin{equation*}
+\pi(\alpha)=\lambda.
+\end{equation*}
+(The element $\lambda$ is in $S_n\setminus A_n$ because $\pi^{-1}$ is and the product of an odd permutation and an even permutation is odd.)
+
+The function $\pi:S_n \setminus A_n\rightarrow A_n$ is, therefore, a one-to-one correspondence, so both sets $S_n \setminus A_n$ and $A_n$ have the same cardinality. 
+%%%%%
+%%%%%
+\end{document}

@@ -1,0 +1,52 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{MaximalSubgroup}
+\pmcreated{2013-03-22 12:23:46}
+\pmmodified{2013-03-22 12:23:46}
+\pmowner{yark}{2760}
+\pmmodifier{yark}{2760}
+\pmtitle{maximal subgroup}
+\pmrecord{15}{32198}
+\pmprivacy{1}
+\pmauthor{yark}{2760}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{20E28}
+\pmsynonym{maximal proper subgroup}{MaximalSubgroup}
+\pmrelated{MaximalElement}
+\pmdefines{maximal}
+\pmdefines{maximal normal subgroup}
+\pmdefines{maximal proper normal subgroup}
+\pmdefines{simplicity of quotient group}
+
+\usepackage{amsthm}
+
+\newtheorem*{thm*}{Theorem}
+\begin{document}
+\PMlinkescapeword{theorem}
+
+Let $G$ be a group.
+
+A subgroup $H$ of $G$
+is said to be a \emph{maximal subgroup} of $G$
+if $H\neq G$ and there is no subgroup $K$ of $G$
+such that $H<K<G$.
+Note that a maximal subgroup of $G$ is not \PMlinkname{maximal}{MaximalElement} among all subgroups of $G$,
+but only among all proper subgroups of $G$.
+For this reason, maximal subgroups are sometimes called \emph{maximal proper subgroups}.
+
+Similarly, a normal subgroup $N$ of $G$
+is said to be a \emph{maximal normal subgroup} 
+(or \emph{maximal proper normal subgroup}) of $G$
+if $N\neq G$ and there is no normal subgroup $K$ of $G$
+such that $N<K<G$.
+We have the following theorem:
+
+\begin{thm*}
+A normal subgroup $N$ of a group $G$ is a maximal normal subgroup
+if and only if the \PMlinkname{quotient}{QuotientGroup} $G/N$
+is \PMlinkname{simple}{Simple}.
+\end{thm*}
+%%%%%
+%%%%%
+\end{document}

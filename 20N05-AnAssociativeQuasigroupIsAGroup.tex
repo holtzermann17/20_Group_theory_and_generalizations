@@ -1,0 +1,62 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{AnAssociativeQuasigroupIsAGroup}
+\pmcreated{2013-03-22 18:28:50}
+\pmmodified{2013-03-22 18:28:50}
+\pmowner{CWoo}{3771}
+\pmmodifier{CWoo}{3771}
+\pmtitle{an associative quasigroup is a group}
+\pmrecord{7}{41156}
+\pmprivacy{1}
+\pmauthor{CWoo}{3771}
+\pmtype{Derivation}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{20N05}
+\pmrelated{Group}
+
+\usepackage{amssymb,amscd}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{mathrsfs}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+\usepackage{amsthm}
+% making logically defined graphics
+%%\usepackage{xypic}
+\usepackage{pst-plot}
+
+% define commands here
+\newcommand*{\abs}[1]{\left\lvert #1\right\rvert}
+\newtheorem{prop}{Proposition}
+\newtheorem{thm}{Theorem}
+\newtheorem{ex}{Example}
+\newcommand{\real}{\mathbb{R}}
+\newcommand{\pdiff}[2]{\frac{\partial #1}{\partial #2}}
+\newcommand{\mpdiff}[3]{\frac{\partial^#1 #2}{\partial #3^#1}}
+\begin{document}
+\begin{prop} Let $G$ be a set and $\cdot$ a binary operation on $G$.  Write $ab$ for $a\cdot b$.  The following are equivalent:
+\begin{enumerate}
+\item $(G,\cdot)$ is an associative quasigroup.
+\item $(G,\cdot)$ is an associative loop.
+\item $(G,\cdot)$ is a group.
+\end{enumerate}
+\end{prop}
+\begin{proof}  We will prove this in the following direction $(1)\Rightarrow (2) \Rightarrow (3) \Rightarrow (1)$.
+\begin{description}
+\item[$(1)\Rightarrow (2)$.] Let $x\in G$, and $e_1,e_2\in G$ such that $xe_1=x=e_2x$.  So $xe_1^2=xe_1=x$, which shows that $e_1^2=e_1$.  Let $a\in G$ be such that $e_1a=x$.  Then $e_2e_1a=e_2x=x=e_1a$, so that $e_2e_1=e_1=e_1^2$, or $e_2=e_1$.  Set $e=e_1$.  For any $y\in G$, we have $ey=e^2y$, so $y=ey$.  Similarly, $ye=ye^2$ implies $y=ye$.  This shows that $e$ is an identity of $G$.
+\item[$(2)\Rightarrow (3)$.]
+First note that all of the group axioms are automatically satisfied in $G$ under $\cdot$, except the existence of an (two-sided) inverse element, which we are going to verify presently.  For every $x\in G$, there are unique elements $y$ and $z$ such that $x y=z x=e$.  Then $y = e y = (z x)  y = z (x y)= z e = z$.  This shows that $x$ has a unique two-sided inverse $x^{-1}:=y=z$.  Therefore, $G$ is a group under $\cdot$.
+\item[$(3)\Rightarrow (1)$.]
+Every group is clearly a quasigroup, and the binary operation is associative.
+\end{description}
+This completes the proof.
+\end{proof}
+
+\textbf{Remark}.  In fact, if $\cdot$ on $G$ is flexible, then every element in $G$ has a unique inverse: for $z (x z) = (z x) z = e z = z = z e$, so by left division (by $z$), we get $x z=e=x y$, and therefore $z=y$, again by left division (by $x$).  However, $G$ may no longer be a group, because associativity may longer hold.
+%%%%%
+%%%%%
+\end{document}

@@ -1,0 +1,82 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ConditionOnANearRingToBeARing}
+\pmcreated{2013-03-22 17:19:54}
+\pmmodified{2013-03-22 17:19:54}
+\pmowner{CWoo}{3771}
+\pmmodifier{CWoo}{3771}
+\pmtitle{condition on a near ring to be a ring}
+\pmrecord{14}{39684}
+\pmprivacy{1}
+\pmauthor{CWoo}{3771}
+\pmtype{Theorem}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{20-00}
+\pmclassification{msc}{16-00}
+\pmclassification{msc}{13-00}
+\pmrelated{UnitalRing}
+
+\usepackage{amssymb,amscd}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{mathrsfs}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+\usepackage{amsthm}
+% making logically defined graphics
+%%\usepackage{xypic}
+\usepackage{pst-plot}
+\usepackage{psfrag}
+
+% define commands here
+\newtheorem{prop}{Proposition}
+\newtheorem{thm}{Theorem}
+\newtheorem{ex}{Example}
+\newcommand{\real}{\mathbb{R}}
+\newcommand{\pdiff}[2]{\frac{\partial #1}{\partial #2}}
+\newcommand{\mpdiff}[3]{\frac{\partial^#1 #2}{\partial #3^#1}}
+\begin{document}
+\PMlinkescapeword{near}
+\PMlinkescapeword{combination}
+
+Every ring is a near-ring.  The converse is true only when additional conditions are imposed on the near-ring.
+
+\begin{thm} Let $(R,+,\cdot)$ be a near ring with a multiplicative identity $1$ such that the $\cdot$ also left distributes over $+$; that is, $c\cdot (a+b)=c\cdot a+c\cdot b$.  Then $R$ is a ring.\end{thm}
+
+In short, a distributive near-ring with $1$ is a ring.
+
+Before proving this, let us list and prove some general facts about a near ring:
+\begin{enumerate}
+\item Every near ring has a unique additive identity: if both $0$ and $0'$ are additive identities, then $0=0+0'=0'$.
+\item Every element in a near ring has a unique additive inverse.  The additive inverse of $a$ is denoted by $-a$.
+\begin{proof} If $b$ and $c$ are additive inverses of $a$, then $b+a=0=a+c$ and $b=b+0=b+(a+c)=(b+a)+c=0+c=c$. \end{proof}
+\item $-(-a)=a$, since $a$ is the (unique) additive inverse of $-a$.
+\item There is no ambiguity in defining ``subtraction'' $-$ on a near ring $R$ by $a-b:=a+(-b)$.
+\item \label{c} $a-b=0$ iff $a=b$, which is just the combination of the above three facts.
+\item If a near ring has a multiplicative identity, then it is unique.  The proof is identical to the one given for the first Fact.
+\item \label{w} If a near ring has a multiplicative identity $1$, then $(-1)a=-a$.
+\begin{proof} $a+(-1)a=1a+(-1)a=(1+(-1))a=0a=0$.  Therefore $(-1)a=-a$ since $a$ has a unique additive inverse. \end{proof}
+\end{enumerate}
+We are now in the position to prove the theorem.
+\begin{proof}  Set $r=a+b$ and $s=b+a$.  Then 
+\begin{alignat*}{2}
+r-s &=r-(b+a) &\quad \qquad \text{substitution} \\
+&=r+(-1)(b+a) &\quad \qquad \text{by Fact \ref{w} above} \\
+&= r+((-1)b+(-1)a) &\quad \qquad \text{by left distributivity} \\
+&= r+(-b+(-a)) &\quad \qquad \text{by Fact \ref{w} above} \\
+&= (a+b)+(-b+(-a)) &\quad \qquad \text{substitution} \\
+&= ((a+b)+(-b))+(-a) &\quad \qquad \text{additive associativity} \\
+&= (a+(b+(-b))+(-a) &\quad \qquad \text{additive associativity} \\
+&= (a+0)+(-a) &\quad \qquad -b \text{ is the additive inverse of } b\\
+&= a+(-a) &\quad \qquad 0 \text{ is the additive identity} \\
+&= 0 &\quad \qquad \text{same reason as above}
+\end{alignat*}
+Therefore, $a+b=r=s=b+a$ by Fact \ref{c} above.
+\end{proof}
+%%%%%
+%%%%%
+\end{document}

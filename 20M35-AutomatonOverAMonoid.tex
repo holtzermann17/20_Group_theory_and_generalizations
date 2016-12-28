@@ -1,0 +1,58 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{AutomatonOverAMonoid}
+\pmcreated{2013-03-22 19:01:31}
+\pmmodified{2013-03-22 19:01:31}
+\pmowner{CWoo}{3771}
+\pmmodifier{CWoo}{3771}
+\pmtitle{automaton over a monoid}
+\pmrecord{7}{41897}
+\pmprivacy{1}
+\pmauthor{CWoo}{3771}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{20M35}
+\pmclassification{msc}{68Q70}
+
+\usepackage{amssymb,amscd}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{mathrsfs}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+\usepackage{amsthm}
+% making logically defined graphics
+%%\usepackage{xypic}
+\usepackage{pst-plot}
+
+% define commands here
+\newcommand*{\abs}[1]{\left\lvert #1\right\rvert}
+\newtheorem{prop}{Proposition}
+\newtheorem{thm}{Theorem}
+\newtheorem{ex}{Example}
+\newcommand{\real}{\mathbb{R}}
+\newcommand{\pdiff}[2]{\frac{\partial #1}{\partial #2}}
+\newcommand{\mpdiff}[3]{\frac{\partial^#1 #2}{\partial #3^#1}}
+\begin{document}
+Recall that a semiautomaton $A$ can be visually represented by a directed graph $G_A$, whose vertices (or nodes) are states of $A$, and whose edges are labeled by elements from the input alphabet $\Sigma$ of $A$.  Labeling can be extended to paths of $G_A$ in a natural way: if $(e_1,\ldots, e_n)$ is a path $p$ and each edge $e_i$ is labeled $a_i$, then the label of $p$ is $a_1\cdots a_n$.  Thus, the labels of paths of $G_A$ are just elements of the monoid $\Sigma^*$.  The concept can be readily generalized to arbitrary monoids.
+
+\textbf{Definition}.  Let $M$ be a monoid.  A \emph{semiautomaton} over $M$ is a directed graph $G$ whose edges are labeled by elements of $M$.  An \emph{automaton} over $M$ is a semiautomaton over $M$, where the vertex set has two designated subsets $I$ and $F$ (not necessarily disjoint), where elements of $I$ are called the start nodes, and elements of $F$ the final nodes.
+
+Note that if $M=\Sigma^*$ for some alphabet $\Sigma$, then a semiautomaton $G$ over $M$ according to the definition given above is not necessarily a semiautomaton over $\Sigma$ under the standard definition of a semiautomaton, since labels of the edges are words over $\Sigma$, not elements of $\Sigma$.  However, $G$ can be ``transformed'' into a ``standard'' semiautomaton (over $\Sigma$).
+
+\textbf{Definition}.  Let $A$ be a finite automaton over a monoid $M$.  An element in $M$ is said to be \emph{accepted by} $A$ if it is the label of a path that begins at an initial node and end at a final node.  The set of all elements of $M$ accepted by $A$ is denoted by $L(A)$.
+
+The following is a generalization of Kleene's theorem.
+
+\begin{thm}.  A subset $R$ of a monoid $M$ is a rational set iff $R=L(A)$ for some finite automaton $A$ over $M$. \end{thm}
+
+\begin{thebibliography}{8}
+\bibitem{se} S. Eilenberg, {\em Automata, Languages, and Machines, Vol. A}, Academic Press (1974).
+\end{thebibliography}
+%%%%%
+%%%%%
+\end{document}

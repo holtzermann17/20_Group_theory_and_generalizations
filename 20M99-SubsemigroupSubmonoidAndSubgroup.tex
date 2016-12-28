@@ -1,0 +1,64 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{SubsemigroupSubmonoidAndSubgroup}
+\pmcreated{2013-03-22 13:02:03}
+\pmmodified{2013-03-22 13:02:03}
+\pmowner{mclase}{549}
+\pmmodifier{mclase}{549}
+\pmtitle{subsemigroup,, submonoid,, and subgroup}
+\pmrecord{5}{33434}
+\pmprivacy{1}
+\pmauthor{mclase}{549}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{20M99}
+\pmrelated{Semigroup}
+\pmrelated{Subgroup}
+\pmdefines{subsemigroup}
+\pmdefines{submonoid}
+\pmdefines{subgroup}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\begin{document}
+Let $S$ be a semigroup, and let $T$ be a subset of $S$.
+
+$T$ is a \emph{subsemigroup} of $S$ if $T$ is closed under the operation of $S$; that it if $xy \in T$ for all $x, y \in T$.
+
+$T$ is a \emph{submonoid} of $S$ if $T$ is a subsemigroup, and $T$ has an identity element.
+
+$T$ is a \emph{subgroup} of $S$ if $T$ is a submonoid which is a group.
+
+Note that submonoids and subgroups do not have to have the same identity element as $S$ itself (indeed, $S$ may not have an identity element).  The identity element may be any idempotent element of $S$.
+
+Let $e \in S$ be an idempotent element.  Then there is a maximal subsemigroup of $S$ for which $e$ is the identity:
+$$eSe = \{ exe \mid x \in S \}.$$
+In addition, there is a maximal subgroup for which $e$ is the identity:
+$$\mathcal{U}(eSe) = \{x \in eSe \mid \exists y \in eSe \;\text{st}\; xy=yx=e \}.$$
+
+Subgroups with different identity elements are disjoint.  To see this, suppose that $G$ and $H$ are subgroups of a semigroup $S$ with identity elements $e$ and $f$ respectively, and suppose $x \in G \cap H$.
+Then $x$ has an inverse $y \in G$, and an inverse $z \in H$.  We have:
+$$e = xy = fxy = fe = zxe = zx = f.$$
+Thus intersecting subgroups have the same identity element.
+%%%%%
+%%%%%
+\end{document}

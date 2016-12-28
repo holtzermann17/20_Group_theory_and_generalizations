@@ -1,0 +1,58 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{TriangleGroups}
+\pmcreated{2013-03-22 14:25:07}
+\pmmodified{2013-03-22 14:25:07}
+\pmowner{rmilson}{146}
+\pmmodifier{rmilson}{146}
+\pmtitle{triangle groups}
+\pmrecord{10}{35925}
+\pmprivacy{1}
+\pmauthor{rmilson}{146}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{20F05}
+\pmrelated{ExamplesOfGroups}
+\pmdefines{von Dyck groups}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\begin{document}
+Consider the following group presentation:
+$$\Delta(l,m,n)=\langle a,b,c:a^2,b^2,c^2,(ab)^l,(bc)^n,(ca)^m\rangle$$
+where $l,m,n\in\mathbb{N}$.
+
+A group with this presentation corresponds to a triangle; roughly, the generators are reflections in its sides and its angles are $\pi/l,\pi/m,\pi/n$.
+
+Denote by $D(l,m,n)$ the subgroup of \PMlinkname{index}{Coset} 2 in $\Delta(l,m,n)$, corresponding to preservation of \PMlinkescapetext{orientation} of the triangle.
+
+The $D(l,m,n)$ are defined by the following presentation:
+$$D(l,m,n)=\langle x,y:x^l,y^m,(xy)^n\rangle$$
+
+Note that $D(l,m,n)\cong D(m,l,n)\cong D(n,m,l)$, so $D(l,m,n)$ is \PMlinkescapetext{independent of the order} of the $l,m,n$.
+
+Arising from the geometrical nature of these groups, $$1/l+1/m+1/n>1$$is called the \emph{spherical case},$$1/l+1/m+1/n=1$$is called the \emph{Euclidean case}, and$$1/l+1/m+1/n<1$$is called the \emph{hyperbolic case}
+
+Groups either of the form $\Delta(l,m,n)$ or $D(l,m,n)$ are referred to as \emph{triangle groups}; groups of the form $D(l,m,n)$ are sometimes refered to as \emph{von Dyck groups}.
+%%%%%
+%%%%%
+\end{document}

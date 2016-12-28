@@ -1,0 +1,156 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ARepresentationWhichIsNotCompletelyReducible}
+\pmcreated{2013-03-22 13:31:47}
+\pmmodified{2013-03-22 13:31:47}
+\pmowner{bwebste}{988}
+\pmmodifier{bwebste}{988}
+\pmtitle{a representation which is not completely reducible}
+\pmrecord{5}{34122}
+\pmprivacy{1}
+\pmauthor{bwebste}{988}
+\pmtype{Example}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{20C15}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\newtheorem{thm}{Theorem}
+\newtheorem{prop}{Proposition}
+
+\newcommand{\ab}[1]{{#1}_{\mathrm{ab}}}
+\newcommand{\Ad}{\mathrm{Ad}}
+\newcommand{\ad}{\mathrm{ad}}
+\newcommand{\Aut}{\mathrm{Aut}\,}
+\newcommand{\Aff}[2]{\mathrm{Aff}_{#1} #2}
+\newcommand{\aff}[2]{\mathfrak{aff}_{#1} #2}
+\newcommand{\mcB}{\mathcal{B}}
+\newcommand{\bb}[1]{\mathbb{#1}}
+\newcommand{\bfrac}[2]{\left[\frac{#1}{#2}\\right]}
+\newcommand{\bkh}{\backslash}
+\newcommand{\Cyc}[2]{\mathcal{C}^{#1}_{#2}}
+\newcommand{\Cbar}[2]{\overline{\C{#1}{#2}}}
+%\newcommand{\CD}{\R[\Delta]}
+\newcommand{\C}{\mathbb{C}}
+\newcommand{\CF}[2]{\ensuremath{\mathfrak{C}(#1,#2)}}
+\newcommand{\Cinf}{\EuScript{C}^{\infty}}
+\newcommand{\cmp}{cyclic mod $p$\xspace}
+\newcommand{\cp}{\mathrm{c.p.}}
+\newcommand{\CS}{\EuScript{CS}}
+\newcommand{\deck}{\EuScript{D}}
+\newcommand{\defl}[1]{\mathfrak{def}_{#1}}
+\newcommand{\Der}{\mathrm{Der}\,}
+\newcommand{\eH}{[X_H]-[Y_H]}
+\newcommand{\EL}{\mathcal{EL}}
+\newcommand{\End}{\mathrm{End}}
+\newcommand{\ES}[1]{\EuScript{#1}}
+\newcommand{\Ext}{\mathrm{Ext}}
+\newcommand{\Fix}{\mathrm{Fix}}
+\newcommand{\fr}[1]{\mathfrak{#1}}
+\newcommand{\Frat}{\mathrm{Frat}\,}
+\newcommand{\Gal}[1]{\Gamma(#1 |\Q)}
+\newcommand{\GL}[2]{\mathrm{GL}_{#1} #2}
+\newcommand{\gl}[2]{\mathfrak{gl}_{#1} #2}
+\newcommand{\GrR}[1]{a(#1 G)}
+\newcommand{\Gr}{\mathrm{Gr}\,}
+\newcommand{\mcH}{\mathcal{H}}
+\renewcommand{\H}{\mathbb{H}}
+\newcommand{\Hom}[2]{\mathrm{Hom}(#1,#2)}
+\newcommand{\id}{\mathrm{id}}
+\newcommand{\im}{\mathrm{im}}
+\newcommand{\ind}[2]{\mathrm{ind}^{#1}_{#2}}
+\newcommand{\indp}[2]{\mathfrak{ind}^{#1}_{#2}}
+\renewcommand{\inf}[1]{\mathfrak{inf}_{#1}}
+\newcommand{\inn}[1]{\langle #1\rangle}
+\renewcommand{\int}{\mathrm{int}}
+\newcommand{\Iso}{\mathrm{Iso}}
+\newcommand{\K}{\mathcal{K}}
+\renewcommand{\ker}{\mathrm{ker}\,}
+\renewcommand{\L}[1]{\mathfrak{L}(#1)}
+\newcommand{\lap}[1]{\Delta_{#1}}
+\newcommand{\lapM}{\Delta_M}
+\newcommand{\Lie}{\mathrm{Lie}}
+\newcommand{\lineq}{linearly equivalent\xspace}
+\newcommand{\mc}[1]{\mathcal{#1}}
+\newcommand{\mG}{m_G}
+\newcommand{\mK}{m_{\K}}
+\newcommand{\mindeg}[1]{\fr{md}(#1)}
+\newcommand{\N}{\mathbb{N}}
+\renewcommand{\O}{\mathcal{O}}
+\newcommand{\Om}{\Omega}
+\newcommand{\om}{\omega}
+\newcommand{\Orb}{\mathrm{Orb}}
+\newcommand{\pad}{\hat{\Z}_p}
+\newcommand{\pder}[2]{\frac{\partial #1}{\partial #2}}
+\newcommand{\pderw}[1]{\frac{\partial}{\partial #1}}
+\newcommand{\pdersec}[2]{\frac{\partial^2 #1}{\partial {#2}^2}} 
+\newcommand{\perm}[1]{\pi_{#1}}
+\newcommand{\Q}{\mathbb{Q}}
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\rad}{\mathrm{rad}\,}
+\newcommand{\res}[2]{\mathrm{res}^{#1}_{#2}}
+\newcommand{\resp}[2]{\mathfrak{res}^{#1}_{#2}}
+\newcommand{\RG}{\EuScript{R}_G}
+\newcommand{\rk}{\mathrm{rk}\,}
+\newcommand{\V}[1]{\mathbf{#1}}
+\newcommand{\vp}{\varphi}
+\newcommand{\Stab}{\mathrm{Stab}}
+\newcommand{\SL}[2]{\mathrm{SL}_{#1} #2}
+\renewcommand{\sl}[2]{\fr{sl}_{#1} #2}
+\newcommand{\SO}[2]{\mathrm{SO}_{#1} #2}
+\newcommand{\so}[2]{\fr{so}_{#1} #2}
+\newcommand{\Sp}[2]{\mathrm{Sp}_{#1} #2}
+\renewcommand{\sp}[2]{\fr{sp}_{#1} #2}
+\newcommand{\SU}[1]{\mathrm{SU}( #1)}
+\newcommand{\su}[1]{\fr{su}_{#1}}
+\newcommand{\Sym}{\mathrm{Sym}}
+\newcommand{\sym}{\mathrm{sym}}
+\newcommand{\Tg}{\mc{T}(\fr g)}
+\newcommand{\tom}{\tilde{\omega}}
+\newcommand{\ghtghp}{\fr g/\fr h\oplus(\fr g/\fr h^\perp)^*}
+\newcommand{\ghps}{(\fr g/\fr h^\perp)^*}
+\newcommand{\Tr}{\mathrm{Tr}}
+\newcommand{\tr}{\mathrm{tr}}
+%\renewcommand{\thechapter}{\Roman{chapter}}
+%\renewcommand{\thesection}{\thechapter.\arabic{section}}
+%\renewcommand{\thethm}{\thechapter.\arabic{thm}}
+\newcommand{\Ug}{\mc{U}(\fr g)}
+\newcommand{\Uh}{\mc{U}(\fr h)}
+\renewcommand{\V}[1]{\mathbf{#1}}
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\Zp}{\Z/p}
+\begin{document}
+If $G$ is a finite group, and $k$ is a field whose characteristic does divide the order of the group, then Maschke's theorem fails.  For example let $V$ be the regular representation of $G$, which can be thought of as functions from $G$ to $k$, with the $G$ action $g\cdot\vp(g')=\vp(g^{-1}g')$.  Then this representation is not completely reducible.
+
+There is an obvious trivial subrepresentation $W$ of $V$, consisting of the constant functions.  I claim that there is no complementary invariant subspace to this one.  If $W'$ is such a subspace, then there is a homomorphism $\vp:V\to V/W'\cong k$.  Now consider the characteristic function of the identity $e\in G$ 
+$$
+\delta_e(g)=\begin{cases} 1 & g=e\\
+0 & g\neq e\end{cases}
+$$
+and $\ell=\vp(\delta_e)$ in $V/W'$.  This is not zero since $\delta$ generates the representation $V$.  By $G$-equivarience, $\vp(\delta_g)=\ell$ for all $g\in G$.  Since $$\eta=\sum_{g\in G}\eta(g)\delta_g$$ for all $\eta\in V$,
+$$W'=\vp(\eta)=\ell\left(\sum_{g\in G}\eta(g)\right).$$  Thus, 
+$$\ker\vp=\{\eta\in V|\sum_{\in G}\eta(g)=0\}.$$  But since the characteristic of the field $k$ divides the order of $G$, $W\leq W'$, and thus could not possibly be complementary to it.
+
+For example, if $G=C_2=\{e,f\}$ then the invariant subspace of $V$ is spanned by $e+f$.  For characteristics other than $2$, $e-f$ spans a complementary subspace, but over characteristic 2, these elements are the same.
+%%%%%
+%%%%%
+\end{document}

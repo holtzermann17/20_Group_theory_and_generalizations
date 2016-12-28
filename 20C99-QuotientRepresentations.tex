@@ -1,0 +1,54 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{QuotientRepresentations}
+\pmcreated{2013-03-22 16:37:59}
+\pmmodified{2013-03-22 16:37:59}
+\pmowner{rm50}{10146}
+\pmmodifier{rm50}{10146}
+\pmtitle{quotient representations}
+\pmrecord{6}{38834}
+\pmprivacy{1}
+\pmauthor{rm50}{10146}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{20C99}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\newtheorem{defn}{Definition}
+\begin{document}
+\PMlinkescapeword{stable}
+We assume that all representations ($G$-modules) are finite-dimensional.
+
+\begin{defn} If $N_1$ and $N_2$ are $G$-modules over a field $k$ (i.e. representations of $G$ in $N_1$ and $N_2$), then a map $\varphi:N_1\to N_2$ is a \emph{$G$-map} if $\varphi$ is $k$-linear and preserves the $G$-action, i.e. if 
+\[\varphi(\sigma \cdot x)=\sigma\cdot \varphi(x)\] 
+\end{defn}
+
+$G$-maps have subrepresentations, also called $G$-submodules, as their kernel and image. To see this, let $\varphi:N_1\to N_2$ be a $G$-map; let $M_1\subset N_1$ and $M_2\subset N_2$ be the kernel and image respectively of $\varphi$. $M_1$ is a submodule of $N_1$ if it is stable under the action of $G$, but
+\[x\in M_1\Rightarrow \varphi(\sigma\cdot x)=\sigma\cdot\varphi(x)=0\Rightarrow \sigma\cdot x\in M_1\]
+$M_2$ is a submodule of $N_2$ if it is stable under the action of $G$, but
+\[y=\varphi(x)\in M_2\Rightarrow \sigma\cdot y=\sigma\cdot \varphi(x)=\varphi(\sigma\cdot x)\Rightarrow \sigma\cdot y\in M_2\]
+
+Finally, we define the intuitive concept of a quotient $G$-module. Suppose $N'\subset N$ is a $G$-submodule. Then $N/N'$ is a finite-dimensional vector space. We can define an action of $G$ on $N/N'$ via $\sigma(n+N')=\sigma(n)+\sigma(N')=\sigma(n)+N'$, so that $n+N'$ is well-defined under the action and $N/N'$ is a $G$-module.
+%%%%%
+%%%%%
+\end{document}

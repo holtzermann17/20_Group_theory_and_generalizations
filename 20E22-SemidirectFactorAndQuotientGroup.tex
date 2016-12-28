@@ -1,0 +1,61 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{SemidirectFactorAndQuotientGroup}
+\pmcreated{2013-03-22 15:10:22}
+\pmmodified{2013-03-22 15:10:22}
+\pmowner{yark}{2760}
+\pmmodifier{yark}{2760}
+\pmtitle{semi-direct factor and quotient group}
+\pmrecord{8}{36924}
+\pmprivacy{1}
+\pmauthor{yark}{2760}
+\pmtype{Theorem}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{20E22}
+
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amsthm}
+
+\theoremstyle{definition}
+\newtheorem*{thmplain}{Theorem}
+\begin{document}
+\begin{thmplain}
+If the group $G$ is a semi-direct product of its subgroups $H$ and $Q$,
+then the semi-direct \PMlinkescapetext{factor} $Q$
+is isomorphic to the quotient group $G/H$.
+\end{thmplain}
+
+{\em Proof.} Every element $g$ of $G$ has the unique representation $g = hq$
+with $h\in H$ and $q\in Q$.
+We therefore can define the mapping
+\[
+  g\mapsto q
+\]
+from $G$ to $Q$.
+The mapping is surjective since any element $y$ of $Q$ is the image of $ey$.
+The mapping is also a homomorphism since if $g_1 = h_1q_1$ and $g_2 = h_2q_2$, then we obtain
+\[
+  f(g_1g_2) = f(h_1q_1h_2q_2) = f(h_1h_2q_1q_2) = q_1q_2 = f(g_1)f(g_2).
+\]
+Then we see that $\ker{f} = H$ because all elements $h = he$ of $H$
+are mapped to the identity element $e$ of $Q$.
+Consequently we get, according to the  first isomorphism theorem, the result
+\[
+  G/H \cong Q.
+\]
+
+\textbf{Example.}
+The multiplicative group $\mathbb{R}^{\times}$ of reals
+is the semi-direct product of the subgroups
+$\{1,\,-1\} = \{\pm1\}$ and $\mathbb{R}_+$.
+The quotient group $\mathbb{R}^{\times}/\{\pm1\}$ consists of all cosets
+\[
+  x\{\pm1\} = \{x,\,-x\}
+\]
+where $x\neq 0$, and is obviously isomorphic with
+$\mathbb{R}_+ = \{x\mid x > 0\}$.
+%%%%%
+%%%%%
+\end{document}

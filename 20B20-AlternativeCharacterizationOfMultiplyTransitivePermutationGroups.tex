@@ -1,0 +1,61 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{AlternativeCharacterizationOfMultiplyTransitivePermutationGroups}
+\pmcreated{2013-03-22 17:21:47}
+\pmmodified{2013-03-22 17:21:47}
+\pmowner{rm50}{10146}
+\pmmodifier{rm50}{10146}
+\pmtitle{alternative characterization of multiply transitive permutation groups}
+\pmrecord{4}{39723}
+\pmprivacy{1}
+\pmauthor{rm50}{10146}
+\pmtype{Derivation}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{20B20}
+\pmdefines{doubly transitive}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\newtheorem*{thm}{Theorem}
+\begin{document}
+This article derives an alternative characterization of $n$-transitive groups.
+
+\begin{thm} For $n>1$, $G$ is $n$-transitive on $X$ if and only if for all $x\in X$, $G_x$ is $(n-1)$-transitive on $X-\{x\}$.
+\end{thm}
+\begin{proof}
+First assume $G$ is $n$-transitive on $X$, and choose $x\in X$. To show $G_x$ is $(n-1)$-transitive on $X-\{x\}$, choose $x_1,\ldots,x_{n-1},y_1,\ldots,y_{n-1}\in X$. Since $G$ is $n$-transitive on $X$, we can choose $\sigma\in G$ such that
+\[\sigma\cdot(x_1,\ldots,x_{n-1},x)=(y_1,\ldots,y_{n-1},x)\]
+But obviously $\sigma\in G_x$, and $\sigma$ restricted to $X-\{x\}$ is the desired permutation.
+
+To prove the converse, choose $x_1,\ldots,x_n,y_1,\ldots,y_n\in X$. Choose $\sigma_1\in G_{x_n}$ such that
+\[\sigma_1\cdot(x_1,\ldots,x_{n-1})=(y_1,\ldots,y_{n-1})\]
+and choose $\sigma_2\in G_{y_1}$ such that
+\[\sigma_2\cdot(y_2,\ldots,y_{n-1},x_n)=(y_2,\ldots,y_{n-1},y_n)\]
+Then $\sigma_2\sigma_1$ is the desired permutation.
+\end{proof}
+
+Note that this definition of $n$-transitivity affords a straightforward proof of the statement that $A_n$ is $(n-2)$-transitive: by inspection, $A_3$ is $1$-transitive; the result follows by induction using the theorem. (The corresponding statement that $S_n$ is $n$-transitive is obvious).
+
+Finally, note that the most common cases of $n$-transitivity are for $n=1$ (\emph{transitive}), and $n=2$ (\emph{doubly transitive}).
+%%%%%
+%%%%%
+\end{document}

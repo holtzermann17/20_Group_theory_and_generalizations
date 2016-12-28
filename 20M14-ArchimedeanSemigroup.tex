@@ -1,0 +1,48 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ArchimedeanSemigroup}
+\pmcreated{2013-03-22 13:08:06}
+\pmmodified{2013-03-22 13:08:06}
+\pmowner{mclase}{549}
+\pmmodifier{mclase}{549}
+\pmtitle{Archimedean semigroup}
+\pmrecord{4}{33572}
+\pmprivacy{1}
+\pmauthor{mclase}{549}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{20M14}
+\pmrelated{ArchimedeanProperty}
+\pmdefines{divides}
+\pmdefines{Archimedean}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\begin{document}
+Let $S$ be a commutative semigroup.  We say an element $x$ \emph{divides} an element $y$, written $x \mid y$, if there is an element $z$ such that $xz = y$.
+
+An \emph{Archimedean semigroup} $S$ is a commutative semigroup with the property that for all $x, y \in S$ there is a natural number $n$ such that $x \mid y^n$.
+
+This is related to the Archimedean property of positive real numbers $\mathbb{R}^+$: if $x, y > 0$ then there is a natural number $n$ such that $x < ny$.  Except that the notation is additive rather than multiplicative, this is the same as saying that $(\mathbb{R}^+, +)$ is an Archimedean semigroup.
+%%%%%
+%%%%%
+\end{document}

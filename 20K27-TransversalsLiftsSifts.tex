@@ -1,0 +1,190 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{TransversalsLiftsSifts}
+\pmcreated{2013-03-22 15:53:52}
+\pmmodified{2013-03-22 15:53:52}
+\pmowner{Algeboy}{12884}
+\pmmodifier{Algeboy}{12884}
+\pmtitle{transversals / lifts / sifts}
+\pmrecord{11}{37900}
+\pmprivacy{1}
+\pmauthor{Algeboy}{12884}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{20K27}
+%\pmkeywords{transversal}
+%\pmkeywords{lift}
+%\pmkeywords{sift}
+\pmrelated{SchreiersLemma}
+\pmrelated{ExampleOfSchreiersLemma}
+\pmdefines{transversal}
+\pmdefines{lift}
+\pmdefines{sift}
+
+\usepackage{latexsym}
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amsthm}
+
+%%\usepackage{xypic}
+
+%-----------------------------------------------------
+
+%       Standard theoremlike environments.
+
+%       Stolen directly from AMSLaTeX sample
+
+%-----------------------------------------------------
+
+%% \theoremstyle{plain} %% This is the default
+
+\newtheorem{thm}{Theorem}
+
+\newtheorem{coro}[thm]{Corollary}
+
+\newtheorem{lem}[thm]{Lemma}
+
+\newtheorem{lemma}[thm]{Lemma}
+
+\newtheorem{prop}[thm]{Proposition}
+
+\newtheorem{conjecture}[thm]{Conjecture}
+
+\newtheorem{conj}[thm]{Conjecture}
+
+\newtheorem{defn}[thm]{Definition}
+
+\newtheorem{remark}[thm]{Remark}
+
+\newtheorem{ex}[thm]{Example}
+
+
+
+%\countstyle[equation]{thm}
+
+
+
+%--------------------------------------------------
+
+%       Item references.
+
+%--------------------------------------------------
+
+
+\newcommand{\exref}[1]{Example-\ref{#1}}
+
+\newcommand{\thmref}[1]{Theorem-\ref{#1}}
+
+\newcommand{\defref}[1]{Definition-\ref{#1}}
+
+\newcommand{\eqnref}[1]{(\ref{#1})}
+
+\newcommand{\secref}[1]{Section-\ref{#1}}
+
+\newcommand{\lemref}[1]{Lemma-\ref{#1}}
+
+\newcommand{\propref}[1]{Prop\-o\-si\-tion-\ref{#1}}
+
+\newcommand{\corref}[1]{Cor\-ol\-lary-\ref{#1}}
+
+\newcommand{\figref}[1]{Fig\-ure-\ref{#1}}
+
+\newcommand{\conjref}[1]{Conjecture-\ref{#1}}
+
+
+% Normal subgroup or equal.
+
+\providecommand{\normaleq}{\unlhd}
+
+% Normal subgroup.
+
+\providecommand{\normal}{\lhd}
+
+\providecommand{\rnormal}{\rhd}
+% Divides, does not divide.
+
+\providecommand{\divides}{\mid}
+
+\providecommand{\ndivides}{\nmid}
+
+
+\providecommand{\union}{\cup}
+
+\providecommand{\bigunion}{\bigcup}
+
+\providecommand{\intersect}{\cap}
+
+\providecommand{\bigintersect}{\bigcap}
+
+
+
+
+
+
+
+
+
+
+\begin{document}
+\begin{defn}
+Given a group $G$ and a subgroup $H$ of $G$, a \emph{transversal} of $H$ in $G$
+is a subset $T\subseteq G$ such that for every $g\in G$ there exists a unique
+$t\in T$ such that $Hg=Ht$.
+\end{defn}
+
+Typically one insists $1\in T$ so that the coset $H$ is described uniquely
+by $H1$.  However no standard terminology has emerged for transversals of this sort.  
+
+An alternative definition for a transversal is to use functions and homomorphisms in a method more conducive to a categorical setting.  Here one replaces the notion of a transversal as a subset of $G$ and instead treats it as a certain type of map $T:G/H\rightarrow G$.  Since $H$ is generally not normal in $G$, $G/H$ simply means the set of cosets, and $T$ is therefore a function not a homomorphism.  We only require that $T$ satisfy the following property:  Given the canonical projection map $\pi:G\rightarrow G/H$ given by $g\mapsto Hg$ (this is generally not a homomorphism either, and so both $\pi$ and $T$ are simply functions between sets) then $\pi T=1_{G/H}$.  It follows immediately that the image of $T$ in $G$ is a transversal in the original sense of the term.
+
+\begin{remark}
+Because it is customary in group theory to write actions to the right of elements many times it is preferable to write $T\pi=1_{G/H}$ to match the right side notation.
+\end{remark}
+
+When $H$ is a normal subgroup of $G$ our terminology adjusts from transversals to \emph{lifts}.
+
+\begin{defn}
+Given a group $G$ and a homomorphism $\pi:G\rightarrow Q$, a \emph{lift} of $Q$ to $G$ is a function $f:Q\rightarrow G$ such that $\pi f=1_Q$.
+\end{defn}
+
+It follows that $\pi$ must be an epimorphism if it has a lift.  Once again it is nearly always requested that $f(1)=1$ but this restriction is generally not part of the definition.
+
+Because both lifts and transversals are injective mappings it is common to use the word lift/transversal for the image and the map with the context of the use providing any necessary clarification.
+
+\begin{defn}
+Given a group $G$ and a homomorphism $\pi:G\rightarrow Q$, a \emph{splitting map} of $Q$ to $G$ is a \emph{homomorphism} $f:Q\rightarrow G$ such that $\pi f=1_Q$.
+\end{defn}
+
+So we see a gradual progression in the definitions:  We always have a group $G$ and a set $Q$, and the maps $\pi:G\rightarrow Q$, $f:Q\rightarrow G$ satisfying
+\[ \pi f=1_{Q}.\]
+It follows, $f$ is injective and $\pi$ is surjective.
+\begin{itemize}
+\item $f$ is a transversal if $Q=G/H$ for some subgroup $H$. Here
+$\pi$ and $f$ are simply functions.
+\item $f$ is a lift if $Q$ is a group.  Here $\pi$ is a homomorphism and
+$f$ a function.
+\item $f$ is a splitting map if $Q$ is group and both $\pi$ and $f$ are
+homomorphisms.
+\end{itemize}
+
+Finally we arrive at a stronger requirement for transversals and lifts which makes greater use of the group structure involved.
+
+\begin{defn}
+Given a group $G=\langle S\rangle$, there is a natural map
+$\pi:F(S)\rightarrow G$ from the free group on $S$ onto $G$.  A \emph{lift}
+is a map $l:G\rightarrow F(S)$ such that $\pi l =1_G$.  Furthermore a
+\emph{sift} is a lift $s:G\rightarrow F(S)$ with the added condition that
+$sg=g$ for all $g\in S$.
+\end{defn}
+
+Although a general sift is no more than a map that writes the 
+elements of $G$ as reduced words in $S$, in many cases the sifts
+have the added property of providing the words in a canonical form.
+This occurs when $G=T_0\cdots T_{n-1}$ where $T_i$ is a transversal
+of $G^i/G^{i+1}$.  In such a case every element in $G$ has a unique 
+decomposition as a word $t_0t_1\cdots t_{n-1}$ for unique $t_i\in T_i$.
+
+%%%%%
+%%%%%
+\end{document}

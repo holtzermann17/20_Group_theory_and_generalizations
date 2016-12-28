@@ -1,0 +1,139 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ProofOfScottWiegoldConjecture}
+\pmcreated{2013-03-22 18:30:31}
+\pmmodified{2013-03-22 18:30:31}
+\pmowner{whm22}{2009}
+\pmmodifier{whm22}{2009}
+\pmtitle{proof of Scott-Wiegold conjecture}
+\pmrecord{5}{41193}
+\pmprivacy{1}
+\pmauthor{whm22}{2009}
+\pmtype{Proof}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{20E06}
+%\pmkeywords{spin}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\begin{document}
+Suppose the conjecture were false.  Then we have some $w\in C_p *
+C_q * C_r$ with $N(w)= C_p * C_q * C_r$.  Let $a$, $b$, $c$ denote
+the \PMlinkescapetext{projections} of $w$ onto $C_p$, $C_q$, $C_r$ respectively. Then
+$a$, $b$, $c$ are all non-trivial as otherwise $N(w)$ would be
+contained in the kernel of one of the \PMlinkescapetext{projections}.
+
+For $0^\circ < \theta <360^\circ$ we say that a spin through
+$\theta$ consists of a unit vector, $\vec{u} \in \mathbb{R}^3$ together with the
+rotation of $\mathbb{R}^3$ through the angle $\theta$ anticlockwise about $\vec{u}$.
+In \PMlinkescapetext{addition} we have a single spin through the angle $0^\circ$ and
+a single spin through $360^\circ$.  Thus the set of spins
+(usually denoted Spin(3)) naturally has the topology of a
+3-sphere.
+
+
+The spin through $\theta$ about a unit vector $\vec{u}$ has the
+same underlying rotation as the spin through $360^\circ-\theta$
+about $-\vec{u}$.  Hence there are precisely two spins
+corresponding to each rotation of $\mathbb{R}^3$ about the origin.
+
+\PMlinkescapetext{Multiplication} is well defined on spins as you can compose the
+underlying rotations and continuity determines which of the two
+spins is the correct result.  For example a $350^\circ$ spin about
+$\vec{u}$ composed with a $20^\circ$ spin about $\vec{u}$ is a
+$350^\circ$ spin about $-\vec{u}$ (not a $10^\circ$ spin about
+$\vec{u}$ which would be at the other end of the 3-sphere).
+
+
+Let $\vec{n}$ denote the unit vector $(0,0,1)$.  Fix an arc, $I$,
+on the unit sphere connecting $\vec{n}$ and $-\vec{n}$.  Let
+$\vec{t}$ be a vector on this arc. Let $\vec{u}$ be an arbitrary
+unit vector.  We may define a homomorphism
+$\phi_{\vec{t},\vec{u}}\colon  F_{\{a,b,c\}} \to {\rm Spin}(3)$
+by:
+
+\noindent$\phi_{\vec{t},\vec{u}}\colon a \mapsto$ the spin through
+$(\frac{p-1}{2}) \frac{360^\circ}{p}$ (or $180^\circ$ if $p=2$)
+about $\vec{n}$
+
+
+\noindent $\phi_{\vec{t},\vec{u}}\colon b \mapsto$ the spin
+through $(\frac{q-1}{2}) \frac{360^\circ}{q}$ (or $180^\circ$ if
+$q=2$) about $\vec{t}$
+
+\noindent $\phi_{\vec{t},\vec{u}}\colon c \mapsto$ the spin
+through $(\frac{r-1}{2}) \frac{360^\circ}{r}$ (or $180^\circ$ if
+$r=2$) about $\vec{u}$
+
+(Here $F_{\{a,b,c\}}$ denotes the free group on $a,b,c$).
+
+
+So $\phi_{\vec{t},\vec{u}}(a)$, $\phi_{\vec{t},\vec{u}}(b)$ and
+$\phi_{\vec{t},\vec{u}}(c)$ are spins of between $120^\circ$ and
+$180^\circ$, all having non-trivial underlying rotations.  
+
+Let $\tilde{w}$ be a word in $F_{\{a,b,c\}}$ representing $w$, such that $a,b,c$ occur in it $1$ Mod $(2p)$ times, $1$ Mod $2q$ times and $1$ Mod $(2r)$ times, respectively.  
+
+We have a homomorphism $\phi':C_p*C_q*C_r \to SO(3)$ induced by $\phi$.  If
+$\phi_{\vec{t},\vec{u}}(\tilde{w})$ has a trivial underlying rotation for
+some $\vec{t}$ and $\vec{u}$, then $N(w)$ will only contain
+elements in the kernel of $\phi'$. In particular, we would have $a, b, c \notin N(w)$.  So
+we may assume we have a map:
+
+
+$$h\colon I \times S^2 \to S^2$$
+
+\noindent which maps $(\vec{t}, \vec{u})$ to the unit vector corresponding to
+$\phi_{\vec{t},\vec{u}}(\tilde{w})$.
+
+By \PMlinkescapetext{symmetry} we have $h(\vec{n}, R\vec{u}) = Rh(\vec{n},\vec{u})$
+for any rotation $R$ about $\vec{n}$.  Thus $h(\vec{n}, \_ )\colon
+S^2 \to S^2$ maps latitudes to latitudes (possibly rotating them
+and / or moving them up or down).
+
+
+
+Also $h(\vec{n},\vec{n}) = -\vec{n}$, as
+$\phi_{\vec{n},\vec{n}}(a)$, $\phi_{\vec{n},\vec{n}}(b)$ and
+$\phi_{\vec{n},\vec{n}}(c)$ are spins of between $120^\circ$ and
+$180^\circ$ anticlockwise about $\vec{n}$, so the sum of the
+angles will be greater than $360^\circ$.  Similarly one may
+\PMlinkescapetext{calculate} that $h(\vec{n},-\vec{n}) = \vec{n}$. Thus, as $h(n,
+\_)$ maps latitudes to latitudes, it must be homotopic to a
+reflection of $S^2$.
+
+Again by \PMlinkescapetext{symmetry} we have $h(-\vec{n}, R\vec{u}) =
+Rh(-\vec{n},\vec{u})$ for all rotations $R$ about $\vec{n}$.
+Hence $h(-\vec{n}, \_)\colon S^2 \to S^2$ also maps latitudes to
+latitudes.
+
+Further, $h(-\vec{n},\vec{n}) = \vec{n}$ and $h(-\vec{n},-\vec{n})
+= -\vec{n}$.  Thus $h(-\vec{n}, \_)$ is homotopic to the \PMlinkescapetext{identity}.
+
+
+
+But $h$ gives a homotopy from $h(\vec{n}, \_)$ to $h(-\vec{n},
+\_)$, yielding the desired contradiction.
+%%%%%
+%%%%%
+\end{document}

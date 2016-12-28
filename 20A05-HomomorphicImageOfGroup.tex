@@ -1,0 +1,92 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{HomomorphicImageOfGroup}
+\pmcreated{2013-03-22 18:56:27}
+\pmmodified{2013-03-22 18:56:27}
+\pmowner{pahio}{2872}
+\pmmodifier{pahio}{2872}
+\pmtitle{homomorphic image of group}
+\pmrecord{14}{41796}
+\pmprivacy{1}
+\pmauthor{pahio}{2872}
+\pmtype{Theorem}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{20A05}
+\pmclassification{msc}{08A05}
+\pmrelated{GroupHomomorphism}
+\pmrelated{CorrespondenceBetweenNormalSubgroupsAndHomomorphicImages}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+ \usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\theoremstyle{definition}
+\newtheorem*{thmplain}{Theorem}
+
+\begin{document}
+\textbf{Theorem.}\, The homomorphic image of a group is a group.\, More detailed, if $f$ is a homomorphism from the group\, $(G,\,\ast)$\, to the groupoid \,$(\Gamma,\,\star)$,\, then the groupoid\, $(f(G),\,\star)$\, also is a group.\, Especially, the isomorphic image of a group is a group.\\
+
+\emph{Proof.}\, Let $\alpha,\,\beta,\,\gamma$ be arbitrary elements of the image $f(G)$ and $a,\,b,\,c$ some elements of $G$ such that\, $f(a) = \alpha,\, f(b) = \beta,\, f(c) = \gamma$.\, Then 
+$$\alpha \star \beta \;=\; f(a) \star f(b) \;=\; f(a \ast b) \;\in\; f(G),$$
+whence $f(G)$ is closed under ``$\star$'', and we, in fact, can speak of a groupoid\, $(f(G),\,\star)$.
+
+Secondly, we can calculate
+\begin{align*}
+(\alpha\star\beta)\star\gamma &\;=\; (f(a) \star f(b)) \star f(c)\\
+&\;=\; f(a \ast b) \star f(c)\\
+&\;=\; f((a \ast b) \ast c)\\
+&\;=\; f(a \ast(b \ast c))\\
+&\;=\; f(a) \star f(b \ast c)\\
+&\;=\; f(a) \star (f(b) \star f(c))\\
+&\;=\; \alpha \star (\beta \star \gamma),
+\end{align*}
+whence the associativity is in \PMlinkescapetext{force} in the groupoid $(f(G),\,\star)$.
+
+Let $e$ be the identity element of\, $(G,\,\ast)$\, and\, $f(e) = \varepsilon$.\, Then
+$$\varepsilon \star \alpha \;=\; f(e) \star f(a) \;=\; f(e \ast a) \;=\; f(a) \;=\; \alpha,$$
+$$\alpha \star \varepsilon \;=\; f(a) \star f(e) \;=\; f(a \ast e) \;=\; f(a) \;=\; \alpha,$$
+and therefore $\varepsilon$ is an identity element in $f(G)$.
+
+If\, $f(a^{-1}) = \alpha'$, then
+$$\alpha \star \alpha' \;=\; f(a) \star f(a^{-1}) \;=\; f(a \ast a^{-1}) \;=\; f(e) \;=\; \varepsilon,$$
+$$\alpha' \star \alpha \;=\; f(a^{-1}) \star f(a) \;=\; f(a^{-1} \ast a) \;=\; f(e) \;=\; \varepsilon.$$
+Thus any element $\alpha$ of $f(G)$ has in $f(G)$ an inverse.
+
+Accordingly,\, $(f(G),\, \star)$\, is a group.\\
+
+
+\textbf{Remark 1.}\, If\, $(G,\,\ast)$\, is Abelian, the same is true for\, $(f(G),\, \star)$.
+
+\textbf{Remark 2.}\, Analogically, one may prove that the homomorphic image of a ring is a ring.\\
+
+
+\textbf{Example.}\, If we define the mapping $f$ from the group\, $(\mathbb{Z},\,+)$\, to the groupoid\, 
+$(\mathbb{Z}_9,\,\cdot)$\, by
+$$f(n) \;:=\; \langle4\rangle^n,$$
+then $f$ is homomorphism:
+$$f(m\!+\!n) \;=\; \langle4\rangle^{m+n} \;=\; \langle4\rangle^m\langle4\rangle^n \;=\; f(m)f(n).$$
+The image $f(\mathbb{Z})$ consists of powers of the \PMlinkname{residue class}{Congruences} $\langle4\rangle$, which are
+$$\langle4\rangle,\;\; \langle16\rangle = \langle7\rangle,\;\; \langle64\rangle = \langle1\rangle.$$
+These apparently form the cyclic group of order 3.
+
+%%%%%
+%%%%%
+\end{document}

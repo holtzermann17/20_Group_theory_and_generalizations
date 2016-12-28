@@ -1,0 +1,79 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{CycleNotation}
+\pmcreated{2013-03-22 12:33:41}
+\pmmodified{2013-03-22 12:33:41}
+\pmowner{rmilson}{146}
+\pmmodifier{rmilson}{146}
+\pmtitle{cycle notation}
+\pmrecord{6}{32808}
+\pmprivacy{1}
+\pmauthor{rmilson}{146}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{20B05}
+\pmclassification{msc}{05A05}
+\pmrelated{Cycle2}
+\pmrelated{Permutation}
+\pmrelated{OneLineNotationForPermutations}
+
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+
+\newcommand{\reals}{\mathbb{R}}
+\newcommand{\natnums}{\mathbb{N}}
+\newcommand{\cnums}{\mathbb{C}}
+\newcommand{\znums}{\mathbb{Z}}
+
+\newcommand{\lp}{\left(}
+\newcommand{\rp}{\right)}
+\newcommand{\lb}{\left[}
+\newcommand{\rb}{\right]}
+
+\newcommand{\supth}{^{\text{th}}}
+
+
+\newtheorem{proposition}{Proposition}
+\begin{document}
+The cycle notation is a useful convention for writing down a
+permutations in terms of its constituent cycles.  Let $S$ be a finite
+set, and
+$$a_1,\ldots,a_k,\quad k\geq 2$$
+distinct elements of $S$.  The
+expression $(a_1,\ldots,a_k)$ denotes the cycle whose action is
+$$a_1\mapsto a_2\mapsto a_3\ldots a_k \mapsto a_1.$$
+Note there are $k$ different expressions for the same cycle; the
+following all represent the same cycle:
+$$(a_1,a_2,a_3,\ldots,a_k) = (a_2,a_3,\ldots,a_k,a_1),=\ldots =
+(a_k,a_1,a_2,\ldots,a_{k-1}).$$
+Also note that a 1-element cycle is
+the same thing as the identity permutation, and thus there is not
+much point in writing down such things.  Rather, it is customary to
+express the identity permutation simply as $()$ or $(1)$.
+
+Let $\pi$ be a permutation of $S$, and let 
+$$S_1,\ldots, S_k\subset S,\quad k\in\natnums$$
+be the orbits of $\pi$
+with more than 1 element.  For each $j=1,\ldots,k$ let $n_j$ denote
+the cardinality of $S_j$.  Also, choose an $a_{1,j}\in S_j$, and
+define
+$$a_{i+1,j} = \pi(a_{i,j}),\quad i\in\natnums.$$
+We can now express $\pi$ as a product of disjoint cycles, namely
+$$\pi = (a_{1,1},\ldots a_{n_1,1}) (a_{2,1},\ldots,a_{n_2,2}) \ldots
+(a_{k,1},\ldots,a_{n_k,k}).$$
+
+By way of illustration, here are the 24 elements of the symmetric
+group on $\{1,2,3,4\}$ expressed using the cycle notation, and grouped
+according to their conjugacy classes:
+\begin{align*}
+&(),\\
+&(12), \;(13),\; (14),\; (23),\; (24),\; (34)\\
+&(123),\; (213),\; (124),\; (214),\; (134),\; (143),\; (234),\;
+(243)\\
+&(12)(34),\;(13)(24),\; (14)(23)\\
+&(1234),\; (1243),\; (1324),\; (1342),\; (1423),\; (1432)
+\end{align*}
+%%%%%
+%%%%%
+\end{document}

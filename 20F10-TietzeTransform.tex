@@ -1,0 +1,71 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{TietzeTransform}
+\pmcreated{2013-03-22 15:42:40}
+\pmmodified{2013-03-22 15:42:40}
+\pmowner{rspuzio}{6075}
+\pmmodifier{rspuzio}{6075}
+\pmtitle{Tietze transform}
+\pmrecord{5}{37658}
+\pmprivacy{1}
+\pmauthor{rspuzio}{6075}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{20F10}
+\pmdefines{elementary Tietze transformation}
+\pmdefines{general Tietze transform}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\begin{document}
+\emph{Tietze transforms} are the following four transformations whereby one
+can transform a presentation of a group into another presentation of
+the same group:
+
+\begin{enumerate}
+\item If a relation $W=V$, where $W$ and $V$ are some word in the
+generators of the group, can be derived from the defining relations of
+a group, add $W=V$ to the list of relations.
+\item If a relation $W=V$ can be derived from the remaining
+generators, remove $W=V$ fronm the list of relations.
+\item If $W$ is a word in the generators and $W=x$, then add $x$ to
+the list of generators and $W=x$ to the list of relations.
+\item If a relation takes the form $W=x$, where $x$ is a generator and
+$W$ is a word in generators other than $x$, then remove $W=x$ from the
+list of relations, replace all occurences of $x$ in the remaining
+relations by $W$ and remove $x$ from the list of generators.
+\end{enumerate}
+
+Note that transforms 1 and 2 are inverse to each other and likewise 3
+and 4 are inverses.  More generally, the term ``Tietze transform''
+referes to a transform which can be expressed as the compositon of a
+finite number of the four transforms listed above.  By way of
+contrast, the term ``\emph{elementary Tietze transformation}'' is used
+to denote the four transformations given above and the term
+``\emph{general Tietze transform}'' could be used to indicate a member
+of the larger class.
+
+Tieze showed that any two presentations of the same finitely presented
+group differ by a general Tietze transform.
+%%%%%
+%%%%%
+\end{document}

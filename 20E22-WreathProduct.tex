@@ -1,0 +1,78 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{WreathProduct}
+\pmcreated{2014-12-30 11:23:20}
+\pmmodified{2014-12-30 11:23:20}
+\pmowner{mps}{409}
+\pmmodifier{juanman}{12619}
+\pmtitle{wreath product}
+\pmrecord{21}{33505}
+\pmprivacy{1}
+\pmauthor{mps}{12619}
+\pmtype{Definition}
+\pmcomment{not the meanig, offer an alternative}
+\pmclassification{msc}{20E22}
+\pmdefines{wreath product}
+
+\usepackage{amssymb, amsmath, amsthm, alltt, setspace}
+\newtheorem{thm}{Theorem}
+
+\theoremstyle{definition}
+\newtheorem*{defn}{Definition}
+\theoremstyle{definition}
+\newtheorem*{rem}{Remark}
+
+\theoremstyle{definition}
+\newtheorem*{nott}{Notation}
+
+\newtheorem{lemma}{Lemma}
+\newtheorem{cor}{Corollary}
+\newtheorem*{eg}{Example}
+\newtheorem*{ex}{Exercise}
+\newtheorem*{prop}{Proposition}
+
+
+\newcommand{\RR}{\mathbb{R}}
+\newcommand{\QQ}{\mathbb{Q}}
+\newcommand{\ZZ}{\mathbb{Z}}
+\newcommand{\NN}{\mathbb{N}}
+\newcommand{\leftbb}{[ \! [}
+\newcommand{\rightbb}{] \! ]}
+\newcommand{\bt}{\begin{thm}}
+\newcommand{\et}{\end{thm}}
+\newcommand{\Rel}{\mathbf{R}}
+\newcommand{\er}{\thicksim}
+\newcommand{\sqle}{\sqsubseteq}
+\newcommand{\floor}[1]{\lfloor{#1}\rfloor}
+\newcommand{\ceil}[1]{\lceil{#1}\rceil}
+\begin{document}
+\PMlinkescapeword{moment's}
+\PMlinkescapeword{pointwise}
+\PMlinkescapeword{permutation}
+Let $A$ and $B$ be groups, and let $B$ act on the set $\Gamma$.  
+Define the action of $B$ on the direct product $A^{\Gamma}$ by
+\[
+b f(\gamma) := f(b^{-1}\gamma),
+\]
+for any $f\in A^{\Gamma}$ and $\gamma\in\Gamma$.
+The \emph{wreath product} of $A$ and $B$ according to the action of $B$ on $\Gamma$, denoted $A\wr_{\Gamma} B$, is the semidirect product of groups $A^{\Gamma}\rtimes B$.
+
+Let us pause to unwind this definition.  The elements of $A\wr_{\Gamma}B$ are ordered pairs $(f,b)$, where $f\in A^{\Gamma}$ and $b\in B$.  The group operation is given by
+\[(f,b)(f',b') = (fbf', bb').\]
+Note that by definition of the action of $B$ on $A^{\Gamma}$,
+\[(fbf')(\gamma) = f(\gamma)f'(b^{-1}\gamma).\]
+
+The action of $B$ on $\Gamma$ in the semidirect product permutes the elements of a tuple $f\in A^{\Gamma}$, and the group operation defined on $A^{\Gamma}$ gives pointwise multiplication.  To be explicit, suppose $\Gamma$ is an $n$-tuple, and let $(f,b),~(f',b')\in A\wr_{\Gamma} B$.  
+Let $b_i$ denote $b^{-1}(i)$.  Then
+\begin{eqnarray*}
+(f,b)(f',b') &=& \bigl((f(1),~f(2),~\ldots,~f(n)),~b\bigr) \bigl((f'(1),~f'(2),~\ldots,~f'(n)),~b'\bigr) \\
+               &=& \bigl((f(1),~f(2),~\ldots,~f(n)\bigr)\bigl(f'(b_1),~f'(b_2),~\ldots,~f'(b_n)\bigr),~bb') 
+                       \text{(*)} \\
+               &=& \bigl((f(1)f'(b_1),~f(2)f'(b_2),~\ldots,~f(n)f'(b_n)),~bb'\bigr).
+\end{eqnarray*}
+Notice the permutation of the indices in (*).
+
+A bit amount of thought to understand this slightly messy notation will be illuminating, and might also shed some light on the choice of terminology.
+%%%%%
+%%%%%
+\end{document}

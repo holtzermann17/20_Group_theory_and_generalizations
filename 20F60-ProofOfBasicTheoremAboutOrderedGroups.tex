@@ -1,0 +1,78 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ProofOfBasicTheoremAboutOrderedGroups}
+\pmcreated{2013-03-22 14:54:46}
+\pmmodified{2013-03-22 14:54:46}
+\pmowner{rspuzio}{6075}
+\pmmodifier{rspuzio}{6075}
+\pmtitle{proof of basic theorem about ordered groups}
+\pmrecord{14}{36598}
+\pmprivacy{1}
+\pmauthor{rspuzio}{6075}
+\pmtype{Proof}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{20F60}
+\pmclassification{msc}{06A05}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\begin{document}
+\PMlinkescapeword{Property}
+\subsubsection*{Property 1:}
+
+Consider $a b^{-1} \in G$.  Since $G$ can be written as a pairwise disjoint union, exactly one of the following conditions must hold:
+ $$a b^{-1} \in S \qquad a b^{-1} = 1 \qquad a b^{-1} \in S^{-1}$$
+By definition of the ordering relation, $a < b$ if the first condition holds.  If the second condition holds, then $a = b$.  If the third condition holds, then we must have $a b^{-1} = s^{-1}$ for some $s \in S$.  Taking inverses, this means that $b a^{-1} = s$, so $b < a$, or equivalently $a > b$.  Hence, one of the following three conditions must hold:
+ $$a < b \qquad a = b \qquad b < a$$
+
+\subsubsection*{Property 2:}
+
+The hypotheses can be rewritten as
+ $$a b^{-1} \in S \qquad b c^{-1} \in S$$
+Multiplying, and remembering that $S$ is closed under multiplication,
+ $$a c^{-1} = ( a b^{-1} )( b c^{-1} ) \in S.$$
+In other words, $a < c$.
+
+\subsubsection*{Property 3:}
+
+Suppose that $a < b$, so $a b ^{-1} = s \in S$.   Then
+ $$s = a b^{-1} = a 1 b^{-1} = a c c^{-1} b^{-1} = (ac) (bc)^{-1}$$
+so $ac < bc$.
+
+By the defining property of $S$, we have $c s c^{-1} \in S$.  Also,
+ $$c s c^{-1} = c a b^{-1} c^{-1} = (ca) (cb)^{-1},$$
+hence $(ca) (cb)^{-1} \in S$, so $ca < cb$
+
+\subsubsection*{Property 4:}
+
+By property 3, $a < b$ implies $ac < bc$ and likewise $c < d$ implies $bc < bd$.  Then, by property 2, we conclude $ac < bd$.
+
+\subsubsection*{Property 5:}
+
+By the hypothesis, $a b^{-1} = s \in S$.  By the defining property, $b^{-1} s b \in S$.  Since $b^{-1} s b = b^{-1} a$, we have $b^{-1} a \in S$.  In other words, $b^{-1} < a^{-1}$.
+
+\subsubsection*{Property 6:}
+
+By definition, $a < 1$ means that $a 1^{-1} \in S$.  Since $1^{-1} = 1$ and $a 1 = a$, this is equivalent to stating that $a \in S$.
+%%%%%
+%%%%%
+\end{document}

@@ -1,0 +1,51 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{GroupsWithAbelianInnerAutomorphismGroup}
+\pmcreated{2013-03-22 17:25:30}
+\pmmodified{2013-03-22 17:25:30}
+\pmowner{rm50}{10146}
+\pmmodifier{rm50}{10146}
+\pmtitle{groups with abelian inner automorphism group}
+\pmrecord{7}{39799}
+\pmprivacy{1}
+\pmauthor{rm50}{10146}
+\pmtype{Topic}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{20A05}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\DeclareMathOperator{\Inn}{Inn}
+\newcommand{\cD}{\mathcal{D}}
+\begin{document}
+The inner automorphism group $\Inn(G)$ is isomorphic to the central quotient of $G$, $G/Z(G)$. \PMlinkescapetext{Even} if $\Inn(G)$ is abelian, one cannot conclude that $G$ itself is abelian. For example, let $G=\cD_8$, the dihedral group of symmetries of the square.
+\[G=\langle r,s \mid r^4=s^2=1, rs = sr^3\rangle\]
+and $Z(G)=\{1,r^2\}$. Representatives of the cosets of $Z(G)$ are $\{1,r,s,rs\}$; these define a group of order $4$ that is isomorphic to the \PMlinkname{Klein $4$-group}{Klein4Group} $V_4$. Thus the central quotient is abelian, but the group itself is not.
+
+However, if the central quotient is \emph{cyclic}, it does follow that $G$ is abelian. For, choose a representative $x$ in $G$ of a generator for $G/Z(G)$. Each element of $G$ is thus of the form $x^az$ for $z\in Z(G)$. So given $g,h\in G$,
+\[gh = x^{a_1}z_1x^{a_2}z_2=x^{a_1}x^{a_2}z_1z_2 = x^{a_1+a_2}z_1z_2=x^{a_2}x^{a_1}z_2z_1=x^{a_2}z_2x^{a_1}z_1=hg\]
+where the various manipulations are justified by the fact that the $z_i\in Z(G)$ and that powers of $x$ commute with themselves.
+
+Finally, note that if $\Inn(G)$ is non-trivial, then $G$ is nonabelian, for $\Inn(G)$ nontrivial implies that for some $g\in G$, conjugation by $g$ is not the identity, so there is some element of $G$ with which $g$ does not commute. So by the above argument, $\Inn(G)$, if non-trivial, cannot be cyclic (else $G$ would be abelian).
+%%%%%
+%%%%%
+\end{document}

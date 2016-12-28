@@ -1,0 +1,82 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ProofOfEmbeddingTheoremForOrderedAbelianGroupsOfRankOne}
+\pmcreated{2013-03-22 14:55:33}
+\pmmodified{2013-03-22 14:55:33}
+\pmowner{rspuzio}{6075}
+\pmmodifier{rspuzio}{6075}
+\pmtitle{proof of embedding theorem for ordered abelian groups of rank one}
+\pmrecord{22}{36614}
+\pmprivacy{1}
+\pmauthor{rspuzio}{6075}
+\pmtype{Proof}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{20F60}
+\pmclassification{msc}{06A05}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\begin{document}
+To prove the theorem, we shall use the characterization of ordered groups of rank one.  Using this result, the theorem to be be proved can be reformulated as follows:  (Note that we are now using additive notation for groups, so the formulation of the Archimedean property appears slightly differently than it did in the entry characterizing the ordered groups of rank one.)
+
+\textbf{Theorem.} \,Let $G$ be an Abelian ordered group with \PMlinkname{order}{OrderGroup} at least 2. \,Then $G$ enjoys the Archimedean property
+ $$(\forall x,y \in G) \> x < y < 0 \quad \Rightarrow \quad (\exists n > 0) \> ny < x$$
+ iff there is an order-preserving isomorphism from $G$ onto some subgroup of the additive group of real numbers.
+
+{\it Proof} \, One of the two implications is rather easy.  Since the real numbers enjoy the Archimedean property and it is obvious that any subset of a set enjoying the Archimedean property also enjoys this property, it follows that every subgroup of the additive group of the real numbers enjoys the Archimedean property.  It only remains to show that every group enjoying this property is isomorphic to a subgroup of additive group of the real numbers.
+
+To accomplish this, we shall use the technique of Dedekind cuts to map our group into the real numbers.  Since the order of our group is at least 2, there exists an element $x \in G$ such that $x \neq 0$.  By the basic theorem on ordered groups, it follows that either $x > 0$ or $x < 0$ and that, if $x > 0$ then $-x < 0$.  Thus there exists an element $y \in G$ such that $-y < 0$ --- if $x < 0$, set $y = x$, else set $y = -x$.
+
+We shall now construct a map $\mu \colon G \to \mathbb{R}$.  Define the sets $A(z)$ and $B(z)$ as follows:
+ $$A(z) = \{ (m,n) \in \mathbb{Z} \times \mathbb{N} \mid my < nz \}$$
+ $$B(z) = \{ (m,n) \in \mathbb{Z} \times \mathbb{N} \mid my > nz \}$$
+By Corollary 2 to the basic theorem on ordered groups, it follows that, for any strictly positive integer $k$, we have $(m,n) \in A(z)$ if and only if $(km,kn) \in A(z)$.  Likewise, $(m,n) \in B(z)$ if and only if $(km,kn) \in B(z)$.  This means that $A(z)$ and $B(z)$ may be regarded as sets of rational numbers, and we can rewrite the defining equations as
+ $$A(z) = \{ m/n \in \mathbb{Q} \mid my < nz \}$$
+ $$B(z) = \{ m/n \in \mathbb{Q} \mid my > nz \}$$
+
+We shall now show that $(A(z),B(z))$ is a Dedekind cut.  This requires us to verify the three defining properties of a Dedekind cut.  First, we need to check that neither $A(z)$ nor $B(z)$ are empty.  We shall only present the proof for $A(z)$ since the proof for $B(z)$ can easily be obtained from it by reversing the inequality signs suitably.  By the basic theorem, either $-y < z$ or $z = -y$ or $z < -y$.  In the first case, $1/1 \in A(z)$.  In the second case, $2/1 \in A(z)$.  In the third case, the Archimedean property implies that there exists $n$ such that $-1 < nz < 0$, so $1/n \in A(z)$.  Second, we need to check that every element of $A(z)$ is less than every element of $B(z)$.  Suppose that $m/n \in A(z)$ and $m'/n' \in B(z)$, so that $my < nz$ and $n'z < m'y$.  Then, by Corollary 2 of the basic theorem, $mn'y < nn'z$ and $nn'z < m'ny$.  By conclusion 2 of the basic theorem, this implies that $mn'y < m'ny$.  By Corollary 2, this means that $mn' < m'n$.  Dividing by $nn'$, we conclude that $m/n < m'/n'$.  Third, we need to show that at most one rational number does not belong to either $A(z)$ or to $B(z)$.  Suppose that $m/n$ does not belong to either $A(z)$ or $B(z)$.  Then it cannot be the case that either
+ $$my < nz$$
+or
+ $$nz < my.$$
+By the first conclusion of the basic theorem, it follows that $my = nz$.   Now suppose that $m'/n'$ also does not belong to either $A(z)$ or to $B(z)$.  By the same line of reasoning, we must have $m'y = n'z$.  This would imply that $m'n y = nn' z$.  Similarly, $mn' y = nn' z$.  Combining these two facts using conclusion 2 of the basic theorem, we would have $m'n = mn'$, which implies that $m/n = m'/n'$.
+
+Since $(A(z), B(z))$ is a Dedekind cut, it defines a real number.  We shall define $\mu (z)$ to be this number.
+
+We will now show that $\mu$ is a homomrphism.  To accomplish this, it suffices to show that $\mu (a-b) = \mu (a) - \mu (b)$ for every $a, b \in G$.  Suppose that $m_1 / n_1 \in A(a)$ and $m_2 / n_2 \in B(b)$ (as before, we assume $n_1, n_2 > 0$.  Then, by definition, 
+ $$m_1 y <  n_1 a$$
+and 
+ $$m_2 y \ge n_2 b.$$
+By Corollary 2 of the basic theorem, we obtain
+ $$m_1 n_2 y <  n_1 n_2 a$$
+and 
+ $$- m_2 n_1 y < - n_1 n_2 b.$$
+By conclusion 4 of the basic theorem, we have
+ $$(m_1 n_2 - m_2 n_1) y < n_1 n_2 (a - b).$$
+Therefore, ${m_1 n_2 - m_2 n_1 \over n_1 n_2} \in A (a-b)$.  Thus, we have shown that, if $m_1 / n_1 \in A(a)$ and $m_2 / n_2 \in B(b)$, then $m_2 / n_2 -m_2 / n_2 \in A(a-b)$.  Likewise, if $m_1 / n_1 \in B(a)$ and $m_2 / n_2 \in A(b)$, then $m_2 / n_2 - m_2 / n_2 \in B(a-b)$.  By the definition of subtraction for Dedekind cuts, this implies that $\mu (a - b) = \mu (a) - \mu (b)$.
+
+Next, we shall show that $\mu$ preserves the order.  Since we already know that $\mu$ is a homomorphism, it suffices to show that $\mu (z) \le 0$ when $z \le 0$.  By definition of $\mu (z)$ as a Dedekind cut, this is equivalent to demanding that, whenever $z \le 0$, then $m/n \ge 0$ for all $m/n \in A(z)$.  This follows readily from the fact that, if $z < 0$ and $m < 0$ and $n > 0$, then $nz < 0 < my$, so $nz < my$ and hence $m/n$ could not possibly belong to $A(z)$.
+
+To \PMlinkescapetext{complete} the proof, we must show that $\mu$ is in fact an isomorphism.  This may be accomplished by showing that the kernel of $\mu$ is trivial.  Suppose that $\mu (z) = 0$.  Then, by the definition of Dedekind cut, $A(z)$ consists of the negative rational numbers and $B(z)$ consists of the positive rational numbers.   By the definitions of $A$ and $B$ this, in turn, means that $my < nz$ whenever $m > 0$ and $n > 0$ and $my > nz$ whenever $m < 0$ and $n > 0$.  By the basic theorem, either $z < 0$ or $z = 0$ or $z > 0$.  If $z < 0$ then, by the Archimedean property, there must exist an $n$ such that $nz < y$.  However, this would contradict the assertion that $my < nz$ whenever $m > 0$ and $n > 0$, so it is not possible to have $z < 0$.  Likewise, if $z > 0$, then there must exist an $n > 0$ such that $-y < nz$, contradicting the assertion that $my > nz$ whenever $m < 0$ and $n > 0$.  The only remaining possibility is to have $z = 0$.  Therefore, the homomorphism $\mu$ is, in fact, an isomorphism, so $G$ is isomorphic to a subset of the additive group of the real numbers.
+\rightline{Q.E.D.}
+%%%%%
+%%%%%
+\end{document}

@@ -1,0 +1,87 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{AbelianGroupsOfOrder120}
+\pmcreated{2013-03-22 13:54:17}
+\pmmodified{2013-03-22 13:54:17}
+\pmowner{alozano}{2414}
+\pmmodifier{alozano}{2414}
+\pmtitle{abelian groups of order $120$}
+\pmrecord{5}{34654}
+\pmprivacy{1}
+\pmauthor{alozano}{2414}
+\pmtype{Example}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{20E34}
+\pmrelated{FundamentalTheoremOfFinitelyGeneratedAbelianGroups}
+\pmrelated{AbelianGroup2}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsthm}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\newtheorem{thm}{Theorem}
+\newtheorem{defn}{Definition}
+\newtheorem{prop}{Proposition}
+\newtheorem{lemma}{Lemma}
+\newtheorem{cor}{Corollary}
+
+% Some sets
+\newcommand{\Nats}{\mathbb{N}}
+\newcommand{\Ints}{\mathbb{Z}}
+\newcommand{\Reals}{\mathbb{R}}
+\newcommand{\Complex}{\mathbb{C}}
+\newcommand{\Rats}{\mathbb{Q}}
+\begin{document}
+Here we present an application of the fundamental theorem of
+finitely generated abelian groups.
+
+{\bf Example (Abelian groups of order $120$)}:
+
+Let $G$ be an abelian group of order $n=120$. Since the group is
+finite it is obviously finitely generated, so we can apply the
+theorem. There exist $n_1,n_2,\ldots,n_s$ with
+$$G\cong
+\Ints/n_1\Ints\oplus\Ints/n_2\Ints\oplus\ldots\oplus\Ints/n_s\Ints$$
+$$\forall i, n_i\geq 2;\quad n_{i+1}\mid n_i\ \text{for }
+1\leq i\leq s-1$$ Notice that in the case of a finite group, $r$,
+as in the statement of the theorem, must be equal to $0$. We have
+$$n=120=2^3\cdot3\cdot5=\prod_{i=1}^s n_i=n_1\cdot n_2\cdot \ldots \cdot n_s$$
+and by the divisibility properties of $n_i$ we must have that
+every prime divisor of $n$ must divide $n_1$. Thus the
+possibilities for $n_1$ are the following
+$$2\cdot 3\cdot 5,\quad 2^2\cdot 3 \cdot 5,\quad 2^3\cdot 3\cdot 5$$
+If $n_1=2^3\cdot 3\cdot 5=120$ then $s=1$. In the case that
+$n_1=2^2\cdot 3 \cdot 5$ then $n_2=2$ and $s=2$. It remains to
+analyze the case $n_1=2\cdot 3 \cdot 5$. Now the only possibility for
+$n_2$ is $2$ and $n_3=2$ as well.
+
+Hence if $G$ is an abelian group of order $120$ it must be ({\bf
+up to isomorphism}) one of the following:
+$$\Ints/120\Ints,\quad \Ints/60\Ints\oplus \Ints/2\Ints,\quad
+\Ints/30\Ints\oplus\Ints/2\Ints\oplus\Ints/2\Ints$$ Also notice
+that they are all non-isomorphic. This is because
+$$\Ints/(n\cdot m)\Ints \cong \Ints/n\Ints\oplus \Ints/m\Ints
+\Leftrightarrow \operatorname{gcd}(n,m)=1$$ which is due to the
+Chinese Remainder theorem.
+%%%%%
+%%%%%
+\end{document}

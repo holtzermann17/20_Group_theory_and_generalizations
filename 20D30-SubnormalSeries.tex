@@ -1,0 +1,79 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{SubnormalSeries}
+\pmcreated{2013-03-22 13:58:42}
+\pmmodified{2013-03-22 13:58:42}
+\pmowner{mclase}{549}
+\pmmodifier{mclase}{549}
+\pmtitle{subnormal series}
+\pmrecord{8}{34750}
+\pmprivacy{1}
+\pmauthor{mclase}{549}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{20D30}
+\pmsynonym{subinvariant series}{SubnormalSeries}
+\pmrelated{SubnormalSubgroup}
+\pmrelated{JordanHolderDecompositionTheorem}
+\pmrelated{Solvable}
+\pmrelated{DescendingSeries}
+\pmrelated{AscendingSeries}
+\pmdefines{composition series}
+\pmdefines{normal series}
+\pmdefines{principal series}
+\pmdefines{chief series}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\begin{document}
+\PMlinkescapeword{term}
+\PMlinkescapeword{compatible}
+\PMlinkescapeword{series}
+\PMlinkescapeword{addition}
+
+Let $G$ be a group with a subgroup $H$, and let
+\begin{equation}
+G = G_0 \rhd G_1 \rhd \cdots \rhd G_n = H
+\end{equation}
+be a series of subgroups with each $G_i$ a normal subgroup of $G_{i-1}$.
+Such a series is called a \emph{subnormal series} or a \emph{subinvariant series}.
+
+If in addition, each $G_i$ is a normal subgroup of $G$,
+then the series is called a \emph{normal series}.
+
+A subnormal series in which each $G_i$ is a maximal normal subgroup
+of $G_{i-1}$ is called a \emph{composition series}.
+
+A normal series in which $G_i$ is a maximal normal subgroup of $G$ contained in $G_{i-1}$
+is called a \emph{principal series} or a \emph{chief series}.
+
+Note that a composition series need not end in the trivial group $1$.
+One speaks of a composition series (1) as a \emph{composition series from $G$ to $H$}.
+But the term \emph{composition series for $G$}
+generally means a composition series from $G$ to $1$.
+
+Similar remarks apply to principal series.
+
+Some authors use normal series as a synonym for subnormal series.  This usage is, of course, not compatible with the stronger definition of normal series given above.
+%%%%%
+%%%%%
+\end{document}

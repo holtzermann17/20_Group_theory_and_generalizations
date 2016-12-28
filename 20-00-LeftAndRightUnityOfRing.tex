@@ -1,0 +1,60 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{LeftAndRightUnityOfRing}
+\pmcreated{2013-03-22 15:10:54}
+\pmmodified{2013-03-22 15:10:54}
+\pmowner{rspuzio}{6075}
+\pmmodifier{rspuzio}{6075}
+\pmtitle{left and right unity of ring}
+\pmrecord{6}{36936}
+\pmprivacy{1}
+\pmauthor{rspuzio}{6075}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{20-00}
+\pmclassification{msc}{16-00}
+\pmrelated{InversesInRings}
+\pmdefines{left unity}
+\pmdefines{right unity}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+ \usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\theoremstyle{definition}
+\newtheorem*{thmplain}{Theorem}
+\begin{document}
+If a ring \, $(R,\,+,\,\cdot)$\, \PMlinkescapetext{contains a multiplicative} left identity element $e$, i.e. if
+                $$e\cdot a = a \quad \forall a,$$
+then $e$ is called the {\em left unity} of $R$.
+
+If a ring $R$ \PMlinkescapetext{contains a multiplicative} right identity element $e'$, i.e. if
+                $$a\cdot e' = a \quad \forall a,$$
+then $e'$ is called the {\em right unity} of $R$.
+
+A ring may have several left or right unities (see e.g. the Klein four-ring).
+
+If a ring $R$ has both a left unity $e$ and a right unity $e'$, then they must coincide, since
+                  $$e' = e\cdot e' = e.$$
+This situation means that every right unity equals to $e$, likewise every left unity. \,Then we speak simply of a unity of the ring.
+%%%%%
+%%%%%
+\end{document}

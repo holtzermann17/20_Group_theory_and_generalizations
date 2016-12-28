@@ -1,0 +1,78 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ConjugacyInAn}
+\pmcreated{2013-03-22 17:18:04}
+\pmmodified{2013-03-22 17:18:04}
+\pmowner{rm50}{10146}
+\pmmodifier{rm50}{10146}
+\pmtitle{conjugacy in $A_n$}
+\pmrecord{6}{39648}
+\pmprivacy{1}
+\pmauthor{rm50}{10146}
+\pmtype{Theorem}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{20M30}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\newtheorem{thm}{Theorem}
+\begin{document}
+\PMlinkescapeword{classes}
+\PMlinkescapeword{behavior}
+Recall that conjugacy classes in the symmetric group $S_n$ are determined solely by cycle type. In the alternating group $A_n$, however, this is not always true. A single conjugacy class in $S_n$ that is contained in $A_n$ may split into two distinct classes when considered as a subset of $A_n$. For example, in $S_3$, $(1~2~3)$ and $(1~3~2)$ are conjugate, since
+\[(2~3)(1~2~3)(2~3)=(1~3~2)\]
+but these two are not conjugate in $A_3$ (note that $(2~3)\notin A_3$).
+
+Note in particular that the fact that conjugacy in $S_n$ is determined by cycle type means that if $\sigma\in A_n$ then all of its conjugates in $S_n$ also lie in $A_n$.
+
+The following theorem fully characterizes the behavior of conjugacy classes in $A_n$:
+\begin{thm} A conjugacy class in $S_n$ splits into two distinct conjugacy classes under the action of $A_n$ if and only if its cycle type consists of \emph{distinct} odd integers. Otherwise, it remains a single conjugacy class in $A_n$.
+\end{thm}
+
+Thus, for example, in $S_7$, the elements of the conjugacy class of $(1~2~3~4~5)$ are all conjugate in $A_7$, while the elements of the conjugacy class of $(1~2~3)(4~5~6)$ split into two distinct conjugacy classes in $A_7$ since there are two cycles of length $3$. Similarly, any conjugacy class containing an even-length cycle, such as $(1~2~3~4)(5~6)$, splits in $A_7$.
+
+We will prove the above theorem by proving the following statements:
+\begin{itemize}
+\item A conjugacy class in $S_n$ consisting solely of even permutations (i.e. that is contained in $A_n$) either is a single conjugacy class or is the disjoint union of two equal-sized conjugacy classes when considered under the action of $A_n$.
+\item If $\sigma\in A_n$, then the elements of the conjugacy class of $\sigma$ in $S_n$ (which is just all elements of the same cycle type as $\sigma$) are conjugate in $A_n$ if and only if $\sigma$ commutes with some odd permutation.
+\item $\sigma\in S_n$ does not commute with an odd permutation if and only if the cycle type of $\sigma$ consists of \emph{distinct} odd integers.
+\end{itemize}
+
+Throughout, we will denote by $\mathcal{C}_S(\sigma)$ the conjugacy class of $\sigma$ under the action of $S_n$.
+
+To prove the first statement, note that conjugacy is a transitive action. By the theorem that orbits of a normal subgroup are equal in size when the full group acts transitively, we see that if $\sigma\in A_n$, then $\mathcal{C}_S(\sigma)$ splits into $\lvert S_n:A_n C_{S_n}(\sigma)\rvert$ classes under the action of $A_n$ (recall that $C_G(x)$, the centralizer of $x$, is simply the stabilizer of $x$ under the conjugation action of $G$ on itself). But since $\lvert S_n:A_n\rvert$ is either $1$ or $2$, we see that the conjugacy class of $\sigma$ either remains a single class in $A_n$ or splits into two classes.
+
+Note also that the elements of $\mathcal{C}_S(\sigma)$ are all conjugate in $A_n$ if and only if $A_n C_{S_n}(\sigma)=S_n$, which happens if and only if $C_{S_n}(\sigma)\nsubseteq A_n$, which in turn is the case if and only if some odd permutation is in the centralizer of $\sigma$, which means precisely that $\sigma$ commutes with some odd permutation. This proves the second statement.
+
+To prove the third statement, suppose first that $\sigma$ does not commute with an odd permutation. Clearly $\sigma$ commutes with any cycle in its own cycle decomposition, so if $\sigma$ contains a cycle of even length, that is an odd permutation with which $\sigma$ commutes. So $\sigma$ must consist solely of [disjoint] cycles of odd length. If two of these cycles have the same length, say $(a_1~a_2~\ldots~a_{2k+1})$ and $(b_1~b_2~\ldots~b_{2k+1})$, then
+\begin{multline*}((a_1~b_1)\ldots(a_{2k+1}~b_{2k+1}))(a_1~a_2~\ldots~a_{2k+1})(b_1~b_2~\ldots~b_{2k+1})((a_1~b_1)\ldots(a_{2k+1}~b_{2k+1}))^{-1}=\\
+(a_1~a_2~\ldots~a_{2k+1})(b_1~b_2~\ldots~b_{2k+1})
+\end{multline*}
+so the product of $(a_1~a_2~\ldots~a_{2k+1})$ and $(b_1~b_2~\ldots~b_{2k+1})$, and thus $\sigma$, commutes with the product of $2k+1$ transpositions, which is an odd permutation. Thus all the cycles in the cycle decomposition of $\sigma$ must have different [odd] lengths.
+
+To prove the converse, we show that if the cycles in the cycle decomposition all have distinct lengths, then $\sigma$ commutes precisely with the group generated by its cycles. It follows then that if all the distinct lengths are odd, then $\sigma$ commutes only with these permutations, which are all even. Choose $\sigma$ with distinct cycle lengths in its cycle decomposition, and suppose that $\sigma$ commutes with some element $\tau\in S_n$. Conjugation preserves cycle length, so since $\tau$ commutes with $\sigma$ and $\sigma$ has all its cycles of distinct lengths, each cycle in $\tau$ must commute with each cycle in $\sigma$ individually.
+
+Now, choose a nontrivial cycle $\tau_1$ of $\tau$, and choose $j\in\tau$ such that $\sigma$ moves $j$ (we can do this, since $\sigma$ can have at most one cycle of length $1$ and the cycle length of $\tau$ is greater than $1$). Let $\sigma_1$ be the cycle of $\sigma$ containing $j$. Then $\tau_1$ commutes with $\sigma_1$ since $\tau$ commutes with $\sigma$, so $\tau_1$ is in the centralizer of $\sigma_1$, and it is not disjoint from $\sigma_1$. But the centralizer of a $k$-cycle $\rho$ consists of products of powers of $\rho$ and cycles disjoint from $\rho$. Thus $\tau_1$ is a power of $\sigma_1$. So each cycle in $\tau$ is a power of a cycle in $\sigma$, and we are done.
+
+%%%%%
+%%%%%
+\end{document}

@@ -1,0 +1,46 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{CayleysTheorem}
+\pmcreated{2013-03-22 12:23:13}
+\pmmodified{2013-03-22 12:23:13}
+\pmowner{vitriol}{148}
+\pmmodifier{vitriol}{148}
+\pmtitle{Cayley's theorem}
+\pmrecord{7}{32174}
+\pmprivacy{1}
+\pmauthor{vitriol}{148}
+\pmtype{Theorem}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{20B35}
+\pmrelated{CayleysTheoremForSemigroups}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\begin{document}
+Let $G$ be a group, then $G$ is isomorphic to a subgroup of the permutation group $S_{G}$
+
+If $G$ is finite and of order $n$, then $G$ is isomorphic to a subgroup of the permutation group $S_{n}$
+
+Furthermore, suppose $H$ is a proper subgroup of $G$. Let $X = \{Hg | g \in G\}$ be the set of right cosets in $G$. The map $\theta:G \to S_{X}$ given by $\theta(x)(Hg) = Hgx$ is a homomorphism. The kernel is the largest normal subgroup of $H$. We note that $|S_X| = [G : H]!$. Consequently if $|G|$ doesn't divide $[G :  H]!$ then $\theta$ is not an isomorphism so $H$ contains a non-trivial normal subgroup, namely the kernel of $\theta$.
+%%%%%
+%%%%%
+\end{document}

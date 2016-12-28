@@ -1,0 +1,75 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{PeriodicGroup}
+\pmcreated{2013-03-22 15:35:50}
+\pmmodified{2013-03-22 15:35:50}
+\pmowner{yark}{2760}
+\pmmodifier{yark}{2760}
+\pmtitle{periodic group}
+\pmrecord{11}{37511}
+\pmprivacy{1}
+\pmauthor{yark}{2760}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{20F50}
+\pmsynonym{torsion group}{PeriodicGroup}
+\pmrelated{LocallyFiniteGroup}
+\pmrelated{Torsion3}
+\pmdefines{periodic}
+\pmdefines{torsion}
+
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsthm}
+
+\newtheorem{corollary}{Corollary}
+\newtheorem{theorem}{Theorem}
+
+\def\Z{\mathbb{Z}}
+
+\DeclareMathOperator{\Tor}{Tor}
+\begin{document}
+\PMlinkescapeword{coordinate}
+\PMlinkescapeword{obvious}
+\PMlinkescapeword{subgroup}
+
+A group $G$ is said to be \emph{periodic} (or \emph{torsion})
+if every element of $G$ is of finite order.
+
+All finite groups are periodic.
+More generally, all locally finite groups are periodic.
+Examples of periodic groups that are not locally finite include Tarski groups,
+and Burnside groups $B(m,n)$ of odd exponent $n\ge665$ on $m>1$ generators.
+
+Some easy results on periodic groups:
+
+\begin{theorem}
+\item Every \PMlinkname{subgroup}{Subgroup} of a periodic group is periodic.
+\end{theorem}
+
+\begin{theorem}
+\item Every \PMlinkname{quotient}{QuotientGroup} of a periodic group is periodic.
+\end{theorem}
+
+\begin{theorem}
+\item Every \PMlinkname{extension}{GroupExtension} of a periodic group by a periodic group is periodic.
+\end{theorem}
+
+\begin{theorem}
+\item Every restricted direct product of periodic groups is periodic.
+\end{theorem}
+
+Note that (unrestricted) direct products of periodic groups are not necessarily periodic. For example, the direct product of all finite cyclic groups $\Z/n\Z$ is not periodic, as the element that is $1$ in every coordinate has infinite order.
+
+Some further results on periodic groups:
+
+\begin{theorem}
+Every solvable periodic group is locally finite.
+\end{theorem}
+
+\begin{theorem}
+Every periodic abelian group is the direct sum of its maximal \PMlinkname{$p$-groups}{PGroup4} over all primes $p$.
+\end{theorem}
+%%%%%
+%%%%%
+\end{document}

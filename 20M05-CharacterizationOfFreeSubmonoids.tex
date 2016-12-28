@@ -1,0 +1,147 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{CharacterizationOfFreeSubmonoids}
+\pmcreated{2013-03-22 18:21:32}
+\pmmodified{2013-03-22 18:21:32}
+\pmowner{Ziosilvio}{18733}
+\pmmodifier{Ziosilvio}{18733}
+\pmtitle{characterization of free submonoids}
+\pmrecord{7}{40997}
+\pmprivacy{1}
+\pmauthor{Ziosilvio}{18733}
+\pmtype{Theorem}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{20M05}
+\pmclassification{msc}{20M10}
+\pmdefines{intersection of free submonoids is free}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\begin{document}
+\newcommand{\mgs}{\ensuremath{\mathrm{mgs}}}
+
+\newtheorem{definition}{Definition}
+\newtheorem{theorem}{Theorem}
+\newtheorem{corollary}{Corollary}
+
+Let $A$ be an arbitrary set,
+let $A^\ast$ be the free monoid on $A$,
+and let $e$ be the identity element (empty word) of $A^\ast$.
+Let $M$ be a submonoid of $A^\ast$
+and let $\mgs(M)$ be its minimal generating set.
+
+We recall the universal property of free monoids:
+for every mapping $f:A\to M$ with $M$ a monoid,
+there exists a unique morphism $\phi:A^\ast\to M$
+such that $\phi(a)=f(a)$ for every $a\in A$.
+
+\begin{theorem} \label{thm:char-fsm}
+The following are equivalent.
+\begin{enumerate}
+\item \label{item:char-fsm-fsm}
+$M$ is a free submonoid of $A^\ast$.
+\item \label{item:char-fsm-eq}
+Any equation
+\begin{equation} \label{eq:char-fsm-eq}
+x_1\cdots x_n=y_1\cdots y_m\;,\;
+x_1,\ldots,x_n,y_1,\ldots,y_m\in\mgs(M)
+\end{equation}
+has only the trivial solutions $n=m,x_1=y_1,\ldots,x_n=y_n$.
+\item \label{item:char-fsm-word}
+For every $w\in A^\ast$,
+if $p,q\in M$ exist such that $pw,wq\in M$,
+then $w\in M$.
+\end{enumerate}
+\end{theorem}
+
+From point~\ref{item:char-fsm-word} of Theorem~\ref{thm:char-fsm} follows
+
+\begin{corollary} \label{cor:free-monoid-inters}
+An intersection of free submonoids of $A^\ast$
+is a free submonoid of $A^\ast$.
+\end{corollary}
+
+As a consequence of Theorem~\ref{thm:char-fsm},
+there is no Nielsen-Schreier theorem for monoids.
+In fact, consider $A=\{a,b\}$ and $Y=\{a,ab,ba\}\subseteq A^\ast$:
+then $\mgs(Y^\ast)=Y$,
+but $x_1x_2=y_1y_2$ has a nontrivial solution over $Y$,
+namely, $(ab)a=a(ba)$.
+
+We now prove Theorem~\ref{thm:char-fsm}.
+
+\emph{Point~\ref{item:char-fsm-eq} implies point~\ref{item:char-fsm-fsm}.}
+Let $f:\mgs(M)\to B$ be a bijection.
+By the universal property of free monoids,
+there exists a unique morphism $\phi:B^\ast\to M$ that extends $f^{-1}$;
+such a morphism is clearly surjective.
+Moreover, any equation $\phi(b_1\cdots b_n)=\phi(b'_1\cdots b'_m)$
+translates into an equation of the form (\ref{eq:char-fsm-eq}),
+which by hypothesis has only trivial solutions:
+therefore $n=m$, $b_i=b'_i$ for all $i$, and $\phi$ is injective.
+
+\emph{Point~\ref{item:char-fsm-word} implies point~\ref{item:char-fsm-eq}.}
+Suppose the existence of $p,q\in M$ such that $pw,wq\in M$
+implies $w\in A^\ast$ is actually in $M$.
+Consider an equation of the form (\ref{eq:char-fsm-eq})
+which is a counterexample to the thesis,
+and such that the length of the compared words is minimal:
+we may suppose $x_1$ is a prefix of $y_1$,
+so that $y_1=x_1w$ for some $w\in A^\ast$.
+Put $p=x_1,q=y_2\cdots y_m$:
+then $pw=y_1$ and $wq=x_2\cdots x_n$ belong to $M$ by construction.
+By hypothesis, this implies $w\in M$:
+then $y_1\in\mgs(M)$ equals a product $x_1w$ with $x_1,w\in M$---which,
+by definition of $\mgs(M)$,
+is only possible if $w=e$.
+Then $x_1=y_1$ and $x_2\cdots x_n=y_2\cdots y_m$:
+since we had chosen a counterexample of minimal length,
+$n=m,x_2=y_2,\ldots,x_n=y_n$.
+Then the original equation has only trivial solutions,
+and is not a counterexample after all.
+
+\emph{Point~\ref{item:char-fsm-fsm} implies point~\ref{item:char-fsm-word}.}
+Let $\phi:B^\ast\to M$ be an isomorphism of monoids.
+Then clearly $\mgs(M)\subseteq\phi(B)$;
+since removing $m=\phi(b)$ from $\mgs(M)$ removes $\phi(b^\ast)$ from $M$,
+the equality holds.
+Let $w\in A^\ast$ and let $p,q\in M$ satisfy $pw,wq\in M$:
+put $x=\phi^{-1}(p)$, $y=\phi^{-1}(q)$,
+$r=\phi^{-1}(pw)$, $s=\phi^{-1}(wq)$.
+Then $\phi(xs)=\phi(ry)=pwq\in M$, so $xs=ry$:
+this is an equality over $B^\ast$,
+and is satisfied only by $r=xu$, $s=uy$ for some $u$.
+Then $w=\phi(u)\in M$.
+
+\begin{thebibliography}{99}
+
+\bibitem{l97}
+M. Lothaire.
+\textit{Combinatorics on words.}
+Cambridge University Press 1997.
+
+\end{thebibliography}
+
+%%%%%
+%%%%%
+\end{document}

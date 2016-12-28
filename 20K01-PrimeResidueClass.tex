@@ -1,0 +1,70 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{PrimeResidueClass}
+\pmcreated{2013-03-22 15:43:12}
+\pmmodified{2013-03-22 15:43:12}
+\pmowner{pahio}{2872}
+\pmmodifier{pahio}{2872}
+\pmtitle{prime residue class}
+\pmrecord{18}{37668}
+\pmprivacy{1}
+\pmauthor{pahio}{2872}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{20K01}
+\pmclassification{msc}{13M99}
+\pmclassification{msc}{11A07}
+\pmsynonym{prime class}{PrimeResidueClass}
+\pmrelated{MultiplicativeOrderOfAnIntegerModuloM}
+\pmrelated{NonZeroDivisorsOfFiniteRing}
+\pmrelated{GroupOfUnits}
+\pmrelated{PrimitiveRoot}
+\pmrelated{ResidueSystems}
+\pmrelated{Klein4Group}
+\pmrelated{EulerPhifunction}
+\pmrelated{SummatoryFunctionOfArithmeticFunction}
+\pmdefines{residue class group}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+ \usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\theoremstyle{definition}
+\newtheorem*{thmplain}{Theorem}
+\begin{document}
+Let $m$ be a positive integer.  There are $m$ residue classes $a\!+\!m\mathbb{Z}$ modulo $m$.\, Such of them which have
+                          $$\gcd(a,\,m) \;=\; 1,$$
+are called the {\em prime residue classes} or {\em prime classes modulo $m$}, and they form an Abelian group with respect to the multiplication
+   $$(a\!+\!m\mathbb{Z})\!\cdot\!(b\!+\!m\mathbb{Z}) \;:=\; ab\!+\!m\mathbb{Z}.$$
+This group is called the {\em residue class group modulo $m$}.  Its order is $\varphi(m)$, where $\varphi$ means Euler's totient function.  For example, the prime classes modulo 8 (i.e. $1\!+\!8\mathbb{Z}$, $3\!+\!8\mathbb{Z}$, $5\!+\!8\mathbb{Z}$, $7\!+\!8\mathbb{Z}$) form a group isomorphic to the Klein 4-group.
+
+The prime classes are the units of the residue class ring \,\,$\mathbb{Z}/m\mathbb{Z} = \mathbb{Z}_m$\,\, consisting of all residue classes modulo $m$.
+
+Analogically, in the \PMlinkname{ring $R$ of integers}{ExamplesOfRingOfIntegersOfANumberField} of any algebraic number field, there are the residue classes and the prime residue classes modulo an ideal $\mathfrak{a}$ of $R$.  The number of all residue classes is 
+$\mbox{N}(\mathfrak{a})$ and the number of the prime classes is also denoted by $\varphi(\mathfrak{a})$.\, It may be proved that
+ $$\varphi(\mathfrak{a}) \;=\; 
+\mbox{N}(\mathfrak{a})\prod_{\mathfrak{p}|\mathfrak{a}}\left(1-\frac{1}{\mbox{N}(\mathfrak{p})}\right);$$
+$\mbox{N}$ is the absolute norm of ideal and $\mathfrak{p}$ runs all distinct prime ideals dividing $\mathfrak{a}$ (cf. the first formula in the entry ``\PMlinkname{Euler phi function}{EulerPhiFunction}'').\, Moreover, one has the result 
+ $$\alpha^{\varphi(\mathfrak{a})} \;\equiv\; 1 \pmod{\mathfrak{a}}$$
+for\, $((a),\,\mathfrak{a}) = (1)$,\, generalising the \PMlinkname{Euler--Fermat theorem}{EulerFermatTheorem}.
+%%%%%
+%%%%%
+\end{document}

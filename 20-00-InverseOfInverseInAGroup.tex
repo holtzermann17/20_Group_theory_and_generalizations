@@ -1,0 +1,52 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{InverseOfInverseInAGroup}
+\pmcreated{2013-03-22 15:43:36}
+\pmmodified{2013-03-22 15:43:36}
+\pmowner{cvalente}{11260}
+\pmmodifier{cvalente}{11260}
+\pmtitle{inverse of inverse in a group}
+\pmrecord{7}{37676}
+\pmprivacy{1}
+\pmauthor{cvalente}{11260}
+\pmtype{Proof}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{20-00}
+\pmclassification{msc}{20A05}
+\pmclassification{msc}{08A99}
+\pmrelated{AdditiveInverseOfAnInverseElement}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\begin{document}
+Let $(G,*)$ be a group.
+We aim to prove that  ${(a^{-1})}^{-1}=a$ for every $a\in G$.
+That is, the inverse of the inverse of a group element is the element itself.
+
+By definition $a*a^{-1}=a^{-1}*a=e$, where $e$ is the identity in $G$. Reinterpreting this equation we can read it as saying that $a$ is the inverse of $a^{-1}$.
+
+In fact, consider $b=a^{-1}$, the equation can be written $a*b=b*a=e$ and thus $a$ is the inverse of $b=a^{-1}$.
+
+%${(a^{-1})}^{-1}=a$
+%%%%%
+%%%%%
+\end{document}

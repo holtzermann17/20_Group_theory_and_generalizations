@@ -1,0 +1,96 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{PureSubgroup}
+\pmcreated{2013-03-22 14:57:47}
+\pmmodified{2013-03-22 14:57:47}
+\pmowner{CWoo}{3771}
+\pmmodifier{CWoo}{3771}
+\pmtitle{pure subgroup}
+\pmrecord{9}{36661}
+\pmprivacy{1}
+\pmauthor{CWoo}{3771}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{20K27}
+\pmclassification{msc}{13C13}
+\pmdefines{pure submodule}
+\pmdefines{pure exact sequence}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb,amscd}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\begin{document}
+\textbf{Definition}.  A \emph{pure subgroup} $H$ of an abelian group
+$G$ is
+\begin{enumerate}
+\item a subgroup of $G$, such that
+\item $H\cap mG=mH$ for all $m\in\mathbb{Z}$.
+\end{enumerate}
+The second condition says that for any $h\in H$ such that $h=ma$ for
+some integer $m$ and some $a\in G$, then there exists $b\in H$ such
+that $h=mb$.  In other words, if $h$ is divisible in $G$ by an
+integer, then it is divisible in $H$ by that same integer.  Purity in
+abelian groups is a relative notion, and we denote $H<_pG$ to mean
+that $H$ is a pure subgroup of $G$.
+\par
+\textbf{Examples}.  All groups mentioned below are abelian groups.
+\begin{enumerate}
+\item For any group, two trivial examples of pure subgroups are the trivial
+subgroup and the group itself.
+\item Any \PMlinkname{divisible subgroup}{DivisibleGroup} or any direct summand of a group is pure.
+\item \textit{The} torsion subgroup (= the subgroup of all torsion elements) of any group is pure.
+\item If $K<_pH$, $H<_pG$, then $K<_pG$.
+\item If $H=\bigcup_{i=1}^{\infty}H_i$ with $H_i\leq H_{i+1}$ and
+$H_i<_pG$, then $H<_pG$.
+\item In $Z_{n^2}$, $\langle n \rangle$ is an example of a subgroup that is not
+pure.
+\item In general, $\langle m \rangle<_p Z_n$ if $\operatorname{gcd}(s,t)=1$,
+where $s=\operatorname{gcd}(m,n)$ and $t=n/s$.
+\end{enumerate}
+\textbf{Remark}. This definition can be generalized to modules over
+commutative rings.
+
+\textbf{Definition}. Let $R$ be a commutative ring and
+$\mathcal{E}\colon 0\rightarrow A\rightarrow B\rightarrow
+C\rightarrow 0$ a short exact sequence of $R$-modules.  Then
+$\mathcal{E}$ is said to be \emph{pure} if it remains exact after
+tensoring with any $R$-module.  In other words, if $D$ is any
+$R$-module, then
+$$D\otimes\mathcal{E}\colon0\rightarrow D\otimes A\rightarrow D\otimes B\rightarrow D\otimes C\rightarrow
+0,$$ is exact.
+
+\textbf{Definition}. Let $N$ be a submodule of $M$ over a ring $R$.
+Then $N$ is said to be a \emph{pure submodule} of $M$ if the exact
+sequence $$0\rightarrow N\rightarrow M\rightarrow M/N\rightarrow 0$$
+is a pure exact sequence.
+
+From this definition, it is clear that $H$ is a pure subgroup of $G$
+iff $H$ is a pure $\mathbb{Z}$-submodule of $G$.
+
+\textbf{Remark}.  $N$ is a pure submodule of $M$ over $R$ iff
+whenever a finite sum $$\sum r_im_i=n\in N,$$ where $m_i\in M$ and
+$r_i\in R$ implies that $$n=\sum r_in_i$$ for some $n_i\in N$.  As a
+result, if $I$ is an ideal of $R$, then the purity of $N$ in $M$ means
+that $N\cap IM=IN$, which is a generalization of the second
+condition in the definition of a pure subgroup above.
+%%%%%
+%%%%%
+\end{document}

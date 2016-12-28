@@ -1,0 +1,76 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{DescendingSeries}
+\pmcreated{2013-03-22 16:14:52}
+\pmmodified{2013-03-22 16:14:52}
+\pmowner{yark}{2760}
+\pmmodifier{yark}{2760}
+\pmtitle{descending series}
+\pmrecord{7}{38352}
+\pmprivacy{1}
+\pmauthor{yark}{2760}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{20E15}
+\pmclassification{msc}{20F22}
+\pmrelated{AscendingSeries}
+\pmrelated{SubnormalSeries}
+\pmrelated{SubnormalSubgroup}
+\pmdefines{descending normal series}
+\pmdefines{descendant subgroup}
+\pmdefines{descendant}
+\pmdefines{hypoabelian group}
+\pmdefines{hypoabelian}
+\pmdefines{SD-group}
+
+\usepackage{amsfonts}
+\def\normal{\trianglelefteq}
+
+\begin{document}
+\PMlinkescapeword{factor}
+\PMlinkescapeword{factors}
+\PMlinkescapeword{property}
+\PMlinkescapeword{satisfy}
+\PMlinkescapeword{series}
+\PMlinkescapeword{term}
+\PMlinkescapeword{terms}
+
+Let $G$ be a group.
+
+A \emph{descending series} of $G$
+is a family $(H_\alpha)_{\alpha\le\beta}$ of subgroups of $G$,
+where $\beta$ is an ordinal,
+such that $H_0=G$ and $H_\beta=\{1\}$,
+and $H_{\alpha+1}\normal H_\alpha$ for all $\alpha<\beta$,
+and $$\bigcap_{\alpha<\delta}H_\alpha=H_\delta$$
+whenever $\delta\le\beta$ is a limit ordinal.
+
+Note that this is a generalization of the concept of a subnormal series.
+Compare also the dual concept of an ascending series.
+
+Given a descending series $(H_\alpha)_{\alpha\le\beta}$,
+the subgroups $H_\alpha$ are called the \emph{terms} of the series
+and the \PMlinkname{quotients}{QuotientGroup} $H_\alpha/H_{\alpha+1}$
+are called the \emph{factors} of the series.
+
+A subgroup of $G$ that is a term of some descending series of $G$
+is called a \emph{descendant subgroup} of $G$.
+
+A descending series of $G$
+in which all terms are normal in $G$
+is called a \emph{descending normal series}.
+
+Let $\mathfrak{X}$ be a property of groups.
+A group is said to be \emph{hypo-$\mathfrak{X}$}
+if it has a descending normal series
+whose factors all have property $\mathfrak{X}$.
+So, for example, a \emph{hypoabelian group}
+is a group that has a descending normal series with abelian factors.
+Hypoabelian groups are sometimes called \emph{SD-groups};
+they are precisely the groups that have no non-trivial perfect subgroups,
+and they are also precisely the groups
+in which the transfinite derived series eventually reaches $\{1\}$.
+
+%%%%%
+%%%%%
+\end{document}

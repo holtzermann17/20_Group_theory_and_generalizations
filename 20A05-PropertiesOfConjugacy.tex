@@ -1,0 +1,75 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{PropertiesOfConjugacy}
+\pmcreated{2013-03-22 18:56:35}
+\pmmodified{2013-03-22 18:56:35}
+\pmowner{pahio}{2872}
+\pmmodifier{pahio}{2872}
+\pmtitle{properties of conjugacy}
+\pmrecord{5}{41799}
+\pmprivacy{1}
+\pmauthor{pahio}{2872}
+\pmtype{Topic}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{20A05}
+%\pmkeywords{conjugacy}
+\pmrelated{NormalClosure2}
+\pmrelated{NonIsomorphicGroupsOfGivenOrder}
+\pmdefines{normal closure}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+ \usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\theoremstyle{definition}
+\newtheorem*{thmplain}{Theorem}
+
+\begin{document}
+Let $S$ be a nonempty subset of a group $G$.\, When $g$ is an element of $G$, a conjugate of $S$ is the subset
+$$gSg^{-1} \;=\; \{gsg^{-1}\,\vdots\;\; s \in S\}.$$
+We denote here
+\begin{align}
+gSg^{-1} \;:=\; S^g.
+\end{align}
+
+If $T$ is another nonempty subset and $h$ another element of $G$, then it's easily verified the formulae
+\begin{itemize}
+\item $(ST)^g \;=\; S^gT^g$
+\item $(S^g)^h \;=\; S^{gh}$
+\end{itemize}
+
+The conjugates $H^g$ of a subgroup $H$ of $G$ are subgroups of $G$, since any mapping
+$$x \mapsto gxg^{-1}$$
+is an automorphism (an inner automorphism) of $G$ and the homomorphic image of group is always a group.\\
+
+The notation (1) can be extended to
+\begin{align}
+\langle S^g\,\vdots\;\; g \in G\rangle \;:=\; S^G
+\end{align}
+where the angle parentheses express a generated subgroup.\, $S^G$ is the least normal subgroup of $G$ containing the subset $S$, and it is called the \emph{normal closure} of $S$.\\
+
+
+\PMlinkexternal{Wiki}{http://en.wikipedia.org/wiki/Conjugacy}
+
+
+%%%%%
+%%%%%
+\end{document}

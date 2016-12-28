@@ -1,0 +1,99 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{BlocksOfPermutationGroups}
+\pmcreated{2013-03-22 17:19:05}
+\pmmodified{2013-03-22 17:19:05}
+\pmowner{rm50}{10146}
+\pmmodifier{rm50}{10146}
+\pmtitle{blocks of permutation groups}
+\pmrecord{15}{39668}
+\pmprivacy{1}
+\pmauthor{rm50}{10146}
+\pmtype{Topic}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{20B05}
+\pmdefines{trivial block}
+\pmdefines{block}
+\pmdefines{block system}
+\pmdefines{conjugate block}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\newtheorem*{thm}{Theorem}
+\newtheorem*{cor}{Corollary}
+\theoremstyle{definition}
+\newtheorem*{defn}{Definition}
+
+\begin{document}
+Throughout this article, $A$ is a set and $G$ is a permutation group on $A$.
+
+A \emph{block} is a subset $B$ of $A$ such that for each $\sigma\in G$, either $\sigma\cdot B=B$ or $(\sigma\cdot B)\cap B=\emptyset$, where $\sigma\cdot B=\{\sigma(b)\ \mid\ b\in B\}$. In other words, if $\sigma\cdot B$ intersects $B$, then $\sigma\cdot B = B$.
+
+Note that for any such permutation group, each of $\emptyset$, $A$, and every element of $A$ is a block. These are called \emph{trivial blocks}.
+
+It is obvious that if $H\subset G$ are permutation groups on $A$, then any block of $G$ is also a block of $H$.
+
+Blocks are closed under finite intersection:
+\begin{thm} If $B_1, B_2\subset A$ are blocks of $G$, then $B=B_1\cap B_2$ is a block of $G$.
+\end{thm}
+\begin{proof} Choose $\sigma\in G$.
+Note that $\sigma\cdot(B_1\cap B_2)=(\sigma\cdot B_1)\cap (\sigma\cdot B_2)$. Thus if $(\sigma\cdot B)\cap B\neq\emptyset$, then
+\[(\sigma\cdot B)\cap B = (\sigma\cdot (B_1\cap B_2))\cap(B_1\cap B_2)=(\sigma\cdot B_1 \cap B_1)\cap (\sigma\cdot B_2\cap B_2)\]
+is nonempty, and thus $\sigma\cdot B_i \cap B_i\neq\emptyset$ for $i=1,2$. But $B_1$ and $B_2$ are blocks, so that $\sigma\cdot B_i=B_i$ for $i=1,2$. Thus 
+\[\sigma\cdot B  = \sigma\cdot (B_1\cap B_2) = (\sigma\cdot B_1)\cap (\sigma\cdot B_2)=B_1\cap B_2=B\]
+and $B$ is a block.
+\end{proof}
+
+We show, as a corollary to the following theorem, that blocks themselves are permuted by the action of the group.
+\begin{thm} If $H\subset G$ are permutation groups on $A$, $B\subset A$ is a block of $H$, and $
+\sigma\in G$, then $\sigma\cdot B$ is a block of $\sigma H\sigma^{-1}$.
+\end{thm}
+\begin{proof}
+Choose $\tau\in H$ and assume that
+\[((\sigma \tau\sigma^{-1})\sigma\cdot B)\cap \sigma\cdot B\neq\emptyset\]
+Then, applying $\sigma^{-1}$ to this equation, we see that
+\[(\tau\cdot B)\cap B\neq\emptyset\]
+But $B$ is a block of $H$, so $\tau\cdot B=B$. Multiplying by $\sigma$, we see that
+\[\sigma\cdot(\tau\cdot B)=\sigma\cdot B\]
+and thus
+\[(\sigma\tau\sigma^{-1})\sigma\cdot B=\sigma\cdot B\]
+and the result follows.
+\end{proof}
+
+\begin{cor} If $B$ is a block of $G$, $\sigma\in G$, then $\sigma\cdot B$ is also a block of $G$.
+\end{cor}
+\begin{proof}
+Set $G=H$ in the above theorem.
+\end{proof}
+
+\begin{defn} If $B$ is a block of $G$, $\sigma\in G$, then $B$ and $\sigma\cdot B$ are \emph{conjugate blocks}. The set of all blocks conjugate to a given block is a \emph{block system}.
+\end{defn}
+
+It is clear from the fact that $B$ is a block that conjugate blocks are either equal or disjoint, so the action of $G$ permutes the blocks of $G$. Then if $G$ acts transitively on $A$, the union of any nontrivial block and its conjugates is $A$.
+
+\begin{thm} If $G$ is finite and $G$ acts transitively on $A$, then the size of a nonempty block divides the order of $G$.
+\end{thm}
+\begin{proof} Since $G$ acts transitively, $A$ is finite as well. All conjugates of the block have the same size; since the action is transitive, the union of the block and all its conjugates is $A$. Thus the size of the block divides the size of $A$. Finally, by the orbit-stabilizer theorem, the order of $G$ is divisible by the size of $A$.
+\end{proof}
+%%%%%
+%%%%%
+\end{document}

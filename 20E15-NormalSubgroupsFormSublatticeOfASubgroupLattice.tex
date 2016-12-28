@@ -1,0 +1,50 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{NormalSubgroupsFormSublatticeOfASubgroupLattice}
+\pmcreated{2013-03-22 15:48:24}
+\pmmodified{2013-03-22 15:48:24}
+\pmowner{CWoo}{3771}
+\pmmodifier{CWoo}{3771}
+\pmtitle{normal subgroups form sublattice of a subgroup lattice}
+\pmrecord{5}{37770}
+\pmprivacy{1}
+\pmauthor{CWoo}{3771}
+\pmtype{Example}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{20E15}
+
+\usepackage{amssymb,amscd}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% define commands here
+\begin{document}
+Consider $L(G)$, the subgroup lattice of a group $G$.  Let $N(G)$ be the subset of $L(G)$, consisting of all normal subgroups of $G$.  
+
+First, we show that $N(G)$ is closed under $\wedge$.  Suppose $H$ and $K$ are normal subgroups of $G$.  If $x\in H\wedge K=H\cap K$, then for any $g\in G$, $gxg^{-1}\in H$ since $H$ is normal, and $gxg^{-1}\in K$ likewise.  So $gxg^{-1}\in H\cap K=H\wedge K$, implying that $H\wedge K$ is normal in $G$, or $H\wedge K \in N(G)$.
+
+
+To see that $N(G)$ is closed under $\vee$, let $H,K$ be normal subgroups of $G$, and consider an element $$x=x_1x_2\cdots x_n\in H\vee K,$$
+where $x_i\in H$ or $x_i\in K$.  If $g\in G$, then 
+$$gxg^{-1}=gx_1x_2\cdots x_ng^{-1}=(gx_1g^{-1})(gx_2g^{-1})\cdots (gx_ng^{-1}),$$
+where each $gx_ig^{-1}\in H$ or $K$.  Therefore, $gxg^{-1}\in H\vee K$, so $H\vee K$ is normal in $G$ and $H\vee K\in N(G)$.
+
+Since $N(G)$ is closed under $\wedge$ and $\vee$, $N(G)$ is a sublattice of $L(G)$.
+
+\textbf{Remark}.  If $G$ is finite, it can be shown (Wielandt) that the subnormal subgroups of $G$ form a sublattice of $L(G)$.
+
+\begin{thebibliography}{9}
+\bibitem{hw} H. Wielandt \emph{Eine Verallgemeinerung der invarianten Untergruppen}, Math. Zeit. 45, pp. 209-244 (1939)
+\end{thebibliography}
+%%%%%
+%%%%%
+\end{document}

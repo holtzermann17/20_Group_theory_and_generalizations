@@ -1,0 +1,73 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{LawOfSignsUnderMultiplicationInARing}
+\pmcreated{2013-03-22 14:14:03}
+\pmmodified{2013-03-22 14:14:03}
+\pmowner{alozano}{2414}
+\pmmodifier{alozano}{2414}
+\pmtitle{law of signs under multiplication in a ring}
+\pmrecord{10}{35675}
+\pmprivacy{1}
+\pmauthor{alozano}{2414}
+\pmtype{Derivation}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{20-00}
+\pmclassification{msc}{16-00}
+\pmclassification{msc}{13-00}
+\pmsynonym{$(-x)\cdot (-y)= x\cdot y$}{LawOfSignsUnderMultiplicationInARing}
+\pmrelated{Ring}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsthm}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\newtheorem{thm}{Theorem}
+\newtheorem{defn}{Definition}
+\newtheorem{prop}{Proposition}
+\newtheorem{lemma}{Lemma}
+\newtheorem{cor}{Corollary}
+
+% Some sets
+\newcommand{\Nats}{\mathbb{N}}
+\newcommand{\Ints}{\mathbb{Z}}
+\newcommand{\Reals}{\mathbb{R}}
+\newcommand{\Complex}{\mathbb{C}}
+\newcommand{\Rats}{\mathbb{Q}}
+\begin{document}
+\begin{lemma}
+Let $R$ be a ring with unity, which we denote by $1$. For all $x,y\in R$:
+$$(-x)\cdot (-y)=x\cdot y$$
+where $-x$ denotes the additive inverse of $x$ in $R$.
+\end{lemma}
+\begin{proof}
+Here we use the fact $(-1)\cdot a = -a$ for all $a \in R$. First, we see that:
+
+$$(-1)\cdot (-1)\cdot a=(-1)\cdot \left( (-1)\cdot a \right)=(-1)\cdot (-a)=a$$
+since, clearly, the additive inverse of $-a$ is $a$ itself.
+
+Hence:
+$$(-x)\cdot (-y)=(-1)\cdot x \cdot (-1)\cdot y= (-1)\cdot (-1) \cdot x\cdot y= x \cdot y$$
+where we have used several times the associativity of $\cdot$ and the fact that $(-1)\cdot x = x \cdot (-1) = -x$.
+\end{proof}
+%%%%%
+%%%%%
+\end{document}

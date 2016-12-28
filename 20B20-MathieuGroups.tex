@@ -1,0 +1,79 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{MathieuGroups}
+\pmcreated{2013-03-22 18:43:33}
+\pmmodified{2013-03-22 18:43:33}
+\pmowner{monster}{22721}
+\pmmodifier{monster}{22721}
+\pmtitle{Mathieu groups}
+\pmrecord{7}{41494}
+\pmprivacy{1}
+\pmauthor{monster}{22721}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{20B20}
+\pmclassification{msc}{20D08}
+\pmdefines{$M_{24}$}
+\pmdefines{$M_{23}$}
+\pmdefines{$M_{22}$}
+\pmdefines{$M_{12}$}
+\pmdefines{$M_{11}$}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\newcommand{\gc}{\mathcal{G}_{24}}
+\begin{document}
+\PMlinkescapeword{size}
+\PMlinkescapephrase{automorphism group}
+\PMlinkescapephrase{automorphism groups}
+
+The Mathieu groups are a \PMlinkescapetext{series} of 5 sporadic simple groups discovered by the French mathematician \'Emile L\'eonard Mathieu.  They are usually denoted by $M_{11}$, $M_{12}$, $M_{22}$, $M_{23}$, $M_{24}$.  They are defined as automorphism groups of certain Steiner systems, and the subscript denotes the size of the underlying set of the Steiner system.
+
+If $\Omega$ is a set of $n$ elements, then a $(t,k,n)$-Steiner system on $\Omega$ is a set $S$ of subsets of $\Omega$, each of size $k$, such that every subset of $\Omega$ of size $t$ is contained in a unique element of $S$.  The automorphism group of the Steiner system is defined as the permutations of $\Omega$ which map $S$ to itself.
+
+There exists a (5,8,24)-Steiner system, and it is unique up to permutation of the elements of $\Omega$.  It can be constructed as the set of octads of the extended binary Golay Code $\gc$.  We denote it by $S(5,8,24)$ below.
+
+There exists a (5,6,12)-Steiner system, and it is unique up to permutation of the elements.  It can be constructed as follows.  Take $\Omega'$ to be a dodecad (element of weight 12) of $\gc$.  Then the subsets of size 6 in $\Omega'$ which are contained in an octad of $\gc$ form a (5,6,12)-Steiner system.  We denote it by $S(5,6,12)$ below.
+
+\section{Definition of the Mathieu groups}
+
+The group $M_{24}$ is the automorphism group of $S(5,8,24)$.  It has order $244\,823\,040 = 2^{10} \cdot 3^3 \cdot 5 \cdot 7 \cdot 11 \cdot 23$.
+
+The group $M_{23}$ is the subgroup of $M_{24}$ fixing a given \PMlinkescapetext{point} of $\Omega$.  It is the automorphism group of a (4,7,23)-Steiner system).  It has order $|M_{24}|/24 = 10\,200\,960 = 2^7 \cdot 3^2 \cdot 5 \cdot 7 \cdot 11 \cdot 23$.  
+
+The group $M_{22}$ is the subgroup of $M_{24}$ fixing two given \PMlinkescapetext{points} of $\Omega$.  It is a subgroup of \PMlinkname{index}{Coset} 2 in the automorphism group of a (3,6,22)-Steiner system.  It has order $|M_{23}|/23 = 443\,250 = 2^7 \cdot 3^2 \cdot 5 \cdot 7 \cdot 11$.
+
+The group $M_{12}$ is the automorphism group of $S(5,6,12)$.  It has order $95\,040 = 2^6 \cdot 3^3 \cdot 5 \cdot 11$.
+
+The group $M_{11}$ is the subgroup of $M_{12}$ fixing a \PMlinkescapetext{point} of $\Omega'$.  It is the automorphism group of a (4,5,11)-Steiner system.  It has order $|M_{12}/12| = 7\,920 = 2^4 \cdot 3^2 \cdot 5 \cdot 11$.
+
+For further \PMlinkescapetext{information} on the Mathieu groups, consult the \PMlinkescapetext{references} (\cite{splag}, Chapters 10 and 11) and (\cite{sporadic}, Chapters 5-7).
+
+\emph{Note.}  It is possible to continue the pattern above and define groups $M_{21}$, $M_{20}$, $M_{10}$, $M_9$, $M_8$.  However, they are no longer sporadic simple groups.  The group $M_{21}$ is a subgroup of \PMlinkescapetext{index} 3! = 6 in the automorphism group of a (2,5,21)-Steiner system, which are the points and lines of the projective plane over the field of 4 elements.  In fact, $M_{21} \cong PSL(3,\mathbb{F}_4)$, a \PMlinkname{simple group of Lie type}{ProjectiveSpecialLinearGroup}.  The group $M_{20}$ is a solvable group.  The group $M_{10}$ is not simple; it contains, with \PMlinkescapetext{index} 2, the alternating group $A_6$ (sometimes denoted $M_{10}'$ in this context since it is the derived subgroup of $M_{10}$).  The groups $M_9$ and $M_8$ are solvable.
+
+\begin{thebibliography}{9}
+\bibitem{splag} J. H. Conway and N. J. A. Sloane. Sphere Packings, Lattices, and Groups. Springer-Verlag, 1999.
+\bibitem{sporadic} Robert L. Griess, Jr. Twelve Sporadic Groups. Springer-Verlag, 1998.
+\end{thebibliography}
+%%%%%
+%%%%%
+\end{document}

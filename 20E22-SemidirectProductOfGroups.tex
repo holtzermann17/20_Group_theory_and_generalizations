@@ -1,0 +1,262 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{SemidirectProductOfGroups}
+\pmcreated{2013-03-22 12:34:49}
+\pmmodified{2013-03-22 12:34:49}
+\pmowner{djao}{24}
+\pmmodifier{djao}{24}
+\pmtitle{semidirect product of groups}
+\pmrecord{10}{32829}
+\pmprivacy{1}
+\pmauthor{djao}{24}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{20E22}
+\pmsynonym{semidirect product}{SemidirectProductOfGroups}
+\pmsynonym{semi-direct product}{SemidirectProductOfGroups}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic} 
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\newcommand{\C}{\mathbb{C}}
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\Q}{\mathbb{Q}}
+\newcommand{\R}{\mathbb{R}}
+\renewcommand{\a}{\bf{a}}
+\renewcommand{\b}{\bf{b}}
+\renewcommand{\c}{\bf{c}}
+\renewcommand{\d}{\bf{d}}
+\renewcommand{\Re}{\operatorname{Re}}
+\newcommand{\0}{\bf{0}}
+\newcommand{\category}[1]{\mbox{\boldmath $\mathsf{{#1}}$}}
+\renewcommand{\H}{\category{H}}
+\newcommand{\A}{\category{A}}
+\newcommand{\B}{\category{B}}
+\newcommand{\<}{\langle}
+\renewcommand{\>}{\rangle}
+\newcommand{\lra}{\longrightarrow}
+\newcommand{\ra}{\rightarrow}
+\newcommand{\iso}{\cong}
+\newcommand{\dsum}{\oplus}
+\newcommand{\conv}{\circ}
+\newcommand{\comp}{\circ}
+\newcommand{\st}{\mid}
+\newcommand{\intersect}{\cap}
+\newcommand{\union}{\cup}
+\renewcommand{\Im}{\operatorname{Im}}
+\newcommand{\cross}{\times}
+\newcommand{\Aut}{\operatorname{Aut}}
+\newcommand{\semidirect}{\rtimes}
+
+\newtheorem{theorem}{Theorem}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{corollary}[theorem]{Corollary}
+
+\theoremstyle{definition}
+\newtheorem{definition}[theorem]{Definition}
+\begin{document}
+The goal of this exposition is to carefully explain the correspondence
+between the notions of external and internal semi--direct products of
+groups, as well as the connection between semi--direct products and
+short exact sequences.
+
+Naturally, we start with the construction of semi--direct products.
+
+\begin{definition}
+Let $H$ and $Q$ be groups and let $\theta: Q \lra \Aut(H)$ be a group
+homomorphism. The {\em semi--direct product} $H \semidirect_\theta Q$
+is defined to be the group with underlying set $\{(h,q) \st h \in
+H,\ q \in Q\}$ and group operation $(h,q)(h',q') := (h \theta(q) h',
+qq')$.
+\end{definition}
+
+We leave it to the reader to check that $H \semidirect_\theta Q$ is
+really a group. It helps to know that the inverse of $(h,q)$ is
+$(\theta(q^{-1}) (h^{-1}), q^{-1})$.
+
+For the remainder of this article, we omit $\theta$ from the notation
+whenever this map is clear from the context.
+
+Set $G := H \semidirect Q$. There exist canonical monomorphisms $H
+\lra G$ and $Q \lra G$, given by
+\begin{eqnarray*}
+h \mapsto (h,1_Q),& \ & h \in H \\
+q \mapsto (1_H,q),& \ & q \in Q
+\end{eqnarray*}
+where $1_H$ (resp. $1_Q$) is the identity element of $H$
+(resp. $Q$). These monomorphisms are so natural that we will treat $H$
+and $Q$ as subgroups of $G$ under these inclusions.
+
+\begin{theorem}\label{ext-to-int}
+Let $G := H \semidirect Q$ as above. Then:
+\begin{itemize}
+\item $H$ is a normal subgroup of $G$.
+\item $HQ = G$.
+\item $H \intersect Q = \{1_G\}$.
+\end{itemize}
+\end{theorem}
+\begin{proof}
+Let $p: G \lra Q$ be the projection map defined by $p(h,q) = q$. Then
+$p$ is a homomorphism with kernel $H$. Therefore $H$ is a normal
+subgroup of $G$.
+
+%A harder proof of normality has been commented out.
+%
+%We already know that $H$ is a subgroup of $G$. The only issue is
+%whether it is normal. Let $(h,q) \in G$ and $(h_0,1_Q) \in H$. Then
+%\begin{eqnarray*}
+%(h,q) (h_0,1_Q) (h,q)^{-1} & = & (h,q) (h_0,1_Q) (\theta(q^{-1})
+%(h^{-1}),q^{-1}) \\
+%& = & (h,q) (h_0 \theta(1_Q) (\theta(q^{-1}) (h^{-1})),q^{-1}) \\
+%& = & (h \theta(q) (h_0 \theta(q^{-1})(h^{-1})),1_Q) \\
+%& = & (h (\theta(q)(h_0)) h^{-1},1_Q).
+%\end{eqnarray*}
+%We have shown that $ghg^{-1} \in H$ for every $g \in G$ and $h \in H$,
+%so $H$ is a normal subgroup of $G$.
+
+Every $(h,q) \in G$ can be written as $(h,1_Q) (1_H,q)$. Therefore $HQ
+= G$.
+
+Finally, it is evident that $(1_H,1_Q)$ is the only element of $G$
+that is of the form $(h,1_Q)$ for $h \in H$ and $(1_H,q)$ for $q \in
+Q$.
+\end{proof}
+
+This result motivates the definition of internal semi--direct
+products.
+
+\begin{definition}
+Let $G$ be a group with subgroups $H$ and $Q$. We say $G$ is the {\em
+internal semi--direct product} of $H$ and $Q$ if:
+\begin{itemize}
+\item $H$ is a normal subgroup of $G$.
+\item $HQ = G$.
+\item $H \intersect Q = \{1_G\}$.
+\end{itemize}
+\end{definition}
+
+We know an external semi--direct product is an internal semi--direct
+product (Theorem~\ref{ext-to-int}). Now we prove a converse (Theorem~\ref{int-to-ext}), namely, that an internal semi--direct product is an external semi--direct product.
+
+\begin{lemma}\label{unique}
+Let $G$ be a group with subgroups $H$ and $Q$. Suppose $G=HQ$ and $H
+\intersect Q = \{1_G\}$. Then every element $g$ of $G$ can be written
+uniquely in the form $hq$, for $h \in H$ and $q \in Q$.
+\end{lemma}
+\begin{proof}
+Since $G=HQ$, we know that $g$ can be written as $hq$. Suppose it can
+also be written as $h'q'$. Then $hq=h'q'$ so ${h'}^{-1}h = q' q^{-1} \in
+H \intersect Q = \{1_G\}$. Therefore $h=h'$ and $q=q'$.
+\end{proof}
+
+\begin{theorem}\label{int-to-ext}
+Suppose $G$ is a group with subgroups $H$ and $Q$, and $G$ is the
+internal semi--direct product of $H$ and $Q$. Then $G \iso H
+\semidirect_\theta Q$ where $\theta: Q \lra \Aut(H)$ is given by
+$$
+\theta(q)(h) := qhq^{-1},\ q \in Q,\, h \in H.
+$$
+\end{theorem}
+\begin{proof}
+By Lemma~\ref{unique}, every element $g$ of $G$ can be written
+uniquely in the form $hq$, with $h \in H$ and $q \in Q$. Therefore,
+the map $\phi: H \semidirect Q \lra G$ given by $\phi(h,q) = hq$ is a
+bijection from $G$ to $H \semidirect Q$. It only remains to show that
+this bijection is a homomorphism.
+
+Given elements $(h,q)$ and $(h',q')$ in $H \semidirect Q$, we have
+$$
+\phi((h,q)(h',q')) = \phi((h \theta(q)(h'),qq')) =
+\phi(hqh'q^{-1},qq') = hqh'q' = \phi(h,q) \phi(h',q').
+$$
+Therefore $\phi$ is an isomorphism.
+\end{proof}
+
+Consider the external semi--direct product $G := H \semidirect_\theta
+Q$ with subgroups $H$ and $Q$. We know from Theorem~\ref{int-to-ext}
+that $G$ is isomorphic to the external semi--direct product $H
+\semidirect_{\theta'} Q$, where we are temporarily writing $\theta'$
+for the conjugation map $\theta'(q)(h) := qhq^{-1}$ of
+Theorem~\ref{int-to-ext}. But in fact the two maps $\theta$ and
+$\theta'$ are the same:
+$$
+\theta'(q)(h) = (1_H,q) (h,1_Q) (1_H, q^{-1}) = (\theta(q)(h),1_Q) =
+\theta(q)(h).
+$$
+In summary, one may use Theorems~\ref{ext-to-int} and~\ref{int-to-ext} to pass freely between the notions of internal semi--direct product and external semi--direct product.
+
+Finally, we discuss the correspondence between semi--direct products
+and split exact sequences of groups.
+
+\begin{definition}
+An exact sequence of groups
+$$
+1 \lra H \stackrel{i}{\lra} G \stackrel{j}{\lra} Q \lra 1.
+$$
+is {\em split} if there exists a homomorphism $k: Q \lra G$ such that
+$j \comp k$ is the identity map on $Q$.
+\end{definition}
+
+\begin{theorem}
+Let $G$, $H$, and $Q$ be groups. Then $G$ is isomorphic to a
+semi--direct product $H \semidirect Q$ if and only if there exists a
+split exact sequence
+$$
+1 \lra H \stackrel{i}{\lra} G \stackrel{j}{\lra} Q \lra 1.
+$$
+\end{theorem}
+\begin{proof}
+First suppose $G \iso H \semidirect Q$. Let $i: H \lra G$ be the
+inclusion map $i(h) = (h,1_Q)$ and let $j: G \lra Q$ be the
+projection map $j(h,q) = q$. Let the splitting map $k: Q \lra G$ be
+the inclusion map $k(q) = (1_H,q)$. Then the sequence above is clearly
+split exact.
+
+Now suppose we have the split exact sequence above. Let $k: Q \lra G$
+be the splitting map. Then:
+\begin{itemize}
+\item $i(H) = \ker j$, so $i(H)$ is normal in $G$.
+\item For any $g \in G$, set $q := k(j(g))$. Then $j(gq^{-1}) = j(g)
+j(k(j(g)))^{-1} = 1_Q$, so $gq^{-1} \in \Im i$. Set $h :=
+gq^{-1}$. Then $g=hq$. Therefore $G=i(H)k(Q)$.
+\item Suppose $g \in G$ is in both $i(H)$ and $k(Q)$. Write $g =
+k(q)$. Then $k(q) \in \Im i = \ker j$, so $q = j(k(q)) =
+1_Q$. Therefore $g = k(q) = k(1_Q) = 1_G$, so $i(H) \intersect k(Q) =
+\{1_G\}$.
+\end{itemize}
+This proves that $G$ is the internal semi--direct product of $i(H)$
+and $k(Q)$. These are isomorphic to $H$ and $Q$,
+respectively. Therefore $G$ is isomorphic to a semi--direct product $H
+\semidirect Q$.
+\end{proof}
+
+Thus, not all normal subgroups $H \subset G$ give rise to an (internal)
+semi--direct product $G = H \semidirect G/H$. More specifically, if
+$H$ is a normal subgroup of $G$, we have the canonical exact sequence
+$$
+1 \lra H \lra G \lra G/H \lra 1.
+$$
+We see that $G$ can be decomposed into $H \semidirect G/H$ as an internal semi--direct product if and only if the canonical exact sequence splits.
+%%%%%
+%%%%%
+\end{document}

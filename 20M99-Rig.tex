@@ -1,0 +1,47 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{Rig}
+\pmcreated{2013-03-22 14:44:29}
+\pmmodified{2013-03-22 14:44:29}
+\pmowner{HkBst}{6197}
+\pmmodifier{HkBst}{6197}
+\pmtitle{rig}
+\pmrecord{8}{36378}
+\pmprivacy{1}
+\pmauthor{HkBst}{6197}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{20M99}
+\pmrelated{semigroup}
+\pmrelated{ring}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\begin{document}
+A \emph{rig} $(R, +, \cdot)$ is a set $R$ together with two binary operations $+:R^2 \to R:(a, b) \mapsto a + b$ and $\cdot:R^2 \to R:(a, b) \mapsto ab$, such that both $(R, +)$ and $(R, \cdot)$ are monoids, where $\cdot$ distributes over $+$. That is if $\{a, b, c, d\} \subset R$ then $(a+b)(c+d) = ac + ad + bc +bd$. The natural numbers with ordinary addition and multiplication $(\mathbf{N}, +, \cdot)$ is a rig.
+
+A rig $(R, +, \cdot)$ is a ring if $(R, +)$ is a group. The integers with ordinary addition and multiplication $(\mathbf{Z}, +, \cdot)$ is a ring.
+
+%A ring $(R, +, \cdot)$ is a field if both $(R, +)$ and $(R, \cdot)$ are groups. The fractions $(\mathbf{Q}, +, \cdot)$, reals $(\mathbf{R}, +, \cdot)$, complex numbers $(\mathbf{C}, +, \cdot)$ and quaternions $(\mathbf{H}, +, \cdot)$ with ordinary addition and multiplication are fields.
+%%%%%
+%%%%%
+\end{document}

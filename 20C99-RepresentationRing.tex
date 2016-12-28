@@ -1,0 +1,62 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{RepresentationRing}
+\pmcreated{2013-03-22 19:19:02}
+\pmmodified{2013-03-22 19:19:02}
+\pmowner{joking}{16130}
+\pmmodifier{joking}{16130}
+\pmtitle{representation ring}
+\pmrecord{7}{42255}
+\pmprivacy{1}
+\pmauthor{joking}{16130}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{20C99}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\begin{document}
+Let $G$ be a group and $k$ a field. Consider the class
+$$\mathcal{R}=\{X\ |\ X\mbox{ is a representation of }G\mbox{ over }k\}$$
+and its subclass $\mathcal{R}_f$ consisting of those representations which are finite-dimensional as vector spaces. We consider a special representation
+$$\mathcal{F}=(V,\cdot)$$
+where $V$ is a fixed vector space with a basis $\mathcal{B}$ which is in bijective correspondence with $G$. If $f:\mathcal{B}\to G$ is a required bijection, then we define ,,$\cdot$'' on basis $\mathcal{B}$ by
+$$g\cdot b = gf(b)$$
+where on the right side we have a multiplication in $G$. It can be shown that this gives us a well-defined representation and further more, if $X\in\mathcal{R}_f$, then there exists an epimorphism of representations
+$$e:\mathcal{F}^n\to X$$
+for some $n\in\mathbb{N}$ ($\mathcal{F}$ is a ,,free'' representation). In particular every finite-dimensional representation is a quotient of a direct sum of copies of $\mathcal{F}$. This fact shows that a maximal subclass $\mathcal{X}\subset\mathcal{R}_f$ consisting of pairwise nonisomorphic representations is actually a set (note that $\mathcal{X}$ is never unique). Fix such a set.
+
+\textbf{Definition.} \textbf{The representation semiring} $\overline{R_k(G)}$ of $G$ is defined as a triple $(\mathcal{X}, +, \cdot)$, where $\mathcal{X}$ is a maximal set of pairwise nonisomorphic representations taken from $\mathcal{R}_f$. Addition and multiplication are given by
+$$X+Y=Z$$
+where $Z$ is a representation in $\mathcal{X}$ isomorphic to the direct sum $X\oplus Y$ and
+$$X\cdot Y=Z'$$
+where $Z'$ is a representation in $\mathcal{X}$ isomorphic to the tensor product $X\otimes Y$. Note that $\overline{R_k(G)}$ is not a ring, because there are no additive inverses.
+
+\textbf{The representation ring} $R_k(G)$ is defined as \PMlinkname{the Grothendieck ring}{GrothendieckGroup} induced from $\overline{R_k(G)}$. It can be shown that the definition does not depend on the choice of $\mathcal{X}$ (in the sense that it always gives us naturally isomorphic rings).
+
+It is convenient to forget about formal definition which includes the choice of $\mathcal{X}$ and simply write elements of $\overline{R_k(G)}$ as isomorphism classes of representations $[X]$. Thus every element in $R_k(G)$ can be written as a formal difference $[X]-[Y]$. And we can write
+$$[X]+[Y]=[X\oplus Y];$$
+$$[X][Y] =[X\otimes Y].$$
+%%%%%
+%%%%%
+\end{document}

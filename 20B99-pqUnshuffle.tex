@@ -1,0 +1,54 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{pqUnshuffle}
+\pmcreated{2013-03-22 16:47:45}
+\pmmodified{2013-03-22 16:47:45}
+\pmowner{Karid}{16341}
+\pmmodifier{Karid}{16341}
+\pmtitle{$(p,q)$ unshuffle}
+\pmrecord{10}{39029}
+\pmprivacy{1}
+\pmauthor{Karid}{16341}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{20B99}
+\pmclassification{msc}{05A05}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\begin{document}
+Let $p$ and $ q$ be positive natural numbers. Further, let $S(k)$ be the symmetric group on the numbers $ \{1,\ldots, k\}$. A permutation $ \tau\in S(p+q)$ is a $ (p,q)$ \emph{unshuffle} if there exist $i_1 < \cdots < i_p $ and $j_1 < \cdots <  j_q $ s.t.
+\[
+\tau(i_1)=1, \ldots ,\tau(i_p)=p
+\]
+and
+\[
+\tau(j_1)=p+1 \ldots ,  \tau(j_q)=p+q.
+\]
+
+Alternatively a $(p,q)$ \emph{unshuffle} is a permutation $ \tau\in S(p+q)$ s.t.~$\tau^{-1}$ is a $(p,q)$ shuffle.
+
+Since a $ (p,q)$ unshuffle is completely determined by $\{i_1,\ldots ,i_p \}$, the cardinality of $\{\sigma\in S(p+q)|\mbox{$\sigma$ is an unshuffle}\}$ is $\binom{p+q}{q}$.
+%%%%%
+%%%%%
+\end{document}

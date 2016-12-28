@@ -1,0 +1,98 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{Heap1}
+\pmcreated{2013-03-22 18:41:50}
+\pmmodified{2013-03-22 18:41:50}
+\pmowner{CWoo}{3771}
+\pmmodifier{CWoo}{3771}
+\pmtitle{heap}
+\pmrecord{9}{41458}
+\pmprivacy{1}
+\pmauthor{CWoo}{3771}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{20N10}
+\pmsynonym{flock}{Heap1}
+\pmsynonym{abstract coset}{Heap1}
+\pmdefines{semiheap}
+\pmdefines{heapoid}
+
+\usepackage{amssymb,amscd}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{mathrsfs}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+\usepackage{amsthm}
+% making logically defined graphics
+%%\usepackage{xypic}
+\usepackage{pst-plot}
+
+% define commands here
+\newcommand*{\abs}[1]{\left\lvert #1\right\rvert}
+\newtheorem{prop}{Proposition}
+\newtheorem{thm}{Theorem}
+\newtheorem{ex}{Example}
+\newcommand{\real}{\mathbb{R}}
+\newcommand{\pdiff}[2]{\frac{\partial #1}{\partial #2}}
+\newcommand{\mpdiff}[3]{\frac{\partial^#1 #2}{\partial #3^#1}}
+\begin{document}
+A \emph{heap} is a non-empty set $H$ with a ternary operation $f:H^3\to H$, such that
+\begin{enumerate}
+\item $f(f(r,s,t),u,v)=f(r,s,f(t,u,v))$ for any $r,s,t,u,v\in H$, and
+\item $f(r,s,s)=f(s,s,r)=r$ for any $r,s\in H$.
+\end{enumerate}
+
+Heaps and groups are intimately related.  Every group has the structure of a heap:
+
+Given a group $G$, if we define $f:G^3\to G$ by $$f(a,b,c)=ab^{-1}c,$$ then $(G,f)$ is a heap, for $f(f(r,s,t),u,v)=(rs^{-1}t)u^{-1}v=rs^{-1}(tu^{-1}v)= f(r,s,f(t,u,v))$, and $f(r,s,s)=rs^{-1}s=r=ss^{-1}r=f(s,s,r)$.
+
+The associated heap structure on a group is the associated heap of the group.
+
+Conversely, every heap can be derived this way:
+
+\begin{prop}  Given a heap $(H,f)$, then $(H,\cdot)$ is a group for some binary operation $\cdot$ on $H$, such that $f(a,b,c) = a\cdot b^{-1} \cdot c$.
+\end{prop}
+\begin{proof}
+Pick an arbitrary element $r\in H$, and define a binary operation $\cdot$ on $H$ by $$a\cdot b := f(a,r,b).$$  We next show that $(H,\cdot)$ is a group.
+
+First, $\cdot$ is associative: $(a\cdot b)\cdot c = f(f(a,r,b),r,c) = f(a,r,f(b,r,c))= a \cdot (b\cdot c)$.  This shows that $(H,\cdot)$ is a semigroup.  Second, $r$ is an identity with respect to $\cdot$: $a\cdot r = f(a,r,r) = a$ and $r\cdot a = f(r,r,a)=a$, showing that $(H,\cdot)$ is a monoid.  Finally, given $a\in H$, the element $b=f(r,a,r)$ is a two-sided inverse of $a$: $a\cdot b = f(a,r,b)=f(a,r,f(r,a,r))=f(f(a,r,r),a,r)=f(a,a,r)=r$ and $b\cdot a=f(b,r,a)= f(f(r,a,r),r,a) = f(r,a,f(r,r,a)) = f(r,a,a)=r$, hence $(H,\cdot)$ is a group.
+
+Finally, by a direction computation, we see that $a\cdot b^{-1} \cdot c= a f(r,b,r) c = f(a,r,f(r,b,r))c = f(f(a,r,r),b,r)c = f(a,b,r)c = f(f(a,b,r),r,c)= f(a,b,f(r,r,c))=f(a,b,c)$.
+\end{proof}
+
+From the proposition above, we see that any element of $H$ can be chosen, so that the associated group operation turns that element into an identity element for the group.  In other words, one can think of a heap as a group where the designation of a multiplicative identity is erased, in much the same way that an affine space is a vector space without the origin (additive identity):
+
+An immediate corollary is the following: for any element $r$ in a heap $(H,f)$, the equation $$f(x,y,z)=r$$ in three variables $x,y,z$ has exactly one solution in the remaining variable, if two of the variables are replaced by elements of $H$.
+
+\textbf{Remarks}.
+\begin{enumerate}
+\item
+A heap is also known as a \emph{flock}, due to its application in affine geometry, or as an \emph{abstract coset}, because, as it can be easily shown, a subset $H$ of a group $G$ is a coset (of a subgroup of $G$) iff it is a subheap of $G$ considered as a heap (see example above).
+
+\begin{proof}
+First, notice that we have two equations $$f(ar,as,at)=af(r,s,t)\qquad\mbox{and}\qquad f(ra,sa,ta)=f(r,s,t)a.$$  From this, we see that if $H=aK$ or $H=Ka$ for some subgroup $K$ of $G$, then $f(H,H,H)\subseteq H$, whence $H$ is a subheap of $G$.  On the other hand, suppose that $H$ is a subheap of $G$, and let $K=\lbrace rs^{-1}\mid r,s\in H\rbrace$.  We want to show that $K$ is a subgroup of $G$ (and hence $H$ is a coset of $K$).  Certainly $e=rr^{-1}\in K$.  If $rs^{-1}\in K$, then $sr^{-1}=(rs^{-1})^{-1}\in K$.  Finally, if $rs^{-1}$ and $tu^{-1}$ are both in $K$, then $rs^{-1}tu^{-1} = f(r,s,t)u^{-1}$, which is in $K$ because both $f(r,s,t)$ and $u$ are in $H$.
+\end{proof}
+\item
+More generally, a structure $H$ with a ternary operation $f$ satisfying only condition $1$ above is known as a \emph{heapoid}, and a heapoid satisfying the condition $$f(f(r,s,t),u,v)=f(r,f(u,t,s),v)$$ is called a \emph{semiheap}.  Every heap is a semiheap, for, by Proposition 1 above: $$f(r,f(u,t,s),v)=r(ut^{-1}s)^{-1}v = rs^{-1}tu^{-1}v = f(rs^{-1}t,u,v)=f(f(r,s,t),u,v).$$
+\item
+Let $(H,f)$ be a heap.  Then $(H,f)$ is a \PMlinkname{$3$-group}{PolyadicSemigroup} iff $f(u,t,s)=f(s,t,u)$.  First, if $(H,f)$ is a $3$-group, then $f$ is associative, so $f(r,f(u,t,s),v)=f(r,f(s,t,u),v)$ since a heap is a semiheap.  By the corollary above, we get the equation $f(u,t,s)=f(s,t,u)$.  On the other hand, the equation shows that $f$ is associative, and together with the corollary, $(H,f)$ is a $3$-group.
+\item
+Suppose now that $(H,f)$ is a $3$-group such that $f(u,t,s)=f(s,t,u)$.  Then $(H,f)$ is a heap iff $f(r,r,r)=r$ for all $r\in H$.  The first condition of a heap is automatically satisfied since $f$ is associative.  Now, if $(H,f)$ is a heap, then $f(r,r,r)=r$ by condition 2.  Conversely, $f(r,s,s)=f(s,s,r)=t$ by the given equation above.  So $f(s,t,s)=f(s,f(r,s,s),s)=f(s,r,f(s,s,s))=f(s,r,s)$.  As a $3$-group, it has a covering group, so $t=r$ as a result.
+\end{enumerate}
+
+\begin{thebibliography}{0}
+\bibitem{HB}
+R. H. Bruck,
+{\it A Survey of Binary Systems}, Springer-Verlag, 1966
+\bibitem{HP}
+H. Pr\"{u}fer,
+{\it Theorie der Abelschen Gruppen}, Math. Z. 20, 166-187, 1924
+\end{thebibliography}
+%%%%%
+%%%%%
+\end{document}

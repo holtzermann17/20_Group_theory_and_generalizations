@@ -1,0 +1,53 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{Centralizer}
+\pmcreated{2013-03-22 12:35:01}
+\pmmodified{2013-03-22 12:35:01}
+\pmowner{drini}{3}
+\pmmodifier{drini}{3}
+\pmtitle{centralizer}
+\pmrecord{14}{32833}
+\pmprivacy{1}
+\pmauthor{drini}{3}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{20-00}
+\pmsynonym{centraliser}{Centralizer}
+\pmrelated{Normalizer}
+\pmrelated{GroupCentre}
+\pmrelated{ClassEquationTheorem}
+
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\begin{document}
+Let $G$ be a group.  The {\em centralizer} of an element $a \in G$ is defined to be the set $$C(a) = \{x \in G \mid xa = ax\}$$
+Observe that, by definition, $e \in C(a)$, and that if $x, y \in C(a)$, then $xy^{-1}a = xy^{-1}a(yy^{-1})=xy^{-1}yay^{-1}=xay^{-1} = axy^{-1}$, so that $xy^{-1} \in C(a)$. Thus $C(a)$ is a subgroup of $G$.  For $a \neq e$, the subgroup is non-trivial, containing at least $\{e, a\}$.
+
+To illustrate an application of this concept we prove the following lemma.
+
+{\bf Lemma:}\\
+There exists a bijection between the right cosets of $C(a)$ and the conjugates of $a$.
+
+{\bf Proof:}\\
+If $x,y \in G$ are in the same right coset, then $y = cx$ for some $c \in C(a)$. Thus $y^{-1}ay = x^{-1}c^{-1}acx = x^{-1}c^{-1}cax = x^{-1}ax$.
+Conversely, if $y^{-1}ay = x^{-1}ax$ then $xy^{-1}a = axy^{-1}$ and $xy^{-1} \in C(a)$ giving $x,y$ are in the same right coset.
+Let $[a]$ denote the conjugacy class of $a$. It follows that $|[a]| = [G : C(a)]$ and  $|[a]| \mid |G|$.\\
+
+We remark that $a \in Z(G) \iff C(a) = G \iff |[a]| = 1$, where $Z(G)$ denotes the center of $G$.
+
+Now let $G$ be a $p$-group, i.e. a finite group of order $p^n$,
+where $p$ is a prime and $n$ is a positive integer.
+Let $z = |Z(G)|$.
+Summing over elements in distinct conjugacy classes,
+we have $p^n = \sum{|[a]|} = z + \sum_{a \notin Z(G)}{|[a]|}$
+since the center consists precisely of the conjugacy classes of
+cardinality $1$.
+But $|[a]| \mid p^n$, so $p \mid z$.
+However, $Z(G)$ is certainly non-empty, so we conclude that every
+$p$-group has a non-trivial center.
+
+The groups $C(gag^{-1})$ and $C(a)$, for any $g$, are isomorphic.
+%%%%%
+%%%%%
+\end{document}

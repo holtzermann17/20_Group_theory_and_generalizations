@@ -1,0 +1,74 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{UniquenessOfInverseforGroups}
+\pmcreated{2013-03-22 14:14:33}
+\pmmodified{2013-03-22 14:14:33}
+\pmowner{waj}{4416}
+\pmmodifier{waj}{4416}
+\pmtitle{uniqueness of inverse (for groups)}
+\pmrecord{5}{35687}
+\pmprivacy{1}
+\pmauthor{waj}{4416}
+\pmtype{Result}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{20-00}
+\pmclassification{msc}{20A05}
+\pmrelated{UniquenessOfAdditiveIdentityInARing}
+\pmrelated{IdentityElementIsUnique}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\newcommand{\sR}[0]{\mathbb{R}}
+\newcommand{\sC}[0]{\mathbb{C}}
+\newcommand{\sN}[0]{\mathbb{N}}
+\newcommand{\sZ}[0]{\mathbb{Z}}
+
+ \usepackage{bbm}
+ \newcommand{\Z}{\mathbbmss{Z}}
+ \newcommand{\C}{\mathbbmss{C}}
+ \newcommand{\R}{\mathbbmss{R}}
+ \newcommand{\Q}{\mathbbmss{Q}}
+
+
+
+\newcommand*{\norm}[1]{\lVert #1 \rVert}
+\newcommand*{\abs}[1]{| #1 |}
+\begin{document}
+\PMlinkescapeword{lemma}
+
+{\bf Lemma}
+Suppose $(G,\ast)$ is a group. Then every element in $G$ has a
+unique inverse.
+
+\emph{Proof.} Suppose $g\in G$. By the group axioms we know that there
+is an $h\in G$ such that 
+$$ g\ast h = h\ast g = e,$$
+where $e$ is the identity element in $G$. If there is also a $h'\in G$
+satisfying
+$$ g\ast h' = h'\ast g = e,$$
+then 
+$$ h = h\ast e = h \ast(g \ast h') =(h\ast g)\ast h' = e\ast h' = h',$$
+so $h=h'$, and $g$ has a unique inverse. $\Box$
+%%%%%
+%%%%%
+\end{document}

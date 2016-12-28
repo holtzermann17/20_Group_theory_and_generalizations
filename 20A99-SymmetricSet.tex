@@ -1,0 +1,68 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{SymmetricSet}
+\pmcreated{2013-03-22 13:48:26}
+\pmmodified{2013-03-22 13:48:26}
+\pmowner{Koro}{127}
+\pmmodifier{Koro}{127}
+\pmtitle{symmetric set}
+\pmrecord{7}{34528}
+\pmprivacy{1}
+\pmauthor{Koro}{127}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{20A99}
+\pmclassification{msc}{22A05}
+\pmclassification{msc}{15-00}
+\pmclassification{msc}{46-00}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\newcommand{\sR}[0]{\mathbb{R}}
+\newcommand{\sC}[0]{\mathbb{C}}
+\newcommand{\sN}[0]{\mathbb{N}}
+\newcommand{\sZ}[0]{\mathbb{Z}}
+\begin{document}
+{\bf Definition} A subset $A$ of a group $G$ is said to be \emph{symmetric} if $A = A^{-1}$, where $A^{-1} = \{ a^{-1} : a \in A\}$. In other \PMlinkescapetext{words}, $A$ is symmetric if $a^{-1}\in A$ whenever $a\in A$.
+
+If $A$ is a subset of a vector space, then $A$ is said to be \emph{symmetric} if it is symmetric with respect to the additive group structure of the vector space; that is, if $A=\{-a: a\in A\}$ \cite{cristescu}.
+
+\subsubsection{Examples}
+\begin{enumerate}
+\item In $\sR$, examples of symmetric sets are
+intervals of the type $(-k,k)$ with $k>0$, and the sets $\mathbb{Z}$ and $\{-1,1\}$.
+\item Any vector subspace in a vector space is a symmetric set.
+\item If $A$ is any subset of a group, then $A\cap A^{-1}$ 
+and $A\cup A^{-1}$ are symmetric sets. 
+\end{enumerate}
+
+\begin{thebibliography}{9}
+ \bibitem{cristescu} R. Cristescu, \emph{Topological vector spaces},
+ Noordhoff International Publishing, 1977.
+ \bibitem{rudin_fap}
+ W. Rudin, \emph{Functional Analysis},
+ McGraw-Hill Book Company, 1973.
+ \end{thebibliography}
+%%%%%
+%%%%%
+\end{document}

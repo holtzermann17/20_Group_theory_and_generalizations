@@ -1,0 +1,62 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{UnimodularMatrix}
+\pmcreated{2013-03-22 14:57:50}
+\pmmodified{2013-03-22 14:57:50}
+\pmowner{CWoo}{3771}
+\pmmodifier{CWoo}{3771}
+\pmtitle{unimodular matrix}
+\pmrecord{13}{36662}
+\pmprivacy{1}
+\pmauthor{CWoo}{3771}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{20H05}
+\pmclassification{msc}{15A04}
+\pmclassification{msc}{15A09}
+%\pmkeywords{unimodular}
+%\pmkeywords{unimodularity}
+\pmrelated{SpecialLinearGroup}
+\pmdefines{unimodular linear transformation}
+\pmdefines{unimodular row}
+\pmdefines{unimodular column}
+\pmdefines{unimodular group}
+\pmdefines{unimodular vector}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb,amscd}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\begin{document}
+\PMlinkescapeword{mean}
+\PMlinkescapeword{even}
+\PMlinkescapeword{similar}
+\PMlinkescapeword{unimodular}
+
+An $n\times n$ square matrix over a field is \emph{unimodular} if its determinant is 1.  The set of all $n\times n$ unimodular matrices forms a group under the usual matrix multiplication.  This group is known as the special linear group.  Any of its subgroup is simply called a \emph{unimodular group}.  Furthermore, unimodularity is preserved under similarity transformations: if $S$ any $n\times n$ invertible matrix and $U$ is unimodular, then $S^{-1}US$ is unimodular.  In view of the last statement, the special linear group is a normal subgroup of the group of all invertible matrices, known as the general linear group.  
+
+A linear transformation $T$ over an $n$-dimensional vector space $V$ (over a field $F$) is \emph{unimodular} if it can be represented by a unimodular matrix.
+
+The concept of the unimodularity of a square matrix over a field can be readily extended to that of a square matrix over a commutative ring.  Unimodularity in square matrices can even be extended to arbitrary finite-dimensional matrices: suppose $R$ is a commutative ring with 1, and $M$ is an $m\times n$ matrix over $R$ (entries are elements of $R$) with $m\leq n$.  Then $M$ is said to be \emph{unimodular} if it can be ``completed'' to a $n\times n$ square unimodular matrix $N$ over $R$.  By completion of $M$ to $N$ we mean that $m$ of the $n$ rows in $N$ are exactly the rows of $M$.  Of course, the operation of completion from a matrix to a square matrix can be done via columns too.
+
+Let $M$ is an $m\times n$ matrix and $v$ is any row of $M$.  If $M$ is unimodular, then $v$ is unimodular viewed as a $1\times n$ matrix.  A $1\times n$ unimodular matrix is called a \emph{unimodular row}, or a \emph{unimodular vector}.  A $n\times 1$ \emph{unimodular column} can be defined via a similar procedure.  Let $v=(v_1,\ldots,v_n)$ be a $1\times n$ matrix over $R$.  Then the unimodularity of $v$ means that $$v_1R+\cdots+v_nR=R.$$  To see this, let $U$ be a completion of $v$ with $\operatorname{det}(U)=1$.  Since $\operatorname{det}$ is a multilinear operator over the rows (or columns) of $U$, we see that $$1=\operatorname{det}(U)=v_1r_1+\cdots+v_nr_n.$$
+%%%%%
+%%%%%
+\end{document}

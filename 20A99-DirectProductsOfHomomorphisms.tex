@@ -1,0 +1,44 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{DirectProductsOfHomomorphisms}
+\pmcreated{2013-03-22 18:36:00}
+\pmmodified{2013-03-22 18:36:00}
+\pmowner{joking}{16130}
+\pmmodifier{joking}{16130}
+\pmtitle{direct products of homomorphisms}
+\pmrecord{4}{41330}
+\pmprivacy{1}
+\pmauthor{joking}{16130}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{20A99}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\begin{document}
+Assume that $\{f_i:G_i\to H_i\}_{i\in I}$ is a family of homomorphisms between groups. Then we can define the \textit{Cartesian product} (or \textit{unrestricted direct product}) of this family as a homomorphism $$\prod_{i\in I}f_i:\prod_{i\in I} G_i\to \prod_{i\in I}H_i$$ such that $$\bigg( \prod_{i\in I}f_i \bigg) \big( g\big) (j)=f_j(g(j))$$ for each $g\in \prod_{i\in I}G_i$ and $j\in I$.
+
+One can easily show that $\prod_{i\in I}f_i$ is a group homomorphism. Moreover it is clear that $$\bigg( \prod_{i\in I}f_i \bigg) \big( \bigoplus_{i\in I} G_i \big) \subseteq \bigoplus_{i\in I} H_i,$$ so $\prod_{i\in I}f_i$ induces a homomorphism $$\bigoplus_{i\in I}f_i:\bigoplus_{i\in I}G_i\to \bigoplus_{i\in I}H_i,$$ which is a restriction of $\prod_{i\in I}f_i$ to $\bigoplus_{i\in I}G_i$. This homomorphism is called the \textit{direct product} (or \textit{restricted direct product}) of $\{f_i:G_i\to H_i\}_{i\in I}$.
+%%%%%
+%%%%%
+\end{document}

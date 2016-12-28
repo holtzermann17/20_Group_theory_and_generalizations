@@ -1,0 +1,69 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{PolycyclicGroup}
+\pmcreated{2013-03-22 14:40:50}
+\pmmodified{2013-03-22 14:40:50}
+\pmowner{yark}{2760}
+\pmmodifier{yark}{2760}
+\pmtitle{polycyclic group}
+\pmrecord{14}{36285}
+\pmprivacy{1}
+\pmauthor{yark}{2760}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{20F16}
+\pmrelated{SupersolvableGroup}
+\pmdefines{polycyclic}
+\pmdefines{polycyclic series}
+\pmdefines{Hirsch number}
+\pmdefines{Hirsch length}
+
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+\def\normal{\triangleleft}
+
+% The below lines should work as the command
+% \renewcommand{\bibname}{References}
+% without creating havoc when rendering an entry in 
+% the page-image mode.
+\makeatletter
+\@ifundefined{bibname}{}{\renewcommand{\bibname}{References}}
+\makeatother
+\begin{document}
+\PMlinkescapephrase{amenable groups}
+\PMlinkescapeword{cover}
+\PMlinkescapeword{factors}
+\PMlinkescapeword{independent}
+\PMlinkescapeword{refinement}
+\PMlinkescapeword{satisfy}
+\PMlinkescapeword{theorem}
+
+A group $G$ is said to be \emph{polycyclic} if it has a subnormal series
+\[\{1\}=G_0\normal G_1\normal\dots\normal G_{n-1}\normal G_n=G\]
+such that $G_{i+1}/G_i$ is cyclic for each $i=0,\dots,n-1$.
+(Note that this differs from the definition of a supersolvable group in that it does not require each $G_i$ to be normal in $G$.)
+A subnormal series of this form is called a \emph{polycyclic series}.
+
+Polycyclic groups are obviously solvable.
+In fact, the polycyclic groups are precisely those solvable groups that satisfy the maximal condition (that is, those solvable groups all of whose \PMlinkname{subgroups}{Subgroup} are finitely generated).
+In particular, a finite group is polycyclic if and only if it is solvable.
+
+The \emph{Hirsch length} (or \emph{Hirsch number}, named after \PMlinkexternal{Kurt Hirsch}{http://www-history.mcs.st-and.ac.uk/history//Biographies/Hirsch.html})
+of a polycyclic group $G$ is the number of infinite factors in a polycyclic series of $G$.
+This is independent of the choice of polycyclic series, as a consequence of the Schreier Refinement Theorem.
+More generally, the Hirsch length of a polycyclic-by-finite group $G$ is the Hirsch length of a polycyclic normal subgroup of finite index in $G$ (all such subgroups having the same Hirsch length).
+J.~A.~Hillman\cite{hillman} has further extended the concept of Hirsch length to cover all elementary amenable groups.
+
+\begin{thebibliography}{9}
+\bibitem{hillman}
+ Jonathan A.~Hillman,
+ \PMlinkescapetext{{\sl Elementary amenable groups and 4-manifolds 
+                    with Euler characteristic 0}},
+ J.\ Austral.\ Math.\ Soc.\ (Series A) 50 (1991), 160--170.
+ (This paper can be viewed \PMlinkexternal{on the Australian Mathematical Society website}{http://anziamj.austms.org.au/JAMSA/V50/Part1/Hillman/p0160.html}.)
+\end{thebibliography}
+%%%%%
+%%%%%
+\end{document}

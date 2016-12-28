@@ -1,0 +1,68 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ProofOfSecondIsomorphismTheoremForRings}
+\pmcreated{2013-03-22 15:22:39}
+\pmmodified{2013-03-22 15:22:39}
+\pmowner{CWoo}{3771}
+\pmmodifier{CWoo}{3771}
+\pmtitle{proof of second isomorphism theorem for rings}
+\pmrecord{14}{37206}
+\pmprivacy{1}
+\pmauthor{CWoo}{3771}
+\pmtype{Proof}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{20-00}
+\pmclassification{msc}{16-00}
+\pmclassification{msc}{13-00}
+\pmrelated{ProofOfSecondIsomorphismTheorem}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\begin{document}
+In the context of rings, the Second Isomorphism Theorem can be phrased as follows:
+
+If $A$ is an ideal in a ring $R$ and $S$ is a subring of $R$, then 
+\begin{itemize}
+\item $S+A$ is a subring of $R$,
+\item $A$ is an ideal in $S+A$,
+\item $S \cap A$ is an ideal in $S$,
+\item There is an isomorphism $S/(S \cap A)\cong (S+A)/A$.
+\end{itemize}
+
+It should be emphasized that the proof of this is exactly the same as the proof of the corresponding statement for groups. Again, the main idea is to use the First Isomorphism Theorem. (It is quite routine to verify the above statements concerning what's a subring of what and what's an ideal in what. The heart of the matter is the isomorphism, and that is what we are up to here.)
+
+Consider the mapping $f:S\rightarrow (S+A)/A$ where $f(s)=s+A$. Note that this is a ring homomorphism. Furthermore, it is surjective (or ``onto"): If $(s+a)+A$ is an arbitrary element of $(S+A)/A$ with $s\in S$ and $a\in A$, then $f(s)=s+A=s+(a+A)=(s+a)+A$.
+
+Consequently, the First Isomorphism Theorem tells us that
+\[
+S/ker(f)\cong (S+A)/A,\text{ where }ker(f)\text{ denotes the kernel of }f.
+\]
+So it all comes down to showing that $ker(f)=S\cap A$.
+
+Let $x\in ker(f)$. Then $A=f(x)=x+A$. So $x\in A$. Moreover, since $ker(f)\subseteq S$, we have $x\in S$. Thus $x\in S\cap A$ and so $ker(f)\subseteq S\cap A$.
+
+Conversely, suppose $x\in S\cap A$. Then $x\in A$. So $f(x)=x+A=A$. That is, $x\in ker(f)$ and so $S\cap A\subseteq ker(f)$.
+
+Therefore, $ker(f)=S\cap A$.
+%%%%%
+%%%%%
+\end{document}

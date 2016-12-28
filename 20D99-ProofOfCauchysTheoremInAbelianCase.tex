@@ -1,0 +1,52 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ProofOfCauchysTheoremInAbelianCase}
+\pmcreated{2013-03-22 14:30:28}
+\pmmodified{2013-03-22 14:30:28}
+\pmowner{kshum}{5987}
+\pmmodifier{kshum}{5987}
+\pmtitle{proof of Cauchy's theorem in abelian case}
+\pmrecord{7}{36045}
+\pmprivacy{1}
+\pmauthor{kshum}{5987}
+\pmtype{Proof}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{20D99}
+\pmclassification{msc}{20E07}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\begin{document}
+Suppose $G$ is abelian and the order of $G$ is $h$. Let $g_1$, $g_2,\ldots, g_h$ be the elements of $G$, and for $i=1,\ldots, h$, let $a_i$ be the order of $g_i$.
+
+Consider the direct sum
+\[
+  H = \bigoplus_{i=1}^h \mathbb{Z}/a_i\mathbb{Z}.
+\]
+The order of $H$ is obviously $a_1a_2\cdots a_h$. We can define a group homomorphism $\theta$ from $H$ to $G$ by
+\[
+  (x_1,\ldots,x_h) \mapsto g_1^{x_1}\cdots g_h^{x_h}.
+\]
+$\theta$ is certainly surjective. So $|H| = |G|\cdot|\ker(\theta)|$. Since $p$ is a prime factor of $G$, $p$ divides |H|, and therefore must divide one of the $a_i$'s, say $a_1$. Then $g_1^{a_1/p}$ is an element of order $p$.
+%%%%%
+%%%%%
+\end{document}

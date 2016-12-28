@@ -1,0 +1,65 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{NdivisibleGroup}
+\pmcreated{2013-03-22 17:27:30}
+\pmmodified{2013-03-22 17:27:30}
+\pmowner{CWoo}{3771}
+\pmmodifier{CWoo}{3771}
+\pmtitle{$n$-divisible group}
+\pmrecord{5}{39841}
+\pmprivacy{1}
+\pmauthor{CWoo}{3771}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{20K99}
+\pmsynonym{n-divisible group}{NdivisibleGroup}
+\pmdefines{n-divisible}
+\pmdefines{$n$-divisible}
+
+\usepackage{amssymb,amscd}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{mathrsfs}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+\usepackage{amsthm}
+% making logically defined graphics
+%%\usepackage{xypic}
+\usepackage{pst-plot}
+\usepackage{psfrag}
+
+% define commands here
+\newtheorem{prop}{Proposition}
+\newtheorem{thm}{Theorem}
+\newtheorem{ex}{Example}
+\newcommand{\real}{\mathbb{R}}
+\newcommand{\pdiff}[2]{\frac{\partial #1}{\partial #2}}
+\newcommand{\mpdiff}[3]{\frac{\partial^#1 #2}{\partial #3^#1}}
+\begin{document}
+Let $n$ be a positive integer and $G$ an abelian group.  An element $x\in G$ is said to be divisible by $n$ if there is $y\in G$ such that $x=ny$.
+
+By the unique factorization of $\mathbb{Z}$, write $n=p_1^{m_1}p_2^{m_2}\cdots p_k^{m_k}$ where each $p_i$ is a prime number (distinct from one another) and $m_i$ a positive integer.
+\begin{prop} If $x$ is divisible by $n$, then $x$ is divisible by $p_1,p_2,\ldots,p_k$. \end{prop}
+\begin{proof}
+If $x$ is divisible by $n$, write $x=ny$, where $y\in G$.  Since $p_i$ divides $n$, write $n=p_it_i$ where $t_i$ is a positive integer.  Then $x=p_it_i(y)=p_i(t_iy)$.  Since $t_iy\in G$, $x$ is divisible by $p_i$.
+\end{proof}
+
+\textbf{Definition}.  An abelian group $G$ such that every element is divisible by $n$ is called an $n$-divisible group.  Clearly, every group is $1$-divisible.
+
+For example, the subset $D\subseteq \mathbb{Q}$ of all decimal fractions is $10$-divisible.  $D$ is also $2$ and $5$-divisible.  In general, we have the following:
+\begin{prop} If $G$ is $n$-divisible, it is also $n^s$-divisible for every non-negative integer $s$. \end{prop}
+\begin{prop} Suppose $p$ and $q$ are coprime, then $G$ is $p$-divisible and $q$-divisible iff it is $pq$-divisible.  \end{prop}
+\begin{proof} This follows from proposition 1 and the fact that if $p|n$, $q|n$ and $\gcd(p,q)=1$, then $pq|n$. \end{proof}
+\begin{prop} $G$ is $n$-divisible iff $G$ is $p$-divisible for every prime $p$ dividing $n$. \end{prop}
+\begin{proof}
+Suppose $G$ is $n$-divisible.  By proposition 1, every element $x\in G$ is divisible by $p$, so that $G$ is $p$-divisible.  Conversely, suppose $G$ is $p$-divisible for every $p|n$.  Write $n=p_1^{m_1}p_2^{m_2}\cdots p_k^{m_k}$.  Then if $G$ is $p_i^{m_i}$-divisible for every $i=1,\ldots, k$.  Since $p_i^{m_i}$ and $p_j^{m_j}$ are coprime, $G$ is $n$-divisible by induction and proposition 3.
+\end{proof}
+
+\textbf{Remark}.  $G$ is a divisible group iff $G$ is $p$-divisible for every prime $p$.
+%%%%%
+%%%%%
+\end{document}

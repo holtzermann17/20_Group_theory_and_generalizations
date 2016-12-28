@@ -1,0 +1,55 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{GreensEquivalences}
+\pmcreated{2013-03-22 14:23:12}
+\pmmodified{2013-03-22 14:23:12}
+\pmowner{mathcam}{2727}
+\pmmodifier{mathcam}{2727}
+\pmtitle{Green's equivalences}
+\pmrecord{9}{35881}
+\pmprivacy{1}
+\pmauthor{mathcam}{2727}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{20Mxx}
+\pmsynonym{Green's relations}{GreensEquivalences}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\begin{document}
+Let $S$ be a semigroup.  Green's equivalences are five \PMlinkname{equivalences}{EquivalenceRelation} on $S$: $\mathcal{L, R, H, D, J}$
+
+For all $x,y\in S$,\\
+$x\mathcal{L}y$ if $S^1x=S^1y$, i.e. $sx=y, ty=x$ for some $s,t\in S^1$\\
+$x\mathcal{R}y$ if $xS^1=yS^1$, i.e. $xs=y, yt=x$ for some $s,t\in S^1$
+
+$x\mathcal{J}y$ if $S^1xS^1=S^1yS^1$, i.e. $sxt=y, uyv=x$ for some $s,t,u,v\in S^1$
+
+$x\mathcal{H}y$ if $x\mathcal{L}y$ and $x\mathcal{R}y$, i.e. $\mathcal{H=L\cap R}$\\
+$x\mathcal{D}y$ if $\exists z\in S$ such that $x\mathcal{L}z$ and $z\mathcal{R}y$, i.e. $\mathcal{D=L\circ R}$
+
+It is clear that $\mathcal{H}\subseteq\mathcal{L},\mathcal{H}\subseteq\mathcal{R},\mathcal{L}\subseteq\mathcal{D},\mathcal{R}\subseteq\mathcal{D},\mathcal{D}\subseteq\mathcal{J}$
+
+These \PMlinkescapetext{equivalences} play a fundamental role in understanding the \PMlinkescapetext{structure} of semigroups.
+%%%%%
+%%%%%
+\end{document}

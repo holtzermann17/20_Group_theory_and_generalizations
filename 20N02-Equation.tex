@@ -1,0 +1,100 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{Equation}
+\pmcreated{2013-03-22 15:28:33}
+\pmmodified{2013-03-22 15:28:33}
+\pmowner{pahio}{2872}
+\pmmodifier{pahio}{2872}
+\pmtitle{equation}
+\pmrecord{30}{37330}
+\pmprivacy{1}
+\pmauthor{pahio}{2872}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{20N02}
+%\pmkeywords{equation}
+%\pmkeywords{root}
+%\pmkeywords{solution}
+\pmrelated{Equality2}
+\pmrelated{AlgebraicEquation}
+\pmrelated{DiophantineEquation}
+\pmrelated{TrigonometricEquation}
+\pmrelated{DifferenceEquation}
+\pmrelated{DifferentialEquation}
+\pmrelated{IntegralEquation}
+\pmrelated{FunctionalEquation}
+\pmrelated{HomogeneousEquation}
+\pmrelated{ProportionEquation}
+\pmrelated{FiniteDifference}
+\pmrelated{RecurrenceRelation}
+\pmrelated{CharacteristicEquation}
+\pmdefines{equate}
+\pmdefines{side}
+\pmdefines{root}
+\pmdefines{solution}
+\pmdefines{root of an equation}
+\pmdefines{left hand side}
+\pmdefines{right hand side}
+\pmdefines{multiplicity of the root}
+\pmdefines{order of the root}
+\pmdefines{multiple root}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+ \usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\theoremstyle{definition}
+\newtheorem*{thmplain}{Theorem}
+
+\begin{document}
+\textbf{Equation}
+
+An {\em equation} concerns usually elements of a certain set $M$, where one can say if two elements are equal.\, In the simplest case, $M$ has one binary operation ``$*$'' producing as result some elements of $M$, and these can be compared.\, Then, an equation in\, $(M,\,*)$\, is a proposition of the form
+\begin{align}
+                             E_1 = E_2,
+\end{align}
+where one has {\em equated} two expressions $E_1$ and $E_2$ formed with ``$*$'' of the elements or indeterminates of $M$.\, We call the expressions $E_1$ and $E_2$ respectively the {\em left hand side} and the {\em right hand side} of the equation (1).\\
+
+\textbf{Example.}\, Let $S$ be a set and $2^S$ the set of its subsets.\, In the groupoid\, $(2^S,\,\smallsetminus)$,\, where ``$\smallsetminus$'' is the set difference, we can write the equation
+                $$(A\!\smallsetminus\!B)\!\smallsetminus\!B = A\!\smallsetminus\!B$$
+(which is always true).\\
+
+Of course, $M$ may be equipped with more operations or be a module with some ring of multipliers --- then an equation (1) may \PMlinkescapetext{contain} them.
+
+But one need not assume any algebraic structure for the set $M$ where the expressions $E_1$ and $E_2$ are values or where they \PMlinkescapetext{represent generic} elements.\, Such a situation would occur e.g. if one has a continuous mapping $f$ from a topological space $L$ to another $M$; then one can consider an equation
+$$f(x) = y.$$
+A somewhat \PMlinkescapetext{comparable} case is the equation
+$$\dim{V} = 2$$ 
+where $V$ is a certain or a \PMlinkescapetext{generic} vector space; both \PMlinkescapetext{sides represent} elements of the extended real number system.\\
+
+\textbf{Root of equation}
+
+If an equation (1) in $M$ \PMlinkescapetext{contains} one indeterminate, say $x$, then a value of $x$ which satisfies (1), i.e. makes it true, is called a {\em root} or a {\em solution} of the equation.
+Especially, if we have a polynomial equation\, $f(x) = 0$,\, we may speak of the \PMlinkescapetext{{\em multiplicity}} or the {\em \PMlinkescapetext{order of a root}} $x_0$; it is the multiplicity of the zero $x_0$ of the polynomial $f(x)$.  A {\em multiple root} has multiplicity greater than 1.\\
+
+\textbf{Example.}\, The equation
+                           $$x^2\!+\!1 = x$$
+in the system $\mathbb{C}$ of the complex numbers has as its roots the numbers
+      $$x := \frac{1\!\pm\!i\sqrt{3}}{2},$$
+which, by the way, are the primitive sixth roots of unity.\, Their multiplicities are 1.
+%%%%%
+%%%%%
+\end{document}

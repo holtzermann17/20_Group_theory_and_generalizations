@@ -1,0 +1,55 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ProofThatANontrivialNormalSubgroupOfAFinitePgroupGAndTheCenterOfGHaveNontrivialIntersection}
+\pmcreated{2013-03-22 14:21:07}
+\pmmodified{2013-03-22 14:21:07}
+\pmowner{rm50}{10146}
+\pmmodifier{rm50}{10146}
+\pmtitle{proof that a nontrivial normal subgroup of a finite $p$-group $G$ and the center of $G$ have nontrivial intersection}
+\pmrecord{9}{35828}
+\pmprivacy{1}
+\pmauthor{rm50}{10146}
+\pmtype{Proof}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{20D20}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\begin{document}
+Define $G$ to act on $H$ by conjugation; that is, for $g\in G$, $h\in H$, define
+\[g \cdot h = ghg^{-1}\]
+Note that $g\cdot h\in H$ since $H\triangleleft G$. This is easily seen to be a well-defined group action.
+
+Now, the set of invariants of $H$ under this action are
+\[G_H=\{h \in H \  \lvert \  g \cdot h = h \  \forall g\in G\} = \{h \in H \  \lvert \  ghg^{-1} = h \  \forall g\in G\}=H \cap Z(G)\]
+
+The class equation theorem states that
+\[\lvert H\rvert = \lvert G_H\rvert + \sum_{i=1}^{r}[G:G_{x_{i}}]\]
+where the $G_{x_{i}}$ are proper subgroups of $G$, and thus that
+\[\lvert G_H\rvert = \lvert H\rvert - \sum_{i=1}^{r}[G:G_{x_{i}}]\]
+
+We now use elementary group theory to show that $p$ divides each term on the right, and conclude as a result that $p$ divides $\lvert G_H\rvert$, so that $G_H=H\cap Z(G)$ cannot be trivial.
+
+As $G$ is a nontrivial finite $p$-group, it is obvious from Cauchy's theorem that $|G|=p^{n}$ for $n>0$. Since $H$ and the $G_{x_i}$ are subgroups of $G$, each either is trivial or has order a power of $p$, by Lagrange's theorem. Since $H$ is nontrivial, its order is a nonzero power of $p$. Since each $G_{x_i}$ is a proper subgroup of $G$ and has order a power of $p$, it follows that $[G:G_{x_i}]$ also has order a nonzero power of $p$.
+%%%%%
+%%%%%
+\end{document}

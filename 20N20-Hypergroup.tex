@@ -1,0 +1,102 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{Hypergroup}
+\pmcreated{2013-03-22 18:38:22}
+\pmmodified{2013-03-22 18:38:22}
+\pmowner{CWoo}{3771}
+\pmmodifier{CWoo}{3771}
+\pmtitle{hypergroup}
+\pmrecord{9}{41380}
+\pmprivacy{1}
+\pmauthor{CWoo}{3771}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{20N20}
+\pmsynonym{multigroupoid}{Hypergroup}
+\pmsynonym{multisemigroup}{Hypergroup}
+\pmsynonym{multigroup}{Hypergroup}
+\pmrelated{group}
+\pmdefines{hypergroupoid}
+\pmdefines{hypersemigroup}
+\pmdefines{left identity}
+\pmdefines{right identity}
+\pmdefines{identity}
+\pmdefines{absolute identity}
+\pmdefines{left inverse}
+\pmdefines{right inverse}
+\pmdefines{inverse}
+\pmdefines{absolute identity}
+
+\usepackage{amssymb,amscd}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{mathrsfs}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+\usepackage{amsthm}
+% making logically defined graphics
+%%\usepackage{xypic}
+\usepackage{pst-plot}
+
+% define commands here
+\newcommand*{\abs}[1]{\left\lvert #1\right\rvert}
+\newtheorem{prop}{Proposition}
+\newtheorem{thm}{Theorem}
+\newtheorem{ex}{Example}
+\newcommand{\real}{\mathbb{R}}
+\newcommand{\pdiff}[2]{\frac{\partial #1}{\partial #2}}
+\newcommand{\mpdiff}[3]{\frac{\partial^#1 #2}{\partial #3^#1}}
+\begin{document}
+\emph{Hypergroups} are generalizations of groups.  Recall that a group is set with a binary operation on it satisfying a number of conditions.  If this binary operation is taken to be multivalued, then we arrive at a hypergroup.  In order to make this precise, we need some preliminary concepts:
+
+\textbf{Definition}.  A \emph{hypergroupoid}, or \emph{multigroupoid}, is a non-empty set $G$, together with a multivalued function $\cdot: G\times G\Rightarrow G$ called the \emph{multiplication} on $G$.  
+
+We write $a\cdot b$, or simply $ab$, instead of $\cdot(a,b)$.  Furthermore, if $ab=\lbrace c\rbrace$, then we use the abbreviation $ab=c$.
+
+A hypergroupoid is said to be \emph{commutative} if $ab=ba$ for all $a,b\in G$.  Defining associativity of $\cdot$ on $G$, however, is trickier:
+
+Given a hypergroupoid $G$, the multiplication $\cdot$ induces a binary operation (also written $\cdot$) on $P(G)$, the powerset of $P$, given by $$A\cdot B:=\bigcup \lbrace a\cdot b\mid a\in A\mbox{ and } b\in B\rbrace.$$
+As a result, we have an induced groupoid $P(G)$.  Instead of writing $\lbrace a\rbrace B$, $A\lbrace b\rbrace$, and $\lbrace a\rbrace \lbrace b\rbrace$, we write $aB, Ab$, and $ab$ instead.  From now on, when we write $(ab)c$, we mean
+``first, take the product of $a$ and $b$ via the multivalued binary operation $\cdot$ on $G$, then take the product of the set $ab$ with the element $c$, under the induced binary operation on $P(G)$''.  Given a hypergroupoid $G$, there are two types of associativity we may define:
+\begin{description}
+\item[Type 1.] $(ab)c\subseteq a(bc)$, and
+\item[Type 2.] $a(bc)\subseteq (ab)c$.
+\end{description} 
+$G$ is said to be \emph{associative} if it satisfies both types of associativity laws.  An associative hypergroupoid is called a \emph{hypersemigroup}.  We are now ready to formally define a hypergroup.
+
+\textbf{Definition}.  A \emph{hypergroup} is a hypersemigroup $G$ such that $aG=Ga=G$ for all $a\in G$.
+
+For example, let $G$ be a group and $H$ a subgroup of $G$.  Let $M$ be the collection of all left cosets of $H$ in $G$.  For $aH,bH\in M$, set $$aH\cdot bH := \lbrace cH\mid c=ahb\mbox{, }h\in H\rbrace.$$  Then $M$ is a hypergroup with multiplication $\cdot$.
+
+If the multiplication in a hypergroup $G$ is single-valued, then $G$ is a \PMlinkname{$2$-group}{PolyadicSemigroup}, and therefore a group (see \PMlinkname{proof here}{PolyadicSemigroup}).
+
+\textbf{Remark}.  A hypergroup is also known as a \emph{multigroup}, although some call a multigroup as a hypergroup with a designated identity element $e$, as well as a designated inverse for every element with respect $e$.  Actually identities and inverses may be defined more generally for hypergroupoids:
+
+Let $G$ be a hypergroupoid.  Identity elements are defined via the following three sets:
+\begin{enumerate}
+\item (set of \emph{left identities}): $I_L(G):=\lbrace e\in G\mid a\in ea\mbox{ for all }a\in G\rbrace$,
+\item (set of \emph{right identities}): $I_R(G):=\lbrace e\in G\mid a\in ae\mbox{ for all }a\in G\rbrace$, and 
+\item (set of \emph{identities}): $I(G)=I_L(G)\cap I_R(G)$.  
+\end{enumerate}
+$e \in L(G)$ is called an \emph{absolute identity} if $ea=ae=a$ for all $a\in G$.  If $e,f\in G$ are both absolute identities, then $e = ef = f$, so $G$ can have at most one absolute identity.
+
+Suppose $e\in I_L(G)\cup I_R(G)$ and $a\in G$.  An element $b\in G$ is said to be a \emph{left inverse} of $a$ with respect to $e$ if $e\in ba$.  \emph{Right inverses} of $a$ are defined similarly.  If $b$ is both a left and a right inverse of $a$ with respect to $e$, then $b$ is called an \emph{inverse} of $a$ with respect to $e$.
+
+Thus, one may say that a multigroup is a hypergroup $G$ with an identity $e\in G$, and a function $^{-1}:G\to G$ such that $a^{-1}:=^{-1}(a)$ is an inverse of $a$ with respect to $e$.
+
+In the example above, $M$ is a multigroup in the sense given in the remark above.  The designated identity is $H$ (in fact, this is the only identity in $M$), and for every $aH \in M$, its designated inverse is provided by $a^{-1}H$ (of course, this may not be its only inverse, as any $bH$ such that $ahb=e$ for some $h\in H$ will do).
+
+\begin{thebibliography}{9}
+\bibitem{rhb} R. H. Bruck, \emph{A Survey on Binary Systems}, Springer-Verlag, New York, 1966.
+\bibitem{dmoo} M. Dresher, O. Ore, \emph{Theory of Multigroups}, Amer. J. Math. vol. 60, pp. 705-733, 1938.
+\bibitem{jeeoo} J.E. Eaton, O. Ore, \emph{Remarks on Multigroups}, Amer. J. Math. vol. 62, pp. 67-71, 1940.
+\bibitem{lwg} L. W. Griffiths, \emph{On Hypergroups, Multigroups, and Product Systems}, Amer. J. Math. vol. 60, pp. 345-354, 1938.
+\bibitem{apd} A. P. Di\v{c}man, \emph{On Multigroups whose Elements are Subsets of a Group}, Moskov. Gos. Ped. Inst. U\v{c}. Zap. vol. 71, pp. 71-79, 1953
+\end{thebibliography}
+%%%%%
+%%%%%
+\end{document}

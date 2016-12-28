@@ -1,0 +1,70 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{GeneralCommutativity}
+\pmcreated{2014-05-10 21:59:41}
+\pmmodified{2014-05-10 21:59:41}
+\pmowner{pahio}{2872}
+\pmmodifier{pahio}{2872}
+\pmtitle{general commutativity}
+\pmrecord{10}{41807}
+\pmprivacy{1}
+\pmauthor{pahio}{2872}
+\pmtype{Theorem}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{20-00}
+\pmrelated{CommutativeLanguage}
+\pmrelated{GeneralAssociativity}
+\pmrelated{AbelianGroup2}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+ \usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\theoremstyle{definition}
+\newtheorem*{thmplain}{Theorem}
+
+\begin{document}
+\textbf{Theorem.}\, If the binary operation ``$\cdot$'' on the set $S$ is commutative, then for each\, 
+$a_1, a_2,\ldots,a_n$ in $S$ and for each permutation $\pi$ on\, $\{1,\,2,\,\ldots,\,n\}$,\, one has
+\begin{align}
+\prod_{i=1}^na_{\pi(i)} \;=\; \prod_{i=1}^na_i.
+\end{align}
+
+\emph{Proof.}\, If\, $n = 1$,\, we have nothing to prove.\, 
+Make the induction hypothesis, that (1) is true for\, 
+$n = m\!-\!1$.\, Denote
+$$\pi^{-1}(m) \;=\; k, \quad \mbox{i.e.} \quad \pi(k) = m.$$
+Then
+$$\prod_{i=1}^ma_{\pi(i)} \;=\; 
+\prod_{i=1}^{k-1}a_{\pi(i)}\cdot a_{\pi(k)}\cdot\prod_{i=1}^{m-k}a_{\pi(k+i)} \;=\;
+\left(\prod_{i=1}^{k-1}a_{\pi(i)}\cdot\prod_{i=1}^{m-k}a_{\pi(k+i)}\right)\cdot a_m,$$
+where $a_m$ has been moved to the end by the induction 
+hypothesis.\, But the product in the parenthesis, which 
+\PMlinkescapetext{contains} exactly the factors 
+$a_1, a_2, \ldots, a_{m-1}$ in a certain \PMlinkescapetext{order}, is also by the induction hypothesis equal to $\prod_{i=1}^{m-1}a_i$.\, Thus we obtain
+$$\prod_{i=1}^ma_{\pi(i)} \;=\; \prod_{i=1}^{m-1}a_i\cdot a_m \;=\; \prod_{i=1}^ma_i,$$ 
+whence (1) is true for\, $n = m$.\\
+
+\textbf{Note.}\, There is mentionned in the Remark of the entry ``\PMlinkid{commutativity}{2148}'' a more general notion of commutativity.
+
+%%%%%
+%%%%%
+\end{document}

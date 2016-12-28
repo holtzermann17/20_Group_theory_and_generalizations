@@ -1,0 +1,84 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{SemigroupOfTransformations}
+\pmcreated{2013-03-22 13:07:36}
+\pmmodified{2013-03-22 13:07:36}
+\pmowner{mclase}{549}
+\pmmodifier{mclase}{549}
+\pmtitle{semigroup of transformations}
+\pmrecord{6}{33561}
+\pmprivacy{1}
+\pmauthor{mclase}{549}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{20M20}
+\pmsynonym{transformation semigroup}{SemigroupOfTransformations}
+\pmdefines{full transformation semigroup}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\begin{document}
+Let $X$ be a set.  A transformation of $X$ is a function from $X$ to $X$.
+
+If $\alpha$ and $\beta$ are transformations on $X$, then their product $\alpha \beta$ is defined (writing functions on the right) by $(x)(\alpha \beta) = ((x) \alpha)\beta$.
+
+With this definition, the set of all transformations on $X$ becomes a semigroup, the \emph{full semigroupf of transformations} on $X$, denoted $\mathcal{T}_X$.
+
+More generally, a \emph{semigroup of transformations} is any subsemigroup of a full set of transformations.
+
+When $X$ is finite, say $X = \{x_1, x_2, \dots, x_n\}$, then the transformation $\alpha$ which maps $x_i$ to $y_i$ (with $y_i \in X$, of course) is often written:
+$$
+\alpha = 
+\begin{pmatrix}
+x_1 & x_2 & \dots & x_n \\
+y_1 & y_2 & \dots & y_n 
+\end{pmatrix}
+$$
+
+With this notation it is quite easy to \PMlinkescapetext{calculate} products.  For example, if $X = \{1, 2, 3, 4\}$, then
+$$
+\begin{pmatrix}
+1 & 2 & 3 & 4 \\
+3 & 2 & 1 & 2 
+\end{pmatrix}
+\begin{pmatrix}
+1 & 2 & 3 & 4 \\
+2 & 3 & 3 & 4 
+\end{pmatrix}
+=
+\begin{pmatrix}
+1 & 2 & 3 & 4 \\
+3 & 3 & 2 & 3 
+\end{pmatrix}
+$$
+
+When $X$ is infinite, say $X = \{1, 2, 3, \dotsc \}$, then this notation is still useful for illustration in cases where the transformation pattern is apparent.  For example, if $\alpha \in \mathcal{T}_X$ is given by $\alpha \colon n \mapsto n+1$, we can write
+$$
+\alpha = 
+\begin{pmatrix}
+1 & 2 & 3 & 4 & \dots \\
+2 & 3 & 4 & 5 & \dots 
+\end{pmatrix}
+$$
+%%%%%
+%%%%%
+\end{document}

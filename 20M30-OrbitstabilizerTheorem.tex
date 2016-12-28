@@ -1,0 +1,48 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{OrbitstabilizerTheorem}
+\pmcreated{2013-03-22 12:23:10}
+\pmmodified{2013-03-22 12:23:10}
+\pmowner{yark}{2760}
+\pmmodifier{yark}{2760}
+\pmtitle{orbit-stabilizer theorem}
+\pmrecord{22}{32173}
+\pmprivacy{1}
+\pmauthor{yark}{2760}
+\pmtype{Theorem}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{20M30}
+
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\begin{document}
+Suppose that $G$ is a group \PMlinkname{acting}{GroupAction} on a set $X$.
+For each $x\in X$, let $Gx$ be the orbit of $x$,
+let $G_x$ be the stabilizer of $x$,
+and let ${\cal L}_x$ be the set of left cosets of $G_x$.
+Then for each $x\in X$ the function $f\colon Gx\to{\cal L}_x$
+defined by $gx\mapsto gG_x$ is a bijection.
+In particular,
+\[
+  |Gx| = [G:G_x]
+\]
+and
+\[
+  |Gx|\cdot|G_x| = |G|
+\]
+for all $x\in X$.
+
+{\bf Proof}:\\
+If $y\in Gx$ is such that $y=g_1x=g_2x$ for some $g_1,g_2\in G$,
+then we have $g_2^{-1}g_1x=g_2^{-1}g_2x=1x=x$, and so $g_2^{-1}g_1\in G_x$,
+and therefore $g_1G_x=g_2G_x$.
+This shows that $f$ is well-defined.
+
+It is clear that $f$ is surjective.
+If $gG_x = g'G_x$, then $g = g'h$ for some $h \in G_x$,
+and so $gx = (g'h)x= g'(hx) = g'x$.
+Thus $f$ is also injective.
+%%%%%
+%%%%%
+\end{document}

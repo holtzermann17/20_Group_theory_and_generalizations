@@ -1,0 +1,106 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ReducedWord}
+\pmcreated{2013-03-22 16:11:47}
+\pmmodified{2013-03-22 16:11:47}
+\pmowner{Mazzu}{14365}
+\pmmodifier{Mazzu}{14365}
+\pmtitle{reduced word}
+\pmrecord{16}{38289}
+\pmprivacy{1}
+\pmauthor{Mazzu}{14365}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{20E05}
+%\pmkeywords{free semigroup with involution}
+%\pmkeywords{free monoid with involution}
+%\pmkeywords{free group}
+\pmdefines{reduced word}
+\pmdefines{reduced form}
+\pmdefines{reduction}
+
+% this is the default PlanetMath preamble. as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%\usepackage{xypic} 
+
+% there are many more packages, add them here as you need them
+
+\newtheorem{thm}{Theorem}
+
+
+% define commands here 
+
+\begin{document}
+\PMlinkescapeword{reduce}
+\PMlinkescapeword{reduction}
+\PMlinkescapeword{reduced}
+
+
+\newcommand{\cbra}[1]{\left( #1 \right)}
+\newcommand{\qbra}[1]{\left[ #1 \right]}
+\newcommand{\gbra}[1]{\left\{ #1 \right\}}
+\newcommand{\abra}[1]{\left\langle #1 \right\rangle}
+
+\newcommand{\mipres}[2]{\mathrm{Inv}^1\abra{#1 | #2}}
+\newcommand{\sipres}[2]{\mathrm{Inv}\abra{#1 | #2}}
+\newcommand{\redu}{\mathrm{red}}
+
+\newcommand{\double}[1]{\cbra{#1\amalg #1^{-1}}}
+\newcommand{\doubles}[1]{\cbra{#1\amalg #1^{-1}}^\ast}
+\newcommand{\doublep}[1]{\cbra{#1\amalg #1^{-1}}^+}
+\newcommand{\fg}{\mathrm{FG}}
+
+Let $X$ be a set, and $\doubles{X}$ the free monoid with involution on $X$. An element $w\in\doubles{X}$ can be uniquely written by juxtaposition of elements of $\double X$, i.e. $$w=w_1w_2...w_n,\ \ w_j\in\double X,$$
+then we may improperly say that  $w$ is a word on $\doubles X$, considering $\doubles X$ simply as the free monoid on $\double X$.
+
+The word $w=w_1w_2...w_n\in\doubles X$ is called \emph{reduced} when $w_j\neq w_{j+1}^{-1}$ for each $j\in\gbra{1,2,...,n-1}$.
+
+Now, starting from a word $w=w_1w_2...w_n\in\doubles X$, we can iteratively erase factors $w_j w_{j+1}$ from $w$  whenever $w_j= w_{j+1}^{-1}$, and this iterative process, that we call \emph{reduction} of $w$, produce a reduced word $w'\in\doubles X$. At each step of the process there may be more than one couple of adiacent letters candidate to be erased, so we may ask if different sequences of erasing may produce different reduced words. The following theorem answers the question.
+\begin{thm}
+Each couple of reduction of a same word $w\in\doubles X$ produce the same reduced word $w'\in\doubles X$.
+\end{thm}
+
+The unique reduced word $w'$ is called the \emph{reduced form} of $w$. Thus there exists a well define map $\redu:\doubles X\rightarrow \doubles{X}$ that send a word $w$ to his reduced form $\redu(w)$.
+
+We can use the map $\redu$ to build the free group on $X$ in the following way. Let $\fg(X)=\redu\cbra{\doublep X}$ be the set of reduced words on $\double X$, i.e. $$\fg(X)=\redu\cbra{\doublep X}=\gbra{\redu(w)\,|\,w\in\doublep X}=\gbra{w\in\doublep X\,|\,w=\redu(u)}.$$
+Note that $\redu\cbra{\doubles X}=\redu\cbra{\doublep X}$, being that $\redu(xx^{-1})=\varepsilon$, where $\varepsilon$ denotes the empty word. Now, we define a product $\cdot$ on $\fg(X)$ that makes it a group: given $v,w\in\fg(X)$ we define $$v\cdot w=\redu(vw),$$ i.e. $v\cdot w$ is the reduced form of the juxtaposition of the words $v$ and $w$. The we have the following result.
+\begin{thm}
+$\fg(X)$ with the product $\cdot$ is a group. Moreover, it is the \emph{free group} on $X$, in the sense that it solves the following universal problem: given a group  $G$ and a map $\Phi:X\rightarrow G$, a group homomorphism $\overline\Phi:\fg(X)\rightarrow G$ exists such that the following diagram commutes:
+$$
+\xymatrix{
+& X \ar[r]^{\iota} \ar[d]_{\Phi} & \fg(X) \ar[dl]^{\overline{\Phi}} \\
+& G &
+}
+$$
+where $\iota:X\rightarrow \fg(X)$ is the inclusion map. 
+\end{thm}
+It is well known from universal algebra that $\fg(X)$ is unique up to isomorphisms. With this construction, the map $\redu:\doublep X\rightarrow\fg(X)$ [resp. $\redu:\doubles X\rightarrow\fg(X)$] is the quotient projection from 
+the free semigroup with involution on $X$ [resp. the free monoid with involution on $X$] and the free group on $X$.
+
+
+\begin{thebibliography}{9}
+\bibitem{b:howie} J.M. Howie, \emph{Fundamentals of Semigroup Theory}, Oxford University Press, Oxford, 1991.
+\bibitem{b:lynsch} R. Lyndon and P. Schupp, \emph{Combinatorial Group Theory}, Springer-Verlag, 1977.
+\bibitem{b:petrich} N. Petrich, \emph{Inverse Semigroups}, Wiley, New York, 1984.
+\end{thebibliography}
+ 
+
+
+
+%%%%%
+%%%%%
+\end{document}

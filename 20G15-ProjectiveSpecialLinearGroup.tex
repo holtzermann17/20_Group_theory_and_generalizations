@@ -1,0 +1,92 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ProjectiveSpecialLinearGroup}
+\pmcreated{2013-03-22 15:09:46}
+\pmmodified{2013-03-22 15:09:46}
+\pmowner{alozano}{2414}
+\pmmodifier{alozano}{2414}
+\pmtitle{projective special linear group}
+\pmrecord{4}{36912}
+\pmprivacy{1}
+\pmauthor{alozano}{2414}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{20G15}
+\pmsynonym{PSL}{ProjectiveSpecialLinearGroup}
+\pmrelated{TheoremsOfSpecialLinearGroupOverAFiniteField}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsthm}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\newtheorem{thm}{Theorem}
+\newtheorem*{defn}{Definition}
+\newtheorem{prop}{Proposition}
+\newtheorem{lemma}{Lemma}
+\newtheorem{cor}{Corollary}
+
+\theoremstyle{definition}
+\newtheorem{exa}{Example}
+
+% Some sets
+\newcommand{\Nats}{\mathbb{N}}
+\newcommand{\Ints}{\mathbb{Z}}
+\newcommand{\Reals}{\mathbb{R}}
+\newcommand{\Complex}{\mathbb{C}}
+\newcommand{\Rats}{\mathbb{Q}}
+\newcommand{\Gal}{\operatorname{Gal}}
+\newcommand{\Cl}{\operatorname{Cl}}
+\newcommand{\SL}{\operatorname{SL}}
+\newcommand{\PSL}{\operatorname{PSL}}
+\begin{document}
+\begin{defn}
+Let $V$ be a vector space over a field $F$ and let $\SL(V)$ be the special linear group. Let $Z$ be the center of $\SL(V)$. The {\bf projective special linear group} associated to $V$ is the quotient group $\SL(V)/Z$ and is usually denoted by $\PSL(V)$. 
+
+When $V$ is a finite dimensional vector space over $F$ (of dimension $n$) then we write $\PSL(n,F)$ or $\PSL_n(F)$. We also identify the linear transformations of $V$ with $n\times n$ matrices, so $\PSL$ may be regarded as a quotient of the group of matrices $\SL(n,F)$ by its center.
+\end{defn}
+
+Note: see the entry on projective space for the origin of the terminology.
+
+\begin{thm}
+The center $Z$ of $\SL(n,F)$ is the group of all scalar matrices $\lambda\cdot \operatorname{Id}$ where $\lambda$ is an $n$th root of unity in $F$.
+
+In particular, for $n=2$, $Z=\{ \pm \operatorname{Id} \}$ and:
+$$\PSL(2,F)=\SL(2,F)/\{ \pm \operatorname{Id} \}.$$
+\end{thm}
+
+As a consequence of the previous theorem, we obtain:
+
+\begin{thm}
+For $n\geq 3$, $\PSL(n,F)$ is a simple group. 
+Furthermore, if $\mathbb{F}$ is a finite field then the groups 
+$$\PSL(n,\mathbb{F})=\SL(n,\mathbb{F})/Z,\quad n\geq 2$$
+are all finite simple groups, except for $n=2$ and $\mathbb{F}=\mathbb{F}_2,\mathbb{F}_3$.
+\end{thm}
+
+\begin{thebibliography}{00}
+\bibitem{lang} S. Lang, {\em Algebra}, Springer-Verlag, New York.
+\bibitem{dummit} D. Dummit, R. Foote, {\em Abstract Algebra},
+Second Edition, Wiley.
+\end{thebibliography}
+%%%%%
+%%%%%
+\end{document}

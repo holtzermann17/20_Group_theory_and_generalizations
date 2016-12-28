@@ -1,0 +1,123 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{Subgroup}
+\pmcreated{2013-03-22 12:02:10}
+\pmmodified{2013-03-22 12:02:10}
+\pmowner{Daume}{40}
+\pmmodifier{Daume}{40}
+\pmtitle{subgroup}
+\pmrecord{18}{31045}
+\pmprivacy{1}
+\pmauthor{Daume}{40}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{20A05}
+\pmrelated{Group}
+\pmrelated{Ring}
+\pmrelated{FreeGroup}
+\pmrelated{Cycle2}
+\pmrelated{Subring}
+\pmrelated{GroupHomomorphism}
+\pmrelated{QuotientGroup}
+\pmrelated{ProperSubgroup}
+\pmrelated{SubmonoidSubsemigroup}
+\pmrelated{ProofThatGInGImpliesThatLangleGRangleLeG}
+\pmrelated{AbelianGroup2}
+\pmrelated{EssentialSubgroup}
+\pmrelated{PGroup4}
+\pmdefines{trivial subgroup}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%%\usepackage{xypic} 
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+% The below lines should work as the command
+% \renewcommand{\bibname}{References}
+% without creating havoc when rendering an entry in
+% the page-image mode.
+\makeatletter
+\@ifundefined{bibname}{}{\renewcommand{\bibname}{References}}
+\makeatother
+\begin{document}
+\PMlinkescapeword{states}
+\PMlinkescapeword{properties}
+\PMlinkescapeword{addition}
+
+\textbf{Definition:}\\ 
+Let $(G,*)$ be a group and let $K$ be subset of $G$.  Then $K$ is a subgroup of $G$ defined under the same operation if $K$ is  a group by itself (with respect to $*$), that is:
+\begin{itemize}
+  \item $K$ is closed under the $*$ operation.
+  \item There exists an identity element $e\in K$ such that for all $k \in K$, $k*e = k = e*k$.
+  \item Let $k \in K$ then there exists an inverse $k^{-1} \in K$
+  such that $k^{-1}*k = e = k*k^{-1}$.
+\end{itemize}
+The subgroup is denoted likewise $(K,*)$. We denote $K$ being a subgroup of $G$ by writing $K\leq G$.\\
+
+In addition the notion of a subgroup of a semigroup can be defined in the following manner.  Let $(S,*)$ be a semigroup and $H$ be a subset of $S$. Then $H$ is a subgroup of $S$ if $H$ is a subsemigroup of $S$ and $H$ is a group.
+
+\textbf{Properties:}
+\begin{itemize}
+  \item The set $\{e\}$ whose only element is the identity is a subgroup of any group.  It is called the trivial subgroup.
+\item Every group is a subgroup of itself.
+  \item The null set $\{ \}$ is never a subgroup (since the definition of group states that the set must be non-empty).
+\end{itemize}
+
+There is a very useful theorem that allows proving a given subset is a subgroup.
+
+\textbf{Theorem:}\\
+If $K$ is a nonempty subset of the group $G$.  Then $K$ is a \emph{subgroup} of $G$ if and only if $s,t \in K$ implies that $st^{-1} \in K$.
+
+\textbf{Proof:}
+First we need to show if $K$ is a subgroup of $G$ then $st^{-1} \in K$.  Since $s,t \in K$ then $st^{-1} \in K$, because $K$ is a group by itself.\\
+Now, suppose that if for any $s,t\in K\subseteq G$ we have $st^{-1}\in K$. We want to show that $K$ is a subgroup, which we will accomplish by proving it holds the group axioms.
+
+Since $tt^{-1}\in K$ by hypothesis, we conclude that the identity element is in $K$: $e\in K$. (Existence of identity)
+
+Now that we know $e\in K$, for all $t$ in $K$ we have that $et^{-1}=t^{-1}\in K$ so the inverses of elements in $K $ are also in $K$. (Existence of inverses).
+
+Let $s,t\in K$. Then we know that $t^{-1}\in K$ by last step. Applying hypothesis shows that
+$$s(t^{-1})^{-1} = st\in K$$
+so $K$ is closed under the operation. $QED$
+
+\textbf{Example:}
+\begin{itemize}
+  \item Consider the group $(\mathbb{Z}, +)$.  Show that$(2\mathbb{Z}, +)$ is a subgroup. 
+
+The subgroup is closed under addition since the  sum of even integers is even. 
+
+The identity $0$ of $\mathbb{Z}$ is also on $2\mathbb{Z}$ since $2$ divides $0$.
+For every $k \in 2\mathbb{Z}$ there is an $-k \in  2\mathbb{Z}$ which is the inverse under addition and satisfies $-k+k = 0 =
+  k+(-k)$.  Therefore $(2\mathbb{Z}, +)$ is a subgroup of $(\mathbb{Z},  +)$.
+
+ Another way to show $(2\mathbb{Z}, +)$ is a subgroup
+  is by using the proposition stated above.  If $s,t \in
+  2\mathbb{Z}$ then $s,t$ are even numbers and $s-t\in
+  2\mathbb{Z}$ since the difference of even numbers is always an even number.
+\end{itemize}
+
+\textbf{See also:}
+\begin{itemize}
+\item Wikipedia, \PMlinkexternal{subgroup}{http://www.wikipedia.org/wiki/Subgroup}
+\end{itemize}
+%%%%%
+%%%%%
+%%%%%
+\end{document}

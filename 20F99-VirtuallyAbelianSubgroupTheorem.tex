@@ -1,0 +1,74 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{VirtuallyAbelianSubgroupTheorem}
+\pmcreated{2013-03-22 18:58:42}
+\pmmodified{2013-03-22 18:58:42}
+\pmowner{juanman}{12619}
+\pmmodifier{juanman}{12619}
+\pmtitle{virtually abelian subgroup theorem}
+\pmrecord{13}{41842}
+\pmprivacy{1}
+\pmauthor{juanman}{12619}
+\pmtype{Theorem}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{20F99}
+\pmclassification{msc}{20E99}
+\pmclassification{msc}{20E07}
+\pmsynonym{subgroup theorem}{VirtuallyAbelianSubgroupTheorem}
+%\pmkeywords{finite index abelian subgroup}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\begin{document}
+Let us suppose that $G$ is virtually abelian and $H$ is an abelian subgroup of $G$ with a the finite right coset
+partition
+$$G=He\sqcup Hx_2\sqcup...\sqcup Hx_q,\eqno{(*)}$$
+so if $K$ is any other subgroup in $G$ we are going to prove:
+
+{\sl $K$ is also virtually abelian}
+
+\begin{quote}
+{\bf Proof}: From $(*)$ above we have
+$$K=K\cap G=K\cap(He\sqcup Hx_2\sqcup...\sqcup Hx_q),$$
+$$=(K\cap H)\sqcup(K\cap Hx_2)\sqcup...\sqcup(K\cap Hx_q).\eqno{(**)}$$
+
+Here we consider the two cases:\\
+1) $x_i\in K$\\
+2) $x_j\notin K$
+
+In the first case $K=Kx_i$, and then $K\cap Hx_i=Kx_i\cap Hx_i=(K\cap H)x_i$.
+In the second, find $y_j\in K\cap Hx_j$ hence $K\cap Hx_j=Ky_j\cap Hy_j=(K\cap H)y_j$
+
+So, in the equation $(**)$ above we can replace (reordering subindexation perhaps) to get
+$$K=\underbrace{(K\cap H)\sqcup(K\cap H)x_2\sqcup...\sqcup(K\cap H)x_s}_{1)}
+\sqcup\underbrace{(K\cap H)y_{s+1}\sqcup...\sqcup(K\cap H)y_q}_{2)}$$
+relation which shows that the index $[K:K\cap H]\le [G:H]$. 
+
+It could be $<$ since it is posible that $K\cap Hx_r=\emptyset$ for some indexes $r$
+$\Box$
+\end{quote}
+
+
+%%%%%
+%%%%%
+\end{document}

@@ -1,0 +1,285 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{GeneralizedQuaternionGroup}
+\pmcreated{2013-03-22 16:27:41}
+\pmmodified{2013-03-22 16:27:41}
+\pmowner{Algeboy}{12884}
+\pmmodifier{Algeboy}{12884}
+\pmtitle{generalized quaternion group}
+\pmrecord{7}{38620}
+\pmprivacy{1}
+\pmauthor{Algeboy}{12884}
+\pmtype{Derivation}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{20A99}
+\pmsynonym{quaternion groups}{GeneralizedQuaternionGroup}
+\pmrelated{DihedralGroupProperties}
+\pmdefines{generalized quaternion}
+
+\usepackage{latexsym}
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amsthm}
+
+%%\usepackage{xypic}
+
+%-----------------------------------------------------
+
+%       Standard theoremlike environments.
+
+%       Stolen directly from AMSLaTeX sample
+
+%-----------------------------------------------------
+
+%% \theoremstyle{plain} %% This is the default
+
+\newtheorem{thm}{Theorem}
+
+\newtheorem{coro}[thm]{Corollary}
+
+\newtheorem{lem}[thm]{Lemma}
+
+\newtheorem{lemma}[thm]{Lemma}
+
+\newtheorem{prop}[thm]{Proposition}
+
+\newtheorem{conjecture}[thm]{Conjecture}
+
+\newtheorem{conj}[thm]{Conjecture}
+
+\newtheorem{defn}[thm]{Definition}
+
+\newtheorem{remark}[thm]{Remark}
+
+\newtheorem{ex}[thm]{Example}
+
+
+
+%\countstyle[equation]{thm}
+
+
+
+%--------------------------------------------------
+
+%       Item references.
+
+%--------------------------------------------------
+
+
+\newcommand{\exref}[1]{Example-\ref{#1}}
+
+\newcommand{\thmref}[1]{Theorem-\ref{#1}}
+
+\newcommand{\defref}[1]{Definition-\ref{#1}}
+
+\newcommand{\eqnref}[1]{(\ref{#1})}
+
+\newcommand{\secref}[1]{Section-\ref{#1}}
+
+\newcommand{\lemref}[1]{Lemma-\ref{#1}}
+
+\newcommand{\propref}[1]{Prop\-o\-si\-tion-\ref{#1}}
+
+\newcommand{\corref}[1]{Cor\-ol\-lary-\ref{#1}}
+
+\newcommand{\figref}[1]{Fig\-ure-\ref{#1}}
+
+\newcommand{\conjref}[1]{Conjecture-\ref{#1}}
+
+
+% Normal subgroup or equal.
+
+\providecommand{\normaleq}{\unlhd}
+
+% Normal subgroup.
+
+\providecommand{\normal}{\lhd}
+
+\providecommand{\rnormal}{\rhd}
+% Divides, does not divide.
+
+\providecommand{\divides}{\mid}
+
+\providecommand{\ndivides}{\nmid}
+
+
+\providecommand{\union}{\cup}
+
+\providecommand{\bigunion}{\bigcup}
+
+\providecommand{\intersect}{\cap}
+
+\providecommand{\bigintersect}{\bigcap}
+
+
+
+
+
+
+
+
+
+
+\begin{document}
+The groups given by the presentation
+\[Q_{4n}=\langle a,b : a^n=b^2, a^{2n}=1, b^{-1}ab=a^{-1}\rangle\]
+are the \emph{generalized quaternion groups}.  Generally one insists that $n>1$
+as the properties of generalized quaternions become more uniform at this stage.
+However if $n=1$ then one observes $a=b^2$ so $Q_{4n}\cong\mathbb{Z}_4$.
+Dihedral group properties are strongly related to generalized quaternion
+group properties because of their highly related presentations.  We will see this in many of our results.
+
+\begin{prop}
+\begin{enumerate}
+\item $|Q_{4n}|=4n$.
+\item $Q_{4n}$ is abelian if and only if $n=1$.
+\item Every element $x\in Q_{4n}$ can be written uniquely as $x=a^i b^j$
+where $0\leq i<2n$ and $j=0,1$.
+\item $Z(Q_{4n})=\langle a^n\rangle\cong \mathbb{Z}_2$.
+\item $Q_{4n}/Z(Q_{4n})\cong D_{2n}$.
+\end{enumerate}
+\end{prop}
+\begin{proof}
+Given the relation $b^{-1} ab=a^{-1}$ (rather treating it as $ab=ba^{-1}$) then 
+as with dihedral groups we can 
+shuffle words in $\{a,b\}$ to group all the $a's$ at the beginning and the
+$b's$ at the end.  So every word takes the form $a^i b^j$.  As $|a|=2n$
+and $|b|=4$ we have $0\leq i<2n$ and $0\leq j<4$.  However we have an 
+added relation that $a^n=b^2$ so we can write $a^i b^2=a^{i+2}$ and
+also $a^i b^3=a^{i+2}b$ so we restrict to $j=0,1$.  This gives us $4n$ elements
+of this form which makes the order of $Q_{4n}$ at most $4n$.
+
+As $a^n=b^2$ it follows $[a^n,a^i b^j]=[a^n,b^j]=[b^2,b^j]=1$.  So
+$a^n$ is central.  If we quotient by $\langle a^n\rangle$ then we have
+the presentation
+\[\langle a,b:a^n=1, b^2=1, b^{-1} ab=a^{-1}\rangle\]
+which we recognize as the presentation of the dihedral group.  Thus
+$Q_{4n}/\langle a^n\rangle\cong D_{2n}$.  This prove the order of $Q_{4n}$
+is exactly $4n$.  Moreover, given $a^i b^j\in Z(Q_{4n})$ we have
+\[1=[a^i b^j, b]=b^{-j}a^{-i} b^{-1} a^{i} b^j b
+   = b^{-j} a^{-i} a^{-i} b^{-1} b^j b
+   = b^{-j} a^{-2i} b^j
+   = a^{2i}.\]
+So we have $i=n$.  So $a^n b^j=b^{j+2}$.  Then $1=[b^{j+2},a]$ forces $j=0,2$.
+This means $Z(Q_{4n})=\langle a^n\rangle=\langle b^2\rangle$.  
+\end{proof}
+
+
+\section{Examples}
+
+As mentioned, if $n=1$ then $Q_4\cong \mathbb{Z}_4$.  If $n=2$ then we have the
+usual quaternion group $Q_8$.  Because of the genesis of quaternions, this group is often denoted with $i,j,k$ relations as follows:
+\[Q_8=\langle -1, i,j,k : i^2=j^2=k^2=-1, ij=k=-1 ji\rangle.\]
+These relations are responsible for many useful results such as defining cross products for three-dimensional manipulations, and are also responsible for the
+most common example of a division ring.  As a group, $Q_8$ is a curious specimen of a $p$-group in that it has only normal subgroups yet is non-abelian, it has a unique minimal subgroup and cannot be represented faithfully except by a regular representation -- thus requiring degree 8.  [To see this note that the unique minmal subgroup is necessarily normal, thus if a proper subgroup is the stabilizer of an action, then the minimal normal subgroup is in the kernel so the representation is not faithful.]
+
+A common work around is to use $2\times 2$ matrices over $\mathbb{C}$ but to treat these as matrices over $\mathbb{R}$.
+\[
+-1=
+\begin{bmatrix}
+-1 & 0 \\
+0 & -1
+\end{bmatrix},
+\quad
+i=
+\begin{bmatrix}
+i & 0 \\
+0 & -i
+\end{bmatrix},
+\quad
+j=
+\begin{bmatrix}
+0 & i \\
+i & 0
+\end{bmatrix},
+k=
+\begin{bmatrix}
+0 & -1 \\
+1 & 0
+\end{bmatrix}.
+\]
+
+A worthwhile additional example is $n=3$.  For this
+produces a group order 12 which is often overlooked.
+
+\section{Subgroup structure}
+
+\begin{prop}
+$Q_{4n}$ is Hamiltonian -- meaning all a non-abelian group whose subgroups are normal -- if and only 
+if $n=2$.
+\end{prop}
+\begin{proof}
+As $Q_{4n}/Z(Q_{4n})\cong D_{2n}$, then if $Q_{4n}$ is Hamiltonian then we require
+$D_{2n}$ to be as well.  However when $n>2$ we know $D_{2n}$ has non-normal subgroups,
+for example $\langle ab\rangle$.  So we require $n\leq 2$.  If $n=1$ then $Q_{4n}$
+is cyclic and so trivially Hamiltonian.  When $n=2$ we have the usual quaternion
+group of order 8 which is Hamiltonian by direct inspection: the conjugacy classes
+are $\{1\}$, $\{a^2\}$, $\{a,a^3\}$, $\{b,a^2b\}$ and $\{ab,a^3 b\}$, more commonly
+described by $\{1\}$, $\{-1\}$, $\{i,-i\}$, $\{j,-j\}$ and $\{k,-k\}$.  In any case,
+all subgroups are normal.
+\end{proof}
+
+By way of converse it can be shown that the only finite Hamiltonian groups are
+$A\oplus Q_8$ where $A$ is abelian without an element of order 4.
+One sees already in $\mathbb{Z}_4\oplus Q_8$ that the subgroup $\langle (1,i)\rangle$  is conjugate to the distinct subgroup $\langle (1,-i)\rangle$ and so such groups are not Hamiltonian.
+
+
+\begin{prop}
+\begin{enumerate}
+\item $|a^i|=2n/i$ for $1<i\leq 2n$ and $|a^i b|=4$ for all $i$.
+\item Every subgroup of $Q_{4n}$ is either cyclic or a generalized
+quaternion.
+\item The normal subgroups of $Q_{4n}$ are either subgroups of
+$\langle a\rangle$ or $n=2^i$ and it is maximal subgroups (of index 2) of
+which there are 2 acyclic ones.
+\end{enumerate}
+\end{prop}
+\begin{proof}
+The order of elements of $\langle a\rangle$ follows from standard cyclic group theory.
+Now for $a^i b$ we simply compute: $(a^i b)^2=a^i b a^i b=a^i a^{-i} b^2=b^2$.
+So $|a^i b|=4$.
+
+Now let $H$ be a subgroup of $Q_{4n}$.  If $Z(Q_{4n})\leq H$ then $H/Z(Q_{4n})$ is
+a subgroup of $D_{2n}$.  We know the subgroups of $D_{2n}$ are either cyclic or
+dihedral.  If $H/Z(Q_{4n})$ is cyclic then $H$ is cyclic (indeed it is a subgroup
+of $\langle a\rangle$ or $H=\langle a^i b\rangle$).  So assume that $H/Z(Q_{4n})$ is
+dihedral.  Then we have a dihedral presentation 
+$\langle x,y:x^m=1, y^2=1, y^{-1}xy=x^{-1}\rangle$ for $H/Z(Q_{4n})$.  Now pullback
+this presentation to $H$ and we find $H$ is quaternion.  
+
+Finally, if $H$ does not contain $Z(Q_{4n})$ then $H$ does not contain an element
+of the form $a^i b$, so $H\leq \langle a\rangle$ and so it is cyclic.
+
+For the normal subgroup structure, from the relation $b^{-1} ab=a^{-1}$ we
+see $\langle a\rangle$ is normal.  Thus all subgroups of $\langle a\rangle$
+are normal as $\langle a\rangle$ is a normal cyclic subgroup.  Next suppose
+$H$ is a normal subgroup not contained in $\langle a\rangle$.  Then $H$ contains
+some $a^i b$, and so $H$ contains $Z(Q_{4n})$.  Thus $H/Z(Q_{4n})$ is a normal
+subgroup of $D_{2n}$.  We know this forces $H/Z(Q_{4n})$ to be contained in
+$\langle a\rangle/Z(Q_{4n})$, a contradiction on our assumptions on $H$, or
+$n=2^i$ and $H/Z(Q_{4n})$ is a maximal subgroup (of index 2).
+\end{proof}
+
+\begin{prop}
+$Q_{4n}$ has a unique minimal subgroup if and only if $n=2^i$.
+\end{prop}
+\begin{proof}
+If $p|n$ and $p>2$ then $a^{2n/p}$ has order $p$ and so the subgroup 
+$\langle a^{2n/p}\rangle$ is of order $p$, so it is minimal.  As the center
+is also a minimal subgroup of order 2, then we do not have a unique minimal subgroup
+in these conditions.  Thus $n=2^i$.
+
+Now suppose $n=2^i$ then $Q_{4n}$ is a $2$-group so the minimal subgroups must all
+be of order 2.  So we locate the elements of order 2.  We have shown $|a^i b|=4$ for
+any $i$, and furthermore that $(a^i b)^2=b^2=a^n$.  The only other minimal subgroups
+will be generated by $a^i$ for some $i$, and as $|a|=2^{i+1}$ there is a unique minimal
+subgroup.
+\end{proof}
+
+It can also be shown that any finite group with a unique minimal subgroup is either
+cyclic of prime power order, or $Q_{4n}$ for some $n=2^i$.
+  We note that these groups have only regular faithful representations.
+%%%%%
+%%%%%
+\end{document}

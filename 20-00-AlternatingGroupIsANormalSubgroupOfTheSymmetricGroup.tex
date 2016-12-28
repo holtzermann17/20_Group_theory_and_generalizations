@@ -1,0 +1,50 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{AlternatingGroupIsANormalSubgroupOfTheSymmetricGroup}
+\pmcreated{2013-03-22 13:42:32}
+\pmmodified{2013-03-22 13:42:32}
+\pmowner{CWoo}{3771}
+\pmmodifier{CWoo}{3771}
+\pmtitle{alternating group is a normal subgroup of the symmetric group}
+\pmrecord{8}{34387}
+\pmprivacy{1}
+\pmauthor{CWoo}{3771}
+\pmtype{Theorem}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{20-00}
+
+\usepackage{latexsym}
+\usepackage{amssymb}
+\usepackage{amsfonts}
+\usepackage[centertags]{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\usepackage{color}
+\usepackage{graphicx}
+\usepackage{latexsym}
+\usepackage{amsfonts}
+\newtheorem{theorem}{Theorem}
+\begin{document}
+\begin{theorem}
+ The alternating group $A_{n}$ is a normal subgroup of the symmetric group $S_{n}$
+  \end{theorem}
+
+\begin{proof}
+Define the epimorphism $f:S_{n}\rightarrow\mathbb{Z}_2$ by
+$:\sigma\mapsto 0$ if $\sigma$ is an even permutation and
+$:\sigma\mapsto 1$ if $\sigma$ is an odd permutation.  Hence,
+$A_{n}$ is the kernel of $f$ and so it is a normal subgroup of the
+domain $S_{n}$. Furthermore $S_{n}/A_{n}\cong\mathbb{Z}_2$ by
+the first isomorphism theorem. So by Lagrange's theorem
+$$
+\vert S_{n} \vert=\vert A_{n} \vert\vert S_{n}/A_{n}\vert.
+$$
+Therefore, $\vert A_{n}\vert=n!/2$. That is, there are $n!/2$ many
+elements in $A_{n}$
+\end{proof}
+
+\textbf{Remark}.  What we have shown in the theorem is that, in fact, $A_n$ has index $2$ in $S_n$.  In general, if a subgroup $H$ of $G$ has index $2$, then $H$ is normal in $G$. (Since $[G:H]=2$, there is an element $g\in G-H$, so that $gH\cap H=\varnothing$ and thus $gH=Hg$).  
+%%%%%
+%%%%%
+\end{document}

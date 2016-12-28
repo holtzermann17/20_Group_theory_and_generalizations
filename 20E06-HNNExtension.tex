@@ -1,0 +1,50 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{HNNExtension}
+\pmcreated{2013-03-22 16:04:03}
+\pmmodified{2013-03-22 16:04:03}
+\pmowner{juanman}{12619}
+\pmmodifier{juanman}{12619}
+\pmtitle{HNN extension}
+\pmrecord{8}{38122}
+\pmprivacy{1}
+\pmauthor{juanman}{12619}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{20E06}
+\pmrelated{GroupExtension}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\begin{document}
+The \emph{HNN extension group} $G$ for a group $A$, is constructed from a pair of isomorphic subgroups $B\stackrel{\phi}\cong C$ in $A$, according to formula 
+$$G=\frac{A*\langle t|- \rangle}{N}$$
+where 
+$\langle t|- \rangle$ is a cyclic free group, $*$ is the free product and $N$ is the normal closure of $\{tbt^{-1}\phi(b)^{-1}\colon b\in B\}$. 
+
+As an example take a surface bundle $F\subset E\to S^1$, hence the homotopy long exact sequence of this bundle implies that the fundamental group $\pi_1(E)$ is given by
+$$\pi_1(E)=\langle x_1,...,x_k,t|\Pi=1,tx_it^{-1}=\phi(x_i)\rangle$$
+where $k$ is the genus of the surface and the relation $\Pi$ is $[x_1,x_2][x_3,x_4]\cdots[x_{k-1},x_k]$ for an orientable surface or $x_1^2x_2^2\cdots x_k^2$ is for a non-orientable one. $\phi$ is an isomorphism induced by a self homeomorphism of $F$. 
+%%%%%
+%%%%%
+\end{document}

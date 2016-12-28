@@ -1,0 +1,49 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{RepresentationRingVsBurnsideRing}
+\pmcreated{2013-03-22 19:19:05}
+\pmmodified{2013-03-22 19:19:05}
+\pmowner{joking}{16130}
+\pmmodifier{joking}{16130}
+\pmtitle{representation ring vs burnside ring}
+\pmrecord{4}{42256}
+\pmprivacy{1}
+\pmauthor{joking}{16130}
+\pmtype{Theorem}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{20C99}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\begin{document}
+Let $G$ be a finite group and let $k$ be any field. If $X$ is a $G$-set, then we may consider the vector space $V_k(X)$ over $k$ which has $X$ as a basis. In this manner $V_k(X)$ becomes a representation of $G$ via action induced from $X$ and linearly extended to $V_k(X)$. It can be shown that $V_k(X)$ only depends on the isomorphism class of $X$, so we have a well-defined mapping:
+$$[X]\mapsto [V_k(X)]$$
+which can be easily extended to the function
+$$\beta:\Omega(G)\to R_k(G);$$
+$$\beta([X])=[V_k(X)]$$
+where on the left side we have the Burnside ring and on the right side the representation ring. It can be shown, that $\beta$ is actually a ring homomorphism, but in most cases it neither injective nor surjective. But the following theorem due to Segal gives us some properties of $\beta$:
+
+\textbf{Theorem (Segal).} Let $\beta:\Omega(G)\to R_{\mathbb{Q}}(G)$ be defined as above with rationals as the underlying field. If $G$ is a $p$-group for some prime number $p$, then $\beta$ is surjective. Furthermore $\beta$ is an isomorphism if and only if $G$ is cyclic.
+%%%%%
+%%%%%
+\end{document}

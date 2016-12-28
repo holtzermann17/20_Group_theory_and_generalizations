@@ -1,0 +1,76 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{OrbitsOfANormalSubgroupAreEqualInSizeWhenTheFullGroupActsTransitively}
+\pmcreated{2013-03-22 17:17:56}
+\pmmodified{2013-03-22 17:17:56}
+\pmowner{rm50}{10146}
+\pmmodifier{rm50}{10146}
+\pmtitle{orbits of a normal subgroup are equal in size when the full group acts transitively}
+\pmrecord{5}{39646}
+\pmprivacy{1}
+\pmauthor{rm50}{10146}
+\pmtype{Theorem}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{20M30}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+\usepackage{amsthm}
+% making logically defined graphics
+%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\newtheorem{thm}{Theorem}
+\begin{document}
+The following theorem proves that if a group acts transitively on a finite set, then any of the orbits of any normal subgroup are equal in size and the group acts transitively on them. We also derive an explicit formula for the size of each orbit and the number of orbits.
+
+\begin{thm} Let $H$ be a normal subgroup of $G$, and assume $G$ acts transitively on the finite set $A$. Let $\mathcal{O}_1, \ldots,\mathcal{O}_r$ be the orbits of $H$ on $A$. Then
+\begin{enumerate}
+\item $G$ permutes the $\mathcal{O}_i$ transitively (i.e. for each $g\in G, 1\leq j\leq r$, there is $1\leq k\leq r$ such that $g\mathcal{O}_j=\mathcal{O}_k$, and for each $1\leq j,k\leq r$, there is $g\in G$ such that $g\mathcal{O}_j=\mathcal{O}_k$), and the $\mathcal{O}_i$ all have the same cardinality.
+\item If $a\in \mathcal{O}_i$, then $\lvert\mathcal{O}_i\rvert=\lvert H: H\cap G_a\rvert$ and $r=\lvert G:HG_a\rvert$.
+\end{enumerate}
+\end{thm}
+
+\begin{proof}
+Note first that if $g\in G, a\in \mathcal{O}_i$, and $g\cdot a\in \mathcal{O}_j$, then $g\mathcal{O}_i\subset\mathcal{O}_j$. For suppose also $b\in \mathcal{O}_i$. Then since $a,b$ are in the same $H$-orbit, we can choose $h\in H$ such that $b=h\cdot a$. Then
+\[g\cdot b=g\cdot h\cdot a = g\cdot h\cdot g^{-1}\cdot g\cdot a = h'\cdot g\cdot a\in h'\mathcal{O}_j\subset\mathcal{O}_j\]
+since $H$ is normal in $G$. Thus for each $g\in G, 1\leq j\leq r$, there is $1\leq k\leq r$ such that $g\mathcal{O}_j\subset\mathcal{O}_k$.
+
+Given $j, k$, choose $a_j\in\mathcal{O}_j, a_k\in\mathcal{O}_k$. Since $G$ is transitive on $A$, we may choose $g\in G$ such that $g\cdot a_j = a_k$. It follows from the above that $g\mathcal{O}_j\subset\mathcal{O}_k$. 
+
+To prove 1), given $j,k$, choose $g$ such that $g\mathcal{O}_j\subset\mathcal{O}_k$ and $g'$ such that $g'\mathcal{O}_k\subset\mathcal{O}_j$. But then $\lvert\mathcal{O}_j\rvert\leq\lvert\mathcal{O}_k\rvert\leq\lvert\mathcal{O}_j\rvert$ so that $\lvert\mathcal{O}_j\rvert=\lvert\mathcal{O}_k\rvert$ and the subset relationships in the previous two paragraphs are actually set equality.
+
+To prove 2), consider the following diagram:
+\begin{center}
+\[
+\xymatrix{
+& G \ar@{-}[d] \\
+& HG_a \ar@{-}[ld] \ar@{-}[rd] \\
+H \ar@{-}[rd] & & G_a \ar@{-}[ld] \\
+& H\cap G_a
+}
+\]
+\end{center}
+Clearly $H\cap G_a=H_a$, and $\lvert H:H_a\rvert = \lvert \mathcal{O}_i\rvert$ by the orbit-stabilizer theorem. Using the second isomorphism theorem for groups, we then have
+\[\lvert\mathcal{O}_i\rvert = \lvert H:H_a\rvert = \lvert H:H\cap G_a\rvert = \lvert HG_a:G_a\rvert\]
+But $\lvert G\rvert=r\lvert\mathcal{O}_i\rvert$ by the above, so
+\[r\lvert\mathcal{O}_i\rvert=\lvert G\rvert=\lvert G:HG_a\rvert\cdot\lvert HG_a:G_a\rvert=\lvert G:HG_a\rvert\cdot\lvert\mathcal{O}_i\rvert\]
+and the result follows.
+\end{proof}
+%%%%%
+%%%%%
+\end{document}

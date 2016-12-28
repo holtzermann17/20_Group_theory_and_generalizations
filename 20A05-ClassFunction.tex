@@ -1,0 +1,49 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ClassFunction}
+\pmcreated{2013-03-22 12:18:06}
+\pmmodified{2013-03-22 12:18:06}
+\pmowner{djao}{24}
+\pmmodifier{djao}{24}
+\pmtitle{class function}
+\pmrecord{8}{31847}
+\pmprivacy{1}
+\pmauthor{djao}{24}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{20A05}
+\pmsynonym{central function}{ClassFunction}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic} 
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\newcommand{\C}{\mathbb{C}}
+\begin{document}
+Given a field $K$, a $K$--valued {\em class function} on a group $G$ is a function $f: G \longrightarrow K$ such that $f(g) = f(h)$ whenever $g$ and $h$ are elements of the same conjugacy class of $G$.
+
+An important example of a class function is the character of a group representation. Over the complex numbers, the set of characters of the irreducible representations of $G$ form a basis for the vector space of all $\C$--valued class functions, when $G$ is a compact Lie group.
+
+\paragraph{Relation to the convolution algebra}
+
+Class functions are also known as central functions, because they correspond to functions $f$ in the convolution algebra $C^*(G)$ that have the property $f*g = g*f$ for all $g \in C^*(G)$ (i.e., they commute with everything under the convolution operation).  More precisely, the set of measurable complex valued class functions $f$ is equal to the set of central elements of the convolution algebra $C^*(G)$, for $G$ a locally compact group admitting a Haar measure.
+%%%%%
+%%%%%
+\end{document}

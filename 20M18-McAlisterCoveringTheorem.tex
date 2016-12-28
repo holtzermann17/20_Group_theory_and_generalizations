@@ -1,0 +1,76 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{McAlisterCoveringTheorem}
+\pmcreated{2013-03-22 14:37:19}
+\pmmodified{2013-03-22 14:37:19}
+\pmowner{mathcam}{2727}
+\pmmodifier{mathcam}{2727}
+\pmtitle{McAlister covering theorem}
+\pmrecord{5}{36201}
+\pmprivacy{1}
+\pmauthor{mathcam}{2727}
+\pmtype{Theorem}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{20M18}
+\pmdefines{unitary}
+\pmdefines{E-unitary}
+\pmdefines{idempotent-separating}
+
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\newtheorem*{defn}{Definition}
+\newtheorem*{thm}{Theorem}
+\newtheorem*{cor}{Corollary}
+\newtheorem*{lemma}{Lemma}
+\newtheorem*{conj}{Conjecture}
+\newtheorem*{prop}{Proposition}
+\newtheorem*{open}{Open Question}
+\newtheorem*{cond}{Condition}
+\newenvironment{skproof}{\noindent\emph{Sketch Proof.}}{\qed\\}
+\newtheorem*{rem}{Remark}
+
+\newcommand{\Z}{\ensuremath{\mathbb{Z}}}
+\newcommand{\N}{\ensuremath{\mathbb{N}}}
+\newcommand{\Q}{\ensuremath{\mathbb{Q}}}
+\newcommand{\R}{\ensuremath{\mathbb{R}}}
+
+\newcommand{\eq}{\ensuremath{\thicksim}}
+\newcommand{\iso}{\cong}
+\newcommand{\normal}{\lhd}
+\newcommand{\Aut}[1]{{\ensuremath{\mathrm{Aut}({#1})}}}
+\newcommand{\GL}[2]{{\ensuremath{\mathrm{GL}({#1},{#2})}}}
+\newcommand{\pad}{\ensuremath{\Box}}
+\begin{document}
+A subset $X$ in an inverse semigroup $S$ is called \emph{unitary} if for any elements $x\in X$ and $s\in S$, $xs\in X$ or $sx\in X$ implies $s\in X$.
+
+An inverse semigroup is \emph{E-unitary} if its semigroup of idempotents is unitary.
+
+\begin{thm}
+Let $S$ be an inverse semigroup; then, there exists an E-unitary inverse semigroup $P$ and a surjective, idempotent-separating homomorphism $\theta:P\rightarrow S$.
+
+Also, if $S$ is finite, then $P$ may be chosen to be finite as well.
+\end{thm}
+
+Note that a homomorphism is \emph{idempotent-separating} if it is injective on idempotents.
+
+\begin{thebibliography}{}
+\bibitem{} M. Lawson, \emph{Inverse Semigroups: The Theory of Partial Symmetries}, World Scientific, 1998
+\end{thebibliography}
+%%%%%
+%%%%%
+\end{document}

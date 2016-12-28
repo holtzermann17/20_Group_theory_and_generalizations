@@ -1,0 +1,150 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{IrreducibleRepresentationsOfSn}
+\pmcreated{2013-03-22 17:14:13}
+\pmmodified{2013-03-22 17:14:13}
+\pmowner{rm50}{10146}
+\pmmodifier{rm50}{10146}
+\pmtitle{irreducible representations of $S_n$}
+\pmrecord{8}{39566}
+\pmprivacy{1}
+\pmauthor{rm50}{10146}
+\pmtype{Result}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{20C99}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+\usepackage[all,web]{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\newcommand{\Complex}{\mathbb{C}}
+
+\def\drawsqlat{%
+\begin{xy}{
+0;<1pc,0pc>:<0pc,1pc>::
+\xylattice{0}{5}{0}{5}}
+\end{xy}}
+\def\drawsq{\ar@{-}c;c+(1,0)\ar@{-}c;c+(0,1)\ar@{-}c+(1,0);c+(1,1)\ar@{-}c+(0,1);c+(1,1)}
+\begin{document}
+\PMlinkescapeword{c}
+This article describes the theory of complex representations of $S_n$ by Young diagrams, as developed by Frobenius, Schur, and Young. The situation for representations in nonzero characteristic is more complicated.
+
+Recall the well-known result that the conjugacy class of any $\sigma\in S_n$ is determined by its cycle type. The number of different cycle structures is simply the number of partitions of $n$. Therefore the number of conjugacy classes of $S_n$, and thus the number of irreducible representations of $S_n$, is just the number of partitions of $n$.
+
+For example, for $S_4$ the partitions, and a representative of each conjugacy class, are
+\begin{center}
+\begin{tabular}{c c}
+$4$ & $(1~2~3~4)$\\
+$3,1$ & $(1~2~3)$\\
+$2,2$ & $(1~2)(3~4)$\\
+$2,1,1$ & $(1~2)$\\
+$1,1,1,1$ & $e$
+\end{tabular}
+\end{center}
+
+The partitions can be represented visually using Young diagrams, and there is an algorithm for explicitly extracting the dimensions of the irreducible representations of $S_n$ from the Young diagrams. Of course, each diagram corresponds to a single irreducible representation. \PMlinkescapetext{Associate} with each square in a given Young diagram the number of squares directly to its right plus the number of squares directly below it, and add $1$ for the square itself. Multiply these numbers together for all squares in the diagram, and divide into $n!$. The result is the dimension of an irreducible representation of $S_n$.
+
+Taking again $S_4$, we have
+\begin{center}
+\begin{tabular}{c c c}
+$4$ &
+\parbox{12pc}{
+\begin{renewcommand}{\latticebody}{
+\ifnum\latticeA=4 \ifnum\latticeB=1 \drawsq\fi\fi
+\ifnum\latticeA=3 \ifnum\latticeB=1 \drawsq\fi\fi
+\ifnum\latticeA=2 \ifnum\latticeB=1 \drawsq\fi\fi
+\ifnum\latticeA=1 \ifnum\latticeB=1 \drawsq\fi\fi
+}
+\drawsqlat
+\end{renewcommand}
+}
+\vspace{6pt}
+&
+$\frac{4!}{4\cdot 3\cdot 2\cdot 1} = 1$
+\\
+$3,1$ &
+\parbox{12pc}{
+\begin{renewcommand}{\latticebody}{
+\ifnum\latticeA=3 \ifnum\latticeB=2 \drawsq\fi\fi
+\ifnum\latticeA=2 \ifnum\latticeB=2 \drawsq\fi\fi
+\ifnum\latticeA=1 \ifnum\latticeB=2 \drawsq\fi\fi
+\ifnum\latticeA=1 \ifnum\latticeB=1 \drawsq\fi\fi
+}
+\drawsqlat
+\end{renewcommand}
+}
+\vspace{6pt}
+&
+$\frac{4!}{4\cdot 2\cdot 1\cdot 1} = 3$
+\\
+
+$2,2$ &
+\parbox{12pc}{
+\begin{renewcommand}{\latticebody}{
+\ifnum\latticeA=2 \ifnum\latticeB=2 \drawsq\fi\fi
+\ifnum\latticeA=2 \ifnum\latticeB=1 \drawsq\fi\fi
+\ifnum\latticeA=1 \ifnum\latticeB=2 \drawsq\fi\fi
+\ifnum\latticeA=1 \ifnum\latticeB=1 \drawsq\fi\fi
+}
+\drawsqlat
+\end{renewcommand}
+}
+\vspace{6pt}
+&
+$\frac{4!}{3\cdot 2\cdot 2\cdot 1} = 2$
+\\
+
+$2,1,1$ &
+\parbox{12pc}{
+\begin{renewcommand}{\latticebody}{
+\ifnum\latticeA=1 \ifnum\latticeB=3 \drawsq\fi\fi
+\ifnum\latticeA=1 \ifnum\latticeB=2 \drawsq\fi\fi
+\ifnum\latticeA=1 \ifnum\latticeB=1 \drawsq\fi\fi
+\ifnum\latticeA=2 \ifnum\latticeB=3 \drawsq\fi\fi
+}
+\drawsqlat
+\end{renewcommand}
+}
+\vspace{6pt}
+&
+$\frac{4!}{4\cdot 2\cdot 1\cdot 1} = 3$
+\\
+
+$1,1,1,1$ &
+\parbox{12pc}{
+\begin{renewcommand}{\latticebody}{
+\ifnum\latticeA=1 \ifnum\latticeB=4 \drawsq\fi\fi
+\ifnum\latticeA=1 \ifnum\latticeB=3 \drawsq\fi\fi
+\ifnum\latticeA=1 \ifnum\latticeB=2 \drawsq\fi\fi
+\ifnum\latticeA=1 \ifnum\latticeB=1 \drawsq\fi\fi
+}
+\drawsqlat
+\end{renewcommand}
+}
+\vspace{6pt}
+&
+$\frac{4!}{4\cdot 3\cdot 2\cdot 1} = 1$
+\end{tabular}
+\end{center}
+
+$S_4$ has two $1$-dimensional irreducible representations - $\epsilon$ and sgn. One of the $3$-dimensional representations is the augmentation of the natural action of $S_4$ on $\Complex^4$, and the other is the tensor of that representation with sgn. The irreducible representation of dimension $2$ arises from the map $S_4\to S_4/V_4 \cong S_3$.
+%%%%%
+%%%%%
+\end{document}

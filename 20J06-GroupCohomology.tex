@@ -1,0 +1,125 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{GroupCohomology}
+\pmcreated{2013-03-22 13:50:07}
+\pmmodified{2013-03-22 13:50:07}
+\pmowner{alozano}{2414}
+\pmmodifier{alozano}{2414}
+\pmtitle{group cohomology}
+\pmrecord{11}{34571}
+\pmprivacy{1}
+\pmauthor{alozano}{2414}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{20J06}
+\pmsynonym{cohomology}{GroupCohomology}
+%\pmkeywords{cohomology}
+%\pmkeywords{coboundary}
+%\pmkeywords{cocycle}
+\pmrelated{SelmerGroup}
+\pmrelated{CohomologyGroupTheorem}
+\pmrelated{ProofOfCohomologyGroupTheorem}
+\pmrelated{OmegaSpectrum}
+\pmrelated{NaturalEquivalenceOfC_GAndC_MCategories}
+\pmdefines{group cohomology}
+\pmdefines{coboundary}
+\pmdefines{cocycle}
+\pmdefines{crossed homomorphism}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsthm}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\newtheorem{thm}{Theorem}
+\newtheorem{defn}{Definition}
+\newtheorem{prop}{Proposition}
+\newtheorem{lemma}{Lemma}
+\newtheorem{cor}{Corollary}
+\begin{document}
+Let $G$ be a group and let $M$ be a (left) $G$-module. The
+$0^{th}$ \emph{cohomology group} of the $G$-module $M$ is
+$$H^0(G,M)=\{m\in M: \forall \sigma \in G,\ \sigma m=m\}$$
+which is the set of elements of $M$ which are $G$-invariant, also
+denoted by $M^G$.
+
+A map $\phi\colon G\to M$ is said to be a \emph{crossed
+homomorphism} (or \emph{1-cocycle}) if
+$$\phi(\alpha\beta)=\phi(\alpha)+\alpha\phi(\beta)$$
+for all $\alpha,\beta \in G$. If we fix $m\in M$, the map
+$\rho\colon G\to M$ defined by
+$$\rho(\alpha)=\alpha m-m$$
+is clearly a crossed homomorphism, said to be \emph{principal} (or
+\emph{1-coboundary}). We define the following groups:
+\begin{eqnarray}
+\nonumber Z^1(G,M)&=&\{\phi: G\to M\colon \phi \text{ is a 1-cocycle}\}\\
+\nonumber B^1(G,M)&=&\{\rho: G\to M\colon \rho \text{ is a
+1-coboundary}\}
+\end{eqnarray}
+Finally, the $1^{st}$ \emph{cohomology group} of the $G$-module
+$M$ is defined to be the quotient group:
+$$H^1(G,M)=Z^1(G,M)/B^1(G,M)$$
+
+The following proposition is very useful when trying to compute
+cohomology groups:
+\begin{prop}
+Let $G$ be a group and let $A,B,C$ be $G$-modules related by an
+exact sequence:
+$$0\to A\to B\to C\to 0$$
+Then there is a long exact sequence in cohomology:
+$$0\to H^0(G,A)\to H^0(G,B)\to H^0(G,C)\to H^1(G,A)\to H^1(G,B)\to
+H^1(G,C)\to \ldots$$
+\end{prop}
+
+In general, the cohomology groups $H^n(G,M)$ can be defined as
+follows:
+
+\begin{defn}
+Define $C^0(G,M)=M$ and for $n\geq 1$ define the additive group:
+$$C^n(G,M)=\{\phi\colon G^n \to M\}$$
+The elements of $C^n(G,M)$ are called $n$-cochains. Also, for
+$n\geq 0$ define the $n^{th}$ coboundary homomorphism $d_n\colon
+C^n(G,M) \to C^{n+1}(G,M)$:
+\begin{eqnarray}
+\nonumber d_n(\phi)(g_1,...,g_{n+1})&=&g_1\cdot \phi(g_2,...,g_{n+1})\\
+\nonumber &+&
+\sum_{i=1}^n(-1)^i\phi(g_1,...,g_{i-1},g_ig_{i+1},g_{i+2},
+...,g_{n+1})\\
+\nonumber &+& (-1)^{n+1}\phi(g_1,...,g_n)
+\end{eqnarray}
+Let $Z^n(G,M)=\operatorname{ker} d_n$ for $n\geq 0$, the set of
+$n$-cocyles. Also, let $B^0(G,M)=1$ and for $n\geq 1$ let
+$B^n(G,M)=\operatorname{image}d_{n-1}$, the set of
+$n$-coboundaries.\\
+
+Finally we define the $n^{th}$-cohomology group of $G$ with
+coefficients in $M$ to be $$H^n(G,M)=Z^n(G,M)/B^n(G,M)$$
+\end{defn}
+
+\begin{thebibliography}{9}
+\bibitem{serre} J.P. Serre, {\em Galois Cohomology},
+Springer-Verlag, New York.
+\bibitem{milne} James Milne, {\em Elliptic Curves}.
+\bibitem{silverman} Joseph H. Silverman, {\em The Arithmetic of Elliptic Curves}. Springer-Verlag, New York, 1986.
+\end{thebibliography}
+%%%%%
+%%%%%
+\end{document}

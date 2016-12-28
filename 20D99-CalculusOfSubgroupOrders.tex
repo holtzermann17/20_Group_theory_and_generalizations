@@ -1,0 +1,193 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{CalculusOfSubgroupOrders}
+\pmcreated{2013-03-22 15:48:12}
+\pmmodified{2013-03-22 15:48:12}
+\pmowner{Algeboy}{12884}
+\pmmodifier{Algeboy}{12884}
+\pmtitle{calculus of subgroup orders}
+\pmrecord{8}{37766}
+\pmprivacy{1}
+\pmauthor{Algeboy}{12884}
+\pmtype{Application}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{20D99}
+\pmsynonym{Theorem of Lagrange}{CalculusOfSubgroupOrders}
+%\pmkeywords{Coset}
+%\pmkeywords{LagrangesTheorem}
+\pmdefines{permutable subgroups}
+\pmdefines{complex of subgroups}
+
+\usepackage{latexsym}
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amsthm}
+
+%%\usepackage{xypic}
+
+%-----------------------------------------------------
+
+%       Standard theoremlike environments.
+
+%       Stolen directly from AMSLaTeX sample
+
+%-----------------------------------------------------
+
+%% \theoremstyle{plain} %% This is the default
+
+\newtheorem{thm}{Theorem}
+
+\newtheorem{coro}[thm]{Corollary}
+
+\newtheorem{lem}[thm]{Lemma}
+
+\newtheorem{lemma}[thm]{Lemma}
+
+\newtheorem{prop}[thm]{Proposition}
+
+\newtheorem{conjecture}[thm]{Conjecture}
+
+\newtheorem{conj}[thm]{Conjecture}
+
+\newtheorem{defn}[thm]{Definition}
+
+\newtheorem{remark}[thm]{Remark}
+
+\newtheorem{ex}[thm]{Example}
+
+
+
+%\countstyle[equation]{thm}
+
+
+
+%--------------------------------------------------
+
+%       Item references.
+
+%--------------------------------------------------
+
+
+\newcommand{\exref}[1]{Example-\ref{#1}}
+
+\newcommand{\thmref}[1]{Theorem-\ref{#1}}
+
+\newcommand{\defref}[1]{Definition-\ref{#1}}
+
+\newcommand{\eqnref}[1]{(\ref{#1})}
+
+\newcommand{\secref}[1]{Section-\ref{#1}}
+
+\newcommand{\lemref}[1]{Lemma-\ref{#1}}
+
+\newcommand{\propref}[1]{Prop\-o\-si\-tion-\ref{#1}}
+
+\newcommand{\corref}[1]{Cor\-ol\-lary-\ref{#1}}
+
+\newcommand{\figref}[1]{Fig\-ure-\ref{#1}}
+
+\newcommand{\conjref}[1]{Conjecture-\ref{#1}}
+
+
+% Normal subgroup or equal.
+
+\providecommand{\normaleq}{\unlhd}
+
+% Normal subgroup.
+
+\providecommand{\normal}{\lhd}
+
+\providecommand{\rnormal}{\rhd}
+% Divides, does not divide.
+
+\providecommand{\divides}{\mid}
+
+\providecommand{\ndivides}{\nmid}
+
+
+\providecommand{\union}{\cup}
+
+\providecommand{\bigunion}{\bigcup}
+
+\providecommand{\intersect}{\cap}
+
+\providecommand{\bigintersect}{\bigcap}
+\begin{document}
+Recall that for any group $G$ and any subgroup $H$ of $G$ we can define left and/or right cosets of $H$ in $G$.  As the cardinality of left cosets equals the cardinality of right cosets, the index, denoted $[G:H]$ is well-defined as this cardinality.
+
+The theorem of Lagrange is the first of many basic theorems on the calculus of indices of subgroups and it can be stated as follows:
+\begin{equation}\label{eq:1}
+    |G|=[G:H]|H|.
+\end{equation}
+When $G$ is a finite group then we can rewrite this in the familiar form (as actually proved by LaGrange) 
+\begin{equation}\label{eq:2}
+   |G|/|H|=[G:H].
+\end{equation}
+and so conclude the familiar statement: ``The order of every subgroup divides the order of the group.''
+
+As the proof of (\ref{eq:2}) can be written with bijections instead of specific integer values, the proof of (\ref{eq:1}) is immediate from the usual proof of the Lagrange's theorem.
+
+The first corollary to the theorem states that given $K\leq H\leq G$ then
+\begin{equation}\label{eq:3a}
+   [G:K]=[G:H][H:K].
+\end{equation}
+So when $G$ is finite we have
+\begin{equation}\label{eq:3b}
+   \frac{[G:K]}{[H:K]}=[G:H].
+\end{equation}
+This should be contrasted with the third isomorphism theorem which claims if $K$ and $H$ are normal in $G$ then
+\begin{equation}
+   \frac{G/K}{H/K}\cong G/H.
+\end{equation}
+
+\begin{remark}
+It is preferrable to express the various equations relating indices of subgroups with multiplications.  This is to allow for infinite indices, as we can multiply cardinal numbers, but we may not always be able to make sense of cardinal number division.
+
+When only finite groups are considered so that division is allowed, expressing the theorems as quotients is often easier to understand.
+\end{remark}
+
+Next suppose $H$ and $K$ are any two subgroups of $G$ then we define
+  \[ HK:=\{ hk:h\in H, k\in K\}\]
+(sometimes called the \emph{complex} of $H$ and $K$.)  \emph{Caution:} it is not always true that $HK$ is a subgroup of $G$.  It is true if either $H$ or $K$ is a normal subgroup of $G$ and occassionally it is true even without $H$ or $K$ being normal -- for example when $HK=KH$ so called \emph{permutable} subgroups.
+
+If $H$ and $K$ are finite subgroups then we can express this as:
+\begin{equation}\label{eq:4b}
+  |HK|/|K|=[H:H\intersect K]
+\end{equation}
+Once again if we have normality, say $K$ is normal in $G$, then this is mimicks second isomorphism theorem:
+\begin{equation}
+  HK/K\cong H/H\intersect K.
+\end{equation}
+
+Notice that if $HK$ is a subset of the subgroup $\langle H,K\rangle\leq G$.  So it is possible to state (\ref{eq:4b}) with all subgroups using inequalities such as
+\begin{equation}\label{eq:4c}
+ [H:H\intersect K]\leq [G:K]
+\end{equation}
+even when all the groups are infinite.  Furthermore, if $HK$ is a subgroup of $G$ then we can write
+\begin{equation}\label{eq:4c}
+ [H:H\intersect K]=[HK:K]
+\end{equation}
+to apply even for infinite groups.  This equation is often called the \emph{parallelogram law} for groups because it can be described with with the following picture:
+\[
+\begin{xy}<5mm,0mm>:<0mm,10mm>::
+(0,5) *+{G} ="G";
+(0,4) *+{HK} ="HK";
+(-2,3) *+{H} ="H";
+( 1,2) *+{K} ="K";
+(-1,1) *+{H\intersect K} ="HiK";
+(-1,0) *+{1} = "1";
+"G"; "HK" **@{-};
+"HK"; "H" **@{-};
+"HK"; "K" **@{-};
+"H"; "HiK" **@{-};
+"K"; "HiK" **@{-};
+"HiK"; "1" **@{-};
+\end{xy}
+\]
+Note the diagram is a Hasse diagram of the lattice of subgroups of $G$.  We further inforce a policy of drawing edges of the same length if the index of the corresponding subgroups are equal.  Thus (\ref{eq:4c}) is simply a proof that the picture is accurate: opposite sides of a parallelogram are congruent. 
+
+The most common use of index calculus is for subgroups of finite index in $G$.  This allows one to solve for indices from given assumptions.  It is also quite common to prove certain configurations of subgroups are impossible as the indices are relatively prime.
+%%%%%
+%%%%%
+\end{document}

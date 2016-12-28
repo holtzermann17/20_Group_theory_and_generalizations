@@ -1,0 +1,60 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ExamplesOfPrimitiveGroupsThatAreNotDoublyTransitive}
+\pmcreated{2013-03-22 17:22:37}
+\pmmodified{2013-03-22 17:22:37}
+\pmowner{rm50}{10146}
+\pmmodifier{rm50}{10146}
+\pmtitle{examples of primitive groups that are not doubly transitive}
+\pmrecord{7}{39742}
+\pmprivacy{1}
+\pmauthor{rm50}{10146}
+\pmtype{Example}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{20B15}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\newcommand{\cD}{\mathcal{D}}
+\begin{document}
+\PMlinkescapeword{c}
+\PMlinkescapeword{entire}
+The group $\cD_{2n}, n\geq 3$, the dihedral group of order $2n$, is the symmetry group of the regular $n$-gon. (Note that we use the more common notation $\cD_{2n}$ for this group rather than $\cD_n$).
+
+$\cD_{2n}$ is clearly not doubly transitive for $n\geq 4$, since it preserves ``adjacency'' in the vertices. Thus, for example, clearly no element of $\cD_{2n}$ can take $(1,2)$ to $(1,3)$. ($\cD_{2\cdot 3}=\cD_6$, the symmetry group of the triangle, is, however, doubly transitive).
+
+We show that for $p$ prime, $\cD_{2p}$ is primitive. To prove this, we need only verify that any block containing two distinct elements is the entire set of vertices. Number the vertices consecutively  $\{0,\ldots,p-1\}$, and let $r$ be the element of $\cD_{2n}$ that takes each vertex into its successor $\pmod p$. Now, suppose a block contains two distinct elements $a,b$; assume wlog that $b\neq 0$. Iteratively apply $\displaystyle r^{b-a}$ to these elements to get
+\begin{center}
+\begin{tabular}{c c}
+$a$&$b$\\
+$b$&$2b-a$\\
+$2b-a$&$3b-a$\\
+$\ldots$&$\ldots$
+\end{tabular}
+\end{center}
+Since blocks are either equal or disjoint, we see that the block in question contains $a,b$, and $nb-a$ for each $n$. But $a\neq b$, so $nb-a$ runs through all \PMlinkname{residues}{ResidueSystems} $\pmod p$ and thus the block contains each vertex. Thus $D_{2p}$ is primitive.
+
+For nonprime $n$, $\cD_{2n}$ is not primitive. In this case, if $d$ is a divisor of $n$, then the set of vertices that are multiples of $d$ form a block.
+
+%%%%%
+%%%%%
+\end{document}

@@ -1,0 +1,72 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ASubgroupOfIndex2IsNormal}
+\pmcreated{2013-03-22 15:09:25}
+\pmmodified{2013-03-22 15:09:25}
+\pmowner{alozano}{2414}
+\pmmodifier{alozano}{2414}
+\pmtitle{a subgroup of index 2 is normal}
+\pmrecord{5}{36905}
+\pmprivacy{1}
+\pmauthor{alozano}{2414}
+\pmtype{Theorem}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{20A05}
+\pmrelated{Coset}
+\pmrelated{QuotientGroup}
+\pmrelated{NormalityOfSubgroupsOfPrimeIndex}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsthm}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\newtheorem{thm}{Theorem}
+\newtheorem{defn}{Definition}
+\newtheorem{prop}{Proposition}
+\newtheorem*{lemma}{Lemma}
+\newtheorem{cor}{Corollary}
+
+\theoremstyle{definition}
+\newtheorem{exa}{Example}
+
+% Some sets
+\newcommand{\Nats}{\mathbb{N}}
+\newcommand{\Ints}{\mathbb{Z}}
+\newcommand{\Reals}{\mathbb{R}}
+\newcommand{\Complex}{\mathbb{C}}
+\newcommand{\Rats}{\mathbb{Q}}
+\newcommand{\Gal}{\operatorname{Gal}}
+\newcommand{\Cl}{\operatorname{Cl}}
+\begin{document}
+\begin{lemma}
+Let $(G,\cdot)$ be a group and let $H$ be a subgroup of $G$ of index 2. Then $H$ is normal in $G$.
+\end{lemma}
+\begin{proof}
+Let $G$ be a group and let $H$ be an index 2 subgroup of $G$. By definition of index, there are only two left cosets of $H$ in $G$, namely:
+$$H, \quad g_1H$$
+where $g_1$ is any element of $G$ which is not in $H$. Notice that if $g_1,\ g_2$ are two elements in $G$ which are not in $H$ then $g_1\cdot g_2$ belongs to $H$. Indeed, the coset $g_1g_2H\neq g_1H$ (because $g_1g_2=g_1h$ would immediately yield $g_2=h\in H$) and so $g_1g_2H=H$ and $g_1g_2\in H$.
+
+Let $h\in H$ be an arbitrary element of $H$ and let $g\in G$. If $g\in H$ then $ghg^{-1}\in H$ and we are done. Otherwise, assume that $g\notin H$. Thus $gh\notin H$ and by the remark above $ghg^{-1}=(gh)g^{-1} \in H$, as desired.
+\end{proof}
+%%%%%
+%%%%%
+\end{document}

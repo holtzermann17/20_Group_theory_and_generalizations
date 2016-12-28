@@ -1,0 +1,76 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ZeroTimesAnElementIsZeroInARing}
+\pmcreated{2013-03-22 14:13:57}
+\pmmodified{2013-03-22 14:13:57}
+\pmowner{alozano}{2414}
+\pmmodifier{alozano}{2414}
+\pmtitle{zero times an element is zero in a ring}
+\pmrecord{8}{35673}
+\pmprivacy{1}
+\pmauthor{alozano}{2414}
+\pmtype{Theorem}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{20-00}
+\pmclassification{msc}{16-00}
+\pmclassification{msc}{13-00}
+\pmsynonym{$0\cdot a=0$}{ZeroTimesAnElementIsZeroInARing}
+\pmrelated{1cdotAA}
+\pmrelated{AbsorbingElement}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsthm}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\newtheorem{thm}{Theorem}
+\newtheorem{defn}{Definition}
+\newtheorem{prop}{Proposition}
+\newtheorem{lemma}{Lemma}
+\newtheorem{cor}{Corollary}
+
+% Some sets
+\newcommand{\Nats}{\mathbb{N}}
+\newcommand{\Ints}{\mathbb{Z}}
+\newcommand{\Reals}{\mathbb{R}}
+\newcommand{\Complex}{\mathbb{C}}
+\newcommand{\Rats}{\mathbb{Q}}
+\begin{document}
+\begin{lemma}
+Let $R$ be a ring with zero element $0$ (i.e. $0$ is the additive identity of $R$). Then for any element $a\in R$ we have $0\cdot a = a\cdot 0 = 0$.
+\end{lemma}
+\begin{proof}
+\begin{eqnarray*}
+0\cdot a &=& (0+0)\cdot a , \quad \text{ by definition of zero}\\
+&=& 0\cdot a + 0\cdot a, \quad \text{ by the distributive law}\\
+\end{eqnarray*}
+Thus $0\cdot a=0\cdot a + 0\cdot a$. Let $b$ be the additive inverse of $0\cdot a \in R$. Hence:
+\begin{eqnarray*}
+b+0\cdot a=b+(0\cdot a + 0\cdot a)\\
+(b+0\cdot a)=(b+0\cdot a) + 0\cdot a\\
+0=0 + 0\cdot a\\
+0=0\cdot a
+\end{eqnarray*}
+as claimed. The proof of $a\cdot 0=0$ is done analogously.
+\end{proof}
+%%%%%
+%%%%%
+\end{document}

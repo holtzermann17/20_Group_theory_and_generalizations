@@ -1,0 +1,44 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ProofOfClassEquationTheorem}
+\pmcreated{2013-03-22 14:20:52}
+\pmmodified{2013-03-22 14:20:52}
+\pmowner{gumau}{3545}
+\pmmodifier{gumau}{3545}
+\pmtitle{proof of class equation theorem}
+\pmrecord{4}{35823}
+\pmprivacy{1}
+\pmauthor{gumau}{3545}
+\pmtype{Proof}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{20D20}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\begin{document}
+$X$ is a finite disjoint union of finite orbits:
+$X = \cup_{i}Gx_{i}$. We can separate this union by considerating first only the orbits of 1 element and then the rest:
+$X = \cup_{j=1}^{l}\{x_{i_{j}}\} \cup \cup_{k=1}^{s}Gx_{i_{k}}=G_{X} \cup_{k=1}^{s}Gx_{i_{k}}$
+Then using the orbit-stabilizer theorem, we have $\#X=\#G_{X} + \sum_{k=1}^{s}[G:G_{x_{i_{k}}}]$ where for every $k$, $[G:G_{x_{i_{k}}}]\geq 2$, because if one of them were 1, then it would be associated to an orbit of 1 element, but we counted those orbits first. Then this stabilizers are not $G$. This finishes the proof.
+%%%%%
+%%%%%
+\end{document}

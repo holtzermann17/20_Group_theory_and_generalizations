@@ -1,0 +1,64 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{MoufangLoop}
+\pmcreated{2013-03-22 13:50:29}
+\pmmodified{2013-03-22 13:50:29}
+\pmowner{yark}{2760}
+\pmmodifier{yark}{2760}
+\pmtitle{Moufang loop}
+\pmrecord{12}{34578}
+\pmprivacy{1}
+\pmauthor{yark}{2760}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{20N05}
+
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\begin{document}
+\PMlinkescapeword{algebra}
+\PMlinkescapeword{binary}
+\PMlinkescapeword{equivalent}
+\PMlinkescapeword{implies}
+\PMlinkescapeword{proof}
+\PMlinkescapeword{proposition}
+\PMlinkescapeword{references}
+\PMlinkescapeword{theory}
+\PMlinkescapeword{unit}
+\textbf{Proposition: } Let $Q$ be a nonempty quasigroup.
+
+I) The following conditions are equivalent.
+\begin{eqnarray}
+(x(yz))x &=& (xy)(zx) \qquad\text{for all } x,y,z\in Q \\
+((xy)z)y &=& x(y(zy)) \qquad\text{for all } x,y,z\in Q \\
+(xz)(yx) &=& x((zy)x) \qquad\text{for all } x,y,z\in Q \\
+((yz)y)x &=& y(z(yx)) \qquad\text{for all } x,y,z\in Q
+\end{eqnarray}
+
+II) If $Q$ satisfies those conditions, then $Q$ has an identity element
+(i.e., $Q$ is a loop).
+
+For a proof, we refer the reader to the two references.
+Kunen in [1] shows that that any of the four conditions implies the
+existence of an identity element. And Bol and Bruck [2] show that
+the four conditions are equivalent for loops.
+
+\textbf{Definition:} A nonempty quasigroup satisfying the conditions
+(1)--(4) is called a Moufang quasigroup or, equivalently, a Moufang
+loop (after Ruth Moufang, 1905--1977).
+
+The 16-element set of unit octonions over $\mathbb{Z}$ is an example
+of a nonassociative Moufang loop.
+Other examples appear in projective geometry, coding theory, and elsewhere.
+
+\textbf{References}
+
+[1] Kenneth Kunen, {\it Moufang Quasigroups}, J. Algebra 83 (1996) 231--234.
+(A preprint in PostScript format is available from Kunen's website:
+\PMlinkexternal{Moufang Quasigroups}{http://www.math.wisc.edu/~kunen/moufang.ps}.)
+
+[2] R. H. Bruck, {\it A Survey of Binary Systems,} Springer-Verlag, 1958.
+%%%%%
+%%%%%
+\end{document}

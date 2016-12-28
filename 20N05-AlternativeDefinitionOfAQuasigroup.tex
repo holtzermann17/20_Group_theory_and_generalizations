@@ -1,0 +1,60 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{AlternativeDefinitionOfAQuasigroup}
+\pmcreated{2013-03-22 18:28:56}
+\pmmodified{2013-03-22 18:28:56}
+\pmowner{CWoo}{3771}
+\pmmodifier{CWoo}{3771}
+\pmtitle{alternative definition of a quasigroup}
+\pmrecord{6}{41158}
+\pmprivacy{1}
+\pmauthor{CWoo}{3771}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{20N05}
+\pmrelated{Supercategory}
+\pmdefines{left division}
+\pmdefines{right division}
+
+\usepackage{amssymb,amscd}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{mathrsfs}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+\usepackage{amsthm}
+% making logically defined graphics
+%%\usepackage{xypic}
+\usepackage{pst-plot}
+
+% define commands here
+\newcommand*{\abs}[1]{\left\lvert #1\right\rvert}
+\newtheorem{prop}{Proposition}
+\newtheorem{thm}{Theorem}
+\newtheorem{ex}{Example}
+\newcommand{\real}{\mathbb{R}}
+\newcommand{\pdiff}[2]{\frac{\partial #1}{\partial #2}}
+\newcommand{\mpdiff}[3]{\frac{\partial^#1 #2}{\partial #3^#1}}
+\begin{document}
+In the parent entry, a quasigroup is defined as a set, together with a binary operation on it satisfying two formulas, both of which using existential quantifiers.  In this entry, we give an alternative, but equivalent, definition of a quasigroup using only universally quantified formulas.  In other words, the class of quasigroups is an equational class.
+
+\textbf{Definition}.  A \emph{quasigroup} is a set $Q$ with three binary operations $\cdot$ (multiplication), $\backslash$ (\emph{left division}), and $/$ (\emph{right division}), such that the following are satisfied:
+\begin{itemize}
+\item $(Q,\cdot)$ is a groupoid (not in the category theoretic sense)
+\item (left division identities) for all $a,b\in Q$, $a \backslash (a \cdot b)=b$ and $a\cdot (a \backslash b) = b$
+\item (right division identities) for all $a,b\in Q$, $(a \cdot b)/ b=a$ and $(a/b) \cdot b = a$
+\end{itemize}
+
+\begin{prop} The two definitions of a quasigroup are equivalent. \end{prop}
+\begin{proof}
+Suppose $Q$ is a quasigroup using the definition given in the \PMlinkname{parent entry}{LoopAndQuasigroup}.  Define $\backslash$ on $Q$ as follows: for $a,b\in Q$, set $a\backslash b:=c$ where $c$ is the unique element such that $a\cdot c = b$.  Because $c$ is unique, $\backslash$ is well-defined.  Now, let $x = a\cdot b$ and $y = a\backslash x$.  Since $a\cdot y = x = a \cdot b$, and $y$ is uniquely determined, this forces $y=b$.  Next, let $x=a\backslash b$, then $a \cdot x =b$, or $a \cdot (a\backslash b) = b$.  Similarly, define $/$ on $Q$ so that $a/b$ is the unique element $d$ such that $d\cdot b=a$.  The verification of the two right division identities is left for the reader.
+
+Conversely, let $Q$ be a quasigroup as defined in this entry.  For any $a,b\in Q$, let $c=a\backslash b$ and $d=b/a$.  Then $a \cdot c = a \cdot (a \backslash b) = b$ and $d \cdot a = (b/a) \cdot a = b$.
+\end{proof}
+%%%%%
+%%%%%
+\end{document}

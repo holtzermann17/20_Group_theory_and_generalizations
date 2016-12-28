@@ -1,0 +1,47 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{SubgroupsOfFiniteCyclicGroup}
+\pmcreated{2013-03-22 18:57:13}
+\pmmodified{2013-03-22 18:57:13}
+\pmowner{pahio}{2872}
+\pmmodifier{pahio}{2872}
+\pmtitle{subgroups of finite cyclic group}
+\pmrecord{5}{41810}
+\pmprivacy{1}
+\pmauthor{pahio}{2872}
+\pmtype{Theorem}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{20A05}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+ \usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\theoremstyle{definition}
+\newtheorem*{thmplain}{Theorem}
+
+\begin{document}
+Let $n$ be the order of a finite cyclic group $G$.\, For every positive \PMlinkname{divisor}{Divisibility} $m$ of $n$, there exists one and only one subgroup of order $m$ of $G$.\, The group $G$ has no other subgroups.\\
+
+\emph{Proof.}\, If $g$ is a generator of $G$ and\, $n = mk$,\, then $g^k$ generates the subgroup $\langle g^k\rangle$, the order of which is equal to the order of $g^k$, i.e. equal to $m$.\, Any subgroup $H$ of $G$ is cyclic (see \PMlinkid{this entry}{4097}).\, If\, $|H| = m$,\, then $H$ must have a generator of order $m$; thus apparently\, $H = \langle g^{\pm k}\rangle = \langle g^k\rangle$.
+%%%%%
+%%%%%
+\end{document}

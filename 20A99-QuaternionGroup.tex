@@ -1,0 +1,72 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{QuaternionGroup}
+\pmcreated{2013-03-22 12:35:35}
+\pmmodified{2013-03-22 12:35:35}
+\pmowner{mathcam}{2727}
+\pmmodifier{mathcam}{2727}
+\pmtitle{quaternion group}
+\pmrecord{12}{32844}
+\pmprivacy{1}
+\pmauthor{mathcam}{2727}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{20A99}
+\pmsynonym{quaternionic group}{QuaternionGroup}
+\pmrelated{Quaternions}
+\pmdefines{quaternion group}
+
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\begin{document}
+\PMlinkescapeword{order}
+The quaternion group, or quaternionic group, is a noncommutative
+group with eight elements. It is traditionally denoted by $Q$ (not to be
+confused with $\mathbb{Q}$) or by $Q_8$. This group is defined by the
+presentation
+$$\{i,j;i^4,i^2j^2,iji^{-1}j\}$$
+or, equivalently, defined by the multiplication table
+
+\begin{center}
+\begin{tabular}{rrrrrrrrr}\hline
+$\cdot$& $1$  & $i$  & $j$  & $k$  & $-i$ & $-j$ & $-k$ & $-1$ \\
+%\hline
+$1$    & $1$  & $i$  & $j$  & $k$  & $-i$ & $-j$ & $-k$ & $-1$ \\\hline
+$i$    & $i$  & $-1$ & $k$  & $-j$ & $1$  & $-k$ & $j$  & $-i$ \\\hline
+$j$    & $j$  & $-k$ & $-1$ & $i$  & $k$  & $1$  & $-i$ & $-j$ \\\hline
+$k$    & $k$  & $j$  & $-i$ & $-1$ & $-j$ & $i$  & $1$  & $-k$ \\\hline
+$-i$   & $-i$ & $1$  & $-k$ & $j$  & $-1$ & $k$  & $-j$ & $i$  \\\hline
+$-j$   & $-j$ & $k$  & $1$  & $-i$ & $-k$ & $-1$ & $i$  & $j$  \\\hline
+$-k$   & $-k$ & $-j$ & $i$  & $1$  & $j$  & $-i$ & $-1$ & $k$  \\\hline
+$-1$   & $-1$ & $-i$ & $-j$ & $-k$ & $i$  & $j$  & $k$  & $1$\\\hline
+\end{tabular}
+\end{center}
+
+\noindent
+where we have put each product $xy$ into row $x$ and column $y$.
+The minus signs are justified by the fact that $\{1,-1\}$ is subgroup
+contained in the center of $Q$.
+Every subgroup of $Q$ is normal and, except for
+the trivial subgroup $\{1\}$, contains $\{1,-1\}$.
+The dihedral group $D_4$ (the group of symmetries of a square) is the
+only other noncommutative group of order 8.
+
+Since $i^2 = j^2 = k^2 = -1$,
+the elements $i$, $j$, and $k$ are known as the imaginary units, by
+analogy with $i\in\mathbb{C}$. Any pair of the imaginary units generate
+the group. Better, given $x,y\in\{i,j,k\}$, any element of $Q$
+is expressible in the form $x^my^n$.
+
+$Q$ is identified with the group of units (invertible elements) of the
+ring of quaternions over $\mathbb{Z}$. That ring
+is not identical to the group ring $\mathbb{Z}[Q]$, which has dimension 8
+(not 4) over $\mathbb{Z}$. Likewise the usual quaternion algebra
+is not quite the same thing as the group algebra $\mathbb{R}[Q]$.
+
+Quaternions were known to Gauss in 1819 or 1820, but he did not
+publicize this discovery, and quaternions weren't rediscovered until
+1843, with Hamilton. 
+%%%%%
+%%%%%
+\end{document}

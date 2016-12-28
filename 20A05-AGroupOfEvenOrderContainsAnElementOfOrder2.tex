@@ -1,0 +1,56 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{AGroupOfEvenOrderContainsAnElementOfOrder2}
+\pmcreated{2013-03-22 17:11:37}
+\pmmodified{2013-03-22 17:11:37}
+\pmowner{azdbacks4234}{14155}
+\pmmodifier{azdbacks4234}{14155}
+\pmtitle{a group of even order contains an element of order 2}
+\pmrecord{20}{39512}
+\pmprivacy{1}
+\pmauthor{azdbacks4234}{14155}
+\pmtype{Theorem}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{20A05}
+%\pmkeywords{group order}
+%\pmkeywords{order of an element}
+%\pmkeywords{even order}
+%\pmkeywords{finite group}
+
+%%packages
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amsthm}
+%%theorem environments
+\theoremstyle{plain}
+\newtheorem*{theorem*}{Theorem}
+\newtheorem*{lemma*}{Lemma}
+\newtheorem*{corollary*}{Corollary}
+\newtheorem*{proposition*}{Proposition}
+%math operators and commands
+\newcommand{\set}[1]{\{#1\}}
+\newcommand{\medset}[1]{\left\{#1\right\}}
+\newcommand{\bigset}[1]{\bigg\{#1\bigg\}}
+\newcommand{\abs}[1]{\vert#1\vert}
+\newcommand{\medabs}[1]{\left\vert#1\right\vert}
+\newcommand{\bigabs}[1]{\bigg\vert#1\bigg\vert}
+\newcommand{\norm}[1]{\Vert#1\Vert}
+\newcommand{\mednorm}[1]{\left\Vert#1\right\Vert}
+\newcommand{\bignorm}[1]{\bigg\Vert#1\bigg\Vert}
+\DeclareMathOperator{\Aut}{Aut}
+\DeclareMathOperator{\End}{End}
+\DeclareMathOperator{\Inn}{Inn}
+\DeclareMathOperator{\supp}{supp}
+
+\begin{document}
+\begin{proposition*}
+Every group of even order contains an element of order $2$.
+\end{proposition*}
+\begin{proof}
+Let $G$ be a group of even order, and consider the set $S=\{g\in G:g\neq g^{-1}\}$. We claim that $\vert S\vert$ is even; to see this, let $a\in S$, so that $a\neq a^{-1}$; since $(a^{-1})^{-1}=a\neq a^{-1}$, we see that $a^{-1}\in S$ as well. Thus the elements of $S$ may be exhausted by repeatedly selecting an element and \PMlinkescapetext{pairing} it with its inverse, from which it follows that $\vert S\vert$ is a \PMlinkname{multiple}{Divisibility} of $2$ (i.e., is even). Now, because $S\cap (G\setminus S)=\emptyset$ and $S\cup(G\setminus S)=G$, it must be that $\vert S\vert+\vert G\setminus S\vert=\vert G\vert$, which, because $\vert G\vert$ is even, implies that $\vert G\setminus S\vert$ is also even. The identity element $e$ of $G$ is in $G\setminus S$, being its own inverse, so the set $G\setminus S$ is nonempty, and consequently must contain at least two distinct elements; that is, there must exist some $b\neq e\in G\setminus S$, and because $b\notin S$, we have $b=b^{-1}$, hence $b^2=1$. Thus $b$ is an element of order $2$ in $G$.
+\end{proof}
+Notice that the above \PMlinkescapetext{proposition} is logically equivalent to the assertion that a group of even order has a non-identity element that is its own inverse. 
+%%%%%
+%%%%%
+\end{document}

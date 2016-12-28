@@ -1,0 +1,55 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{AFinitelyGeneratedGroupHasOnlyFinitelyManySubgroupsOfAGivenIndex}
+\pmcreated{2013-03-22 15:16:03}
+\pmmodified{2013-03-22 15:16:03}
+\pmowner{avf}{9497}
+\pmmodifier{avf}{9497}
+\pmtitle{A finitely generated group has only finitely many subgroups of a given index}
+\pmrecord{6}{37054}
+\pmprivacy{1}
+\pmauthor{avf}{9497}
+\pmtype{Theorem}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{20E07}
+\pmrelated{Group}
+\pmrelated{FinitelyGenerated}
+
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amsthm}
+\usepackage[matrix,arrow,curve]{xy}
+\usepackage[only,trianglelefteqslant]{stmaryrd}
+
+\newcommand{\sgp}{\leqslant}
+\newcommand{\sgpf}{\leqslant_{\mathrm{f}}}
+\newcommand{\nsgp}{\trianglelefteqslant}
+\newcommand{\nsgpf}{\trianglelefteqslant_{\mathrm{f}}}
+\newcommand{\nsgpo}{\trianglelefteqslant_{\mathrm{o}}}
+\newcommand{\hir}{\mathrm{h}}
+\newcommand{\stab}{\mathrm{Stab}}
+\begin{document}
+Let $G$ be a finitely generated group and let $n$ be a positive
+integer. Let $H$ be a subgroup of $G$ of index $n$ and consider the
+action of $G$ on the coset space $(G:H)$ by right multiplication.
+Label the cosets $1, \ldots, n$, with the coset $H$ labelled by $1$.
+This gives a homomorphism $\phi : G \to S_n$. Now, $x \in H$ if and
+only if $Hx = H$, that is, $G$ fixes the coset $H$. Therefore, $H =
+\stab_G(1) = \{g \in G \mid 1(g\phi) = 1\}$, and this is completely
+determined by $\phi$. Now let $X$ be a finite generating set for $G$.
+Then $\phi$ is determined by the images $x\phi$ of the generators $x
+\in X$. There are $|S_n| = n!$ choices for the image of each $x \in
+X$, so there are at most $n!^{|X|}$ homomorphisms $G \to S_n$. Hence,
+there are only finitely many possibilities for $H$.
+
+\begin{thebibliography}{99}
+
+\bibitem{mhall}
+M.~{Hall, Jr.}, \emph{A topology for free groups and related groups}, Ann. of
+  Math. \textbf{52} (1950), no.~1, 127--139.
+
+\end{thebibliography}
+%%%%%
+%%%%%
+\end{document}

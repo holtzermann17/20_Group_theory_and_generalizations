@@ -1,0 +1,41 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{KleeneAlgebra}
+\pmcreated{2013-03-22 12:27:51}
+\pmmodified{2013-03-22 12:27:51}
+\pmowner{CWoo}{3771}
+\pmmodifier{CWoo}{3771}
+\pmtitle{Kleene algebra}
+\pmrecord{10}{32618}
+\pmprivacy{1}
+\pmauthor{CWoo}{3771}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{20M35}
+\pmclassification{msc}{68Q70}
+\pmrelated{KleeneStar}
+\pmrelated{Semiring}
+\pmrelated{RegularExpression}
+\pmrelated{RegularLanguage}
+\pmrelated{KleeneAlgebra2}
+
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\begin{document}
+A \emph{Kleene algebra} $(A, \cdot, +, ^*, 0, 1)$ is an idempotent semiring
+$(A, \cdot, +, 0, 1)$ with an additional (right-associative) unary operator $^*$, called the Kleene star, which satisfies
+$$
+\begin{array}{rl}
+1+aa^*\leq a^*, & \qquad ac+b\leq c\Rightarrow a^*b\leq c, \\
+1+a^*a\leq a^*, & \qquad ca+b\leq c\Rightarrow ba^*\leq c,
+\end{array}
+$$
+for all $a, b, c\in A$.
+
+For a given alphabet $\Sigma$, the set of all languages over $\Sigma$, as well as the set of all regular languages over $\Sigma$, are examples of Kleene algebras.  Similarly, sets of regular expressions (regular sets) over $\Sigma$ are a form (or close variant) of a Kleene algebra: let $A$ be the set of all regular sets over a set $\Sigma$ of alphabets.  Then $A$ is a Kleene algebra if we identify $\varnothing$ as $0$, the singleton containing the empty string $\lambda$ as $1$, concatenation operation as $\cdot$, the union operation as $+$, and the Kleene star operation as $^*$.  For example, let $a$ be a set of regular expression, then $$a^*=\lbrace \lambda \rbrace \cup a \cup a^2 \cup \cdots \cup a^n \cup \cdots,$$ so that $$aa^*=a \cup a^2 \cup \cdots \cup a^n \cup \cdots.$$ Adding $1$ on both sides and we have $$1+aa^*=\lbrace \lambda \rbrace \cup aa^*=\lbrace \lambda \rbrace \cup a \cup a^2 \cup \cdots \cup a^n \cup \cdots = a^*.$$  The other conditions are checked similarly.
+
+\textbf{Remark}.  There is another notion of a Kleene algebra, which arises from lattices.  For more detail, see \PMlinkname{here}{KleeneAlgebra2}.
+%%%%%
+%%%%%
+\end{document}

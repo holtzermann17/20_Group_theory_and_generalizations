@@ -1,0 +1,90 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ExamplesOfInfiniteSimpleGroups}
+\pmcreated{2013-03-22 19:09:17}
+\pmmodified{2013-03-22 19:09:17}
+\pmowner{joking}{16130}
+\pmmodifier{joking}{16130}
+\pmtitle{examples of infinite simple groups}
+\pmrecord{5}{42059}
+\pmprivacy{1}
+\pmauthor{joking}{16130}
+\pmtype{Example}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{20E32}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\begin{document}
+Let $X$ be a set and let $f:X\to X$ be a function. Define
+$$C(f)=\{x\in X | f(x)\neq x\}.$$
+Throughout, we will say that $f:X\to X$ is a \textit{permutation on $X$} iff
+$f$ is a bijection and $C(f)$ is a finite set.
+
+For permutation $f:X\to X$, the set $C(f)$ will play the role of a ,,bridge'' between the infinite world and the finite world.
+
+Let $S(X)$ denote the group of all permutations on $X$ (with composition as a multiplication). For $f\in S(X)$, subset $A\subset X$ will be called \textit{$f$-finite} iff $A$ is finite and $C(f)\subseteq A$. This is equivalent to the fact, that $A$ is finite and if $f(x)\neq x$, then $x\in A$.
+
+It is easy to see, that if $f\in S(X)$ and $A$ is $f$-finite, then $f(A)=A$. Thus, we have well defined permutation (on a finite set) $f_A:A\to A$ by the formula $f_A(x)=f(x)$.
+
+\textbf{Lemma.} For any subset $A\subseteq X$ and any $f,g\in S(X)$ such that $A$ is $f$-finite and $g$-finite we have that $A$ is $f\circ g$-finite and 
+$$(f\circ g)_A=f_A\circ g_A.$$
+
+\textit{Proof.} Assume, that $A$ is $f$-finite and $g$-finite. Let $x\in X$ be such that $(f\circ g)(x)\neq x$. Assume, that $x\not\in A$. Then $f(x)=g(x)=x$ and thus $(f\circ g)(x)=x$. Contradiction. Thus $x\in A$, so $C(f\circ g)\subseteq A$ and since $A$ is finite, then $A$ is $f\circ g$-finite. Finally, the equality
+$$(f\circ g)_A=f_A\circ g_A$$
+holds, because $(f\circ g)_A$ is well definied (since $A$ is $f\circ g$-finite) and the operation $(\cdot)_A$ does not change the formulas of functions. $\square$
+
+Now we can talk about the sign of a permutation. For $f\in S(X)$ define
+
+$$\mathrm{sgn}(f)=\mathrm{sgn}(f_A).$$
+
+It can be easily checked, that $\mathrm{sgn}$ is well defined (indeed, sign depends only on those $x\in X$ for which $f(x)\neq x$). Furthermore, it follows directly from the definition, that
+$$\mathrm{sgn}:S(X)\to \{-1,1\}$$
+is a group homomorphism (in $\{-1,1\}$ we have standard multiplication). Define
+$$A(X)=\mathrm{ker}(\mathrm{sgn}).$$
+Briefly speaking, $A(X)$ is the subgroup of even permutations on a set $X$ (a.k.a. the alternating group for the set $X$).
+
+Now, we shall prove the following proposition, using the fact, that for any finite set $X$ with at least $5$ elements, the group $A(X)$ is simple (this is well known fact).
+
+\textbf{Proposition.} If $X$ is an infinite set, then $A(X)$ is a simple group.
+
+\textit{Proof.} Assume, that $A(X)$ is not simple and let $N\subseteq A(X)$ be a proper, nontrivial, normal subgroup. For a subset $Y\subseteq X$ define
+$$N_{Y}=\{f_{Y}\ |\ f\in N\mbox{ and }C(f)\subseteq Y\}.$$
+Note, that
+$$A(Y)=\{f_Y\ |\ f\in A(X)\mbox{ and } C(f)\subseteq Y\}.$$
+Obviously $N_Y\subseteq A(Y)$ is a subgroup (due to lemma) of $A(Y)$. We will show, that it is normal. Let $f_Y\in N_Y$ and $g_Y\in A(Y)$. We have to show, that $g_Y\circ f_Y\circ g_{Y}^{-1}\in N_Y$. Of course 
+$$g\circ f\circ g^{-1}\in N,$$
+because $N$ is normal (here $f,g$ correspond to $f_Y,g_Y$). It follows from lemma (note, that $Y$ is $g\circ f\circ g^{-1}$-finite), that
+$$g_Y\circ f_Y \circ g^{-1}_Y=(g\circ f\circ g^{-1})_Y\in N_Y,$$
+which shows, that $N_Y$ is normal. To obtain the contradiction, we need to show, that there exists $Y\subseteq X$ with at least $5$ elements, such that $N_Y$ is nontrivial and proper (because in this case $A(Y)$ is simple).
+
+Let $f\in N$ be such that $f\neq\mathrm{id}_X$ and let $g\in A(X)$ be such that $g\not\in N$. Let $Y$ be any $f$-finite and $g$-finite subset of $X$ with at least $5$ elements (such subset exists). Then $N_Y$ is nontrivial, because $f_Y\in N_Y$ is nontrivial.
+
+Now assume, that $g_Y\in N_Y$, i.e. assume, that there exists $h\in N$ with $C(h)\subseteq Y$, such that $g_Y=h_Y$. Then (due to lemma) $Y$ is $h\circ g^{-1}$-finite, and since $g_Y=h_Y$ we have that for any $x\in Y$ the following holds: $$(h\circ g^{-1})(x)=x.$$ On the other hand, for $x\in X\backslash Y$ we have $g(x)=h(x)=x$. This shows, that $h=g$, but $h\in N$ and $g\not\in N$. Contradiction. Thus $g_Y\not\in N_Y$, so $N_Y$ is proper.
+
+This completes the proof. $\square$
+
+\textbf{Remark.} This proposition shows, that the class of simple groups is actually a proper class, i.e. it is not a set. Therefore studying infinite simple groups can be very difficult.
+%%%%%
+%%%%%
+\end{document}

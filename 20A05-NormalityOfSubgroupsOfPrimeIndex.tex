@@ -1,0 +1,88 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{NormalityOfSubgroupsOfPrimeIndex}
+\pmcreated{2013-03-22 17:26:38}
+\pmmodified{2013-03-22 17:26:38}
+\pmowner{azdbacks4234}{14155}
+\pmmodifier{azdbacks4234}{14155}
+\pmtitle{normality of subgroups of prime index}
+\pmrecord{13}{39825}
+\pmprivacy{1}
+\pmauthor{azdbacks4234}{14155}
+\pmtype{Theorem}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{20A05}
+%\pmkeywords{prime}
+%\pmkeywords{index}
+%\pmkeywords{normal}
+%\pmkeywords{subgroup}
+%\pmkeywords{group action}
+\pmrelated{Coset}
+\pmrelated{GroupAction}
+\pmrelated{ASubgroupOfIndex2IsNormal}
+
+%packages
+\usepackage{amsmath,mathrsfs,amsfonts,amsthm}
+%theorem environments
+\theoremstyle{plain}
+\newtheorem*{thm*}{Theorem}
+\newtheorem*{lem*}{Lemma}
+\newtheorem*{cor*}{Corollary}
+\newtheorem*{prop*}{Proposition}
+%delimiters
+\newcommand{\set}[1]{\{#1\}}
+\newcommand{\medset}[1]{\big\{#1\big\}}
+\newcommand{\bigset}[1]{\bigg\{#1\bigg\}}
+\newcommand{\Bigset}[1]{\Bigg\{#1\Bigg\}}
+\newcommand{\abs}[1]{\vert#1\vert}
+\newcommand{\medabs}[1]{\big\vert#1\big\vert}
+\newcommand{\bigabs}[1]{\bigg\vert#1\bigg\vert}
+\newcommand{\Bigabs}[1]{\Bigg\vert#1\Bigg\vert}
+\newcommand{\norm}[1]{\Vert#1\Vert}
+\newcommand{\mednorm}[1]{\big\Vert#1\big\Vert}
+\newcommand{\bignorm}[1]{\bigg\Vert#1\bigg\Vert}
+\newcommand{\Bignorm}[1]{\Bigg\Vert#1\Bigg\Vert}
+\newcommand{\vbrack}[1]{\langle#1\rangle}
+\newcommand{\medvbrack}[1]{\big\langle#1\big\rangle}
+\newcommand{\bigvbrack}[1]{\bigg\langle#1\bigg\rangle}
+\newcommand{\Bigvbrack}[1]{\Bigg\langle#1\Bigg\rangle}
+\newcommand{\sbrack}[1]{[#1]}
+\newcommand{\medsbrack}[1]{\big[#1\big]}
+\newcommand{\bigsbrack}[1]{\bigg[#1\bigg]}
+\newcommand{\Bigsbrack}[1]{\Bigg[#1\Bigg]}
+%operators
+\DeclareMathOperator{\Hom}{Hom}
+\DeclareMathOperator{\Tor}{Tor}
+\DeclareMathOperator{\Ext}{Ext}
+\DeclareMathOperator{\Aut}{Aut}
+\DeclareMathOperator{\End}{End}
+\DeclareMathOperator{\Inn}{Inn}
+\DeclareMathOperator{\lcm}{lcm}
+\DeclareMathOperator{\ord}{ord}
+\DeclareMathOperator{\rank}{rank}
+\DeclareMathOperator{\tr}{tr}
+\DeclareMathOperator{\Mat}{Mat}
+\DeclareMathOperator{\Gal}{Gal}
+\DeclareMathOperator{\GL}{GL}
+\DeclareMathOperator{\SL}{SL}
+\DeclareMathOperator{\SO}{SO}
+\DeclareMathOperator{\ann}{ann}
+\DeclareMathOperator{\im}{im}
+\DeclareMathOperator{\Char}{char}
+\DeclareMathOperator{\Spec}{Spec}
+\DeclareMathOperator{\supp}{supp}
+\DeclareMathOperator{\diam}{diam}
+\DeclareMathOperator{\Ind}{Ind}
+\DeclareMathOperator{\vol}{vol}
+
+\begin{document}
+\begin{prop*}
+If $H$ is a subgroup of a finite group $G$ of index $p$, where $p$ is the smallest prime dividing the order of $G$, then $H$ is normal in $G$.
+\end{prop*}
+\begin{proof}
+Suppose $H\leq G$ with $\abs{G}$ finite and $\abs{G:H}=p$, where $p$ is the smallest prime divisor of $\abs{G}$, let $G$ act on the set $L$ of left cosets of $H$ in $G$ by left \PMlinkescapetext{translation}, and let $\varphi:G\rightarrow S_p$ be the \PMlinkid{homomorphism induced}{3820} by this action. Now, if $g\in\ker\varphi$, then $gxH=xH$ for each $x\in G$, and in particular, $gH=H$, whence $g\in H$. Thus $K=\ker\varphi$ is a normal subgroup of $H$ (being contained in $H$ and normal in $G$). By the First Isomorphism Theorem, $G/K$ is isomorphic to a subgroup of $S_p$, and consequently $\abs{G/K}=\abs{G:K}$ must \PMlinkid{divide}{923} $p!$; moreover, any divisor of $\abs{G:K}$ must also \PMlinkescapetext{divide} $\abs{G}=\abs{G:K}\abs{K}$, and because $p$ is the smallest divisor of $\abs{G}$ different from $1$, the only possibilities are $\abs{G:K}=p$ or $\abs{G:K}=1$. But $\abs{G:K}=\abs{G:H}\abs{H:K}=p\abs{H:K}\geq p$, which \PMlinkescapetext{forces} $\abs{G:K}=p$, and consequently $\abs{H:K}=1$, so that $H=K$, from which it follows that $H$ is normal in $G$.
+\end{proof}
+
+%%%%%
+%%%%%
+\end{document}

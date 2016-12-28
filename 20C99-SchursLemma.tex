@@ -1,0 +1,63 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{SchursLemma}
+\pmcreated{2013-03-22 13:08:01}
+\pmmodified{2013-03-22 13:08:01}
+\pmowner{rmilson}{146}
+\pmmodifier{rmilson}{146}
+\pmtitle{Schur's lemma}
+\pmrecord{22}{33570}
+\pmprivacy{1}
+\pmauthor{rmilson}{146}
+\pmtype{Theorem}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{20C99}
+\pmclassification{msc}{20C15}
+\pmrelated{GroupRepresentation}
+\pmrelated{DenseRingOfLinearTransformations}
+
+\usepackage{amsmath,amsfonts,amssymb,amsthm}
+\newtheorem*{lemma}{Lemma}
+\newtheorem*{corollary}{Corollary}
+
+
+\newcommand{\image}{\operatorname{im}}
+\begin{document}
+\PMlinkescapeword{theory}
+\PMlinkescapeword{implications}
+\PMlinkescapeword{language}
+\PMlinkescapeword{irreducible}
+
+Schur's lemma is a fundamental result in representation theory,
+an elementary observation about irreducible modules, which is nonetheless
+noteworthy because of its profound applications.
+
+\begin{lemma}[Schur's lemma]
+  Let $G$ be a finite group and let $V$ and $W$ be irreducible
+  $G$-modules. Then, every $G$-module homomorphism $f: V \to W$ is
+  either invertible or the trivial zero map.
+\end{lemma}
+\begin{proof}
+  Note that both the kernel, $\ker f$, and the image, $\image f$, are $G$-submodules of $V$ and
+  $W$, respectively.  Since $V$ is irreducible, $\ker f$ is either
+  trivial or all of $V$. In the former case, $\image f$ is all of $W$
+  --- also because $W$ is irreducible --- and  hence $f$ is invertible. In
+  the latter case, $f$ is the zero map.
+\end{proof}
+
+One of the most important consequences of Schur's lemma is the following.
+
+\begin{corollary}
+  Let $V$ be a finite-dimensional, irreducible $G$-module taken over
+  an algebraically closed field. Then, every $G$-module homomorphism
+  $f: V \to V$ is equal to a scalar multiplication.
+\end{corollary}
+\begin{proof}
+  Since the ground field is algebraically closed, the linear
+  transformation $f: V\to V$ has an eigenvalue; call it $\lambda$.
+  By definition, $f - \lambda 1$ is not invertible, and hence equal to
+  zero by Schur's lemma. In other words, $f = \lambda$, a scalar.
+\end{proof}
+%%%%%
+%%%%%
+\end{document}

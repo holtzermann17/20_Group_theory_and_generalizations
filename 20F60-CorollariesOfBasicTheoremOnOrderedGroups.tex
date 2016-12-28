@@ -1,0 +1,70 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{CorollariesOfBasicTheoremOnOrderedGroups}
+\pmcreated{2013-03-22 14:55:12}
+\pmmodified{2013-03-22 14:55:12}
+\pmowner{rspuzio}{6075}
+\pmmodifier{rspuzio}{6075}
+\pmtitle{corollaries of basic theorem on ordered groups}
+\pmrecord{12}{36606}
+\pmprivacy{1}
+\pmauthor{rspuzio}{6075}
+\pmtype{Corollary}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{20F60}
+\pmclassification{msc}{06A05}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\begin{document}
+\textbf{Corollary 1} \, Let $G$ be an ordered group.  For all $x \in G$, either $x \le 1 \le x^{-1}$ or $x^{-1} \le 1 \le x$.
+
+{\it Proof:}  \, By conclusion 1, either $x < 1$ or $x = 1$ or $1 < x$.  If $x < 1$, then, by conclusion 5, $1^{-1} < x^{-1}$, so $x < 1 < x^{-1}$.  If $x = 1$, the conclusion is trivial.  If $1 < x$, then, by conclusion 5, $x^{-1} < 1^{-1}$, so $x^{-1} < 1 < x$.
+\rightline{Q.E.D.}
+
+\textbf{Corollary 2} \, Let $G$ be an ordered group and $n$ a strictly positive integer.  Then, for all $x, y \in G$, we have $x < y$ if and only if $x^n < y^n$.
+
+{\it Proof:}  We shall first prove that $x < y$ implies $x^n < y^n$ by induction.  If $n = 1$, this is a simple tautology.  Assume the conclusion is true for a certain value of $n$.  Then, conclusion 4 allows us to multiply the inequalities $x < y$ and $x^n < y^n$ to obtain $x^{n+1} < y^{n+1}$.
+
+As for the proof that $x^n < y^n$ implies $x < y$, we shall prove the contrapositive statement.  Assume that $x < y$ is false.  By conclusion 1, it follows that either $x = y$ or $x > y$.  If $x = y$, then $x^n = y^n$ so, by conclusion 1 $x^n < y^n$ is false.  If $x > y$ then, by what we have already shown, $x^n > y^n$ so $x^n < y^n$ is also false in this case for the same reason. 
+\rightline{Q.E.D.}
+
+\textbf{Corollary 3} \, Let $G$ be an ordered group and $n$ a strictly positive integer.  Then, for all $x, y \in G$, we have $x = y$ if and only if $x^n = y^n$.
+
+{\it Proof:}  It is trivial that, if $x = y$, then $x^n = y^n$.  Assume that $x^n = y^n$.  By conclusion 1 of the main theorem, it is the case that either $x < y$ or $x = y$ or $y < x$.  If $x < y$ then, by the preceding corollary, $x^n < y^n$, which is not possible.  Likewise, if $y < x$, then we would have $y^n < x^n$, which is also impossible.  The only remaining possibility is $x = y$.
+\rightline{Q.E.D.}
+
+\textbf{Corollary 4}  An ordered group cannot contain any elements of
+finite order.
+
+Let $x$ be an element of an ordered group distinct from the identity.
+By definition, if $x$ were of finite order, there would exist an
+integer such that $x^n = 1$.  Since $1 = 1^n$, we would have $x^n =
+1^n$ but, by Corollary 3, this would imply $x=1$, which contradicts
+our hypothesis.
+\rightline{Q.E.D.}
+
+It is worth noting that, in the context of additive groups of rings,
+this result states that ordered rings have characteristic zero.
+%%%%%
+%%%%%
+\end{document}

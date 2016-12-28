@@ -1,0 +1,62 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{DirectProductsOfGroups}
+\pmcreated{2013-03-22 14:52:54}
+\pmmodified{2013-03-22 14:52:54}
+\pmowner{yark}{2760}
+\pmmodifier{yark}{2760}
+\pmtitle{direct products of groups}
+\pmrecord{17}{36560}
+\pmprivacy{1}
+\pmauthor{yark}{2760}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{20A99}
+\pmrelated{SubdirectProductOfGroups}
+\pmrelated{DirectProduct2}
+\pmdefines{direct product}
+\pmdefines{unrestricted direct product}
+\pmdefines{complete direct product}
+\pmdefines{restricted direct product}
+\pmdefines{direct sum}
+\pmdefines{direct product of groups}
+\pmdefines{unrestricted direct product of groups}
+\pmdefines{restricted direct product of groups}
+\pmdefines{direct sum of groups}
+\pmdefines{Cartesian product of g}
+
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+\begin{document}
+\PMlinkescapeword{finite support}
+\PMlinkescapeword{index}
+\PMlinkescapeword{pointwise}
+\PMlinkescapeword{term}
+\PMlinkescapephrase{cartesian product}
+
+Let $(G_i)_{i\in I}$ be a family of groups.
+
+The \emph{unrestricted direct product}
+(or \emph{complete direct product}, or \emph{Cartesian product})
+$\prod_{i\in I}G_i$
+is the \PMlinkname{Cartesian product}{GeneralizedCartesianProduct}
+$\prod_{i\in I}G_i$ with multiplication defined pointwise,
+that is, for all $f,g\in\prod_{i\in I}G_i$ and all $i\in I$
+we have $(fg)(i)=f(i)g(i)$.
+It is easily verified that this multiplication
+makes the Cartesian product into a group.
+This construction is in fact the \PMlinkname{categorical direct product}{CategoricalDirectProduct} in the category of groups.
+
+The \emph{restricted direct product} $\bigoplus_{i\in I}G_i$ is the subgroup of $\prod_{i\in I}G_i$ consisting of all those elements with finite support. That is, 
+\[\bigoplus_{i\in I}G_i=\biggl\{f\in\prod_{i\in I}G_i\biggm| f(i)=1\hbox{ for all but finitely many }i\in I\biggr\}.\]
+The restricted direct product is also called the \emph{direct sum}, although this usage is usually reserved for the case where all the $G_i$ are abelian (see \PMlinkname{direct sum of modules}{DirectSum} and \PMlinkname{categorical direct sum}{CategoricalDirectSum}).
+
+The unqualified term \emph{direct product} can refer either to the unrestricted direct product or to the restricted direct product, depending on the author.
+Note that if $I$ is finite then the unrestricted direct product and the restricted direct product are in fact the same.
+The direct product of two groups $G$ and $H$ is usually written $G\times H$,
+or sometimes $G\oplus H$ (or $G\coprod H$) if $G$ and $H$ are both abelian.
+%%%%%
+%%%%%
+\end{document}

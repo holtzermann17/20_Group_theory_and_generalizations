@@ -1,0 +1,104 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{GroupExtension}
+\pmcreated{2013-03-22 15:24:25}
+\pmmodified{2013-03-22 15:24:25}
+\pmowner{CWoo}{3771}
+\pmmodifier{CWoo}{3771}
+\pmtitle{group extension}
+\pmrecord{11}{37246}
+\pmprivacy{1}
+\pmauthor{CWoo}{3771}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{20J05}
+\pmrelated{HNNExtension}
+\pmdefines{split extension}
+\pmdefines{abelian extension}
+\pmdefines{central extension}
+\pmdefines{cyclic extension}
+\pmdefines{extension problem}
+
+\usepackage{amssymb,amscd}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%\usepackage{xypic}
+
+% define commands here
+\begin{document}
+\PMlinkescapeword{extension}
+\PMlinkescapeword{extensions}
+
+Let $G$ and $H$ be groups.  A group $E$ is called an \emph{extension
+of $G$ by $H$} if
+\begin{enumerate}
+\item $G$ is isomorphic to a normal subgroup $N$ of $E$, and
+\item $H$ is isomorphic to the quotient group $E/N$.
+\end{enumerate}
+The definition is well-defined and it is convenient sometimes to
+regard $G$ as a normal subgroup of $E$.  The definition can be
+alternatively defined: $E$ is an extension of $G$ by $H$ if there is
+a short exact sequence of groups:
+$$1\longrightarrow G\longrightarrow E\longrightarrow H\longrightarrow 1.$$
+In fact, some authors define an extension (of a group by a group) to
+be a short exact sequence of groups described above.  Also, many authors
+prefer the reverse terminology, calling the group $E$ an extension of $H$
+by $G$.
+
+\textbf{Remarks}
+\begin{itemize}
+\item Given any groups $G$ and $H$, an extension of $G$ by $H$
+exists: take the direct product of $G$ and $H$.
+\item An intermediate concept between an extension a direct product is that of a \emph{semidirect product} of two groups: If $G$ and $H$ are groups, and $E$
+is an extension of $G$ by $H$ (identifying $G$ with a normal subgroup
+of $E$), then $E$ is called a semidirect product of $G$ by $H$ if
+\begin{enumerate}
+\item $H$ is isomorphic to a subgroup of $E$, thus viewing $H$ as a
+subgroup of $E$,
+\item $E=GH$, and
+\item $G\cap H=\langle1\rangle$.
+\end{enumerate}
+Equivalently, $E$ is a semidirect product of $G$ and $H$ if the
+short exact sequence
+$$1\longrightarrow G\longrightarrow E\stackrel{\alpha}{\longrightarrow} H\longrightarrow 1$$
+splits.  That is, there is a group homomorphism $\phi\colon H\to E$ such
+that the composition
+$$H\stackrel{\phi}{\longrightarrow}E\stackrel{\alpha}{\longrightarrow}H$$
+gives the identity map.
+Thus, a semidirect product is also known as a \emph{split
+extension}.  That a semidirect product $E$ of $G$ by $H$ is also an extension of $G$ by $H$ can be seen via the isomorphism $h\mapsto hG$.  
+
+Furthermore, if $H$ happens to be normal in $E$, then $E$ is isomorphic to the direct product of $G$ and $H$.  (We need to show that $(g,h)\mapsto gh$ is an isomorphism.  It is not hard to see that the map is a bijection.  The trick is to show that it is a homomorphism, which boils down to showing that every element of $G$ commutes with every element of $H$.  To show the last step, suppose $ghg^{-1}=\overline{h}\in H$.  Then $gh=\overline{h}g$, so $gh\overline{h}^{-1}=\overline{h}g\overline{h}^{-1}= \overline{g}\in G$, or that $h\overline{h}^{-1}=g^{-1}\overline{g}$.  Therefore, $h=\overline{h}$.)
+\item The \emph{extension problem} in group theory is the
+classification of all extension groups of a given group $G$ by a
+given group $H$.  Specifically, it is a problem of finding all
+``inequivalent'' extensions of $G$ by $H$.  Two extensions $E_1$ and
+$E_2$ of $G$ by $H$ are \emph{equivalent} if there is a homomorphism
+$e\colon E_1\to E_2$ such that the following diagram of two short exact
+sequences is commutative:
+$$\xymatrix{1\ar@{=}[d]\ar[r]&G\ar@{=}[d]\ar[r]&E_1\ar[d]^e\ar[r]&H\ar@{=}[d]
+\ar[r]&1\ar@{=}[d]\\1\ar[r]&G\ar[r]&E_2\ar[r]&H\ar[r]&1.}$$
+According to the 5-lemma, $e$ is actually an isomorphism.  Thus equivalences
+of extensions are well-defined.
+\item Like split extensions, special extensions are formed when
+certain conditions are imposed on $G$, $H$, or even $E$:
+\begin{enumerate}
+\item If all the groups involved are abelian (only that $E$ is abelian is
+necessary here), then we have an \emph{abelian extension}.
+\item If $G$, considered as a normal subgroup of $E$, actually lies within
+the center of $E$, then $E$ is called a \emph{central extension}.  A central extension that is also a semidirect product is a direct product.  Indeed, if $E$ is both a central extension and a semidirect product of $G$ by $H$, we observe that $(g\overline{h})h(g\overline{h})^{-1}=\overline{h}h\overline{h}^{-1}\in H$ so that $H$ is normal in $E$.  Applying this result to the previous discussion and we have $E\cong G\times H$.
+\item If $G$ is a cyclic group, then the extensions in question are
+called \emph{cyclic extensions}.
+\end{enumerate}
+\end{itemize}
+%%%%%
+%%%%%
+\end{document}

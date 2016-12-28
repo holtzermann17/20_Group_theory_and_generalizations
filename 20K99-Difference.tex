@@ -1,0 +1,78 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{Difference}
+\pmcreated{2013-03-22 17:33:35}
+\pmmodified{2013-03-22 17:33:35}
+\pmowner{pahio}{2872}
+\pmmodifier{pahio}{2872}
+\pmtitle{difference}
+\pmrecord{16}{39966}
+\pmprivacy{1}
+\pmauthor{pahio}{2872}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{20K99}
+\pmclassification{msc}{00A05}
+\pmclassification{msc}{11B25}
+\pmrelated{VectorDifference}
+\pmrelated{SetDifference}
+\pmrelated{Multiple}
+\pmrelated{GeneralAssociativity}
+\pmrelated{Quotient}
+\pmrelated{DifferenceOfVectors}
+\pmdefines{minuend}
+\pmdefines{subtrahend}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+ \usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\theoremstyle{definition}
+\newtheorem*{thmplain}{Theorem}
+
+\begin{document}
+The {\em difference of} two numbers $a$ and $b$ is a number $d$ such that 
+$$b\!+\!d \;=\; a.$$
+The difference of $a$ (the {\em minuend}) and $b$ (the {\em subtrahend}) is denoted by $a\!-\!b$.
+
+The definition is \PMlinkescapetext{similar} for the elements $a,\,b$ of any \PMlinkescapetext{additive} Abelian group (e.g. of a vector space).\,The difference of them is always unique.\\
+
+\textbf{Note 1.}\, Forming the difference of numbers (resp. elements), i.e. subtraction, is in a certain sense converse to the addition operation:
+$$(x\!+\!y)\!-\!y \;=\; x$$
+
+\textbf{Note 2.}\, As for real numbers, one may say that the difference \emph{between} $a$ and $b$ is $|a\!-\!b|$ (which is the same as $|b\!-\!a|$); then it is always nonnegative.\, For all complex numbers, such a phrase would be nonsense.\\
+
+
+\textbf{Some \PMlinkescapetext{identities}}
+\begin{itemize}
+\item $b\!+\!(a\!-\!b) \;=\; a$
+\item $a\!-\!b \;=\; a\!+\!(-b)$
+\item $-(a\!-\!b) \;=\; b\!-\!a$
+\item $n(a\!-\!b) \;=\; na\!-\!nb \quad (n\in\mathbb{Z})$
+\item $a\!-\!a \;=\; 0$
+\end{itemize}
+
+
+
+
+%%%%%
+%%%%%
+\end{document}

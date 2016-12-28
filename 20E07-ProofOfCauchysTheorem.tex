@@ -1,0 +1,60 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ProofOfCauchysTheorem}
+\pmcreated{2013-03-22 12:23:30}
+\pmmodified{2013-03-22 12:23:30}
+\pmowner{yark}{2760}
+\pmmodifier{yark}{2760}
+\pmtitle{proof of Cauchy's theorem}
+\pmrecord{8}{32186}
+\pmprivacy{1}
+\pmauthor{yark}{2760}
+\pmtype{Proof}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{20E07}
+\pmclassification{msc}{20D99}
+
+\usepackage{amsfonts}
+
+% The following lines should work as the command
+% \renewcommand{\bibname}{References}
+% without creating havoc when rendering an entry in
+% the page-image mode.
+\makeatletter
+\@ifundefined{bibname}{}{\renewcommand{\bibname}{References}}
+\makeatother
+
+\begin{document}
+\PMlinkescapeword{contains}
+\PMlinkescapeword{divisible}
+\PMlinkescapeword{multiple}
+
+Let $G$ be a finite group, and suppose $p$ is a prime divisor of $|G|$.
+Consider the set $X$ of all $p$-tuples $(x_1, \ldots, x_p)$ 
+for which $x_1\cdots x_p = 1$.
+Note that $|X| = |G|^{p-1}$ is a multiple of $p$.
+There is a natural group action of 
+the cyclic group $\mathbb{Z}/p\mathbb{Z}$ on $X$
+under which $m \in \mathbb{Z}/p\mathbb{Z}$ sends 
+the tuple $(x_1, \ldots, x_p)$ 
+to $(x_{m+1}, \ldots, x_p, x_1, \ldots, x_m)$.
+By the Orbit-Stabilizer Theorem, each orbit contains exactly $1$ or $p$ tuples.
+Since $(1,\ldots, 1)$ has an orbit of cardinality $1$, 
+and the orbits partition $X$,
+the cardinality of which is divisible by $p$,
+there must exist at least one other tuple $(x_1,\ldots, x_p)$
+which is left fixed by every element of $\mathbb{Z}/p\mathbb{Z}$.
+For this tuple we have $x_1 = \ldots = x_p$,
+and so $x_1^p=x_1\cdots x_p=1$,
+and $x_1$ is therefore an element of order $p$.
+
+\begin{thebibliography}{9}
+\bibitem{mckay}
+ James H.~McKay.
+ {\it Another Proof of Cauchy's Group Theorem},
+ American Math.~Monthly, 66 (1959), p119.
+\end{thebibliography}
+
+%%%%%
+%%%%%
+\end{document}

@@ -1,0 +1,136 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{PropertyOfInfiniteSimpleGroup}
+\pmcreated{2013-03-22 16:08:21}
+\pmmodified{2013-03-22 16:08:21}
+\pmowner{Algeboy}{12884}
+\pmmodifier{Algeboy}{12884}
+\pmtitle{property of infinite simple group}
+\pmrecord{5}{38213}
+\pmprivacy{1}
+\pmauthor{Algeboy}{12884}
+\pmtype{Result}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{20E32}
+\pmrelated{ExistenceOfMaximalSubgroups}
+
+\usepackage{latexsym}
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amsthm}
+
+%%\usepackage{xypic}
+
+%-----------------------------------------------------
+
+%       Standard theoremlike environments.
+
+%       Stolen directly from AMSLaTeX sample
+
+%-----------------------------------------------------
+
+%% \theoremstyle{plain} %% This is the default
+
+\newtheorem{thm}{Theorem}
+
+\newtheorem{coro}[thm]{Corollary}
+
+\newtheorem{lem}[thm]{Lemma}
+
+\newtheorem{lemma}[thm]{Lemma}
+
+\newtheorem{prop}[thm]{Proposition}
+
+\newtheorem{conjecture}[thm]{Conjecture}
+
+\newtheorem{conj}[thm]{Conjecture}
+
+\newtheorem{defn}[thm]{Definition}
+
+\newtheorem{remark}[thm]{Remark}
+
+\newtheorem{ex}[thm]{Example}
+
+
+
+%\countstyle[equation]{thm}
+
+
+
+%--------------------------------------------------
+
+%       Item references.
+
+%--------------------------------------------------
+
+
+\newcommand{\exref}[1]{Example-\ref{#1}}
+
+\newcommand{\thmref}[1]{Theorem-\ref{#1}}
+
+\newcommand{\defref}[1]{Definition-\ref{#1}}
+
+\newcommand{\eqnref}[1]{(\ref{#1})}
+
+\newcommand{\secref}[1]{Section-\ref{#1}}
+
+\newcommand{\lemref}[1]{Lemma-\ref{#1}}
+
+\newcommand{\propref}[1]{Prop\-o\-si\-tion-\ref{#1}}
+
+\newcommand{\corref}[1]{Cor\-ol\-lary-\ref{#1}}
+
+\newcommand{\figref}[1]{Fig\-ure-\ref{#1}}
+
+\newcommand{\conjref}[1]{Conjecture-\ref{#1}}
+
+
+% Normal subgroup or equal.
+
+\providecommand{\normaleq}{\unlhd}
+
+% Normal subgroup.
+
+\providecommand{\normal}{\lhd}
+
+\providecommand{\rnormal}{\rhd}
+% Divides, does not divide.
+
+\providecommand{\divides}{\mid}
+
+\providecommand{\ndivides}{\nmid}
+
+
+\providecommand{\union}{\cup}
+
+\providecommand{\bigunion}{\bigcup}
+
+\providecommand{\intersect}{\cap}
+
+\providecommand{\bigintersect}{\bigcap}
+
+
+
+
+
+
+
+
+
+
+\begin{document}
+Although much recent work has been done to classify the finite simple groups, infinite simple groups have properties which make the study more difficult.  Among them is the following basic result.
+
+\begin{thm}
+If a group is infinite and simple then it has no proper subgroups of finite index.
+\end{thm}
+\begin{proof}
+Let $G$ be an infinite simple group and $H\leq G$.  Then $G$ acts on the cosets of $H$ and this induces a homomorphism form $G$ to $S_n$ where $n=[G:H]$.  If $H$ has finite index in $G$ then $n$ is finite so $G$ maps homomorphically into the finite group $S_n$.  Thus the kernel of the homomorphism is non-trivial.  As $G$ is simple, the kernel is $G$.  As $H$ contains the kernel, $H=G$.
+\end{proof}
+
+This means that infinite simple groups do not act on finite sets so we cannot invoke clever arguments about the configuration of numbers.   However linear representations may still apply.  For example, $PSL(2,k)$ for an infinite field $k$ is simple, infinite, and can be represented in $SL(3,k)$ through the exponential map of a Chevalley basis of the Lie algebra $\mathfrak{sl}_2(k)$.
+
+%%%%%
+%%%%%
+\end{document}

@@ -1,0 +1,70 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{AbsorbingElement}
+\pmcreated{2013-03-22 15:46:12}
+\pmmodified{2013-03-22 15:46:12}
+\pmowner{pahio}{2872}
+\pmmodifier{pahio}{2872}
+\pmtitle{absorbing element}
+\pmrecord{20}{37727}
+\pmprivacy{1}
+\pmauthor{pahio}{2872}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{20N02}
+\pmsynonym{absorbant}{AbsorbingElement}
+\pmsynonym{absorbing}{AbsorbingElement}
+\pmrelated{RingOfSets}
+\pmrelated{ZeroElements}
+\pmrelated{0cdotA0}
+\pmrelated{AbsorbingSet}
+\pmrelated{IdentityElementIsUnique}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+ \usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\theoremstyle{definition}
+\newtheorem*{thmplain}{Theorem}
+\begin{document}
+An element $\zeta$ of a groupoid\, $(G,\,*)$\, is called an {\em absorbing element} (in French {\em un \'el\'ement absorbant}) for the operation ``$*$'', if it satisfies
+    $$\zeta\!*\!a \;=\; a\!*\!\zeta \;=\; \zeta$$
+for all elements $a$ of $G$.\\
+
+\textbf{Examples}
+\begin{itemize}
+ \item The zero $0$ is the absorbing element for multiplication (or {\em multiplicatively absorbing}) in every ring\, $(R,\,+,\,\cdot)$.
+ \item The zero ideal $(0)$ is absorbing for \PMlinkname{ideal multiplication}{IdealMultiplicationLaws}.
+ \item The zero vector $\vec{0}$ is the absorbing element for the \PMlinkname{vectoral multiplication}{CrossProduct} ``$\times$''.
+ \item The empty set $\varnothing$ is the absorbing element for the  intersection operation ``$\cap$'' and also for the Cartesian product ``$\times$''.
+ \item The ``universal set'' $E$ is the absorbing element for the union operation ``$\cup$'':
+             $$E\!\cup\!A \;=\; A\!\cup\!E \;=\; E \quad \forall A \;\subseteq\; E.$$
+ \item In an upper semilattice, an element is absorbing iff it is the \PMlinkname{top element}{BoundedLattice}.  Dually, an element is absorbing iff it is the \PMlinkname{bottom element}{BoundedLattice} in a lower semilattice.
+\end{itemize} 
+
+As the examples give reason to believe, the absorbing element for an operation is always unique.\, Indeed, if in \PMlinkescapetext{addition} to $\zeta$ we have in $G$ another absorbing element $\eta$, then we must have\, $\eta = \zeta\!*\!\eta = \zeta$.
+
+Because\, $\zeta\!*\!\zeta = \zeta$,\, the absorbing element is idempotent.
+
+If a group has an absorbing element, the group is \PMlinkname{trivial}{Subgroup}.
+%%%%%
+%%%%%
+\end{document}

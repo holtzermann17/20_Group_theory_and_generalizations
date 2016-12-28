@@ -1,0 +1,213 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{CentralProductOfGroups}
+\pmcreated{2013-03-22 18:49:45}
+\pmmodified{2013-03-22 18:49:45}
+\pmowner{Algeboy}{12884}
+\pmmodifier{Algeboy}{12884}
+\pmtitle{central product of groups}
+\pmrecord{6}{41633}
+\pmprivacy{1}
+\pmauthor{Algeboy}{12884}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{20E34}
+\pmsynonym{central decomposition}{CentralProductOfGroups}
+\pmdefines{central decomposition}
+\pmdefines{central product}
+
+\usepackage{latexsym}
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amsthm}
+\usepackage{enumerate}
+%%\usepackage{xypic}
+
+%-----------------------------------------------------
+
+%       Standard theoremlike environments.
+
+%       Stolen directly from AMSLaTeX sample
+
+%-----------------------------------------------------
+
+%% \theoremstyle{plain} %% This is the default
+
+\newtheorem{thm}{Theorem}
+
+\newtheorem{coro}[thm]{Corollary}
+
+\newtheorem{lem}[thm]{Lemma}
+
+\newtheorem{lemma}[thm]{Lemma}
+
+\newtheorem{prop}[thm]{Proposition}
+
+\newtheorem{conjecture}[thm]{Conjecture}
+
+\newtheorem{conj}[thm]{Conjecture}
+
+\newtheorem{defn}[thm]{Definition}
+
+\newtheorem{remark}[thm]{Remark}
+
+\newtheorem{ex}[thm]{Example}
+
+
+
+%\countstyle[equation]{thm}
+
+
+
+%--------------------------------------------------
+
+%       Item references.
+
+%--------------------------------------------------
+
+
+\newcommand{\exref}[1]{Example-\ref{#1}}
+
+\newcommand{\thmref}[1]{Theorem-\ref{#1}}
+
+\newcommand{\defref}[1]{Definition-\ref{#1}}
+
+\newcommand{\eqnref}[1]{(\ref{#1})}
+
+\newcommand{\secref}[1]{Section-\ref{#1}}
+
+\newcommand{\lemref}[1]{Lemma-\ref{#1}}
+
+\newcommand{\propref}[1]{Prop\-o\-si\-tion-\ref{#1}}
+
+\newcommand{\corref}[1]{Cor\-ol\-lary-\ref{#1}}
+
+\newcommand{\figref}[1]{Fig\-ure-\ref{#1}}
+
+\newcommand{\conjref}[1]{Conjecture-\ref{#1}}
+
+
+% Normal subgroup or equal.
+
+\providecommand{\normaleq}{\unlhd}
+
+% Normal subgroup.
+
+\providecommand{\normal}{\lhd}
+
+\providecommand{\rnormal}{\rhd}
+% Divides, does not divide.
+
+\providecommand{\divides}{\mid}
+
+\providecommand{\ndivides}{\nmid}
+
+
+\providecommand{\union}{\cup}
+
+\providecommand{\bigunion}{\bigcup}
+
+\providecommand{\intersect}{\cap}
+
+\providecommand{\bigintersect}{\bigcap}
+
+
+
+
+
+
+
+
+
+
+\begin{document}
+\section{Definitions}
+
+A \emph{central decomposition} is a set $\mathcal{H}$ of subgroups of a group $G$ where
+\begin{enumerate}
+\item for $\mathcal{J}\subseteq\mathcal{H}$, $G=\langle\mathcal{J}\rangle$  
+if, and only if, $\mathcal{J}=\mathcal{H}$, and
+\item $[H,\langle\mathcal{H}-\{H\}\rangle]=1$ for all $H\in\mathcal{H}$.
+\end{enumerate}
+A group $G$ is \emph{centrally indecomposable} if its only central decomposition is $\{G\}$.
+A central decomposition is \emph{fully refined} if its members are centrally indecomposable.
+
+\begin{remark}
+Condition 1 is often relaxed to $G=\langle\mathcal{H}\rangle$ but this
+has the negative affect of allowing, for example, $\mathbb{R}^2$ to have the central decomposition
+such sets as $\{\langle (1,0)\rangle,\langle(0,1)\rangle,\langle (1,1)\rangle,0,\mathbb{R}^2\}$ and
+in general a decomposition of any possible size.  By impossing 1, we then restrict
+the central decompositions of $\mathbb{R}^2$ to direct decompositions.  Furthermore, with condition 1,
+the meaning of indecomposable is easily had.
+\end{remark}
+
+A \emph{central product} is a group $G=\left(\prod_{H\in\mathcal{H}} H\right)\large/ N$
+where $N$ is a normal subgroup of $\prod_{H\in\mathcal{H}} H$ and $H\intersect N=1$ for all $H\in\mathcal{H}$.
+
+\begin{prop}
+Every finite central decomposition $\mathcal{H}$ is a central product of the members in $\mathcal{H}$.
+\end{prop}
+\begin{proof}
+Suppose that $\mathcal{H}$ is a a finite central decomposition of $G$.  Then
+define $\pi:\prod_{H\in\mathcal{H}} H\to G$ by $(x_H: H\in\mathcal{H})\mapsto \prod_{H\in\mathcal{H}} x_H$.
+Then $G=\left(\prod_{H\in\mathcal{H}} H\right)/\ker \pi$.  Furthermore, $H\intersect \ker \pi=1$ for 
+each direct factor $H$ of $\prod_{K\in\mathcal{H}} K$.  Thus, $G$ is a central product of $\mathcal{H}$.
+\end{proof}
+
+\section{Examples}
+
+\begin{enumerate}
+\item
+Every direct product is also a central product and so also every direct decomposition is a 
+central decomposition.  The converse is generally false.
+\item
+Let $E=\left\{\begin{bmatrix} 1 & \alpha & \gamma\\ 0 & 1 & \beta \\ 0 & 0 & 1\end{bmatrix}:
+\alpha,\beta,\gamma\in K\right\}$, for a field $K$.  Then $G$ is a centrally indecomposable group.
+\item
+If
+$$F=\left\{\begin{bmatrix} 
+1 & \alpha_1 & \dots & \alpha_n & \gamma\\ 
+0 & 1 & 0 & & \beta_1\\
+\vdots & &\ddots & 0 & \vdots\\
+ &  &  & 1 & \beta_n \\ 
+ &  & & & 1 \end{bmatrix}:
+\alpha_i,\beta_i,\gamma\in K,1\leq i\leq n\right\}$$
+and 
+$$H_i = \{A\in F: \alpha_j=0=\beta_j \forall j\neq i, 1\leq j\leq n\}$$
+then $\{H_1,\dots,H_n\}$ is a central decomposition of $G$.  Furthermore, each
+$H_i$ is isomorphic to $E$ and so $\mathcal{H}$ is a fully refined central decomposition.
+\item
+If $D_8=\langle a,b | a^4,b^2,(ab)^2\rangle$ -- the dihedral group of order 8,
+and $Q_8=\langle i,j | i^4, i^2=j^2, i^j=i^{-1}\rangle$ -- the quaternion group of order $8$, then
+$D_8 \circ D_8 = D_8 \times D_8/\langle (a^2,a^2)\rangle$ is isomorphic to 
+$Q_8\circ Q_8=(Q_8\times Q_8)/\langle (i^2,i^2)\rangle$; yet, $D_8$ and $Q_8$ are nonisomorphic and
+centrally indecomposable.  In particular, central decompositions are not unique even up to automorphisms.
+This is in contrast the well-known Krull-Remak-Schmidt theorem for direct products of groups.
+\end{enumerate}
+
+
+
+\section{History}
+
+The name \emph{central product} appears to have been coined by Philip Hall \cite[Section 3.2]{Hall} 
+though the principal concept of such a product appears in earlier work (e.g. \cite[Theorem II]{Neumann}).
+Hall describes central products as ``...the group obtained from the direct product by identifying
+the centres of the direct factors...''.   The modern definition clearly out grows this original version 
+as now centers may be only partially identified.
+
+
+
+\thispagestyle{plain}
+
+\begin{thebibliography}{[]}
+
+\bibitem{Hall}
+P. Hall, \emph{Finite-by-nilpotent groups}, Proc. Camb. Phil. Soc., 52 (1956), 611-616.
+
+\bibitem{Neumann}
+B. H. Neumann, and H. Neumann, \emph{A remark on generalized free products}, J. London Math. Soc. 25 (1950), 202-204.
+\end{thebibliography}
+%%%%%
+%%%%%
+\end{document}

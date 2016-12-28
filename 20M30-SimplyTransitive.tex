@@ -1,0 +1,54 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{SimplyTransitive}
+\pmcreated{2013-03-22 14:37:41}
+\pmmodified{2013-03-22 14:37:41}
+\pmowner{benjaminfjones}{879}
+\pmmodifier{benjaminfjones}{879}
+\pmtitle{simply transitive}
+\pmrecord{7}{36208}
+\pmprivacy{1}
+\pmauthor{benjaminfjones}{879}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{20M30}
+\pmrelated{GroupAction}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amsthm}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\theoremstyle{plain}
+\newtheorem*{theorem}{Theorem}
+\begin{document}
+Let $G$ be a group acting on a set $X$. The action is said to be \textbf{simply transitive} if it is transitive and $\forall x,y \in X$ there is a \emph{unique} $g \in G$ such that $g.x = y$.
+
+
+\begin{theorem}
+A group action is simply transitive if and only if it is free and transitive
+\end{theorem}
+
+\begin{proof}
+Necessity follows since $g.x = x$ implies that $g = 1_G$ because $1_G.x = x$ also. Now assume the action is free and transitive and we have elements $g_1, g_2 \in G$ and $x,y \in X$ such that $g_1.x = y$ and $g_2.x = y$. Then $g_1.x = g_2.x \implies g_2^{-1}.g_1.x = (g_2^{-1} g_1).x = x$ hence $g_2^{-1} g_1 = 1_G$ because the action is free. Thus $g_1 = g_2$ and so the action is simply transitive.
+\end{proof}
+%%%%%
+%%%%%
+\end{document}

@@ -1,0 +1,49 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{FeitThompsonConjecture}
+\pmcreated{2013-03-22 17:55:38}
+\pmmodified{2013-03-22 17:55:38}
+\pmowner{PrimeFan}{13766}
+\pmmodifier{PrimeFan}{13766}
+\pmtitle{Feit-Thompson conjecture}
+\pmrecord{8}{40421}
+\pmprivacy{1}
+\pmauthor{PrimeFan}{13766}
+\pmtype{Conjecture}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{20A05}
+\pmclassification{msc}{20E32}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\begin{document}
+Conjecture (Walter Feit \& John Thompson). There are no prime numbers $p$ and $q$ (with $p \neq q$) such that $\displaystyle \frac{p^q - 1}{p - 1}$ is divisible by $\displaystyle \frac{q^p - 1}{q - 1}$.
+
+Feit and Thompson, in regards to the Feit-Thompson theorem, have said that proving this conjecture would simplify their proof of their theorem, ``rendering unnecessary the detailed use of generators and relations.'' In 1971, Stephens strengthened the conjecture to state that $$\gcd\left(\frac{p^q - 1}{p - 1}, \frac{q^p - 1}{q - 1}\right) = 1$$ always, and then found the counterexample $p = 17$, $q = 3313$. The numbers $\displaystyle \frac{17^{3313} - 1}{17 - 1}$ and $\displaystyle \frac{3313^{17} - 1}{3313 - 1}$ do have 112643 as their greatest common divisor, but dividing the former by the latter leaves a remainder of 149073454345008273252753518779212742886488244343395482423. No other counterexamples have been found to Stephen's stronger version of the conjecture.
+
+\begin{thebibliography}{1}
+\bibitem{ns} N. M. Stephens, ``On the Feit-Thompson Conjecture'' {\it Math. of Computation} {\bf 25} 115 (1971): 625
+\end{thebibliography}
+%%%%%
+%%%%%
+\end{document}

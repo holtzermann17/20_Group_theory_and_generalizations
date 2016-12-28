@@ -1,0 +1,67 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{PrefixSet}
+\pmcreated{2013-03-22 16:11:56}
+\pmmodified{2013-03-22 16:11:56}
+\pmowner{Mazzu}{14365}
+\pmmodifier{Mazzu}{14365}
+\pmtitle{prefix set}
+\pmrecord{6}{38292}
+\pmprivacy{1}
+\pmauthor{Mazzu}{14365}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{20M05}
+%\pmkeywords{free semigroup}
+%\pmkeywords{word}
+\pmdefines{prefix}
+\pmdefines{prefix set}
+\pmdefines{proper prefix}
+\pmdefines{prefix closed}
+\pmdefines{prefix closure}
+\pmdefines{prefix free}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\begin{document}
+\newcommand{\prefi}{\mathrm{pref}}
+
+Let $X$ be a set, and $w\in X^*$ be a word, i.e. an element of the free  monoid on $X$. A word $v\in X^*$ is called \emph{prefix} of $w$ when a second word $z\in X^*$ exists such that $x=vz$.  A \emph{proper prefix} of a word u is a prefix v of u not equal to u (sometimes v is required to be non-empty).
+
+Note that the empty word $\varepsilon$ and $w$ are prefix of $w$, and a proper prefix of $w$ if $w$ is non-empty.
+
+The \emph{prefix set} of $w$ is the set $\prefi(w)$ of prefixes of $w$, i.e. if $w=w_1w_2...w_n$ with $w_j\in X$ for each $j\in\{1,...,n\}$ we have $$\prefi(w)=\{\varepsilon,\ w_1,\ w_1w_2,\ ... ,\ w_1w_2...w_{n-1},\ w\}.$$
+
+Some closely related concepts are:
+
+\begin{enumerate}
+\item 
+A set of words is \emph{prefix closed} if for every word in the set, any of its prefix is also in the set.
+\item 
+The \emph{prefix closure} of a set S is the smallest prefix closed set containing S, or, equivalently, the union of the prefix sets of words in S.
+\item
+A set S is \emph{prefix free} if for any word in S, no proper prefixes of the word are in S.
+\end{enumerate}
+%%%%%
+%%%%%
+\end{document}

@@ -1,0 +1,70 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ProofOfSecondIsomorphismTheoremForGroups}
+\pmcreated{2013-03-22 12:49:47}
+\pmmodified{2013-03-22 12:49:47}
+\pmowner{yark}{2760}
+\pmmodifier{yark}{2760}
+\pmtitle{proof of second isomorphism theorem for groups}
+\pmrecord{17}{33153}
+\pmprivacy{1}
+\pmauthor{yark}{2760}
+\pmtype{Proof}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{20A05}
+\pmrelated{ProofOfSecondIsomorphismTheoremForRings}
+
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\begin{document}
+\PMlinkescapeword{between}
+\PMlinkescapeword{normality}
+
+First, we shall prove that $HK$ is a subgroup of $G$:
+Since $e \in H$ and $e \in K$, clearly $e=e^2 \in HK$.
+Take $h_1,h_2 \in H, k_1, k_2 \in K$.
+Clearly $h_1k_1, h_2k_2 \in HK$.
+Further,
+\[
+  h_1k_1h_2k_2 = h_1(h_2h_2^{-1})k_1h_2k_2 = h_1h_2(h_2^{-1}k_1h_2)k_2
+\]
+Since $K$ is a normal subgroup of $G$ and $h_2 \in G$,
+then $h_2^{-1}k_1h_2 \in K$.
+Therefore $h_1h_2(h_2^{-1}k_1h_2)k_2 \in HK$,
+so $HK$ is closed under multiplication.
+
+Also, $(hk)^{-1} \in HK$ for $h \in H$, $k \in K$, since
+\[
+  (hk)^{-1} = k^{-1}h^{-1}=h^{-1}hk^{-1}h^{-1}
+\]
+and $hk^{-1}h^{-1} \in K$ since $K$ is a normal subgroup of $G$.
+So $HK$ is closed under inverses, and is thus a subgroup of $G$.
+
+Since $HK$ is a subgroup of $G$,
+the normality of $K$ in $HK$ follows immediately from
+the normality of $K$ in $G$.
+
+Clearly $H \cap K$ is a subgroup of $G$,
+since it is the intersection of two subgroups of $G$.
+
+Finally, define $\phi\colon H \rightarrow HK/K$ by $\phi(h)=hK$.
+We claim that $\phi$ is a surjective homomorphism from $H$ to $HK/K$.
+Let $h_0k_0K$ be some element of $HK/K$;
+since $k_0 \in K$, then $h_0k_0K=h_0K$, and $\phi(h_0)=h_0K$.
+Now
+\[
+  \ker(\phi) = \{ h \in H \mid \phi(h)=K \} = \{ h \in H \mid hK=K \}
+\]
+and if $hK=K$, then we must have $h \in K$.  So
+\[
+  \ker(\phi) = \{ h \in H \mid h \in K \} = H \cap K
+\]
+
+Thus, since $\phi(H)=HK/K$ and $\ker{\phi}=H \cap K$,
+by the First Isomorphism Theorem we see that
+$H \cap K$ is normal in $H$
+and that there is a canonical isomorphism between $H/(H \cap K)$ and $HK/K$.
+%%%%%
+%%%%%
+\end{document}

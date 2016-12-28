@@ -1,0 +1,48 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ProofOfTheJordanHolderDecompositionTheorem}
+\pmcreated{2013-03-22 12:08:49}
+\pmmodified{2013-03-22 12:08:49}
+\pmowner{djao}{24}
+\pmmodifier{djao}{24}
+\pmtitle{proof of the Jordan H\"{o}lder decomposition theorem}
+\pmrecord{9}{31335}
+\pmprivacy{1}
+\pmauthor{djao}{24}
+\pmtype{Proof}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{20E22}
+
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{graphicx}
+%%%\usepackage{xypic}
+\begin{document}
+Let $|G| = N$. We first prove existence, using induction on $N$. If $N=1$ (or, more generally, if $G$ is simple) the result is clear. Now suppose $G$ is not simple. Choose a maximal proper normal subgroup $G_1$ of $G$. Then $G_1$ has a Jordan--H\"older decomposition by induction, which produces a Jordan--H\"older decomposition for $G$.
+
+To prove uniqueness, we use induction on the length $n$ of the decomposition series. If $n=1$ then $G$ is simple and we are done. For $n>1$, suppose that
+$$
+G \supset G_1 \supset G_2 \supset \cdots \supset G_n = \{1\}
+$$
+and
+$$
+G \supset G'_1 \supset G'_2 \supset \cdots \supset G'_m = \{1\}
+$$
+are two decompositions of $G$. If $G_1 = G'_1$ then we're done (apply the induction hypothesis to $G_1$), so assume $G_1 \neq G'_1$. Set $H := G_1 \cap G'_1$ and choose a decomposition series
+$$
+H \supset H_1 \supset \cdots \supset H_k = \{1\}
+$$
+for $H$. By the second isomorphism theorem, $G_1/H = G_1 G'_1/G'_1 = G/G'_1$ (the last equality is because $G_1 G'_1$ is a normal subgroup of $G$ properly containing $G_1$). In particular, $H$ is a normal subgroup of $G_1$ with simple quotient. But then
+$$
+G_1 \supset G_2 \supset \cdots \supset G_n
+$$
+and
+$$
+G_1 \supset H \supset \cdots \supset H_k
+$$
+are two decomposition series for $G_1$, and hence have the same simple quotients by the induction hypothesis; likewise for the $G'_1$ series. Therefore $n=m$. Moreover, since $G/G_1 = G'_1/H$ and $G/G'_1 = G_1/H$ (by the second isomorphism theorem), we have now accounted for all of the simple quotients, and shown that they are the same.
+%%%%%
+%%%%%
+%%%%%
+\end{document}

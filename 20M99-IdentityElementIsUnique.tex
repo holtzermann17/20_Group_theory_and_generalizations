@@ -1,0 +1,59 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{IdentityElementIsUnique}
+\pmcreated{2013-03-22 18:01:20}
+\pmmodified{2013-03-22 18:01:20}
+\pmowner{pahio}{2872}
+\pmmodifier{pahio}{2872}
+\pmtitle{identity element is unique}
+\pmrecord{11}{40539}
+\pmprivacy{1}
+\pmauthor{pahio}{2872}
+\pmtype{Theorem}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{20M99}
+\pmsynonym{neutral element is unique}{IdentityElementIsUnique}
+\pmsynonym{uniqueness of identity element}{IdentityElementIsUnique}
+%\pmkeywords{monoid}
+\pmrelated{Group}
+\pmrelated{UniquenessOfInverseForGroups}
+\pmrelated{ZeroVectorInAVectorSpaceIsUnique}
+\pmrelated{AbsorbingElement}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+ \usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\theoremstyle{definition}
+\newtheorem*{thmplain}{Theorem}
+
+\begin{document}
+\textbf{Theorem.}\, The identity element of a monoid is unique.\\
+
+{\em Proof.}\, Let $e$ and $e'$ be identity elements of a monoid \,$(G,\,\cdot)$.\, Since $e$ is an identity element, one has\, $e\!\cdot\!e' = e'$.\, Since $e'$ is an identity element, one has also\, $e\!\cdot\!e' = e$.\, Thus
+$$e' \;=\; e\!\cdot\!e' \;=\; e,$$
+i.e. both identity elements are the same (in inferring this result from the two first equations, one has used the \PMlinkname{symmetry}{Symmetric} and transitivity of the equality relation).\\
+
+
+\textbf{Note.}\, The theorem also proves the uniqueness of e.g. the identity element of a group, the \PMlinkname{additive identity}{Ring} 0 of a ring or a field, and the \PMlinkname{multiplicative identity}{Ring} 1 of a field.
+%%%%%
+%%%%%
+\end{document}

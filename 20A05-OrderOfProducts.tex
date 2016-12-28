@@ -1,0 +1,57 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{OrderOfProducts}
+\pmcreated{2013-03-22 18:56:43}
+\pmmodified{2013-03-22 18:56:43}
+\pmowner{pahio}{2872}
+\pmmodifier{pahio}{2872}
+\pmtitle{order of products}
+\pmrecord{5}{41802}
+\pmprivacy{1}
+\pmauthor{pahio}{2872}
+\pmtype{Theorem}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{20A05}
+\pmrelated{InverseFormingInProportionToGroupOperation}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+ \usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\theoremstyle{definition}
+\newtheorem*{thmplain}{Theorem}
+
+\begin{document}
+If $a$ and $b$ are elements of a group, then both $ab$ and $ba$ have always the same order.\\
+
+\emph{Proof.}\, Let $e$ be the indentity element of the group.\, For\, $n > 1$,\, we have the 
+\PMlinkname{equivalent}{Equivalent3} conditions
+$$e \;=\; (ab)^n \;=\; \underbrace{(ab)(ab)\cdots(ab)}_{n} \;=\; a(ba)^{n-1}b,$$
+$$a^{-1}b^{-1} \;=\; (ba)^{n-1},$$
+$$(ba)^{-1} \;=\; (ba)^{n-1},$$
+$$e \;=\; (ba)^n.$$
+As for the infinite order, it makes the conditions false.\\
+
+
+\textbf{Note.}\, More generally, all elements of any conjugacy class have the same order.
+%%%%%
+%%%%%
+\end{document}

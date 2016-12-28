@@ -1,0 +1,85 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ProofThatDimensionOfComplexIrreducibleRepresentationDividesOrderOfGroup}
+\pmcreated{2013-03-22 17:09:04}
+\pmmodified{2013-03-22 17:09:04}
+\pmowner{whm22}{2009}
+\pmmodifier{whm22}{2009}
+\pmtitle{proof that dimension of complex irreducible representation divides order of group}
+\pmrecord{8}{39460}
+\pmprivacy{1}
+\pmauthor{whm22}{2009}
+\pmtype{Proof}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{20C99}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\begin{document}
+{\bf Theorem} Let $G$ be a finite group and $V$ an irreducible
+complex representation of finite dimension $d$. Then $d$ divides
+$|G|$.
+
+Proof: Given any $\alpha$ in the group ring of $G$ (denoted
+$\mathbb{Z}G$) we may define a sequence of submodules of
+$\mathbb{Z}G$ (regarded as a module over $\mathbb{Z}$)
+by $A_i$ equals the $\mathbb{Z}$ linear span of
+$\{1,\alpha, \alpha^2, \cdots, \alpha^i\}$.
+
+$\mathbb{Z}G$ is Noetherian as a module over $\mathbb{Z}$ so we
+must have $A_i =A_{i-1}$ for some $i$.  Hence $\alpha^i$ may be
+expressed as a $\mathbb{Z}$ linear combination of lower powers of
+$\alpha$. In other \PMlinkescapetext{words} $\alpha$ solves a monic polynomial of
+degree $i$ with coefficients in $\mathbb{Z}$.
+
+Given a conjugacy class $C$ in $G$, we may set $\phi_C = \sum_{g
+\in C} g$.  Then $\phi_C$ is central in $\mathbb{Z}G$, as given $h
+\in G$, we have:
+
+$$\phi_C h =h\sum_{g \in C} h^{-1}gh = h\sum_{g \in C} g=h\phi_C$$
+
+Hence applying $\phi_C$ to $V$ induces a $\mathbb{C}G$ linear map
+$V \to V$.  By Schur's lemma this must be 
+multiplication by some
+complex number $\lambda_C$.  Then $\lambda_C$ is an algebraic
+integer as it solves the same monic polynomial as $\phi_C$.
+
+Also any $g \in G$ has finite order so the map it induces on $V$
+must have eigenvalues which are roots of unity and hence algebraic
+integers.  Hence the sum of the eigenvalues, $\chi_V (g)$, must
+also be an algebraic integer.
+
+Now $V$ is irreducible so,
+
+$$
+|G|= \sum_{g \in G} \chi_V(g) {\chi_V(g)}^* = \sum_{C \subset G}
+{\rm tr}(\phi_C){\chi_V(C)}^* = d\sum_{C \subset  G} \lambda_C
+{\chi_V(C)}^*
+$$
+
+Therefore $|G|/d$ is both rational and an algebraic integer. Hence
+it is an integer and $d$ divides $|G|$.
+
+%%%%%
+%%%%%
+\end{document}

@@ -1,0 +1,123 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{YoungsProjectionOperators}
+\pmcreated{2013-03-22 16:48:25}
+\pmmodified{2013-03-22 16:48:25}
+\pmowner{rspuzio}{6075}
+\pmmodifier{rspuzio}{6075}
+\pmtitle{Young's projection operators}
+\pmrecord{16}{39041}
+\pmprivacy{1}
+\pmauthor{rspuzio}{6075}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{20C30}
+\pmclassification{msc}{11P99}
+\pmclassification{msc}{05A17}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\begin{document}
+Associated to a Young tableau with $n$ boxes, we have two elements 
+of the group ring of the permutation group on $n$ symbols.  To
+construct the operators, we first construct the antisymmetrizing
+operators corresponding to the columns and the symmetrizing
+operators corresponding to the rows.  Then one operator corresponding
+to the tableau consists of the product of the symmetrizing operators
+corresponding to the rows multiplied by the product of the 
+antisymmetrizing operators corresponding to the columns and the
+other consists of the product of the antisymmetrizing operators 
+corresponding to the columns multiplied by the symmetrizing operators
+corresponding to the rows.
+
+How this works may be illustrated with a simple example.  Consider
+the tableau
+\[
+\begin{matrix}
+1 & 2\\
+3 & 4
+\end{matrix}.
+\]
+
+Corresponding to the first row, we have the symmetrization operator
+\[
+1 + (1\,2).
+\]
+Corresponding to the second row, we have the symmetrization operator
+\[
+1 + (3\,4)
+\]
+Multiplying these two symmetrization operators (the order does not
+matter because they involve permutations of different elements)
+produces
+\[
+1 + (1\,2) + (3\,4) + (1\,2) (3\,4)
+\]
+
+Corresponding to the first column, we have the antisymmetrization
+operator
+\[
+1 - (1\,3).
+\]
+Corresponding to the second column, we have the antisymmetrization
+operator
+\[
+1 - (2\,4).
+\]
+Multiplying these two antisymmetrization operators (the order does not
+matter because they involve permutations of different elements)
+produces
+\[
+1 - (1\,3) - (2\,4) + (1\,3) (2\,4).
+\]
+
+To obtain one Young projector, we multiply the product of
+the symmetrization operators by the product of the 
+antisymmetrization 
+operators.
+\[
+\left( 1 + (1\,2) + (3\,4) + (1\,2) (3\,4) \right)
+\left( 1 - (1\,3) - (2\,4) + (1\,3) (2\,4) \right) =
+\]
+\begin{eqnarray*}
+1 &+& (1\,2) + (3\,4) + (1\,2) (3\,4) -
+(1\,3) - (1\,2\,3) - (1\,3\,4) - (1\,2\,3\,4) - \\
+(2\,4) &-& (1\,4\,2) - (2\,4\,3) - (1\,4\,3\,2) +
+(1\,3) (2\,4) + (1\,4\,2\,3) + (1\,3\,2\,4) + (1\,4) (2\,3)
+\end{eqnarray*}
+
+To obtain the other projector, we multiply in the other order.
+\[
+\left( 1 - (1\,3) - (2\,4) + (1\,3) (2\,4) \right)
+\left( 1 + (1\,2) + (3\,4) + (1\,2) (3\,4) \right) =
+\]
+\begin{eqnarray*}
+1 &+& (1\,2) + (3\,4) + (1\,2) (3\,4) -
+(1\,3) - (1\,3\,2) - (1\,4\,3) - (1\,4\,3\,2) - \\
+(2\,4) &-& (1\,2\,4) - (2\,3\,4) - (1\,2\,3\,4) +
+(1\,3) (2\,4) + (1\,3\,2\,4) + (1\,4\,2\,3) +
+(1\,4)(2\,3)
+\end{eqnarray*}
+%%%%%
+%%%%%
+\end{document}

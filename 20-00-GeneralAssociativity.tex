@@ -1,0 +1,84 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{GeneralAssociativity}
+\pmcreated{2013-03-22 14:35:50}
+\pmmodified{2013-03-22 14:35:50}
+\pmowner{pahio}{2872}
+\pmmodifier{pahio}{2872}
+\pmtitle{general associativity}
+\pmrecord{21}{36165}
+\pmprivacy{1}
+\pmauthor{pahio}{2872}
+\pmtype{Theorem}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{20-00}
+\pmrelated{Semigroup}
+\pmrelated{EveryRingIsAnIntegerAlgebra}
+\pmrelated{InverseFormingInProportionToGroupOperation}
+\pmrelated{CosineAtMultiplesOfStraightAngle}
+\pmrelated{InfixNotation}
+\pmrelated{OperationsOnRelations}
+\pmrelated{Difference2}
+\pmrelated{FactorsWithMinusSign}
+\pmrelated{IdealOfElementsWithFiniteOrder}
+\pmrelated{GeneralCommutativity}
+\pmrelated{Characteri}
+\pmdefines{power}
+\pmdefines{multiple}
+\pmdefines{even power}
+\pmdefines{odd power}
+\pmdefines{even multiple}
+\pmdefines{odd multiple}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+ \usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\theoremstyle{definition}
+\newtheorem*{thmplain}{Theorem}
+\begin{document}
+If an associative binary operation of a set $S$ is denoted by ``$\cdot$'', the associative law in $S$ is usually expressed as
+  $$(a\!\cdot\!b)\!\cdot\!c = a\!\cdot\!(b\!\cdot\!c),$$
+or leaving out the dots,\, $(ab)c = a(bc)$.\, Thus the common value of both \PMlinkescapetext{sides} may be denoted as $abc$.\, With four elements of $S$ we can \PMlinkescapetext{calculate}, using only the associativity, as follows:
+     $$(ab)(cd) = a(b(cd)) = a((bc)d)= (a(bc))d = ((ab)c)d$$
+So we may denote the common value of those five expressions as $abcd$. 
+
+\begin{thmplain}
+ \, The expression formed of elements $a_1$, $a_2$, \ldots, $a_n$ of $S$ \PMlinkescapetext{represents always the same element of $S$ independently on how one has joined them together with the associative operation and parentheses, if only the order of the elements is every time the same}.\, The common value is denoted by $a_1a_2\ldots a_n$.
+\end{thmplain}
+
+\textbf{Note.}\, The $n$ elements can be joined, without changing their \PMlinkescapetext{order}, in $\frac{(2n-2)!}{n!(n-1)!}$ ways (see the Catalan numbers).
+
+The theorem is proved by induction on $n$.\, The cases\, $n = 3$\, and\, $n = 4$\, have been stated \PMlinkescapetext{right} above.
+
+Let\, $n \in \mathbb{Z}_+$.\, The expression $aa \ldots a$ with $n$ equal ``factors'' $a$ may be denoted by $a^n$ and called a {\em power} of $a$.\, If the associative operation is denoted ``additively'', then the ``sum''\, 
+$a\!+\!a\!+\cdots+\!a$\, of $n$ equal elements $a$ is denoted by $na$ and called a {\em multiple} of $a$; hence in every ring one may consider powers and multiples.  According to whether $n$ is an even or an odd number, one may speak of {\em even powers}, {\em odd powers}, {\em even multiples}, {\em odd multiples}.
+
+The following two laws can be proved by induction:
+   $$a^m\cdot a^n = a^{m+n}$$
+     $$(a^m)^n = a^{mn}$$
+In \PMlinkescapetext{additive} notation:
+     $$ma\!+\!na = (m\!+\!n)a,$$
+      $$n(ma) = (mn)a$$
+
+\textbf{Note.}\, If the set $S$ together with its operation is a group, then the notion of multiple $na$ resp. power $a^n$ can be extended for negative integer and zero values of $n$ by means of the inverse and identity elements.\, The above laws remain in \PMlinkescapetext{force}.
+%%%%%
+%%%%%
+\end{document}

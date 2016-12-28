@@ -1,0 +1,106 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{Concatenation}
+\pmcreated{2013-03-22 17:16:38}
+\pmmodified{2013-03-22 17:16:38}
+\pmowner{CWoo}{3771}
+\pmmodifier{CWoo}{3771}
+\pmtitle{concatenation}
+\pmrecord{17}{39617}
+\pmprivacy{1}
+\pmauthor{CWoo}{3771}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{20M35}
+\pmclassification{msc}{68Q70}
+\pmsynonym{juxtaposition}{Concatenation}
+\pmsynonym{monoidal}{Concatenation}
+\pmrelated{Word}
+\pmdefines{length}
+\pmdefines{length of a word}
+\pmdefines{monoidal language}
+
+\usepackage{amssymb,amscd}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{mathrsfs}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+\usepackage{amsthm}
+% making logically defined graphics
+%%\usepackage{xypic}
+\usepackage{pst-plot}
+\usepackage{psfrag}
+
+% define commands here
+\newtheorem{prop}{Proposition}
+\newtheorem{thm}{Theorem}
+\newtheorem{ex}{Example}
+\newcommand{\real}{\mathbb{R}}
+\newcommand{\pdiff}[2]{\frac{\partial #1}{\partial #2}}
+\newcommand{\mpdiff}[3]{\frac{\partial^#1 #2}{\partial #3^#1}}
+\begin{document}
+\PMlinkescapeword{order}
+\PMlinkescapeword{simple}
+
+\subsubsection*{Concatenation on Words}
+
+Let $a,b$ be two words.  Loosely speaking, the \emph{concatenation}, or \emph{juxtaposition} of $a$ and $b$ is the word of the form $ab$.  In order to define this rigorously, let us first do a little review of what words are.  
+
+Let $\Sigma$ be a set whose elements we call \emph{letters} (we also call $\Sigma$ an \emph{alphabet}).  A (finite) word or a string on $\Sigma$ is a partial function $w:\mathbb{N} \to \Sigma$, (where $\mathbb{N}$ is the set of natural numbers), such that, if $\operatorname{dom}(w)\ne \varnothing$, then there is an $n\in \mathbb{N}$ such that 
+\begin{displaymath}
+w \textrm{ is } \left\{
+\begin{array}{ll}
+\textrm{defined for every }m\le n,\\
+\textrm{undefined otherwise.}
+\end{array}
+\right.
+\end{displaymath}
+This $n$ is necessarily unique, and is called the \emph{length} of the word $w$.  The length of a word $w$ is usually denoted by $|w|$.  The word whose domain is $\varnothing$, the empty set, is called the empty word, and is denoted by $\lambda$.  It is easy to see that $|\lambda|=0$.  Any element in the range of $w$ has the form $w(i)$, but it is more commonly written $w_i$.  If a word $w$ is not the empty word, then we may write it as $w_1w_2\cdots w_n$, where $n=|w|$.  The collection of all words on $\Sigma$ is denoted $\Sigma^*$ (the asterisk $^*$ is commonly known as the Kleene star operation of a set).  Using the definition above, we see that $\lambda\in \Sigma^*$.
+
+Now we define a binary operation $\circ$ on $\Sigma^*$, called the \emph{concatenation} on the alphabet $\Sigma$, as follows: let $v,w\in \Sigma^*$ with $m=|v|$ and $n=|w|$.  Then $\circ(v,w)$ is the partial function whose domain is the set $\lbrace 1, \ldots, m, m+1, \ldots, m+n\rbrace$, such that
+\begin{displaymath}
+\circ(v,w)(i) = \left\{ 
+\begin{array}{ll}
+v(i) & \textrm{if }i\le m\\
+w(i-m) & \textrm{otherwise.}
+\end{array} 
+\right.
+\end{displaymath}
+The partial function $\circ(v,w)$ is written $v\circ w$, or simply $vw$, when it does not cause any confusion.  Therefore, if $v=v_1\cdots v_m$ and $w=w_1\cdots w_n$, then $vw=v_1\cdots v_mw_1\cdots w_n$.
+
+Below are some simple properties of $\circ$ on words:
+\begin{itemize}
+\item $\circ$ is associative: $(uv)w=u(vw)$.
+\item $\lambda w=w\lambda = w$.
+\item As a result, $\Sigma^*$ together with $\circ$ is a monoid.
+\item $vw=\lambda$ iff $v=w=\lambda$.
+\item As a result, $\Sigma^*$ is never a group unless $\Sigma^*=\lbrace \lambda\rbrace$.
+\item If $a=bc$ where $a$ is a letter, then one of $b,c$ is $a$, and the other the empty word $\lambda$.
+\item If $ab=cd$ where $a,b,c,d$ are letters, then $a=c$ and $b=d$.
+\end{itemize}
+
+\subsubsection*{Concatenation on Languages}
+
+The concatenation operation $\circ$ over an alphabet $\Sigma$ can be extended to operations on languages over $\Sigma$.  Suppose $A,B$ are two languages over $\Sigma$, we define $$A\circ B:= \lbrace u\circ v \mid u\in A, v\in B\rbrace.$$
+When there is no confusion, we write $AB$ for $A\circ B$.
+
+Below are some simple properties of $\circ$ on languages:
+\begin{itemize}
+\item $(AB)C=A(BC)$; \PMlinkname{i.e.}{Ie}, concatenation of sets of letters is associative.
+\item Because of the associativity of $\circ$, we can inductively define $A^n$ for any positive integer $n$, as $A^1=A$, and $A^{n+1}=A^nA$.
+\item It is not hard to see that $\Sigma^*=\lbrace \lambda \rbrace \cup \Sigma \cup \Sigma^2 \cup \cdots \cup \Sigma^n \cup \cdots$.
+\end{itemize}
+
+\textbf{Remark}.  A formal language containing the empty word, and is closed under concatenation is said to be \emph{monoidal}, since it has the structure of a monoid.
+
+\begin{thebibliography}{9}
+\bibitem{hlcp} H.R. Lewis, C.H. Papadimitriou {\em Elements of the Theory of Computation}. Prentice-Hall, Englewood Cliffs, New Jersey (1981).
+\end{thebibliography}
+%%%%%
+%%%%%
+\end{document}

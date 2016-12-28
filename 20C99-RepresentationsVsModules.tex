@@ -1,0 +1,59 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{RepresentationsVsModules}
+\pmcreated{2013-03-22 19:18:59}
+\pmmodified{2013-03-22 19:18:59}
+\pmowner{joking}{16130}
+\pmmodifier{joking}{16130}
+\pmtitle{representations vs modules}
+\pmrecord{4}{42254}
+\pmprivacy{1}
+\pmauthor{joking}{16130}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{20C99}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\begin{document}
+Let $G$ be a group and $k$ a field. Recall that a pair $(V, \cdot)$ is a representation of $G$ over $k$, if $V$ is a vector space over $k$ and $\cdot:G\times V\to V$ is a linear group action (compare with parent object). On the other hand we have a group algebra $kG$, which is a vector space over $k$ with $G$ as a basis and the multiplication is induced from the multiplication in $G$. Thus we can consider modules over $kG$. These two concepts are related.
+
+If $\mathbb{V}=(V,\cdot)$ is a representation of $G$ over $k$, then define a $kG$-module $\overline{\mathbb{V}}$ by putting $\overline{\mathbb{V}}=V$ as a vector space over $k$ and the action of $kG$ on $\overline{\mathbb{V}}$ is given by
+$$(\sum \lambda_ig_i)\circ v = \sum \lambda_i(g_i\cdot v).$$
+It can be easily checked that $\overline{\mathbb{V}}$ is indeed a $kG$-module.
+
+Analogously if $M$ is a $kG$-module (with action denoted by ,,$\circ$''), then the pair $\underline{M}=(M,\cdot)$ is a representation of $G$ over $k$, where ,,$\cdot$'' is given by
+$$g\cdot v =g\circ v.$$
+
+As a simple exercise we leave the following proposition to the reader:
+
+\textbf{Proposition.} Let $\mathbb{V}$ be a representation of $G$ over $k$ and let $M$ be a $kG$-module. Then
+$$\underline{\overline{\mathbb{V}}}=\mathbb{V};$$
+$$\overline{\underline{M}}=M.$$
+
+This means that modules and representations are the same concept. One can generalize this even further by showing that $\overline{\cdot}$ and $\underline{\cdot}$ are both functors, which are (mutualy invert) isomorphisms of appropriate categories.
+
+Therefore we can easily define such concepts as ,,direct sum of representations'' or ,,tensor product of representations'', etc.
+%%%%%
+%%%%%
+\end{document}

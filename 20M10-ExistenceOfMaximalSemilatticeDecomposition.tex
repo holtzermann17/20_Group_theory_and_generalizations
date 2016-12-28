@@ -1,0 +1,59 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ExistenceOfMaximalSemilatticeDecomposition}
+\pmcreated{2013-03-22 13:07:12}
+\pmmodified{2013-03-22 13:07:12}
+\pmowner{mclase}{549}
+\pmmodifier{mclase}{549}
+\pmtitle{existence of maximal semilattice decomposition}
+\pmrecord{5}{33553}
+\pmprivacy{1}
+\pmauthor{mclase}{549}
+\pmtype{Result}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{20M10}
+\pmdefines{minimal semilattice congruence}
+\pmdefines{maximal semilattice decomposition}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+\usepackage{amsthm}
+% making logically defined graphics
+%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\newtheorem*{proposition}{Proposition}
+\begin{document}
+Let $S$ be a semigroup.  A \emph{maximal semilattice decomposition} for $S$ is a surjective homomorphism $\phi \colon S \to \Gamma$ onto a semilattice $\Gamma$ with the property that any other semilattice decomposition factors through $\phi$.  So if $\phi' \colon S \to \Gamma'$ is any other semilattice decomposition of $S$, then there is a homomorphism $\Gamma \to \Gamma'$ such that the following diagram commutes:
+$$\xymatrix{
+S \ar[r]^\phi \ar[dr]_{\phi'} & \Gamma \ar@{-->}[d] \\ & \Gamma'
+}$$
+
+\begin{proposition}
+Every semigroup has a maximal semilattice decomposition.
+\end{proposition}
+
+\begin{proof}
+Recall that each semilattice decompostion determines a semilattice congruence.  If $\{ \rho_i \mid i \in I \}$ is the family of all semilattice congruences on $S$, then define $\rho = \bigcap_{i \in I} \rho_i$.  (Here, we consider the congruences as subsets of $S \times S$, and take their intersection as sets.)
+
+It is easy to see that $\rho$ is also a semilattice congruence, which is contained in all other semilattice congruences.
+
+Therefore each of the homomorphisms $S \to S/\rho_i$ factors through $S \to S/\rho$.
+\end{proof}
+%%%%%
+%%%%%
+\end{document}

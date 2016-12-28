@@ -1,0 +1,58 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ConjugateStabilizerSubgroups}
+\pmcreated{2013-03-22 13:21:44}
+\pmmodified{2013-03-22 13:21:44}
+\pmowner{Thomas Heye}{1234}
+\pmmodifier{Thomas Heye}{1234}
+\pmtitle{conjugate stabilizer subgroups}
+\pmrecord{7}{33888}
+\pmprivacy{1}
+\pmauthor{Thomas Heye}{1234}
+\pmtype{Derivation}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{20A05}
+\pmrelated{Orbit}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\begin{document}
+Let $\operatorname{\cdot}$ be a right group action of $G$ on a set $M$. Then
+\begin{displaymath}
+G_{\alpha \cdot g} =g^{-1}G_{\alpha}g
+\end{displaymath}
+for any $\alpha \in M$ and $g \in G$. \footnote{$G_{\alpha}$ is the stabilizer subgroup of $\alpha \in M$.}
+
+Proof:
+
+\[
+x \in G_{\alpha\cdot g} \leftrightarrow \alpha\cdot (gx) = \alpha \cdot g
+ \leftrightarrow \alpha \cdot (gxg^{-1}) = \alpha \leftrightarrow gxg^{-1} \in
+ G_{\alpha} \\ \leftrightarrow x \in g^{-1}\alpha g\]
+
+and therefore $G_{\alpha\cdot g} =g^{-1}G_{\alpha}g$.
+
+Thus all stabilizer subgroups for elements of the orbit $G(\alpha)$ of $\alpha$
+are conjugate to $G_{\alpha}$.
+%%%%%
+%%%%%
+\end{document}

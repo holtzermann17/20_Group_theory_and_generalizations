@@ -1,0 +1,63 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{Congruence1}
+\pmcreated{2013-03-22 13:01:08}
+\pmmodified{2013-03-22 13:01:08}
+\pmowner{mclase}{549}
+\pmmodifier{mclase}{549}
+\pmtitle{congruence}
+\pmrecord{7}{33403}
+\pmprivacy{1}
+\pmauthor{mclase}{549}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{20M99}
+\pmrelated{Congruences}
+\pmrelated{MultiplicativeCongruence}
+\pmrelated{CongruenceRelationOnAnAlgebraicSystem}
+\pmdefines{quotient semigroup}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\newtheorem*{example}{Example}
+\begin{document}
+Let $S$ be a semigroup.  An equivalence relation $\sim$ defined on $S$ is called a \emph{congruence} if it is preserved under the semigroup operation.  That is, for all $x, y, z \in S$, if $x \sim y$ then $xz \sim yz$ and $zx \sim zy$.
+
+If $\sim$ satisfies only $x \sim y$ implies $xz \sim yz$ (resp. $zx \sim zy$) then $\sim$ is called a \emph{right congruence} (resp. \emph{left congruence}).
+
+\begin{example}
+Suppose $f: S \to T$ is a semigroup homomorphism.  Define $\sim$ by $x \sim y$ iff $f(x) = f(y)$.  Then it is easy to see that $\sim$ is a congruence.
+\end{example}
+
+If $\sim$ is a congruence, defined on a semigroup $S$,
+write $[x]$ for the equivalence class of $x$ under $\sim$.
+Then it is easy to see that $[x] \cdot [y] = [xy]$
+is a well-defined operation on the set of equivalence classes,
+and that in fact this set becomes a semigroup with this operation.
+This semigroup is called the \emph{quotient of $S$ by $\sim$}
+and is written $S/\sim$.
+
+Thus semigroup \PMlinkescapetext{congruences} are related to homomorphic images of semigroups in the same way that normal subgroups are related to homomorphic images of groups.  More precisely, in the group case, the congruence is the coset relation, rather than the normal subgroup itself.
+%%%%%
+%%%%%
+\end{document}

@@ -1,0 +1,71 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ProofOfExampleOfMedialQuasigroup}
+\pmcreated{2013-03-22 16:27:35}
+\pmmodified{2013-03-22 16:27:35}
+\pmowner{rspuzio}{6075}
+\pmmodifier{rspuzio}{6075}
+\pmtitle{proof of example of medial quasigroup}
+\pmrecord{8}{38618}
+\pmprivacy{1}
+\pmauthor{rspuzio}{6075}
+\pmtype{Proof}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{20N05}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\begin{document}
+We shall proceed by first showing that the algebraic systems defined in the \PMlinkname{parent entry}{MedialQuasigroup} are quasigroups and then showing that the medial property is satisfied.
+
+To show that the system is a quasigroup, we need to check the solubility of equations.  Let $x$ and $y$ be two elements of $G$.  Then, by definition of $\cdot$, the equation $x \cdot z = y$ is equivalent to 
+ \[ f(x) + g(z) + c = y .\]
+This is equivalent to 
+ \[g(z) = y - c - f(x).\]
+Since $g$ is an automorphism, there will exist a unique solution $z$ to this equation.
+
+Likewise, the equation $z \cdot x = y$ is equivalent to
+ \[ f(z) + g(x) + c = y \]
+which, in turn is equivalent to 
+ \[f(z) = y - c - g(x),\]
+so we may also find a unique $z$ such that $z \cdot x = y$.  Hence, $(G, \cdot)$ is a quasigroup.
+
+To check the medial property, we use the definition of $\cdot$ to conclude that
+\begin{eqnarray*} (x \cdot y) \cdot (z \cdot w) &=& (f(x) + g(y) + c) \cdot (f(z) + g(w) + c) \\ &=& f (f(x) + g(y) + c) + g (f(z) + g(w) + c) + c 
+\end{eqnarray*}
+Since $f$ and $g$ are automorphisms and the group is commutative, this equals
+ \[ f(f(x)) + f(g(y)) + g(f(z)) + g(g(w)) + f(c) + g(c) + c .\]
+Since $f$ and $g$ commute this, in turn, equals
+ \[ f(f(x)) + g(f(y)) + f(g(z)) + g(g(w)) + f(c) + g(c) + c .\]
+Using the commutative and associative laws, we may regroup this expression as follows:
+ \[ (f(f(x)) + f(g(z)) + f(c)) + (g(f(y)) + g(g(w)) + g(c)) + c \]
+Because $f$ and $g$ are automorphisms, this equals
+ \[ f (f(x) + g(z) + c) + g( f(y) + g(w) + c) + c \]
+By defintion of $\cdot$, this equals
+ \[ f (x \cdot z) + g (y \cdot z) + c ,\]
+which equals $(x \cdot z) \cdot (y \cdot z)$, so we have
+ \[ (x \cdot y) \cdot (z \cdot w) = (x \cdot z) \cdot (y \cdot z). \]
+Thus, the medial property is satisfied, so we have a medial quasigroup.
+%%%%%
+%%%%%
+\end{document}

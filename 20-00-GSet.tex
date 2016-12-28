@@ -1,0 +1,62 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{GSet}
+\pmcreated{2013-03-22 17:55:44}
+\pmmodified{2013-03-22 17:55:44}
+\pmowner{jwaixs}{18148}
+\pmmodifier{jwaixs}{18148}
+\pmtitle{$G$-Set}
+\pmrecord{5}{40423}
+\pmprivacy{1}
+\pmauthor{jwaixs}{18148}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{20-00}
+\pmrelated{GroupAction}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\begin{document}
+If $G$ is a group and $X$ a set, then $X$ is called a left $G$-Set if there exists a mapping $\lambda : G \times X \rightarrow X$ with
+
+$$
+  \lambda(g_1,\lambda(g_2,x)) = \lambda(g_1 g_2, x)
+$$
+
+or shorter with $\lambda(g,x) = gx$
+
+$$
+  g_1(g_2(x)) = (g_1 g_2)(x)
+$$
+
+for all $x \in X$ and $g_1,g_2 \in G$. And when $G$ acts on a set $X$, the set $X$ is always a $G$-set. \\ \\
+
+
+$X$ is called a right $G$-Set if there exists a mapping $\lambda : X \times G \rightarrow X$ with
+
+$$
+  \lambda(\lambda(x,g_2),g_1) = \lambda(x,g_2 g_1)
+$$
+%%%%%
+%%%%%
+\end{document}
