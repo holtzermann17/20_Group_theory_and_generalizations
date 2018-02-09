@@ -1,0 +1,90 @@
+<!DOCTYPE html><html>
+<head>
+<title>proof of properties of Hopfian and co-Hopfian groups</title>
+<!--Generated on Fri Feb  9 19:30:49 2018 by LaTeXML (version 0.8.2) http://dlmf.nist.gov/LaTeXML/.-->
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" href="LaTeXML.css" type="text/css">
+<link rel="stylesheet" href="ltx-article.css" type="text/css">
+<link rel="stylesheet" href="https://cdn.rawgit.com/holtzermann17/3f71ceeb3b055e1ddc3b6c11fb1f074c/raw/2bb23e3b173ff96840797fc0c3bcb8c54085df8e/LaTeXML.css" type="text/css">
+<link rel="stylesheet" href="https://cdn.rawgit.com/holtzermann17/4bda0365b30858ac2fb83623185fe3ec/raw/cedd84ed3e3ad597c5d293f443ecfe4803741c6b/ltx-article.css" type="text/css">
+<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=MML_HTMLorMML" type="text/javascript"></script>
+</head>
+<body>
+<div class="ltx_page_main">
+<div class="ltx_page_content">
+<article class="ltx_document ltx_authors_1line">
+<h1 class="ltx_title ltx_title_document">proof of properties of Hopfian and co-Hopfian groups</h1>
+
+<div id="p1" class="ltx_para">
+<br class="ltx_break">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">Proposition</span>. A group <math id="p1.m1" class="ltx_Math" alttext="G" display="inline"><mi>G</mi></math> is Hopfian if and only if every surjective homomorphism <math id="p1.m2" class="ltx_Math" alttext="G\to G" display="inline"><mrow><mi>G</mi><mo>→</mo><mi>G</mi></mrow></math> is an automorphism.</p>
+</div>
+<div id="p2" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_italic">Proof</span>. “<math id="p2.m1" class="ltx_Math" alttext="\Rightarrow" display="inline"><mo>⇒</mo></math>” Assume that <math id="p2.m2" class="ltx_Math" alttext="\psi:G\to G" display="inline"><mrow><mi>ψ</mi><mo>:</mo><mrow><mi>G</mi><mo>→</mo><mi>G</mi></mrow></mrow></math> is a surjective homomorpism such that <math id="p2.m3" class="ltx_Math" alttext="\psi" display="inline"><mi>ψ</mi></math> is not an automorphism, which means that <math id="p2.m4" class="ltx_Math" alttext="\mathrm{Ker}(\psi)" display="inline"><mrow><mi>Ker</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>ψ</mi><mo stretchy="false">)</mo></mrow></mrow></math> is nontrivial. Then (due to the First Isomorphism Theorem) <math id="p2.m5" class="ltx_Math" alttext="G/\mathrm{Ker}(\psi)" display="inline"><mrow><mrow><mi>G</mi><mo>/</mo><mi>Ker</mi></mrow><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>ψ</mi><mo stretchy="false">)</mo></mrow></mrow></math> is isomorphic to <math id="p2.m6" class="ltx_Math" alttext="\mathrm{Im}(\psi)=G" display="inline"><mrow><mrow><mi>Im</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>ψ</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mi>G</mi></mrow></math>. Contradiction, since <math id="p2.m7" class="ltx_Math" alttext="G" display="inline"><mi>G</mi></math> is Hopfian.</p>
+</div>
+<div id="p3" class="ltx_para">
+<p class="ltx_p">“<math id="p3.m1" class="ltx_Math" alttext="\Leftarrow" display="inline"><mo>⇐</mo></math>” Assume that <math id="p3.m2" class="ltx_Math" alttext="G" display="inline"><mi>G</mi></math> is not Hopfian. Then there exists nontrivial normal subgroup <math id="p3.m3" class="ltx_Math" alttext="H" display="inline"><mi>H</mi></math> of <math id="p3.m4" class="ltx_Math" alttext="G" display="inline"><mi>G</mi></math> and an isomorphism <math id="p3.m5" class="ltx_Math" alttext="\phi:G/H\to G" display="inline"><mrow><mi>ϕ</mi><mo>:</mo><mrow><mrow><mi>G</mi><mo>/</mo><mi>H</mi></mrow><mo>→</mo><mi>G</mi></mrow></mrow></math>. Let <math id="p3.m6" class="ltx_Math" alttext="\pi:G\to G/H" display="inline"><mrow><mi>π</mi><mo>:</mo><mrow><mi>G</mi><mo>→</mo><mrow><mi>G</mi><mo>/</mo><mi>H</mi></mrow></mrow></mrow></math> be the quotient homomorphism. Then obviously <math id="p3.m7" class="ltx_Math" alttext="\pi\circ\phi:G\to G" display="inline"><mrow><mrow><mi>π</mi><mo>∘</mo><mi>ϕ</mi></mrow><mo>:</mo><mrow><mi>G</mi><mo>→</mo><mi>G</mi></mrow></mrow></math> is a surjective homomorphism, but <math id="p3.m8" class="ltx_Math" alttext="\mathrm{Ker}(\pi\circ\phi)=H" display="inline"><mrow><mrow><mi>Ker</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi>π</mi><mo>∘</mo><mi>ϕ</mi></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mi>H</mi></mrow></math> is nontrivial, therefore <math id="p3.m9" class="ltx_Math" alttext="\pi\circ\phi" display="inline"><mrow><mi>π</mi><mo>∘</mo><mi>ϕ</mi></mrow></math> is not an automorphism. Contradiction. <math id="p3.m10" class="ltx_Math" alttext="\square" display="inline"><mi mathvariant="normal">□</mi></math></p>
+</div>
+<div id="p4" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">Proposition</span>. A group <math id="p4.m1" class="ltx_Math" alttext="G" display="inline"><mi>G</mi></math> is co-Hopfian if and only if every injective homomorphism <math id="p4.m2" class="ltx_Math" alttext="G\to G" display="inline"><mrow><mi>G</mi><mo>→</mo><mi>G</mi></mrow></math> is an automorphism.</p>
+</div>
+<div id="p5" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_italic">Proof</span>. “<math id="p5.m1" class="ltx_Math" alttext="\Rightarrow" display="inline"><mo>⇒</mo></math>” Assume that <math id="p5.m2" class="ltx_Math" alttext="\psi:G\to G" display="inline"><mrow><mi>ψ</mi><mo>:</mo><mrow><mi>G</mi><mo>→</mo><mi>G</mi></mrow></mrow></math> is an injective homomorphism which is not an automorphism. Therefore <math id="p5.m3" class="ltx_Math" alttext="\mathrm{Im}(\psi)" display="inline"><mrow><mi>Im</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>ψ</mi><mo stretchy="false">)</mo></mrow></mrow></math> is a proper subgroup of <math id="p5.m4" class="ltx_Math" alttext="G" display="inline"><mi>G</mi></math>, therefore (since <math id="p5.m5" class="ltx_Math" alttext="\mathrm{Ker}(\psi)=\{e\}" display="inline"><mrow><mrow><mi>Ker</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>ψ</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mo stretchy="false">{</mo><mi>e</mi><mo stretchy="false">}</mo></mrow></mrow></math> and due to the First Isomorphism Theorem) <math id="p5.m6" class="ltx_Math" alttext="G" display="inline"><mi>G</mi></math> is isomorphic to its proper subgroup, namely <math id="p5.m7" class="ltx_Math" alttext="\mathrm{Im}(\psi)" display="inline"><mrow><mi>Im</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>ψ</mi><mo stretchy="false">)</mo></mrow></mrow></math>. Contradiction, since <math id="p5.m8" class="ltx_Math" alttext="G" display="inline"><mi>G</mi></math> is co-Hopfian.</p>
+</div>
+<div id="p6" class="ltx_para">
+<p class="ltx_p">“<math id="p6.m1" class="ltx_Math" alttext="\Leftarrow" display="inline"><mo>⇐</mo></math>” Assume that <math id="p6.m2" class="ltx_Math" alttext="G" display="inline"><mi>G</mi></math> is not co-Hopfian. Then there exists a proper subgroup <math id="p6.m3" class="ltx_Math" alttext="H" display="inline"><mi>H</mi></math> of <math id="p6.m4" class="ltx_Math" alttext="G" display="inline"><mi>G</mi></math> and an isomorphism <math id="p6.m5" class="ltx_Math" alttext="\phi:G\to H" display="inline"><mrow><mi>ϕ</mi><mo>:</mo><mrow><mi>G</mi><mo>→</mo><mi>H</mi></mrow></mrow></math>. Let <math id="p6.m6" class="ltx_Math" alttext="i:H\to G" display="inline"><mrow><mi>i</mi><mo>:</mo><mrow><mi>H</mi><mo>→</mo><mi>G</mi></mrow></mrow></math> be an inclusion homomorphism. Then <math id="p6.m7" class="ltx_Math" alttext="i\circ\phi:G\to G" display="inline"><mrow><mrow><mi>i</mi><mo>∘</mo><mi>ϕ</mi></mrow><mo>:</mo><mrow><mi>G</mi><mo>→</mo><mi>G</mi></mrow></mrow></math> is an injective homomorphism which is not onto (because <math id="p6.m8" class="ltx_Math" alttext="i" display="inline"><mi>i</mi></math> is not). Contradiction. <math id="p6.m9" class="ltx_Math" alttext="\square" display="inline"><mi mathvariant="normal">□</mi></math>
+</p>
+<table class="ltx_tabular ltx_align_right ltx_guessed_headers ltx_align_middle">
+<tbody class="ltx_tbody">
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l ltx_border_t">Title</th>
+<td class="ltx_td ltx_align_left ltx_border_r ltx_border_t">proof of properties of Hopfian and co-Hopfian groups</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Canonical name</th>
+<td class="ltx_td ltx_align_left ltx_border_r">ProofOfPropertiesOfHopfianAndCoHopfianGroups</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Date of creation</th>
+<td class="ltx_td ltx_align_left ltx_border_r">2013-03-22 18:31:17</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Last modified on</th>
+<td class="ltx_td ltx_align_left ltx_border_r">2013-03-22 18:31:17</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Owner</th>
+<td class="ltx_td ltx_align_left ltx_border_r">joking (16130)</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Last modified by</th>
+<td class="ltx_td ltx_align_left ltx_border_r">joking (16130)</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Numerical id</th>
+<td class="ltx_td ltx_align_left ltx_border_r">6</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Author</th>
+<td class="ltx_td ltx_align_left ltx_border_r">joking (16130)</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Entry type</th>
+<td class="ltx_td ltx_align_left ltx_border_r">Proof</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_b ltx_border_l">Classification</th>
+<td class="ltx_td ltx_align_left ltx_border_b ltx_border_r">msc 20F99</td>
+</tr>
+</tbody>
+</table>
+</div>
+</article>
+</div>
+<footer class="ltx_page_footer">
+<div class="ltx_page_logo">Generated  on Fri Feb  9 19:30:49 2018 by <a href="http://dlmf.nist.gov/LaTeXML/">LaTeXML <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAsAAAAOCAYAAAD5YeaVAAAAAXNSR0IArs4c6QAAAAZiS0dEAP8A/wD/oL2nkwAAAAlwSFlzAAALEwAACxMBAJqcGAAAAAd0SU1FB9wKExQZLWTEaOUAAAAddEVYdENvbW1lbnQAQ3JlYXRlZCB3aXRoIFRoZSBHSU1Q72QlbgAAAdpJREFUKM9tkL+L2nAARz9fPZNCKFapUn8kyI0e4iRHSR1Kb8ng0lJw6FYHFwv2LwhOpcWxTjeUunYqOmqd6hEoRDhtDWdA8ApRYsSUCDHNt5ul13vz4w0vWCgUnnEc975arX6ORqN3VqtVZbfbTQC4uEHANM3jSqXymFI6yWazP2KxWAXAL9zCUa1Wy2tXVxheKA9YNoR8Pt+aTqe4FVVVvz05O6MBhqUIBGk8Hn8HAOVy+T+XLJfLS4ZhTiRJgqIoVBRFIoric47jPnmeB1mW/9rr9ZpSSn3Lsmir1fJZlqWlUonKsvwWwD8ymc/nXwVBeLjf7xEKhdBut9Hr9WgmkyGEkJwsy5eHG5vN5g0AKIoCAEgkEkin0wQAfN9/cXPdheu6P33fBwB4ngcAcByHJpPJl+fn54mD3Gg0NrquXxeLRQAAwzAYj8cwTZPwPH9/sVg8PXweDAauqqr2cDjEer1GJBLBZDJBs9mE4zjwfZ85lAGg2+06hmGgXq+j3+/DsixYlgVN03a9Xu8jgCNCyIegIAgx13Vfd7vdu+FweG8YRkjXdWy329+dTgeSJD3ieZ7RNO0VAXAPwDEAO5VKndi2fWrb9jWl9Esul6PZbDY9Go1OZ7PZ9z/lyuD3OozU2wAAAABJRU5ErkJggg==" alt="[LOGO]"></a>
+</div></footer>
+</div>
+</body>
+</html>

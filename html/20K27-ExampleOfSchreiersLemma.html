@@ -1,0 +1,171 @@
+<!DOCTYPE html><html>
+<head>
+<title>example of Schreier’s Lemma</title>
+<!--Generated on Fri Feb  9 19:32:10 2018 by LaTeXML (version 0.8.2) http://dlmf.nist.gov/LaTeXML/.-->
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" href="LaTeXML.css" type="text/css">
+<link rel="stylesheet" href="ltx-article.css" type="text/css">
+<link rel="stylesheet" href="https://cdn.rawgit.com/holtzermann17/3f71ceeb3b055e1ddc3b6c11fb1f074c/raw/2bb23e3b173ff96840797fc0c3bcb8c54085df8e/LaTeXML.css" type="text/css">
+<link rel="stylesheet" href="https://cdn.rawgit.com/holtzermann17/4bda0365b30858ac2fb83623185fe3ec/raw/cedd84ed3e3ad597c5d293f443ecfe4803741c6b/ltx-article.css" type="text/css">
+<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=MML_HTMLorMML" type="text/javascript"></script>
+</head>
+<body>
+<div class="ltx_page_main">
+<div class="ltx_page_content">
+<article class="ltx_document ltx_authors_1line">
+<h1 class="ltx_title ltx_title_document">example of Schreier’s Lemma</h1>
+
+<div id="p1" class="ltx_para">
+<br class="ltx_break">
+<p class="ltx_p">Let <math id="p1.m1" class="ltx_Math" alttext="G" display="inline"><mi>G</mi></math> be a permutation group, that is, a subgroup of the symmetric group <math id="p1.m2" class="ltx_Math" alttext="Sym(\Omega)" display="inline"><mrow><mi>S</mi><mo>⁢</mo><mi>y</mi><mo>⁢</mo><mi>m</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi mathvariant="normal">Ω</mi><mo stretchy="false">)</mo></mrow></mrow></math> on the set <math id="p1.m3" class="ltx_Math" alttext="\Omega" display="inline"><mi mathvariant="normal">Ω</mi></math>. Fix <math id="p1.m4" class="ltx_Math" alttext="\omega\in\Omega" display="inline"><mrow><mi>ω</mi><mo>∈</mo><mi mathvariant="normal">Ω</mi></mrow></math>. Then</p>
+<table id="S0.Ex1" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex1.m1" class="ltx_Math" alttext="G_{\omega}=\{g\in G:\omega^{g}=\omega\}" display="block"><mrow><msub><mi>G</mi><mi>ω</mi></msub><mo>=</mo><mrow><mo stretchy="false">{</mo><mrow><mi>g</mi><mo>∈</mo><mi>G</mi></mrow><mo>:</mo><mrow><msup><mi>ω</mi><mi>g</mi></msup><mo>=</mo><mi>ω</mi></mrow><mo stretchy="false">}</mo></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">is a subgroup of <math id="p1.m5" class="ltx_Math" alttext="G" display="inline"><mi>G</mi></math>, and furthermore, the orbit <math id="p1.m6" class="ltx_Math" alttext="\omega^{G}" display="inline"><msup><mi>ω</mi><mi>G</mi></msup></math> canonically parameterizes a transversal of <math id="p1.m7" class="ltx_Math" alttext="G/G_{\omega}" display="inline"><mrow><mi>G</mi><mo>/</mo><msub><mi>G</mi><mi>ω</mi></msub></mrow></math>. That is, to every coset <math id="p1.m8" class="ltx_Math" alttext="G_{\omega}g" display="inline"><mrow><msub><mi>G</mi><mi>ω</mi></msub><mo>⁢</mo><mi>g</mi></mrow></math> there corresponds precisely one image <math id="p1.m9" class="ltx_Math" alttext="\omega^{g}" display="inline"><msup><mi>ω</mi><mi>g</mi></msup></math> and visa-versa. This leads to one of the most significant applications of Schreier’s lemma.</p>
+</div>
+<div id="p2" class="ltx_para">
+<p class="ltx_p"><em class="ltx_emph ltx_font_italic">Example</em>.
+Let <math id="p2.m1" class="ltx_Math" alttext="G=\langle s_{1}=(1,2,3,4),s_{2}=(1,3)\rangle" display="inline"><mrow><mi>G</mi><mo>=</mo><mrow><mo stretchy="false">⟨</mo><msub><mi>s</mi><mn>1</mn></msub><mo>=</mo><mrow><mo stretchy="false">(</mo><mn>1</mn><mo>,</mo><mn>2</mn><mo>,</mo><mn>3</mn><mo>,</mo><mn>4</mn><mo stretchy="false">)</mo></mrow><mo>,</mo><msub><mi>s</mi><mn>2</mn></msub><mo>=</mo><mrow><mo stretchy="false">(</mo><mn>1</mn><mo>,</mo><mn>3</mn><mo stretchy="false">)</mo></mrow><mo stretchy="false">⟩</mo></mrow></mrow></math>, which is a copy of <math id="p2.m2" class="ltx_Math" alttext="D_{8}" display="inline"><msub><mi>D</mi><mn>8</mn></msub></math> actings the symmetries of the four corners of a square. If we let <math id="p2.m3" class="ltx_Math" alttext="\omega=1" display="inline"><mrow><mi>ω</mi><mo>=</mo><mn>1</mn></mrow></math> then we know that the stabilizer <math id="p2.m4" class="ltx_Math" alttext="G_{1}" display="inline"><msub><mi>G</mi><mn>1</mn></msub></math> has index 4 in <math id="p2.m5" class="ltx_Math" alttext="G" display="inline"><mi>G</mi></math> and is therefore of order 2.</p>
+</div>
+<div id="p3" class="ltx_para">
+<p class="ltx_p">Geometrically it is not too difficult to understand that the stabilizer <math id="p3.m1" class="ltx_Math" alttext="G_{1}" display="inline"><msub><mi>G</mi><mn>1</mn></msub></math> is the subgroup <math id="p3.m2" class="ltx_Math" alttext="\langle(2,4)\rangle" display="inline"><mrow><mo stretchy="false">⟨</mo><mrow><mo stretchy="false">(</mo><mn>2</mn><mo>,</mo><mn>4</mn><mo stretchy="false">)</mo></mrow><mo stretchy="false">⟩</mo></mrow></math>; however, computers are not generally geometrically inclined, and so we use Schreier’s lemma to conclude the same in a completely computational method.</p>
+</div>
+<div id="p4" class="ltx_para">
+<p class="ltx_p">The orbit of <math id="p4.m1" class="ltx_Math" alttext="1" display="inline"><mn>1</mn></math> is <math id="p4.m2" class="ltx_Math" alttext="\{1,2,3,4\}" display="inline"><mrow><mo stretchy="false">{</mo><mn>1</mn><mo>,</mo><mn>2</mn><mo>,</mo><mn>3</mn><mo>,</mo><mn>4</mn><mo stretchy="false">}</mo></mrow></math> but in order to make use of Schreier’s lemma we encode the orbit together with a representative of <math id="p4.m3" class="ltx_Math" alttext="G" display="inline"><mi>G</mi></math> which transports <math id="p4.m4" class="ltx_Math" alttext="1" display="inline"><mn>1</mn></math> to the corresponding orbit element. For example:</p>
+<table id="S0.Ex2" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex2.m1" class="ltx_Math" alttext="1^{G}=\{1=1^{1},2=1^{s_{1}},3=2^{s_{1}},4=3^{s_{1}}\}." display="block"><mrow><msup><mn>1</mn><mi>G</mi></msup><mo>=</mo><mrow><mo stretchy="false">{</mo><mn>1</mn><mo>=</mo><msup><mn>1</mn><mn>1</mn></msup><mo>,</mo><mn>2</mn><mo>=</mo><msup><mn>1</mn><msub><mi>s</mi><mn>1</mn></msub></msup><mo>,</mo><mn>3</mn><mo>=</mo><msup><mn>2</mn><msub><mi>s</mi><mn>1</mn></msub></msup><mo>,</mo><mn>4</mn><mo>=</mo><msup><mn>3</mn><msub><mi>s</mi><mn>1</mn></msub></msup><mo stretchy="false">}</mo></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">This translates to the following simple transversal</p>
+<table id="S0.Ex3" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex3.m1" class="ltx_Math" alttext="T=\{1,s_{1},s_{1}^{2},s_{1}^{3}\}." display="block"><mrow><mrow><mi>T</mi><mo>=</mo><mrow><mo stretchy="false">{</mo><mn>1</mn><mo>,</mo><msub><mi>s</mi><mn>1</mn></msub><mo>,</mo><msubsup><mi>s</mi><mn>1</mn><mn>2</mn></msubsup><mo>,</mo><msubsup><mi>s</mi><mn>1</mn><mn>3</mn></msubsup><mo stretchy="false">}</mo></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">Notice that we have used the generators of <math id="p4.m5" class="ltx_Math" alttext="G" display="inline"><mi>G</mi></math> to create the orbit so that the transversal is created as words over the generators of <math id="p4.m6" class="ltx_Math" alttext="G" display="inline"><mi>G</mi></math> as given. (This process is not unique in general, but always possible.)</p>
+</div>
+<div id="p5" class="ltx_para">
+<p class="ltx_p">So we now have the ingrediants of Schreier’s lemma so we use them to create a generating set for <math id="p5.m1" class="ltx_Math" alttext="H=G_{1}" display="inline"><mrow><mi>H</mi><mo>=</mo><msub><mi>G</mi><mn>1</mn></msub></mrow></math>. Here <math id="p5.m2" class="ltx_Math" alttext="U" display="inline"><mi>U</mi></math> is the set:</p>
+<table id="S0.Ex4" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex4.m1" class="ltx_Math" alttext="U=\{1s_{1}(\overline{1s_{1}})^{-1},1s_{2}(\overline{1s_{2}})^{-1},s_{1}s_{1}(%
+\overline{s_{1}s_{1}})^{-1},s_{1}s_{2}(\overline{s_{1}s_{2}})^{-1},s_{1}^{2}s_%
+{1}(\overline{s_{1}^{2}s_{1}})^{-1},s_{1}^{2}s_{2}(\overline{s_{1}^{2}s_{2}})^%
+{-1},s_{1}^{3}s_{1}(\overline{s_{1}^{3}s_{1}})^{-1},s_{1}^{3}s_{2}(\overline{s%
+_{1}^{3}s_{2}})^{-1}\}." display="block"><mrow><mrow><mi>U</mi><mo>=</mo><mrow><mo stretchy="false">{</mo><mrow><mn>1</mn><mo>⁢</mo><msub><mi>s</mi><mn>1</mn></msub><mo>⁢</mo><msup><mrow><mo stretchy="false">(</mo><mover accent="true"><mrow><mn>1</mn><mo>⁢</mo><msub><mi>s</mi><mn>1</mn></msub></mrow><mo>¯</mo></mover><mo stretchy="false">)</mo></mrow><mrow><mo>-</mo><mn>1</mn></mrow></msup></mrow><mo>,</mo><mrow><mn>1</mn><mo>⁢</mo><msub><mi>s</mi><mn>2</mn></msub><mo>⁢</mo><msup><mrow><mo stretchy="false">(</mo><mover accent="true"><mrow><mn>1</mn><mo>⁢</mo><msub><mi>s</mi><mn>2</mn></msub></mrow><mo>¯</mo></mover><mo stretchy="false">)</mo></mrow><mrow><mo>-</mo><mn>1</mn></mrow></msup></mrow><mo>,</mo><mrow><msub><mi>s</mi><mn>1</mn></msub><mo>⁢</mo><msub><mi>s</mi><mn>1</mn></msub><mo>⁢</mo><msup><mrow><mo stretchy="false">(</mo><mover accent="true"><mrow><msub><mi>s</mi><mn>1</mn></msub><mo>⁢</mo><msub><mi>s</mi><mn>1</mn></msub></mrow><mo>¯</mo></mover><mo stretchy="false">)</mo></mrow><mrow><mo>-</mo><mn>1</mn></mrow></msup></mrow><mo>,</mo><mrow><msub><mi>s</mi><mn>1</mn></msub><mo>⁢</mo><msub><mi>s</mi><mn>2</mn></msub><mo>⁢</mo><msup><mrow><mo stretchy="false">(</mo><mover accent="true"><mrow><msub><mi>s</mi><mn>1</mn></msub><mo>⁢</mo><msub><mi>s</mi><mn>2</mn></msub></mrow><mo>¯</mo></mover><mo stretchy="false">)</mo></mrow><mrow><mo>-</mo><mn>1</mn></mrow></msup></mrow><mo>,</mo><mrow><msubsup><mi>s</mi><mn>1</mn><mn>2</mn></msubsup><mo>⁢</mo><msub><mi>s</mi><mn>1</mn></msub><mo>⁢</mo><msup><mrow><mo stretchy="false">(</mo><mover accent="true"><mrow><msubsup><mi>s</mi><mn>1</mn><mn>2</mn></msubsup><mo>⁢</mo><msub><mi>s</mi><mn>1</mn></msub></mrow><mo>¯</mo></mover><mo stretchy="false">)</mo></mrow><mrow><mo>-</mo><mn>1</mn></mrow></msup></mrow><mo>,</mo><mrow><msubsup><mi>s</mi><mn>1</mn><mn>2</mn></msubsup><mo>⁢</mo><msub><mi>s</mi><mn>2</mn></msub><mo>⁢</mo><msup><mrow><mo stretchy="false">(</mo><mover accent="true"><mrow><msubsup><mi>s</mi><mn>1</mn><mn>2</mn></msubsup><mo>⁢</mo><msub><mi>s</mi><mn>2</mn></msub></mrow><mo>¯</mo></mover><mo stretchy="false">)</mo></mrow><mrow><mo>-</mo><mn>1</mn></mrow></msup></mrow><mo>,</mo><mrow><msubsup><mi>s</mi><mn>1</mn><mn>3</mn></msubsup><mo>⁢</mo><msub><mi>s</mi><mn>1</mn></msub><mo>⁢</mo><msup><mrow><mo stretchy="false">(</mo><mover accent="true"><mrow><msubsup><mi>s</mi><mn>1</mn><mn>3</mn></msubsup><mo>⁢</mo><msub><mi>s</mi><mn>1</mn></msub></mrow><mo>¯</mo></mover><mo stretchy="false">)</mo></mrow><mrow><mo>-</mo><mn>1</mn></mrow></msup></mrow><mo>,</mo><mrow><msubsup><mi>s</mi><mn>1</mn><mn>3</mn></msubsup><mo>⁢</mo><msub><mi>s</mi><mn>2</mn></msub><mo>⁢</mo><msup><mrow><mo stretchy="false">(</mo><mover accent="true"><mrow><msubsup><mi>s</mi><mn>1</mn><mn>3</mn></msubsup><mo>⁢</mo><msub><mi>s</mi><mn>2</mn></msub></mrow><mo>¯</mo></mover><mo stretchy="false">)</mo></mrow><mrow><mo>-</mo><mn>1</mn></mrow></msup></mrow><mo stretchy="false">}</mo></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">We need to perform several multiplication to reduce this set of generators, for
+instance, <math id="p5.m3" class="ltx_Math" alttext="1^{s_{1}^{3}s_{2}}=4^{s_{2}}=4" display="inline"><mrow><msup><mn>1</mn><mrow><msubsup><mi>s</mi><mn>1</mn><mn>3</mn></msubsup><mo>⁢</mo><msub><mi>s</mi><mn>2</mn></msub></mrow></msup><mo>=</mo><msup><mn>4</mn><msub><mi>s</mi><mn>2</mn></msub></msup><mo>=</mo><mn>4</mn></mrow></math> so <math id="p5.m4" class="ltx_Math" alttext="\overline{s_{1}^{3}s_{2}}=s_{1}^{3}" display="inline"><mrow><mover accent="true"><mrow><msubsup><mi>s</mi><mn>1</mn><mn>3</mn></msubsup><mo>⁢</mo><msub><mi>s</mi><mn>2</mn></msub></mrow><mo>¯</mo></mover><mo>=</mo><msubsup><mi>s</mi><mn>1</mn><mn>3</mn></msubsup></mrow></math> while
+<math id="p5.m5" class="ltx_Math" alttext="1^{s_{1}^{2}s_{2}}=3^{s_{2}}=1" display="inline"><mrow><msup><mn>1</mn><mrow><msubsup><mi>s</mi><mn>1</mn><mn>2</mn></msubsup><mo>⁢</mo><msub><mi>s</mi><mn>2</mn></msub></mrow></msup><mo>=</mo><msup><mn>3</mn><msub><mi>s</mi><mn>2</mn></msub></msup><mo>=</mo><mn>1</mn></mrow></math> so <math id="p5.m6" class="ltx_Math" alttext="\overline{s_{1}^{2}s_{2}}=1" display="inline"><mrow><mover accent="true"><mrow><msubsup><mi>s</mi><mn>1</mn><mn>2</mn></msubsup><mo>⁢</mo><msub><mi>s</mi><mn>2</mn></msub></mrow><mo>¯</mo></mover><mo>=</mo><mn>1</mn></mrow></math>. Proceeding like this
+we find</p>
+<table id="S0.Ex5" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex5.m1" class="ltx_Math" alttext="U=\{1,s_{2}s_{1}^{2},1,s_{1}s_{2}s_{1}^{-1},1,s_{1}^{2}s_{2},1,s_{1}^{3}s_{2}s%
+_{1}\}=\{1,s_{2}s_{1}^{2},s_{1}s_{2}s_{1}^{-1},s_{1}^{2}s_{2},s_{1}^{3}s_{2}s_%
+{1}\}." display="block"><mrow><mrow><mi>U</mi><mo>=</mo><mrow><mo stretchy="false">{</mo><mn>1</mn><mo>,</mo><mrow><msub><mi>s</mi><mn>2</mn></msub><mo>⁢</mo><msubsup><mi>s</mi><mn>1</mn><mn>2</mn></msubsup></mrow><mo>,</mo><mn>1</mn><mo>,</mo><mrow><msub><mi>s</mi><mn>1</mn></msub><mo>⁢</mo><msub><mi>s</mi><mn>2</mn></msub><mo>⁢</mo><msubsup><mi>s</mi><mn>1</mn><mrow><mo>-</mo><mn>1</mn></mrow></msubsup></mrow><mo>,</mo><mn>1</mn><mo>,</mo><mrow><msubsup><mi>s</mi><mn>1</mn><mn>2</mn></msubsup><mo>⁢</mo><msub><mi>s</mi><mn>2</mn></msub></mrow><mo>,</mo><mn>1</mn><mo>,</mo><mrow><msubsup><mi>s</mi><mn>1</mn><mn>3</mn></msubsup><mo>⁢</mo><msub><mi>s</mi><mn>2</mn></msub><mo>⁢</mo><msub><mi>s</mi><mn>1</mn></msub></mrow><mo stretchy="false">}</mo></mrow><mo>=</mo><mrow><mo stretchy="false">{</mo><mn>1</mn><mo>,</mo><mrow><msub><mi>s</mi><mn>2</mn></msub><mo>⁢</mo><msubsup><mi>s</mi><mn>1</mn><mn>2</mn></msubsup></mrow><mo>,</mo><mrow><msub><mi>s</mi><mn>1</mn></msub><mo>⁢</mo><msub><mi>s</mi><mn>2</mn></msub><mo>⁢</mo><msubsup><mi>s</mi><mn>1</mn><mrow><mo>-</mo><mn>1</mn></mrow></msubsup></mrow><mo>,</mo><mrow><msubsup><mi>s</mi><mn>1</mn><mn>2</mn></msubsup><mo>⁢</mo><msub><mi>s</mi><mn>2</mn></msub></mrow><mo>,</mo><mrow><msubsup><mi>s</mi><mn>1</mn><mn>3</mn></msubsup><mo>⁢</mo><msub><mi>s</mi><mn>2</mn></msub><mo>⁢</mo><msub><mi>s</mi><mn>1</mn></msub></mrow><mo stretchy="false">}</mo></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">Remembering these words are permutations we further find the set reduces to</p>
+<table id="S0.Ex6" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex6.m1" class="ltx_Math" alttext="U=\{(),(2,4)\}." display="block"><mrow><mrow><mi>U</mi><mo>=</mo><mrow><mo stretchy="false">{</mo><mrow><mo stretchy="false">(</mo><mo stretchy="false">)</mo></mrow><mo>,</mo><mrow><mo stretchy="false">(</mo><mn>2</mn><mo>,</mo><mn>4</mn><mo stretchy="false">)</mo></mrow><mo stretchy="false">}</mo></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">Finally, we must intersect <math id="p5.m7" class="ltx_Math" alttext="U" display="inline"><mi>U</mi></math> with <math id="p5.m8" class="ltx_Math" alttext="G_{1}" display="inline"><msub><mi>G</mi><mn>1</mn></msub></math>. At first glance this feels impossible as we do not yet know <math id="p5.m9" class="ltx_Math" alttext="G_{1}" display="inline"><msub><mi>G</mi><mn>1</mn></msub></math>; however, we do know that <math id="p5.m10" class="ltx_Math" alttext="g\in G_{1}" display="inline"><mrow><mi>g</mi><mo>∈</mo><msub><mi>G</mi><mn>1</mn></msub></mrow></math> if and only if <math id="p5.m11" class="ltx_Math" alttext="1^{g}=1" display="inline"><mrow><msup><mn>1</mn><mi>g</mi></msup><mo>=</mo><mn>1</mn></mrow></math>. So we test this for each element of <math id="p5.m12" class="ltx_Math" alttext="U" display="inline"><mi>U</mi></math> and find that
+indeed each element in this case lies in <math id="p5.m13" class="ltx_Math" alttext="G_{1}" display="inline"><msub><mi>G</mi><mn>1</mn></msub></math>. Therefore by Schreier’s lemma,</p>
+<table id="S0.Ex7" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex7.m1" class="ltx_Math" alttext="G_{1}=\langle(),(2,4)\rangle." display="block"><mrow><mrow><msub><mi>G</mi><mn>1</mn></msub><mo>=</mo><mrow><mo stretchy="false">⟨</mo><mrow><mo stretchy="false">(</mo><mo stretchy="false">)</mo></mrow><mo>,</mo><mrow><mo stretchy="false">(</mo><mn>2</mn><mo>,</mo><mn>4</mn><mo stretchy="false">)</mo></mrow><mo stretchy="false">⟩</mo></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">This agrees with our graphical intuition.</p>
+</div>
+<div id="p6" class="ltx_para">
+<p class="ltx_p">Of course the value of Schreier’s lemma is for sets <math id="p6.m1" class="ltx_Math" alttext="\Omega" display="inline"><mi mathvariant="normal">Ω</mi></math> of hundreds and thousands of points, well beyond human intuition in most cases. Recursive applications of the result allow one to build a set of generators for an entire stabilizer sequence and thus reveal the order of a permutation group – without having to list all the elements which is an impossibly large task.</p>
+</div>
+<div id="p7" class="ltx_para">
+<p class="ltx_p">A naive recursion is not generally sufficient as the number of generators returned at each level grows multiplicatively. However, applying some suitible filters and organizing the process (the main insight of Sims) leads to a polynomial time algorithm for establishing generators of a stabilizer chain.
+</p>
+<table class="ltx_tabular ltx_align_right ltx_guessed_headers ltx_align_middle">
+<tbody class="ltx_tbody">
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l ltx_border_t">Title</th>
+<td class="ltx_td ltx_align_left ltx_border_r ltx_border_t">example of Schreier’s Lemma</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Canonical name</th>
+<td class="ltx_td ltx_align_left ltx_border_r">ExampleOfSchreiersLemma</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Date of creation</th>
+<td class="ltx_td ltx_align_left ltx_border_r">2013-03-22 15:54:02</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Last modified on</th>
+<td class="ltx_td ltx_align_left ltx_border_r">2013-03-22 15:54:02</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Owner</th>
+<td class="ltx_td ltx_align_left ltx_border_r">Algeboy (12884)</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Last modified by</th>
+<td class="ltx_td ltx_align_left ltx_border_r">Algeboy (12884)</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Numerical id</th>
+<td class="ltx_td ltx_align_left ltx_border_r">5</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Author</th>
+<td class="ltx_td ltx_align_left ltx_border_r">Algeboy (12884)</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Entry type</th>
+<td class="ltx_td ltx_align_left ltx_border_r">Example</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Classification</th>
+<td class="ltx_td ltx_align_left ltx_border_r">msc 20K27</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_b ltx_border_l">Related topic</th>
+<td class="ltx_td ltx_align_left ltx_border_b ltx_border_r">LiftsTransversals</td>
+</tr>
+</tbody>
+</table>
+</div>
+</article>
+</div>
+<footer class="ltx_page_footer">
+<div class="ltx_page_logo">Generated  on Fri Feb  9 19:32:10 2018 by <a href="http://dlmf.nist.gov/LaTeXML/">LaTeXML <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAsAAAAOCAYAAAD5YeaVAAAAAXNSR0IArs4c6QAAAAZiS0dEAP8A/wD/oL2nkwAAAAlwSFlzAAALEwAACxMBAJqcGAAAAAd0SU1FB9wKExQZLWTEaOUAAAAddEVYdENvbW1lbnQAQ3JlYXRlZCB3aXRoIFRoZSBHSU1Q72QlbgAAAdpJREFUKM9tkL+L2nAARz9fPZNCKFapUn8kyI0e4iRHSR1Kb8ng0lJw6FYHFwv2LwhOpcWxTjeUunYqOmqd6hEoRDhtDWdA8ApRYsSUCDHNt5ul13vz4w0vWCgUnnEc975arX6ORqN3VqtVZbfbTQC4uEHANM3jSqXymFI6yWazP2KxWAXAL9zCUa1Wy2tXVxheKA9YNoR8Pt+aTqe4FVVVvz05O6MBhqUIBGk8Hn8HAOVy+T+XLJfLS4ZhTiRJgqIoVBRFIoric47jPnmeB1mW/9rr9ZpSSn3Lsmir1fJZlqWlUonKsvwWwD8ymc/nXwVBeLjf7xEKhdBut9Hr9WgmkyGEkJwsy5eHG5vN5g0AKIoCAEgkEkin0wQAfN9/cXPdheu6P33fBwB4ngcAcByHJpPJl+fn54mD3Gg0NrquXxeLRQAAwzAYj8cwTZPwPH9/sVg8PXweDAauqqr2cDjEer1GJBLBZDJBs9mE4zjwfZ85lAGg2+06hmGgXq+j3+/DsixYlgVN03a9Xu8jgCNCyIegIAgx13Vfd7vdu+FweG8YRkjXdWy329+dTgeSJD3ieZ7RNO0VAXAPwDEAO5VKndi2fWrb9jWl9Esul6PZbDY9Go1OZ7PZ9z/lyuD3OozU2wAAAABJRU5ErkJggg==" alt="[LOGO]"></a>
+</div></footer>
+</div>
+</body>
+</html>

@@ -1,0 +1,288 @@
+<!DOCTYPE html><html>
+<head>
+<title>regular expression</title>
+<!--Generated on Fri Feb  9 19:35:49 2018 by LaTeXML (version 0.8.2) http://dlmf.nist.gov/LaTeXML/.-->
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" href="LaTeXML.css" type="text/css">
+<link rel="stylesheet" href="ltx-article.css" type="text/css">
+<link rel="stylesheet" href="https://cdn.rawgit.com/holtzermann17/3f71ceeb3b055e1ddc3b6c11fb1f074c/raw/2bb23e3b173ff96840797fc0c3bcb8c54085df8e/LaTeXML.css" type="text/css">
+<link rel="stylesheet" href="https://cdn.rawgit.com/holtzermann17/4bda0365b30858ac2fb83623185fe3ec/raw/cedd84ed3e3ad597c5d293f443ecfe4803741c6b/ltx-article.css" type="text/css">
+<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=MML_HTMLorMML" type="text/javascript"></script>
+</head>
+<body>
+<div class="ltx_page_main">
+<div class="ltx_page_content">
+<article class="ltx_document ltx_authors_1line">
+<h1 class="ltx_title ltx_title_document">regular expression</h1>
+
+<div id="p1" class="ltx_para">
+<br class="ltx_break">
+<p class="ltx_p">A <em class="ltx_emph ltx_font_italic">regular expression</em> is a particular meta-syntax for specifying regular grammars, which has many useful applications.</p>
+</div>
+<div id="p2" class="ltx_para">
+<p class="ltx_p">While variations abound, fundamentally a regular expression consists of the following pieces:</p>
+<ul id="I1" class="ltx_itemize">
+<li id="I1.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_itemize">•</span> 
+<div id="I1.i1.p1" class="ltx_para">
+<p class="ltx_p">Parentheses can be used for grouping and nesting, and must contain a fully-formed regular expression.</p>
+</div>
+</li>
+<li id="I1.i2" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_itemize">•</span> 
+<div id="I1.i2.p1" class="ltx_para">
+<p class="ltx_p">The <code class="ltx_verbatim ltx_font_typewriter">|</code> symbol can be used for denoting alternatives. Some specifications do not provide nesting or alternatives.
+</p>
+</div>
+</li>
+<li id="I1.i3" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_itemize">•</span> 
+<div id="I1.i3.p1" class="ltx_para">
+<p class="ltx_p">There are also a number of postfix operators. The <code class="ltx_verbatim ltx_font_typewriter">?</code> operator means that the preceding element can either be present or non-present, and corresponds to a rule of the form <math id="I1.i3.p1.m1" class="ltx_Math" alttext="A\to B\,|\,\lambda" display="inline"><mrow><mi>A</mi><mo>→</mo><mpadded width="+1.7pt"><mi>B</mi></mpadded><mo rspace="4.2pt" stretchy="false">|</mo><mi>λ</mi></mrow></math>.</p>
+</div>
+</li>
+<li id="I1.i4" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_itemize">•</span> 
+<div id="I1.i4.p1" class="ltx_para">
+<p class="ltx_p">The <code class="ltx_verbatim ltx_font_typewriter">*</code> operator means that the preceding element can be present zero or more times, and corresponds to a rule of the form <math id="I1.i4.p1.m1" class="ltx_Math" alttext="A\to BA\,|\,\lambda" display="inline"><mrow><mi>A</mi><mo>→</mo><mi>B</mi><mpadded width="+1.7pt"><mi>A</mi></mpadded><mo rspace="4.2pt" stretchy="false">|</mo><mi>λ</mi></mrow></math>.</p>
+</div>
+</li>
+<li id="I1.i5" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_itemize">•</span> 
+<div id="I1.i5.p1" class="ltx_para">
+<p class="ltx_p">The <code class="ltx_verbatim ltx_font_typewriter">+</code> operator means that the preceding element can be present one or more times, and corresponds to a rule of the form <math id="I1.i5.p1.m1" class="ltx_Math" alttext="A\to BA\,|\,B" display="inline"><mrow><mi>A</mi><mo>→</mo><mi>B</mi><mpadded width="+1.7pt"><mi>A</mi></mpadded><mo rspace="4.2pt" stretchy="false">|</mo><mi>B</mi></mrow></math>.</p>
+</div>
+</li>
+</ul>
+<p class="ltx_p">Note that while these rules are not immediately in regular form, they can be transformed so that they are.</p>
+</div>
+<div id="p3" class="ltx_para">
+<p class="ltx_p">Formally, let <math id="p3.m1" class="ltx_Math" alttext="S=\{\varnothing,\cup,^{*},(,)\}" display="inline"><mrow><mi>S</mi><mo>=</mo><mrow><mo stretchy="false">{</mo><mi mathvariant="normal">∅</mi><mo>,</mo><mo>∪</mo><msup><mo>,</mo><mo>*</mo></msup><mo>,</mo><mrow><mo stretchy="false">(</mo><mo>,</mo><mo stretchy="false">)</mo></mrow><mo stretchy="false">}</mo></mrow></mrow></math> and <math id="p3.m2" class="ltx_Math" alttext="\Sigma" display="inline"><mi mathvariant="normal">Σ</mi></math> an alphabet disjoint from <math id="p3.m3" class="ltx_Math" alttext="S" display="inline"><mi>S</mi></math>. Consider the language <math id="p3.m4" class="ltx_Math" alttext="L(\Sigma)" display="inline"><mrow><mi>L</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi mathvariant="normal">Σ</mi><mo stretchy="false">)</mo></mrow></mrow></math> over <math id="p3.m5" class="ltx_Math" alttext="\Sigma\cup S" display="inline"><mrow><mi mathvariant="normal">Σ</mi><mo>∪</mo><mi>S</mi></mrow></math> specified below</p>
+<ol id="I2" class="ltx_enumerate">
+<li id="I2.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_enumerate">1.</span> 
+<div id="I2.i1.p1" class="ltx_para">
+<p class="ltx_p"><math id="I2.i1.p1.m1" class="ltx_Math" alttext="\varnothing\in L(\Sigma)" display="inline"><mrow><mi mathvariant="normal">∅</mi><mo>∈</mo><mrow><mi>L</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi mathvariant="normal">Σ</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></math>,</p>
+</div>
+</li>
+<li id="I2.i2" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_enumerate">2.</span> 
+<div id="I2.i2.p1" class="ltx_para">
+<p class="ltx_p"><math id="I2.i2.p1.m1" class="ltx_Math" alttext="a\in L(\Sigma)" display="inline"><mrow><mi>a</mi><mo>∈</mo><mrow><mi>L</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi mathvariant="normal">Σ</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></math> for each <math id="I2.i2.p1.m2" class="ltx_Math" alttext="a\in\Sigma" display="inline"><mrow><mi>a</mi><mo>∈</mo><mi mathvariant="normal">Σ</mi></mrow></math>,</p>
+</div>
+</li>
+<li id="I2.i3" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_enumerate">3.</span> 
+<div id="I2.i3.p1" class="ltx_para">
+<p class="ltx_p">if <math id="I2.i3.p1.m1" class="ltx_Math" alttext="u\in L(\Sigma)" display="inline"><mrow><mi>u</mi><mo>∈</mo><mrow><mi>L</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi mathvariant="normal">Σ</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></math>, then <math id="I2.i3.p1.m2" class="ltx_Math" alttext="u^{*}\in L(\Sigma)" display="inline"><mrow><msup><mi>u</mi><mo>*</mo></msup><mo>∈</mo><mrow><mi>L</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi mathvariant="normal">Σ</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></math>,</p>
+</div>
+</li>
+<li id="I2.i4" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_enumerate">4.</span> 
+<div id="I2.i4.p1" class="ltx_para">
+<p class="ltx_p">if <math id="I2.i4.p1.m1" class="ltx_Math" alttext="u_{1},u_{2}\in L(\Sigma)" display="inline"><mrow><mrow><msub><mi>u</mi><mn>1</mn></msub><mo>,</mo><msub><mi>u</mi><mn>2</mn></msub></mrow><mo>∈</mo><mrow><mi>L</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi mathvariant="normal">Σ</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></math>, then <math id="I2.i4.p1.m2" class="ltx_Math" alttext="(u_{1}\cup u_{2})" display="inline"><mrow><mo stretchy="false">(</mo><mrow><msub><mi>u</mi><mn>1</mn></msub><mo>∪</mo><msub><mi>u</mi><mn>2</mn></msub></mrow><mo stretchy="false">)</mo></mrow></math> and <math id="I2.i4.p1.m3" class="ltx_Math" alttext="(u_{1}u_{2})" display="inline"><mrow><mo stretchy="false">(</mo><mrow><msub><mi>u</mi><mn>1</mn></msub><mo>⁢</mo><msub><mi>u</mi><mn>2</mn></msub></mrow><mo stretchy="false">)</mo></mrow></math> are both in <math id="I2.i4.p1.m4" class="ltx_Math" alttext="L(\Sigma)" display="inline"><mrow><mi>L</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi mathvariant="normal">Σ</mi><mo stretchy="false">)</mo></mrow></mrow></math>, and</p>
+</div>
+</li>
+<li id="I2.i5" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_enumerate">5.</span> 
+<div id="I2.i5.p1" class="ltx_para">
+<p class="ltx_p">among all languages over <math id="I2.i5.p1.m1" class="ltx_Math" alttext="\Sigma\cup S" display="inline"><mrow><mi mathvariant="normal">Σ</mi><mo>∪</mo><mi>S</mi></mrow></math> satisfying conditions 1-4, <math id="I2.i5.p1.m2" class="ltx_Math" alttext="L(\Sigma)" display="inline"><mrow><mi>L</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi mathvariant="normal">Σ</mi><mo stretchy="false">)</mo></mrow></mrow></math> is the smallest.</p>
+</div>
+</li>
+</ol>
+<p class="ltx_p">Then any element <math id="p3.m6" class="ltx_Math" alttext="u\in L(\Sigma)" display="inline"><mrow><mi>u</mi><mo>∈</mo><mrow><mi>L</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi mathvariant="normal">Σ</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></math> is called a <em class="ltx_emph ltx_font_italic">regular expression</em> over <math id="p3.m7" class="ltx_Math" alttext="\Sigma" display="inline"><mi mathvariant="normal">Σ</mi></math>.</p>
+</div>
+<div id="p4" class="ltx_para">
+<p class="ltx_p">Here is an example of a regular expression that specifies a grammar that generates the binary representation of all multiples of 3 (and only multiples of 3).</p>
+</div>
+<div id="p5" class="ltx_para">
+<table id="S0.Ex1" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex1.m1" class="ltx_Math" alttext="(0^{*}(1(01^{*}0)^{*}1)^{*})^{*}0^{*}" display="block"><mrow><msup><mrow><mo stretchy="false">(</mo><mrow><msup><mn>0</mn><mo>*</mo></msup><mo>⁢</mo><msup><mrow><mo stretchy="false">(</mo><mrow><mn>1</mn><mo>⁢</mo><msup><mrow><mo stretchy="false">(</mo><mrow><msup><mn>01</mn><mo>*</mo></msup><mo>⁢</mo><mn>0</mn></mrow><mo stretchy="false">)</mo></mrow><mo>*</mo></msup><mo>⁢</mo><mn>1</mn></mrow><mo stretchy="false">)</mo></mrow><mo>*</mo></msup></mrow><mo stretchy="false">)</mo></mrow><mo>*</mo></msup><mo>⁢</mo><msup><mn>0</mn><mo>*</mo></msup></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+</div>
+<div id="p6" class="ltx_para">
+<p class="ltx_p">This specifies the context-free grammar (in BNF):</p>
+</div>
+<div id="p7" class="ltx_para ltx_centering">
+<table id="S0.EGx1" class="ltx_equationgroup ltx_eqn_eqnarray ltx_eqn_table">
+
+<tr id="S0.Ex2" class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="S0.Ex2.m1" class="ltx_Math" alttext="\displaystyle S" display="inline"><mi>S</mi></math></td>
+<td class="ltx_td ltx_align_center ltx_eqn_cell"><math id="S0.Ex2.m2" class="ltx_Math" alttext="\displaystyle\verb.::=." display="inline"><mtext>::=</mtext></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S0.Ex2.m3" class="ltx_Math" alttext="\displaystyle AB" display="inline"><mrow><mi>A</mi><mo>⁢</mo><mi>B</mi></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr id="S0.Ex3" class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="S0.Ex3.m1" class="ltx_Math" alttext="\displaystyle A" display="inline"><mi>A</mi></math></td>
+<td class="ltx_td ltx_align_center ltx_eqn_cell"><math id="S0.Ex3.m2" class="ltx_Math" alttext="\displaystyle\verb.::=." display="inline"><mtext>::=</mtext></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S0.Ex3.m3" class="ltx_Math" alttext="\displaystyle CD" display="inline"><mrow><mi>C</mi><mo>⁢</mo><mi>D</mi></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr id="S0.Ex4" class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="S0.Ex4.m1" class="ltx_Math" alttext="\displaystyle B" display="inline"><mi>B</mi></math></td>
+<td class="ltx_td ltx_align_center ltx_eqn_cell"><math id="S0.Ex4.m2" class="ltx_Math" alttext="\displaystyle\verb.::=." display="inline"><mtext>::=</mtext></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S0.Ex4.m3" class="ltx_Math" alttext="\displaystyle\verb=0=B|\lambda" display="inline"><mrow><mtext>0</mtext><mi>B</mi><mo stretchy="false">|</mo><mi>λ</mi></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr id="S0.Ex5" class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="S0.Ex5.m1" class="ltx_Math" alttext="\displaystyle C" display="inline"><mi>C</mi></math></td>
+<td class="ltx_td ltx_align_center ltx_eqn_cell"><math id="S0.Ex5.m2" class="ltx_Math" alttext="\displaystyle\verb.::=." display="inline"><mtext>::=</mtext></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S0.Ex5.m3" class="ltx_Math" alttext="\displaystyle\verb=0=C|\lambda" display="inline"><mrow><mtext>0</mtext><mi>C</mi><mo stretchy="false">|</mo><mi>λ</mi></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr id="S0.Ex6" class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="S0.Ex6.m1" class="ltx_Math" alttext="\displaystyle D" display="inline"><mi>D</mi></math></td>
+<td class="ltx_td ltx_align_center ltx_eqn_cell"><math id="S0.Ex6.m2" class="ltx_Math" alttext="\displaystyle\verb.::=." display="inline"><mtext>::=</mtext></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S0.Ex6.m3" class="ltx_Math" alttext="\displaystyle\verb=1=E\verb=1=" display="inline"><mrow><mtext>1</mtext><mo>⁢</mo><mi>E</mi><mo>⁢</mo><mn>𝟷</mn></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr id="S0.Ex7" class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="S0.Ex7.m1" class="ltx_Math" alttext="\displaystyle E" display="inline"><mi>E</mi></math></td>
+<td class="ltx_td ltx_align_center ltx_eqn_cell"><math id="S0.Ex7.m2" class="ltx_Math" alttext="\displaystyle\verb.::=." display="inline"><mtext>::=</mtext></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S0.Ex7.m3" class="ltx_Math" alttext="\displaystyle FE|\lambda" display="inline"><mrow><mi>F</mi><mi>E</mi><mo stretchy="false">|</mo><mi>λ</mi></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr id="S0.Ex8" class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="S0.Ex8.m1" class="ltx_Math" alttext="\displaystyle F" display="inline"><mi>F</mi></math></td>
+<td class="ltx_td ltx_align_center ltx_eqn_cell"><math id="S0.Ex8.m2" class="ltx_Math" alttext="\displaystyle\verb.::=." display="inline"><mtext>::=</mtext></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S0.Ex8.m3" class="ltx_Math" alttext="\displaystyle\verb=0=G\verb=0=" display="inline"><mrow><mtext>0</mtext><mo>⁢</mo><mi>G</mi><mo>⁢</mo><mn>𝟶</mn></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr id="S0.Ex9" class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="S0.Ex9.m1" class="ltx_Math" alttext="\displaystyle G" display="inline"><mi>G</mi></math></td>
+<td class="ltx_td ltx_align_center ltx_eqn_cell"><math id="S0.Ex9.m2" class="ltx_Math" alttext="\displaystyle\verb.::=." display="inline"><mtext>::=</mtext></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S0.Ex9.m3" class="ltx_Math" alttext="\displaystyle\verb=1=G|\lambda" display="inline"><mrow><mtext>1</mtext><mi>G</mi><mo stretchy="false">|</mo><mi>λ</mi></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+</div>
+<div id="p8" class="ltx_para">
+<p class="ltx_p">A little further work is required to transform this grammar into an acceptable form for regular grammars, but it can be shown that this grammar (and any grammar specified by a regular expression) is equivalent to some regular grammar.</p>
+</div>
+<div id="p9" class="ltx_para">
+<p class="ltx_p">One can understand the language described by a regular expression in another way, by viewing the regular expression operators as shorthand for various set-theoretic operations. Formally, the <em class="ltx_emph ltx_font_italic">language <math id="p9.m1" class="ltx_Math" alttext="L(u)" display="inline"><mrow><mi>L</mi><mo mathvariant="italic">⁢</mo><mrow><mo mathvariant="normal" stretchy="false">(</mo><mi>u</mi><mo mathvariant="normal" stretchy="false">)</mo></mrow></mrow></math> over <math id="p9.m2" class="ltx_Math" alttext="\Sigma" display="inline"><mi mathvariant="normal">Σ</mi></math> associated with a regular expression</em> <math id="p9.m3" class="ltx_Math" alttext="u" display="inline"><mi>u</mi></math> over <math id="p9.m4" class="ltx_Math" alttext="\Sigma" display="inline"><mi mathvariant="normal">Σ</mi></math> is inductively defined as follows:</p>
+<ul id="I3" class="ltx_itemize">
+<li id="I3.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_itemize">•</span> 
+<div id="I3.i1.p1" class="ltx_para">
+<p class="ltx_p"><math id="I3.i1.p1.m1" class="ltx_Math" alttext="L(\varnothing)=\varnothing" display="inline"><mrow><mrow><mi>L</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi mathvariant="normal">∅</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mi mathvariant="normal">∅</mi></mrow></math>,</p>
+</div>
+</li>
+<li id="I3.i2" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_itemize">•</span> 
+<div id="I3.i2.p1" class="ltx_para">
+<p class="ltx_p"><math id="I3.i2.p1.m1" class="ltx_Math" alttext="L(a)=\{a\}" display="inline"><mrow><mrow><mi>L</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>a</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mo stretchy="false">{</mo><mi>a</mi><mo stretchy="false">}</mo></mrow></mrow></math> whenever <math id="I3.i2.p1.m2" class="ltx_Math" alttext="a\in\Sigma" display="inline"><mrow><mi>a</mi><mo>∈</mo><mi mathvariant="normal">Σ</mi></mrow></math>,</p>
+</div>
+</li>
+<li id="I3.i3" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_itemize">•</span> 
+<div id="I3.i3.p1" class="ltx_para">
+<p class="ltx_p"><math id="I3.i3.p1.m1" class="ltx_Math" alttext="L(u^{*})=L(u)^{*}" display="inline"><mrow><mrow><mi>L</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msup><mi>u</mi><mo>*</mo></msup><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mi>L</mi><mo>⁢</mo><msup><mrow><mo stretchy="false">(</mo><mi>u</mi><mo stretchy="false">)</mo></mrow><mo>*</mo></msup></mrow></mrow></math>, where the <math id="I3.i3.p1.m2" class="ltx_Math" alttext="{}^{*}" display="inline"><msup><mi></mi><mo>*</mo></msup></math> on the right side is the Kleene star operation on sets,</p>
+</div>
+</li>
+<li id="I3.i4" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_itemize">•</span> 
+<div id="I3.i4.p1" class="ltx_para">
+<p class="ltx_p"><math id="I3.i4.p1.m1" class="ltx_Math" alttext="L((u_{1}u_{2}))=L(u_{1})L(u_{2})" display="inline"><mrow><mrow><mi>L</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mo stretchy="false">(</mo><mrow><msub><mi>u</mi><mn>1</mn></msub><mo>⁢</mo><msub><mi>u</mi><mn>2</mn></msub></mrow><mo stretchy="false">)</mo></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mi>L</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msub><mi>u</mi><mn>1</mn></msub><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mi>L</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msub><mi>u</mi><mn>2</mn></msub><mo stretchy="false">)</mo></mrow></mrow></mrow></math>, where the right side denotes the concatenation of two sets, and</p>
+</div>
+</li>
+<li id="I3.i5" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_itemize">•</span> 
+<div id="I3.i5.p1" class="ltx_para">
+<p class="ltx_p"><math id="I3.i5.p1.m1" class="ltx_Math" alttext="L((u_{1}\cup u_{2}))=L(u_{1})\cup L(u_{2})" display="inline"><mrow><mrow><mi>L</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mo stretchy="false">(</mo><mrow><msub><mi>u</mi><mn>1</mn></msub><mo>∪</mo><msub><mi>u</mi><mn>2</mn></msub></mrow><mo stretchy="false">)</mo></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mrow><mi>L</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msub><mi>u</mi><mn>1</mn></msub><mo stretchy="false">)</mo></mrow></mrow><mo>∪</mo><mrow><mi>L</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msub><mi>u</mi><mn>2</mn></msub><mo stretchy="false">)</mo></mrow></mrow></mrow></mrow></math>, where <math id="I3.i5.p1.m2" class="ltx_Math" alttext="\cup" display="inline"><mo>∪</mo></math> on the right side is the union operation on sets.</p>
+</div>
+</li>
+</ul>
+</div>
+<div id="p10" class="ltx_para">
+<p class="ltx_p">A language <math id="p10.m1" class="ltx_Math" alttext="L" display="inline"><mi>L</mi></math> over <math id="p10.m2" class="ltx_Math" alttext="\Sigma" display="inline"><mi mathvariant="normal">Σ</mi></math> is regular iff there is a regular expression <math id="p10.m3" class="ltx_Math" alttext="u" display="inline"><mi>u</mi></math> over <math id="p10.m4" class="ltx_Math" alttext="\Sigma" display="inline"><mi mathvariant="normal">Σ</mi></math> such that <math id="p10.m5" class="ltx_Math" alttext="L=L(u)" display="inline"><mrow><mi>L</mi><mo>=</mo><mrow><mi>L</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>u</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></math>.</p>
+</div>
+<div id="p11" class="ltx_para">
+<p class="ltx_p">With this interpretation, it is quite straightforward to design a non-deterministic finite automaton that recognizes the language described by a regular expression. Of course, for computer implementations, one must transform this into a deterministic finite automaton, but there are various algorithms for doing this efficiently. This process, production of a non-deterministic automaton and conversion to an equivalent deterministic automaton is approximately what is done in software packages implementing regular expression searching. In fact, most such packages implement operations impossible for a finite automaton, such as requiring a later part of the string to be the same as a previous part (the language <math id="p11.m1" class="ltx_Math" alttext="\{A^{n}BA^{n}\text{ for }n\geq 0\}" display="inline"><mrow><mo stretchy="false">{</mo><mrow><mrow><msup><mi>A</mi><mi>n</mi></msup><mo>⁢</mo><mi>B</mi><mo>⁢</mo><msup><mi>A</mi><mi>n</mi></msup><mo>⁢</mo><mtext> for </mtext><mo>⁢</mo><mi>n</mi></mrow><mo>≥</mo><mn>0</mn></mrow><mo stretchy="false">}</mo></mrow></math> is not regular but can be matched by most “regular expression” software; such capabilities are called “extended regular expressions”. None of these systems are powerful enough to recognize the language of balanced parentheses.</p>
+</div>
+<div id="p12" class="ltx_para">
+<p class="ltx_p">Regular expressions have many applications. Quite often they are used for powerful string matching and substitution features in many text editors and programming languages.
+</p>
+<table class="ltx_tabular ltx_align_right ltx_guessed_headers ltx_align_middle">
+<tbody class="ltx_tbody">
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l ltx_border_t">Title</th>
+<td class="ltx_td ltx_align_left ltx_border_r ltx_border_t">regular expression</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Canonical name</th>
+<td class="ltx_td ltx_align_left ltx_border_r">RegularExpression</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Date of creation</th>
+<td class="ltx_td ltx_align_left ltx_border_r">2013-03-22 12:26:56</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Last modified on</th>
+<td class="ltx_td ltx_align_left ltx_border_r">2013-03-22 12:26:56</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Owner</th>
+<td class="ltx_td ltx_align_left ltx_border_r">CWoo (3771)</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Last modified by</th>
+<td class="ltx_td ltx_align_left ltx_border_r">CWoo (3771)</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Numerical id</th>
+<td class="ltx_td ltx_align_left ltx_border_r">17</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Author</th>
+<td class="ltx_td ltx_align_left ltx_border_r">CWoo (3771)</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Entry type</th>
+<td class="ltx_td ltx_align_left ltx_border_r">Definition</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Classification</th>
+<td class="ltx_td ltx_align_left ltx_border_r">msc 20M35</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Classification</th>
+<td class="ltx_td ltx_align_left ltx_border_r">msc 68Q70</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Related topic</th>
+<td class="ltx_td ltx_align_left ltx_border_r">RegularLanguage</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Related topic</th>
+<td class="ltx_td ltx_align_left ltx_border_r">KleeneStar</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_b ltx_border_l">Related topic</th>
+<td class="ltx_td ltx_align_left ltx_border_b ltx_border_r">KleeneAlgebra</td>
+</tr>
+</tbody>
+</table>
+</div>
+</article>
+</div>
+<footer class="ltx_page_footer">
+<div class="ltx_page_logo">Generated  on Fri Feb  9 19:35:49 2018 by <a href="http://dlmf.nist.gov/LaTeXML/">LaTeXML <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAsAAAAOCAYAAAD5YeaVAAAAAXNSR0IArs4c6QAAAAZiS0dEAP8A/wD/oL2nkwAAAAlwSFlzAAALEwAACxMBAJqcGAAAAAd0SU1FB9wKExQZLWTEaOUAAAAddEVYdENvbW1lbnQAQ3JlYXRlZCB3aXRoIFRoZSBHSU1Q72QlbgAAAdpJREFUKM9tkL+L2nAARz9fPZNCKFapUn8kyI0e4iRHSR1Kb8ng0lJw6FYHFwv2LwhOpcWxTjeUunYqOmqd6hEoRDhtDWdA8ApRYsSUCDHNt5ul13vz4w0vWCgUnnEc975arX6ORqN3VqtVZbfbTQC4uEHANM3jSqXymFI6yWazP2KxWAXAL9zCUa1Wy2tXVxheKA9YNoR8Pt+aTqe4FVVVvz05O6MBhqUIBGk8Hn8HAOVy+T+XLJfLS4ZhTiRJgqIoVBRFIoric47jPnmeB1mW/9rr9ZpSSn3Lsmir1fJZlqWlUonKsvwWwD8ymc/nXwVBeLjf7xEKhdBut9Hr9WgmkyGEkJwsy5eHG5vN5g0AKIoCAEgkEkin0wQAfN9/cXPdheu6P33fBwB4ngcAcByHJpPJl+fn54mD3Gg0NrquXxeLRQAAwzAYj8cwTZPwPH9/sVg8PXweDAauqqr2cDjEer1GJBLBZDJBs9mE4zjwfZ85lAGg2+06hmGgXq+j3+/DsixYlgVN03a9Xu8jgCNCyIegIAgx13Vfd7vdu+FweG8YRkjXdWy329+dTgeSJD3ieZ7RNO0VAXAPwDEAO5VKndi2fWrb9jWl9Esul6PZbDY9Go1OZ7PZ9z/lyuD3OozU2wAAAABJRU5ErkJggg==" alt="[LOGO]"></a>
+</div></footer>
+</div>
+</body>
+</html>

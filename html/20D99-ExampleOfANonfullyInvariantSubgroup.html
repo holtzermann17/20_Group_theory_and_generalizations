@@ -1,0 +1,119 @@
+<!DOCTYPE html><html>
+<head>
+<title>example of a non-fully invariant subgroup</title>
+<!--Generated on Fri Feb  9 19:24:52 2018 by LaTeXML (version 0.8.2) http://dlmf.nist.gov/LaTeXML/.-->
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" href="LaTeXML.css" type="text/css">
+<link rel="stylesheet" href="ltx-article.css" type="text/css">
+<link rel="stylesheet" href="https://cdn.rawgit.com/holtzermann17/3f71ceeb3b055e1ddc3b6c11fb1f074c/raw/2bb23e3b173ff96840797fc0c3bcb8c54085df8e/LaTeXML.css" type="text/css">
+<link rel="stylesheet" href="https://cdn.rawgit.com/holtzermann17/4bda0365b30858ac2fb83623185fe3ec/raw/cedd84ed3e3ad597c5d293f443ecfe4803741c6b/ltx-article.css" type="text/css">
+<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=MML_HTMLorMML" type="text/javascript"></script>
+</head>
+<body>
+<div class="ltx_page_main">
+<div class="ltx_page_content">
+<article class="ltx_document ltx_authors_1line">
+<h1 class="ltx_title ltx_title_document">example of a non-fully invariant subgroup</h1>
+
+<div id="p1" class="ltx_para">
+<br class="ltx_break">
+<p class="ltx_p">Every fully invariant subgroup is characteristic, but some characteristic subgroups need not be fully invariant. For example, the center of a group is characteristic but not always fully invariant. We pursue a single example.
+</p>
+</div>
+<div id="p2" class="ltx_para">
+<p class="ltx_p">Recall the dihedral group of order <math id="p2.m1" class="ltx_Math" alttext="2n" display="inline"><mrow><mn>2</mn><mo>⁢</mo><mi>n</mi></mrow></math>, denoted <math id="p2.m2" class="ltx_Math" alttext="D_{2n}" display="inline"><msub><mi>D</mi><mrow><mn>2</mn><mo>⁢</mo><mi>n</mi></mrow></msub></math>, can be considered as the symmetries of a regular <math id="p2.m3" class="ltx_Math" alttext="n" display="inline"><mi>n</mi></math>-gon. If we consider a regular hexagon, so <math id="p2.m4" class="ltx_Math" alttext="n=6" display="inline"><mrow><mi>n</mi><mo>=</mo><mn>6</mn></mrow></math>, and label the vertices counterclockwise from 1 to 6 we can then encode each symmetry as a permutation on 6 points. So a rotation by <math id="p2.m5" class="ltx_Math" alttext="\pi/3" display="inline"><mrow><mi>π</mi><mo>/</mo><mn>3</mn></mrow></math> can be encoded as the permutation <math id="p2.m6" class="ltx_Math" alttext="\rho=(123456)" display="inline"><mrow><mi>ρ</mi><mo>=</mo><mrow><mo stretchy="false">(</mo><mn>123456</mn><mo stretchy="false">)</mo></mrow></mrow></math> and the reflection fixing the axis through the vertices 1 and 4 can be encoded as <math id="p2.m7" class="ltx_Math" alttext="\phi=(26)(35)" display="inline"><mrow><mi>ϕ</mi><mo>=</mo><mrow><mrow><mo stretchy="false">(</mo><mn>26</mn><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mn>35</mn><mo stretchy="false">)</mo></mrow></mrow></mrow></math>. Indeed these two permutations generate a permutation group isomorphic to <math id="p2.m8" class="ltx_Math" alttext="D_{12}" display="inline"><msub><mi>D</mi><mn>12</mn></msub></math>.</p>
+</div>
+<div id="p3" class="ltx_para">
+<p class="ltx_p">The center of a dihedral group of order <math id="p3.m1" class="ltx_Math" alttext="2n" display="inline"><mrow><mn>2</mn><mo>⁢</mo><mi>n</mi></mrow></math> is trivial if <math id="p3.m2" class="ltx_Math" alttext="n" display="inline"><mi>n</mi></math> is odd, and of order 2 if <math id="p3.m3" class="ltx_Math" alttext="n&gt;2" display="inline"><mrow><mi>n</mi><mo>&gt;</mo><mn>2</mn></mrow></math> is even (if <math id="p3.m4" class="ltx_Math" alttext="n=2" display="inline"><mrow><mi>n</mi><mo>=</mo><mn>2</mn></mrow></math> it is the entire group <math id="p3.m5" class="ltx_Math" alttext="D_{4}\cong\mathbb{Z}_{2}\oplus\mathbb{Z}_{2}" display="inline"><mrow><msub><mi>D</mi><mn>4</mn></msub><mo>≅</mo><mrow><msub><mi>ℤ</mi><mn>2</mn></msub><mo>⊕</mo><msub><mi>ℤ</mi><mn>2</mn></msub></mrow></mrow></math>, see the remark below). Specifically, if <math id="p3.m6" class="ltx_Math" alttext="\rho" display="inline"><mi>ρ</mi></math> is a rotation of order <math id="p3.m7" class="ltx_Math" alttext="n" display="inline"><mi>n</mi></math>, and <math id="p3.m8" class="ltx_Math" alttext="n=2m" display="inline"><mrow><mi>n</mi><mo>=</mo><mrow><mn>2</mn><mo>⁢</mo><mi>m</mi></mrow></mrow></math>, then <math id="p3.m9" class="ltx_Math" alttext="\langle\rho^{m}\rangle" display="inline"><mrow><mo stretchy="false">⟨</mo><msup><mi>ρ</mi><mi>m</mi></msup><mo stretchy="false">⟩</mo></mrow></math> is the center of <math id="p3.m10" class="ltx_Math" alttext="D_{2n}" display="inline"><msub><mi>D</mi><mrow><mn>2</mn><mo>⁢</mo><mi>n</mi></mrow></msub></math>. (Note this is the only rotation or order 2, and in particular it is always a rotation by <math id="p3.m11" class="ltx_Math" alttext="\pi" display="inline"><mi>π</mi></math>.)
+So when <math id="p3.m12" class="ltx_Math" alttext="n=6" display="inline"><mrow><mi>n</mi><mo>=</mo><mn>6</mn></mrow></math>, the center is <math id="p3.m13" class="ltx_Math" alttext="\langle(14)(25)(36)\rangle" display="inline"><mrow><mo stretchy="false">⟨</mo><mrow><mrow><mo stretchy="false">(</mo><mn>14</mn><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mn>25</mn><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mn>36</mn><mo stretchy="false">)</mo></mrow></mrow><mo stretchy="false">⟩</mo></mrow></math>.</p>
+</div>
+<div id="p4" class="ltx_para">
+<p class="ltx_p">Now fix <math id="p4.m1" class="ltx_Math" alttext="n=6" display="inline"><mrow><mi>n</mi><mo>=</mo><mn>6</mn></mrow></math> and note the following assignment of generators determines an endomorphism <math id="p4.m2" class="ltx_Math" alttext="f:D_{12}\rightarrow D_{12}" display="inline"><mrow><mi>f</mi><mo>:</mo><mrow><msub><mi>D</mi><mn>12</mn></msub><mo>→</mo><msub><mi>D</mi><mn>12</mn></msub></mrow></mrow></math>:</p>
+<table id="S0.Ex1" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex1.m1" class="ltx_Math" alttext="(123456)\mapsto(26)(35),\quad(26)(35)\mapsto(14)(25)(36)." display="block"><mrow><mrow><mrow><mrow><mo stretchy="false">(</mo><mn>123456</mn><mo stretchy="false">)</mo></mrow><mo>↦</mo><mrow><mrow><mo stretchy="false">(</mo><mn>26</mn><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mn>35</mn><mo stretchy="false">)</mo></mrow></mrow></mrow><mo rspace="12.5pt">,</mo><mrow><mrow><mrow><mo stretchy="false">(</mo><mn>26</mn><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mn>35</mn><mo stretchy="false">)</mo></mrow></mrow><mo>↦</mo><mrow><mrow><mo stretchy="false">(</mo><mn>14</mn><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mn>25</mn><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mn>36</mn><mo stretchy="false">)</mo></mrow></mrow></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">Note that image <math id="p4.m3" class="ltx_Math" alttext="K:=\langle(26)(35),(14)(25)(36)\rangle\cong\mathbb{Z}_{2}\oplus\mathbb{Z}_{2}" display="inline"><mrow><mi>K</mi><mo>:=</mo><mrow><mo stretchy="false">⟨</mo><mrow><mrow><mo stretchy="false">(</mo><mn>26</mn><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mn>35</mn><mo stretchy="false">)</mo></mrow></mrow><mo>,</mo><mrow><mrow><mo stretchy="false">(</mo><mn>14</mn><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mn>25</mn><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mn>36</mn><mo stretchy="false">)</mo></mrow></mrow><mo stretchy="false">⟩</mo></mrow><mo>≅</mo><mrow><msub><mi>ℤ</mi><mn>2</mn></msub><mo>⊕</mo><msub><mi>ℤ</mi><mn>2</mn></msub></mrow></mrow></math>, as <math id="p4.m4" class="ltx_Math" alttext="(14)(25)(36)" display="inline"><mrow><mrow><mo stretchy="false">(</mo><mn>14</mn><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mn>25</mn><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mn>36</mn><mo stretchy="false">)</mo></mrow></mrow></math> is central in <math id="p4.m5" class="ltx_Math" alttext="D_{12}" display="inline"><msub><mi>D</mi><mn>12</mn></msub></math> and the generators of
+<math id="p4.m6" class="ltx_Math" alttext="K" display="inline"><mi>K</mi></math> are distinct elements of order <math id="p4.m7" class="ltx_Math" alttext="2" display="inline"><mn>2</mn></math>. [This can be proved with the relations of the dihedral group.]</p>
+</div>
+<div id="Thmthm1" class="ltx_theorem ltx_theorem_remark">
+<h6 class="ltx_title ltx_runin ltx_font_bold ltx_title_theorem">
+<span class="ltx_tag ltx_tag_theorem">Remark 1</span>.</h6>
+<div id="Thmthm1.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_italic">Geometrically we note that the kernel of the homomorphism is <math id="Thmthm1.p1.m1" class="ltx_Math" alttext="\langle\rho^{2}\rangle" display="inline"><mrow><mo mathvariant="normal" stretchy="false">⟨</mo><msup><mi>ρ</mi><mn mathvariant="normal">2</mn></msup><mo mathvariant="normal" stretchy="false">⟩</mo></mrow></math> – the group of rotations of order 3. So if we quotient by the kernel we are identifying the three inscribed (non-square) rectangles of the hexagon (1245, 2356 and 3461). The symmetry group of a non-square rectangle is none other than <math id="Thmthm1.p1.m2" class="ltx_Math" alttext="\mathbb{Z}_{2}\oplus\mathbb{Z}_{2}" display="inline"><mrow><msub><mi mathvariant="normal">Z</mi><mn mathvariant="normal">2</mn></msub><mo mathvariant="normal">⊕</mo><msub><mi mathvariant="normal">Z</mi><mn mathvariant="normal">2</mn></msub></mrow></math>, sometimes called <math id="Thmthm1.p1.m3" class="ltx_Math" alttext="D_{4}" display="inline"><msub><mi>D</mi><mn mathvariant="normal">4</mn></msub></math>.</span></p>
+</div>
+</div>
+<div id="p5" class="ltx_para">
+<p class="ltx_p">Now the center is mapped via <math id="p5.m1" class="ltx_Math" alttext="f" display="inline"><mi>f</mi></math> to the subgroup <math id="p5.m2" class="ltx_Math" alttext="\langle(26)(35)\rangle" display="inline"><mrow><mo stretchy="false">⟨</mo><mrow><mrow><mo stretchy="false">(</mo><mn>26</mn><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mn>35</mn><mo stretchy="false">)</mo></mrow></mrow><mo stretchy="false">⟩</mo></mrow></math> so
+<math id="p5.m3" class="ltx_Math" alttext="f(Z(D_{12}))" display="inline"><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi>Z</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msub><mi>D</mi><mn>12</mn></msub><mo stretchy="false">)</mo></mrow></mrow><mo stretchy="false">)</mo></mrow></mrow></math> is not contained in <math id="p5.m4" class="ltx_Math" alttext="Z(D_{12})" display="inline"><mrow><mi>Z</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msub><mi>D</mi><mn>12</mn></msub><mo stretchy="false">)</mo></mrow></mrow></math> proving <math id="p5.m5" class="ltx_Math" alttext="Z(D_{12})" display="inline"><mrow><mi>Z</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msub><mi>D</mi><mn>12</mn></msub><mo stretchy="false">)</mo></mrow></mrow></math> is not fully-invariant.</p>
+</div>
+<div id="p6" class="ltx_para">
+<p class="ltx_p">Of course the example applies without serious modification to the dihedral groups on <math id="p6.m1" class="ltx_Math" alttext="2m" display="inline"><mrow><mn>2</mn><mo>⁢</mo><mi>m</mi></mrow></math>-gons, where <math id="p6.m2" class="ltx_Math" alttext="m&gt;1" display="inline"><mrow><mi>m</mi><mo>&gt;</mo><mn>1</mn></mrow></math> is odd. Here a generally offending endomorphism may be described with a composition of maps (the first leaves the center invariant, the second swaps the basis of the image of the first thus moving the image of the center):</p>
+<table id="S0.Ex2" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex2.m1" class="ltx_Math" alttext="\rho\mapsto\rho^{m}\mapsto\phi,\qquad\phi\mapsto\phi\mapsto\rho^{m}." display="block"><mrow><mrow><mrow><mi>ρ</mi><mo>↦</mo><msup><mi>ρ</mi><mi>m</mi></msup><mo>↦</mo><mi>ϕ</mi></mrow><mo rspace="22.5pt">,</mo><mrow><mi>ϕ</mi><mo>↦</mo><mi>ϕ</mi><mo>↦</mo><msup><mi>ρ</mi><mi>m</mi></msup></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">As <math id="p6.m3" class="ltx_Math" alttext="m" display="inline"><mi>m</mi></math> is odd and the center, <math id="p6.m4" class="ltx_Math" alttext="\langle\rho^{m}\rangle" display="inline"><mrow><mo stretchy="false">⟨</mo><msup><mi>ρ</mi><mi>m</mi></msup><mo stretchy="false">⟩</mo></mrow></math>, has order 2, it follows <math id="p6.m5" class="ltx_Math" alttext="\langle\rho^{m}\rangle" display="inline"><mrow><mo stretchy="false">⟨</mo><msup><mi>ρ</mi><mi>m</mi></msup><mo stretchy="false">⟩</mo></mrow></math> maps to <math id="p6.m6" class="ltx_Math" alttext="\langle\rho^{m}\rangle" display="inline"><mrow><mo stretchy="false">⟨</mo><msup><mi>ρ</mi><mi>m</mi></msup><mo stretchy="false">⟩</mo></mrow></math> under the first map, and then can be interchanged with a reflection to violate the condition of full invariance. If <math id="p6.m7" class="ltx_Math" alttext="m" display="inline"><mi>m</mi></math> is even then the center lies in the kernel of the first map so no such trick can be played.
+</p>
+<table class="ltx_tabular ltx_align_right ltx_guessed_headers ltx_align_middle">
+<tbody class="ltx_tbody">
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l ltx_border_t">Title</th>
+<td class="ltx_td ltx_align_left ltx_border_r ltx_border_t">example of a non-fully invariant subgroup</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Canonical name</th>
+<td class="ltx_td ltx_align_left ltx_border_r">ExampleOfANonfullyInvariantSubgroup</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Date of creation</th>
+<td class="ltx_td ltx_align_left ltx_border_r">2013-03-22 16:06:26</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Last modified on</th>
+<td class="ltx_td ltx_align_left ltx_border_r">2013-03-22 16:06:26</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Owner</th>
+<td class="ltx_td ltx_align_left ltx_border_r">Algeboy (12884)</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Last modified by</th>
+<td class="ltx_td ltx_align_left ltx_border_r">Algeboy (12884)</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Numerical id</th>
+<td class="ltx_td ltx_align_left ltx_border_r">7</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Author</th>
+<td class="ltx_td ltx_align_left ltx_border_r">Algeboy (12884)</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Entry type</th>
+<td class="ltx_td ltx_align_left ltx_border_r">Example</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_b ltx_border_l">Classification</th>
+<td class="ltx_td ltx_align_left ltx_border_b ltx_border_r">msc 20D99</td>
+</tr>
+</tbody>
+</table>
+</div>
+</article>
+</div>
+<footer class="ltx_page_footer">
+<div class="ltx_page_logo">Generated  on Fri Feb  9 19:24:52 2018 by <a href="http://dlmf.nist.gov/LaTeXML/">LaTeXML <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAsAAAAOCAYAAAD5YeaVAAAAAXNSR0IArs4c6QAAAAZiS0dEAP8A/wD/oL2nkwAAAAlwSFlzAAALEwAACxMBAJqcGAAAAAd0SU1FB9wKExQZLWTEaOUAAAAddEVYdENvbW1lbnQAQ3JlYXRlZCB3aXRoIFRoZSBHSU1Q72QlbgAAAdpJREFUKM9tkL+L2nAARz9fPZNCKFapUn8kyI0e4iRHSR1Kb8ng0lJw6FYHFwv2LwhOpcWxTjeUunYqOmqd6hEoRDhtDWdA8ApRYsSUCDHNt5ul13vz4w0vWCgUnnEc975arX6ORqN3VqtVZbfbTQC4uEHANM3jSqXymFI6yWazP2KxWAXAL9zCUa1Wy2tXVxheKA9YNoR8Pt+aTqe4FVVVvz05O6MBhqUIBGk8Hn8HAOVy+T+XLJfLS4ZhTiRJgqIoVBRFIoric47jPnmeB1mW/9rr9ZpSSn3Lsmir1fJZlqWlUonKsvwWwD8ymc/nXwVBeLjf7xEKhdBut9Hr9WgmkyGEkJwsy5eHG5vN5g0AKIoCAEgkEkin0wQAfN9/cXPdheu6P33fBwB4ngcAcByHJpPJl+fn54mD3Gg0NrquXxeLRQAAwzAYj8cwTZPwPH9/sVg8PXweDAauqqr2cDjEer1GJBLBZDJBs9mE4zjwfZ85lAGg2+06hmGgXq+j3+/DsixYlgVN03a9Xu8jgCNCyIegIAgx13Vfd7vdu+FweG8YRkjXdWy329+dTgeSJD3ieZ7RNO0VAXAPwDEAO5VKndi2fWrb9jWl9Esul6PZbDY9Go1OZ7PZ9z/lyuD3OozU2wAAAABJRU5ErkJggg==" alt="[LOGO]"></a>
+</div></footer>
+</div>
+</body>
+</html>

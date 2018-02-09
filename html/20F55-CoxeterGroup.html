@@ -1,0 +1,269 @@
+<!DOCTYPE html><html>
+<head>
+<title>Coxeter group</title>
+<!--Generated on Fri Feb  9 19:29:59 2018 by LaTeXML (version 0.8.2) http://dlmf.nist.gov/LaTeXML/.-->
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" href="LaTeXML.css" type="text/css">
+<link rel="stylesheet" href="ltx-article.css" type="text/css">
+<link rel="stylesheet" href="https://cdn.rawgit.com/holtzermann17/3f71ceeb3b055e1ddc3b6c11fb1f074c/raw/2bb23e3b173ff96840797fc0c3bcb8c54085df8e/LaTeXML.css" type="text/css">
+<link rel="stylesheet" href="https://cdn.rawgit.com/holtzermann17/4bda0365b30858ac2fb83623185fe3ec/raw/cedd84ed3e3ad597c5d293f443ecfe4803741c6b/ltx-article.css" type="text/css">
+<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=MML_HTMLorMML" type="text/javascript"></script>
+</head>
+<body>
+<div class="ltx_page_main">
+<div class="ltx_page_content">
+<article class="ltx_document ltx_authors_1line">
+<h1 class="ltx_title ltx_title_document">Coxeter group</h1>
+
+<div id="p1" class="ltx_para">
+<br class="ltx_break">
+<p class="ltx_p">A <em class="ltx_emph ltx_font_italic">Coxeter group</em> <math id="p1.m1" class="ltx_Math" alttext="G" display="inline"><mi>G</mi></math> is a finitely generated group, which carries a presentation of the form</p>
+<table id="S0.Ex1" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex1.m1" class="ltx_Math" alttext="W=\langle w_{1},\dots,w_{n}\mid(w_{i}w_{j})^{m_{ij}}=1\rangle" display="block"><mrow><mi>W</mi><mo>=</mo><mrow><mo stretchy="false">⟨</mo><mrow><msub><mi>w</mi><mn>1</mn></msub><mo>,</mo><mi mathvariant="normal">…</mi><mo>,</mo><msub><mi>w</mi><mi>n</mi></msub></mrow><mo>∣</mo><mrow><msup><mrow><mo stretchy="false">(</mo><mrow><msub><mi>w</mi><mi>i</mi></msub><mo>⁢</mo><msub><mi>w</mi><mi>j</mi></msub></mrow><mo stretchy="false">)</mo></mrow><msub><mi>m</mi><mrow><mi>i</mi><mo>⁢</mo><mi>j</mi></mrow></msub></msup><mo>=</mo><mn>1</mn></mrow><mo stretchy="false">⟩</mo></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">where the integers <math id="p1.m2" class="ltx_Math" alttext="m_{ij}" display="inline"><msub><mi>m</mi><mrow><mi>i</mi><mo>⁢</mo><mi>j</mi></mrow></msub></math> satisfy <math id="p1.m3" class="ltx_Math" alttext="m_{ii}=1" display="inline"><mrow><msub><mi>m</mi><mrow><mi>i</mi><mo>⁢</mo><mi>i</mi></mrow></msub><mo>=</mo><mn>1</mn></mrow></math> for <math id="p1.m4" class="ltx_Math" alttext="i=1,\dots,n" display="inline"><mrow><mi>i</mi><mo>=</mo><mrow><mn>1</mn><mo>,</mo><mi mathvariant="normal">…</mi><mo>,</mo><mi>n</mi></mrow></mrow></math> and <math id="p1.m5" class="ltx_Math" alttext="m_{ij}=m_{ji}\geq 2" display="inline"><mrow><msub><mi>m</mi><mrow><mi>i</mi><mo>⁢</mo><mi>j</mi></mrow></msub><mo>=</mo><msub><mi>m</mi><mrow><mi>j</mi><mo>⁢</mo><mi>i</mi></mrow></msub><mo>≥</mo><mn>2</mn></mrow></math> for <math id="p1.m6" class="ltx_Math" alttext="i\neq j" display="inline"><mrow><mi>i</mi><mo>≠</mo><mi>j</mi></mrow></math>. The exponents form a matrix
+<math id="p1.m7" class="ltx_Math" alttext="[m_{ij}]_{1\leq i,j\leq n}" display="inline"><msub><mrow><mo stretchy="false">[</mo><msub><mi>m</mi><mrow><mi>i</mi><mo>⁢</mo><mi>j</mi></mrow></msub><mo stretchy="false">]</mo></mrow><mrow><mrow><mn>1</mn><mo>≤</mo><mi>i</mi></mrow><mo>,</mo><mrow><mi>j</mi><mo>≤</mo><mi>n</mi></mrow></mrow></msub></math> often called the <em class="ltx_emph ltx_font_italic">Coxeter matrix</em>.
+This is a cousin of the <em class="ltx_emph ltx_font_italic">Cartan matrix</em> and both encode the information
+of the Dynkin diagrams.</p>
+</div>
+<div id="p2" class="ltx_para">
+<p class="ltx_p">A Dynkin diagram is the graph with the adjacency matrix given by
+<math id="p2.m1" class="ltx_Math" alttext="[m_{ij}-2]_{1\leq i,j\leq n}" display="inline"><msub><mrow><mo stretchy="false">[</mo><mrow><msub><mi>m</mi><mrow><mi>i</mi><mo>⁢</mo><mi>j</mi></mrow></msub><mo>-</mo><mn>2</mn></mrow><mo stretchy="false">]</mo></mrow><mrow><mrow><mn>1</mn><mo>≤</mo><mi>i</mi></mrow><mo>,</mo><mrow><mi>j</mi><mo>≤</mo><mi>n</mi></mrow></mrow></msub></math> where <math id="p2.m2" class="ltx_Math" alttext="[m_{ij}]_{1\leq i,j\leq n}" display="inline"><msub><mrow><mo stretchy="false">[</mo><msub><mi>m</mi><mrow><mi>i</mi><mo>⁢</mo><mi>j</mi></mrow></msub><mo stretchy="false">]</mo></mrow><mrow><mrow><mn>1</mn><mo>≤</mo><mi>i</mi></mrow><mo>,</mo><mrow><mi>j</mi><mo>≤</mo><mi>n</mi></mrow></mrow></msub></math> is a
+Coxeter matrix.</p>
+</div>
+<div id="p3" class="ltx_para">
+<p class="ltx_p">A finite Coxeter group is <em class="ltx_emph ltx_font_italic">irreducible</em> if it is not the direct product
+of smaller coxeter groups. These groups are classified and labeled
+labeled by the Bourbaki types</p>
+<table id="S0.Ex2" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex2.m1" class="ltx_Math" alttext="\mathsf{A}_{n},\mathsf{B}_{n},\mathsf{C}_{n},\mathsf{D}_{n},\mathsf{E}_{6},%
+\mathsf{E}_{7},\mathsf{E}_{8},\mathsf{F}_{4},\mathsf{G}_{2},\mathsf{H}_{2}^{n}%
+,\mathsf{I}_{3},\mathsf{I}_{4}." display="block"><mrow><mrow><msub><mi>𝖠</mi><mi>n</mi></msub><mo>,</mo><msub><mi>𝖡</mi><mi>n</mi></msub><mo>,</mo><msub><mi>𝖢</mi><mi>n</mi></msub><mo>,</mo><msub><mi>𝖣</mi><mi>n</mi></msub><mo>,</mo><msub><mi>𝖤</mi><mn>6</mn></msub><mo>,</mo><msub><mi>𝖤</mi><mn>7</mn></msub><mo>,</mo><msub><mi>𝖤</mi><mn>8</mn></msub><mo>,</mo><msub><mi>𝖥</mi><mn>4</mn></msub><mo>,</mo><msub><mi>𝖦</mi><mn>2</mn></msub><mo>,</mo><msubsup><mi>𝖧</mi><mn>2</mn><mi>n</mi></msubsup><mo>,</mo><msub><mi>𝖨</mi><mn>3</mn></msub><mo>,</mo><msub><mi>𝖨</mi><mn>4</mn></msub></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">The classification depends on realizing the groups as
+reflections of hyperplanes in a finite dimensional real vector space.
+Then observing a condition on an inner product to be integer valued, it
+is possible to show these families of symmetry are all that can exist.
+The Cartan matrix encodes these integer values of the inner product
+of adjacent reflections while the Coxeter matrix encodes the orders of
+adjacent products of generators.</p>
+</div>
+<div id="Thmthm1" class="ltx_theorem ltx_theorem_remark">
+<h6 class="ltx_title ltx_runin ltx_font_bold ltx_title_theorem">
+<span class="ltx_tag ltx_tag_theorem">Remark 1</span>.</h6>
+<div id="Thmthm1.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_italic">The notation <math id="Thmthm1.p1.m1" class="ltx_Math" alttext="\mathsf{A}_{n}" display="inline"><msub><mi mathvariant="normal">A</mi><mi>n</mi></msub></math> should not be confused with the natation for
+the alternating group on <math id="Thmthm1.p1.m2" class="ltx_Math" alttext="n" display="inline"><mi>n</mi></math> elements, <math id="Thmthm1.p1.m3" class="ltx_Math" alttext="A_{n}" display="inline"><msub><mi>A</mi><mi>n</mi></msub></math>. This unfortunate overlap is
+also a problem with <math id="Thmthm1.p1.m4" class="ltx_Math" alttext="\mathsf{D}_{n}" display="inline"><msub><mi mathvariant="normal">D</mi><mi>n</mi></msub></math> which is not the same as the dihedral
+group on <math id="Thmthm1.p1.m5" class="ltx_Math" alttext="n" display="inline"><mi>n</mi></math>-vertices, <math id="Thmthm1.p1.m6" class="ltx_Math" alttext="D_{n}" display="inline"><msub><mi>D</mi><mi>n</mi></msub></math>.</span></p>
+</div>
+</div>
+<div id="p4" class="ltx_para">
+<p class="ltx_p">Alternative methods to study Coxeter groups is through the use of a length
+measurement on elements in the group. As every element in <math id="p4.m1" class="ltx_Math" alttext="g" display="inline"><mi>g</mi></math> in a Coxeter
+group is the product of the involutions <math id="p4.m2" class="ltx_Math" alttext="w_{1},\dots,w_{n}" display="inline"><mrow><msub><mi>w</mi><mn>1</mn></msub><mo>,</mo><mi mathvariant="normal">…</mi><mo>,</mo><msub><mi>w</mi><mi>n</mi></msub></mrow></math>, the <em class="ltx_emph ltx_font_italic">length</em> is defined as the shortest word in these <math id="p4.m3" class="ltx_Math" alttext="w_{i}^{\prime}s" display="inline"><mrow><msubsup><mi>w</mi><mi>i</mi><mo>′</mo></msubsup><mo>⁢</mo><mi>s</mi></mrow></math> to equal <math id="p4.m4" class="ltx_Math" alttext="g" display="inline"><mi>g</mi></math>. We denote this
+<math id="p4.m5" class="ltx_Math" alttext="\l(g)" display="inline"><mrow><mi>ł</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>g</mi><mo stretchy="false">)</mo></mrow></mrow></math>. Then using careful
+analysis and the <em class="ltx_emph ltx_font_italic">exchange condition</em> it is also possible to specify many of the necessary properties of irreducible Coxeter groups.</p>
+</div>
+<div id="p5" class="ltx_para">
+<p class="ltx_p">Recall that a Weyl group <math id="p5.m1" class="ltx_Math" alttext="W" display="inline"><mi>W</mi></math> is a group generated by involutions <math id="p5.m2" class="ltx_Math" alttext="S" display="inline"><mi>S</mi></math>, that is,
+generated by elements of order 2. The <em class="ltx_emph ltx_font_italic">exchange condition</em> on a
+<math id="p5.m3" class="ltx_Math" alttext="W" display="inline"><mi>W</mi></math> with respect to <math id="p5.m4" class="ltx_Math" alttext="S" display="inline"><mi>S</mi></math> states that given a reduced word
+<math id="p5.m5" class="ltx_Math" alttext="w=w_{i_{1}}\cdots w_{i_{k}}" display="inline"><mrow><mi>w</mi><mo>=</mo><mrow><msub><mi>w</mi><msub><mi>i</mi><mn>1</mn></msub></msub><mo>⁢</mo><mi mathvariant="normal">⋯</mi><mo>⁢</mo><msub><mi>w</mi><msub><mi>i</mi><mi>k</mi></msub></msub></mrow></mrow></math> in <math id="p5.m6" class="ltx_Math" alttext="W" display="inline"><mi>W</mi></math>, <math id="p5.m7" class="ltx_Math" alttext="w_{i}\in S" display="inline"><mrow><msub><mi>w</mi><mi>i</mi></msub><mo>∈</mo><mi>S</mi></mrow></math>, such that for every <math id="p5.m8" class="ltx_Math" alttext="s\in S" display="inline"><mrow><mi>s</mi><mo>∈</mo><mi>S</mi></mrow></math>,
+<math id="p5.m9" class="ltx_Math" alttext="\l(sw)\leq\l(w)" display="inline"><mrow><mrow><mi>ł</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi>s</mi><mo>⁢</mo><mi>w</mi></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>≤</mo><mrow><mi>ł</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>w</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></math> then there exists an <math id="p5.m10" class="ltx_Math" alttext="j" display="inline"><mi>j</mi></math> such that
+</p>
+<table id="S0.Ex3" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex3.m1" class="ltx_Math" alttext="sw=w_{i_{1}}\cdots w_{i_{j-1}}w_{i_{j+1}}\cdots w_{i_{k}}." display="block"><mrow><mrow><mrow><mi>s</mi><mo>⁢</mo><mi>w</mi></mrow><mo>=</mo><mrow><msub><mi>w</mi><msub><mi>i</mi><mn>1</mn></msub></msub><mo>⁢</mo><mi mathvariant="normal">⋯</mi><mo>⁢</mo><msub><mi>w</mi><msub><mi>i</mi><mrow><mi>j</mi><mo>-</mo><mn>1</mn></mrow></msub></msub><mo>⁢</mo><msub><mi>w</mi><msub><mi>i</mi><mrow><mi>j</mi><mo>+</mo><mn>1</mn></mrow></msub></msub><mo>⁢</mo><mi mathvariant="normal">⋯</mi><mo>⁢</mo><msub><mi>w</mi><msub><mi>i</mi><mi>k</mi></msub></msub></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+</div>
+<div id="p6" class="ltx_para">
+<p class="ltx_p">The insistence that <math id="p6.m1" class="ltx_Math" alttext="w_{i}^{2}=1" display="inline"><mrow><msubsup><mi>w</mi><mi>i</mi><mn>2</mn></msubsup><mo>=</mo><mn>1</mn></mrow></math> shows that Coxeter groups are generated by
+involutions. This makes every Coxeter group a Weyl group. However,
+not every Weyl group is a Coxeter group.</p>
+</div>
+<div id="p7" class="ltx_para">
+<p class="ltx_p">The remaining condition to make a Weyl group a Coxeter group is the exchange condition. Thus every finite Weyl group with the exchange condition is a
+Coxeter group, and visa-versa.</p>
+</div>
+<div id="p8" class="ltx_para">
+<p class="ltx_p">Coxeter groups arrise as the Weyl groups of Lie algebra, Lie groups, and groups of with a BN-pair. However many other usese exist. It should be noted
+that the study of Lie theory makes use only of the <em class="ltx_emph ltx_font_italic">crystallographic</em>
+coxeter groups, which are those of type</p>
+<table id="S0.Ex4" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex4.m1" class="ltx_Math" alttext="\mathsf{A}_{n},\mathsf{B}_{n},\mathsf{C}_{n},\mathsf{D}_{n},\mathsf{E}_{6},%
+\mathsf{E}_{7},\mathsf{E}_{8},\mathsf{F}_{4},\mathsf{G}_{2}." display="block"><mrow><mrow><msub><mi>𝖠</mi><mi>n</mi></msub><mo>,</mo><msub><mi>𝖡</mi><mi>n</mi></msub><mo>,</mo><msub><mi>𝖢</mi><mi>n</mi></msub><mo>,</mo><msub><mi>𝖣</mi><mi>n</mi></msub><mo>,</mo><msub><mi>𝖤</mi><mn>6</mn></msub><mo>,</mo><msub><mi>𝖤</mi><mn>7</mn></msub><mo>,</mo><msub><mi>𝖤</mi><mn>8</mn></msub><mo>,</mo><msub><mi>𝖥</mi><mn>4</mn></msub><mo>,</mo><msub><mi>𝖦</mi><mn>2</mn></msub></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">Thus it omits <math id="p8.m1" class="ltx_Math" alttext="\mathsf{H}_{2}^{n}" display="inline"><msubsup><mi>𝖧</mi><mn>2</mn><mi>n</mi></msubsup></math>, <math id="p8.m2" class="ltx_Math" alttext="\mathsf{I}_{3}" display="inline"><msub><mi>𝖨</mi><mn>3</mn></msub></math> and <math id="p8.m3" class="ltx_Math" alttext="\mathsf{I}_{4}" display="inline"><msub><mi>𝖨</mi><mn>4</mn></msub></math></p>
+</div>
+<section id="S1" class="ltx_section">
+<h2 class="ltx_title ltx_title_section">
+<span class="ltx_tag ltx_tag_section">1 </span>Coxeter groups as reflections</h2>
+
+<div id="S1.p1" class="ltx_para">
+<p class="ltx_p">Let us see more concretely how a finite Coxeter group can be realized.</p>
+</div>
+<div id="S1.p2" class="ltx_para">
+<p class="ltx_p">Let <math id="S1.p2.m1" class="ltx_Math" alttext="V" display="inline"><mi>V</mi></math> be a real Euclidean vector space and <math id="S1.p2.m2" class="ltx_Math" alttext="\mathcal{O}(V)" display="inline"><mrow><mi class="ltx_font_mathcaligraphic">𝒪</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>V</mi><mo stretchy="false">)</mo></mrow></mrow></math> the group of all orthogonal transformations of <math id="S1.p2.m3" class="ltx_Math" alttext="V" display="inline"><mi>V</mi></math>.</p>
+</div>
+<div id="S1.p3" class="ltx_para">
+<p class="ltx_p">A <em class="ltx_emph ltx_font_italic">reflection</em> of <math id="S1.p3.m1" class="ltx_Math" alttext="V" display="inline"><mi>V</mi></math> is a linear transformation <math id="S1.p3.m2" class="ltx_Math" alttext="S" display="inline"><mi>S</mi></math> that carries each vector to its mirror image with respect to a fixed hyperplane <math id="S1.p3.m3" class="ltx_Math" alttext="\mathcal{P}" display="inline"><mi class="ltx_font_mathcaligraphic">𝒫</mi></math>; it is clear geometrically that a reflection is an orthogonal transformation.</p>
+</div>
+<div id="S1.p4" class="ltx_para">
+<p class="ltx_p">A subgroup <math id="S1.p4.m1" class="ltx_Math" alttext="\mathcal{G}\leq\mathcal{O}(V)" display="inline"><mrow><mi class="ltx_font_mathcaligraphic">𝒢</mi><mo>≤</mo><mrow><mi class="ltx_font_mathcaligraphic">𝒪</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>V</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></math> will be called <em class="ltx_emph ltx_font_italic">effective</em> if <math id="S1.p4.m2" class="ltx_Math" alttext="V_{0}(\mathcal{G})=0" display="inline"><mrow><mrow><msub><mi>V</mi><mn>0</mn></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi class="ltx_font_mathcaligraphic">𝒢</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mn>0</mn></mrow></math> where <math id="S1.p4.m3" class="ltx_Math" alttext="V_{0}(\mathcal{G})=\bigcap_{T\in\mathcal{G}}\{x\in V\mid Tx=x\}" display="inline"><mrow><mrow><msub><mi>V</mi><mn>0</mn></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi class="ltx_font_mathcaligraphic">𝒢</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><msub><mo largeop="true" mathsize="160%" stretchy="false" symmetric="true">⋂</mo><mrow><mi>T</mi><mo>∈</mo><mi class="ltx_font_mathcaligraphic">𝒢</mi></mrow></msub><mrow><mo stretchy="false">{</mo><mrow><mi>x</mi><mo>∈</mo><mi>V</mi></mrow><mo>∣</mo><mrow><mrow><mi>T</mi><mo>⁢</mo><mi>x</mi></mrow><mo>=</mo><mi>x</mi></mrow><mo stretchy="false">}</mo></mrow></mrow></mrow></math>.</p>
+</div>
+<div id="S1.p5" class="ltx_para">
+<p class="ltx_p">A finite Coxeter group can be realized as (i.e. is always isomorphic to) a finite effective subgroup <math id="S1.p5.m1" class="ltx_Math" alttext="\mathcal{G}" display="inline"><mi class="ltx_font_mathcaligraphic">𝒢</mi></math> of <math id="S1.p5.m2" class="ltx_Math" alttext="\mathcal{O}(V)" display="inline"><mrow><mi class="ltx_font_mathcaligraphic">𝒪</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>V</mi><mo stretchy="false">)</mo></mrow></mrow></math> that is generated by a set of reflections, for some Euclidean space <math id="S1.p5.m3" class="ltx_Math" alttext="V" display="inline"><mi>V</mi></math>.</p>
+</div>
+</section>
+<section id="S2" class="ltx_section">
+<h2 class="ltx_title ltx_title_section">
+<span class="ltx_tag ltx_tag_section">2 </span>Classification of irreducible finite Coxeter groups</h2>
+
+<div id="S2.p1" class="ltx_para">
+<p class="ltx_p">Type <math id="S2.p1.m1" class="ltx_Math" alttext="\mathsf{A}_{n}" display="inline"><msub><mi>𝖠</mi><mi>n</mi></msub></math>: This group is isomorphic to the symmetric group on <math id="S2.p1.m2" class="ltx_Math" alttext="n" display="inline"><mi>n</mi></math> elements, <math id="S2.p1.m3" class="ltx_Math" alttext="S_{n}" display="inline"><msub><mi>S</mi><mi>n</mi></msub></math>. The coxeter matrix is encoded by <math id="S2.p1.m4" class="ltx_Math" alttext="m_{i,i+1}=3=m_{i+1,i}" display="inline"><mrow><msub><mi>m</mi><mrow><mi>i</mi><mo>,</mo><mrow><mi>i</mi><mo>+</mo><mn>1</mn></mrow></mrow></msub><mo>=</mo><mn>3</mn><mo>=</mo><msub><mi>m</mi><mrow><mrow><mi>i</mi><mo>+</mo><mn>1</mn></mrow><mo>,</mo><mi>i</mi></mrow></msub></mrow></math> and all other terms are 2. To observe the isomorphism let</p>
+<table id="S2.Ex5" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S2.Ex5.m1" class="ltx_Math" alttext="w_{1}=(1,2),(2,3),\dots,w_{n}=(n-1,n)." display="block"><mrow><mrow><mrow><msub><mi>w</mi><mn>1</mn></msub><mo>=</mo><mrow><mrow><mo stretchy="false">(</mo><mn>1</mn><mo>,</mo><mn>2</mn><mo stretchy="false">)</mo></mrow><mo>,</mo><mrow><mo stretchy="false">(</mo><mn>2</mn><mo>,</mo><mn>3</mn><mo stretchy="false">)</mo></mrow><mo>,</mo><mi mathvariant="normal">…</mi></mrow></mrow><mo>,</mo><mrow><msub><mi>w</mi><mi>n</mi></msub><mo>=</mo><mrow><mo stretchy="false">(</mo><mrow><mi>n</mi><mo>-</mo><mn>1</mn></mrow><mo>,</mo><mi>n</mi><mo stretchy="false">)</mo></mrow></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">Then <math id="S2.p1.m5" class="ltx_Math" alttext="w_{i}^{2}=1" display="inline"><mrow><msubsup><mi>w</mi><mi>i</mi><mn>2</mn></msubsup><mo>=</mo><mn>1</mn></mrow></math>, for instance <math id="S2.p1.m6" class="ltx_Math" alttext="(1,2)^{2}=()" display="inline"><mrow><msup><mrow><mo stretchy="false">(</mo><mn>1</mn><mo>,</mo><mn>2</mn><mo stretchy="false">)</mo></mrow><mn>2</mn></msup><mo>=</mo><mrow><mo stretchy="false">(</mo><mo stretchy="false">)</mo></mrow></mrow></math>, <math id="S2.p1.m7" class="ltx_Math" alttext="(w_{i}w_{j})^{2}=1" display="inline"><mrow><msup><mrow><mo stretchy="false">(</mo><mrow><msub><mi>w</mi><mi>i</mi></msub><mo>⁢</mo><msub><mi>w</mi><mi>j</mi></msub></mrow><mo stretchy="false">)</mo></mrow><mn>2</mn></msup><mo>=</mo><mn>1</mn></mrow></math> if <math id="S2.p1.m8" class="ltx_Math" alttext="|i-j|&gt;1" display="inline"><mrow><mrow><mo stretchy="false">|</mo><mrow><mi>i</mi><mo>-</mo><mi>j</mi></mrow><mo stretchy="false">|</mo></mrow><mo>&gt;</mo><mn>1</mn></mrow></math>, for example <math id="S2.p1.m9" class="ltx_Math" alttext="((1,2)(3,4))^{2}=0" display="inline"><mrow><msup><mrow><mo stretchy="false">(</mo><mrow><mrow><mo stretchy="false">(</mo><mn>1</mn><mo>,</mo><mn>2</mn><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mn>3</mn><mo>,</mo><mn>4</mn><mo stretchy="false">)</mo></mrow></mrow><mo stretchy="false">)</mo></mrow><mn>2</mn></msup><mo>=</mo><mn>0</mn></mrow></math> and <math id="S2.p1.m10" class="ltx_Math" alttext="(w_{i}w_{i+1})^{3}=1" display="inline"><mrow><msup><mrow><mo stretchy="false">(</mo><mrow><msub><mi>w</mi><mi>i</mi></msub><mo>⁢</mo><msub><mi>w</mi><mrow><mi>i</mi><mo>+</mo><mn>1</mn></mrow></msub></mrow><mo stretchy="false">)</mo></mrow><mn>3</mn></msup><mo>=</mo><mn>1</mn></mrow></math> as we see with <math id="S2.p1.m11" class="ltx_Math" alttext="(1,2)(2,3)=(1,2,3)" display="inline"><mrow><mrow><mrow><mo stretchy="false">(</mo><mn>1</mn><mo>,</mo><mn>2</mn><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mn>2</mn><mo>,</mo><mn>3</mn><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mo stretchy="false">(</mo><mn>1</mn><mo>,</mo><mn>2</mn><mo>,</mo><mn>3</mn><mo stretchy="false">)</mo></mrow></mrow></math> which has order 3.</p>
+</div>
+<div id="S2.p2" class="ltx_para">
+<p class="ltx_p">The Dynkin diagram is:</p>
+<table id="S2.Ex6" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S2.Ex6.m1" class="ltx_Math" alttext="\xymatrix{\circ\ar@{-}[r]&amp;\circ\ar@{-}[r]&amp;\circ\ar@{--}[r]&amp;\circ.}" display="block"><mrow><merror class="ltx_ERROR undefined undefined"><mtext>\xymatrix</mtext></merror><mo>∘</mo><merror class="ltx_ERROR undefined undefined"><mtext>\ar</mtext></merror><mi mathvariant="normal">@</mi><mo>-</mo><mrow><mo stretchy="false">[</mo><mi>r</mi><mo stretchy="false">]</mo></mrow><mi mathvariant="normal">&amp;</mi><mo>∘</mo><merror class="ltx_ERROR undefined undefined"><mtext>\ar</mtext></merror><mi mathvariant="normal">@</mi><mo>-</mo><mrow><mo stretchy="false">[</mo><mi>r</mi><mo stretchy="false">]</mo></mrow><mi mathvariant="normal">&amp;</mi><mo>∘</mo><merror class="ltx_ERROR undefined undefined"><mtext>\ar</mtext></merror><mi mathvariant="normal">@</mi><mo>-</mo><mo>-</mo><mrow><mo stretchy="false">[</mo><mi>r</mi><mo stretchy="false">]</mo></mrow><mi mathvariant="normal">&amp;</mi><mo>∘</mo><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+</div>
+<div id="S2.p3" class="ltx_para">
+<p class="ltx_p">Type <math id="S2.p3.m1" class="ltx_Math" alttext="\mathsf{B}_{n}" display="inline"><msub><mi>𝖡</mi><mi>n</mi></msub></math>, <math id="S2.p3.m2" class="ltx_Math" alttext="\mathsf{C}_{n}" display="inline"><msub><mi>𝖢</mi><mi>n</mi></msub></math>: This group is isomorphic to the wreath product <math id="S2.p3.m3" class="ltx_Math" alttext="\mathbb{Z}_{2}\wr S_{n}" display="inline"><mrow><msub><mi>ℤ</mi><mn>2</mn></msub><mo>≀</mo><msub><mi>S</mi><mi>n</mi></msub></mrow></math>, that is, the semi-direct product of
+<math id="S2.p3.m4" class="ltx_Math" alttext="\mathbb{Z}_{2}^{n}\rtimes S_{n}" display="inline"><mrow><msubsup><mi>ℤ</mi><mn>2</mn><mi>n</mi></msubsup><mo>⋊</mo><msub><mi>S</mi><mi>n</mi></msub></mrow></math> where <math id="S2.p3.m5" class="ltx_Math" alttext="S_{n}" display="inline"><msub><mi>S</mi><mi>n</mi></msub></math> permutes the entries of the vectors in
+<math id="S2.p3.m6" class="ltx_Math" alttext="\mathbb{Z}_{2}^{n}" display="inline"><msubsup><mi>ℤ</mi><mn>2</mn><mi>n</mi></msubsup></math>.</p>
+</div>
+<div id="S2.p4" class="ltx_para">
+<p class="ltx_p">The designation of type <math id="S2.p4.m1" class="ltx_Math" alttext="\mathsf{B}_{n}" display="inline"><msub><mi>𝖡</mi><mi>n</mi></msub></math> and <math id="S2.p4.m2" class="ltx_Math" alttext="\mathsf{C}_{n}" display="inline"><msub><mi>𝖢</mi><mi>n</mi></msub></math> relate to the fact that two different methods can be given to construct the same group (as the Weyl group of <math id="S2.p4.m3" class="ltx_Math" alttext="O(2n+1,k)" display="inline"><mrow><mi>O</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mrow><mn>2</mn><mo>⁢</mo><mi>n</mi></mrow><mo>+</mo><mn>1</mn></mrow><mo>,</mo><mi>k</mi><mo stretchy="false">)</mo></mrow></mrow></math> or as the Weyl group of <math id="S2.p4.m4" class="ltx_Math" alttext="Sp(2n,k)" display="inline"><mrow><mi>S</mi><mo>⁢</mo><mi>p</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mn>2</mn><mo>⁢</mo><mi>n</mi></mrow><mo>,</mo><mi>k</mi><mo stretchy="false">)</mo></mrow></mrow></math>).
+It is also common to see <math id="S2.p4.m5" class="ltx_Math" alttext="\mathsf{C}_{n}" display="inline"><msub><mi>𝖢</mi><mi>n</mi></msub></math> used as the sole label.</p>
+</div>
+<div id="S2.p5" class="ltx_para">
+<p class="ltx_p">Type <math id="S2.p5.m1" class="ltx_Math" alttext="\mathsf{H}_{2}^{n}" display="inline"><msubsup><mi>𝖧</mi><mn>2</mn><mi>n</mi></msubsup></math>: These groups are the dihedral group <math id="S2.p5.m2" class="ltx_Math" alttext="D_{2n}" display="inline"><msub><mi>D</mi><mrow><mn>2</mn><mo>⁢</mo><mi>n</mi></mrow></msub></math> for
+<math id="S2.p5.m3" class="ltx_Math" alttext="n\geq 5" display="inline"><mrow><mi>n</mi><mo>≥</mo><mn>5</mn></mrow></math> and <math id="S2.p5.m4" class="ltx_Math" alttext="n\neq 6" display="inline"><mrow><mi>n</mi><mo>≠</mo><mn>6</mn></mrow></math>.</p>
+</div>
+<div id="S2.p6" class="ltx_para">
+<p class="ltx_p">Type <math id="S2.p6.m1" class="ltx_Math" alttext="\mathsf{G}_{2}" display="inline"><msub><mi>𝖦</mi><mn>2</mn></msub></math>: This group is isomorphic to <math id="S2.p6.m2" class="ltx_Math" alttext="S_{3}" display="inline"><msub><mi>S</mi><mn>3</mn></msub></math>.</p>
+</div>
+</section>
+<section id="bib" class="ltx_bibliography">
+<h2 class="ltx_title ltx_title_bibliography">References</h2>
+
+<div id="bib.p1" class="ltx_para">
+<p class="ltx_p">L. C. Grove, C. T. Benson, <em class="ltx_emph ltx_font_italic">Finite Reflection Groups. Second Edition.</em>, Springer-Verlag, 1985.</p>
+</div>
+<ul id="L1" class="ltx_biblist">
+</ul>
+</section>
+<div id="p9" class="ltx_para ltx_align_right">
+<table class="ltx_tabular ltx_align_middle">
+<tbody class="ltx_tbody">
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l ltx_border_t">Title</td>
+<td class="ltx_td ltx_align_left ltx_border_r ltx_border_t">Coxeter group</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Canonical name</td>
+<td class="ltx_td ltx_align_left ltx_border_r">CoxeterGroup</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Date of creation</td>
+<td class="ltx_td ltx_align_left ltx_border_r">2013-03-22 15:38:20</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Last modified on</td>
+<td class="ltx_td ltx_align_left ltx_border_r">2013-03-22 15:38:20</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Owner</td>
+<td class="ltx_td ltx_align_left ltx_border_r">Simone (5904)</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Last modified by</td>
+<td class="ltx_td ltx_align_left ltx_border_r">Simone (5904)</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Numerical id</td>
+<td class="ltx_td ltx_align_left ltx_border_r">12</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Author</td>
+<td class="ltx_td ltx_align_left ltx_border_r">Simone (5904)</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Entry type</td>
+<td class="ltx_td ltx_align_left ltx_border_r">Definition</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Classification</td>
+<td class="ltx_td ltx_align_left ltx_border_r">msc 20F55</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Defines</td>
+<td class="ltx_td ltx_align_left ltx_border_r">Coxeter group</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Defines</td>
+<td class="ltx_td ltx_align_left ltx_border_r">Coxeter matrix</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Defines</td>
+<td class="ltx_td ltx_align_left ltx_border_r">Cartan matrix</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Defines</td>
+<td class="ltx_td ltx_align_left ltx_border_r">Weyl group</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Defines</td>
+<td class="ltx_td ltx_align_left ltx_border_r">exchange condition</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_b ltx_border_l">Defines</td>
+<td class="ltx_td ltx_align_left ltx_border_b ltx_border_r">length of Weyl group</td>
+</tr>
+</tbody>
+</table>
+</div>
+</article>
+</div>
+<footer class="ltx_page_footer">
+<div class="ltx_page_logo">Generated  on Fri Feb  9 19:29:59 2018 by <a href="http://dlmf.nist.gov/LaTeXML/">LaTeXML <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAsAAAAOCAYAAAD5YeaVAAAAAXNSR0IArs4c6QAAAAZiS0dEAP8A/wD/oL2nkwAAAAlwSFlzAAALEwAACxMBAJqcGAAAAAd0SU1FB9wKExQZLWTEaOUAAAAddEVYdENvbW1lbnQAQ3JlYXRlZCB3aXRoIFRoZSBHSU1Q72QlbgAAAdpJREFUKM9tkL+L2nAARz9fPZNCKFapUn8kyI0e4iRHSR1Kb8ng0lJw6FYHFwv2LwhOpcWxTjeUunYqOmqd6hEoRDhtDWdA8ApRYsSUCDHNt5ul13vz4w0vWCgUnnEc975arX6ORqN3VqtVZbfbTQC4uEHANM3jSqXymFI6yWazP2KxWAXAL9zCUa1Wy2tXVxheKA9YNoR8Pt+aTqe4FVVVvz05O6MBhqUIBGk8Hn8HAOVy+T+XLJfLS4ZhTiRJgqIoVBRFIoric47jPnmeB1mW/9rr9ZpSSn3Lsmir1fJZlqWlUonKsvwWwD8ymc/nXwVBeLjf7xEKhdBut9Hr9WgmkyGEkJwsy5eHG5vN5g0AKIoCAEgkEkin0wQAfN9/cXPdheu6P33fBwB4ngcAcByHJpPJl+fn54mD3Gg0NrquXxeLRQAAwzAYj8cwTZPwPH9/sVg8PXweDAauqqr2cDjEer1GJBLBZDJBs9mE4zjwfZ85lAGg2+06hmGgXq+j3+/DsixYlgVN03a9Xu8jgCNCyIegIAgx13Vfd7vdu+FweG8YRkjXdWy329+dTgeSJD3ieZ7RNO0VAXAPwDEAO5VKndi2fWrb9jWl9Esul6PZbDY9Go1OZ7PZ9z/lyuD3OozU2wAAAABJRU5ErkJggg==" alt="[LOGO]"></a>
+</div></footer>
+</div>
+</body>
+</html>

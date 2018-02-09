@@ -1,0 +1,257 @@
+<!DOCTYPE html><html>
+<head>
+<title>category of paths on a graph</title>
+<!--Generated on Fri Feb  9 19:33:14 2018 by LaTeXML (version 0.8.2) http://dlmf.nist.gov/LaTeXML/.-->
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" href="LaTeXML.css" type="text/css">
+<link rel="stylesheet" href="ltx-article.css" type="text/css">
+<link rel="stylesheet" href="https://cdn.rawgit.com/holtzermann17/3f71ceeb3b055e1ddc3b6c11fb1f074c/raw/2bb23e3b173ff96840797fc0c3bcb8c54085df8e/LaTeXML.css" type="text/css">
+<link rel="stylesheet" href="https://cdn.rawgit.com/holtzermann17/4bda0365b30858ac2fb83623185fe3ec/raw/cedd84ed3e3ad597c5d293f443ecfe4803741c6b/ltx-article.css" type="text/css">
+<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=MML_HTMLorMML" type="text/javascript"></script>
+</head>
+<body>
+<div class="ltx_page_main">
+<div class="ltx_page_content">
+<article class="ltx_document ltx_authors_1line">
+<h1 class="ltx_title ltx_title_document">category of paths on a graph</h1>
+
+<div id="p1" class="ltx_para">
+<br class="ltx_break">
+<p class="ltx_p">A nice class of illustrative examples of some notions of category theory
+is provided by categories of paths on a graph.</p>
+</div>
+<div id="p2" class="ltx_para">
+<p class="ltx_p">Let <math id="p2.m1" class="ltx_Math" alttext="G" display="inline"><mi>G</mi></math> be an undirected graph. Denote the set of vertices of <math id="p2.m2" class="ltx_Math" alttext="G" display="inline"><mi>G</mi></math> by “<math id="p2.m3" class="ltx_Math" alttext="V" display="inline"><mi>V</mi></math>”
+and denote the set of edges of <math id="p2.m4" class="ltx_Math" alttext="G" display="inline"><mi>G</mi></math> by “<math id="p2.m5" class="ltx_Math" alttext="E" display="inline"><mi>E</mi></math>”.</p>
+</div>
+<div id="p3" class="ltx_para">
+<p class="ltx_p">A path of the graph <math id="p3.m1" class="ltx_Math" alttext="G" display="inline"><mi>G</mi></math> is an ordered tuplet of vertices <math id="p3.m2" class="ltx_Math" alttext="(x_{1},x_{2},\ldots x_{n})" display="inline"><mrow><mo stretchy="false">(</mo><msub><mi>x</mi><mn>1</mn></msub><mo>,</mo><msub><mi>x</mi><mn>2</mn></msub><mo>,</mo><mrow><mi mathvariant="normal">…</mi><mo>⁢</mo><msub><mi>x</mi><mi>n</mi></msub></mrow><mo stretchy="false">)</mo></mrow></math>
+such that, for all <math id="p3.m3" class="ltx_Math" alttext="i" display="inline"><mi>i</mi></math> between <math id="p3.m4" class="ltx_Math" alttext="1" display="inline"><mn>1</mn></math> and <math id="p3.m5" class="ltx_Math" alttext="n-1" display="inline"><mrow><mi>n</mi><mo>-</mo><mn>1</mn></mrow></math>, there exists an edge connecting
+<math id="p3.m6" class="ltx_Math" alttext="x_{i}" display="inline"><msub><mi>x</mi><mi>i</mi></msub></math> and <math id="p3.m7" class="ltx_Math" alttext="x_{i+i}" display="inline"><msub><mi>x</mi><mrow><mi>i</mi><mo>+</mo><mi>i</mi></mrow></msub></math>. As a special case, we allow trivial paths which consist
+of a single vertex — soon we will see that these in fact play an important
+role as identity elements in our category.</p>
+</div>
+<div id="p4" class="ltx_para">
+<p class="ltx_p">In our category, the vertices of the graph will be the objects and the
+morphisms will be paths; given two of these objects <math id="p4.m1" class="ltx_Math" alttext="a" display="inline"><mi>a</mi></math> and <math id="p4.m2" class="ltx_Math" alttext="b" display="inline"><mi>b</mi></math>, we set
+<math id="p4.m3" class="ltx_Math" alttext="\operatorname{Hom}(a,b)" display="inline"><mrow><mi>Hom</mi><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mi>a</mi><mo>,</mo><mi>b</mi><mo stretchy="false">)</mo></mrow></mrow></math> to be the set of all paths <math id="p4.m4" class="ltx_Math" alttext="(x_{1},x_{2},\ldots x_{n})" display="inline"><mrow><mo stretchy="false">(</mo><msub><mi>x</mi><mn>1</mn></msub><mo>,</mo><msub><mi>x</mi><mn>2</mn></msub><mo>,</mo><mrow><mi mathvariant="normal">…</mi><mo>⁢</mo><msub><mi>x</mi><mi>n</mi></msub></mrow><mo stretchy="false">)</mo></mrow></math>
+such that <math id="p4.m5" class="ltx_Math" alttext="x_{1}=a" display="inline"><mrow><msub><mi>x</mi><mn>1</mn></msub><mo>=</mo><mi>a</mi></mrow></math> and <math id="p4.m6" class="ltx_Math" alttext="x_{n}=b" display="inline"><mrow><msub><mi>x</mi><mi>n</mi></msub><mo>=</mo><mi>b</mi></mrow></math>. Given an object <math id="p4.m7" class="ltx_Math" alttext="a" display="inline"><mi>a</mi></math>, we set <math id="p4.m8" class="ltx_Math" alttext="1_{a}=(a)" display="inline"><mrow><msub><mn>1</mn><mi>a</mi></msub><mo>=</mo><mrow><mo stretchy="false">(</mo><mi>a</mi><mo stretchy="false">)</mo></mrow></mrow></math>,
+the trivial path mentioned above.</p>
+</div>
+<div id="p5" class="ltx_para">
+<p class="ltx_p">To finish specifying our category, we need to specify the composition operation.
+This operation will be the concatenation of paths, which is defined as follows:
+Given a path <math id="p5.m1" class="ltx_Math" alttext="(x_{1},x_{2},\ldots,x_{n})\in\operatorname{Hom}(a,b)" display="inline"><mrow><mrow><mo stretchy="false">(</mo><msub><mi>x</mi><mn>1</mn></msub><mo>,</mo><msub><mi>x</mi><mn>2</mn></msub><mo>,</mo><mi mathvariant="normal">…</mi><mo>,</mo><msub><mi>x</mi><mi>n</mi></msub><mo stretchy="false">)</mo></mrow><mo>∈</mo><mrow><mi>Hom</mi><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mi>a</mi><mo>,</mo><mi>b</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></math> and a path
+<math id="p5.m2" class="ltx_Math" alttext="(y_{1},y_{2},\ldots,y_{m})\in\operatorname{Hom}(a,b)" display="inline"><mrow><mrow><mo stretchy="false">(</mo><msub><mi>y</mi><mn>1</mn></msub><mo>,</mo><msub><mi>y</mi><mn>2</mn></msub><mo>,</mo><mi mathvariant="normal">…</mi><mo>,</mo><msub><mi>y</mi><mi>m</mi></msub><mo stretchy="false">)</mo></mrow><mo>∈</mo><mrow><mi>Hom</mi><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mi>a</mi><mo>,</mo><mi>b</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></math>, we set</p>
+<table id="S0.Ex1" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex1.m1" class="ltx_Math" alttext="a\circ b=(x_{1},x_{2},\ldots x_{n},y_{2},\ldots,y_{m})." display="block"><mrow><mrow><mrow><mi>a</mi><mo>∘</mo><mi>b</mi></mrow><mo>=</mo><mrow><mo stretchy="false">(</mo><msub><mi>x</mi><mn>1</mn></msub><mo>,</mo><msub><mi>x</mi><mn>2</mn></msub><mo>,</mo><mrow><mi mathvariant="normal">…</mi><mo>⁢</mo><msub><mi>x</mi><mi>n</mi></msub></mrow><mo>,</mo><msub><mi>y</mi><mn>2</mn></msub><mo>,</mo><mi mathvariant="normal">…</mi><mo>,</mo><msub><mi>y</mi><mi>m</mi></msub><mo stretchy="false">)</mo></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">(Remember that <math id="p5.m3" class="ltx_Math" alttext="x_{n}=y_{1}=b" display="inline"><mrow><msub><mi>x</mi><mi>n</mi></msub><mo>=</mo><msub><mi>y</mi><mn>1</mn></msub><mo>=</mo><mi>b</mi></mrow></math>.) To have a bona fide category, we need to
+check that this choice satisfies the defining properties (A1 - A3 in the
+entry <span class="ltx_text ltx_font_typewriter">http://planetmath.org/node/965</span>category). This is rather easily verified.</p>
+</div>
+<div id="p6" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">A1:</span> Given a morphism <math id="p6.m1" class="ltx_Math" alttext="(x_{1},x_{2},\ldots x_{n})" display="inline"><mrow><mo stretchy="false">(</mo><msub><mi>x</mi><mn>1</mn></msub><mo>,</mo><msub><mi>x</mi><mn>2</mn></msub><mo>,</mo><mrow><mi mathvariant="normal">…</mi><mo>⁢</mo><msub><mi>x</mi><mi>n</mi></msub></mrow><mo stretchy="false">)</mo></mrow></math>, it can only
+belong to <math id="p6.m2" class="ltx_Math" alttext="\operatorname{Hom}(a,b)" display="inline"><mrow><mi>Hom</mi><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mi>a</mi><mo>,</mo><mi>b</mi><mo stretchy="false">)</mo></mrow></mrow></math> if <math id="p6.m3" class="ltx_Math" alttext="x_{1}=a" display="inline"><mrow><msub><mi>x</mi><mn>1</mn></msub><mo>=</mo><mi>a</mi></mrow></math> and <math id="p6.m4" class="ltx_Math" alttext="x_{n}=b" display="inline"><mrow><msub><mi>x</mi><mi>n</mi></msub><mo>=</mo><mi>b</mi></mrow></math>, hence
+<math id="p6.m5" class="ltx_Math" alttext="\operatorname{Hom}(a,b)\cup\operatorname{Hom}(c,d)=\emptyset" display="inline"><mrow><mrow><mrow><mi>Hom</mi><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mi>a</mi><mo>,</mo><mi>b</mi><mo stretchy="false">)</mo></mrow></mrow><mo>∪</mo><mrow><mi>Hom</mi><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mi>c</mi><mo>,</mo><mi>d</mi><mo stretchy="false">)</mo></mrow></mrow></mrow><mo>=</mo><mi mathvariant="normal">∅</mi></mrow></math> unless
+<math id="p6.m6" class="ltx_Math" alttext="a=c" display="inline"><mrow><mi>a</mi><mo>=</mo><mi>c</mi></mrow></math> and <math id="p6.m7" class="ltx_Math" alttext="b=d" display="inline"><mrow><mi>b</mi><mo>=</mo><mi>d</mi></mrow></math>.
+</p>
+</div>
+<div id="p7" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">A2:</span> Suppose that we have four objects <math id="p7.m1" class="ltx_Math" alttext="a,b,c,d" display="inline"><mrow><mi>a</mi><mo>,</mo><mi>b</mi><mo>,</mo><mi>c</mi><mo>,</mo><mi>d</mi></mrow></math> and three
+morphisms, <math id="p7.m2" class="ltx_Math" alttext="(x_{1},x_{2},\ldots x_{n})\in\operatorname{Hom}(a,b)" display="inline"><mrow><mrow><mo stretchy="false">(</mo><msub><mi>x</mi><mn>1</mn></msub><mo>,</mo><msub><mi>x</mi><mn>2</mn></msub><mo>,</mo><mrow><mi mathvariant="normal">…</mi><mo>⁢</mo><msub><mi>x</mi><mi>n</mi></msub></mrow><mo stretchy="false">)</mo></mrow><mo>∈</mo><mrow><mi>Hom</mi><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mi>a</mi><mo>,</mo><mi>b</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></math>,
+<math id="p7.m3" class="ltx_Math" alttext="(y_{1},y_{2},\ldots y_{m})\in\operatorname{Hom}(b,c)" display="inline"><mrow><mrow><mo stretchy="false">(</mo><msub><mi>y</mi><mn>1</mn></msub><mo>,</mo><msub><mi>y</mi><mn>2</mn></msub><mo>,</mo><mrow><mi mathvariant="normal">…</mi><mo>⁢</mo><msub><mi>y</mi><mi>m</mi></msub></mrow><mo stretchy="false">)</mo></mrow><mo>∈</mo><mrow><mi>Hom</mi><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mi>b</mi><mo>,</mo><mi>c</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></math>, and
+<math id="p7.m4" class="ltx_Math" alttext="(z_{1},z_{2},\ldots z_{k})\in\operatorname{Hom}(c,d)" display="inline"><mrow><mrow><mo stretchy="false">(</mo><msub><mi>z</mi><mn>1</mn></msub><mo>,</mo><msub><mi>z</mi><mn>2</mn></msub><mo>,</mo><mrow><mi mathvariant="normal">…</mi><mo>⁢</mo><msub><mi>z</mi><mi>k</mi></msub></mrow><mo stretchy="false">)</mo></mrow><mo>∈</mo><mrow><mi>Hom</mi><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mi>c</mi><mo>,</mo><mi>d</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></math>. Then,
+by the definition of the operation <math id="p7.m5" class="ltx_Math" alttext="\circ" display="inline"><mo>∘</mo></math> given above,</p>
+<table id="S0.EGx1" class="ltx_equationgroup ltx_eqn_align ltx_eqn_table">
+
+<tr id="S0.Ex2" class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="S0.Ex2.m1" class="ltx_Math" alttext="\displaystyle((x_{1},x_{2},\ldots,x_{n})\circ(" display="inline"><mrow><mo stretchy="false">(</mo><mrow><mo stretchy="false">(</mo><msub><mi>x</mi><mn>1</mn></msub><mo>,</mo><msub><mi>x</mi><mn>2</mn></msub><mo>,</mo><mi mathvariant="normal">…</mi><mo>,</mo><msub><mi>x</mi><mi>n</mi></msub><mo stretchy="false">)</mo></mrow><mo>∘</mo><mo stretchy="false">(</mo></mrow></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S0.Ex2.m2" class="ltx_Math" alttext="\displaystyle y_{1},y_{2},\ldots,y_{m}))\circ(z_{1},z_{2},\ldots,z_{k})" display="inline"><mrow><mrow><msub><mi>y</mi><mn>1</mn></msub><mo>,</mo><msub><mi>y</mi><mn>2</mn></msub><mo>,</mo><mi mathvariant="normal">…</mi><mo>,</mo><msub><mi>y</mi><mi>m</mi></msub><mo stretchy="false">)</mo></mrow><mo stretchy="false">)</mo><mo>∘</mo><mo stretchy="false">(</mo><msub><mi>z</mi><mn>1</mn></msub><mo>,</mo><msub><mi>z</mi><mn>2</mn></msub><mo>,</mo><mi mathvariant="normal">…</mi><mo>,</mo><msub><mi>z</mi><mi>k</mi></msub><mo stretchy="false">)</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr id="S0.Ex3" class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S0.Ex3.m2" class="ltx_Math" alttext="\displaystyle=(x_{1},x_{2},\ldots,x_{n},y_{2},\ldots,y_{m})\circ(z_{1},z_{2},%
+\ldots,z_{k})" display="inline"><mrow><mi></mi><mo>=</mo><mrow><mrow><mo stretchy="false">(</mo><msub><mi>x</mi><mn>1</mn></msub><mo>,</mo><msub><mi>x</mi><mn>2</mn></msub><mo>,</mo><mi mathvariant="normal">…</mi><mo>,</mo><msub><mi>x</mi><mi>n</mi></msub><mo>,</mo><msub><mi>y</mi><mn>2</mn></msub><mo>,</mo><mi mathvariant="normal">…</mi><mo>,</mo><msub><mi>y</mi><mi>m</mi></msub><mo stretchy="false">)</mo></mrow><mo>∘</mo><mrow><mo stretchy="false">(</mo><msub><mi>z</mi><mn>1</mn></msub><mo>,</mo><msub><mi>z</mi><mn>2</mn></msub><mo>,</mo><mi mathvariant="normal">…</mi><mo>,</mo><msub><mi>z</mi><mi>k</mi></msub><mo stretchy="false">)</mo></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr id="S0.Ex4" class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S0.Ex4.m2" class="ltx_Math" alttext="\displaystyle=(x_{1},x_{2},\ldots,x_{n},y_{2},\ldots,y_{m},z_{2},\ldots,z_{k})" display="inline"><mrow><mi></mi><mo>=</mo><mrow><mo stretchy="false">(</mo><msub><mi>x</mi><mn>1</mn></msub><mo>,</mo><msub><mi>x</mi><mn>2</mn></msub><mo>,</mo><mi mathvariant="normal">…</mi><mo>,</mo><msub><mi>x</mi><mi>n</mi></msub><mo>,</mo><msub><mi>y</mi><mn>2</mn></msub><mo>,</mo><mi mathvariant="normal">…</mi><mo>,</mo><msub><mi>y</mi><mi>m</mi></msub><mo>,</mo><msub><mi>z</mi><mn>2</mn></msub><mo>,</mo><mi mathvariant="normal">…</mi><mo>,</mo><msub><mi>z</mi><mi>k</mi></msub><mo stretchy="false">)</mo></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr id="S0.Ex5" class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="S0.Ex5.m1" class="ltx_Math" alttext="\displaystyle(x_{1},x_{2},\ldots,x_{n})\circ(" display="inline"><mrow><mrow><mo stretchy="false">(</mo><msub><mi>x</mi><mn>1</mn></msub><mo>,</mo><msub><mi>x</mi><mn>2</mn></msub><mo>,</mo><mi mathvariant="normal">…</mi><mo>,</mo><msub><mi>x</mi><mi>n</mi></msub><mo stretchy="false">)</mo></mrow><mo>∘</mo><mo stretchy="false">(</mo></mrow></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S0.Ex5.m2" class="ltx_Math" alttext="\displaystyle(y_{1},y_{2},\ldots,y_{m})\circ(z_{1},z_{2},\ldots,z_{k}))" display="inline"><mrow><mrow><mo stretchy="false">(</mo><msub><mi>y</mi><mn>1</mn></msub><mo>,</mo><msub><mi>y</mi><mn>2</mn></msub><mo>,</mo><mi mathvariant="normal">…</mi><mo>,</mo><msub><mi>y</mi><mi>m</mi></msub><mo stretchy="false">)</mo></mrow><mo>∘</mo><mrow><mo stretchy="false">(</mo><msub><mi>z</mi><mn>1</mn></msub><mo>,</mo><msub><mi>z</mi><mn>2</mn></msub><mo>,</mo><mi mathvariant="normal">…</mi><mo>,</mo><msub><mi>z</mi><mi>k</mi></msub><mo stretchy="false">)</mo></mrow><mo stretchy="false">)</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr id="S0.Ex6" class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S0.Ex6.m2" class="ltx_Math" alttext="\displaystyle=(x_{1},x_{2},\ldots,x_{n})\circ(y_{1},y_{2},\ldots,y_{m},z_{2},%
+\ldots,z_{k})" display="inline"><mrow><mi></mi><mo>=</mo><mrow><mrow><mo stretchy="false">(</mo><msub><mi>x</mi><mn>1</mn></msub><mo>,</mo><msub><mi>x</mi><mn>2</mn></msub><mo>,</mo><mi mathvariant="normal">…</mi><mo>,</mo><msub><mi>x</mi><mi>n</mi></msub><mo stretchy="false">)</mo></mrow><mo>∘</mo><mrow><mo stretchy="false">(</mo><msub><mi>y</mi><mn>1</mn></msub><mo>,</mo><msub><mi>y</mi><mn>2</mn></msub><mo>,</mo><mi mathvariant="normal">…</mi><mo>,</mo><msub><mi>y</mi><mi>m</mi></msub><mo>,</mo><msub><mi>z</mi><mn>2</mn></msub><mo>,</mo><mi mathvariant="normal">…</mi><mo>,</mo><msub><mi>z</mi><mi>k</mi></msub><mo stretchy="false">)</mo></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr id="S0.Ex7" class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S0.Ex7.m2" class="ltx_Math" alttext="\displaystyle=(x_{1},x_{2},\ldots,x_{n},y_{2},\ldots,y_{m},z_{2},\ldots,z_{k})." display="inline"><mrow><mrow><mi></mi><mo>=</mo><mrow><mo stretchy="false">(</mo><msub><mi>x</mi><mn>1</mn></msub><mo>,</mo><msub><mi>x</mi><mn>2</mn></msub><mo>,</mo><mi mathvariant="normal">…</mi><mo>,</mo><msub><mi>x</mi><mi>n</mi></msub><mo>,</mo><msub><mi>y</mi><mn>2</mn></msub><mo>,</mo><mi mathvariant="normal">…</mi><mo>,</mo><msub><mi>y</mi><mi>m</mi></msub><mo>,</mo><msub><mi>z</mi><mn>2</mn></msub><mo>,</mo><mi mathvariant="normal">…</mi><mo>,</mo><msub><mi>z</mi><mi>k</mi></msub><mo stretchy="false">)</mo></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">Since these two quantities are equal, the operation is associative.</p>
+</div>
+<div id="p8" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">A3:</span> It is easy enough to check that paths with a single
+vertex act as identity elements:</p>
+<table id="S0.EGx2" class="ltx_equationgroup ltx_eqn_align ltx_eqn_table">
+
+<tr id="S0.Ex8" class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="S0.Ex8.m1" class="ltx_Math" alttext="\displaystyle(x_{1})\circ(x_{1},x_{2},\ldots,x_{n})" display="inline"><mrow><mrow><mo stretchy="false">(</mo><msub><mi>x</mi><mn>1</mn></msub><mo stretchy="false">)</mo></mrow><mo>∘</mo><mrow><mo stretchy="false">(</mo><msub><mi>x</mi><mn>1</mn></msub><mo>,</mo><msub><mi>x</mi><mn>2</mn></msub><mo>,</mo><mi mathvariant="normal">…</mi><mo>,</mo><msub><mi>x</mi><mi>n</mi></msub><mo stretchy="false">)</mo></mrow></mrow></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S0.Ex8.m2" class="ltx_Math" alttext="\displaystyle=(x_{1},x_{2},\ldots,x_{n})" display="inline"><mrow><mi></mi><mo>=</mo><mrow><mo stretchy="false">(</mo><msub><mi>x</mi><mn>1</mn></msub><mo>,</mo><msub><mi>x</mi><mn>2</mn></msub><mo>,</mo><mi mathvariant="normal">…</mi><mo>,</mo><msub><mi>x</mi><mi>n</mi></msub><mo stretchy="false">)</mo></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr id="S0.Ex9" class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="S0.Ex9.m1" class="ltx_Math" alttext="\displaystyle(x_{1},x_{2},\ldots,x_{n})\circ(x_{n})" display="inline"><mrow><mrow><mo stretchy="false">(</mo><msub><mi>x</mi><mn>1</mn></msub><mo>,</mo><msub><mi>x</mi><mn>2</mn></msub><mo>,</mo><mi mathvariant="normal">…</mi><mo>,</mo><msub><mi>x</mi><mi>n</mi></msub><mo stretchy="false">)</mo></mrow><mo>∘</mo><mrow><mo stretchy="false">(</mo><msub><mi>x</mi><mi>n</mi></msub><mo stretchy="false">)</mo></mrow></mrow></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S0.Ex9.m2" class="ltx_Math" alttext="\displaystyle=(x_{1},x_{2},\ldots,x_{n})" display="inline"><mrow><mi></mi><mo>=</mo><mrow><mo stretchy="false">(</mo><msub><mi>x</mi><mn>1</mn></msub><mo>,</mo><msub><mi>x</mi><mn>2</mn></msub><mo>,</mo><mi mathvariant="normal">…</mi><mo>,</mo><msub><mi>x</mi><mi>n</mi></msub><mo stretchy="false">)</mo></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+</div>
+<div id="p9" class="ltx_para">
+<p class="ltx_p">It is also possible to consider the equivalence class of paths
+modulo retracing. To introduce this category, we first define
+a binary relation <math id="p9.m1" class="ltx_Math" alttext="\approx" display="inline"><mo>≈</mo></math> on the class of paths as follows:
+Let <math id="p9.m2" class="ltx_Math" alttext="A" display="inline"><mi>A</mi></math> and <math id="p9.m3" class="ltx_Math" alttext="B" display="inline"><mi>B</mi></math> be any two paths such that the right endpoint
+of <math id="p9.m4" class="ltx_Math" alttext="A" display="inline"><mi>A</mi></math> is the same as the left endpoint of <math id="p9.m5" class="ltx_Math" alttext="B" display="inline"><mi>B</mi></math>, i.e. <math id="p9.m6" class="ltx_Math" alttext="A\in\operatorname{Hom}(a,b)" display="inline"><mrow><mi>A</mi><mo>∈</mo><mrow><mi>Hom</mi><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mi>a</mi><mo>,</mo><mi>b</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></math> and <math id="p9.m7" class="ltx_Math" alttext="B\in\operatorname{Hom}(b,c)" display="inline"><mrow><mi>B</mi><mo>∈</mo><mrow><mi>Hom</mi><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mi>b</mi><mo>,</mo><mi>c</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></math>
+for some vertices <math id="p9.m8" class="ltx_Math" alttext="a,b,c" display="inline"><mrow><mi>a</mi><mo>,</mo><mi>b</mi><mo>,</mo><mi>c</mi></mrow></math> of our graph. Let <math id="p9.m9" class="ltx_Math" alttext="d" display="inline"><mi>d</mi></math> be any vertex
+which shares an edge with <math id="p9.m10" class="ltx_Math" alttext="d" display="inline"><mi>d</mi></math>. Then we set <math id="p9.m11" class="ltx_Math" alttext="A\circ B\approx A\circ(c,d,c)\circ B" display="inline"><mrow><mrow><mi>A</mi><mo>∘</mo><mi>B</mi></mrow><mo>≈</mo><mrow><mi>A</mi><mo>∘</mo><mrow><mo stretchy="false">(</mo><mi>c</mi><mo>,</mo><mi>d</mi><mo>,</mo><mi>c</mi><mo stretchy="false">)</mo></mrow><mo>∘</mo><mi>B</mi></mrow></mrow></math>.</p>
+</div>
+<div id="p10" class="ltx_para">
+<p class="ltx_p">Let <math id="p10.m1" class="ltx_Math" alttext="\sim" display="inline"><mo>∼</mo></math> be the smallest equivalence relations which contains
+<math id="p10.m2" class="ltx_Math" alttext="\approx" display="inline"><mo>≈</mo></math>. We will call this equivalence relation <em class="ltx_emph ltx_font_italic">retracing</em>.</p>
+</div>
+<div id="p11" class="ltx_para">
+<p class="ltx_p">As defined above, it may not intuitively obvious what this
+equivalence amounts to. To this end, we may consider a different
+description. Define the <em class="ltx_emph ltx_font_italic">reversal</em> of a path to be the
+path obtained by reversing the order of the vertices traversed:</p>
+<table id="S0.Ex10" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex10.m1" class="ltx_Math" alttext="(x_{1},x_{2},\ldots,x_{n-1},x_{n})^{-1}=(x_{n},x_{n-1},\ldots,x_{2},x_{1})" display="block"><mrow><msup><mrow><mo stretchy="false">(</mo><msub><mi>x</mi><mn>1</mn></msub><mo>,</mo><msub><mi>x</mi><mn>2</mn></msub><mo>,</mo><mi mathvariant="normal">…</mi><mo>,</mo><msub><mi>x</mi><mrow><mi>n</mi><mo>-</mo><mn>1</mn></mrow></msub><mo>,</mo><msub><mi>x</mi><mi>n</mi></msub><mo stretchy="false">)</mo></mrow><mrow><mo>-</mo><mn>1</mn></mrow></msup><mo>=</mo><mrow><mo stretchy="false">(</mo><msub><mi>x</mi><mi>n</mi></msub><mo>,</mo><msub><mi>x</mi><mrow><mi>n</mi><mo>-</mo><mn>1</mn></mrow></msub><mo>,</mo><mi mathvariant="normal">…</mi><mo>,</mo><msub><mi>x</mi><mn>2</mn></msub><mo>,</mo><msub><mi>x</mi><mn>1</mn></msub><mo stretchy="false">)</mo></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">Then we may show that two paths are equivalent under retracing
+if they may both be obtained from a third path by inserting
+terms of the form <math id="p11.m1" class="ltx_Math" alttext="XX^{-1}" display="inline"><mrow><mi>X</mi><mo>⁢</mo><msup><mi>X</mi><mrow><mo>-</mo><mn>1</mn></mrow></msup></mrow></math>. In symbols, we claim that <math id="p11.m2" class="ltx_Math" alttext="A\sim B" display="inline"><mrow><mi>A</mi><mo>∼</mo><mi>B</mi></mrow></math>
+if there exists an integer <math id="p11.m3" class="ltx_Math" alttext="nï¼ž0" display="inline"><mrow><mi>n</mi><mo>⁢</mo><mi>Ã</mi><mo>⁢</mo><mi mathvariant="normal">¯</mi><mo>⁢</mo><mi>Â</mi><mo>⁢</mo><mi mathvariant="normal">¼</mi><mo>⁢</mo><mi>Å</mi><mo>⁢</mo><mi mathvariant="normal">¾</mi><mo>⁢</mo><mn>0</mn></mrow></math> and paths <math id="p11.m4" class="ltx_Math" alttext="X_{1},\ldots X_{n+1},Y_{1},\ldots Y_{n-1},Z_{1},\ldots Z_{n}" display="inline"><mrow><msub><mi>X</mi><mn>1</mn></msub><mo>,</mo><mrow><mi mathvariant="normal">…</mi><mo>⁢</mo><msub><mi>X</mi><mrow><mi>n</mi><mo>+</mo><mn>1</mn></mrow></msub></mrow><mo>,</mo><msub><mi>Y</mi><mn>1</mn></msub><mo>,</mo><mrow><mi mathvariant="normal">…</mi><mo>⁢</mo><msub><mi>Y</mi><mrow><mi>n</mi><mo>-</mo><mn>1</mn></mrow></msub></mrow><mo>,</mo><msub><mi>Z</mi><mn>1</mn></msub><mo>,</mo><mrow><mi mathvariant="normal">…</mi><mo>⁢</mo><msub><mi>Z</mi><mi>n</mi></msub></mrow></mrow></math> such that</p>
+<table id="S0.Ex11" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex11.m1" class="ltx_Math" alttext="A=X_{1}\circ X_{1}^{-1}\circ Z_{1}\circ X_{2}\circ X_{2}^{-1}\circ\cdots\circ X%
+_{n-1}\circ X_{n-1}^{-1}\circ Z_{n}\circ X_{n}\circ X_{n}^{-1}\circ Z_{n}\circ
+X%
+_{n+1}\circ X_{n+1}^{-1}" display="block"><mrow><mi>A</mi><mo>=</mo><mrow><msub><mi>X</mi><mn>1</mn></msub><mo>∘</mo><msubsup><mi>X</mi><mn>1</mn><mrow><mo>-</mo><mn>1</mn></mrow></msubsup><mo>∘</mo><msub><mi>Z</mi><mn>1</mn></msub><mo>∘</mo><msub><mi>X</mi><mn>2</mn></msub><mo>∘</mo><msubsup><mi>X</mi><mn>2</mn><mrow><mo>-</mo><mn>1</mn></mrow></msubsup><mo>∘</mo><mi mathvariant="normal">⋯</mi><mo>∘</mo><msub><mi>X</mi><mrow><mi>n</mi><mo>-</mo><mn>1</mn></mrow></msub><mo>∘</mo><msubsup><mi>X</mi><mrow><mi>n</mi><mo>-</mo><mn>1</mn></mrow><mrow><mo>-</mo><mn>1</mn></mrow></msubsup><mo>∘</mo><msub><mi>Z</mi><mi>n</mi></msub><mo>∘</mo><msub><mi>X</mi><mi>n</mi></msub><mo>∘</mo><msubsup><mi>X</mi><mi>n</mi><mrow><mo>-</mo><mn>1</mn></mrow></msubsup><mo>∘</mo><msub><mi>Z</mi><mi>n</mi></msub><mo>∘</mo><msub><mi>X</mi><mrow><mi>n</mi><mo>+</mo><mn>1</mn></mrow></msub><mo>∘</mo><msubsup><mi>X</mi><mrow><mi>n</mi><mo>+</mo><mn>1</mn></mrow><mrow><mo>-</mo><mn>1</mn></mrow></msubsup></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">and</p>
+<table id="S0.Ex12" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex12.m1" class="ltx_Math" alttext="B=Y_{1}\circ Y_{1}^{-1}\circ Z_{1}\circ Y_{2}\circ Y_{2}^{-1}\circ\cdots\circ Y%
+_{n-1}\circ Y_{n-1}^{-1}\circ Z_{n}\circ Y_{n}\circ Y_{n}^{-1}\circ Z_{n}\circ
+Y%
+_{n+1}\circ Y_{n+1}^{-1}" display="block"><mrow><mi>B</mi><mo>=</mo><mrow><msub><mi>Y</mi><mn>1</mn></msub><mo>∘</mo><msubsup><mi>Y</mi><mn>1</mn><mrow><mo>-</mo><mn>1</mn></mrow></msubsup><mo>∘</mo><msub><mi>Z</mi><mn>1</mn></msub><mo>∘</mo><msub><mi>Y</mi><mn>2</mn></msub><mo>∘</mo><msubsup><mi>Y</mi><mn>2</mn><mrow><mo>-</mo><mn>1</mn></mrow></msubsup><mo>∘</mo><mi mathvariant="normal">⋯</mi><mo>∘</mo><msub><mi>Y</mi><mrow><mi>n</mi><mo>-</mo><mn>1</mn></mrow></msub><mo>∘</mo><msubsup><mi>Y</mi><mrow><mi>n</mi><mo>-</mo><mn>1</mn></mrow><mrow><mo>-</mo><mn>1</mn></mrow></msubsup><mo>∘</mo><msub><mi>Z</mi><mi>n</mi></msub><mo>∘</mo><msub><mi>Y</mi><mi>n</mi></msub><mo>∘</mo><msubsup><mi>Y</mi><mi>n</mi><mrow><mo>-</mo><mn>1</mn></mrow></msubsup><mo>∘</mo><msub><mi>Z</mi><mi>n</mi></msub><mo>∘</mo><msub><mi>Y</mi><mrow><mi>n</mi><mo>+</mo><mn>1</mn></mrow></msub><mo>∘</mo><msubsup><mi>Y</mi><mrow><mi>n</mi><mo>+</mo><mn>1</mn></mrow><mrow><mo>-</mo><mn>1</mn></mrow></msubsup></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">This characterization explains the choice of the term “retracing” —
+we do not change the equivalence class of the path if we happen to
+wander off somewhere in the course of following the path but then
+backtrack and pick the path up again where we left off on our
+digression.</p>
+</div>
+<div id="p12" class="ltx_para">
+<p class="ltx_p">Rather than presenting a detailed formal proof, we will sketch how
+the two definitions may be shown to be equivalent.
+</p>
+<table class="ltx_tabular ltx_align_right ltx_guessed_headers ltx_align_middle">
+<tbody class="ltx_tbody">
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l ltx_border_t">Title</th>
+<td class="ltx_td ltx_align_left ltx_border_r ltx_border_t">category of paths on a graph</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Canonical name</th>
+<td class="ltx_td ltx_align_left ltx_border_r">CategoryOfPathsOnAGraph</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Date of creation</th>
+<td class="ltx_td ltx_align_left ltx_border_r">2013-03-22 16:45:54</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Last modified on</th>
+<td class="ltx_td ltx_align_left ltx_border_r">2013-03-22 16:45:54</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Owner</th>
+<td class="ltx_td ltx_align_left ltx_border_r">rspuzio (6075)</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Last modified by</th>
+<td class="ltx_td ltx_align_left ltx_border_r">rspuzio (6075)</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Numerical id</th>
+<td class="ltx_td ltx_align_left ltx_border_r">18</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Author</th>
+<td class="ltx_td ltx_align_left ltx_border_r">rspuzio (6075)</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Entry type</th>
+<td class="ltx_td ltx_align_left ltx_border_r">Example</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Classification</th>
+<td class="ltx_td ltx_align_left ltx_border_r">msc 20L05</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Classification</th>
+<td class="ltx_td ltx_align_left ltx_border_r">msc 18B40</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_b ltx_border_l">Related topic</th>
+<td class="ltx_td ltx_align_left ltx_border_b ltx_border_r">IndexOfCategories</td>
+</tr>
+</tbody>
+</table>
+</div>
+</article>
+</div>
+<footer class="ltx_page_footer">
+<div class="ltx_page_logo">Generated  on Fri Feb  9 19:33:14 2018 by <a href="http://dlmf.nist.gov/LaTeXML/">LaTeXML <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAsAAAAOCAYAAAD5YeaVAAAAAXNSR0IArs4c6QAAAAZiS0dEAP8A/wD/oL2nkwAAAAlwSFlzAAALEwAACxMBAJqcGAAAAAd0SU1FB9wKExQZLWTEaOUAAAAddEVYdENvbW1lbnQAQ3JlYXRlZCB3aXRoIFRoZSBHSU1Q72QlbgAAAdpJREFUKM9tkL+L2nAARz9fPZNCKFapUn8kyI0e4iRHSR1Kb8ng0lJw6FYHFwv2LwhOpcWxTjeUunYqOmqd6hEoRDhtDWdA8ApRYsSUCDHNt5ul13vz4w0vWCgUnnEc975arX6ORqN3VqtVZbfbTQC4uEHANM3jSqXymFI6yWazP2KxWAXAL9zCUa1Wy2tXVxheKA9YNoR8Pt+aTqe4FVVVvz05O6MBhqUIBGk8Hn8HAOVy+T+XLJfLS4ZhTiRJgqIoVBRFIoric47jPnmeB1mW/9rr9ZpSSn3Lsmir1fJZlqWlUonKsvwWwD8ymc/nXwVBeLjf7xEKhdBut9Hr9WgmkyGEkJwsy5eHG5vN5g0AKIoCAEgkEkin0wQAfN9/cXPdheu6P33fBwB4ngcAcByHJpPJl+fn54mD3Gg0NrquXxeLRQAAwzAYj8cwTZPwPH9/sVg8PXweDAauqqr2cDjEer1GJBLBZDJBs9mE4zjwfZ85lAGg2+06hmGgXq+j3+/DsixYlgVN03a9Xu8jgCNCyIegIAgx13Vfd7vdu+FweG8YRkjXdWy329+dTgeSJD3ieZ7RNO0VAXAPwDEAO5VKndi2fWrb9jWl9Esul6PZbDY9Go1OZ7PZ9z/lyuD3OozU2wAAAABJRU5ErkJggg==" alt="[LOGO]"></a>
+</div></footer>
+</div>
+</body>
+</html>

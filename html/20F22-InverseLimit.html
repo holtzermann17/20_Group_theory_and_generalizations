@@ -1,0 +1,292 @@
+<!DOCTYPE html><html>
+<head>
+<title>inverse limit</title>
+<!--Generated on Fri Feb  9 19:29:17 2018 by LaTeXML (version 0.8.2) http://dlmf.nist.gov/LaTeXML/.-->
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" href="LaTeXML.css" type="text/css">
+<link rel="stylesheet" href="ltx-article.css" type="text/css">
+<link rel="stylesheet" href="https://cdn.rawgit.com/holtzermann17/3f71ceeb3b055e1ddc3b6c11fb1f074c/raw/2bb23e3b173ff96840797fc0c3bcb8c54085df8e/LaTeXML.css" type="text/css">
+<link rel="stylesheet" href="https://cdn.rawgit.com/holtzermann17/4bda0365b30858ac2fb83623185fe3ec/raw/cedd84ed3e3ad597c5d293f443ecfe4803741c6b/ltx-article.css" type="text/css">
+<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=MML_HTMLorMML" type="text/javascript"></script>
+</head>
+<body>
+<div class="ltx_page_main">
+<div class="ltx_page_content">
+<article class="ltx_document ltx_authors_1line">
+<h1 class="ltx_title ltx_title_document">inverse limit</h1>
+
+<div id="p1" class="ltx_para">
+<br class="ltx_break">
+<p class="ltx_p">Let <math id="p1.m1" class="ltx_Math" alttext="\{G_{i}\}_{i=0}^{\infty}" display="inline"><msubsup><mrow><mo stretchy="false">{</mo><msub><mi>G</mi><mi>i</mi></msub><mo stretchy="false">}</mo></mrow><mrow><mi>i</mi><mo>=</mo><mn>0</mn></mrow><mi mathvariant="normal">∞</mi></msubsup></math> be a sequence of groups which are
+related by a chain of surjective homomorphisms <math id="p1.m2" class="ltx_Math" alttext="f_{i}\colon G_{i}\to G_{i-1}" display="inline"><mrow><msub><mi>f</mi><mi>i</mi></msub><mo>:</mo><mrow><msub><mi>G</mi><mi>i</mi></msub><mo>→</mo><msub><mi>G</mi><mrow><mi>i</mi><mo>-</mo><mn>1</mn></mrow></msub></mrow></mrow></math> such that</p>
+<table id="S0.Ex1" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex1.m1" class="ltx_Math" alttext="\xymatrix{{G_{0}}&{G_{1}}\ar@{-&gt;}[l]_{f_{1}}&{G_{2}}\ar@{-&gt;}[l]_{f_{2}}&{G_{3}%
+}\ar@{-&gt;}[l]_{f_{3}}&{\ldots}\ar@{-&gt;}[l]_{f_{4}}}" display="block"><mrow><mrow><mrow><merror class="ltx_ERROR undefined undefined"><mtext>\xymatrix</mtext></merror><mo>⁢</mo><msub><mi>G</mi><mn>0</mn></msub><mo>⁢</mo><mi mathvariant="normal">&amp;</mi><mo>⁢</mo><msub><mi>G</mi><mn>1</mn></msub><mo>⁢</mo><merror class="ltx_ERROR undefined undefined"><mtext>\ar</mtext></merror><mo>⁢</mo><mi mathvariant="normal">@</mi></mrow><mo>-</mo></mrow><mo>&gt;</mo><mrow><mrow><msub><mrow><mo stretchy="false">[</mo><mi>l</mi><mo stretchy="false">]</mo></mrow><msub><mi>f</mi><mn>1</mn></msub></msub><mo>⁢</mo><mi mathvariant="normal">&amp;</mi><mo>⁢</mo><msub><mi>G</mi><mn>2</mn></msub><mo>⁢</mo><merror class="ltx_ERROR undefined undefined"><mtext>\ar</mtext></merror><mo>⁢</mo><mi mathvariant="normal">@</mi></mrow><mo>-</mo></mrow><mo>&gt;</mo><mrow><mrow><msub><mrow><mo stretchy="false">[</mo><mi>l</mi><mo stretchy="false">]</mo></mrow><msub><mi>f</mi><mn>2</mn></msub></msub><mo>⁢</mo><mi mathvariant="normal">&amp;</mi><mo>⁢</mo><msub><mi>G</mi><mn>3</mn></msub><mo>⁢</mo><merror class="ltx_ERROR undefined undefined"><mtext>\ar</mtext></merror><mo>⁢</mo><mi mathvariant="normal">@</mi></mrow><mo>-</mo></mrow><mo>&gt;</mo><mrow><mrow><msub><mrow><mo stretchy="false">[</mo><mi>l</mi><mo stretchy="false">]</mo></mrow><msub><mi>f</mi><mn>3</mn></msub></msub><mo>⁢</mo><mi mathvariant="normal">&amp;</mi><mo>⁢</mo><mi mathvariant="normal">…</mi><mo>⁢</mo><merror class="ltx_ERROR undefined undefined"><mtext>\ar</mtext></merror><mo>⁢</mo><mi mathvariant="normal">@</mi></mrow><mo>-</mo></mrow><mo>&gt;</mo><msub><mrow><mo stretchy="false">[</mo><mi>l</mi><mo stretchy="false">]</mo></mrow><msub><mi>f</mi><mn>4</mn></msub></msub></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+</div>
+<div id="Thmdefn1" class="ltx_theorem ltx_theorem_defn">
+<h6 class="ltx_title ltx_runin ltx_font_bold ltx_title_theorem">
+<span class="ltx_tag ltx_tag_theorem">Definition 1</span>.</h6>
+<div id="Thmdefn1.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_italic">The <em class="ltx_emph ltx_font_upright">inverse limit</em> of <math id="Thmdefn1.p1.m1" class="ltx_Math" alttext="(G_{i},f_{i})" display="inline"><mrow><mo mathvariant="normal" stretchy="false">(</mo><msub><mi>G</mi><mi>i</mi></msub><mo mathvariant="normal">,</mo><msub><mi>f</mi><mi>i</mi></msub><mo mathvariant="normal" stretchy="false">)</mo></mrow></math>, denoted by</span></p>
+<table id="S0.Ex2" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex2.m1" class="ltx_Math" alttext="\varprojlim(G_{i},f_{i}),\quad\text{ or }\quad\varprojlim G_{i}" display="block"><mrow><mrow><munder accentunder="true"><mi>lim</mi><mo>←</mo></munder><mo>⁡</mo><mrow><mo stretchy="false">(</mo><msub><mi>G</mi><mi>i</mi></msub><mo>,</mo><msub><mi>f</mi><mi>i</mi></msub><mo stretchy="false">)</mo></mrow></mrow><mo rspace="12.5pt">,</mo><mtext mathvariant="italic"> or </mtext><mo mathvariant="italic" separator="true"> </mo><mrow><munder accentunder="true"><mi>lim</mi><mo>←</mo></munder><mo>⁡</mo><msub><mi>G</mi><mi>i</mi></msub></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p"><span class="ltx_text ltx_font_italic">is the subset of <math id="Thmdefn1.p1.m2" class="ltx_Math" alttext="\prod_{i=0}^{\infty}G_{i}" display="inline"><mrow><msubsup><mo largeop="true" mathvariant="normal" symmetric="true">∏</mo><mrow><mi>i</mi><mo mathvariant="normal">=</mo><mn mathvariant="normal">0</mn></mrow><mi mathvariant="normal">∞</mi></msubsup><msub><mi>G</mi><mi>i</mi></msub></mrow></math> formed by
+elements satisfying</span></p>
+<table id="S0.Ex3" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex3.m1" class="ltx_Math" alttext="(\ g_{0},\ g_{1},\ g_{2},\ g_{3},\ \ldots),\ \text{with}\quad g_{i}\in G_{i},%
+\quad f_{i}(g_{i})=g_{i-1}" display="block"><mrow><mrow><mrow><mrow><mo rspace="7.5pt" stretchy="false">(</mo><msub><mi>g</mi><mn>0</mn></msub><mo rspace="7.5pt">,</mo><msub><mi>g</mi><mn>1</mn></msub><mo rspace="7.5pt">,</mo><msub><mi>g</mi><mn>2</mn></msub><mo rspace="7.5pt">,</mo><msub><mi>g</mi><mn>3</mn></msub><mo rspace="7.5pt">,</mo><mi mathvariant="normal">…</mi><mo stretchy="false">)</mo></mrow><mo rspace="7.5pt">,</mo><mtext>𝑤𝑖𝑡ℎ</mtext><mo mathvariant="italic" separator="true"> </mo><msub><mi>g</mi><mi>i</mi></msub></mrow><mo>∈</mo><msub><mi>G</mi><mi>i</mi></msub></mrow><mo rspace="12.5pt">,</mo><mrow><mrow><msub><mi>f</mi><mi>i</mi></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msub><mi>g</mi><mi>i</mi></msub><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><msub><mi>g</mi><mrow><mi>i</mi><mo>-</mo><mn>1</mn></mrow></msub></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+</div>
+</div>
+<div id="p2" class="ltx_para">
+<p class="ltx_p">Note: The inverse limit of <math id="p2.m1" class="ltx_Math" alttext="G_{i}" display="inline"><msub><mi>G</mi><mi>i</mi></msub></math> can be checked to be a subgroup
+of the product <math id="p2.m2" class="ltx_Math" alttext="\prod_{i=0}^{\infty}G_{i}" display="inline"><mrow><msubsup><mo largeop="true" symmetric="true">∏</mo><mrow><mi>i</mi><mo>=</mo><mn>0</mn></mrow><mi mathvariant="normal">∞</mi></msubsup><msub><mi>G</mi><mi>i</mi></msub></mrow></math>. See below for a more general definition.</p>
+</div>
+<div id="p3" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">Examples</span>:</p>
+<ol id="I1" class="ltx_enumerate">
+<li id="I1.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_enumerate">1.</span> 
+<div id="I1.i1.p1" class="ltx_para">
+<p class="ltx_p">Let <math id="I1.i1.p1.m1" class="ltx_Math" alttext="p\in\mathbb{N}" display="inline"><mrow><mi>p</mi><mo>∈</mo><mi>ℕ</mi></mrow></math> be a prime. Let <math id="I1.i1.p1.m2" class="ltx_Math" alttext="G_{0}=\{0\}" display="inline"><mrow><msub><mi>G</mi><mn>0</mn></msub><mo>=</mo><mrow><mo stretchy="false">{</mo><mn>0</mn><mo stretchy="false">}</mo></mrow></mrow></math> and
+<math id="I1.i1.p1.m3" class="ltx_Math" alttext="G_{i}=\mathbb{Z}/p^{i}\mathbb{Z}" display="inline"><mrow><msub><mi>G</mi><mi>i</mi></msub><mo>=</mo><mrow><mrow><mi>ℤ</mi><mo>/</mo><msup><mi>p</mi><mi>i</mi></msup></mrow><mo>⁢</mo><mi>ℤ</mi></mrow></mrow></math>. Define the connecting homomorphisms <math id="I1.i1.p1.m4" class="ltx_Math" alttext="f_{i}" display="inline"><msub><mi>f</mi><mi>i</mi></msub></math>, for <math id="I1.i1.p1.m5" class="ltx_Math" alttext="i\geq 2" display="inline"><mrow><mi>i</mi><mo>≥</mo><mn>2</mn></mrow></math>, to
+be “reduction modulo <math id="I1.i1.p1.m6" class="ltx_Math" alttext="p^{i-1}" display="inline"><msup><mi>p</mi><mrow><mi>i</mi><mo>-</mo><mn>1</mn></mrow></msup></math>” i.e.</p>
+<table id="S0.Ex4" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex4.m1" class="ltx_Math" alttext="f_{i}\colon\mathbb{Z}/p^{i}\mathbb{Z}\to\mathbb{Z}/p^{i-1}\mathbb{Z}" display="block"><mrow><msub><mi>f</mi><mi>i</mi></msub><mo>:</mo><mrow><mrow><mrow><mi>ℤ</mi><mo>/</mo><msup><mi>p</mi><mi>i</mi></msup></mrow><mo>⁢</mo><mi>ℤ</mi></mrow><mo>→</mo><mrow><mrow><mi>ℤ</mi><mo>/</mo><msup><mi>p</mi><mrow><mi>i</mi><mo>-</mo><mn>1</mn></mrow></msup></mrow><mo>⁢</mo><mi>ℤ</mi></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<table id="S0.Ex5" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex5.m1" class="ltx_Math" alttext="f_{i}(x\operatorname{mod}p^{i})=x\operatorname{mod}p^{i-1}" display="block"><mrow><mrow><msub><mi>f</mi><mi>i</mi></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi>x</mi><mo>⁢</mo><mrow><mi>mod</mi><mo>⁡</mo><msup><mi>p</mi><mi>i</mi></msup></mrow></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mi>x</mi><mo>⁢</mo><mrow><mi>mod</mi><mo>⁡</mo><msup><mi>p</mi><mrow><mi>i</mi><mo>-</mo><mn>1</mn></mrow></msup></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">which are obviously surjective homomorphisms. The inverse limit of
+<math id="I1.i1.p1.m7" class="ltx_Math" alttext="(\mathbb{Z}/p^{i}\mathbb{Z},f_{i})" display="inline"><mrow><mo stretchy="false">(</mo><mrow><mrow><mi>ℤ</mi><mo>/</mo><msup><mi>p</mi><mi>i</mi></msup></mrow><mo>⁢</mo><mi>ℤ</mi></mrow><mo>,</mo><msub><mi>f</mi><mi>i</mi></msub><mo stretchy="false">)</mo></mrow></math> is called the <math id="I1.i1.p1.m8" class="ltx_Math" alttext="p" display="inline"><mi>p</mi></math>-adic integers and
+denoted by</p>
+<table id="S0.Ex6" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex6.m1" class="ltx_Math" alttext="\mathbb{Z}_{p}=\varprojlim\mathbb{Z}/p^{i}\mathbb{Z}" display="block"><mrow><msub><mi>ℤ</mi><mi>p</mi></msub><mo>=</mo><mrow><munder accentunder="true"><mi>lim</mi><mo>←</mo></munder><mo>⁡</mo><mrow><mrow><mi>ℤ</mi><mo>/</mo><msup><mi>p</mi><mi>i</mi></msup></mrow><mo>⁢</mo><mi>ℤ</mi></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+</div>
+</li>
+<li id="I1.i2" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_enumerate">2.</span> 
+<div id="I1.i2.p1" class="ltx_para">
+<p class="ltx_p">Let <math id="I1.i2.p1.m1" class="ltx_Math" alttext="E" display="inline"><mi>E</mi></math> be an elliptic curve defined over <math id="I1.i2.p1.m2" class="ltx_Math" alttext="\mathbb{C}" display="inline"><mi>ℂ</mi></math>. Let
+<math id="I1.i2.p1.m3" class="ltx_Math" alttext="p" display="inline"><mi>p</mi></math> be a prime and for any natural number <math id="I1.i2.p1.m4" class="ltx_Math" alttext="n" display="inline"><mi>n</mi></math> write <math id="I1.i2.p1.m5" class="ltx_Math" alttext="E[n]" display="inline"><mrow><mi>E</mi><mo>⁢</mo><mrow><mo stretchy="false">[</mo><mi>n</mi><mo stretchy="false">]</mo></mrow></mrow></math> for the
+<math id="I1.i2.p1.m6" class="ltx_Math" alttext="n" display="inline"><mi>n</mi></math>-torsion group, i.e.</p>
+<table id="S0.Ex7" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex7.m1" class="ltx_Math" alttext="E[n]=\{Q\in E\mid n\cdot Q=O\}" display="block"><mrow><mrow><mi>E</mi><mo>⁢</mo><mrow><mo stretchy="false">[</mo><mi>n</mi><mo stretchy="false">]</mo></mrow></mrow><mo>=</mo><mrow><mo stretchy="false">{</mo><mrow><mi>Q</mi><mo>∈</mo><mi>E</mi></mrow><mo>∣</mo><mrow><mrow><mi>n</mi><mo>⋅</mo><mi>Q</mi></mrow><mo>=</mo><mi>O</mi></mrow><mo stretchy="false">}</mo></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">In this case we define <math id="I1.i2.p1.m7" class="ltx_Math" alttext="G_{i}=E[p^{i}]" display="inline"><mrow><msub><mi>G</mi><mi>i</mi></msub><mo>=</mo><mrow><mi>E</mi><mo>⁢</mo><mrow><mo stretchy="false">[</mo><msup><mi>p</mi><mi>i</mi></msup><mo stretchy="false">]</mo></mrow></mrow></mrow></math>, and
+</p>
+<table id="S0.Ex8" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex8.m1" class="ltx_Math" alttext="f_{i}\colon E[p^{i}]\to E[p^{i-1}],\quad f_{i}(Q)=p\cdot Q" display="block"><mrow><msub><mi>f</mi><mi>i</mi></msub><mo>:</mo><mrow><mrow><mrow><mi>E</mi><mo>⁢</mo><mrow><mo stretchy="false">[</mo><msup><mi>p</mi><mi>i</mi></msup><mo stretchy="false">]</mo></mrow></mrow><mo>→</mo><mrow><mi>E</mi><mo>⁢</mo><mrow><mo stretchy="false">[</mo><msup><mi>p</mi><mrow><mi>i</mi><mo>-</mo><mn>1</mn></mrow></msup><mo stretchy="false">]</mo></mrow></mrow></mrow><mo rspace="12.5pt">,</mo><mrow><mrow><msub><mi>f</mi><mi>i</mi></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>Q</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mi>p</mi><mo>⋅</mo><mi>Q</mi></mrow></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">The inverse limit of <math id="I1.i2.p1.m8" class="ltx_Math" alttext="(E[p^{i}],f_{i})" display="inline"><mrow><mo stretchy="false">(</mo><mrow><mi>E</mi><mo>⁢</mo><mrow><mo stretchy="false">[</mo><msup><mi>p</mi><mi>i</mi></msup><mo stretchy="false">]</mo></mrow></mrow><mo>,</mo><msub><mi>f</mi><mi>i</mi></msub><mo stretchy="false">)</mo></mrow></math> is called the Tate module of
+<math id="I1.i2.p1.m9" class="ltx_Math" alttext="E" display="inline"><mi>E</mi></math> and denoted</p>
+<table id="S0.Ex9" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex9.m1" class="ltx_Math" alttext="T_{p}(E)=\varprojlim E[p^{i}]" display="block"><mrow><mrow><msub><mi>T</mi><mi>p</mi></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>E</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><munder accentunder="true"><mi>lim</mi><mo>←</mo></munder><mo>⁡</mo><mrow><mi>E</mi><mo>⁢</mo><mrow><mo stretchy="false">[</mo><msup><mi>p</mi><mi>i</mi></msup><mo stretchy="false">]</mo></mrow></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+</div>
+</li>
+</ol>
+</div>
+<div id="p4" class="ltx_para">
+<p class="ltx_p">The concept of inverse limit can be defined in far more
+generality. Let <math id="p4.m1" class="ltx_Math" alttext="(S,\leq)" display="inline"><mrow><mo stretchy="false">(</mo><mi>S</mi><mo>,</mo><mo>≤</mo><mo stretchy="false">)</mo></mrow></math> be a directed set and let <math id="p4.m2" class="ltx_Math" alttext="\mathcal{C}" display="inline"><mi class="ltx_font_mathcaligraphic">𝒞</mi></math>
+be a category. Let <math id="p4.m3" class="ltx_Math" alttext="\{G_{\alpha}\}_{\alpha\in S}" display="inline"><msub><mrow><mo stretchy="false">{</mo><msub><mi>G</mi><mi>α</mi></msub><mo stretchy="false">}</mo></mrow><mrow><mi>α</mi><mo>∈</mo><mi>S</mi></mrow></msub></math> be a collection
+of objects in the category <math id="p4.m4" class="ltx_Math" alttext="\mathcal{C}" display="inline"><mi class="ltx_font_mathcaligraphic">𝒞</mi></math> and let</p>
+<table id="S0.Ex10" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex10.m1" class="ltx_Math" alttext="\{f_{\alpha,\beta}\colon G_{\beta}\to G_{\alpha}\mid\alpha,\beta\in S,\quad%
+\alpha\leq\beta\}" display="block"><mrow><mo stretchy="false">{</mo><msub><mi>f</mi><mrow><mi>α</mi><mo>,</mo><mi>β</mi></mrow></msub><mo>:</mo><msub><mi>G</mi><mi>β</mi></msub><mo>→</mo><msub><mi>G</mi><mi>α</mi></msub><mo>∣</mo><mi>α</mi><mo>,</mo><mi>β</mi><mo>∈</mo><mi>S</mi><mo rspace="12.5pt">,</mo><mi>α</mi><mo>≤</mo><mi>β</mi><mo stretchy="false">}</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">be a collection of
+morphisms satisfying:</p>
+<ol id="I2" class="ltx_enumerate">
+<li id="I2.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_enumerate">1.</span> 
+<div id="I2.i1.p1" class="ltx_para">
+<p class="ltx_p">For all <math id="I2.i1.p1.m1" class="ltx_Math" alttext="\alpha\in S" display="inline"><mrow><mi>α</mi><mo>∈</mo><mi>S</mi></mrow></math>,
+<math id="I2.i1.p1.m2" class="ltx_Math" alttext="f_{\alpha,\alpha}=\operatorname{Id}_{G_{\alpha}}" display="inline"><mrow><msub><mi>f</mi><mrow><mi>α</mi><mo>,</mo><mi>α</mi></mrow></msub><mo>=</mo><msub><mi>Id</mi><msub><mi>G</mi><mi>α</mi></msub></msub></mrow></math>, the identity
+morphism.</p>
+</div>
+</li>
+<li id="I2.i2" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_enumerate">2.</span> 
+<div id="I2.i2.p1" class="ltx_para">
+<p class="ltx_p">For all <math id="I2.i2.p1.m1" class="ltx_Math" alttext="\alpha,\beta,\gamma\in S" display="inline"><mrow><mrow><mi>α</mi><mo>,</mo><mi>β</mi><mo>,</mo><mi>γ</mi></mrow><mo>∈</mo><mi>S</mi></mrow></math> such that <math id="I2.i2.p1.m2" class="ltx_Math" alttext="\alpha\leq\beta\leq\gamma" display="inline"><mrow><mi>α</mi><mo>≤</mo><mi>β</mi><mo>≤</mo><mi>γ</mi></mrow></math>, we have <math id="I2.i2.p1.m3" class="ltx_Math" alttext="f_{\alpha,\gamma}=f_{\alpha,\beta}\circ f_{\beta,\gamma}" display="inline"><mrow><msub><mi>f</mi><mrow><mi>α</mi><mo>,</mo><mi>γ</mi></mrow></msub><mo>=</mo><mrow><msub><mi>f</mi><mrow><mi>α</mi><mo>,</mo><mi>β</mi></mrow></msub><mo>∘</mo><msub><mi>f</mi><mrow><mi>β</mi><mo>,</mo><mi>γ</mi></mrow></msub></mrow></mrow></math> (composition of morphisms).</p>
+</div>
+</li>
+</ol>
+</div>
+<div id="Thmdefn2" class="ltx_theorem ltx_theorem_defn">
+<h6 class="ltx_title ltx_runin ltx_font_bold ltx_title_theorem">
+<span class="ltx_tag ltx_tag_theorem">Definition 2</span>.</h6>
+<div id="Thmdefn2.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_italic">The <em class="ltx_emph ltx_font_upright">inverse limit</em> of <math id="Thmdefn2.p1.m1" class="ltx_Math" alttext="(\{G_{\alpha}\}_{\alpha\in S},\{f_{\alpha,\beta}\})" display="inline"><mrow><mo mathvariant="normal" stretchy="false">(</mo><msub><mrow><mo mathvariant="normal" stretchy="false">{</mo><msub><mi>G</mi><mi>α</mi></msub><mo mathvariant="normal" stretchy="false">}</mo></mrow><mrow><mi>α</mi><mo mathvariant="normal">∈</mo><mi>S</mi></mrow></msub><mo mathvariant="normal">,</mo><mrow><mo mathvariant="normal" stretchy="false">{</mo><msub><mi>f</mi><mrow><mi>α</mi><mo mathvariant="normal">,</mo><mi>β</mi></mrow></msub><mo mathvariant="normal" stretchy="false">}</mo></mrow><mo mathvariant="normal" stretchy="false">)</mo></mrow></math>, denoted by</span></p>
+<table id="S0.Ex11" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex11.m1" class="ltx_Math" alttext="\varprojlim(G_{\alpha},f_{\alpha,\beta}),\quad\text{ or }\quad\varprojlim G_{\alpha}" display="block"><mrow><mrow><munder accentunder="true"><mi>lim</mi><mo>←</mo></munder><mo>⁡</mo><mrow><mo stretchy="false">(</mo><msub><mi>G</mi><mi>α</mi></msub><mo>,</mo><msub><mi>f</mi><mrow><mi>α</mi><mo>,</mo><mi>β</mi></mrow></msub><mo stretchy="false">)</mo></mrow></mrow><mo rspace="12.5pt">,</mo><mtext mathvariant="italic"> or </mtext><mo mathvariant="italic" separator="true"> </mo><mrow><munder accentunder="true"><mi>lim</mi><mo>←</mo></munder><mo>⁡</mo><msub><mi>G</mi><mi>α</mi></msub></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p"><span class="ltx_text ltx_font_italic">is defined to be the set of all <math id="Thmdefn2.p1.m2" class="ltx_Math" alttext="(g_{\alpha})\in\prod_{\alpha\in S}G_{\alpha}" display="inline"><mrow><mrow><mo mathvariant="normal" stretchy="false">(</mo><msub><mi>g</mi><mi>α</mi></msub><mo mathvariant="normal" stretchy="false">)</mo></mrow><mo mathvariant="normal">∈</mo><mrow><msub><mo largeop="true" mathvariant="normal" symmetric="true">∏</mo><mrow><mi>α</mi><mo mathvariant="normal">∈</mo><mi>S</mi></mrow></msub><msub><mi>G</mi><mi>α</mi></msub></mrow></mrow></math> such that for all <math id="Thmdefn2.p1.m3" class="ltx_Math" alttext="\alpha,\beta\in S" display="inline"><mrow><mrow><mi>α</mi><mo mathvariant="normal">,</mo><mi>β</mi></mrow><mo mathvariant="normal">∈</mo><mi>S</mi></mrow></math></span></p>
+<table id="S0.Ex12" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex12.m1" class="ltx_Math" alttext="\alpha\leq\beta\Rightarrow f_{\alpha,\beta}(g_{\beta})=g_{\alpha}" display="block"><mrow><mi>α</mi><mo>≤</mo><mi>β</mi><mo>⇒</mo><mrow><msub><mi>f</mi><mrow><mi>α</mi><mo>,</mo><mi>β</mi></mrow></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msub><mi>g</mi><mi>β</mi></msub><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><msub><mi>g</mi><mi>α</mi></msub></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+</div>
+</div>
+<div id="p5" class="ltx_para">
+<p class="ltx_p">For a good example of this more general construction, see infinite
+Galois theory.
+</p>
+<table class="ltx_tabular ltx_align_right ltx_align_middle">
+<tbody class="ltx_tbody">
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l ltx_border_t">Title</td>
+<td class="ltx_td ltx_align_left ltx_border_r ltx_border_t">inverse limit</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Canonical name</td>
+<td class="ltx_td ltx_align_left ltx_border_r">InverseLimit</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Date of creation</td>
+<td class="ltx_td ltx_align_left ltx_border_r">2013-03-22 13:54:20</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Last modified on</td>
+<td class="ltx_td ltx_align_left ltx_border_r">2013-03-22 13:54:20</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Owner</td>
+<td class="ltx_td ltx_align_left ltx_border_r">alozano (2414)</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Last modified by</td>
+<td class="ltx_td ltx_align_left ltx_border_r">alozano (2414)</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Numerical id</td>
+<td class="ltx_td ltx_align_left ltx_border_r">10</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Author</td>
+<td class="ltx_td ltx_align_left ltx_border_r">alozano (2414)</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Entry type</td>
+<td class="ltx_td ltx_align_left ltx_border_r">Definition</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Classification</td>
+<td class="ltx_td ltx_align_left ltx_border_r">msc 20F22</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Synonym</td>
+<td class="ltx_td ltx_align_left ltx_border_r">inverse system</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Synonym</td>
+<td class="ltx_td ltx_align_left ltx_border_r">projective limit</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Related topic</td>
+<td class="ltx_td ltx_align_left ltx_border_r">PAdicIntegers</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Related topic</td>
+<td class="ltx_td ltx_align_left ltx_border_r">GaloisRepresentation</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Related topic</td>
+<td class="ltx_td ltx_align_left ltx_border_r">InfiniteGaloisTheory</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Related topic</td>
+<td class="ltx_td ltx_align_left ltx_border_r">ProfiniteGroup</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Related topic</td>
+<td class="ltx_td ltx_align_left ltx_border_r">CategoryAssociatedToAPartialOrder</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Related topic</td>
+<td class="ltx_td ltx_align_left ltx_border_r">DirectLimit</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Related topic</td>
+<td class="ltx_td ltx_align_left ltx_border_r">CohomologyOfSmallCategories</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_b ltx_border_l">Defines</td>
+<td class="ltx_td ltx_align_left ltx_border_b ltx_border_r">inverse limit</td>
+</tr>
+</tbody>
+</table>
+</div>
+</article>
+</div>
+<footer class="ltx_page_footer">
+<div class="ltx_page_logo">Generated  on Fri Feb  9 19:29:17 2018 by <a href="http://dlmf.nist.gov/LaTeXML/">LaTeXML <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAsAAAAOCAYAAAD5YeaVAAAAAXNSR0IArs4c6QAAAAZiS0dEAP8A/wD/oL2nkwAAAAlwSFlzAAALEwAACxMBAJqcGAAAAAd0SU1FB9wKExQZLWTEaOUAAAAddEVYdENvbW1lbnQAQ3JlYXRlZCB3aXRoIFRoZSBHSU1Q72QlbgAAAdpJREFUKM9tkL+L2nAARz9fPZNCKFapUn8kyI0e4iRHSR1Kb8ng0lJw6FYHFwv2LwhOpcWxTjeUunYqOmqd6hEoRDhtDWdA8ApRYsSUCDHNt5ul13vz4w0vWCgUnnEc975arX6ORqN3VqtVZbfbTQC4uEHANM3jSqXymFI6yWazP2KxWAXAL9zCUa1Wy2tXVxheKA9YNoR8Pt+aTqe4FVVVvz05O6MBhqUIBGk8Hn8HAOVy+T+XLJfLS4ZhTiRJgqIoVBRFIoric47jPnmeB1mW/9rr9ZpSSn3Lsmir1fJZlqWlUonKsvwWwD8ymc/nXwVBeLjf7xEKhdBut9Hr9WgmkyGEkJwsy5eHG5vN5g0AKIoCAEgkEkin0wQAfN9/cXPdheu6P33fBwB4ngcAcByHJpPJl+fn54mD3Gg0NrquXxeLRQAAwzAYj8cwTZPwPH9/sVg8PXweDAauqqr2cDjEer1GJBLBZDJBs9mE4zjwfZ85lAGg2+06hmGgXq+j3+/DsixYlgVN03a9Xu8jgCNCyIegIAgx13Vfd7vdu+FweG8YRkjXdWy329+dTgeSJD3ieZ7RNO0VAXAPwDEAO5VKndi2fWrb9jWl9Esul6PZbDY9Go1OZ7PZ9z/lyuD3OozU2wAAAABJRU5ErkJggg==" alt="[LOGO]"></a>
+</div></footer>
+</div>
+</body>
+</html>

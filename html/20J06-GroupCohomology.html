@@ -1,0 +1,305 @@
+<!DOCTYPE html><html>
+<head>
+<title>group cohomology</title>
+<!--Generated on Fri Feb  9 19:31:50 2018 by LaTeXML (version 0.8.2) http://dlmf.nist.gov/LaTeXML/.-->
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" href="LaTeXML.css" type="text/css">
+<link rel="stylesheet" href="ltx-article.css" type="text/css">
+<link rel="stylesheet" href="https://cdn.rawgit.com/holtzermann17/3f71ceeb3b055e1ddc3b6c11fb1f074c/raw/2bb23e3b173ff96840797fc0c3bcb8c54085df8e/LaTeXML.css" type="text/css">
+<link rel="stylesheet" href="https://cdn.rawgit.com/holtzermann17/4bda0365b30858ac2fb83623185fe3ec/raw/cedd84ed3e3ad597c5d293f443ecfe4803741c6b/ltx-article.css" type="text/css">
+<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=MML_HTMLorMML" type="text/javascript"></script>
+</head>
+<body>
+<div class="ltx_page_main">
+<div class="ltx_page_content">
+<article class="ltx_document ltx_authors_1line">
+<h1 class="ltx_title ltx_title_document">group cohomology</h1>
+
+<div id="p1" class="ltx_para">
+<br class="ltx_break">
+<p class="ltx_p">Let <math id="p1.m1" class="ltx_Math" alttext="G" display="inline"><mi>G</mi></math> be a group and let <math id="p1.m2" class="ltx_Math" alttext="M" display="inline"><mi>M</mi></math> be a (left) <math id="p1.m3" class="ltx_Math" alttext="G" display="inline"><mi>G</mi></math>-module. The
+<math id="p1.m4" class="ltx_Math" alttext="0^{th}" display="inline"><msup><mn>0</mn><mrow><mi>t</mi><mo>⁢</mo><mi>h</mi></mrow></msup></math> <em class="ltx_emph ltx_font_italic">cohomology group</em> of the <math id="p1.m5" class="ltx_Math" alttext="G" display="inline"><mi>G</mi></math>-module <math id="p1.m6" class="ltx_Math" alttext="M" display="inline"><mi>M</mi></math> is</p>
+<table id="S0.Ex1" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex1.m1" class="ltx_Math" alttext="H^{0}(G,M)=\{m\in M:\forall\sigma\in G,\ \sigma m=m\}" display="block"><mrow><mrow><msup><mi>H</mi><mn>0</mn></msup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>G</mi><mo>,</mo><mi>M</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mo stretchy="false">{</mo><mrow><mi>m</mi><mo>∈</mo><mi>M</mi></mrow><mo>:</mo><mrow><mrow><mrow><mo>∀</mo><mi>σ</mi></mrow><mo>∈</mo><mi>G</mi></mrow><mo rspace="7.5pt">,</mo><mrow><mrow><mi>σ</mi><mo>⁢</mo><mi>m</mi></mrow><mo>=</mo><mi>m</mi></mrow></mrow><mo stretchy="false">}</mo></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">which is the set of elements of <math id="p1.m7" class="ltx_Math" alttext="M" display="inline"><mi>M</mi></math> which are <math id="p1.m8" class="ltx_Math" alttext="G" display="inline"><mi>G</mi></math>-invariant, also
+denoted by <math id="p1.m9" class="ltx_Math" alttext="M^{G}" display="inline"><msup><mi>M</mi><mi>G</mi></msup></math>.</p>
+</div>
+<div id="p2" class="ltx_para">
+<p class="ltx_p">A map <math id="p2.m1" class="ltx_Math" alttext="\phi\colon G\to M" display="inline"><mrow><mi>ϕ</mi><mo>:</mo><mrow><mi>G</mi><mo>→</mo><mi>M</mi></mrow></mrow></math> is said to be a <em class="ltx_emph ltx_font_italic">crossed
+homomorphism</em> (or <em class="ltx_emph ltx_font_italic">1-cocycle</em>) if</p>
+<table id="S0.Ex2" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex2.m1" class="ltx_Math" alttext="\phi(\alpha\beta)=\phi(\alpha)+\alpha\phi(\beta)" display="block"><mrow><mrow><mi>ϕ</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi>α</mi><mo>⁢</mo><mi>β</mi></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mrow><mi>ϕ</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>α</mi><mo stretchy="false">)</mo></mrow></mrow><mo>+</mo><mrow><mi>α</mi><mo>⁢</mo><mi>ϕ</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>β</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">for all <math id="p2.m2" class="ltx_Math" alttext="\alpha,\beta\in G" display="inline"><mrow><mrow><mi>α</mi><mo>,</mo><mi>β</mi></mrow><mo>∈</mo><mi>G</mi></mrow></math>. If we fix <math id="p2.m3" class="ltx_Math" alttext="m\in M" display="inline"><mrow><mi>m</mi><mo>∈</mo><mi>M</mi></mrow></math>, the map
+<math id="p2.m4" class="ltx_Math" alttext="\rho\colon G\to M" display="inline"><mrow><mi>ρ</mi><mo>:</mo><mrow><mi>G</mi><mo>→</mo><mi>M</mi></mrow></mrow></math> defined by</p>
+<table id="S0.Ex3" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex3.m1" class="ltx_Math" alttext="\rho(\alpha)=\alpha m-m" display="block"><mrow><mrow><mi>ρ</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>α</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mrow><mi>α</mi><mo>⁢</mo><mi>m</mi></mrow><mo>-</mo><mi>m</mi></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">is clearly a crossed homomorphism, said to be <em class="ltx_emph ltx_font_italic">principal</em> (or
+<em class="ltx_emph ltx_font_italic">1-coboundary</em>). We define the following groups:</p>
+<table id="A0.EGx1" class="ltx_equationgroup ltx_eqn_eqnarray ltx_eqn_table">
+
+<tr id="S0.Ex4" class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="S0.Ex4.m1" class="ltx_Math" alttext="\displaystyle Z^{1}(G,M)" display="inline"><mrow><msup><mi>Z</mi><mn>1</mn></msup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>G</mi><mo>,</mo><mi>M</mi><mo stretchy="false">)</mo></mrow></mrow></math></td>
+<td class="ltx_td ltx_align_center ltx_eqn_cell"><math id="S0.Ex4.m2" class="ltx_Math" alttext="\displaystyle=" display="inline"><mo>=</mo></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S0.Ex4.m3" class="ltx_Math" alttext="\displaystyle\{\phi:G\to M\colon\phi\text{ is a 1-cocycle}\}" display="inline"><mrow><mi mathvariant="normal">{</mi><mi>ϕ</mi><mo>:</mo><mi>G</mi><mo>→</mo><mi>M</mi><mo>:</mo><mi>ϕ</mi><mtext> is a 1-cocycle</mtext><mo stretchy="false">}</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr id="S0.Ex5" class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="S0.Ex5.m1" class="ltx_Math" alttext="\displaystyle B^{1}(G,M)" display="inline"><mrow><msup><mi>B</mi><mn>1</mn></msup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>G</mi><mo>,</mo><mi>M</mi><mo stretchy="false">)</mo></mrow></mrow></math></td>
+<td class="ltx_td ltx_align_center ltx_eqn_cell"><math id="S0.Ex5.m2" class="ltx_Math" alttext="\displaystyle=" display="inline"><mo>=</mo></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S0.Ex5.m3" class="ltx_Math" alttext="\displaystyle\{\rho:G\to M\colon\rho\text{ is a
+1-coboundary}\}" display="inline"><mrow><mi mathvariant="normal">{</mi><mi>ρ</mi><mo>:</mo><mi>G</mi><mo>→</mo><mi>M</mi><mo>:</mo><mi>ρ</mi><mtext> is a
+1-coboundary</mtext><mo stretchy="false">}</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">Finally, the <math id="p2.m5" class="ltx_Math" alttext="1^{st}" display="inline"><msup><mn>1</mn><mrow><mi>s</mi><mo>⁢</mo><mi>t</mi></mrow></msup></math> <em class="ltx_emph ltx_font_italic">cohomology group</em> of the <math id="p2.m6" class="ltx_Math" alttext="G" display="inline"><mi>G</mi></math>-module
+<math id="p2.m7" class="ltx_Math" alttext="M" display="inline"><mi>M</mi></math> is defined to be the quotient group:</p>
+<table id="S0.Ex6" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex6.m1" class="ltx_Math" alttext="H^{1}(G,M)=Z^{1}(G,M)/B^{1}(G,M)" display="block"><mrow><mrow><msup><mi>H</mi><mn>1</mn></msup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>G</mi><mo>,</mo><mi>M</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mrow><mrow><msup><mi>Z</mi><mn>1</mn></msup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>G</mi><mo>,</mo><mi>M</mi><mo stretchy="false">)</mo></mrow></mrow><mo>/</mo><msup><mi>B</mi><mn>1</mn></msup></mrow><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>G</mi><mo>,</mo><mi>M</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+</div>
+<div id="p3" class="ltx_para">
+<p class="ltx_p">The following proposition is very useful when trying to compute
+cohomology groups:</p>
+</div>
+<div id="Thmprop1" class="ltx_theorem ltx_theorem_prop">
+<h6 class="ltx_title ltx_runin ltx_font_bold ltx_title_theorem">
+<span class="ltx_tag ltx_tag_theorem">Proposition 1</span>.</h6>
+<div id="Thmprop1.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_italic">Let <math id="Thmprop1.p1.m1" class="ltx_Math" alttext="G" display="inline"><mi>G</mi></math> be a group and let <math id="Thmprop1.p1.m2" class="ltx_Math" alttext="A,B,C" display="inline"><mrow><mi>A</mi><mo mathvariant="normal">,</mo><mi>B</mi><mo mathvariant="normal">,</mo><mi>C</mi></mrow></math> be <math id="Thmprop1.p1.m3" class="ltx_Math" alttext="G" display="inline"><mi>G</mi></math>-modules related by an
+exact sequence:</span></p>
+<table id="S0.Ex7" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex7.m1" class="ltx_Math" alttext="0\to A\to B\to C\to 0" display="block"><mrow><mn>0</mn><mo>→</mo><mi>A</mi><mo>→</mo><mi>B</mi><mo>→</mo><mi>C</mi><mo>→</mo><mn>0</mn></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p"><span class="ltx_text ltx_font_italic">Then there is a long exact sequence in cohomology:</span></p>
+<table id="S0.Ex8" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex8.m1" class="ltx_Math" alttext="0\to H^{0}(G,A)\to H^{0}(G,B)\to H^{0}(G,C)\to H^{1}(G,A)\to H^{1}(G,B)\to H^{%
+1}(G,C)\to\ldots" display="block"><mrow><mn>0</mn><mo>→</mo><mrow><msup><mi>H</mi><mn>0</mn></msup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>G</mi><mo>,</mo><mi>A</mi><mo stretchy="false">)</mo></mrow></mrow><mo>→</mo><mrow><msup><mi>H</mi><mn>0</mn></msup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>G</mi><mo>,</mo><mi>B</mi><mo stretchy="false">)</mo></mrow></mrow><mo>→</mo><mrow><msup><mi>H</mi><mn>0</mn></msup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>G</mi><mo>,</mo><mi>C</mi><mo stretchy="false">)</mo></mrow></mrow><mo>→</mo><mrow><msup><mi>H</mi><mn>1</mn></msup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>G</mi><mo>,</mo><mi>A</mi><mo stretchy="false">)</mo></mrow></mrow><mo>→</mo><mrow><msup><mi>H</mi><mn>1</mn></msup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>G</mi><mo>,</mo><mi>B</mi><mo stretchy="false">)</mo></mrow></mrow><mo>→</mo><mrow><msup><mi>H</mi><mn>1</mn></msup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>G</mi><mo>,</mo><mi>C</mi><mo stretchy="false">)</mo></mrow></mrow><mo>→</mo><mi mathvariant="normal">…</mi></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+</div>
+</div>
+<div id="p4" class="ltx_para">
+<p class="ltx_p">In general, the cohomology groups <math id="p4.m1" class="ltx_Math" alttext="H^{n}(G,M)" display="inline"><mrow><msup><mi>H</mi><mi>n</mi></msup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>G</mi><mo>,</mo><mi>M</mi><mo stretchy="false">)</mo></mrow></mrow></math> can be defined as
+follows:</p>
+</div>
+<div id="Thmdefn1" class="ltx_theorem ltx_theorem_defn">
+<h6 class="ltx_title ltx_runin ltx_font_bold ltx_title_theorem">
+<span class="ltx_tag ltx_tag_theorem">Definition 1</span>.</h6>
+<div id="Thmdefn1.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_italic">Define <math id="Thmdefn1.p1.m1" class="ltx_Math" alttext="C^{0}(G,M)=M" display="inline"><mrow><mrow><msup><mi>C</mi><mn mathvariant="normal">0</mn></msup><mo mathvariant="italic">⁢</mo><mrow><mo mathvariant="normal" stretchy="false">(</mo><mi>G</mi><mo mathvariant="normal">,</mo><mi>M</mi><mo mathvariant="normal" stretchy="false">)</mo></mrow></mrow><mo mathvariant="normal">=</mo><mi>M</mi></mrow></math> and for <math id="Thmdefn1.p1.m2" class="ltx_Math" alttext="n\geq 1" display="inline"><mrow><mi>n</mi><mo mathvariant="normal">≥</mo><mn mathvariant="normal">1</mn></mrow></math> define the additive group:</span></p>
+<table id="S0.Ex9" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex9.m1" class="ltx_Math" alttext="C^{n}(G,M)=\{\phi\colon G^{n}\to M\}" display="block"><mrow><mrow><msup><mi>C</mi><mi>n</mi></msup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>G</mi><mo>,</mo><mi>M</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mo stretchy="false">{</mo><mi>ϕ</mi><mo>:</mo><mrow><msup><mi>G</mi><mi>n</mi></msup><mo>→</mo><mi>M</mi></mrow><mo stretchy="false">}</mo></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p"><span class="ltx_text ltx_font_italic">The elements of <math id="Thmdefn1.p1.m3" class="ltx_Math" alttext="C^{n}(G,M)" display="inline"><mrow><msup><mi>C</mi><mi>n</mi></msup><mo mathvariant="italic">⁢</mo><mrow><mo mathvariant="normal" stretchy="false">(</mo><mi>G</mi><mo mathvariant="normal">,</mo><mi>M</mi><mo mathvariant="normal" stretchy="false">)</mo></mrow></mrow></math> are called <math id="Thmdefn1.p1.m4" class="ltx_Math" alttext="n" display="inline"><mi>n</mi></math>-cochains. Also, for
+<math id="Thmdefn1.p1.m5" class="ltx_Math" alttext="n\geq 0" display="inline"><mrow><mi>n</mi><mo mathvariant="normal">≥</mo><mn mathvariant="normal">0</mn></mrow></math> define the <math id="Thmdefn1.p1.m6" class="ltx_Math" alttext="n^{th}" display="inline"><msup><mi>n</mi><mrow><mi>t</mi><mo mathvariant="italic">⁢</mo><mi>h</mi></mrow></msup></math> coboundary homomorphism <math id="Thmdefn1.p1.m7" class="ltx_Math" alttext="d_{n}\colon C^{n}(G,M)\to C^{n+1}(G,M)" display="inline"><mrow><msub><mi>d</mi><mi>n</mi></msub><mo mathvariant="normal">:</mo><mrow><mrow><msup><mi>C</mi><mi>n</mi></msup><mo mathvariant="italic">⁢</mo><mrow><mo mathvariant="normal" stretchy="false">(</mo><mi>G</mi><mo mathvariant="normal">,</mo><mi>M</mi><mo mathvariant="normal" stretchy="false">)</mo></mrow></mrow><mo mathvariant="normal">→</mo><mrow><msup><mi>C</mi><mrow><mi>n</mi><mo mathvariant="normal">+</mo><mn mathvariant="normal">1</mn></mrow></msup><mo mathvariant="italic">⁢</mo><mrow><mo mathvariant="normal" stretchy="false">(</mo><mi>G</mi><mo mathvariant="normal">,</mo><mi>M</mi><mo mathvariant="normal" stretchy="false">)</mo></mrow></mrow></mrow></mrow></math>:</span></p>
+<table id="A0.EGx2" class="ltx_equationgroup ltx_eqn_eqnarray ltx_eqn_table">
+
+<tr id="S0.Ex12" class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="S0.Ex10.m1" class="ltx_Math" alttext="\displaystyle d_{n}(\phi)(g_{1},...,g_{n+1})" display="inline"><mrow><msub><mi>d</mi><mi>n</mi></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>ϕ</mi><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msub><mi>g</mi><mn>1</mn></msub><mo>,</mo><mi mathvariant="normal">…</mi><mo>,</mo><msub><mi>g</mi><mrow><mi>n</mi><mo>+</mo><mn>1</mn></mrow></msub><mo stretchy="false">)</mo></mrow></mrow></math></td>
+<td class="ltx_td ltx_align_center ltx_eqn_cell"><math id="S0.Ex10.m2" class="ltx_Math" alttext="\displaystyle=" display="inline"><mo>=</mo></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S0.Ex10.m3" class="ltx_Math" alttext="\displaystyle g_{1}\cdot\phi(g_{2},...,g_{n+1})" display="inline"><mrow><mrow><msub><mi>g</mi><mn>1</mn></msub><mo>⋅</mo><mi>ϕ</mi></mrow><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msub><mi>g</mi><mn>2</mn></msub><mo>,</mo><mi mathvariant="normal">…</mi><mo>,</mo><msub><mi>g</mi><mrow><mi>n</mi><mo>+</mo><mn>1</mn></mrow></msub><mo stretchy="false">)</mo></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr class="ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"></td>
+<td class="ltx_td ltx_align_center ltx_eqn_cell"><math id="S0.Ex11.m2" class="ltx_Math" alttext="\displaystyle+" display="inline"><mo>+</mo></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S0.Ex11.m3" class="ltx_Math" alttext="\displaystyle\sum_{i=1}^{n}(-1)^{i}\phi(g_{1},...,g_{i-1},g_{i}g_{i+1},g_{i+2}%
+,...,g_{n+1})" display="inline"><mrow><mstyle displaystyle="true"><munderover><mo largeop="true" movablelimits="false" symmetric="true">∑</mo><mrow><mi>i</mi><mo>=</mo><mn>1</mn></mrow><mi>n</mi></munderover></mstyle><mrow><msup><mrow><mo stretchy="false">(</mo><mrow><mo>-</mo><mn>1</mn></mrow><mo stretchy="false">)</mo></mrow><mi>i</mi></msup><mo>⁢</mo><mi>ϕ</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msub><mi>g</mi><mn>1</mn></msub><mo>,</mo><mi mathvariant="normal">…</mi><mo>,</mo><msub><mi>g</mi><mrow><mi>i</mi><mo>-</mo><mn>1</mn></mrow></msub><mo>,</mo><mrow><msub><mi>g</mi><mi>i</mi></msub><mo>⁢</mo><msub><mi>g</mi><mrow><mi>i</mi><mo>+</mo><mn>1</mn></mrow></msub></mrow><mo>,</mo><msub><mi>g</mi><mrow><mi>i</mi><mo>+</mo><mn>2</mn></mrow></msub><mo>,</mo><mi mathvariant="normal">…</mi><mo>,</mo><msub><mi>g</mi><mrow><mi>n</mi><mo>+</mo><mn>1</mn></mrow></msub><mo stretchy="false">)</mo></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr class="ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"></td>
+<td class="ltx_td ltx_align_center ltx_eqn_cell"><math id="S0.Ex12.m2" class="ltx_Math" alttext="\displaystyle+" display="inline"><mo>+</mo></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S0.Ex12.m3" class="ltx_Math" alttext="\displaystyle(-1)^{n+1}\phi(g_{1},...,g_{n})" display="inline"><mrow><msup><mrow><mo stretchy="false">(</mo><mrow><mo>-</mo><mn>1</mn></mrow><mo stretchy="false">)</mo></mrow><mrow><mi>n</mi><mo>+</mo><mn>1</mn></mrow></msup><mo>⁢</mo><mi>ϕ</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msub><mi>g</mi><mn>1</mn></msub><mo>,</mo><mi mathvariant="normal">…</mi><mo>,</mo><msub><mi>g</mi><mi>n</mi></msub><mo stretchy="false">)</mo></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p"><span class="ltx_text ltx_font_italic">Let <math id="Thmdefn1.p1.m8" class="ltx_Math" alttext="Z^{n}(G,M)=\operatorname{ker}d_{n}" display="inline"><mrow><mrow><msup><mi>Z</mi><mi>n</mi></msup><mo mathvariant="italic">⁢</mo><mrow><mo mathvariant="normal" stretchy="false">(</mo><mi>G</mi><mo mathvariant="normal">,</mo><mi>M</mi><mo mathvariant="normal" stretchy="false">)</mo></mrow></mrow><mo mathvariant="normal">=</mo><mrow><mi mathvariant="normal">ker</mi><mo mathvariant="italic">⁡</mo><msub><mi>d</mi><mi>n</mi></msub></mrow></mrow></math> for <math id="Thmdefn1.p1.m9" class="ltx_Math" alttext="n\geq 0" display="inline"><mrow><mi>n</mi><mo mathvariant="normal">≥</mo><mn mathvariant="normal">0</mn></mrow></math>, the set of
+<math id="Thmdefn1.p1.m10" class="ltx_Math" alttext="n" display="inline"><mi>n</mi></math>-cocyles. Also, let <math id="Thmdefn1.p1.m11" class="ltx_Math" alttext="B^{0}(G,M)=1" display="inline"><mrow><mrow><msup><mi>B</mi><mn mathvariant="normal">0</mn></msup><mo mathvariant="italic">⁢</mo><mrow><mo mathvariant="normal" stretchy="false">(</mo><mi>G</mi><mo mathvariant="normal">,</mo><mi>M</mi><mo mathvariant="normal" stretchy="false">)</mo></mrow></mrow><mo mathvariant="normal">=</mo><mn mathvariant="normal">1</mn></mrow></math> and for <math id="Thmdefn1.p1.m12" class="ltx_Math" alttext="n\geq 1" display="inline"><mrow><mi>n</mi><mo mathvariant="normal">≥</mo><mn mathvariant="normal">1</mn></mrow></math> let
+<math id="Thmdefn1.p1.m13" class="ltx_Math" alttext="B^{n}(G,M)=\operatorname{image}d_{n-1}" display="inline"><mrow><mrow><msup><mi>B</mi><mi>n</mi></msup><mo mathvariant="italic">⁢</mo><mrow><mo mathvariant="normal" stretchy="false">(</mo><mi>G</mi><mo mathvariant="normal">,</mo><mi>M</mi><mo mathvariant="normal" stretchy="false">)</mo></mrow></mrow><mo mathvariant="normal">=</mo><mrow><mi mathvariant="normal">image</mi><mo mathvariant="italic">⁡</mo><msub><mi>d</mi><mrow><mi>n</mi><mo mathvariant="normal">-</mo><mn mathvariant="normal">1</mn></mrow></msub></mrow></mrow></math>, the set of
+<math id="Thmdefn1.p1.m14" class="ltx_Math" alttext="n" display="inline"><mi>n</mi></math>-coboundaries.
+<br class="ltx_break"></span></p>
+</div>
+<div id="Thmdefn1.p2" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_italic">Finally we define the <math id="Thmdefn1.p2.m1" class="ltx_Math" alttext="n^{th}" display="inline"><msup><mi>n</mi><mrow><mi>t</mi><mo mathvariant="italic">⁢</mo><mi>h</mi></mrow></msup></math>-cohomology group of <math id="Thmdefn1.p2.m2" class="ltx_Math" alttext="G" display="inline"><mi>G</mi></math> with
+coefficients in <math id="Thmdefn1.p2.m3" class="ltx_Math" alttext="M" display="inline"><mi>M</mi></math> to be</span></p>
+<table id="S0.Ex13" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex13.m1" class="ltx_Math" alttext="H^{n}(G,M)=Z^{n}(G,M)/B^{n}(G,M)" display="block"><mrow><mrow><msup><mi>H</mi><mi>n</mi></msup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>G</mi><mo>,</mo><mi>M</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mrow><mrow><msup><mi>Z</mi><mi>n</mi></msup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>G</mi><mo>,</mo><mi>M</mi><mo stretchy="false">)</mo></mrow></mrow><mo>/</mo><msup><mi>B</mi><mi>n</mi></msup></mrow><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>G</mi><mo>,</mo><mi>M</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+</div>
+</div>
+<section id="bib" class="ltx_bibliography">
+<h2 class="ltx_title ltx_title_bibliography">References</h2>
+
+<ul class="ltx_biblist">
+      
+<li id="bib.bib1" class="ltx_bibitem">
+        <span class="ltx_bibtag ltx_role_refnum">1</span>
+        
+<span class="ltx_bibblock"> J.P. Serre, <span class="ltx_text ltx_font_italic">Galois Cohomology</span>,
+Springer-Verlag, New York.
+
+</span>
+      </li>
+      
+<li id="bib.bib2" class="ltx_bibitem">
+        <span class="ltx_bibtag ltx_role_refnum">2</span>
+        
+<span class="ltx_bibblock"> James Milne, <span class="ltx_text ltx_font_italic">Elliptic Curves</span>.
+
+</span>
+      </li>
+      
+<li id="bib.bib3" class="ltx_bibitem">
+        <span class="ltx_bibtag ltx_role_refnum">3</span>
+        
+<span class="ltx_bibblock"> Joseph H. Silverman, <span class="ltx_text ltx_font_italic">The Arithmetic of Elliptic Curves</span>. Springer-Verlag, New York, 1986.
+
+</span>
+      </li>
+    
+</ul>
+</section>
+<div id="p5" class="ltx_para ltx_align_right">
+<table class="ltx_tabular ltx_align_middle">
+<tbody class="ltx_tbody">
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l ltx_border_t">Title</td>
+<td class="ltx_td ltx_align_left ltx_border_r ltx_border_t">group cohomology</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Canonical name</td>
+<td class="ltx_td ltx_align_left ltx_border_r">GroupCohomology</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Date of creation</td>
+<td class="ltx_td ltx_align_left ltx_border_r">2013-03-22 13:50:07</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Last modified on</td>
+<td class="ltx_td ltx_align_left ltx_border_r">2013-03-22 13:50:07</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Owner</td>
+<td class="ltx_td ltx_align_left ltx_border_r">alozano (2414)</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Last modified by</td>
+<td class="ltx_td ltx_align_left ltx_border_r">alozano (2414)</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Numerical id</td>
+<td class="ltx_td ltx_align_left ltx_border_r">11</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Author</td>
+<td class="ltx_td ltx_align_left ltx_border_r">alozano (2414)</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Entry type</td>
+<td class="ltx_td ltx_align_left ltx_border_r">Definition</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Classification</td>
+<td class="ltx_td ltx_align_left ltx_border_r">msc 20J06</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Synonym</td>
+<td class="ltx_td ltx_align_left ltx_border_r">cohomology</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Related topic</td>
+<td class="ltx_td ltx_align_left ltx_border_r">SelmerGroup</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Related topic</td>
+<td class="ltx_td ltx_align_left ltx_border_r">CohomologyGroupTheorem</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Related topic</td>
+<td class="ltx_td ltx_align_left ltx_border_r">ProofOfCohomologyGroupTheorem</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Related topic</td>
+<td class="ltx_td ltx_align_left ltx_border_r">OmegaSpectrum</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Related topic</td>
+<td class="ltx_td ltx_align_left ltx_border_r">NaturalEquivalenceOfC_GAndC_MCategories</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Defines</td>
+<td class="ltx_td ltx_align_left ltx_border_r">group cohomology</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Defines</td>
+<td class="ltx_td ltx_align_left ltx_border_r">coboundary</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_l">Defines</td>
+<td class="ltx_td ltx_align_left ltx_border_r">cocycle</td>
+</tr>
+<tr class="ltx_tr">
+<td class="ltx_td ltx_align_left ltx_border_b ltx_border_l">Defines</td>
+<td class="ltx_td ltx_align_left ltx_border_b ltx_border_r">crossed homomorphism</td>
+</tr>
+</tbody>
+</table>
+</div>
+</article>
+</div>
+<footer class="ltx_page_footer">
+<div class="ltx_page_logo">Generated  on Fri Feb  9 19:31:50 2018 by <a href="http://dlmf.nist.gov/LaTeXML/">LaTeXML <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAsAAAAOCAYAAAD5YeaVAAAAAXNSR0IArs4c6QAAAAZiS0dEAP8A/wD/oL2nkwAAAAlwSFlzAAALEwAACxMBAJqcGAAAAAd0SU1FB9wKExQZLWTEaOUAAAAddEVYdENvbW1lbnQAQ3JlYXRlZCB3aXRoIFRoZSBHSU1Q72QlbgAAAdpJREFUKM9tkL+L2nAARz9fPZNCKFapUn8kyI0e4iRHSR1Kb8ng0lJw6FYHFwv2LwhOpcWxTjeUunYqOmqd6hEoRDhtDWdA8ApRYsSUCDHNt5ul13vz4w0vWCgUnnEc975arX6ORqN3VqtVZbfbTQC4uEHANM3jSqXymFI6yWazP2KxWAXAL9zCUa1Wy2tXVxheKA9YNoR8Pt+aTqe4FVVVvz05O6MBhqUIBGk8Hn8HAOVy+T+XLJfLS4ZhTiRJgqIoVBRFIoric47jPnmeB1mW/9rr9ZpSSn3Lsmir1fJZlqWlUonKsvwWwD8ymc/nXwVBeLjf7xEKhdBut9Hr9WgmkyGEkJwsy5eHG5vN5g0AKIoCAEgkEkin0wQAfN9/cXPdheu6P33fBwB4ngcAcByHJpPJl+fn54mD3Gg0NrquXxeLRQAAwzAYj8cwTZPwPH9/sVg8PXweDAauqqr2cDjEer1GJBLBZDJBs9mE4zjwfZ85lAGg2+06hmGgXq+j3+/DsixYlgVN03a9Xu8jgCNCyIegIAgx13Vfd7vdu+FweG8YRkjXdWy329+dTgeSJD3ieZ7RNO0VAXAPwDEAO5VKndi2fWrb9jWl9Esul6PZbDY9Go1OZ7PZ9z/lyuD3OozU2wAAAABJRU5ErkJggg==" alt="[LOGO]"></a>
+</div></footer>
+</div>
+</body>
+</html>

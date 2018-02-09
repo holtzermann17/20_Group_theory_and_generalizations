@@ -1,0 +1,310 @@
+<!DOCTYPE html><html>
+<head>
+<title>nonabelian group</title>
+<!--Generated on Fri Feb  9 19:18:05 2018 by LaTeXML (version 0.8.2) http://dlmf.nist.gov/LaTeXML/.-->
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" href="LaTeXML.css" type="text/css">
+<link rel="stylesheet" href="ltx-article.css" type="text/css">
+<link rel="stylesheet" href="https://cdn.rawgit.com/holtzermann17/3f71ceeb3b055e1ddc3b6c11fb1f074c/raw/2bb23e3b173ff96840797fc0c3bcb8c54085df8e/LaTeXML.css" type="text/css">
+<link rel="stylesheet" href="https://cdn.rawgit.com/holtzermann17/4bda0365b30858ac2fb83623185fe3ec/raw/cedd84ed3e3ad597c5d293f443ecfe4803741c6b/ltx-article.css" type="text/css">
+<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=MML_HTMLorMML" type="text/javascript"></script>
+</head>
+<body>
+<div class="ltx_page_main">
+<div class="ltx_page_content">
+<article class="ltx_document ltx_authors_1line">
+<h1 class="ltx_title ltx_title_document">nonabelian group</h1>
+
+<div id="p1" class="ltx_para">
+<br class="ltx_break">
+<p class="ltx_p">A group is said to be <em class="ltx_emph ltx_font_italic">nonabelian</em>, or <em class="ltx_emph ltx_font_italic">noncommutative</em>, if
+has elements which do not commute, that is, if there exist <math id="p1.m1" class="ltx_Math" alttext="a" display="inline"><mi>a</mi></math> and <math id="p1.m2" class="ltx_Math" alttext="b" display="inline"><mi>b</mi></math>
+in the group such that <math id="p1.m3" class="ltx_Math" alttext="ab\neq ba" display="inline"><mrow><mrow><mi>a</mi><mo>⁢</mo><mi>b</mi></mrow><mo>≠</mo><mrow><mi>b</mi><mo>⁢</mo><mi>a</mi></mrow></mrow></math>. Equivalently, a group is
+nonabelian if there exist <math id="p1.m4" class="ltx_Math" alttext="a" display="inline"><mi>a</mi></math> and <math id="p1.m5" class="ltx_Math" alttext="b" display="inline"><mi>b</mi></math> in the group such that the
+commutator <math id="p1.m6" class="ltx_Math" alttext="[a,b]" display="inline"><mrow><mo stretchy="false">[</mo><mi>a</mi><mo>,</mo><mi>b</mi><mo stretchy="false">]</mo></mrow></math> is not equal to the identity of the group. There
+exist many natural nonabelian groups, with order as small as <math id="p1.m7" class="ltx_Math" alttext="6" display="inline"><mn>6</mn></math>.
+While any group for which the square map is a homomorphism is abelian,
+there exist nonabelian groups of order as small as <math id="p1.m8" class="ltx_Math" alttext="27" display="inline"><mn>27</mn></math> for which the
+cube map is a homomorphism.</p>
+</div>
+<div id="p2" class="ltx_para">
+<p class="ltx_p">In the first section we give a way to visualize the group of rotations
+of a sphere and prove that it is nonabelian. This should be readable
+by an undergraduate student in algebra. In the second section, we
+discuss groups admitting a cube map and show that there are small
+nonabelian examples. The second section is somewhat more technical
+than the first and will require more facility with group theory,
+especially working with finitely presented groups and the commutator
+calculus.</p>
+</div>
+<section id="S1" class="ltx_section">
+<h2 class="ltx_title ltx_title_section">
+<span class="ltx_tag ltx_tag_section">1 </span>Concrete examples of nonabelian groups</h2>
+
+<div id="S1.p1" class="ltx_para">
+<p class="ltx_p">Although most number systems we use are abelian by design, there exist
+quite natural nonabelian groups. Perhaps the simplest example to
+visualize is given by the group of rotations of a sphere.<span class="ltx_note ltx_role_footnote"><sup class="ltx_note_mark">1</sup><span class="ltx_note_outer"><span class="ltx_note_content"><sup class="ltx_note_mark">1</sup>The
+treatment we give here is informal. For a more formal treatment of
+the group of rotations, consult the entries “Rotation
+matrix (<span class="ltx_text ltx_font_typewriter">http://planetmath.org/RotationMatrix</span>)” and “Dimension of the special
+orthogonal group (<span class="ltx_text ltx_font_typewriter">http://planetmath.org/DimensionOfTheSpecialOrthogonalGroup</span>)”.</span></span></span> We can
+compose two rotations by performing them in sequence, and we can
+invert a rotation by rotating in the opposite direction, so rotations
+do form a group. To follow what rotation does to the sphere, imagine
+that inside is suspended a copy of Marshall Hall’s classic text <span class="ltx_text ltx_font_italic">The Theory of Groups</span>. We will keep track of three pieces of
+information, namely, the directions that the front cover, the spine, and
+the bottom of the book face. When the sphere is in the identity position,
+the front cover faces the reader, the spine faces the left, and the
+bottom of the book is oriented downward.</p>
+</div>
+<div id="S1.p2" class="ltx_para">
+<p class="ltx_p">In preparation for verifying that the group is not abelian, we define
+two rotations, <math id="S1.p2.m1" class="ltx_Math" alttext="F" display="inline"><mi>F</mi></math> and <math id="S1.p2.m2" class="ltx_Math" alttext="R" display="inline"><mi>R</mi></math>. First, let <math id="S1.p2.m3" class="ltx_Math" alttext="F" display="inline"><mi>F</mi></math> (for “flip”) be the
+rotation which takes the point at the very top of the sphere and moves
+it forward through an angle of <math id="S1.p2.m4" class="ltx_Math" alttext="\pi" display="inline"><mi>π</mi></math>. For example, if we start with
+the sphere in the identity position and then perform <math id="S1.p2.m5" class="ltx_Math" alttext="F" display="inline"><mi>F</mi></math>, the front
+cover will face away from the reader, the spine will remain to the
+left, and the bottom of the book will be oriented upward. Second, let
+<math id="S1.p2.m6" class="ltx_Math" alttext="R" display="inline"><mi>R</mi></math> (for “rotate”) be the rotation which takes the point at the
+very top of the sphere and moves it left through an angle of
+<math id="S1.p2.m7" class="ltx_Math" alttext="\frac{\pi}{2}" display="inline"><mfrac><mi>π</mi><mn>2</mn></mfrac></math>. If we start with the sphere in the identity position
+and then perform <math id="S1.p2.m8" class="ltx_Math" alttext="R" display="inline"><mi>R</mi></math>, the front cover will continue to face the
+reader, the spine will face downward, and the bottom of the book will
+be oriented to the right.</p>
+</div>
+<div id="S1.p3" class="ltx_para">
+<p class="ltx_p">We now verify that the group of rotations is not abelian. If we start
+with the sphere in the identity position and perform <math id="S1.p3.m1" class="ltx_Math" alttext="FR" display="inline"><mrow><mi>F</mi><mo>⁢</mo><mi>R</mi></mrow></math>, that is,
+first <math id="S1.p3.m2" class="ltx_Math" alttext="F" display="inline"><mi>F</mi></math>, then <math id="S1.p3.m3" class="ltx_Math" alttext="R" display="inline"><mi>R</mi></math>, then the front cover will face away from the
+reader, the spine will face downward, and the bottom will be oriented
+to the left. On the other hand, if we start with the sphere in the
+identity position and perform <math id="S1.p3.m4" class="ltx_Math" alttext="RF" display="inline"><mrow><mi>R</mi><mo>⁢</mo><mi>F</mi></mrow></math>, then while the front cover will
+face away from the reader, the spine will face <em class="ltx_emph ltx_font_italic">upward</em>, and the
+bottom will be oriented to the <em class="ltx_emph ltx_font_italic">right</em>. So it matters in which
+order we perform <math id="S1.p3.m5" class="ltx_Math" alttext="F" display="inline"><mi>F</mi></math> and <math id="S1.p3.m6" class="ltx_Math" alttext="R" display="inline"><mi>R</mi></math>, that is, <math id="S1.p3.m7" class="ltx_Math" alttext="FR\neq RF" display="inline"><mrow><mrow><mi>F</mi><mo>⁢</mo><mi>R</mi></mrow><mo>≠</mo><mrow><mi>R</mi><mo>⁢</mo><mi>F</mi></mrow></mrow></math>, proving that the
+group is not abelian.</p>
+</div>
+<div id="S1.p4" class="ltx_para">
+<p class="ltx_p">Since every rotation in three-dimensional Euclidean space can be
+decomposed as a finite sequence of reflections and rotations in the
+Euclidean plane, one might hope that we can find finite nonabelian
+groups arising from objects in the plane, and in fact we can. For
+each regular polygon, there is an associated group, the dihedral group
+<math id="S1.p4.m1" class="ltx_Math" alttext="D_{2n}" display="inline"><msub><mi>D</mi><mrow><mn>2</mn><mo>⁢</mo><mi>n</mi></mrow></msub></math>, which is the group of symmetries of the polygon. (Here <math id="S1.p4.m2" class="ltx_Math" alttext="n" display="inline"><mi>n</mi></math>
+denotes the number of the sides of the polygon, and <math id="S1.p4.m3" class="ltx_Math" alttext="2n" display="inline"><mrow><mn>2</mn><mo>⁢</mo><mi>n</mi></mrow></math> gives the
+number of elements of the group of symmetries.) It is generated by
+two elements, <math id="S1.p4.m4" class="ltx_Math" alttext="F" display="inline"><mi>F</mi></math> (for “flip”) and <math id="S1.p4.m5" class="ltx_Math" alttext="R" display="inline"><mi>R</mi></math> (for “rotate”). These
+elements can be defined by analogy with the <math id="S1.p4.m6" class="ltx_Math" alttext="F" display="inline"><mi>F</mi></math> and <math id="S1.p4.m7" class="ltx_Math" alttext="R" display="inline"><mi>R</mi></math> above; for
+full details, consult the entry “Dihedral
+group (<span class="ltx_text ltx_font_typewriter">http://planetmath.org/DihedralGroup</span>)”, where flips are labelled instead by <math id="S1.p4.m8" class="ltx_Math" alttext="M" display="inline"><mi>M</mi></math> (for
+“mirror”). If <math id="S1.p4.m9" class="ltx_Math" alttext="n\geq 3" display="inline"><mrow><mi>n</mi><mo>≥</mo><mn>3</mn></mrow></math> (so we are dealing with an actual polygon
+here), it is possible to show that <math id="S1.p4.m10" class="ltx_Math" alttext="FR\neq RF" display="inline"><mrow><mrow><mi>F</mi><mo>⁢</mo><mi>R</mi></mrow><mo>≠</mo><mrow><mi>R</mi><mo>⁢</mo><mi>F</mi></mrow></mrow></math>. Moreover, every group
+with order <math id="S1.p4.m11" class="ltx_Math" alttext="1" display="inline"><mn>1</mn></math>, <math id="S1.p4.m12" class="ltx_Math" alttext="p" display="inline"><mi>p</mi></math>, or <math id="S1.p4.m13" class="ltx_Math" alttext="p^{2}" display="inline"><msup><mi>p</mi><mn>2</mn></msup></math>, where <math id="S1.p4.m14" class="ltx_Math" alttext="p" display="inline"><mi>p</mi></math> is a prime, is abelian. Thus
+the smallest possible order for a nonabelian group is <math id="S1.p4.m15" class="ltx_Math" alttext="6" display="inline"><mn>6</mn></math>. But
+<math id="S1.p4.m16" class="ltx_Math" alttext="D_{2\cdot 3}" display="inline"><msub><mi>D</mi><mrow><mn>2</mn><mo>⋅</mo><mn>3</mn></mrow></msub></math> has <math id="S1.p4.m17" class="ltx_Math" alttext="6" display="inline"><mn>6</mn></math> elements and is nonabelian, so it is the
+smallest possible nonabelian group.</p>
+</div>
+</section>
+<section id="S2" class="ltx_section">
+<h2 class="ltx_title ltx_title_section">
+<span class="ltx_tag ltx_tag_section">2 </span>Small nonabelian groups admitting a cube map</h2>
+
+<div id="S2.p1" class="ltx_para">
+<p class="ltx_p">When we say that a group admits <math id="S2.p1.m1" class="ltx_Math" alttext="x\mapsto x^{n}" display="inline"><mrow><mi>x</mi><mo>↦</mo><msup><mi>x</mi><mi>n</mi></msup></mrow></math>, we mean that the
+function <math id="S2.p1.m2" class="ltx_Math" alttext="\varphi" display="inline"><mi>φ</mi></math> defined on the group by the formula <math id="S2.p1.m3" class="ltx_Math" alttext="\varphi(x)=x^{n}" display="inline"><mrow><mrow><mi>φ</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><msup><mi>x</mi><mi>n</mi></msup></mrow></math> is a homomorphism, that is, that is, that for any <math id="S2.p1.m4" class="ltx_Math" alttext="x" display="inline"><mi>x</mi></math> and <math id="S2.p1.m5" class="ltx_Math" alttext="y" display="inline"><mi>y</mi></math> in
+the group,</p>
+<table id="S2.Ex1" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S2.Ex1.m1" class="ltx_Math" alttext="(xy)^{n}=\varphi(xy)=\varphi(x)\varphi(y)=x^{n}y^{n}." display="block"><mrow><mrow><msup><mrow><mo stretchy="false">(</mo><mrow><mi>x</mi><mo>⁢</mo><mi>y</mi></mrow><mo stretchy="false">)</mo></mrow><mi>n</mi></msup><mo>=</mo><mrow><mi>φ</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi>x</mi><mo>⁢</mo><mi>y</mi></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mi>φ</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mi>φ</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>y</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><msup><mi>x</mi><mi>n</mi></msup><mo>⁢</mo><msup><mi>y</mi><mi>n</mi></msup></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">If a group admits <math id="S2.p1.m6" class="ltx_Math" alttext="x\mapsto x^{2}" display="inline"><mrow><mi>x</mi><mo>↦</mo><msup><mi>x</mi><mn>2</mn></msup></mrow></math>, then for any <math id="S2.p1.m7" class="ltx_Math" alttext="x" display="inline"><mi>x</mi></math> and <math id="S2.p1.m8" class="ltx_Math" alttext="y" display="inline"><mi>y</mi></math> we have
+that <math id="S2.p1.m9" class="ltx_Math" alttext="(xy)^{2}=x^{2}y^{2}" display="inline"><mrow><msup><mrow><mo stretchy="false">(</mo><mrow><mi>x</mi><mo>⁢</mo><mi>y</mi></mrow><mo stretchy="false">)</mo></mrow><mn>2</mn></msup><mo>=</mo><mrow><msup><mi>x</mi><mn>2</mn></msup><mo>⁢</mo><msup><mi>y</mi><mn>2</mn></msup></mrow></mrow></math>. Multiplying on the left by <math id="S2.p1.m10" class="ltx_Math" alttext="x^{-1}" display="inline"><msup><mi>x</mi><mrow><mo>-</mo><mn>1</mn></mrow></msup></math> and on
+the right by <math id="S2.p1.m11" class="ltx_Math" alttext="y^{-1}" display="inline"><msup><mi>y</mi><mrow><mo>-</mo><mn>1</mn></mrow></msup></math> yields the identity <math id="S2.p1.m12" class="ltx_Math" alttext="yx=xy" display="inline"><mrow><mrow><mi>y</mi><mo>⁢</mo><mi>x</mi></mrow><mo>=</mo><mrow><mi>x</mi><mo>⁢</mo><mi>y</mi></mrow></mrow></math>. Thus all such
+groups are abelian. Moreover, the generalized commutativity and
+associativity laws for abelian groups imply that an abelian group
+admits all maps <math id="S2.p1.m13" class="ltx_Math" alttext="x\mapsto x^{n}" display="inline"><mrow><mi>x</mi><mo>↦</mo><msup><mi>x</mi><mi>n</mi></msup></mrow></math>. It is therefore reasonable to wonder
+whether the converse holds. In fact it is possible for a nonabelian
+group to admit <math id="S2.p1.m14" class="ltx_Math" alttext="x\mapsto x^{3}" display="inline"><mrow><mi>x</mi><mo>↦</mo><msup><mi>x</mi><mn>3</mn></msup></mrow></math>. The smallest order for such a group is
+<math id="S2.p1.m15" class="ltx_Math" alttext="27" display="inline"><mn>27</mn></math>. It is beyond the scope of this entry to prove that <math id="S2.p1.m16" class="ltx_Math" alttext="27" display="inline"><mn>27</mn></math> is the smallest
+possible order, but we will give an explicit example.</p>
+</div>
+<div id="S2.p2" class="ltx_para">
+<p class="ltx_p">Let <math id="S2.p2.m1" class="ltx_Math" alttext="G" display="inline"><mi>G</mi></math> be the group with presentation</p>
+<table id="S2.Ex2" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S2.Ex2.m1" class="ltx_Math" alttext="G=\langle a,b,c\mid a^{3},b^{3},c^{3},[a,c],[b,c],[a,b]c\rangle." display="block"><mrow><mrow><mi>G</mi><mo>=</mo><mrow><mo stretchy="false">⟨</mo><mrow><mi>a</mi><mo>,</mo><mi>b</mi><mo>,</mo><mi>c</mi></mrow><mo>∣</mo><mrow><msup><mi>a</mi><mn>3</mn></msup><mo>,</mo><msup><mi>b</mi><mn>3</mn></msup><mo>,</mo><msup><mi>c</mi><mn>3</mn></msup><mo>,</mo><mrow><mo stretchy="false">[</mo><mi>a</mi><mo>,</mo><mi>c</mi><mo stretchy="false">]</mo></mrow><mo>,</mo><mrow><mo stretchy="false">[</mo><mi>b</mi><mo>,</mo><mi>c</mi><mo stretchy="false">]</mo></mrow><mo>,</mo><mrow><mrow><mo stretchy="false">[</mo><mi>a</mi><mo>,</mo><mi>b</mi><mo stretchy="false">]</mo></mrow><mo>⁢</mo><mi>c</mi></mrow></mrow><mo stretchy="false">⟩</mo></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">This can be realized concretely as the group of upper-triangular
+matrices over <math id="S2.p2.m2" class="ltx_Math" alttext="\mathbb{Z}/3\mathbb{Z}" display="inline"><mrow><mrow><mi>ℤ</mi><mo>/</mo><mn>3</mn></mrow><mo>⁢</mo><mi>ℤ</mi></mrow></math> with <math id="S2.p2.m3" class="ltx_Math" alttext="1" display="inline"><mn>1</mn></math>s on the diagonal, but for
+simplicity we shall work directly with the presentation.</p>
+</div>
+<div id="S2.p3" class="ltx_para">
+<p class="ltx_p">The first three relators tell us that each generator of the group has
+order <math id="S2.p3.m1" class="ltx_Math" alttext="3" display="inline"><mn>3</mn></math>. The next two tell us that <math id="S2.p3.m2" class="ltx_Math" alttext="c" display="inline"><mi>c</mi></math> is central — since it
+commutes with the other two generators and commutes with itself, it
+must therefore commute with everything. The final relator is perhaps
+the most interesting. We can interpret it as the rewrite rule</p>
+<table id="S2.Ex3" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S2.Ex3.m1" class="ltx_Math" alttext="ba\mapsto abc," display="block"><mrow><mrow><mrow><mi>b</mi><mo>⁢</mo><mi>a</mi></mrow><mo>↦</mo><mrow><mi>a</mi><mo>⁢</mo><mi>b</mi><mo>⁢</mo><mi>c</mi></mrow></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">that is,</p>
+<table id="S2.Ex4" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><span class="ltx_text ltx_markedasmath">“when <math id="S2.Ex4.m1.m1" class="ltx_Math" alttext="b" display="inline"><mi>b</mi></math> moves past <math id="S2.Ex4.m1.m2" class="ltx_Math" alttext="a" display="inline"><mi>a</mi></math> it turns into <math id="S2.Ex4.m1.m3" class="ltx_Math" alttext="bc" display="inline"><mrow><mi>b</mi><mo>⁢</mo><mi>c</mi></mrow></math>.”</span></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">Thus given an element of <math id="S2.p3.m3" class="ltx_Math" alttext="G" display="inline"><mi>G</mi></math> we can always write it in the normal form
+<math id="S2.p3.m4" class="ltx_Math" alttext="a^{j}b^{k}c^{\ell}" display="inline"><mrow><msup><mi>a</mi><mi>j</mi></msup><mo>⁢</mo><msup><mi>b</mi><mi>k</mi></msup><mo>⁢</mo><msup><mi>c</mi><mi mathvariant="normal">ℓ</mi></msup></mrow></math>, where <math id="S2.p3.m5" class="ltx_Math" alttext="0\leq j,k,\ell&lt;3" display="inline"><mrow><mrow><mn>0</mn><mo>≤</mo><mrow><mi>j</mi><mo>,</mo><mi>k</mi></mrow></mrow><mo>,</mo><mrow><mi mathvariant="normal">ℓ</mi><mo>&lt;</mo><mn>3</mn></mrow></mrow></math>, and all such elements
+are distinct. This proves that the cardinality of <math id="S2.p3.m6" class="ltx_Math" alttext="G" display="inline"><mi>G</mi></math> is <math id="S2.p3.m7" class="ltx_Math" alttext="27" display="inline"><mn>27</mn></math>.
+Moreover, we also observe that</p>
+<table id="S2.Ex5" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S2.Ex5.m1" class="ltx_Math" alttext="ba=abc\neq ab," display="block"><mrow><mrow><mrow><mi>b</mi><mo>⁢</mo><mi>a</mi></mrow><mo>=</mo><mrow><mi>a</mi><mo>⁢</mo><mi>b</mi><mo>⁢</mo><mi>c</mi></mrow><mo>≠</mo><mrow><mi>a</mi><mo>⁢</mo><mi>b</mi></mrow></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">so <math id="S2.p3.m8" class="ltx_Math" alttext="G" display="inline"><mi>G</mi></math> is not abelian.</p>
+</div>
+<div id="S2.p4" class="ltx_para">
+<p class="ltx_p">It remains to check that <math id="S2.p4.m1" class="ltx_Math" alttext="G" display="inline"><mi>G</mi></math> admits the cube map. We will prove the
+simpler statement that <math id="S2.p4.m2" class="ltx_Math" alttext="G" display="inline"><mi>G</mi></math> has exponent <math id="S2.p4.m3" class="ltx_Math" alttext="3" display="inline"><mn>3</mn></math>. Given <math id="S2.p4.m4" class="ltx_Math" alttext="x" display="inline"><mi>x</mi></math> in <math id="S2.p4.m5" class="ltx_Math" alttext="G" display="inline"><mi>G</mi></math>, we
+first normalize it, so <math id="S2.p4.m6" class="ltx_Math" alttext="x=a^{j}b^{k}c^{\ell}" display="inline"><mrow><mi>x</mi><mo>=</mo><mrow><msup><mi>a</mi><mi>j</mi></msup><mo>⁢</mo><msup><mi>b</mi><mi>k</mi></msup><mo>⁢</mo><msup><mi>c</mi><mi mathvariant="normal">ℓ</mi></msup></mrow></mrow></math>. Since <math id="S2.p4.m7" class="ltx_Math" alttext="c" display="inline"><mi>c</mi></math> is in the
+center of <math id="S2.p4.m8" class="ltx_Math" alttext="G" display="inline"><mi>G</mi></math>,</p>
+<table id="S2.Ex6" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S2.Ex6.m1" class="ltx_Math" alttext="x^{3}=(a^{j}b^{k})^{3}c^{3\ell}=(a^{j}b^{k})^{3}=a^{j}(b^{k}a^{j})^{2}b^{k}." display="block"><mrow><mrow><msup><mi>x</mi><mn>3</mn></msup><mo>=</mo><mrow><msup><mrow><mo stretchy="false">(</mo><mrow><msup><mi>a</mi><mi>j</mi></msup><mo>⁢</mo><msup><mi>b</mi><mi>k</mi></msup></mrow><mo stretchy="false">)</mo></mrow><mn>3</mn></msup><mo>⁢</mo><msup><mi>c</mi><mrow><mn>3</mn><mo>⁢</mo><mi mathvariant="normal">ℓ</mi></mrow></msup></mrow><mo>=</mo><msup><mrow><mo stretchy="false">(</mo><mrow><msup><mi>a</mi><mi>j</mi></msup><mo>⁢</mo><msup><mi>b</mi><mi>k</mi></msup></mrow><mo stretchy="false">)</mo></mrow><mn>3</mn></msup><mo>=</mo><mrow><msup><mi>a</mi><mi>j</mi></msup><mo>⁢</mo><msup><mrow><mo stretchy="false">(</mo><mrow><msup><mi>b</mi><mi>k</mi></msup><mo>⁢</mo><msup><mi>a</mi><mi>j</mi></msup></mrow><mo stretchy="false">)</mo></mrow><mn>2</mn></msup><mo>⁢</mo><msup><mi>b</mi><mi>k</mi></msup></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+</div>
+<div id="S2.p5" class="ltx_para">
+<p class="ltx_p">To normalize the word <math id="S2.p5.m1" class="ltx_Math" alttext="b^{k}a^{j}" display="inline"><mrow><msup><mi>b</mi><mi>k</mi></msup><mo>⁢</mo><msup><mi>a</mi><mi>j</mi></msup></mrow></math>, we push each <math id="S2.p5.m2" class="ltx_Math" alttext="b" display="inline"><mi>b</mi></math> past all of the
+<math id="S2.p5.m3" class="ltx_Math" alttext="a" display="inline"><mi>a</mi></math>s. Since pushing <math id="S2.p5.m4" class="ltx_Math" alttext="b" display="inline"><mi>b</mi></math> past a <em class="ltx_emph ltx_font_italic">single</em> <math id="S2.p5.m5" class="ltx_Math" alttext="a" display="inline"><mi>a</mi></math> turns it into <math id="S2.p5.m6" class="ltx_Math" alttext="bc" display="inline"><mrow><mi>b</mi><mo>⁢</mo><mi>c</mi></mrow></math>, pushing
+it past <math id="S2.p5.m7" class="ltx_Math" alttext="a^{j}" display="inline"><msup><mi>a</mi><mi>j</mi></msup></math> turns it into <math id="S2.p5.m8" class="ltx_Math" alttext="bc^{j}" display="inline"><mrow><mi>b</mi><mo>⁢</mo><msup><mi>c</mi><mi>j</mi></msup></mrow></math>, that is,</p>
+<table id="S2.Ex7" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S2.Ex7.m1" class="ltx_Math" alttext="b^{k}a^{j}=b^{k-1}a^{j}bc^{j}." display="block"><mrow><mrow><mrow><msup><mi>b</mi><mi>k</mi></msup><mo>⁢</mo><msup><mi>a</mi><mi>j</mi></msup></mrow><mo>=</mo><mrow><msup><mi>b</mi><mrow><mi>k</mi><mo>-</mo><mn>1</mn></mrow></msup><mo>⁢</mo><msup><mi>a</mi><mi>j</mi></msup><mo>⁢</mo><mi>b</mi><mo>⁢</mo><msup><mi>c</mi><mi>j</mi></msup></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">By induction it follows that</p>
+<table id="S2.Ex8" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S2.Ex8.m1" class="ltx_Math" alttext="b^{k}a^{j}=a^{j}b^{k}c^{jk}." display="block"><mrow><mrow><mrow><msup><mi>b</mi><mi>k</mi></msup><mo>⁢</mo><msup><mi>a</mi><mi>j</mi></msup></mrow><mo>=</mo><mrow><msup><mi>a</mi><mi>j</mi></msup><mo>⁢</mo><msup><mi>b</mi><mi>k</mi></msup><mo>⁢</mo><msup><mi>c</mi><mrow><mi>j</mi><mo>⁢</mo><mi>k</mi></mrow></msup></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">Applying this result to <math id="S2.p5.m9" class="ltx_Math" alttext="x^{3}" display="inline"><msup><mi>x</mi><mn>3</mn></msup></math>, we get that</p>
+<table id="S2.Ex9" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S2.Ex9.m1" class="ltx_Math" alttext="x^{3}=a^{j}(a^{j}b^{k}c^{jk})^{2}b^{k}=a^{2j}(b^{k}a^{j})b^{2k}c^{2jk}=a^{3j}b%
+^{3k}c^{3jk}=1." display="block"><mrow><mrow><msup><mi>x</mi><mn>3</mn></msup><mo>=</mo><mrow><msup><mi>a</mi><mi>j</mi></msup><mo>⁢</mo><msup><mrow><mo stretchy="false">(</mo><mrow><msup><mi>a</mi><mi>j</mi></msup><mo>⁢</mo><msup><mi>b</mi><mi>k</mi></msup><mo>⁢</mo><msup><mi>c</mi><mrow><mi>j</mi><mo>⁢</mo><mi>k</mi></mrow></msup></mrow><mo stretchy="false">)</mo></mrow><mn>2</mn></msup><mo>⁢</mo><msup><mi>b</mi><mi>k</mi></msup></mrow><mo>=</mo><mrow><msup><mi>a</mi><mrow><mn>2</mn><mo>⁢</mo><mi>j</mi></mrow></msup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><msup><mi>b</mi><mi>k</mi></msup><mo>⁢</mo><msup><mi>a</mi><mi>j</mi></msup></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><msup><mi>b</mi><mrow><mn>2</mn><mo>⁢</mo><mi>k</mi></mrow></msup><mo>⁢</mo><msup><mi>c</mi><mrow><mn>2</mn><mo>⁢</mo><mi>j</mi><mo>⁢</mo><mi>k</mi></mrow></msup></mrow><mo>=</mo><mrow><msup><mi>a</mi><mrow><mn>3</mn><mo>⁢</mo><mi>j</mi></mrow></msup><mo>⁢</mo><msup><mi>b</mi><mrow><mn>3</mn><mo>⁢</mo><mi>k</mi></mrow></msup><mo>⁢</mo><msup><mi>c</mi><mrow><mn>3</mn><mo>⁢</mo><mi>j</mi><mo>⁢</mo><mi>k</mi></mrow></msup></mrow><mo>=</mo><mn>1</mn></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">Since <math id="S2.p5.m10" class="ltx_Math" alttext="x^{3}" display="inline"><msup><mi>x</mi><mn>3</mn></msup></math> is trivial for any <math id="S2.p5.m11" class="ltx_Math" alttext="x" display="inline"><mi>x</mi></math>, it follows that <math id="S2.p5.m12" class="ltx_Math" alttext="G" display="inline"><mi>G</mi></math> admits the
+cube map.</p>
+</div>
+<div id="S2.p6" class="ltx_para">
+<p class="ltx_p">The other nonabelian group of order <math id="S2.p6.m1" class="ltx_Math" alttext="27" display="inline"><mn>27</mn></math> has exponent <math id="S2.p6.m2" class="ltx_Math" alttext="9" display="inline"><mn>9</mn></math> and also admits the
+cube map. This will be described in an attached entry.</p>
+</div>
+<div id="S2.p7" class="ltx_para ltx_align_right">
+<table class="ltx_tabular ltx_guessed_headers ltx_align_middle">
+<tbody class="ltx_tbody">
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l ltx_border_t">Title</th>
+<td class="ltx_td ltx_align_left ltx_border_r ltx_border_t">nonabelian group</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Canonical name</th>
+<td class="ltx_td ltx_align_left ltx_border_r">NonabelianGroup</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Date of creation</th>
+<td class="ltx_td ltx_align_left ltx_border_r">2013-03-22 14:02:04</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Last modified on</th>
+<td class="ltx_td ltx_align_left ltx_border_r">2013-03-22 14:02:04</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Owner</th>
+<td class="ltx_td ltx_align_left ltx_border_r">drini (3)</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Last modified by</th>
+<td class="ltx_td ltx_align_left ltx_border_r">drini (3)</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Numerical id</th>
+<td class="ltx_td ltx_align_left ltx_border_r">10</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Author</th>
+<td class="ltx_td ltx_align_left ltx_border_r">drini (3)</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Entry type</th>
+<td class="ltx_td ltx_align_left ltx_border_r">Definition</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Classification</th>
+<td class="ltx_td ltx_align_left ltx_border_r">msc 20A05</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Synonym</th>
+<td class="ltx_td ltx_align_left ltx_border_r">non-abelian group</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Synonym</th>
+<td class="ltx_td ltx_align_left ltx_border_r">noncommutative group</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Synonym</th>
+<td class="ltx_td ltx_align_left ltx_border_r">non-commutative group</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_b ltx_border_l">Related topic</th>
+<td class="ltx_td ltx_align_left ltx_border_b ltx_border_r">AbelianGroup2</td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+</article>
+</div>
+<footer class="ltx_page_footer">
+<div class="ltx_page_logo">Generated  on Fri Feb  9 19:18:05 2018 by <a href="http://dlmf.nist.gov/LaTeXML/">LaTeXML <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAsAAAAOCAYAAAD5YeaVAAAAAXNSR0IArs4c6QAAAAZiS0dEAP8A/wD/oL2nkwAAAAlwSFlzAAALEwAACxMBAJqcGAAAAAd0SU1FB9wKExQZLWTEaOUAAAAddEVYdENvbW1lbnQAQ3JlYXRlZCB3aXRoIFRoZSBHSU1Q72QlbgAAAdpJREFUKM9tkL+L2nAARz9fPZNCKFapUn8kyI0e4iRHSR1Kb8ng0lJw6FYHFwv2LwhOpcWxTjeUunYqOmqd6hEoRDhtDWdA8ApRYsSUCDHNt5ul13vz4w0vWCgUnnEc975arX6ORqN3VqtVZbfbTQC4uEHANM3jSqXymFI6yWazP2KxWAXAL9zCUa1Wy2tXVxheKA9YNoR8Pt+aTqe4FVVVvz05O6MBhqUIBGk8Hn8HAOVy+T+XLJfLS4ZhTiRJgqIoVBRFIoric47jPnmeB1mW/9rr9ZpSSn3Lsmir1fJZlqWlUonKsvwWwD8ymc/nXwVBeLjf7xEKhdBut9Hr9WgmkyGEkJwsy5eHG5vN5g0AKIoCAEgkEkin0wQAfN9/cXPdheu6P33fBwB4ngcAcByHJpPJl+fn54mD3Gg0NrquXxeLRQAAwzAYj8cwTZPwPH9/sVg8PXweDAauqqr2cDjEer1GJBLBZDJBs9mE4zjwfZ85lAGg2+06hmGgXq+j3+/DsixYlgVN03a9Xu8jgCNCyIegIAgx13Vfd7vdu+FweG8YRkjXdWy329+dTgeSJD3ieZ7RNO0VAXAPwDEAO5VKndi2fWrb9jWl9Esul6PZbDY9Go1OZ7PZ9z/lyuD3OozU2wAAAABJRU5ErkJggg==" alt="[LOGO]"></a>
+</div></footer>
+</div>
+</body>
+</html>

@@ -1,0 +1,181 @@
+<!DOCTYPE html><html>
+<head>
+<title>proof of Scott-Wiegold conjecture</title>
+<!--Generated on Fri Feb  9 19:26:00 2018 by LaTeXML (version 0.8.2) http://dlmf.nist.gov/LaTeXML/.-->
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" href="LaTeXML.css" type="text/css">
+<link rel="stylesheet" href="ltx-article.css" type="text/css">
+<link rel="stylesheet" href="https://cdn.rawgit.com/holtzermann17/3f71ceeb3b055e1ddc3b6c11fb1f074c/raw/2bb23e3b173ff96840797fc0c3bcb8c54085df8e/LaTeXML.css" type="text/css">
+<link rel="stylesheet" href="https://cdn.rawgit.com/holtzermann17/4bda0365b30858ac2fb83623185fe3ec/raw/cedd84ed3e3ad597c5d293f443ecfe4803741c6b/ltx-article.css" type="text/css">
+<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=MML_HTMLorMML" type="text/javascript"></script>
+</head>
+<body>
+<div class="ltx_page_main">
+<div class="ltx_page_content">
+<article class="ltx_document ltx_authors_1line">
+<h1 class="ltx_title ltx_title_document">proof of Scott-Wiegold conjecture</h1>
+
+<div id="p1" class="ltx_para">
+<br class="ltx_break">
+<p class="ltx_p">Suppose the conjecture were false. Then we have some <math id="p1.m1" class="ltx_Math" alttext="w\in C_{p}*C_{q}*C_{r}" display="inline"><mrow><mi>w</mi><mo>∈</mo><mrow><msub><mi>C</mi><mi>p</mi></msub><mo>*</mo><msub><mi>C</mi><mi>q</mi></msub><mo>*</mo><msub><mi>C</mi><mi>r</mi></msub></mrow></mrow></math> with <math id="p1.m2" class="ltx_Math" alttext="N(w)=C_{p}*C_{q}*C_{r}" display="inline"><mrow><mrow><mi>N</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>w</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><msub><mi>C</mi><mi>p</mi></msub><mo>*</mo><msub><mi>C</mi><mi>q</mi></msub><mo>*</mo><msub><mi>C</mi><mi>r</mi></msub></mrow></mrow></math>. Let <math id="p1.m3" class="ltx_Math" alttext="a" display="inline"><mi>a</mi></math>, <math id="p1.m4" class="ltx_Math" alttext="b" display="inline"><mi>b</mi></math>, <math id="p1.m5" class="ltx_Math" alttext="c" display="inline"><mi>c</mi></math> denote
+the  of <math id="p1.m6" class="ltx_Math" alttext="w" display="inline"><mi>w</mi></math> onto <math id="p1.m7" class="ltx_Math" alttext="C_{p}" display="inline"><msub><mi>C</mi><mi>p</mi></msub></math>, <math id="p1.m8" class="ltx_Math" alttext="C_{q}" display="inline"><msub><mi>C</mi><mi>q</mi></msub></math>, <math id="p1.m9" class="ltx_Math" alttext="C_{r}" display="inline"><msub><mi>C</mi><mi>r</mi></msub></math> respectively. Then
+<math id="p1.m10" class="ltx_Math" alttext="a" display="inline"><mi>a</mi></math>, <math id="p1.m11" class="ltx_Math" alttext="b" display="inline"><mi>b</mi></math>, <math id="p1.m12" class="ltx_Math" alttext="c" display="inline"><mi>c</mi></math> are all non-trivial as otherwise <math id="p1.m13" class="ltx_Math" alttext="N(w)" display="inline"><mrow><mi>N</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>w</mi><mo stretchy="false">)</mo></mrow></mrow></math> would be
+contained in the kernel of one of the .</p>
+</div>
+<div id="p2" class="ltx_para">
+<p class="ltx_p">For <math id="p2.m1" class="ltx_Math" alttext="0^{\circ}&lt;\theta&lt;360^{\circ}" display="inline"><mrow><msup><mn>0</mn><mo>∘</mo></msup><mo>&lt;</mo><mi>θ</mi><mo>&lt;</mo><msup><mn>360</mn><mo>∘</mo></msup></mrow></math> we say that a spin through
+<math id="p2.m2" class="ltx_Math" alttext="\theta" display="inline"><mi>θ</mi></math> consists of a unit vector, <math id="p2.m3" class="ltx_Math" alttext="\vec{u}\in\mathbb{R}^{3}" display="inline"><mrow><mover accent="true"><mi>u</mi><mo stretchy="false">→</mo></mover><mo>∈</mo><msup><mi>ℝ</mi><mn>3</mn></msup></mrow></math> together with the
+rotation of <math id="p2.m4" class="ltx_Math" alttext="\mathbb{R}^{3}" display="inline"><msup><mi>ℝ</mi><mn>3</mn></msup></math> through the angle <math id="p2.m5" class="ltx_Math" alttext="\theta" display="inline"><mi>θ</mi></math> anticlockwise about <math id="p2.m6" class="ltx_Math" alttext="\vec{u}" display="inline"><mover accent="true"><mi>u</mi><mo stretchy="false">→</mo></mover></math>.
+In  we have a single spin through the angle <math id="p2.m7" class="ltx_Math" alttext="0^{\circ}" display="inline"><msup><mn>0</mn><mo>∘</mo></msup></math> and
+a single spin through <math id="p2.m8" class="ltx_Math" alttext="360^{\circ}" display="inline"><msup><mn>360</mn><mo>∘</mo></msup></math>. Thus the set of spins
+(usually denoted Spin(3)) naturally has the topology of a
+3-sphere.</p>
+</div>
+<div id="p3" class="ltx_para">
+<p class="ltx_p">The spin through <math id="p3.m1" class="ltx_Math" alttext="\theta" display="inline"><mi>θ</mi></math> about a unit vector <math id="p3.m2" class="ltx_Math" alttext="\vec{u}" display="inline"><mover accent="true"><mi>u</mi><mo stretchy="false">→</mo></mover></math> has the
+same underlying rotation as the spin through <math id="p3.m3" class="ltx_Math" alttext="360^{\circ}-\theta" display="inline"><mrow><msup><mn>360</mn><mo>∘</mo></msup><mo>-</mo><mi>θ</mi></mrow></math>
+about <math id="p3.m4" class="ltx_Math" alttext="-\vec{u}" display="inline"><mrow><mo>-</mo><mover accent="true"><mi>u</mi><mo stretchy="false">→</mo></mover></mrow></math>. Hence there are precisely two spins
+corresponding to each rotation of <math id="p3.m5" class="ltx_Math" alttext="\mathbb{R}^{3}" display="inline"><msup><mi>ℝ</mi><mn>3</mn></msup></math> about the origin.</p>
+</div>
+<div id="p4" class="ltx_para">
+<p class="ltx_p">is well defined on spins as you can compose the
+underlying rotations and continuity determines which of the two
+spins is the correct result. For example a <math id="p4.m1" class="ltx_Math" alttext="350^{\circ}" display="inline"><msup><mn>350</mn><mo>∘</mo></msup></math> spin about
+<math id="p4.m2" class="ltx_Math" alttext="\vec{u}" display="inline"><mover accent="true"><mi>u</mi><mo stretchy="false">→</mo></mover></math> composed with a <math id="p4.m3" class="ltx_Math" alttext="20^{\circ}" display="inline"><msup><mn>20</mn><mo>∘</mo></msup></math> spin about <math id="p4.m4" class="ltx_Math" alttext="\vec{u}" display="inline"><mover accent="true"><mi>u</mi><mo stretchy="false">→</mo></mover></math> is a
+<math id="p4.m5" class="ltx_Math" alttext="350^{\circ}" display="inline"><msup><mn>350</mn><mo>∘</mo></msup></math> spin about <math id="p4.m6" class="ltx_Math" alttext="-\vec{u}" display="inline"><mrow><mo>-</mo><mover accent="true"><mi>u</mi><mo stretchy="false">→</mo></mover></mrow></math> (not a <math id="p4.m7" class="ltx_Math" alttext="10^{\circ}" display="inline"><msup><mn>10</mn><mo>∘</mo></msup></math> spin about
+<math id="p4.m8" class="ltx_Math" alttext="\vec{u}" display="inline"><mover accent="true"><mi>u</mi><mo stretchy="false">→</mo></mover></math> which would be at the other end of the 3-sphere).</p>
+</div>
+<div id="p5" class="ltx_para">
+<p class="ltx_p">Let <math id="p5.m1" class="ltx_Math" alttext="\vec{n}" display="inline"><mover accent="true"><mi>n</mi><mo stretchy="false">→</mo></mover></math> denote the unit vector <math id="p5.m2" class="ltx_Math" alttext="(0,0,1)" display="inline"><mrow><mo stretchy="false">(</mo><mn>0</mn><mo>,</mo><mn>0</mn><mo>,</mo><mn>1</mn><mo stretchy="false">)</mo></mrow></math>. Fix an arc, <math id="p5.m3" class="ltx_Math" alttext="I" display="inline"><mi>I</mi></math>,
+on the unit sphere connecting <math id="p5.m4" class="ltx_Math" alttext="\vec{n}" display="inline"><mover accent="true"><mi>n</mi><mo stretchy="false">→</mo></mover></math> and <math id="p5.m5" class="ltx_Math" alttext="-\vec{n}" display="inline"><mrow><mo>-</mo><mover accent="true"><mi>n</mi><mo stretchy="false">→</mo></mover></mrow></math>. Let
+<math id="p5.m6" class="ltx_Math" alttext="\vec{t}" display="inline"><mover accent="true"><mi>t</mi><mo stretchy="false">→</mo></mover></math> be a vector on this arc. Let <math id="p5.m7" class="ltx_Math" alttext="\vec{u}" display="inline"><mover accent="true"><mi>u</mi><mo stretchy="false">→</mo></mover></math> be an arbitrary
+unit vector. We may define a homomorphism
+<math id="p5.m8" class="ltx_Math" alttext="\phi_{\vec{t},\vec{u}}\colon F_{\{a,b,c\}}\to{\rm Spin}(3)" display="inline"><mrow><msub><mi>ϕ</mi><mrow><mover accent="true"><mi>t</mi><mo stretchy="false">→</mo></mover><mo>,</mo><mover accent="true"><mi>u</mi><mo stretchy="false">→</mo></mover></mrow></msub><mo>:</mo><mrow><msub><mi>F</mi><mrow><mo stretchy="false">{</mo><mi>a</mi><mo>,</mo><mi>b</mi><mo>,</mo><mi>c</mi><mo stretchy="false">}</mo></mrow></msub><mo>→</mo><mrow><mi>Spin</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mn>3</mn><mo stretchy="false">)</mo></mrow></mrow></mrow></mrow></math>
+by:</p>
+</div>
+<div id="p6" class="ltx_para ltx_noindent">
+<p class="ltx_p"><math id="p6.m1" class="ltx_Math" alttext="\phi_{\vec{t},\vec{u}}\colon a\mapsto" display="inline"><mrow><msub><mi>ϕ</mi><mrow><mover accent="true"><mi>t</mi><mo stretchy="false">→</mo></mover><mo>,</mo><mover accent="true"><mi>u</mi><mo stretchy="false">→</mo></mover></mrow></msub><mo>:</mo><mrow><mi>a</mi><mo>↦</mo><mi></mi></mrow></mrow></math> the spin through
+<math id="p6.m2" class="ltx_Math" alttext="(\frac{p-1}{2})\frac{360^{\circ}}{p}" display="inline"><mrow><mrow><mo stretchy="false">(</mo><mfrac><mrow><mi>p</mi><mo>-</mo><mn>1</mn></mrow><mn>2</mn></mfrac><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mfrac><msup><mn>360</mn><mo>∘</mo></msup><mi>p</mi></mfrac></mrow></math> (or <math id="p6.m3" class="ltx_Math" alttext="180^{\circ}" display="inline"><msup><mn>180</mn><mo>∘</mo></msup></math> if <math id="p6.m4" class="ltx_Math" alttext="p=2" display="inline"><mrow><mi>p</mi><mo>=</mo><mn>2</mn></mrow></math>)
+about <math id="p6.m5" class="ltx_Math" alttext="\vec{n}" display="inline"><mover accent="true"><mi>n</mi><mo stretchy="false">→</mo></mover></math></p>
+</div>
+<div id="p7" class="ltx_para ltx_noindent">
+<p class="ltx_p"><math id="p7.m1" class="ltx_Math" alttext="\phi_{\vec{t},\vec{u}}\colon b\mapsto" display="inline"><mrow><msub><mi>ϕ</mi><mrow><mover accent="true"><mi>t</mi><mo stretchy="false">→</mo></mover><mo>,</mo><mover accent="true"><mi>u</mi><mo stretchy="false">→</mo></mover></mrow></msub><mo>:</mo><mrow><mi>b</mi><mo>↦</mo><mi></mi></mrow></mrow></math> the spin
+through <math id="p7.m2" class="ltx_Math" alttext="(\frac{q-1}{2})\frac{360^{\circ}}{q}" display="inline"><mrow><mrow><mo stretchy="false">(</mo><mfrac><mrow><mi>q</mi><mo>-</mo><mn>1</mn></mrow><mn>2</mn></mfrac><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mfrac><msup><mn>360</mn><mo>∘</mo></msup><mi>q</mi></mfrac></mrow></math> (or <math id="p7.m3" class="ltx_Math" alttext="180^{\circ}" display="inline"><msup><mn>180</mn><mo>∘</mo></msup></math> if
+<math id="p7.m4" class="ltx_Math" alttext="q=2" display="inline"><mrow><mi>q</mi><mo>=</mo><mn>2</mn></mrow></math>) about <math id="p7.m5" class="ltx_Math" alttext="\vec{t}" display="inline"><mover accent="true"><mi>t</mi><mo stretchy="false">→</mo></mover></math></p>
+</div>
+<div id="p8" class="ltx_para ltx_noindent">
+<p class="ltx_p"><math id="p8.m1" class="ltx_Math" alttext="\phi_{\vec{t},\vec{u}}\colon c\mapsto" display="inline"><mrow><msub><mi>ϕ</mi><mrow><mover accent="true"><mi>t</mi><mo stretchy="false">→</mo></mover><mo>,</mo><mover accent="true"><mi>u</mi><mo stretchy="false">→</mo></mover></mrow></msub><mo>:</mo><mrow><mi>c</mi><mo>↦</mo><mi></mi></mrow></mrow></math> the spin
+through <math id="p8.m2" class="ltx_Math" alttext="(\frac{r-1}{2})\frac{360^{\circ}}{r}" display="inline"><mrow><mrow><mo stretchy="false">(</mo><mfrac><mrow><mi>r</mi><mo>-</mo><mn>1</mn></mrow><mn>2</mn></mfrac><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mfrac><msup><mn>360</mn><mo>∘</mo></msup><mi>r</mi></mfrac></mrow></math> (or <math id="p8.m3" class="ltx_Math" alttext="180^{\circ}" display="inline"><msup><mn>180</mn><mo>∘</mo></msup></math> if
+<math id="p8.m4" class="ltx_Math" alttext="r=2" display="inline"><mrow><mi>r</mi><mo>=</mo><mn>2</mn></mrow></math>) about <math id="p8.m5" class="ltx_Math" alttext="\vec{u}" display="inline"><mover accent="true"><mi>u</mi><mo stretchy="false">→</mo></mover></math></p>
+</div>
+<div id="p9" class="ltx_para">
+<p class="ltx_p">(Here <math id="p9.m1" class="ltx_Math" alttext="F_{\{a,b,c\}}" display="inline"><msub><mi>F</mi><mrow><mo stretchy="false">{</mo><mi>a</mi><mo>,</mo><mi>b</mi><mo>,</mo><mi>c</mi><mo stretchy="false">}</mo></mrow></msub></math> denotes the free group on <math id="p9.m2" class="ltx_Math" alttext="a,b,c" display="inline"><mrow><mi>a</mi><mo>,</mo><mi>b</mi><mo>,</mo><mi>c</mi></mrow></math>).</p>
+</div>
+<div id="p10" class="ltx_para">
+<p class="ltx_p">So <math id="p10.m1" class="ltx_Math" alttext="\phi_{\vec{t},\vec{u}}(a)" display="inline"><mrow><msub><mi>ϕ</mi><mrow><mover accent="true"><mi>t</mi><mo stretchy="false">→</mo></mover><mo>,</mo><mover accent="true"><mi>u</mi><mo stretchy="false">→</mo></mover></mrow></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>a</mi><mo stretchy="false">)</mo></mrow></mrow></math>, <math id="p10.m2" class="ltx_Math" alttext="\phi_{\vec{t},\vec{u}}(b)" display="inline"><mrow><msub><mi>ϕ</mi><mrow><mover accent="true"><mi>t</mi><mo stretchy="false">→</mo></mover><mo>,</mo><mover accent="true"><mi>u</mi><mo stretchy="false">→</mo></mover></mrow></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>b</mi><mo stretchy="false">)</mo></mrow></mrow></math> and
+<math id="p10.m3" class="ltx_Math" alttext="\phi_{\vec{t},\vec{u}}(c)" display="inline"><mrow><msub><mi>ϕ</mi><mrow><mover accent="true"><mi>t</mi><mo stretchy="false">→</mo></mover><mo>,</mo><mover accent="true"><mi>u</mi><mo stretchy="false">→</mo></mover></mrow></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>c</mi><mo stretchy="false">)</mo></mrow></mrow></math> are spins of between <math id="p10.m4" class="ltx_Math" alttext="120^{\circ}" display="inline"><msup><mn>120</mn><mo>∘</mo></msup></math> and
+<math id="p10.m5" class="ltx_Math" alttext="180^{\circ}" display="inline"><msup><mn>180</mn><mo>∘</mo></msup></math>, all having non-trivial underlying rotations.</p>
+</div>
+<div id="p11" class="ltx_para">
+<p class="ltx_p">Let <math id="p11.m1" class="ltx_Math" alttext="\tilde{w}" display="inline"><mover accent="true"><mi>w</mi><mo stretchy="false">~</mo></mover></math> be a word in <math id="p11.m2" class="ltx_Math" alttext="F_{\{a,b,c\}}" display="inline"><msub><mi>F</mi><mrow><mo stretchy="false">{</mo><mi>a</mi><mo>,</mo><mi>b</mi><mo>,</mo><mi>c</mi><mo stretchy="false">}</mo></mrow></msub></math> representing <math id="p11.m3" class="ltx_Math" alttext="w" display="inline"><mi>w</mi></math>, such that <math id="p11.m4" class="ltx_Math" alttext="a,b,c" display="inline"><mrow><mi>a</mi><mo>,</mo><mi>b</mi><mo>,</mo><mi>c</mi></mrow></math> occur in it <math id="p11.m5" class="ltx_Math" alttext="1" display="inline"><mn>1</mn></math> Mod <math id="p11.m6" class="ltx_Math" alttext="(2p)" display="inline"><mrow><mo stretchy="false">(</mo><mrow><mn>2</mn><mo>⁢</mo><mi>p</mi></mrow><mo stretchy="false">)</mo></mrow></math> times, <math id="p11.m7" class="ltx_Math" alttext="1" display="inline"><mn>1</mn></math> Mod <math id="p11.m8" class="ltx_Math" alttext="2q" display="inline"><mrow><mn>2</mn><mo>⁢</mo><mi>q</mi></mrow></math> times and <math id="p11.m9" class="ltx_Math" alttext="1" display="inline"><mn>1</mn></math> Mod <math id="p11.m10" class="ltx_Math" alttext="(2r)" display="inline"><mrow><mo stretchy="false">(</mo><mrow><mn>2</mn><mo>⁢</mo><mi>r</mi></mrow><mo stretchy="false">)</mo></mrow></math> times, respectively.</p>
+</div>
+<div id="p12" class="ltx_para">
+<p class="ltx_p">We have a homomorphism <math id="p12.m1" class="ltx_Math" alttext="\phi^{\prime}:C_{p}*C_{q}*C_{r}\to SO(3)" display="inline"><mrow><msup><mi>ϕ</mi><mo>′</mo></msup><mo>:</mo><mrow><mrow><msub><mi>C</mi><mi>p</mi></msub><mo>*</mo><msub><mi>C</mi><mi>q</mi></msub><mo>*</mo><msub><mi>C</mi><mi>r</mi></msub></mrow><mo>→</mo><mrow><mi>S</mi><mo>⁢</mo><mi>O</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mn>3</mn><mo stretchy="false">)</mo></mrow></mrow></mrow></mrow></math> induced by <math id="p12.m2" class="ltx_Math" alttext="\phi" display="inline"><mi>ϕ</mi></math>. If
+<math id="p12.m3" class="ltx_Math" alttext="\phi_{\vec{t},\vec{u}}(\tilde{w})" display="inline"><mrow><msub><mi>ϕ</mi><mrow><mover accent="true"><mi>t</mi><mo stretchy="false">→</mo></mover><mo>,</mo><mover accent="true"><mi>u</mi><mo stretchy="false">→</mo></mover></mrow></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mover accent="true"><mi>w</mi><mo stretchy="false">~</mo></mover><mo stretchy="false">)</mo></mrow></mrow></math> has a trivial underlying rotation for
+some <math id="p12.m4" class="ltx_Math" alttext="\vec{t}" display="inline"><mover accent="true"><mi>t</mi><mo stretchy="false">→</mo></mover></math> and <math id="p12.m5" class="ltx_Math" alttext="\vec{u}" display="inline"><mover accent="true"><mi>u</mi><mo stretchy="false">→</mo></mover></math>, then <math id="p12.m6" class="ltx_Math" alttext="N(w)" display="inline"><mrow><mi>N</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>w</mi><mo stretchy="false">)</mo></mrow></mrow></math> will only contain
+elements in the kernel of <math id="p12.m7" class="ltx_Math" alttext="\phi^{\prime}" display="inline"><msup><mi>ϕ</mi><mo>′</mo></msup></math>. In particular, we would have <math id="p12.m8" class="ltx_Math" alttext="a,b,c\notin N(w)" display="inline"><mrow><mrow><mi>a</mi><mo>,</mo><mi>b</mi><mo>,</mo><mi>c</mi></mrow><mo>∉</mo><mrow><mi>N</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>w</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></math>. So
+we may assume we have a map:</p>
+</div>
+<div id="p13" class="ltx_para">
+<table id="S0.Ex1" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex1.m1" class="ltx_Math" alttext="h\colon I\times S^{2}\to S^{2}" display="block"><mrow><mi>h</mi><mo>:</mo><mrow><mrow><mi>I</mi><mo>×</mo><msup><mi>S</mi><mn>2</mn></msup></mrow><mo>→</mo><msup><mi>S</mi><mn>2</mn></msup></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+</div>
+<div id="p14" class="ltx_para ltx_noindent">
+<p class="ltx_p">which maps <math id="p14.m1" class="ltx_Math" alttext="(\vec{t},\vec{u})" display="inline"><mrow><mo stretchy="false">(</mo><mover accent="true"><mi>t</mi><mo stretchy="false">→</mo></mover><mo>,</mo><mover accent="true"><mi>u</mi><mo stretchy="false">→</mo></mover><mo stretchy="false">)</mo></mrow></math> to the unit vector corresponding to
+<math id="p14.m2" class="ltx_Math" alttext="\phi_{\vec{t},\vec{u}}(\tilde{w})" display="inline"><mrow><msub><mi>ϕ</mi><mrow><mover accent="true"><mi>t</mi><mo stretchy="false">→</mo></mover><mo>,</mo><mover accent="true"><mi>u</mi><mo stretchy="false">→</mo></mover></mrow></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mover accent="true"><mi>w</mi><mo stretchy="false">~</mo></mover><mo stretchy="false">)</mo></mrow></mrow></math>.</p>
+</div>
+<div id="p15" class="ltx_para">
+<p class="ltx_p">By  we have <math id="p15.m1" class="ltx_Math" alttext="h(\vec{n},R\vec{u})=Rh(\vec{n},\vec{u})" display="inline"><mrow><mrow><mi>h</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mover accent="true"><mi>n</mi><mo stretchy="false">→</mo></mover><mo>,</mo><mrow><mi>R</mi><mo>⁢</mo><mover accent="true"><mi>u</mi><mo stretchy="false">→</mo></mover></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mi>R</mi><mo>⁢</mo><mi>h</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mover accent="true"><mi>n</mi><mo stretchy="false">→</mo></mover><mo>,</mo><mover accent="true"><mi>u</mi><mo stretchy="false">→</mo></mover><mo stretchy="false">)</mo></mrow></mrow></mrow></math>
+for any rotation <math id="p15.m2" class="ltx_Math" alttext="R" display="inline"><mi>R</mi></math> about <math id="p15.m3" class="ltx_Math" alttext="\vec{n}" display="inline"><mover accent="true"><mi>n</mi><mo stretchy="false">→</mo></mover></math>. Thus <math id="p15.m4" class="ltx_Math" alttext="h(\vec{n},\_)\colon S^{2}\to S^{2}" display="inline"><mrow><mrow><mi>h</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mover accent="true"><mi>n</mi><mo stretchy="false">→</mo></mover><mo>,</mo><mi mathvariant="normal">_</mi><mo stretchy="false">)</mo></mrow></mrow><mo>:</mo><mrow><msup><mi>S</mi><mn>2</mn></msup><mo>→</mo><msup><mi>S</mi><mn>2</mn></msup></mrow></mrow></math> maps latitudes to latitudes (possibly rotating them
+and / or moving them up or down).</p>
+</div>
+<div id="p16" class="ltx_para">
+<p class="ltx_p">Also <math id="p16.m1" class="ltx_Math" alttext="h(\vec{n},\vec{n})=-\vec{n}" display="inline"><mrow><mrow><mi>h</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mover accent="true"><mi>n</mi><mo stretchy="false">→</mo></mover><mo>,</mo><mover accent="true"><mi>n</mi><mo stretchy="false">→</mo></mover><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mo>-</mo><mover accent="true"><mi>n</mi><mo stretchy="false">→</mo></mover></mrow></mrow></math>, as
+<math id="p16.m2" class="ltx_Math" alttext="\phi_{\vec{n},\vec{n}}(a)" display="inline"><mrow><msub><mi>ϕ</mi><mrow><mover accent="true"><mi>n</mi><mo stretchy="false">→</mo></mover><mo>,</mo><mover accent="true"><mi>n</mi><mo stretchy="false">→</mo></mover></mrow></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>a</mi><mo stretchy="false">)</mo></mrow></mrow></math>, <math id="p16.m3" class="ltx_Math" alttext="\phi_{\vec{n},\vec{n}}(b)" display="inline"><mrow><msub><mi>ϕ</mi><mrow><mover accent="true"><mi>n</mi><mo stretchy="false">→</mo></mover><mo>,</mo><mover accent="true"><mi>n</mi><mo stretchy="false">→</mo></mover></mrow></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>b</mi><mo stretchy="false">)</mo></mrow></mrow></math> and
+<math id="p16.m4" class="ltx_Math" alttext="\phi_{\vec{n},\vec{n}}(c)" display="inline"><mrow><msub><mi>ϕ</mi><mrow><mover accent="true"><mi>n</mi><mo stretchy="false">→</mo></mover><mo>,</mo><mover accent="true"><mi>n</mi><mo stretchy="false">→</mo></mover></mrow></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>c</mi><mo stretchy="false">)</mo></mrow></mrow></math> are spins of between <math id="p16.m5" class="ltx_Math" alttext="120^{\circ}" display="inline"><msup><mn>120</mn><mo>∘</mo></msup></math> and
+<math id="p16.m6" class="ltx_Math" alttext="180^{\circ}" display="inline"><msup><mn>180</mn><mo>∘</mo></msup></math> anticlockwise about <math id="p16.m7" class="ltx_Math" alttext="\vec{n}" display="inline"><mover accent="true"><mi>n</mi><mo stretchy="false">→</mo></mover></math>, so the sum of the
+angles will be greater than <math id="p16.m8" class="ltx_Math" alttext="360^{\circ}" display="inline"><msup><mn>360</mn><mo>∘</mo></msup></math>. Similarly one may
+ that <math id="p16.m9" class="ltx_Math" alttext="h(\vec{n},-\vec{n})=\vec{n}" display="inline"><mrow><mrow><mi>h</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mover accent="true"><mi>n</mi><mo stretchy="false">→</mo></mover><mo>,</mo><mrow><mo>-</mo><mover accent="true"><mi>n</mi><mo stretchy="false">→</mo></mover></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mover accent="true"><mi>n</mi><mo stretchy="false">→</mo></mover></mrow></math>. Thus, as <math id="p16.m10" class="ltx_Math" alttext="h(n,\_)" display="inline"><mrow><mi>h</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>n</mi><mo>,</mo><mi mathvariant="normal">_</mi><mo stretchy="false">)</mo></mrow></mrow></math> maps latitudes to latitudes, it must be homotopic to a
+reflection of <math id="p16.m11" class="ltx_Math" alttext="S^{2}" display="inline"><msup><mi>S</mi><mn>2</mn></msup></math>.</p>
+</div>
+<div id="p17" class="ltx_para">
+<p class="ltx_p">Again by  we have <math id="p17.m1" class="ltx_Math" alttext="h(-\vec{n},R\vec{u})=Rh(-\vec{n},\vec{u})" display="inline"><mrow><mrow><mi>h</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mo>-</mo><mover accent="true"><mi>n</mi><mo stretchy="false">→</mo></mover></mrow><mo>,</mo><mrow><mi>R</mi><mo>⁢</mo><mover accent="true"><mi>u</mi><mo stretchy="false">→</mo></mover></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mi>R</mi><mo>⁢</mo><mi>h</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mo>-</mo><mover accent="true"><mi>n</mi><mo stretchy="false">→</mo></mover></mrow><mo>,</mo><mover accent="true"><mi>u</mi><mo stretchy="false">→</mo></mover><mo stretchy="false">)</mo></mrow></mrow></mrow></math> for all rotations <math id="p17.m2" class="ltx_Math" alttext="R" display="inline"><mi>R</mi></math> about <math id="p17.m3" class="ltx_Math" alttext="\vec{n}" display="inline"><mover accent="true"><mi>n</mi><mo stretchy="false">→</mo></mover></math>.
+Hence <math id="p17.m4" class="ltx_Math" alttext="h(-\vec{n},\_)\colon S^{2}\to S^{2}" display="inline"><mrow><mrow><mi>h</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mo>-</mo><mover accent="true"><mi>n</mi><mo stretchy="false">→</mo></mover></mrow><mo>,</mo><mi mathvariant="normal">_</mi><mo stretchy="false">)</mo></mrow></mrow><mo>:</mo><mrow><msup><mi>S</mi><mn>2</mn></msup><mo>→</mo><msup><mi>S</mi><mn>2</mn></msup></mrow></mrow></math> also maps latitudes to
+latitudes.</p>
+</div>
+<div id="p18" class="ltx_para">
+<p class="ltx_p">Further, <math id="p18.m1" class="ltx_Math" alttext="h(-\vec{n},\vec{n})=\vec{n}" display="inline"><mrow><mrow><mi>h</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mo>-</mo><mover accent="true"><mi>n</mi><mo stretchy="false">→</mo></mover></mrow><mo>,</mo><mover accent="true"><mi>n</mi><mo stretchy="false">→</mo></mover><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mover accent="true"><mi>n</mi><mo stretchy="false">→</mo></mover></mrow></math> and <math id="p18.m2" class="ltx_Math" alttext="h(-\vec{n},-\vec{n})=-\vec{n}" display="inline"><mrow><mrow><mi>h</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mo>-</mo><mover accent="true"><mi>n</mi><mo stretchy="false">→</mo></mover></mrow><mo>,</mo><mrow><mo>-</mo><mover accent="true"><mi>n</mi><mo stretchy="false">→</mo></mover></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mo>-</mo><mover accent="true"><mi>n</mi><mo stretchy="false">→</mo></mover></mrow></mrow></math>. Thus <math id="p18.m3" class="ltx_Math" alttext="h(-\vec{n},\_)" display="inline"><mrow><mi>h</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mo>-</mo><mover accent="true"><mi>n</mi><mo stretchy="false">→</mo></mover></mrow><mo>,</mo><mi mathvariant="normal">_</mi><mo stretchy="false">)</mo></mrow></mrow></math> is homotopic to the .</p>
+</div>
+<div id="p19" class="ltx_para">
+<p class="ltx_p">But <math id="p19.m1" class="ltx_Math" alttext="h" display="inline"><mi>h</mi></math> gives a homotopy from <math id="p19.m2" class="ltx_Math" alttext="h(\vec{n},\_)" display="inline"><mrow><mi>h</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mover accent="true"><mi>n</mi><mo stretchy="false">→</mo></mover><mo>,</mo><mi mathvariant="normal">_</mi><mo stretchy="false">)</mo></mrow></mrow></math> to <math id="p19.m3" class="ltx_Math" alttext="h(-\vec{n},\_)" display="inline"><mrow><mi>h</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mo>-</mo><mover accent="true"><mi>n</mi><mo stretchy="false">→</mo></mover></mrow><mo>,</mo><mi mathvariant="normal">_</mi><mo stretchy="false">)</mo></mrow></mrow></math>, yielding the desired contradiction.
+</p>
+<table class="ltx_tabular ltx_align_right ltx_guessed_headers ltx_align_middle">
+<tbody class="ltx_tbody">
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l ltx_border_t">Title</th>
+<td class="ltx_td ltx_align_left ltx_border_r ltx_border_t">proof of Scott-Wiegold conjecture</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Canonical name</th>
+<td class="ltx_td ltx_align_left ltx_border_r">ProofOfScottWiegoldConjecture</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Date of creation</th>
+<td class="ltx_td ltx_align_left ltx_border_r">2013-03-22 18:30:31</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Last modified on</th>
+<td class="ltx_td ltx_align_left ltx_border_r">2013-03-22 18:30:31</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Owner</th>
+<td class="ltx_td ltx_align_left ltx_border_r">whm22 (2009)</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Last modified by</th>
+<td class="ltx_td ltx_align_left ltx_border_r">whm22 (2009)</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Numerical id</th>
+<td class="ltx_td ltx_align_left ltx_border_r">5</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Author</th>
+<td class="ltx_td ltx_align_left ltx_border_r">whm22 (2009)</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Entry type</th>
+<td class="ltx_td ltx_align_left ltx_border_r">Proof</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_b ltx_border_l">Classification</th>
+<td class="ltx_td ltx_align_left ltx_border_b ltx_border_r">msc 20E06</td>
+</tr>
+</tbody>
+</table>
+</div>
+</article>
+</div>
+<footer class="ltx_page_footer">
+<div class="ltx_page_logo">Generated  on Fri Feb  9 19:26:00 2018 by <a href="http://dlmf.nist.gov/LaTeXML/">LaTeXML <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAsAAAAOCAYAAAD5YeaVAAAAAXNSR0IArs4c6QAAAAZiS0dEAP8A/wD/oL2nkwAAAAlwSFlzAAALEwAACxMBAJqcGAAAAAd0SU1FB9wKExQZLWTEaOUAAAAddEVYdENvbW1lbnQAQ3JlYXRlZCB3aXRoIFRoZSBHSU1Q72QlbgAAAdpJREFUKM9tkL+L2nAARz9fPZNCKFapUn8kyI0e4iRHSR1Kb8ng0lJw6FYHFwv2LwhOpcWxTjeUunYqOmqd6hEoRDhtDWdA8ApRYsSUCDHNt5ul13vz4w0vWCgUnnEc975arX6ORqN3VqtVZbfbTQC4uEHANM3jSqXymFI6yWazP2KxWAXAL9zCUa1Wy2tXVxheKA9YNoR8Pt+aTqe4FVVVvz05O6MBhqUIBGk8Hn8HAOVy+T+XLJfLS4ZhTiRJgqIoVBRFIoric47jPnmeB1mW/9rr9ZpSSn3Lsmir1fJZlqWlUonKsvwWwD8ymc/nXwVBeLjf7xEKhdBut9Hr9WgmkyGEkJwsy5eHG5vN5g0AKIoCAEgkEkin0wQAfN9/cXPdheu6P33fBwB4ngcAcByHJpPJl+fn54mD3Gg0NrquXxeLRQAAwzAYj8cwTZPwPH9/sVg8PXweDAauqqr2cDjEer1GJBLBZDJBs9mE4zjwfZ85lAGg2+06hmGgXq+j3+/DsixYlgVN03a9Xu8jgCNCyIegIAgx13Vfd7vdu+FweG8YRkjXdWy329+dTgeSJD3ieZ7RNO0VAXAPwDEAO5VKndi2fWrb9jWl9Esul6PZbDY9Go1OZ7PZ9z/lyuD3OozU2wAAAABJRU5ErkJggg==" alt="[LOGO]"></a>
+</div></footer>
+</div>
+</body>
+</html>

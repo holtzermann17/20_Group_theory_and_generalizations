@@ -1,0 +1,429 @@
+<!DOCTYPE html><html>
+<head>
+<title>two isomorphic groups</title>
+<!--Generated on Fri Feb  9 19:21:10 2018 by LaTeXML (version 0.8.2) http://dlmf.nist.gov/LaTeXML/.-->
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" href="LaTeXML.css" type="text/css">
+<link rel="stylesheet" href="ltx-article.css" type="text/css">
+<link rel="stylesheet" href="https://cdn.rawgit.com/holtzermann17/3f71ceeb3b055e1ddc3b6c11fb1f074c/raw/2bb23e3b173ff96840797fc0c3bcb8c54085df8e/LaTeXML.css" type="text/css">
+<link rel="stylesheet" href="https://cdn.rawgit.com/holtzermann17/4bda0365b30858ac2fb83623185fe3ec/raw/cedd84ed3e3ad597c5d293f443ecfe4803741c6b/ltx-article.css" type="text/css">
+<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=MML_HTMLorMML" type="text/javascript"></script>
+</head>
+<body>
+<div class="ltx_page_main">
+<div class="ltx_page_content">
+<article class="ltx_document ltx_authors_1line">
+<h1 class="ltx_title ltx_title_document">two isomorphic groups</h1>
+
+<div id="p1" class="ltx_para">
+<br class="ltx_break">
+</div>
+<div id="p2" class="ltx_para">
+<p class="ltx_p">The set of <math id="p2.m1" class="ltx_Math" alttext="3\operatorname{x}3" display="inline"><mrow><mn>3</mn><mo>⁢</mo><mrow><mi mathvariant="normal">x</mi><mo>⁡</mo><mn>3</mn></mrow></mrow></math> permutation matrices form a group under matrix multiplication. This example demonstrates that fact and develops the multiplication table and compares it to <math id="p2.m2" class="ltx_Math" alttext="S_{3}" display="inline"><msub><mi>S</mi><mn>3</mn></msub></math>. Although there are alternative ways to fill in the table, this example serves to help the beginner. Here we will see that the two groups have the
+same structure. We begin by defining the elements of our group.</p>
+</div>
+<div id="p3" class="ltx_para">
+<p class="ltx_p"><math id="p3.m1" class="ltx_Math" alttext="\begin{array}[]{cc}\hskip 128.037402ptI=\left(\begin{array}[]{ccc}1&amp;0&amp;0\\
+0&amp;1&amp;0\\
+0&amp;0&amp;1\end{array}\right)\par
+&amp;\par
+ R=\left(\begin{array}[]{ccc}1&amp;0&amp;0\\
+0&amp;0&amp;1\\
+0&amp;1&amp;0\end{array}\right)\\
+\\
+\par
+\hskip 128.037402pt\par
+ A=\left(\begin{array}[]{ccc}0&amp;1&amp;0\\
+0&amp;0&amp;1\\
+1&amp;0&amp;0\end{array}\right)\par
+&amp;\par
+ S=\left(\begin{array}[]{ccc}0&amp;0&amp;1\\
+0&amp;1&amp;0\\
+1&amp;0&amp;0\end{array}\right)\\
+\\
+\par
+\hskip 128.037402pt\par
+ B=\left(\begin{array}[]{ccc}0&amp;0&amp;1\\
+1&amp;0&amp;0\\
+0&amp;1&amp;0\end{array}\right)\par
+&amp;\par
+ T=\left(\begin{array}[]{ccc}0&amp;1&amp;0\\
+1&amp;0&amp;0\\
+0&amp;0&amp;1\end{array}\right)\par
+\end{array}" display="inline"><mtable columnspacing="5pt" rowspacing="0pt"><mtr><mtd columnalign="center"><mrow><mpadded lspace="128pt" width="+128pt"><mi>I</mi></mpadded><mo>=</mo><mrow><mo>(</mo><mtable columnspacing="5pt" rowspacing="0pt"><mtr><mtd columnalign="center"><mn>1</mn></mtd><mtd columnalign="center"><mn>0</mn></mtd><mtd columnalign="center"><mn>0</mn></mtd></mtr><mtr><mtd columnalign="center"><mn>0</mn></mtd><mtd columnalign="center"><mn>1</mn></mtd><mtd columnalign="center"><mn>0</mn></mtd></mtr><mtr><mtd columnalign="center"><mn>0</mn></mtd><mtd columnalign="center"><mn>0</mn></mtd><mtd columnalign="center"><mn>1</mn></mtd></mtr></mtable><mo>)</mo></mrow></mrow></mtd><mtd columnalign="center"><mrow><mi>R</mi><mo>=</mo><mrow><mo>(</mo><mtable columnspacing="5pt" rowspacing="0pt"><mtr><mtd columnalign="center"><mn>1</mn></mtd><mtd columnalign="center"><mn>0</mn></mtd><mtd columnalign="center"><mn>0</mn></mtd></mtr><mtr><mtd columnalign="center"><mn>0</mn></mtd><mtd columnalign="center"><mn>0</mn></mtd><mtd columnalign="center"><mn>1</mn></mtd></mtr><mtr><mtd columnalign="center"><mn>0</mn></mtd><mtd columnalign="center"><mn>1</mn></mtd><mtd columnalign="center"><mn>0</mn></mtd></mtr></mtable><mo>)</mo></mrow></mrow></mtd></mtr><mtr><mtd></mtd><mtd></mtd></mtr><mtr><mtd columnalign="center"><mrow><mpadded lspace="128pt" width="+128pt"><mi>A</mi></mpadded><mo>=</mo><mrow><mo>(</mo><mtable columnspacing="5pt" rowspacing="0pt"><mtr><mtd columnalign="center"><mn>0</mn></mtd><mtd columnalign="center"><mn>1</mn></mtd><mtd columnalign="center"><mn>0</mn></mtd></mtr><mtr><mtd columnalign="center"><mn>0</mn></mtd><mtd columnalign="center"><mn>0</mn></mtd><mtd columnalign="center"><mn>1</mn></mtd></mtr><mtr><mtd columnalign="center"><mn>1</mn></mtd><mtd columnalign="center"><mn>0</mn></mtd><mtd columnalign="center"><mn>0</mn></mtd></mtr></mtable><mo>)</mo></mrow></mrow></mtd><mtd columnalign="center"><mrow><mi>S</mi><mo>=</mo><mrow><mo>(</mo><mtable columnspacing="5pt" rowspacing="0pt"><mtr><mtd columnalign="center"><mn>0</mn></mtd><mtd columnalign="center"><mn>0</mn></mtd><mtd columnalign="center"><mn>1</mn></mtd></mtr><mtr><mtd columnalign="center"><mn>0</mn></mtd><mtd columnalign="center"><mn>1</mn></mtd><mtd columnalign="center"><mn>0</mn></mtd></mtr><mtr><mtd columnalign="center"><mn>1</mn></mtd><mtd columnalign="center"><mn>0</mn></mtd><mtd columnalign="center"><mn>0</mn></mtd></mtr></mtable><mo>)</mo></mrow></mrow></mtd></mtr><mtr><mtd></mtd><mtd></mtd></mtr><mtr><mtd columnalign="center"><mrow><mpadded lspace="128pt" width="+128pt"><mi>B</mi></mpadded><mo>=</mo><mrow><mo>(</mo><mtable columnspacing="5pt" rowspacing="0pt"><mtr><mtd columnalign="center"><mn>0</mn></mtd><mtd columnalign="center"><mn>0</mn></mtd><mtd columnalign="center"><mn>1</mn></mtd></mtr><mtr><mtd columnalign="center"><mn>1</mn></mtd><mtd columnalign="center"><mn>0</mn></mtd><mtd columnalign="center"><mn>0</mn></mtd></mtr><mtr><mtd columnalign="center"><mn>0</mn></mtd><mtd columnalign="center"><mn>1</mn></mtd><mtd columnalign="center"><mn>0</mn></mtd></mtr></mtable><mo>)</mo></mrow></mrow></mtd><mtd columnalign="center"><mrow><mi>T</mi><mo>=</mo><mrow><mo>(</mo><mtable columnspacing="5pt" rowspacing="0pt"><mtr><mtd columnalign="center"><mn>0</mn></mtd><mtd columnalign="center"><mn>1</mn></mtd><mtd columnalign="center"><mn>0</mn></mtd></mtr><mtr><mtd columnalign="center"><mn>1</mn></mtd><mtd columnalign="center"><mn>0</mn></mtd><mtd columnalign="center"><mn>0</mn></mtd></mtr><mtr><mtd columnalign="center"><mn>0</mn></mtd><mtd columnalign="center"><mn>0</mn></mtd><mtd columnalign="center"><mn>1</mn></mtd></mtr></mtable><mo>)</mo></mrow></mrow></mtd></mtr></mtable></math></p>
+</div>
+<div id="p4" class="ltx_para">
+<p class="ltx_p">Here, our group is just <math id="p4.m1" class="ltx_Math" alttext="P_{3}=\{I,A,B,R,S,T\}" display="inline"><mrow><msub><mi>P</mi><mn>3</mn></msub><mo>=</mo><mrow><mo stretchy="false">{</mo><mi>I</mi><mo>,</mo><mi>A</mi><mo>,</mo><mi>B</mi><mo>,</mo><mi>R</mi><mo>,</mo><mi>S</mi><mo>,</mo><mi>T</mi><mo stretchy="false">}</mo></mrow></mrow></math>. Now, we can start to multiply and then fill in the table.
+First, we calculate the square of each elements.</p>
+</div>
+<div id="p5" class="ltx_para">
+<table id="S0.Ex1" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex1.m1" class="ltx_Math" alttext="A^{2}=\left(\begin{array}[]{ccc}0&amp;1&amp;0\\
+0&amp;0&amp;1\\
+1&amp;0&amp;0\end{array}\right)\left(\begin{array}[]{ccc}0&amp;1&amp;0\\
+0&amp;0&amp;1\\
+1&amp;0&amp;0\end{array}\right)=\left(\begin{array}[]{ccc}0&amp;0&amp;1\\
+1&amp;0&amp;0\\
+0&amp;1&amp;0\end{array}\right)=B" display="block"><mrow><msup><mi>A</mi><mn>2</mn></msup><mo>=</mo><mrow><mrow><mo>(</mo><mtable columnspacing="5pt" displaystyle="true" rowspacing="0pt"><mtr><mtd columnalign="center"><mn>0</mn></mtd><mtd columnalign="center"><mn>1</mn></mtd><mtd columnalign="center"><mn>0</mn></mtd></mtr><mtr><mtd columnalign="center"><mn>0</mn></mtd><mtd columnalign="center"><mn>0</mn></mtd><mtd columnalign="center"><mn>1</mn></mtd></mtr><mtr><mtd columnalign="center"><mn>1</mn></mtd><mtd columnalign="center"><mn>0</mn></mtd><mtd columnalign="center"><mn>0</mn></mtd></mtr></mtable><mo>)</mo></mrow><mo>⁢</mo><mrow><mo>(</mo><mtable columnspacing="5pt" displaystyle="true" rowspacing="0pt"><mtr><mtd columnalign="center"><mn>0</mn></mtd><mtd columnalign="center"><mn>1</mn></mtd><mtd columnalign="center"><mn>0</mn></mtd></mtr><mtr><mtd columnalign="center"><mn>0</mn></mtd><mtd columnalign="center"><mn>0</mn></mtd><mtd columnalign="center"><mn>1</mn></mtd></mtr><mtr><mtd columnalign="center"><mn>1</mn></mtd><mtd columnalign="center"><mn>0</mn></mtd><mtd columnalign="center"><mn>0</mn></mtd></mtr></mtable><mo>)</mo></mrow></mrow><mo>=</mo><mrow><mo>(</mo><mtable columnspacing="5pt" displaystyle="true" rowspacing="0pt"><mtr><mtd columnalign="center"><mn>0</mn></mtd><mtd columnalign="center"><mn>0</mn></mtd><mtd columnalign="center"><mn>1</mn></mtd></mtr><mtr><mtd columnalign="center"><mn>1</mn></mtd><mtd columnalign="center"><mn>0</mn></mtd><mtd columnalign="center"><mn>0</mn></mtd></mtr><mtr><mtd columnalign="center"><mn>0</mn></mtd><mtd columnalign="center"><mn>1</mn></mtd><mtd columnalign="center"><mn>0</mn></mtd></mtr></mtable><mo>)</mo></mrow><mo>=</mo><mi>B</mi></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+</div>
+<div id="p6" class="ltx_para">
+<table id="S0.Ex2" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex2.m1" class="ltx_Math" alttext="B^{2}=\left(\begin{array}[]{ccc}0&amp;0&amp;1\\
+1&amp;0&amp;0\\
+0&amp;1&amp;0\end{array}\right)\left(\begin{array}[]{ccc}0&amp;0&amp;1\\
+1&amp;0&amp;0\\
+0&amp;1&amp;0\end{array}\right)=\left(\begin{array}[]{ccc}0&amp;1&amp;0\\
+0&amp;0&amp;1\\
+1&amp;0&amp;0\end{array}\right)=A" display="block"><mrow><msup><mi>B</mi><mn>2</mn></msup><mo>=</mo><mrow><mrow><mo>(</mo><mtable columnspacing="5pt" displaystyle="true" rowspacing="0pt"><mtr><mtd columnalign="center"><mn>0</mn></mtd><mtd columnalign="center"><mn>0</mn></mtd><mtd columnalign="center"><mn>1</mn></mtd></mtr><mtr><mtd columnalign="center"><mn>1</mn></mtd><mtd columnalign="center"><mn>0</mn></mtd><mtd columnalign="center"><mn>0</mn></mtd></mtr><mtr><mtd columnalign="center"><mn>0</mn></mtd><mtd columnalign="center"><mn>1</mn></mtd><mtd columnalign="center"><mn>0</mn></mtd></mtr></mtable><mo>)</mo></mrow><mo>⁢</mo><mrow><mo>(</mo><mtable columnspacing="5pt" displaystyle="true" rowspacing="0pt"><mtr><mtd columnalign="center"><mn>0</mn></mtd><mtd columnalign="center"><mn>0</mn></mtd><mtd columnalign="center"><mn>1</mn></mtd></mtr><mtr><mtd columnalign="center"><mn>1</mn></mtd><mtd columnalign="center"><mn>0</mn></mtd><mtd columnalign="center"><mn>0</mn></mtd></mtr><mtr><mtd columnalign="center"><mn>0</mn></mtd><mtd columnalign="center"><mn>1</mn></mtd><mtd columnalign="center"><mn>0</mn></mtd></mtr></mtable><mo>)</mo></mrow></mrow><mo>=</mo><mrow><mo>(</mo><mtable columnspacing="5pt" displaystyle="true" rowspacing="0pt"><mtr><mtd columnalign="center"><mn>0</mn></mtd><mtd columnalign="center"><mn>1</mn></mtd><mtd columnalign="center"><mn>0</mn></mtd></mtr><mtr><mtd columnalign="center"><mn>0</mn></mtd><mtd columnalign="center"><mn>0</mn></mtd><mtd columnalign="center"><mn>1</mn></mtd></mtr><mtr><mtd columnalign="center"><mn>1</mn></mtd><mtd columnalign="center"><mn>0</mn></mtd><mtd columnalign="center"><mn>0</mn></mtd></mtr></mtable><mo>)</mo></mrow><mo>=</mo><mi>A</mi></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+</div>
+<div id="p7" class="ltx_para">
+<table id="S0.Ex3" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex3.m1" class="ltx_Math" alttext="R^{2}=\left(\begin{array}[]{ccc}1&amp;0&amp;0\\
+0&amp;0&amp;1\\
+0&amp;1&amp;0\end{array}\right)\left(\begin{array}[]{ccc}1&amp;0&amp;0\\
+0&amp;0&amp;1\\
+0&amp;1&amp;0\end{array}\right)=\left(\begin{array}[]{ccc}1&amp;0&amp;0\\
+0&amp;1&amp;0\\
+0&amp;0&amp;1\end{array}\right)=I" display="block"><mrow><msup><mi>R</mi><mn>2</mn></msup><mo>=</mo><mrow><mrow><mo>(</mo><mtable columnspacing="5pt" displaystyle="true" rowspacing="0pt"><mtr><mtd columnalign="center"><mn>1</mn></mtd><mtd columnalign="center"><mn>0</mn></mtd><mtd columnalign="center"><mn>0</mn></mtd></mtr><mtr><mtd columnalign="center"><mn>0</mn></mtd><mtd columnalign="center"><mn>0</mn></mtd><mtd columnalign="center"><mn>1</mn></mtd></mtr><mtr><mtd columnalign="center"><mn>0</mn></mtd><mtd columnalign="center"><mn>1</mn></mtd><mtd columnalign="center"><mn>0</mn></mtd></mtr></mtable><mo>)</mo></mrow><mo>⁢</mo><mrow><mo>(</mo><mtable columnspacing="5pt" displaystyle="true" rowspacing="0pt"><mtr><mtd columnalign="center"><mn>1</mn></mtd><mtd columnalign="center"><mn>0</mn></mtd><mtd columnalign="center"><mn>0</mn></mtd></mtr><mtr><mtd columnalign="center"><mn>0</mn></mtd><mtd columnalign="center"><mn>0</mn></mtd><mtd columnalign="center"><mn>1</mn></mtd></mtr><mtr><mtd columnalign="center"><mn>0</mn></mtd><mtd columnalign="center"><mn>1</mn></mtd><mtd columnalign="center"><mn>0</mn></mtd></mtr></mtable><mo>)</mo></mrow></mrow><mo>=</mo><mrow><mo>(</mo><mtable columnspacing="5pt" displaystyle="true" rowspacing="0pt"><mtr><mtd columnalign="center"><mn>1</mn></mtd><mtd columnalign="center"><mn>0</mn></mtd><mtd columnalign="center"><mn>0</mn></mtd></mtr><mtr><mtd columnalign="center"><mn>0</mn></mtd><mtd columnalign="center"><mn>1</mn></mtd><mtd columnalign="center"><mn>0</mn></mtd></mtr><mtr><mtd columnalign="center"><mn>0</mn></mtd><mtd columnalign="center"><mn>0</mn></mtd><mtd columnalign="center"><mn>1</mn></mtd></mtr></mtable><mo>)</mo></mrow><mo>=</mo><mi>I</mi></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+</div>
+<div id="p8" class="ltx_para">
+<table id="S0.Ex4" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex4.m1" class="ltx_Math" alttext="S^{2}=\left(\begin{array}[]{ccc}0&amp;0&amp;1\\
+0&amp;1&amp;0\\
+1&amp;0&amp;0\end{array}\right)\left(\begin{array}[]{ccc}0&amp;0&amp;1\\
+0&amp;1&amp;0\\
+1&amp;0&amp;0\end{array}\right)=\left(\begin{array}[]{ccc}1&amp;0&amp;0\\
+0&amp;1&amp;0\\
+0&amp;0&amp;1\end{array}\right)=I" display="block"><mrow><msup><mi>S</mi><mn>2</mn></msup><mo>=</mo><mrow><mrow><mo>(</mo><mtable columnspacing="5pt" displaystyle="true" rowspacing="0pt"><mtr><mtd columnalign="center"><mn>0</mn></mtd><mtd columnalign="center"><mn>0</mn></mtd><mtd columnalign="center"><mn>1</mn></mtd></mtr><mtr><mtd columnalign="center"><mn>0</mn></mtd><mtd columnalign="center"><mn>1</mn></mtd><mtd columnalign="center"><mn>0</mn></mtd></mtr><mtr><mtd columnalign="center"><mn>1</mn></mtd><mtd columnalign="center"><mn>0</mn></mtd><mtd columnalign="center"><mn>0</mn></mtd></mtr></mtable><mo>)</mo></mrow><mo>⁢</mo><mrow><mo>(</mo><mtable columnspacing="5pt" displaystyle="true" rowspacing="0pt"><mtr><mtd columnalign="center"><mn>0</mn></mtd><mtd columnalign="center"><mn>0</mn></mtd><mtd columnalign="center"><mn>1</mn></mtd></mtr><mtr><mtd columnalign="center"><mn>0</mn></mtd><mtd columnalign="center"><mn>1</mn></mtd><mtd columnalign="center"><mn>0</mn></mtd></mtr><mtr><mtd columnalign="center"><mn>1</mn></mtd><mtd columnalign="center"><mn>0</mn></mtd><mtd columnalign="center"><mn>0</mn></mtd></mtr></mtable><mo>)</mo></mrow></mrow><mo>=</mo><mrow><mo>(</mo><mtable columnspacing="5pt" displaystyle="true" rowspacing="0pt"><mtr><mtd columnalign="center"><mn>1</mn></mtd><mtd columnalign="center"><mn>0</mn></mtd><mtd columnalign="center"><mn>0</mn></mtd></mtr><mtr><mtd columnalign="center"><mn>0</mn></mtd><mtd columnalign="center"><mn>1</mn></mtd><mtd columnalign="center"><mn>0</mn></mtd></mtr><mtr><mtd columnalign="center"><mn>0</mn></mtd><mtd columnalign="center"><mn>0</mn></mtd><mtd columnalign="center"><mn>1</mn></mtd></mtr></mtable><mo>)</mo></mrow><mo>=</mo><mi>I</mi></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+</div>
+<div id="p9" class="ltx_para">
+<table id="S0.Ex5" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex5.m1" class="ltx_Math" alttext="T^{2}=\left(\begin{array}[]{ccc}0&amp;1&amp;0\\
+1&amp;0&amp;0\\
+0&amp;0&amp;1\end{array}\right)\left(\begin{array}[]{ccc}0&amp;1&amp;0\\
+1&amp;0&amp;0\\
+0&amp;0&amp;1\end{array}\right)=\left(\begin{array}[]{ccc}1&amp;0&amp;0\\
+0&amp;1&amp;0\\
+0&amp;0&amp;1\end{array}\right)=I" display="block"><mrow><msup><mi>T</mi><mn>2</mn></msup><mo>=</mo><mrow><mrow><mo>(</mo><mtable columnspacing="5pt" displaystyle="true" rowspacing="0pt"><mtr><mtd columnalign="center"><mn>0</mn></mtd><mtd columnalign="center"><mn>1</mn></mtd><mtd columnalign="center"><mn>0</mn></mtd></mtr><mtr><mtd columnalign="center"><mn>1</mn></mtd><mtd columnalign="center"><mn>0</mn></mtd><mtd columnalign="center"><mn>0</mn></mtd></mtr><mtr><mtd columnalign="center"><mn>0</mn></mtd><mtd columnalign="center"><mn>0</mn></mtd><mtd columnalign="center"><mn>1</mn></mtd></mtr></mtable><mo>)</mo></mrow><mo>⁢</mo><mrow><mo>(</mo><mtable columnspacing="5pt" displaystyle="true" rowspacing="0pt"><mtr><mtd columnalign="center"><mn>0</mn></mtd><mtd columnalign="center"><mn>1</mn></mtd><mtd columnalign="center"><mn>0</mn></mtd></mtr><mtr><mtd columnalign="center"><mn>1</mn></mtd><mtd columnalign="center"><mn>0</mn></mtd><mtd columnalign="center"><mn>0</mn></mtd></mtr><mtr><mtd columnalign="center"><mn>0</mn></mtd><mtd columnalign="center"><mn>0</mn></mtd><mtd columnalign="center"><mn>1</mn></mtd></mtr></mtable><mo>)</mo></mrow></mrow><mo>=</mo><mrow><mo>(</mo><mtable columnspacing="5pt" displaystyle="true" rowspacing="0pt"><mtr><mtd columnalign="center"><mn>1</mn></mtd><mtd columnalign="center"><mn>0</mn></mtd><mtd columnalign="center"><mn>0</mn></mtd></mtr><mtr><mtd columnalign="center"><mn>0</mn></mtd><mtd columnalign="center"><mn>1</mn></mtd><mtd columnalign="center"><mn>0</mn></mtd></mtr><mtr><mtd columnalign="center"><mn>0</mn></mtd><mtd columnalign="center"><mn>0</mn></mtd><mtd columnalign="center"><mn>1</mn></mtd></mtr></mtable><mo>)</mo></mrow><mo>=</mo><mi>I</mi></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+</div>
+<div id="p10" class="ltx_para">
+<p class="ltx_p">Now starting with the upper left <math id="p10.m1" class="ltx_Math" alttext="3\operatorname{x}3" display="inline"><mrow><mn>3</mn><mo>⁢</mo><mrow><mi mathvariant="normal">x</mi><mo>⁡</mo><mn>3</mn></mrow></mrow></math> block, we go through the table.</p>
+</div>
+<div id="p11" class="ltx_para">
+<table id="S0.Ex6" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex6.m1" class="ltx_Math" alttext="AB=\left(\begin{array}[]{ccc}0&amp;1&amp;0\\
+0&amp;0&amp;1\\
+1&amp;0&amp;0\end{array}\right)\left(\begin{array}[]{ccc}0&amp;0&amp;1\\
+1&amp;0&amp;0\\
+0&amp;1&amp;0\end{array}\right)=\left(\begin{array}[]{ccc}1&amp;0&amp;0\\
+0&amp;1&amp;0\\
+0&amp;0&amp;1\end{array}\right)=I" display="block"><mrow><mrow><mi>A</mi><mo>⁢</mo><mi>B</mi></mrow><mo>=</mo><mrow><mrow><mo>(</mo><mtable columnspacing="5pt" displaystyle="true" rowspacing="0pt"><mtr><mtd columnalign="center"><mn>0</mn></mtd><mtd columnalign="center"><mn>1</mn></mtd><mtd columnalign="center"><mn>0</mn></mtd></mtr><mtr><mtd columnalign="center"><mn>0</mn></mtd><mtd columnalign="center"><mn>0</mn></mtd><mtd columnalign="center"><mn>1</mn></mtd></mtr><mtr><mtd columnalign="center"><mn>1</mn></mtd><mtd columnalign="center"><mn>0</mn></mtd><mtd columnalign="center"><mn>0</mn></mtd></mtr></mtable><mo>)</mo></mrow><mo>⁢</mo><mrow><mo>(</mo><mtable columnspacing="5pt" displaystyle="true" rowspacing="0pt"><mtr><mtd columnalign="center"><mn>0</mn></mtd><mtd columnalign="center"><mn>0</mn></mtd><mtd columnalign="center"><mn>1</mn></mtd></mtr><mtr><mtd columnalign="center"><mn>1</mn></mtd><mtd columnalign="center"><mn>0</mn></mtd><mtd columnalign="center"><mn>0</mn></mtd></mtr><mtr><mtd columnalign="center"><mn>0</mn></mtd><mtd columnalign="center"><mn>1</mn></mtd><mtd columnalign="center"><mn>0</mn></mtd></mtr></mtable><mo>)</mo></mrow></mrow><mo>=</mo><mrow><mo>(</mo><mtable columnspacing="5pt" displaystyle="true" rowspacing="0pt"><mtr><mtd columnalign="center"><mn>1</mn></mtd><mtd columnalign="center"><mn>0</mn></mtd><mtd columnalign="center"><mn>0</mn></mtd></mtr><mtr><mtd columnalign="center"><mn>0</mn></mtd><mtd columnalign="center"><mn>1</mn></mtd><mtd columnalign="center"><mn>0</mn></mtd></mtr><mtr><mtd columnalign="center"><mn>0</mn></mtd><mtd columnalign="center"><mn>0</mn></mtd><mtd columnalign="center"><mn>1</mn></mtd></mtr></mtable><mo>)</mo></mrow><mo>=</mo><mi>I</mi></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+</div>
+<div id="p12" class="ltx_para">
+<table id="S0.Ex7" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex7.m1" class="ltx_Math" alttext="BA=\left(\begin{array}[]{ccc}0&amp;0&amp;1\\
+1&amp;0&amp;0\\
+0&amp;1&amp;0\end{array}\right)\left(\begin{array}[]{ccc}0&amp;1&amp;0\\
+0&amp;0&amp;1\\
+1&amp;0&amp;0\end{array}\right)=\left(\begin{array}[]{ccc}1&amp;0&amp;0\\
+0&amp;1&amp;0\\
+0&amp;0&amp;1\end{array}\right)=I" display="block"><mrow><mrow><mi>B</mi><mo>⁢</mo><mi>A</mi></mrow><mo>=</mo><mrow><mrow><mo>(</mo><mtable columnspacing="5pt" displaystyle="true" rowspacing="0pt"><mtr><mtd columnalign="center"><mn>0</mn></mtd><mtd columnalign="center"><mn>0</mn></mtd><mtd columnalign="center"><mn>1</mn></mtd></mtr><mtr><mtd columnalign="center"><mn>1</mn></mtd><mtd columnalign="center"><mn>0</mn></mtd><mtd columnalign="center"><mn>0</mn></mtd></mtr><mtr><mtd columnalign="center"><mn>0</mn></mtd><mtd columnalign="center"><mn>1</mn></mtd><mtd columnalign="center"><mn>0</mn></mtd></mtr></mtable><mo>)</mo></mrow><mo>⁢</mo><mrow><mo>(</mo><mtable columnspacing="5pt" displaystyle="true" rowspacing="0pt"><mtr><mtd columnalign="center"><mn>0</mn></mtd><mtd columnalign="center"><mn>1</mn></mtd><mtd columnalign="center"><mn>0</mn></mtd></mtr><mtr><mtd columnalign="center"><mn>0</mn></mtd><mtd columnalign="center"><mn>0</mn></mtd><mtd columnalign="center"><mn>1</mn></mtd></mtr><mtr><mtd columnalign="center"><mn>1</mn></mtd><mtd columnalign="center"><mn>0</mn></mtd><mtd columnalign="center"><mn>0</mn></mtd></mtr></mtable><mo>)</mo></mrow></mrow><mo>=</mo><mrow><mo>(</mo><mtable columnspacing="5pt" displaystyle="true" rowspacing="0pt"><mtr><mtd columnalign="center"><mn>1</mn></mtd><mtd columnalign="center"><mn>0</mn></mtd><mtd columnalign="center"><mn>0</mn></mtd></mtr><mtr><mtd columnalign="center"><mn>0</mn></mtd><mtd columnalign="center"><mn>1</mn></mtd><mtd columnalign="center"><mn>0</mn></mtd></mtr><mtr><mtd columnalign="center"><mn>0</mn></mtd><mtd columnalign="center"><mn>0</mn></mtd><mtd columnalign="center"><mn>1</mn></mtd></mtr></mtable><mo>)</mo></mrow><mo>=</mo><mi>I</mi></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+</div>
+<div id="p13" class="ltx_para">
+<p class="ltx_p">We can complete the upper left <math id="p13.m1" class="ltx_Math" alttext="3\operatorname{x}3" display="inline"><mrow><mn>3</mn><mo>⁢</mo><mrow><mi mathvariant="normal">x</mi><mo>⁡</mo><mn>3</mn></mrow></mrow></math> block of the table and complete diagonal using the above values. We note that no row or column can have a repeated elements which follows from the  of a group. Next, we work on the upper right <math id="p13.m2" class="ltx_Math" alttext="3\operatorname{x}3" display="inline"><mrow><mn>3</mn><mo>⁢</mo><mrow><mi mathvariant="normal">x</mi><mo>⁡</mo><mn>3</mn></mrow></mrow></math> block of the table.</p>
+</div>
+<div id="p14" class="ltx_para">
+<table id="S0.Ex8" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex8.m1" class="ltx_Math" alttext="AR=\left(\begin{array}[]{ccc}0&amp;1&amp;0\\
+0&amp;0&amp;1\\
+1&amp;0&amp;0\end{array}\right)\left(\begin{array}[]{ccc}1&amp;0&amp;0\\
+0&amp;0&amp;1\\
+0&amp;1&amp;0\end{array}\right)=\left(\begin{array}[]{ccc}0&amp;0&amp;1\\
+0&amp;1&amp;0\\
+1&amp;0&amp;0\end{array}\right)=S" display="block"><mrow><mrow><mi>A</mi><mo>⁢</mo><mi>R</mi></mrow><mo>=</mo><mrow><mrow><mo>(</mo><mtable columnspacing="5pt" displaystyle="true" rowspacing="0pt"><mtr><mtd columnalign="center"><mn>0</mn></mtd><mtd columnalign="center"><mn>1</mn></mtd><mtd columnalign="center"><mn>0</mn></mtd></mtr><mtr><mtd columnalign="center"><mn>0</mn></mtd><mtd columnalign="center"><mn>0</mn></mtd><mtd columnalign="center"><mn>1</mn></mtd></mtr><mtr><mtd columnalign="center"><mn>1</mn></mtd><mtd columnalign="center"><mn>0</mn></mtd><mtd columnalign="center"><mn>0</mn></mtd></mtr></mtable><mo>)</mo></mrow><mo>⁢</mo><mrow><mo>(</mo><mtable columnspacing="5pt" displaystyle="true" rowspacing="0pt"><mtr><mtd columnalign="center"><mn>1</mn></mtd><mtd columnalign="center"><mn>0</mn></mtd><mtd columnalign="center"><mn>0</mn></mtd></mtr><mtr><mtd columnalign="center"><mn>0</mn></mtd><mtd columnalign="center"><mn>0</mn></mtd><mtd columnalign="center"><mn>1</mn></mtd></mtr><mtr><mtd columnalign="center"><mn>0</mn></mtd><mtd columnalign="center"><mn>1</mn></mtd><mtd columnalign="center"><mn>0</mn></mtd></mtr></mtable><mo>)</mo></mrow></mrow><mo>=</mo><mrow><mo>(</mo><mtable columnspacing="5pt" displaystyle="true" rowspacing="0pt"><mtr><mtd columnalign="center"><mn>0</mn></mtd><mtd columnalign="center"><mn>0</mn></mtd><mtd columnalign="center"><mn>1</mn></mtd></mtr><mtr><mtd columnalign="center"><mn>0</mn></mtd><mtd columnalign="center"><mn>1</mn></mtd><mtd columnalign="center"><mn>0</mn></mtd></mtr><mtr><mtd columnalign="center"><mn>1</mn></mtd><mtd columnalign="center"><mn>0</mn></mtd><mtd columnalign="center"><mn>0</mn></mtd></mtr></mtable><mo>)</mo></mrow><mo>=</mo><mi>S</mi></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+</div>
+<div id="p15" class="ltx_para">
+<table id="S0.Ex9" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex9.m1" class="ltx_Math" alttext="AS=\left(\begin{array}[]{ccc}0&amp;1&amp;0\\
+0&amp;0&amp;1\\
+1&amp;0&amp;0\end{array}\right)\left(\begin{array}[]{ccc}0&amp;0&amp;1\\
+0&amp;1&amp;0\\
+1&amp;0&amp;0\end{array}\right)=\left(\begin{array}[]{ccc}0&amp;1&amp;0\\
+1&amp;0&amp;0\\
+0&amp;0&amp;1\end{array}\right)=T" display="block"><mrow><mrow><mi>A</mi><mo>⁢</mo><mi>S</mi></mrow><mo>=</mo><mrow><mrow><mo>(</mo><mtable columnspacing="5pt" displaystyle="true" rowspacing="0pt"><mtr><mtd columnalign="center"><mn>0</mn></mtd><mtd columnalign="center"><mn>1</mn></mtd><mtd columnalign="center"><mn>0</mn></mtd></mtr><mtr><mtd columnalign="center"><mn>0</mn></mtd><mtd columnalign="center"><mn>0</mn></mtd><mtd columnalign="center"><mn>1</mn></mtd></mtr><mtr><mtd columnalign="center"><mn>1</mn></mtd><mtd columnalign="center"><mn>0</mn></mtd><mtd columnalign="center"><mn>0</mn></mtd></mtr></mtable><mo>)</mo></mrow><mo>⁢</mo><mrow><mo>(</mo><mtable columnspacing="5pt" displaystyle="true" rowspacing="0pt"><mtr><mtd columnalign="center"><mn>0</mn></mtd><mtd columnalign="center"><mn>0</mn></mtd><mtd columnalign="center"><mn>1</mn></mtd></mtr><mtr><mtd columnalign="center"><mn>0</mn></mtd><mtd columnalign="center"><mn>1</mn></mtd><mtd columnalign="center"><mn>0</mn></mtd></mtr><mtr><mtd columnalign="center"><mn>1</mn></mtd><mtd columnalign="center"><mn>0</mn></mtd><mtd columnalign="center"><mn>0</mn></mtd></mtr></mtable><mo>)</mo></mrow></mrow><mo>=</mo><mrow><mo>(</mo><mtable columnspacing="5pt" displaystyle="true" rowspacing="0pt"><mtr><mtd columnalign="center"><mn>0</mn></mtd><mtd columnalign="center"><mn>1</mn></mtd><mtd columnalign="center"><mn>0</mn></mtd></mtr><mtr><mtd columnalign="center"><mn>1</mn></mtd><mtd columnalign="center"><mn>0</mn></mtd><mtd columnalign="center"><mn>0</mn></mtd></mtr><mtr><mtd columnalign="center"><mn>0</mn></mtd><mtd columnalign="center"><mn>0</mn></mtd><mtd columnalign="center"><mn>1</mn></mtd></mtr></mtable><mo>)</mo></mrow><mo>=</mo><mi>T</mi></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+</div>
+<div id="p16" class="ltx_para">
+<p class="ltx_p">Now we can complete the upper right 3 x 3 block of the table. Next, we work on the lower left <math id="p16.m1" class="ltx_Math" alttext="3\operatorname{x}3" display="inline"><mrow><mn>3</mn><mo>⁢</mo><mrow><mi mathvariant="normal">x</mi><mo>⁡</mo><mn>3</mn></mrow></mrow></math> block of the table.</p>
+</div>
+<div id="p17" class="ltx_para">
+<table id="S0.Ex10" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex10.m1" class="ltx_Math" alttext="RA=\left(\begin{array}[]{ccc}1&amp;0&amp;0\\
+0&amp;0&amp;1\\
+0&amp;1&amp;0\end{array}\right)\left(\begin{array}[]{ccc}0&amp;1&amp;0\\
+0&amp;0&amp;1\\
+1&amp;0&amp;0\end{array}\right)=\left(\begin{array}[]{ccc}0&amp;1&amp;0\\
+1&amp;0&amp;0\\
+0&amp;0&amp;1\end{array}\right)=T" display="block"><mrow><mrow><mi>R</mi><mo>⁢</mo><mi>A</mi></mrow><mo>=</mo><mrow><mrow><mo>(</mo><mtable columnspacing="5pt" displaystyle="true" rowspacing="0pt"><mtr><mtd columnalign="center"><mn>1</mn></mtd><mtd columnalign="center"><mn>0</mn></mtd><mtd columnalign="center"><mn>0</mn></mtd></mtr><mtr><mtd columnalign="center"><mn>0</mn></mtd><mtd columnalign="center"><mn>0</mn></mtd><mtd columnalign="center"><mn>1</mn></mtd></mtr><mtr><mtd columnalign="center"><mn>0</mn></mtd><mtd columnalign="center"><mn>1</mn></mtd><mtd columnalign="center"><mn>0</mn></mtd></mtr></mtable><mo>)</mo></mrow><mo>⁢</mo><mrow><mo>(</mo><mtable columnspacing="5pt" displaystyle="true" rowspacing="0pt"><mtr><mtd columnalign="center"><mn>0</mn></mtd><mtd columnalign="center"><mn>1</mn></mtd><mtd columnalign="center"><mn>0</mn></mtd></mtr><mtr><mtd columnalign="center"><mn>0</mn></mtd><mtd columnalign="center"><mn>0</mn></mtd><mtd columnalign="center"><mn>1</mn></mtd></mtr><mtr><mtd columnalign="center"><mn>1</mn></mtd><mtd columnalign="center"><mn>0</mn></mtd><mtd columnalign="center"><mn>0</mn></mtd></mtr></mtable><mo>)</mo></mrow></mrow><mo>=</mo><mrow><mo>(</mo><mtable columnspacing="5pt" displaystyle="true" rowspacing="0pt"><mtr><mtd columnalign="center"><mn>0</mn></mtd><mtd columnalign="center"><mn>1</mn></mtd><mtd columnalign="center"><mn>0</mn></mtd></mtr><mtr><mtd columnalign="center"><mn>1</mn></mtd><mtd columnalign="center"><mn>0</mn></mtd><mtd columnalign="center"><mn>0</mn></mtd></mtr><mtr><mtd columnalign="center"><mn>0</mn></mtd><mtd columnalign="center"><mn>0</mn></mtd><mtd columnalign="center"><mn>1</mn></mtd></mtr></mtable><mo>)</mo></mrow><mo>=</mo><mi>T</mi></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+</div>
+<div id="p18" class="ltx_para">
+<table id="S0.Ex11" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex11.m1" class="ltx_Math" alttext="RB=\left(\begin{array}[]{ccc}1&amp;0&amp;0\\
+0&amp;0&amp;1\\
+0&amp;1&amp;0\end{array}\right)\left(\begin{array}[]{ccc}0&amp;0&amp;1\\
+1&amp;0&amp;0\\
+0&amp;1&amp;0\end{array}\right)=\left(\begin{array}[]{ccc}0&amp;0&amp;1\\
+0&amp;1&amp;0\\
+1&amp;0&amp;0\end{array}\right)=S" display="block"><mrow><mrow><mi>R</mi><mo>⁢</mo><mi>B</mi></mrow><mo>=</mo><mrow><mrow><mo>(</mo><mtable columnspacing="5pt" displaystyle="true" rowspacing="0pt"><mtr><mtd columnalign="center"><mn>1</mn></mtd><mtd columnalign="center"><mn>0</mn></mtd><mtd columnalign="center"><mn>0</mn></mtd></mtr><mtr><mtd columnalign="center"><mn>0</mn></mtd><mtd columnalign="center"><mn>0</mn></mtd><mtd columnalign="center"><mn>1</mn></mtd></mtr><mtr><mtd columnalign="center"><mn>0</mn></mtd><mtd columnalign="center"><mn>1</mn></mtd><mtd columnalign="center"><mn>0</mn></mtd></mtr></mtable><mo>)</mo></mrow><mo>⁢</mo><mrow><mo>(</mo><mtable columnspacing="5pt" displaystyle="true" rowspacing="0pt"><mtr><mtd columnalign="center"><mn>0</mn></mtd><mtd columnalign="center"><mn>0</mn></mtd><mtd columnalign="center"><mn>1</mn></mtd></mtr><mtr><mtd columnalign="center"><mn>1</mn></mtd><mtd columnalign="center"><mn>0</mn></mtd><mtd columnalign="center"><mn>0</mn></mtd></mtr><mtr><mtd columnalign="center"><mn>0</mn></mtd><mtd columnalign="center"><mn>1</mn></mtd><mtd columnalign="center"><mn>0</mn></mtd></mtr></mtable><mo>)</mo></mrow></mrow><mo>=</mo><mrow><mo>(</mo><mtable columnspacing="5pt" displaystyle="true" rowspacing="0pt"><mtr><mtd columnalign="center"><mn>0</mn></mtd><mtd columnalign="center"><mn>0</mn></mtd><mtd columnalign="center"><mn>1</mn></mtd></mtr><mtr><mtd columnalign="center"><mn>0</mn></mtd><mtd columnalign="center"><mn>1</mn></mtd><mtd columnalign="center"><mn>0</mn></mtd></mtr><mtr><mtd columnalign="center"><mn>1</mn></mtd><mtd columnalign="center"><mn>0</mn></mtd><mtd columnalign="center"><mn>0</mn></mtd></mtr></mtable><mo>)</mo></mrow><mo>=</mo><mi>S</mi></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+</div>
+<div id="p19" class="ltx_para">
+<table id="S0.Ex12" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex12.m1" class="ltx_Math" alttext="SA=\left(\begin{array}[]{ccc}0&amp;0&amp;1\\
+0&amp;1&amp;0\\
+1&amp;0&amp;0\end{array}\right)\left(\begin{array}[]{ccc}0&amp;1&amp;0\\
+0&amp;0&amp;1\\
+1&amp;0&amp;0\end{array}\right)=\left(\begin{array}[]{ccc}1&amp;0&amp;0\\
+0&amp;0&amp;1\\
+0&amp;1&amp;0\end{array}\right)=R" display="block"><mrow><mrow><mi>S</mi><mo>⁢</mo><mi>A</mi></mrow><mo>=</mo><mrow><mrow><mo>(</mo><mtable columnspacing="5pt" displaystyle="true" rowspacing="0pt"><mtr><mtd columnalign="center"><mn>0</mn></mtd><mtd columnalign="center"><mn>0</mn></mtd><mtd columnalign="center"><mn>1</mn></mtd></mtr><mtr><mtd columnalign="center"><mn>0</mn></mtd><mtd columnalign="center"><mn>1</mn></mtd><mtd columnalign="center"><mn>0</mn></mtd></mtr><mtr><mtd columnalign="center"><mn>1</mn></mtd><mtd columnalign="center"><mn>0</mn></mtd><mtd columnalign="center"><mn>0</mn></mtd></mtr></mtable><mo>)</mo></mrow><mo>⁢</mo><mrow><mo>(</mo><mtable columnspacing="5pt" displaystyle="true" rowspacing="0pt"><mtr><mtd columnalign="center"><mn>0</mn></mtd><mtd columnalign="center"><mn>1</mn></mtd><mtd columnalign="center"><mn>0</mn></mtd></mtr><mtr><mtd columnalign="center"><mn>0</mn></mtd><mtd columnalign="center"><mn>0</mn></mtd><mtd columnalign="center"><mn>1</mn></mtd></mtr><mtr><mtd columnalign="center"><mn>1</mn></mtd><mtd columnalign="center"><mn>0</mn></mtd><mtd columnalign="center"><mn>0</mn></mtd></mtr></mtable><mo>)</mo></mrow></mrow><mo>=</mo><mrow><mo>(</mo><mtable columnspacing="5pt" displaystyle="true" rowspacing="0pt"><mtr><mtd columnalign="center"><mn>1</mn></mtd><mtd columnalign="center"><mn>0</mn></mtd><mtd columnalign="center"><mn>0</mn></mtd></mtr><mtr><mtd columnalign="center"><mn>0</mn></mtd><mtd columnalign="center"><mn>0</mn></mtd><mtd columnalign="center"><mn>1</mn></mtd></mtr><mtr><mtd columnalign="center"><mn>0</mn></mtd><mtd columnalign="center"><mn>1</mn></mtd><mtd columnalign="center"><mn>0</mn></mtd></mtr></mtable><mo>)</mo></mrow><mo>=</mo><mi>R</mi></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+</div>
+<div id="p20" class="ltx_para">
+<p class="ltx_p">Now we can complete the lower left <math id="p20.m1" class="ltx_Math" alttext="3\operatorname{x}3" display="inline"><mrow><mn>3</mn><mo>⁢</mo><mrow><mi mathvariant="normal">x</mi><mo>⁡</mo><mn>3</mn></mrow></mrow></math> block of the table. Finally, we work on the lower right <math id="p20.m2" class="ltx_Math" alttext="3\operatorname{x}3" display="inline"><mrow><mn>3</mn><mo>⁢</mo><mrow><mi mathvariant="normal">x</mi><mo>⁡</mo><mn>3</mn></mrow></mrow></math> block of the table.</p>
+</div>
+<div id="p21" class="ltx_para">
+<table id="S0.Ex13" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex13.m1" class="ltx_Math" alttext="RS=\left(\begin{array}[]{ccc}1&amp;0&amp;0\\
+0&amp;0&amp;1\\
+0&amp;1&amp;0\end{array}\right)\left(\begin{array}[]{ccc}0&amp;0&amp;1\\
+0&amp;1&amp;0\\
+1&amp;0&amp;0\end{array}\right)=\left(\begin{array}[]{ccc}0&amp;0&amp;1\\
+1&amp;0&amp;0\\
+0&amp;1&amp;0\end{array}\right)=B" display="block"><mrow><mrow><mi>R</mi><mo>⁢</mo><mi>S</mi></mrow><mo>=</mo><mrow><mrow><mo>(</mo><mtable columnspacing="5pt" displaystyle="true" rowspacing="0pt"><mtr><mtd columnalign="center"><mn>1</mn></mtd><mtd columnalign="center"><mn>0</mn></mtd><mtd columnalign="center"><mn>0</mn></mtd></mtr><mtr><mtd columnalign="center"><mn>0</mn></mtd><mtd columnalign="center"><mn>0</mn></mtd><mtd columnalign="center"><mn>1</mn></mtd></mtr><mtr><mtd columnalign="center"><mn>0</mn></mtd><mtd columnalign="center"><mn>1</mn></mtd><mtd columnalign="center"><mn>0</mn></mtd></mtr></mtable><mo>)</mo></mrow><mo>⁢</mo><mrow><mo>(</mo><mtable columnspacing="5pt" displaystyle="true" rowspacing="0pt"><mtr><mtd columnalign="center"><mn>0</mn></mtd><mtd columnalign="center"><mn>0</mn></mtd><mtd columnalign="center"><mn>1</mn></mtd></mtr><mtr><mtd columnalign="center"><mn>0</mn></mtd><mtd columnalign="center"><mn>1</mn></mtd><mtd columnalign="center"><mn>0</mn></mtd></mtr><mtr><mtd columnalign="center"><mn>1</mn></mtd><mtd columnalign="center"><mn>0</mn></mtd><mtd columnalign="center"><mn>0</mn></mtd></mtr></mtable><mo>)</mo></mrow></mrow><mo>=</mo><mrow><mo>(</mo><mtable columnspacing="5pt" displaystyle="true" rowspacing="0pt"><mtr><mtd columnalign="center"><mn>0</mn></mtd><mtd columnalign="center"><mn>0</mn></mtd><mtd columnalign="center"><mn>1</mn></mtd></mtr><mtr><mtd columnalign="center"><mn>1</mn></mtd><mtd columnalign="center"><mn>0</mn></mtd><mtd columnalign="center"><mn>0</mn></mtd></mtr><mtr><mtd columnalign="center"><mn>0</mn></mtd><mtd columnalign="center"><mn>1</mn></mtd><mtd columnalign="center"><mn>0</mn></mtd></mtr></mtable><mo>)</mo></mrow><mo>=</mo><mi>B</mi></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+</div>
+<div id="p22" class="ltx_para">
+<table id="S0.Ex14" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex14.m1" class="ltx_Math" alttext="SR=\left(\begin{array}[]{ccc}0&amp;0&amp;1\\
+0&amp;1&amp;0\\
+1&amp;0&amp;0\end{array}\right)\left(\begin{array}[]{ccc}1&amp;0&amp;0\\
+0&amp;0&amp;1\\
+0&amp;1&amp;0\end{array}\right)=\left(\begin{array}[]{ccc}0&amp;1&amp;0\\
+1&amp;0&amp;0\\
+0&amp;0&amp;1\end{array}\right)=A" display="block"><mrow><mrow><mi>S</mi><mo>⁢</mo><mi>R</mi></mrow><mo>=</mo><mrow><mrow><mo>(</mo><mtable columnspacing="5pt" displaystyle="true" rowspacing="0pt"><mtr><mtd columnalign="center"><mn>0</mn></mtd><mtd columnalign="center"><mn>0</mn></mtd><mtd columnalign="center"><mn>1</mn></mtd></mtr><mtr><mtd columnalign="center"><mn>0</mn></mtd><mtd columnalign="center"><mn>1</mn></mtd><mtd columnalign="center"><mn>0</mn></mtd></mtr><mtr><mtd columnalign="center"><mn>1</mn></mtd><mtd columnalign="center"><mn>0</mn></mtd><mtd columnalign="center"><mn>0</mn></mtd></mtr></mtable><mo>)</mo></mrow><mo>⁢</mo><mrow><mo>(</mo><mtable columnspacing="5pt" displaystyle="true" rowspacing="0pt"><mtr><mtd columnalign="center"><mn>1</mn></mtd><mtd columnalign="center"><mn>0</mn></mtd><mtd columnalign="center"><mn>0</mn></mtd></mtr><mtr><mtd columnalign="center"><mn>0</mn></mtd><mtd columnalign="center"><mn>0</mn></mtd><mtd columnalign="center"><mn>1</mn></mtd></mtr><mtr><mtd columnalign="center"><mn>0</mn></mtd><mtd columnalign="center"><mn>1</mn></mtd><mtd columnalign="center"><mn>0</mn></mtd></mtr></mtable><mo>)</mo></mrow></mrow><mo>=</mo><mrow><mo>(</mo><mtable columnspacing="5pt" displaystyle="true" rowspacing="0pt"><mtr><mtd columnalign="center"><mn>0</mn></mtd><mtd columnalign="center"><mn>1</mn></mtd><mtd columnalign="center"><mn>0</mn></mtd></mtr><mtr><mtd columnalign="center"><mn>1</mn></mtd><mtd columnalign="center"><mn>0</mn></mtd><mtd columnalign="center"><mn>0</mn></mtd></mtr><mtr><mtd columnalign="center"><mn>0</mn></mtd><mtd columnalign="center"><mn>0</mn></mtd><mtd columnalign="center"><mn>1</mn></mtd></mtr></mtable><mo>)</mo></mrow><mo>=</mo><mi>A</mi></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+</div>
+<div id="p23" class="ltx_para">
+<p class="ltx_p">This completes the multiplication and the table is given below.</p>
+</div>
+<div id="p24" class="ltx_para ltx_centering">
+<p class="ltx_p"><math id="p24.m1" class="ltx_Math" alttext="\begin{array}[]{|c||c|c|c|c|c|c|}\hline&amp;I&amp;A&amp;B&amp;R&amp;S&amp;T\\
+\hline\hline I&amp;I&amp;A&amp;B&amp;R&amp;S&amp;T\\
+\hline A&amp;A&amp;B&amp;I&amp;S&amp;T&amp;R\\
+\hline B&amp;B&amp;I&amp;A&amp;T&amp;R&amp;S\\
+\hline R&amp;R&amp;T&amp;S&amp;I&amp;B&amp;A\\
+\hline S&amp;S&amp;R&amp;T&amp;A&amp;I&amp;B\\
+\hline T&amp;T&amp;S&amp;R&amp;B&amp;A&amp;I\\
+\hline\end{array}" display="inline"><mtable columnspacing="5pt" rowspacing="0pt"><mtr><mtd class="ltx_border_l ltx_border_rr ltx_border_t"><mi></mi></mtd><mtd class="ltx_border_r ltx_border_t" columnalign="center"><mi>I</mi></mtd><mtd class="ltx_border_r ltx_border_t" columnalign="center"><mi>A</mi></mtd><mtd class="ltx_border_r ltx_border_t" columnalign="center"><mi>B</mi></mtd><mtd class="ltx_border_r ltx_border_t" columnalign="center"><mi>R</mi></mtd><mtd class="ltx_border_r ltx_border_t" columnalign="center"><mi>S</mi></mtd><mtd class="ltx_border_r ltx_border_t" columnalign="center"><mi>T</mi></mtd></mtr><mtr><mtd class="ltx_border_l ltx_border_rr ltx_border_tt" columnalign="center"><mi>I</mi></mtd><mtd class="ltx_border_r ltx_border_tt" columnalign="center"><mi>I</mi></mtd><mtd class="ltx_border_r ltx_border_tt" columnalign="center"><mi>A</mi></mtd><mtd class="ltx_border_r ltx_border_tt" columnalign="center"><mi>B</mi></mtd><mtd class="ltx_border_r ltx_border_tt" columnalign="center"><mi>R</mi></mtd><mtd class="ltx_border_r ltx_border_tt" columnalign="center"><mi>S</mi></mtd><mtd class="ltx_border_r ltx_border_tt" columnalign="center"><mi>T</mi></mtd></mtr><mtr><mtd class="ltx_border_l ltx_border_rr ltx_border_t" columnalign="center"><mi>A</mi></mtd><mtd class="ltx_border_r ltx_border_t" columnalign="center"><mi>A</mi></mtd><mtd class="ltx_border_r ltx_border_t" columnalign="center"><mi>B</mi></mtd><mtd class="ltx_border_r ltx_border_t" columnalign="center"><mi>I</mi></mtd><mtd class="ltx_border_r ltx_border_t" columnalign="center"><mi>S</mi></mtd><mtd class="ltx_border_r ltx_border_t" columnalign="center"><mi>T</mi></mtd><mtd class="ltx_border_r ltx_border_t" columnalign="center"><mi>R</mi></mtd></mtr><mtr><mtd class="ltx_border_l ltx_border_rr ltx_border_t" columnalign="center"><mi>B</mi></mtd><mtd class="ltx_border_r ltx_border_t" columnalign="center"><mi>B</mi></mtd><mtd class="ltx_border_r ltx_border_t" columnalign="center"><mi>I</mi></mtd><mtd class="ltx_border_r ltx_border_t" columnalign="center"><mi>A</mi></mtd><mtd class="ltx_border_r ltx_border_t" columnalign="center"><mi>T</mi></mtd><mtd class="ltx_border_r ltx_border_t" columnalign="center"><mi>R</mi></mtd><mtd class="ltx_border_r ltx_border_t" columnalign="center"><mi>S</mi></mtd></mtr><mtr><mtd class="ltx_border_l ltx_border_rr ltx_border_t" columnalign="center"><mi>R</mi></mtd><mtd class="ltx_border_r ltx_border_t" columnalign="center"><mi>R</mi></mtd><mtd class="ltx_border_r ltx_border_t" columnalign="center"><mi>T</mi></mtd><mtd class="ltx_border_r ltx_border_t" columnalign="center"><mi>S</mi></mtd><mtd class="ltx_border_r ltx_border_t" columnalign="center"><mi>I</mi></mtd><mtd class="ltx_border_r ltx_border_t" columnalign="center"><mi>B</mi></mtd><mtd class="ltx_border_r ltx_border_t" columnalign="center"><mi>A</mi></mtd></mtr><mtr><mtd class="ltx_border_l ltx_border_rr ltx_border_t" columnalign="center"><mi>S</mi></mtd><mtd class="ltx_border_r ltx_border_t" columnalign="center"><mi>S</mi></mtd><mtd class="ltx_border_r ltx_border_t" columnalign="center"><mi>R</mi></mtd><mtd class="ltx_border_r ltx_border_t" columnalign="center"><mi>T</mi></mtd><mtd class="ltx_border_r ltx_border_t" columnalign="center"><mi>A</mi></mtd><mtd class="ltx_border_r ltx_border_t" columnalign="center"><mi>I</mi></mtd><mtd class="ltx_border_r ltx_border_t" columnalign="center"><mi>B</mi></mtd></mtr><mtr><mtd class="ltx_border_b ltx_border_l ltx_border_rr ltx_border_t" columnalign="center"><mi>T</mi></mtd><mtd class="ltx_border_b ltx_border_r ltx_border_t" columnalign="center"><mi>T</mi></mtd><mtd class="ltx_border_b ltx_border_r ltx_border_t" columnalign="center"><mi>S</mi></mtd><mtd class="ltx_border_b ltx_border_r ltx_border_t" columnalign="center"><mi>R</mi></mtd><mtd class="ltx_border_b ltx_border_r ltx_border_t" columnalign="center"><mi>B</mi></mtd><mtd class="ltx_border_b ltx_border_r ltx_border_t" columnalign="center"><mi>A</mi></mtd><mtd class="ltx_border_b ltx_border_r ltx_border_t" columnalign="center"><mi>I</mi></mtd></mtr></mtable></math></p>
+</div>
+<div id="p25" class="ltx_para">
+<p class="ltx_p">Next, we want to compare this table to the symmetric group <math id="p25.m1" class="ltx_Math" alttext="S_{3}" display="inline"><msub><mi>S</mi><mn>3</mn></msub></math>. We begin as before by defining the elements
+as follows.</p>
+</div>
+<div id="p26" class="ltx_para">
+<table id="S0.Ex15" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex15.m1" class="ltx_Math" alttext="e={1\ 2\ 3\choose 1\ 2\ 3}\hskip 56.905512ptr={1\ 2\ 3\choose 2\ 1\ 3}" display="block"><mrow><mrow><mi>e</mi><mo>=</mo><mrow><mo>(</mo><mfrac linethickness="0pt"><mn>1 2 3</mn><mn>1 2 3</mn></mfrac><mo>)</mo></mrow></mrow><mo mathvariant="italic" separator="true">       </mo><mrow><mi>r</mi><mo>=</mo><mrow><mo>(</mo><mfrac linethickness="0pt"><mn>1 2 3</mn><mn>2 1 3</mn></mfrac><mo>)</mo></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<table id="S0.Ex16" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex16.m1" class="ltx_Math" alttext="a={1\ 2\ 3\choose 2\ 3\ 1}\hskip 56.905512pts={1\ 2\ 3\choose 3\ 2\ 1}" display="block"><mrow><mrow><mi>a</mi><mo>=</mo><mrow><mo>(</mo><mfrac linethickness="0pt"><mn>1 2 3</mn><mn>2 3 1</mn></mfrac><mo>)</mo></mrow></mrow><mo mathvariant="italic" separator="true">       </mo><mrow><mi>s</mi><mo>=</mo><mrow><mo>(</mo><mfrac linethickness="0pt"><mn>1 2 3</mn><mn>3 2 1</mn></mfrac><mo>)</mo></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<table id="S0.Ex17" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex17.m1" class="ltx_Math" alttext="b={1\ 2\ 3\choose 3\ 1\ 2}\hskip 56.905512ptt={1\ 2\ 3\choose 1\ 3\ 2}" display="block"><mrow><mrow><mi>b</mi><mo>=</mo><mrow><mo>(</mo><mfrac linethickness="0pt"><mn>1 2 3</mn><mn>3 1 2</mn></mfrac><mo>)</mo></mrow></mrow><mo mathvariant="italic" separator="true">       </mo><mrow><mi>t</mi><mo>=</mo><mrow><mo>(</mo><mfrac linethickness="0pt"><mn>1 2 3</mn><mn>1 3 2</mn></mfrac><mo>)</mo></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+</div>
+<div id="p27" class="ltx_para">
+<p class="ltx_p">The multiplication table for this group is obtained within the entry symmetric group on three letters. The table is:</p>
+</div>
+<div id="p28" class="ltx_para ltx_centering">
+<p class="ltx_p"><math id="p28.m1" class="ltx_Math" alttext="\begin{array}[]{|c||c|c|c|c|c|c|}\hline&amp;e&amp;a&amp;b&amp;r&amp;s&amp;t\\
+\hline e&amp;e&amp;a&amp;b&amp;r&amp;s&amp;t\\
+\hline a&amp;a&amp;b&amp;e&amp;s&amp;t&amp;r\\
+\hline b&amp;b&amp;e&amp;a&amp;t&amp;r&amp;s\\
+\hline r&amp;r&amp;t&amp;s&amp;e&amp;b&amp;a\\
+\hline s&amp;s&amp;r&amp;t&amp;a&amp;e&amp;b\\
+\hline t&amp;t&amp;s&amp;r&amp;b&amp;a&amp;e\\
+\hline\end{array}" display="inline"><mtable columnspacing="5pt" rowspacing="0pt"><mtr><mtd class="ltx_border_l ltx_border_rr ltx_border_t"><mi></mi></mtd><mtd class="ltx_border_r ltx_border_t" columnalign="center"><mi>e</mi></mtd><mtd class="ltx_border_r ltx_border_t" columnalign="center"><mi>a</mi></mtd><mtd class="ltx_border_r ltx_border_t" columnalign="center"><mi>b</mi></mtd><mtd class="ltx_border_r ltx_border_t" columnalign="center"><mi>r</mi></mtd><mtd class="ltx_border_r ltx_border_t" columnalign="center"><mi>s</mi></mtd><mtd class="ltx_border_r ltx_border_t" columnalign="center"><mi>t</mi></mtd></mtr><mtr><mtd class="ltx_border_l ltx_border_rr ltx_border_t" columnalign="center"><mi>e</mi></mtd><mtd class="ltx_border_r ltx_border_t" columnalign="center"><mi>e</mi></mtd><mtd class="ltx_border_r ltx_border_t" columnalign="center"><mi>a</mi></mtd><mtd class="ltx_border_r ltx_border_t" columnalign="center"><mi>b</mi></mtd><mtd class="ltx_border_r ltx_border_t" columnalign="center"><mi>r</mi></mtd><mtd class="ltx_border_r ltx_border_t" columnalign="center"><mi>s</mi></mtd><mtd class="ltx_border_r ltx_border_t" columnalign="center"><mi>t</mi></mtd></mtr><mtr><mtd class="ltx_border_l ltx_border_rr ltx_border_t" columnalign="center"><mi>a</mi></mtd><mtd class="ltx_border_r ltx_border_t" columnalign="center"><mi>a</mi></mtd><mtd class="ltx_border_r ltx_border_t" columnalign="center"><mi>b</mi></mtd><mtd class="ltx_border_r ltx_border_t" columnalign="center"><mi>e</mi></mtd><mtd class="ltx_border_r ltx_border_t" columnalign="center"><mi>s</mi></mtd><mtd class="ltx_border_r ltx_border_t" columnalign="center"><mi>t</mi></mtd><mtd class="ltx_border_r ltx_border_t" columnalign="center"><mi>r</mi></mtd></mtr><mtr><mtd class="ltx_border_l ltx_border_rr ltx_border_t" columnalign="center"><mi>b</mi></mtd><mtd class="ltx_border_r ltx_border_t" columnalign="center"><mi>b</mi></mtd><mtd class="ltx_border_r ltx_border_t" columnalign="center"><mi>e</mi></mtd><mtd class="ltx_border_r ltx_border_t" columnalign="center"><mi>a</mi></mtd><mtd class="ltx_border_r ltx_border_t" columnalign="center"><mi>t</mi></mtd><mtd class="ltx_border_r ltx_border_t" columnalign="center"><mi>r</mi></mtd><mtd class="ltx_border_r ltx_border_t" columnalign="center"><mi>s</mi></mtd></mtr><mtr><mtd class="ltx_border_l ltx_border_rr ltx_border_t" columnalign="center"><mi>r</mi></mtd><mtd class="ltx_border_r ltx_border_t" columnalign="center"><mi>r</mi></mtd><mtd class="ltx_border_r ltx_border_t" columnalign="center"><mi>t</mi></mtd><mtd class="ltx_border_r ltx_border_t" columnalign="center"><mi>s</mi></mtd><mtd class="ltx_border_r ltx_border_t" columnalign="center"><mi>e</mi></mtd><mtd class="ltx_border_r ltx_border_t" columnalign="center"><mi>b</mi></mtd><mtd class="ltx_border_r ltx_border_t" columnalign="center"><mi>a</mi></mtd></mtr><mtr><mtd class="ltx_border_l ltx_border_rr ltx_border_t" columnalign="center"><mi>s</mi></mtd><mtd class="ltx_border_r ltx_border_t" columnalign="center"><mi>s</mi></mtd><mtd class="ltx_border_r ltx_border_t" columnalign="center"><mi>r</mi></mtd><mtd class="ltx_border_r ltx_border_t" columnalign="center"><mi>t</mi></mtd><mtd class="ltx_border_r ltx_border_t" columnalign="center"><mi>a</mi></mtd><mtd class="ltx_border_r ltx_border_t" columnalign="center"><mi>e</mi></mtd><mtd class="ltx_border_r ltx_border_t" columnalign="center"><mi>b</mi></mtd></mtr><mtr><mtd class="ltx_border_b ltx_border_l ltx_border_rr ltx_border_t" columnalign="center"><mi>t</mi></mtd><mtd class="ltx_border_b ltx_border_r ltx_border_t" columnalign="center"><mi>t</mi></mtd><mtd class="ltx_border_b ltx_border_r ltx_border_t" columnalign="center"><mi>s</mi></mtd><mtd class="ltx_border_b ltx_border_r ltx_border_t" columnalign="center"><mi>r</mi></mtd><mtd class="ltx_border_b ltx_border_r ltx_border_t" columnalign="center"><mi>b</mi></mtd><mtd class="ltx_border_b ltx_border_r ltx_border_t" columnalign="center"><mi>a</mi></mtd><mtd class="ltx_border_b ltx_border_r ltx_border_t" columnalign="center"><mi>e</mi></mtd></mtr></mtable></math></p>
+</div>
+<div id="p29" class="ltx_para">
+<p class="ltx_p">Define the following homomorphism <math id="p29.m1" class="ltx_Math" alttext="\varphi\colon S_{3}\to P_{3}" display="inline"><mrow><mi>φ</mi><mo>:</mo><mrow><msub><mi>S</mi><mn>3</mn></msub><mo>→</mo><msub><mi>P</mi><mn>3</mn></msub></mrow></mrow></math> by the following:</p>
+</div>
+<div id="p30" class="ltx_para">
+<p class="ltx_p"><math id="p30.m1" class="ltx_Math" alttext="\varphi(e)=I" display="inline"><mrow><mrow><mi>φ</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>e</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mi>I</mi></mrow></math>;</p>
+</div>
+<div id="p31" class="ltx_para">
+<p class="ltx_p"><math id="p31.m1" class="ltx_Math" alttext="\varphi(a)=A" display="inline"><mrow><mrow><mi>φ</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>a</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mi>A</mi></mrow></math>;</p>
+</div>
+<div id="p32" class="ltx_para">
+<p class="ltx_p"><math id="p32.m1" class="ltx_Math" alttext="\varphi(b)=B" display="inline"><mrow><mrow><mi>φ</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>b</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mi>B</mi></mrow></math>;</p>
+</div>
+<div id="p33" class="ltx_para">
+<p class="ltx_p"><math id="p33.m1" class="ltx_Math" alttext="\varphi(r)=R" display="inline"><mrow><mrow><mi>φ</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>r</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mi>R</mi></mrow></math>;
+</p>
+</div>
+<div id="p34" class="ltx_para">
+<p class="ltx_p"><math id="p34.m1" class="ltx_Math" alttext="\varphi(s)=S" display="inline"><mrow><mrow><mi>φ</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>s</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mi>S</mi></mrow></math>;</p>
+</div>
+<div id="p35" class="ltx_para">
+<p class="ltx_p"><math id="p35.m1" class="ltx_Math" alttext="\varphi(t)=T" display="inline"><mrow><mrow><mi>φ</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>t</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mi>T</mi></mrow></math>.</p>
+</div>
+<div id="p36" class="ltx_para">
+<p class="ltx_p">Since <math id="p36.m1" class="ltx_Math" alttext="\varphi" display="inline"><mi>φ</mi></math> is a bijection, we conclude that <math id="p36.m2" class="ltx_Math" alttext="P_{3}" display="inline"><msub><mi>P</mi><mn>3</mn></msub></math> and <math id="p36.m3" class="ltx_Math" alttext="S_{3}" display="inline"><msub><mi>S</mi><mn>3</mn></msub></math> are isomorphic.
+</p>
+<table class="ltx_tabular ltx_align_right ltx_guessed_headers ltx_align_middle">
+<tbody class="ltx_tbody">
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l ltx_border_t">Title</th>
+<td class="ltx_td ltx_align_left ltx_border_r ltx_border_t">two isomorphic groups</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Canonical name</th>
+<td class="ltx_td ltx_align_left ltx_border_r">TwoIsomorphicGroups</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Date of creation</th>
+<td class="ltx_td ltx_align_left ltx_border_r">2013-03-22 15:52:28</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Last modified on</th>
+<td class="ltx_td ltx_align_left ltx_border_r">2013-03-22 15:52:28</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Owner</th>
+<td class="ltx_td ltx_align_left ltx_border_r">Wkbj79 (1863)</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Last modified by</th>
+<td class="ltx_td ltx_align_left ltx_border_r">Wkbj79 (1863)</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Numerical id</th>
+<td class="ltx_td ltx_align_left ltx_border_r">10</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Author</th>
+<td class="ltx_td ltx_align_left ltx_border_r">Wkbj79 (1863)</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Entry type</th>
+<td class="ltx_td ltx_align_left ltx_border_r">Example</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_b ltx_border_l">Classification</th>
+<td class="ltx_td ltx_align_left ltx_border_b ltx_border_r">msc 20B30</td>
+</tr>
+</tbody>
+</table>
+</div>
+</article>
+</div>
+<footer class="ltx_page_footer">
+<div class="ltx_page_logo">Generated  on Fri Feb  9 19:21:10 2018 by <a href="http://dlmf.nist.gov/LaTeXML/">LaTeXML <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAsAAAAOCAYAAAD5YeaVAAAAAXNSR0IArs4c6QAAAAZiS0dEAP8A/wD/oL2nkwAAAAlwSFlzAAALEwAACxMBAJqcGAAAAAd0SU1FB9wKExQZLWTEaOUAAAAddEVYdENvbW1lbnQAQ3JlYXRlZCB3aXRoIFRoZSBHSU1Q72QlbgAAAdpJREFUKM9tkL+L2nAARz9fPZNCKFapUn8kyI0e4iRHSR1Kb8ng0lJw6FYHFwv2LwhOpcWxTjeUunYqOmqd6hEoRDhtDWdA8ApRYsSUCDHNt5ul13vz4w0vWCgUnnEc975arX6ORqN3VqtVZbfbTQC4uEHANM3jSqXymFI6yWazP2KxWAXAL9zCUa1Wy2tXVxheKA9YNoR8Pt+aTqe4FVVVvz05O6MBhqUIBGk8Hn8HAOVy+T+XLJfLS4ZhTiRJgqIoVBRFIoric47jPnmeB1mW/9rr9ZpSSn3Lsmir1fJZlqWlUonKsvwWwD8ymc/nXwVBeLjf7xEKhdBut9Hr9WgmkyGEkJwsy5eHG5vN5g0AKIoCAEgkEkin0wQAfN9/cXPdheu6P33fBwB4ngcAcByHJpPJl+fn54mD3Gg0NrquXxeLRQAAwzAYj8cwTZPwPH9/sVg8PXweDAauqqr2cDjEer1GJBLBZDJBs9mE4zjwfZ85lAGg2+06hmGgXq+j3+/DsixYlgVN03a9Xu8jgCNCyIegIAgx13Vfd7vdu+FweG8YRkjXdWy329+dTgeSJD3ieZ7RNO0VAXAPwDEAO5VKndi2fWrb9jWl9Esul6PZbDY9Go1OZ7PZ9z/lyuD3OozU2wAAAABJRU5ErkJggg==" alt="[LOGO]"></a>
+</div></footer>
+</div>
+</body>
+</html>

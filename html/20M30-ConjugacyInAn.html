@@ -1,0 +1,159 @@
+<!DOCTYPE html><html>
+<head>
+<title>conjugacy in A_n</title>
+<!--Generated on Fri Feb  9 19:34:27 2018 by LaTeXML (version 0.8.2) http://dlmf.nist.gov/LaTeXML/.-->
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" href="LaTeXML.css" type="text/css">
+<link rel="stylesheet" href="ltx-article.css" type="text/css">
+<link rel="stylesheet" href="https://cdn.rawgit.com/holtzermann17/3f71ceeb3b055e1ddc3b6c11fb1f074c/raw/2bb23e3b173ff96840797fc0c3bcb8c54085df8e/LaTeXML.css" type="text/css">
+<link rel="stylesheet" href="https://cdn.rawgit.com/holtzermann17/4bda0365b30858ac2fb83623185fe3ec/raw/cedd84ed3e3ad597c5d293f443ecfe4803741c6b/ltx-article.css" type="text/css">
+<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=MML_HTMLorMML" type="text/javascript"></script>
+</head>
+<body>
+<div class="ltx_page_main">
+<div class="ltx_page_content">
+<article class="ltx_document ltx_authors_1line">
+<h1 class="ltx_title ltx_title_document">conjugacy in <math id="m1" class="ltx_Math" alttext="A_{n}" display="inline"><msub><mi>A</mi><mi>n</mi></msub></math>
+</h1>
+
+<div id="p1" class="ltx_para">
+<br class="ltx_break">
+<p class="ltx_p">Recall that conjugacy classes in the symmetric group <math id="p1.m1" class="ltx_Math" alttext="S_{n}" display="inline"><msub><mi>S</mi><mi>n</mi></msub></math> are determined solely by cycle type. In the alternating group <math id="p1.m2" class="ltx_Math" alttext="A_{n}" display="inline"><msub><mi>A</mi><mi>n</mi></msub></math>, however, this is not always true. A single conjugacy class in <math id="p1.m3" class="ltx_Math" alttext="S_{n}" display="inline"><msub><mi>S</mi><mi>n</mi></msub></math> that is contained in <math id="p1.m4" class="ltx_Math" alttext="A_{n}" display="inline"><msub><mi>A</mi><mi>n</mi></msub></math> may split into two distinct classes when considered as a subset of <math id="p1.m5" class="ltx_Math" alttext="A_{n}" display="inline"><msub><mi>A</mi><mi>n</mi></msub></math>. For example, in <math id="p1.m6" class="ltx_Math" alttext="S_{3}" display="inline"><msub><mi>S</mi><mn>3</mn></msub></math>, <math id="p1.m7" class="ltx_Math" alttext="(1~{}2~{}3)" display="inline"><mrow><mo stretchy="false">(</mo><mrow><mpadded width="+3.3pt"><mn>1</mn></mpadded><mo>⁢</mo><mpadded width="+3.3pt"><mn>2</mn></mpadded><mo>⁢</mo><mn>3</mn></mrow><mo stretchy="false">)</mo></mrow></math> and <math id="p1.m8" class="ltx_Math" alttext="(1~{}3~{}2)" display="inline"><mrow><mo stretchy="false">(</mo><mrow><mpadded width="+3.3pt"><mn>1</mn></mpadded><mo>⁢</mo><mpadded width="+3.3pt"><mn>3</mn></mpadded><mo>⁢</mo><mn>2</mn></mrow><mo stretchy="false">)</mo></mrow></math> are conjugate, since</p>
+<table id="S0.Ex1" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex1.m1" class="ltx_Math" alttext="(2~{}3)(1~{}2~{}3)(2~{}3)=(1~{}3~{}2)" display="block"><mrow><mrow><mrow><mo stretchy="false">(</mo><mrow><mpadded width="+3.3pt"><mn>2</mn></mpadded><mo>⁢</mo><mn>3</mn></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mpadded width="+3.3pt"><mn>1</mn></mpadded><mo>⁢</mo><mpadded width="+3.3pt"><mn>2</mn></mpadded><mo>⁢</mo><mn>3</mn></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mpadded width="+3.3pt"><mn>2</mn></mpadded><mo>⁢</mo><mn>3</mn></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mo stretchy="false">(</mo><mrow><mpadded width="+3.3pt"><mn>1</mn></mpadded><mo>⁢</mo><mpadded width="+3.3pt"><mn>3</mn></mpadded><mo>⁢</mo><mn>2</mn></mrow><mo stretchy="false">)</mo></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">but these two are not conjugate in <math id="p1.m9" class="ltx_Math" alttext="A_{3}" display="inline"><msub><mi>A</mi><mn>3</mn></msub></math> (note that <math id="p1.m10" class="ltx_Math" alttext="(2~{}3)\notin A_{3}" display="inline"><mrow><mrow><mo stretchy="false">(</mo><mrow><mpadded width="+3.3pt"><mn>2</mn></mpadded><mo>⁢</mo><mn>3</mn></mrow><mo stretchy="false">)</mo></mrow><mo>∉</mo><msub><mi>A</mi><mn>3</mn></msub></mrow></math>).</p>
+</div>
+<div id="p2" class="ltx_para">
+<p class="ltx_p">Note in particular that the fact that conjugacy in <math id="p2.m1" class="ltx_Math" alttext="S_{n}" display="inline"><msub><mi>S</mi><mi>n</mi></msub></math> is determined by cycle type means that if <math id="p2.m2" class="ltx_Math" alttext="\sigma\in A_{n}" display="inline"><mrow><mi>σ</mi><mo>∈</mo><msub><mi>A</mi><mi>n</mi></msub></mrow></math> then all of its conjugates in <math id="p2.m3" class="ltx_Math" alttext="S_{n}" display="inline"><msub><mi>S</mi><mi>n</mi></msub></math> also lie in <math id="p2.m4" class="ltx_Math" alttext="A_{n}" display="inline"><msub><mi>A</mi><mi>n</mi></msub></math>.</p>
+</div>
+<div id="p3" class="ltx_para">
+<p class="ltx_p">The following theorem fully characterizes the behavior of conjugacy classes in <math id="p3.m1" class="ltx_Math" alttext="A_{n}" display="inline"><msub><mi>A</mi><mi>n</mi></msub></math>:
+</p>
+</div>
+<div id="Thmthm1" class="ltx_theorem ltx_theorem_thm">
+<h6 class="ltx_title ltx_runin ltx_font_bold ltx_title_theorem">
+<span class="ltx_tag ltx_tag_theorem">Theorem 1</span>.</h6>
+<div id="Thmthm1.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_italic">A conjugacy class in <math id="Thmthm1.p1.m1" class="ltx_Math" alttext="S_{n}" display="inline"><msub><mi>S</mi><mi>n</mi></msub></math> splits into two distinct conjugacy classes under the action of <math id="Thmthm1.p1.m2" class="ltx_Math" alttext="A_{n}" display="inline"><msub><mi>A</mi><mi>n</mi></msub></math> if and only if its cycle type consists of <em class="ltx_emph ltx_font_upright">distinct</em> odd integers. Otherwise, it remains a single conjugacy class in <math id="Thmthm1.p1.m3" class="ltx_Math" alttext="A_{n}" display="inline"><msub><mi>A</mi><mi>n</mi></msub></math>.</span></p>
+</div>
+</div>
+<div id="p4" class="ltx_para">
+<p class="ltx_p">Thus, for example, in <math id="p4.m1" class="ltx_Math" alttext="S_{7}" display="inline"><msub><mi>S</mi><mn>7</mn></msub></math>, the elements of the conjugacy class of <math id="p4.m2" class="ltx_Math" alttext="(1~{}2~{}3~{}4~{}5)" display="inline"><mrow><mo stretchy="false">(</mo><mrow><mpadded width="+3.3pt"><mn>1</mn></mpadded><mo>⁢</mo><mpadded width="+3.3pt"><mn>2</mn></mpadded><mo>⁢</mo><mpadded width="+3.3pt"><mn>3</mn></mpadded><mo>⁢</mo><mpadded width="+3.3pt"><mn>4</mn></mpadded><mo>⁢</mo><mn>5</mn></mrow><mo stretchy="false">)</mo></mrow></math> are all conjugate in <math id="p4.m3" class="ltx_Math" alttext="A_{7}" display="inline"><msub><mi>A</mi><mn>7</mn></msub></math>, while the elements of the conjugacy class of <math id="p4.m4" class="ltx_Math" alttext="(1~{}2~{}3)(4~{}5~{}6)" display="inline"><mrow><mrow><mo stretchy="false">(</mo><mrow><mpadded width="+3.3pt"><mn>1</mn></mpadded><mo>⁢</mo><mpadded width="+3.3pt"><mn>2</mn></mpadded><mo>⁢</mo><mn>3</mn></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mpadded width="+3.3pt"><mn>4</mn></mpadded><mo>⁢</mo><mpadded width="+3.3pt"><mn>5</mn></mpadded><mo>⁢</mo><mn>6</mn></mrow><mo stretchy="false">)</mo></mrow></mrow></math> split into two distinct conjugacy classes in <math id="p4.m5" class="ltx_Math" alttext="A_{7}" display="inline"><msub><mi>A</mi><mn>7</mn></msub></math> since there are two cycles of length <math id="p4.m6" class="ltx_Math" alttext="3" display="inline"><mn>3</mn></math>. Similarly, any conjugacy class containing an even-length cycle, such as <math id="p4.m7" class="ltx_Math" alttext="(1~{}2~{}3~{}4)(5~{}6)" display="inline"><mrow><mrow><mo stretchy="false">(</mo><mrow><mpadded width="+3.3pt"><mn>1</mn></mpadded><mo>⁢</mo><mpadded width="+3.3pt"><mn>2</mn></mpadded><mo>⁢</mo><mpadded width="+3.3pt"><mn>3</mn></mpadded><mo>⁢</mo><mn>4</mn></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mpadded width="+3.3pt"><mn>5</mn></mpadded><mo>⁢</mo><mn>6</mn></mrow><mo stretchy="false">)</mo></mrow></mrow></math>, splits in <math id="p4.m8" class="ltx_Math" alttext="A_{7}" display="inline"><msub><mi>A</mi><mn>7</mn></msub></math>.</p>
+</div>
+<div id="p5" class="ltx_para">
+<p class="ltx_p">We will prove the above theorem by proving the following statements:</p>
+<ul id="I1" class="ltx_itemize">
+<li id="I1.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_itemize">•</span> 
+<div id="I1.i1.p1" class="ltx_para">
+<p class="ltx_p">A conjugacy class in <math id="I1.i1.p1.m1" class="ltx_Math" alttext="S_{n}" display="inline"><msub><mi>S</mi><mi>n</mi></msub></math> consisting solely of even permutations (i.e. that is contained in <math id="I1.i1.p1.m2" class="ltx_Math" alttext="A_{n}" display="inline"><msub><mi>A</mi><mi>n</mi></msub></math>) either is a single conjugacy class or is the disjoint union of two equal-sized conjugacy classes when considered under the action of <math id="I1.i1.p1.m3" class="ltx_Math" alttext="A_{n}" display="inline"><msub><mi>A</mi><mi>n</mi></msub></math>.</p>
+</div>
+</li>
+<li id="I1.i2" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_itemize">•</span> 
+<div id="I1.i2.p1" class="ltx_para">
+<p class="ltx_p">If <math id="I1.i2.p1.m1" class="ltx_Math" alttext="\sigma\in A_{n}" display="inline"><mrow><mi>σ</mi><mo>∈</mo><msub><mi>A</mi><mi>n</mi></msub></mrow></math>, then the elements of the conjugacy class of <math id="I1.i2.p1.m2" class="ltx_Math" alttext="\sigma" display="inline"><mi>σ</mi></math> in <math id="I1.i2.p1.m3" class="ltx_Math" alttext="S_{n}" display="inline"><msub><mi>S</mi><mi>n</mi></msub></math> (which is just all elements of the same cycle type as <math id="I1.i2.p1.m4" class="ltx_Math" alttext="\sigma" display="inline"><mi>σ</mi></math>) are conjugate in <math id="I1.i2.p1.m5" class="ltx_Math" alttext="A_{n}" display="inline"><msub><mi>A</mi><mi>n</mi></msub></math> if and only if <math id="I1.i2.p1.m6" class="ltx_Math" alttext="\sigma" display="inline"><mi>σ</mi></math> commutes with some odd permutation.</p>
+</div>
+</li>
+<li id="I1.i3" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_itemize">•</span> 
+<div id="I1.i3.p1" class="ltx_para">
+<p class="ltx_p"><math id="I1.i3.p1.m1" class="ltx_Math" alttext="\sigma\in S_{n}" display="inline"><mrow><mi>σ</mi><mo>∈</mo><msub><mi>S</mi><mi>n</mi></msub></mrow></math> does not commute with an odd permutation if and only if the cycle type of <math id="I1.i3.p1.m2" class="ltx_Math" alttext="\sigma" display="inline"><mi>σ</mi></math> consists of <em class="ltx_emph ltx_font_italic">distinct</em> odd integers.</p>
+</div>
+</li>
+</ul>
+</div>
+<div id="p6" class="ltx_para">
+<p class="ltx_p">Throughout, we will denote by <math id="p6.m1" class="ltx_Math" alttext="\mathcal{C}_{S}(\sigma)" display="inline"><mrow><msub><mi class="ltx_font_mathcaligraphic">𝒞</mi><mi>S</mi></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>σ</mi><mo stretchy="false">)</mo></mrow></mrow></math> the conjugacy class of <math id="p6.m2" class="ltx_Math" alttext="\sigma" display="inline"><mi>σ</mi></math> under the action of <math id="p6.m3" class="ltx_Math" alttext="S_{n}" display="inline"><msub><mi>S</mi><mi>n</mi></msub></math>.</p>
+</div>
+<div id="p7" class="ltx_para">
+<p class="ltx_p">To prove the first statement, note that conjugacy is a transitive action. By the theorem that orbits of a normal subgroup are equal in size when the full group acts transitively, we see that if <math id="p7.m1" class="ltx_Math" alttext="\sigma\in A_{n}" display="inline"><mrow><mi>σ</mi><mo>∈</mo><msub><mi>A</mi><mi>n</mi></msub></mrow></math>, then <math id="p7.m2" class="ltx_Math" alttext="\mathcal{C}_{S}(\sigma)" display="inline"><mrow><msub><mi class="ltx_font_mathcaligraphic">𝒞</mi><mi>S</mi></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>σ</mi><mo stretchy="false">)</mo></mrow></mrow></math> splits into <math id="p7.m3" class="ltx_Math" alttext="\lvert S_{n}:A_{n}C_{S_{n}}(\sigma)\rvert" display="inline"><mrow><mo fence="true" stretchy="false">|</mo><mrow><msub><mi>S</mi><mi>n</mi></msub><mo>:</mo><mrow><msub><mi>A</mi><mi>n</mi></msub><mo>⁢</mo><msub><mi>C</mi><msub><mi>S</mi><mi>n</mi></msub></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>σ</mi><mo stretchy="false">)</mo></mrow></mrow></mrow><mo fence="true" stretchy="false">|</mo></mrow></math> classes under the action of <math id="p7.m4" class="ltx_Math" alttext="A_{n}" display="inline"><msub><mi>A</mi><mi>n</mi></msub></math> (recall that <math id="p7.m5" class="ltx_Math" alttext="C_{G}(x)" display="inline"><mrow><msub><mi>C</mi><mi>G</mi></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow></math>, the centralizer of <math id="p7.m6" class="ltx_Math" alttext="x" display="inline"><mi>x</mi></math>, is simply the stabilizer of <math id="p7.m7" class="ltx_Math" alttext="x" display="inline"><mi>x</mi></math> under the conjugation action of <math id="p7.m8" class="ltx_Math" alttext="G" display="inline"><mi>G</mi></math> on itself). But since <math id="p7.m9" class="ltx_Math" alttext="\lvert S_{n}:A_{n}\rvert" display="inline"><mrow><mo fence="true" stretchy="false">|</mo><mrow><msub><mi>S</mi><mi>n</mi></msub><mo>:</mo><msub><mi>A</mi><mi>n</mi></msub></mrow><mo fence="true" stretchy="false">|</mo></mrow></math> is either <math id="p7.m10" class="ltx_Math" alttext="1" display="inline"><mn>1</mn></math> or <math id="p7.m11" class="ltx_Math" alttext="2" display="inline"><mn>2</mn></math>, we see that the conjugacy class of <math id="p7.m12" class="ltx_Math" alttext="\sigma" display="inline"><mi>σ</mi></math> either remains a single class in <math id="p7.m13" class="ltx_Math" alttext="A_{n}" display="inline"><msub><mi>A</mi><mi>n</mi></msub></math> or splits into two classes.</p>
+</div>
+<div id="p8" class="ltx_para">
+<p class="ltx_p">Note also that the elements of <math id="p8.m1" class="ltx_Math" alttext="\mathcal{C}_{S}(\sigma)" display="inline"><mrow><msub><mi class="ltx_font_mathcaligraphic">𝒞</mi><mi>S</mi></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>σ</mi><mo stretchy="false">)</mo></mrow></mrow></math> are all conjugate in <math id="p8.m2" class="ltx_Math" alttext="A_{n}" display="inline"><msub><mi>A</mi><mi>n</mi></msub></math> if and only if <math id="p8.m3" class="ltx_Math" alttext="A_{n}C_{S_{n}}(\sigma)=S_{n}" display="inline"><mrow><mrow><msub><mi>A</mi><mi>n</mi></msub><mo>⁢</mo><msub><mi>C</mi><msub><mi>S</mi><mi>n</mi></msub></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>σ</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><msub><mi>S</mi><mi>n</mi></msub></mrow></math>, which happens if and only if <math id="p8.m4" class="ltx_Math" alttext="C_{S_{n}}(\sigma)\nsubseteq A_{n}" display="inline"><mrow><mrow><msub><mi>C</mi><msub><mi>S</mi><mi>n</mi></msub></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>σ</mi><mo stretchy="false">)</mo></mrow></mrow><mo>⊈</mo><msub><mi>A</mi><mi>n</mi></msub></mrow></math>, which in turn is the case if and only if some odd permutation is in the centralizer of <math id="p8.m5" class="ltx_Math" alttext="\sigma" display="inline"><mi>σ</mi></math>, which means precisely that <math id="p8.m6" class="ltx_Math" alttext="\sigma" display="inline"><mi>σ</mi></math> commutes with some odd permutation. This proves the second statement.</p>
+</div>
+<div id="p9" class="ltx_para">
+<p class="ltx_p">To prove the third statement, suppose first that <math id="p9.m1" class="ltx_Math" alttext="\sigma" display="inline"><mi>σ</mi></math> does not commute with an odd permutation. Clearly <math id="p9.m2" class="ltx_Math" alttext="\sigma" display="inline"><mi>σ</mi></math> commutes with any cycle in its own cycle decomposition, so if <math id="p9.m3" class="ltx_Math" alttext="\sigma" display="inline"><mi>σ</mi></math> contains a cycle of even length, that is an odd permutation with which <math id="p9.m4" class="ltx_Math" alttext="\sigma" display="inline"><mi>σ</mi></math> commutes. So <math id="p9.m5" class="ltx_Math" alttext="\sigma" display="inline"><mi>σ</mi></math> must consist solely of [disjoint] cycles of odd length. If two of these cycles have the same length, say <math id="p9.m6" class="ltx_Math" alttext="(a_{1}~{}a_{2}~{}\ldots~{}a_{2k+1})" display="inline"><mrow><mo stretchy="false">(</mo><mrow><mpadded width="+3.3pt"><msub><mi>a</mi><mn>1</mn></msub></mpadded><mo>⁢</mo><mpadded width="+3.3pt"><msub><mi>a</mi><mn>2</mn></msub></mpadded><mo>⁢</mo><mpadded width="+3.3pt"><mi mathvariant="normal">…</mi></mpadded><mo>⁢</mo><msub><mi>a</mi><mrow><mrow><mn>2</mn><mo>⁢</mo><mi>k</mi></mrow><mo>+</mo><mn>1</mn></mrow></msub></mrow><mo stretchy="false">)</mo></mrow></math> and <math id="p9.m7" class="ltx_Math" alttext="(b_{1}~{}b_{2}~{}\ldots~{}b_{2k+1})" display="inline"><mrow><mo stretchy="false">(</mo><mrow><mpadded width="+3.3pt"><msub><mi>b</mi><mn>1</mn></msub></mpadded><mo>⁢</mo><mpadded width="+3.3pt"><msub><mi>b</mi><mn>2</mn></msub></mpadded><mo>⁢</mo><mpadded width="+3.3pt"><mi mathvariant="normal">…</mi></mpadded><mo>⁢</mo><msub><mi>b</mi><mrow><mrow><mn>2</mn><mo>⁢</mo><mi>k</mi></mrow><mo>+</mo><mn>1</mn></mrow></msub></mrow><mo stretchy="false">)</mo></mrow></math>, then</p>
+<table class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="p9.m8" class="ltx_Math" alttext="\displaystyle((a_{1}~{}b_{1})\ldots(a_{2k+1}~{}b_{2k+1}))(a_{1}~{}a_{2}~{}%
+\ldots~{}a_{2k+1})(b_{1}~{}b_{2}~{}\ldots~{}b_{2k+1})((a_{1}~{}b_{1})\ldots(a_%
+{2k+1}~{}b_{2k+1}))^{-1}=\\
+\displaystyle(a_{1}~{}a_{2}~{}\ldots~{}a_{2k+1})(b_{1}~{}b_{2}~{}\ldots~{}b_{2%
+k+1})" display="block"><mtable displaystyle="true" rowspacing="0pt"><mtr><mtd columnalign="left"><mrow><mrow><mrow><mo stretchy="false">(</mo><mrow><mrow><mo stretchy="false">(</mo><mrow><mpadded width="+3.3pt"><msub><mi>a</mi><mn>1</mn></msub></mpadded><mo>⁢</mo><msub><mi>b</mi><mn>1</mn></msub></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mi mathvariant="normal">…</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mpadded width="+3.3pt"><msub><mi>a</mi><mrow><mrow><mn>2</mn><mo>⁢</mo><mi>k</mi></mrow><mo>+</mo><mn>1</mn></mrow></msub></mpadded><mo>⁢</mo><msub><mi>b</mi><mrow><mrow><mn>2</mn><mo>⁢</mo><mi>k</mi></mrow><mo>+</mo><mn>1</mn></mrow></msub></mrow><mo stretchy="false">)</mo></mrow></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mpadded width="+3.3pt"><msub><mi>a</mi><mn>1</mn></msub></mpadded><mo>⁢</mo><mpadded width="+3.3pt"><msub><mi>a</mi><mn>2</mn></msub></mpadded><mo>⁢</mo><mpadded width="+3.3pt"><mi mathvariant="normal">…</mi></mpadded><mo>⁢</mo><msub><mi>a</mi><mrow><mrow><mn>2</mn><mo>⁢</mo><mi>k</mi></mrow><mo>+</mo><mn>1</mn></mrow></msub></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mpadded width="+3.3pt"><msub><mi>b</mi><mn>1</mn></msub></mpadded><mo>⁢</mo><mpadded width="+3.3pt"><msub><mi>b</mi><mn>2</mn></msub></mpadded><mo>⁢</mo><mpadded width="+3.3pt"><mi mathvariant="normal">…</mi></mpadded><mo>⁢</mo><msub><mi>b</mi><mrow><mrow><mn>2</mn><mo>⁢</mo><mi>k</mi></mrow><mo>+</mo><mn>1</mn></mrow></msub></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><msup><mrow><mo stretchy="false">(</mo><mrow><mrow><mo stretchy="false">(</mo><mrow><mpadded width="+3.3pt"><msub><mi>a</mi><mn>1</mn></msub></mpadded><mo>⁢</mo><msub><mi>b</mi><mn>1</mn></msub></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mi mathvariant="normal">…</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mpadded width="+3.3pt"><msub><mi>a</mi><mrow><mrow><mn>2</mn><mo>⁢</mo><mi>k</mi></mrow><mo>+</mo><mn>1</mn></mrow></msub></mpadded><mo>⁢</mo><msub><mi>b</mi><mrow><mrow><mn>2</mn><mo>⁢</mo><mi>k</mi></mrow><mo>+</mo><mn>1</mn></mrow></msub></mrow><mo stretchy="false">)</mo></mrow></mrow><mo stretchy="false">)</mo></mrow><mrow><mo>-</mo><mn>1</mn></mrow></msup></mrow><mo>=</mo><mi></mi></mrow></mtd></mtr><mtr><mtd columnalign="right"><mrow><mrow><mo stretchy="false">(</mo><mrow><mpadded width="+3.3pt"><msub><mi>a</mi><mn>1</mn></msub></mpadded><mo>⁢</mo><mpadded width="+3.3pt"><msub><mi>a</mi><mn>2</mn></msub></mpadded><mo>⁢</mo><mpadded width="+3.3pt"><mi mathvariant="normal">…</mi></mpadded><mo>⁢</mo><msub><mi>a</mi><mrow><mrow><mn>2</mn><mo>⁢</mo><mi>k</mi></mrow><mo>+</mo><mn>1</mn></mrow></msub></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mpadded width="+3.3pt"><msub><mi>b</mi><mn>1</mn></msub></mpadded><mo>⁢</mo><mpadded width="+3.3pt"><msub><mi>b</mi><mn>2</mn></msub></mpadded><mo>⁢</mo><mpadded width="+3.3pt"><mi mathvariant="normal">…</mi></mpadded><mo>⁢</mo><msub><mi>b</mi><mrow><mrow><mn>2</mn><mo>⁢</mo><mi>k</mi></mrow><mo>+</mo><mn>1</mn></mrow></msub></mrow><mo stretchy="false">)</mo></mrow></mrow></mtd></mtr></mtable></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">so the product of <math id="p9.m9" class="ltx_Math" alttext="(a_{1}~{}a_{2}~{}\ldots~{}a_{2k+1})" display="inline"><mrow><mo stretchy="false">(</mo><mrow><mpadded width="+3.3pt"><msub><mi>a</mi><mn>1</mn></msub></mpadded><mo>⁢</mo><mpadded width="+3.3pt"><msub><mi>a</mi><mn>2</mn></msub></mpadded><mo>⁢</mo><mpadded width="+3.3pt"><mi mathvariant="normal">…</mi></mpadded><mo>⁢</mo><msub><mi>a</mi><mrow><mrow><mn>2</mn><mo>⁢</mo><mi>k</mi></mrow><mo>+</mo><mn>1</mn></mrow></msub></mrow><mo stretchy="false">)</mo></mrow></math> and <math id="p9.m10" class="ltx_Math" alttext="(b_{1}~{}b_{2}~{}\ldots~{}b_{2k+1})" display="inline"><mrow><mo stretchy="false">(</mo><mrow><mpadded width="+3.3pt"><msub><mi>b</mi><mn>1</mn></msub></mpadded><mo>⁢</mo><mpadded width="+3.3pt"><msub><mi>b</mi><mn>2</mn></msub></mpadded><mo>⁢</mo><mpadded width="+3.3pt"><mi mathvariant="normal">…</mi></mpadded><mo>⁢</mo><msub><mi>b</mi><mrow><mrow><mn>2</mn><mo>⁢</mo><mi>k</mi></mrow><mo>+</mo><mn>1</mn></mrow></msub></mrow><mo stretchy="false">)</mo></mrow></math>, and thus <math id="p9.m11" class="ltx_Math" alttext="\sigma" display="inline"><mi>σ</mi></math>, commutes with the product of <math id="p9.m12" class="ltx_Math" alttext="2k+1" display="inline"><mrow><mrow><mn>2</mn><mo>⁢</mo><mi>k</mi></mrow><mo>+</mo><mn>1</mn></mrow></math> transpositions, which is an odd permutation. Thus all the cycles in the cycle decomposition of <math id="p9.m13" class="ltx_Math" alttext="\sigma" display="inline"><mi>σ</mi></math> must have different [odd] lengths.</p>
+</div>
+<div id="p10" class="ltx_para">
+<p class="ltx_p">To prove the converse, we show that if the cycles in the cycle decomposition all have distinct lengths, then <math id="p10.m1" class="ltx_Math" alttext="\sigma" display="inline"><mi>σ</mi></math> commutes precisely with the group generated by its cycles. It follows then that if all the distinct lengths are odd, then <math id="p10.m2" class="ltx_Math" alttext="\sigma" display="inline"><mi>σ</mi></math> commutes only with these permutations, which are all even. Choose <math id="p10.m3" class="ltx_Math" alttext="\sigma" display="inline"><mi>σ</mi></math> with distinct cycle lengths in its cycle decomposition, and suppose that <math id="p10.m4" class="ltx_Math" alttext="\sigma" display="inline"><mi>σ</mi></math> commutes with some element <math id="p10.m5" class="ltx_Math" alttext="\tau\in S_{n}" display="inline"><mrow><mi>τ</mi><mo>∈</mo><msub><mi>S</mi><mi>n</mi></msub></mrow></math>. Conjugation preserves cycle length, so since <math id="p10.m6" class="ltx_Math" alttext="\tau" display="inline"><mi>τ</mi></math> commutes with <math id="p10.m7" class="ltx_Math" alttext="\sigma" display="inline"><mi>σ</mi></math> and <math id="p10.m8" class="ltx_Math" alttext="\sigma" display="inline"><mi>σ</mi></math> has all its cycles of distinct lengths, each cycle in <math id="p10.m9" class="ltx_Math" alttext="\tau" display="inline"><mi>τ</mi></math> must commute with each cycle in <math id="p10.m10" class="ltx_Math" alttext="\sigma" display="inline"><mi>σ</mi></math> individually.
+</p>
+</div>
+<div id="p11" class="ltx_para">
+<p class="ltx_p">Now, choose a nontrivial cycle <math id="p11.m1" class="ltx_Math" alttext="\tau_{1}" display="inline"><msub><mi>τ</mi><mn>1</mn></msub></math> of <math id="p11.m2" class="ltx_Math" alttext="\tau" display="inline"><mi>τ</mi></math>, and choose <math id="p11.m3" class="ltx_Math" alttext="j\in\tau" display="inline"><mrow><mi>j</mi><mo>∈</mo><mi>τ</mi></mrow></math> such that <math id="p11.m4" class="ltx_Math" alttext="\sigma" display="inline"><mi>σ</mi></math> moves <math id="p11.m5" class="ltx_Math" alttext="j" display="inline"><mi>j</mi></math> (we can do this, since <math id="p11.m6" class="ltx_Math" alttext="\sigma" display="inline"><mi>σ</mi></math> can have at most one cycle of length <math id="p11.m7" class="ltx_Math" alttext="1" display="inline"><mn>1</mn></math> and the cycle length of <math id="p11.m8" class="ltx_Math" alttext="\tau" display="inline"><mi>τ</mi></math> is greater than <math id="p11.m9" class="ltx_Math" alttext="1" display="inline"><mn>1</mn></math>). Let <math id="p11.m10" class="ltx_Math" alttext="\sigma_{1}" display="inline"><msub><mi>σ</mi><mn>1</mn></msub></math> be the cycle of <math id="p11.m11" class="ltx_Math" alttext="\sigma" display="inline"><mi>σ</mi></math> containing <math id="p11.m12" class="ltx_Math" alttext="j" display="inline"><mi>j</mi></math>. Then <math id="p11.m13" class="ltx_Math" alttext="\tau_{1}" display="inline"><msub><mi>τ</mi><mn>1</mn></msub></math> commutes with <math id="p11.m14" class="ltx_Math" alttext="\sigma_{1}" display="inline"><msub><mi>σ</mi><mn>1</mn></msub></math> since <math id="p11.m15" class="ltx_Math" alttext="\tau" display="inline"><mi>τ</mi></math> commutes with <math id="p11.m16" class="ltx_Math" alttext="\sigma" display="inline"><mi>σ</mi></math>, so <math id="p11.m17" class="ltx_Math" alttext="\tau_{1}" display="inline"><msub><mi>τ</mi><mn>1</mn></msub></math> is in the centralizer of <math id="p11.m18" class="ltx_Math" alttext="\sigma_{1}" display="inline"><msub><mi>σ</mi><mn>1</mn></msub></math>, and it is not disjoint from <math id="p11.m19" class="ltx_Math" alttext="\sigma_{1}" display="inline"><msub><mi>σ</mi><mn>1</mn></msub></math>. But the centralizer of a <math id="p11.m20" class="ltx_Math" alttext="k" display="inline"><mi>k</mi></math>-cycle <math id="p11.m21" class="ltx_Math" alttext="\rho" display="inline"><mi>ρ</mi></math> consists of products of powers of <math id="p11.m22" class="ltx_Math" alttext="\rho" display="inline"><mi>ρ</mi></math> and cycles disjoint from <math id="p11.m23" class="ltx_Math" alttext="\rho" display="inline"><mi>ρ</mi></math>. Thus <math id="p11.m24" class="ltx_Math" alttext="\tau_{1}" display="inline"><msub><mi>τ</mi><mn>1</mn></msub></math> is a power of <math id="p11.m25" class="ltx_Math" alttext="\sigma_{1}" display="inline"><msub><mi>σ</mi><mn>1</mn></msub></math>. So each cycle in <math id="p11.m26" class="ltx_Math" alttext="\tau" display="inline"><mi>τ</mi></math> is a power of a cycle in <math id="p11.m27" class="ltx_Math" alttext="\sigma" display="inline"><mi>σ</mi></math>, and we are done.</p>
+</div>
+<div id="p12" class="ltx_para ltx_align_right">
+<table class="ltx_tabular ltx_guessed_headers ltx_align_middle">
+<tbody class="ltx_tbody">
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l ltx_border_t">Title</th>
+<td class="ltx_td ltx_align_left ltx_border_r ltx_border_t">conjugacy in <math id="p12.m1" class="ltx_Math" alttext="A_{n}" display="inline"><msub><mi>A</mi><mi>n</mi></msub></math>
+</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Canonical name</th>
+<td class="ltx_td ltx_align_left ltx_border_r">ConjugacyInAn</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Date of creation</th>
+<td class="ltx_td ltx_align_left ltx_border_r">2013-03-22 17:18:04</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Last modified on</th>
+<td class="ltx_td ltx_align_left ltx_border_r">2013-03-22 17:18:04</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Owner</th>
+<td class="ltx_td ltx_align_left ltx_border_r">rm50 (10146)</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Last modified by</th>
+<td class="ltx_td ltx_align_left ltx_border_r">rm50 (10146)</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Numerical id</th>
+<td class="ltx_td ltx_align_left ltx_border_r">6</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Author</th>
+<td class="ltx_td ltx_align_left ltx_border_r">rm50 (10146)</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Entry type</th>
+<td class="ltx_td ltx_align_left ltx_border_r">Theorem</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_b ltx_border_l">Classification</th>
+<td class="ltx_td ltx_align_left ltx_border_b ltx_border_r">msc 20M30</td>
+</tr>
+</tbody>
+</table>
+</div>
+</article>
+</div>
+<footer class="ltx_page_footer">
+<div class="ltx_page_logo">Generated  on Fri Feb  9 19:34:27 2018 by <a href="http://dlmf.nist.gov/LaTeXML/">LaTeXML <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAsAAAAOCAYAAAD5YeaVAAAAAXNSR0IArs4c6QAAAAZiS0dEAP8A/wD/oL2nkwAAAAlwSFlzAAALEwAACxMBAJqcGAAAAAd0SU1FB9wKExQZLWTEaOUAAAAddEVYdENvbW1lbnQAQ3JlYXRlZCB3aXRoIFRoZSBHSU1Q72QlbgAAAdpJREFUKM9tkL+L2nAARz9fPZNCKFapUn8kyI0e4iRHSR1Kb8ng0lJw6FYHFwv2LwhOpcWxTjeUunYqOmqd6hEoRDhtDWdA8ApRYsSUCDHNt5ul13vz4w0vWCgUnnEc975arX6ORqN3VqtVZbfbTQC4uEHANM3jSqXymFI6yWazP2KxWAXAL9zCUa1Wy2tXVxheKA9YNoR8Pt+aTqe4FVVVvz05O6MBhqUIBGk8Hn8HAOVy+T+XLJfLS4ZhTiRJgqIoVBRFIoric47jPnmeB1mW/9rr9ZpSSn3Lsmir1fJZlqWlUonKsvwWwD8ymc/nXwVBeLjf7xEKhdBut9Hr9WgmkyGEkJwsy5eHG5vN5g0AKIoCAEgkEkin0wQAfN9/cXPdheu6P33fBwB4ngcAcByHJpPJl+fn54mD3Gg0NrquXxeLRQAAwzAYj8cwTZPwPH9/sVg8PXweDAauqqr2cDjEer1GJBLBZDJBs9mE4zjwfZ85lAGg2+06hmGgXq+j3+/DsixYlgVN03a9Xu8jgCNCyIegIAgx13Vfd7vdu+FweG8YRkjXdWy329+dTgeSJD3ieZ7RNO0VAXAPwDEAO5VKndi2fWrb9jWl9Esul6PZbDY9Go1OZ7PZ9z/lyuD3OozU2wAAAABJRU5ErkJggg==" alt="[LOGO]"></a>
+</div></footer>
+</div>
+</body>
+</html>

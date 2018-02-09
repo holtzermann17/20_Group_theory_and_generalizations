@@ -1,0 +1,198 @@
+<!DOCTYPE html><html>
+<head>
+<title>transversals / lifts / sifts</title>
+<!--Generated on Fri Feb  9 19:32:19 2018 by LaTeXML (version 0.8.2) http://dlmf.nist.gov/LaTeXML/.-->
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" href="LaTeXML.css" type="text/css">
+<link rel="stylesheet" href="ltx-article.css" type="text/css">
+<link rel="stylesheet" href="https://cdn.rawgit.com/holtzermann17/3f71ceeb3b055e1ddc3b6c11fb1f074c/raw/2bb23e3b173ff96840797fc0c3bcb8c54085df8e/LaTeXML.css" type="text/css">
+<link rel="stylesheet" href="https://cdn.rawgit.com/holtzermann17/4bda0365b30858ac2fb83623185fe3ec/raw/cedd84ed3e3ad597c5d293f443ecfe4803741c6b/ltx-article.css" type="text/css">
+<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=MML_HTMLorMML" type="text/javascript"></script>
+</head>
+<body>
+<div class="ltx_page_main">
+<div class="ltx_page_content">
+<article class="ltx_document ltx_authors_1line">
+<h1 class="ltx_title ltx_title_document">transversals / lifts / sifts</h1>
+
+<div id="p1" class="ltx_para">
+<br class="ltx_break">
+</div>
+<div id="Thmthm1" class="ltx_theorem ltx_theorem_defn">
+<h6 class="ltx_title ltx_runin ltx_font_bold ltx_title_theorem">
+<span class="ltx_tag ltx_tag_theorem">Definition 1</span>.</h6>
+<div id="Thmthm1.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_italic">Given a group <math id="Thmthm1.p1.m1" class="ltx_Math" alttext="G" display="inline"><mi>G</mi></math> and a subgroup <math id="Thmthm1.p1.m2" class="ltx_Math" alttext="H" display="inline"><mi>H</mi></math> of <math id="Thmthm1.p1.m3" class="ltx_Math" alttext="G" display="inline"><mi>G</mi></math>, a <em class="ltx_emph ltx_font_upright">transversal</em> of <math id="Thmthm1.p1.m4" class="ltx_Math" alttext="H" display="inline"><mi>H</mi></math> in <math id="Thmthm1.p1.m5" class="ltx_Math" alttext="G" display="inline"><mi>G</mi></math>
+is a subset <math id="Thmthm1.p1.m6" class="ltx_Math" alttext="T\subseteq G" display="inline"><mrow><mi>T</mi><mo mathvariant="normal">⊆</mo><mi>G</mi></mrow></math> such that for every <math id="Thmthm1.p1.m7" class="ltx_Math" alttext="g\in G" display="inline"><mrow><mi>g</mi><mo mathvariant="normal">∈</mo><mi>G</mi></mrow></math> there exists a unique
+<math id="Thmthm1.p1.m8" class="ltx_Math" alttext="t\in T" display="inline"><mrow><mi>t</mi><mo mathvariant="normal">∈</mo><mi>T</mi></mrow></math> such that <math id="Thmthm1.p1.m9" class="ltx_Math" alttext="Hg=Ht" display="inline"><mrow><mrow><mi>H</mi><mo mathvariant="italic">⁢</mo><mi>g</mi></mrow><mo mathvariant="normal">=</mo><mrow><mi>H</mi><mo mathvariant="italic">⁢</mo><mi>t</mi></mrow></mrow></math>.</span></p>
+</div>
+</div>
+<div id="p2" class="ltx_para">
+<p class="ltx_p">Typically one insists <math id="p2.m1" class="ltx_Math" alttext="1\in T" display="inline"><mrow><mn>1</mn><mo>∈</mo><mi>T</mi></mrow></math> so that the coset <math id="p2.m2" class="ltx_Math" alttext="H" display="inline"><mi>H</mi></math> is described uniquely
+by <math id="p2.m3" class="ltx_Math" alttext="H1" display="inline"><mrow><mi>H</mi><mo>⁢</mo><mn>1</mn></mrow></math>. However no standard terminology has emerged for transversals of this sort.</p>
+</div>
+<div id="p3" class="ltx_para">
+<p class="ltx_p">An alternative definition for a transversal is to use functions and homomorphisms in a method more conducive to a categorical setting. Here one replaces the notion of a transversal as a subset of <math id="p3.m1" class="ltx_Math" alttext="G" display="inline"><mi>G</mi></math> and instead treats it as a certain type of map <math id="p3.m2" class="ltx_Math" alttext="T:G/H\rightarrow G" display="inline"><mrow><mi>T</mi><mo>:</mo><mrow><mrow><mi>G</mi><mo>/</mo><mi>H</mi></mrow><mo>→</mo><mi>G</mi></mrow></mrow></math>. Since <math id="p3.m3" class="ltx_Math" alttext="H" display="inline"><mi>H</mi></math> is generally not normal in <math id="p3.m4" class="ltx_Math" alttext="G" display="inline"><mi>G</mi></math>, <math id="p3.m5" class="ltx_Math" alttext="G/H" display="inline"><mrow><mi>G</mi><mo>/</mo><mi>H</mi></mrow></math> simply means the set of cosets, and <math id="p3.m6" class="ltx_Math" alttext="T" display="inline"><mi>T</mi></math> is therefore a function not a homomorphism. We only require that <math id="p3.m7" class="ltx_Math" alttext="T" display="inline"><mi>T</mi></math> satisfy the following property: Given the canonical projection map <math id="p3.m8" class="ltx_Math" alttext="\pi:G\rightarrow G/H" display="inline"><mrow><mi>π</mi><mo>:</mo><mrow><mi>G</mi><mo>→</mo><mrow><mi>G</mi><mo>/</mo><mi>H</mi></mrow></mrow></mrow></math> given by <math id="p3.m9" class="ltx_Math" alttext="g\mapsto Hg" display="inline"><mrow><mi>g</mi><mo>↦</mo><mrow><mi>H</mi><mo>⁢</mo><mi>g</mi></mrow></mrow></math> (this is generally not a homomorphism either, and so both <math id="p3.m10" class="ltx_Math" alttext="\pi" display="inline"><mi>π</mi></math> and <math id="p3.m11" class="ltx_Math" alttext="T" display="inline"><mi>T</mi></math> are simply functions between sets) then <math id="p3.m12" class="ltx_Math" alttext="\pi T=1_{G/H}" display="inline"><mrow><mrow><mi>π</mi><mo>⁢</mo><mi>T</mi></mrow><mo>=</mo><msub><mn>1</mn><mrow><mi>G</mi><mo>/</mo><mi>H</mi></mrow></msub></mrow></math>. It follows immediately that the image of <math id="p3.m13" class="ltx_Math" alttext="T" display="inline"><mi>T</mi></math> in <math id="p3.m14" class="ltx_Math" alttext="G" display="inline"><mi>G</mi></math> is a transversal in the original sense of the term.</p>
+</div>
+<div id="Thmthm2" class="ltx_theorem ltx_theorem_remark">
+<h6 class="ltx_title ltx_runin ltx_font_bold ltx_title_theorem">
+<span class="ltx_tag ltx_tag_theorem">Remark 2</span>.</h6>
+<div id="Thmthm2.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_italic">Because it is customary in group theory to write actions to the right of elements many times it is preferable to write <math id="Thmthm2.p1.m1" class="ltx_Math" alttext="T\pi=1_{G/H}" display="inline"><mrow><mrow><mi>T</mi><mo mathvariant="italic">⁢</mo><mi>π</mi></mrow><mo mathvariant="normal">=</mo><msub><mn mathvariant="normal">1</mn><mrow><mi>G</mi><mo mathvariant="normal">/</mo><mi>H</mi></mrow></msub></mrow></math> to match the right side notation.</span></p>
+</div>
+</div>
+<div id="p4" class="ltx_para">
+<p class="ltx_p">When <math id="p4.m1" class="ltx_Math" alttext="H" display="inline"><mi>H</mi></math> is a normal subgroup of <math id="p4.m2" class="ltx_Math" alttext="G" display="inline"><mi>G</mi></math> our terminology adjusts from transversals to <em class="ltx_emph ltx_font_italic">lifts</em>.</p>
+</div>
+<div id="Thmthm3" class="ltx_theorem ltx_theorem_defn">
+<h6 class="ltx_title ltx_runin ltx_font_bold ltx_title_theorem">
+<span class="ltx_tag ltx_tag_theorem">Definition 3</span>.</h6>
+<div id="Thmthm3.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_italic">Given a group <math id="Thmthm3.p1.m1" class="ltx_Math" alttext="G" display="inline"><mi>G</mi></math> and a homomorphism <math id="Thmthm3.p1.m2" class="ltx_Math" alttext="\pi:G\rightarrow Q" display="inline"><mrow><mi>π</mi><mo mathvariant="normal">:</mo><mrow><mi>G</mi><mo mathvariant="normal">→</mo><mi>Q</mi></mrow></mrow></math>, a <em class="ltx_emph ltx_font_upright">lift</em> of <math id="Thmthm3.p1.m3" class="ltx_Math" alttext="Q" display="inline"><mi>Q</mi></math> to <math id="Thmthm3.p1.m4" class="ltx_Math" alttext="G" display="inline"><mi>G</mi></math> is a function <math id="Thmthm3.p1.m5" class="ltx_Math" alttext="f:Q\rightarrow G" display="inline"><mrow><mi>f</mi><mo mathvariant="normal">:</mo><mrow><mi>Q</mi><mo mathvariant="normal">→</mo><mi>G</mi></mrow></mrow></math> such that <math id="Thmthm3.p1.m6" class="ltx_Math" alttext="\pi f=1_{Q}" display="inline"><mrow><mrow><mi>π</mi><mo mathvariant="italic">⁢</mo><mi>f</mi></mrow><mo mathvariant="normal">=</mo><msub><mn mathvariant="normal">1</mn><mi>Q</mi></msub></mrow></math>.</span></p>
+</div>
+</div>
+<div id="p5" class="ltx_para">
+<p class="ltx_p">It follows that <math id="p5.m1" class="ltx_Math" alttext="\pi" display="inline"><mi>π</mi></math> must be an epimorphism if it has a lift. Once again it is nearly always requested that <math id="p5.m2" class="ltx_Math" alttext="f(1)=1" display="inline"><mrow><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mn>1</mn><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mn>1</mn></mrow></math> but this restriction is generally not part of the definition.</p>
+</div>
+<div id="p6" class="ltx_para">
+<p class="ltx_p">Because both lifts and transversals are injective mappings it is common to use the word lift/transversal for the image and the map with the context of the use providing any necessary clarification.</p>
+</div>
+<div id="Thmthm4" class="ltx_theorem ltx_theorem_defn">
+<h6 class="ltx_title ltx_runin ltx_font_bold ltx_title_theorem">
+<span class="ltx_tag ltx_tag_theorem">Definition 4</span>.</h6>
+<div id="Thmthm4.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_italic">Given a group <math id="Thmthm4.p1.m1" class="ltx_Math" alttext="G" display="inline"><mi>G</mi></math> and a homomorphism <math id="Thmthm4.p1.m2" class="ltx_Math" alttext="\pi:G\rightarrow Q" display="inline"><mrow><mi>π</mi><mo mathvariant="normal">:</mo><mrow><mi>G</mi><mo mathvariant="normal">→</mo><mi>Q</mi></mrow></mrow></math>, a <em class="ltx_emph ltx_font_upright">splitting map</em> of <math id="Thmthm4.p1.m3" class="ltx_Math" alttext="Q" display="inline"><mi>Q</mi></math> to <math id="Thmthm4.p1.m4" class="ltx_Math" alttext="G" display="inline"><mi>G</mi></math> is a <em class="ltx_emph ltx_font_upright">homomorphism</em> <math id="Thmthm4.p1.m5" class="ltx_Math" alttext="f:Q\rightarrow G" display="inline"><mrow><mi>f</mi><mo mathvariant="normal">:</mo><mrow><mi>Q</mi><mo mathvariant="normal">→</mo><mi>G</mi></mrow></mrow></math> such that <math id="Thmthm4.p1.m6" class="ltx_Math" alttext="\pi f=1_{Q}" display="inline"><mrow><mrow><mi>π</mi><mo mathvariant="italic">⁢</mo><mi>f</mi></mrow><mo mathvariant="normal">=</mo><msub><mn mathvariant="normal">1</mn><mi>Q</mi></msub></mrow></math>.</span></p>
+</div>
+</div>
+<div id="p7" class="ltx_para">
+<p class="ltx_p">So we see a gradual progression in the definitions: We always have a group <math id="p7.m1" class="ltx_Math" alttext="G" display="inline"><mi>G</mi></math> and a set <math id="p7.m2" class="ltx_Math" alttext="Q" display="inline"><mi>Q</mi></math>, and the maps <math id="p7.m3" class="ltx_Math" alttext="\pi:G\rightarrow Q" display="inline"><mrow><mi>π</mi><mo>:</mo><mrow><mi>G</mi><mo>→</mo><mi>Q</mi></mrow></mrow></math>, <math id="p7.m4" class="ltx_Math" alttext="f:Q\rightarrow G" display="inline"><mrow><mi>f</mi><mo>:</mo><mrow><mi>Q</mi><mo>→</mo><mi>G</mi></mrow></mrow></math> satisfying</p>
+<table id="S0.Ex1" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex1.m1" class="ltx_Math" alttext="\pi f=1_{Q}." display="block"><mrow><mrow><mrow><mi>π</mi><mo>⁢</mo><mi>f</mi></mrow><mo>=</mo><msub><mn>1</mn><mi>Q</mi></msub></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">It follows, <math id="p7.m5" class="ltx_Math" alttext="f" display="inline"><mi>f</mi></math> is injective and <math id="p7.m6" class="ltx_Math" alttext="\pi" display="inline"><mi>π</mi></math> is surjective.</p>
+<ul id="I1" class="ltx_itemize">
+<li id="I1.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_itemize">•</span> 
+<div id="I1.i1.p1" class="ltx_para">
+<p class="ltx_p"><math id="I1.i1.p1.m1" class="ltx_Math" alttext="f" display="inline"><mi>f</mi></math> is a transversal if <math id="I1.i1.p1.m2" class="ltx_Math" alttext="Q=G/H" display="inline"><mrow><mi>Q</mi><mo>=</mo><mrow><mi>G</mi><mo>/</mo><mi>H</mi></mrow></mrow></math> for some subgroup <math id="I1.i1.p1.m3" class="ltx_Math" alttext="H" display="inline"><mi>H</mi></math>. Here
+<math id="I1.i1.p1.m4" class="ltx_Math" alttext="\pi" display="inline"><mi>π</mi></math> and <math id="I1.i1.p1.m5" class="ltx_Math" alttext="f" display="inline"><mi>f</mi></math> are simply functions.</p>
+</div>
+</li>
+<li id="I1.i2" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_itemize">•</span> 
+<div id="I1.i2.p1" class="ltx_para">
+<p class="ltx_p"><math id="I1.i2.p1.m1" class="ltx_Math" alttext="f" display="inline"><mi>f</mi></math> is a lift if <math id="I1.i2.p1.m2" class="ltx_Math" alttext="Q" display="inline"><mi>Q</mi></math> is a group. Here <math id="I1.i2.p1.m3" class="ltx_Math" alttext="\pi" display="inline"><mi>π</mi></math> is a homomorphism and
+<math id="I1.i2.p1.m4" class="ltx_Math" alttext="f" display="inline"><mi>f</mi></math> a function.</p>
+</div>
+</li>
+<li id="I1.i3" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_itemize">•</span> 
+<div id="I1.i3.p1" class="ltx_para">
+<p class="ltx_p"><math id="I1.i3.p1.m1" class="ltx_Math" alttext="f" display="inline"><mi>f</mi></math> is a splitting map if <math id="I1.i3.p1.m2" class="ltx_Math" alttext="Q" display="inline"><mi>Q</mi></math> is group and both <math id="I1.i3.p1.m3" class="ltx_Math" alttext="\pi" display="inline"><mi>π</mi></math> and <math id="I1.i3.p1.m4" class="ltx_Math" alttext="f" display="inline"><mi>f</mi></math> are
+homomorphisms.</p>
+</div>
+</li>
+</ul>
+</div>
+<div id="p8" class="ltx_para">
+<p class="ltx_p">Finally we arrive at a stronger requirement for transversals and lifts which makes greater use of the group structure involved.</p>
+</div>
+<div id="Thmthm5" class="ltx_theorem ltx_theorem_defn">
+<h6 class="ltx_title ltx_runin ltx_font_bold ltx_title_theorem">
+<span class="ltx_tag ltx_tag_theorem">Definition 5</span>.</h6>
+<div id="Thmthm5.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_italic">Given a group <math id="Thmthm5.p1.m1" class="ltx_Math" alttext="G=\langle S\rangle" display="inline"><mrow><mi>G</mi><mo mathvariant="normal">=</mo><mrow><mo mathvariant="normal" stretchy="false">⟨</mo><mi>S</mi><mo mathvariant="normal" stretchy="false">⟩</mo></mrow></mrow></math>, there is a natural map
+<math id="Thmthm5.p1.m2" class="ltx_Math" alttext="\pi:F(S)\rightarrow G" display="inline"><mrow><mi>π</mi><mo mathvariant="normal">:</mo><mrow><mrow><mi>F</mi><mo mathvariant="italic">⁢</mo><mrow><mo mathvariant="normal" stretchy="false">(</mo><mi>S</mi><mo mathvariant="normal" stretchy="false">)</mo></mrow></mrow><mo mathvariant="normal">→</mo><mi>G</mi></mrow></mrow></math> from the free group on <math id="Thmthm5.p1.m3" class="ltx_Math" alttext="S" display="inline"><mi>S</mi></math> onto <math id="Thmthm5.p1.m4" class="ltx_Math" alttext="G" display="inline"><mi>G</mi></math>. A <em class="ltx_emph ltx_font_upright">lift</em>
+is a map <math id="Thmthm5.p1.m5" class="ltx_Math" alttext="l:G\rightarrow F(S)" display="inline"><mrow><mi>l</mi><mo mathvariant="normal">:</mo><mrow><mi>G</mi><mo mathvariant="normal">→</mo><mrow><mi>F</mi><mo mathvariant="italic">⁢</mo><mrow><mo mathvariant="normal" stretchy="false">(</mo><mi>S</mi><mo mathvariant="normal" stretchy="false">)</mo></mrow></mrow></mrow></mrow></math> such that <math id="Thmthm5.p1.m6" class="ltx_Math" alttext="\pi l=1_{G}" display="inline"><mrow><mrow><mi>π</mi><mo mathvariant="italic">⁢</mo><mi>l</mi></mrow><mo mathvariant="normal">=</mo><msub><mn mathvariant="normal">1</mn><mi>G</mi></msub></mrow></math>. Furthermore a
+<em class="ltx_emph ltx_font_upright">sift</em> is a lift <math id="Thmthm5.p1.m7" class="ltx_Math" alttext="s:G\rightarrow F(S)" display="inline"><mrow><mi>s</mi><mo mathvariant="normal">:</mo><mrow><mi>G</mi><mo mathvariant="normal">→</mo><mrow><mi>F</mi><mo mathvariant="italic">⁢</mo><mrow><mo mathvariant="normal" stretchy="false">(</mo><mi>S</mi><mo mathvariant="normal" stretchy="false">)</mo></mrow></mrow></mrow></mrow></math> with the added condition that
+<math id="Thmthm5.p1.m8" class="ltx_Math" alttext="sg=g" display="inline"><mrow><mrow><mi>s</mi><mo mathvariant="italic">⁢</mo><mi>g</mi></mrow><mo mathvariant="normal">=</mo><mi>g</mi></mrow></math> for all <math id="Thmthm5.p1.m9" class="ltx_Math" alttext="g\in S" display="inline"><mrow><mi>g</mi><mo mathvariant="normal">∈</mo><mi>S</mi></mrow></math>.</span></p>
+</div>
+</div>
+<div id="p9" class="ltx_para">
+<p class="ltx_p">Although a general sift is no more than a map that writes the
+elements of <math id="p9.m1" class="ltx_Math" alttext="G" display="inline"><mi>G</mi></math> as reduced words in <math id="p9.m2" class="ltx_Math" alttext="S" display="inline"><mi>S</mi></math>, in many cases the sifts
+have the added property of providing the words in a canonical form.
+This occurs when <math id="p9.m3" class="ltx_Math" alttext="G=T_{0}\cdots T_{n-1}" display="inline"><mrow><mi>G</mi><mo>=</mo><mrow><msub><mi>T</mi><mn>0</mn></msub><mo>⁢</mo><mi mathvariant="normal">⋯</mi><mo>⁢</mo><msub><mi>T</mi><mrow><mi>n</mi><mo>-</mo><mn>1</mn></mrow></msub></mrow></mrow></math> where <math id="p9.m4" class="ltx_Math" alttext="T_{i}" display="inline"><msub><mi>T</mi><mi>i</mi></msub></math> is a transversal
+of <math id="p9.m5" class="ltx_Math" alttext="G^{i}/G^{i+1}" display="inline"><mrow><msup><mi>G</mi><mi>i</mi></msup><mo>/</mo><msup><mi>G</mi><mrow><mi>i</mi><mo>+</mo><mn>1</mn></mrow></msup></mrow></math>. In such a case every element in <math id="p9.m6" class="ltx_Math" alttext="G" display="inline"><mi>G</mi></math> has a unique
+decomposition as a word <math id="p9.m7" class="ltx_Math" alttext="t_{0}t_{1}\cdots t_{n-1}" display="inline"><mrow><msub><mi>t</mi><mn>0</mn></msub><mo>⁢</mo><msub><mi>t</mi><mn>1</mn></msub><mo>⁢</mo><mi mathvariant="normal">⋯</mi><mo>⁢</mo><msub><mi>t</mi><mrow><mi>n</mi><mo>-</mo><mn>1</mn></mrow></msub></mrow></math> for unique <math id="p9.m8" class="ltx_Math" alttext="t_{i}\in T_{i}" display="inline"><mrow><msub><mi>t</mi><mi>i</mi></msub><mo>∈</mo><msub><mi>T</mi><mi>i</mi></msub></mrow></math>.</p>
+</div>
+<div id="p10" class="ltx_para ltx_align_right">
+<table class="ltx_tabular ltx_guessed_headers ltx_align_middle">
+<tbody class="ltx_tbody">
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l ltx_border_t">Title</th>
+<td class="ltx_td ltx_align_left ltx_border_r ltx_border_t">transversals / lifts / sifts</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Canonical name</th>
+<td class="ltx_td ltx_align_left ltx_border_r">TransversalsLiftsSifts</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Date of creation</th>
+<td class="ltx_td ltx_align_left ltx_border_r">2013-03-22 15:53:52</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Last modified on</th>
+<td class="ltx_td ltx_align_left ltx_border_r">2013-03-22 15:53:52</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Owner</th>
+<td class="ltx_td ltx_align_left ltx_border_r">Algeboy (12884)</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Last modified by</th>
+<td class="ltx_td ltx_align_left ltx_border_r">Algeboy (12884)</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Numerical id</th>
+<td class="ltx_td ltx_align_left ltx_border_r">11</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Author</th>
+<td class="ltx_td ltx_align_left ltx_border_r">Algeboy (12884)</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Entry type</th>
+<td class="ltx_td ltx_align_left ltx_border_r">Definition</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Classification</th>
+<td class="ltx_td ltx_align_left ltx_border_r">msc 20K27</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Related topic</th>
+<td class="ltx_td ltx_align_left ltx_border_r">SchreiersLemma</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Related topic</th>
+<td class="ltx_td ltx_align_left ltx_border_r">ExampleOfSchreiersLemma</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Defines</th>
+<td class="ltx_td ltx_align_left ltx_border_r">transversal</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Defines</th>
+<td class="ltx_td ltx_align_left ltx_border_r">lift</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_b ltx_border_l">Defines</th>
+<td class="ltx_td ltx_align_left ltx_border_b ltx_border_r">sift</td>
+</tr>
+</tbody>
+</table>
+</div>
+</article>
+</div>
+<footer class="ltx_page_footer">
+<div class="ltx_page_logo">Generated  on Fri Feb  9 19:32:19 2018 by <a href="http://dlmf.nist.gov/LaTeXML/">LaTeXML <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAsAAAAOCAYAAAD5YeaVAAAAAXNSR0IArs4c6QAAAAZiS0dEAP8A/wD/oL2nkwAAAAlwSFlzAAALEwAACxMBAJqcGAAAAAd0SU1FB9wKExQZLWTEaOUAAAAddEVYdENvbW1lbnQAQ3JlYXRlZCB3aXRoIFRoZSBHSU1Q72QlbgAAAdpJREFUKM9tkL+L2nAARz9fPZNCKFapUn8kyI0e4iRHSR1Kb8ng0lJw6FYHFwv2LwhOpcWxTjeUunYqOmqd6hEoRDhtDWdA8ApRYsSUCDHNt5ul13vz4w0vWCgUnnEc975arX6ORqN3VqtVZbfbTQC4uEHANM3jSqXymFI6yWazP2KxWAXAL9zCUa1Wy2tXVxheKA9YNoR8Pt+aTqe4FVVVvz05O6MBhqUIBGk8Hn8HAOVy+T+XLJfLS4ZhTiRJgqIoVBRFIoric47jPnmeB1mW/9rr9ZpSSn3Lsmir1fJZlqWlUonKsvwWwD8ymc/nXwVBeLjf7xEKhdBut9Hr9WgmkyGEkJwsy5eHG5vN5g0AKIoCAEgkEkin0wQAfN9/cXPdheu6P33fBwB4ngcAcByHJpPJl+fn54mD3Gg0NrquXxeLRQAAwzAYj8cwTZPwPH9/sVg8PXweDAauqqr2cDjEer1GJBLBZDJBs9mE4zjwfZ85lAGg2+06hmGgXq+j3+/DsixYlgVN03a9Xu8jgCNCyIegIAgx13Vfd7vdu+FweG8YRkjXdWy329+dTgeSJD3ieZ7RNO0VAXAPwDEAO5VKndi2fWrb9jWl9Esul6PZbDY9Go1OZ7PZ9z/lyuD3OozU2wAAAABJRU5ErkJggg==" alt="[LOGO]"></a>
+</div></footer>
+</div>
+</body>
+</html>

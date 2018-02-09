@@ -1,0 +1,143 @@
+<!DOCTYPE html><html>
+<head>
+<title>proof of Frobenius reciprocity</title>
+<!--Generated on Fri Feb  9 19:22:38 2018 by LaTeXML (version 0.8.2) http://dlmf.nist.gov/LaTeXML/.-->
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" href="LaTeXML.css" type="text/css">
+<link rel="stylesheet" href="ltx-article.css" type="text/css">
+<link rel="stylesheet" href="https://cdn.rawgit.com/holtzermann17/3f71ceeb3b055e1ddc3b6c11fb1f074c/raw/2bb23e3b173ff96840797fc0c3bcb8c54085df8e/LaTeXML.css" type="text/css">
+<link rel="stylesheet" href="https://cdn.rawgit.com/holtzermann17/4bda0365b30858ac2fb83623185fe3ec/raw/cedd84ed3e3ad597c5d293f443ecfe4803741c6b/ltx-article.css" type="text/css">
+<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=MML_HTMLorMML" type="text/javascript"></script>
+</head>
+<body>
+<div class="ltx_page_main">
+<div class="ltx_page_content">
+<article class="ltx_document ltx_authors_1line">
+<h1 class="ltx_title ltx_title_document">proof of Frobenius reciprocity</h1>
+
+<div id="p1" class="ltx_para">
+<br class="ltx_break">
+<p class="ltx_p">We prove the slightly more general result</p>
+</div>
+<div id="S0.Thmthm1" class="ltx_theorem ltx_theorem_thm">
+<h6 class="ltx_title ltx_runin ltx_font_bold ltx_title_theorem">
+<span class="ltx_tag ltx_tag_theorem">Theorem 0.1</span>.</h6>
+<div id="S0.Thmthm1.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_italic">If <math id="S0.Thmthm1.p1.m1" class="ltx_Math" alttext="G" display="inline"><mi>G</mi></math> is a finite group with subgroup <math id="S0.Thmthm1.p1.m2" class="ltx_Math" alttext="H" display="inline"><mi>H</mi></math>, <math id="S0.Thmthm1.p1.m3" class="ltx_Math" alttext="\alpha" display="inline"><mi>α</mi></math> a class function on <math id="S0.Thmthm1.p1.m4" class="ltx_Math" alttext="H" display="inline"><mi>H</mi></math> and <math id="S0.Thmthm1.p1.m5" class="ltx_Math" alttext="\beta" display="inline"><mi>β</mi></math> a class function on <math id="S0.Thmthm1.p1.m6" class="ltx_Math" alttext="G" display="inline"><mi>G</mi></math>, then</span></p>
+<table id="S0.Ex1" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex1.m1" class="ltx_Math" alttext="\langle\alpha\negmedspace\uparrow_{H}^{G},\beta\rangle_{G}=\langle\alpha,\beta%
+\negmedspace\downarrow_{H}^{G}\rangle_{H}" display="block"><mrow><msub><mrow><mo stretchy="false">⟨</mo><mi>α</mi><msubsup><mo>↑</mo><mi>H</mi><mi>G</mi></msubsup><mo>,</mo><mi>β</mi><mo stretchy="false">⟩</mo></mrow><mi>G</mi></msub><mo>=</mo><msub><mrow><mo stretchy="false">⟨</mo><mi>α</mi><mo>,</mo><mi>β</mi><msubsup><mo>↓</mo><mi>H</mi><mi>G</mi></msubsup><mo stretchy="false">⟩</mo></mrow><mi>H</mi></msub></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+</div>
+</div>
+<div id="p2" class="ltx_para">
+<p class="ltx_p">Here we use <math id="p2.m1" class="ltx_Math" alttext="\negmedspace\uparrow_{H}^{G}" display="inline"><msubsup><mo>↑</mo><mi>H</mi><mi>G</mi></msubsup></math> to refer to the induction (<span class="ltx_text ltx_font_typewriter">http://planetmath.org/InducedRepresentation</span>) to <math id="p2.m2" class="ltx_Math" alttext="G" display="inline"><mi>G</mi></math> of a class function on <math id="p2.m3" class="ltx_Math" alttext="H" display="inline"><mi>H</mi></math>, and <math id="p2.m4" class="ltx_Math" alttext="\negmedspace\downarrow_{H}^{G}" display="inline"><msubsup><mo>↓</mo><mi>H</mi><mi>G</mi></msubsup></math> to refer to the restriction (<span class="ltx_text ltx_font_typewriter">http://planetmath.org/RestrictionRepresentation</span>) of a class function on <math id="p2.m5" class="ltx_Math" alttext="G" display="inline"><mi>G</mi></math> to one on <math id="p2.m6" class="ltx_Math" alttext="H" display="inline"><mi>H</mi></math>.</p>
+</div>
+<div class="ltx_proof">
+<h6 class="ltx_title ltx_runin ltx_font_italic ltx_title_proof">Proof.</h6>
+<div id="p3" class="ltx_para">
+<table id="S0.Ex2" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex2.m1" class="ltx_Math" alttext="\langle\alpha\negmedspace\uparrow_{H}^{G},\beta\rangle_{G}=\frac{1}{\left%
+\lvert G\right\rvert}\sum_{g\in G}\left(\frac{1}{\left\lvert H\right\rvert}%
+\sum_{\begin{subarray}{c}t\in G\\
+t^{-1}gt\in H\end{subarray}}\alpha(t^{-1}gt)\right)\overline{\beta(g)}=\frac{1%
+}{\left\lvert G\right\rvert\left\lvert H\right\rvert}\sum_{t\in G}\left(\sum_{%
+\begin{subarray}{c}g\in G\\
+t^{-1}gt\in H\end{subarray}}\alpha(t^{-1}gt)\right)\overline{\beta(g)}" display="block"><mrow><msub><mrow><mo stretchy="false">⟨</mo><mi>α</mi><msubsup><mo>↑</mo><mi>H</mi><mi>G</mi></msubsup><mo>,</mo><mi>β</mi><mo stretchy="false">⟩</mo></mrow><mi>G</mi></msub><mo>=</mo><mfrac><mn>1</mn><mrow><mo fence="true">|</mo><mi>G</mi><mo fence="true">|</mo></mrow></mfrac><munder><mo largeop="true" movablelimits="false" symmetric="true">∑</mo><mrow><mi>g</mi><mo>∈</mo><mi>G</mi></mrow></munder><mrow><mo>(</mo><mfrac><mn>1</mn><mrow><mo fence="true">|</mo><mi>H</mi><mo fence="true">|</mo></mrow></mfrac><munder><mo largeop="true" movablelimits="false" symmetric="true">∑</mo><mtable class="ltx_align_c" rowspacing="0.0pt"><mtr><mtd><mrow><mi>t</mi><mo>∈</mo><mi>G</mi></mrow></mtd></mtr><mtr><mtd><mrow><mrow><msup><mi>t</mi><mrow><mo>-</mo><mn>1</mn></mrow></msup><mo>⁢</mo><mi>g</mi><mo>⁢</mo><mi>t</mi></mrow><mo>∈</mo><mi>H</mi></mrow></mtd></mtr></mtable></munder><mi>α</mi><mrow><mo stretchy="false">(</mo><msup><mi>t</mi><mrow><mo>-</mo><mn>1</mn></mrow></msup><mi>g</mi><mi>t</mi><mo stretchy="false">)</mo></mrow><mo>)</mo></mrow><mover accent="true"><mrow><mi>β</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>g</mi><mo stretchy="false">)</mo></mrow></mrow><mo>¯</mo></mover><mo>=</mo><mfrac><mn>1</mn><mrow><mrow><mo fence="true">|</mo><mi>G</mi><mo fence="true">|</mo></mrow><mo>⁢</mo><mrow><mo fence="true">|</mo><mi>H</mi><mo fence="true">|</mo></mrow></mrow></mfrac><munder><mo largeop="true" movablelimits="false" symmetric="true">∑</mo><mrow><mi>t</mi><mo>∈</mo><mi>G</mi></mrow></munder><mrow><mo>(</mo><munder><mo largeop="true" movablelimits="false" symmetric="true">∑</mo><mtable class="ltx_align_c" rowspacing="0.0pt"><mtr><mtd><mrow><mi>g</mi><mo>∈</mo><mi>G</mi></mrow></mtd></mtr><mtr><mtd><mrow><mrow><msup><mi>t</mi><mrow><mo>-</mo><mn>1</mn></mrow></msup><mo>⁢</mo><mi>g</mi><mo>⁢</mo><mi>t</mi></mrow><mo>∈</mo><mi>H</mi></mrow></mtd></mtr></mtable></munder><mi>α</mi><mrow><mo stretchy="false">(</mo><msup><mi>t</mi><mrow><mo>-</mo><mn>1</mn></mrow></msup><mi>g</mi><mi>t</mi><mo stretchy="false">)</mo></mrow><mo>)</mo></mrow><mover accent="true"><mrow><mi>β</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>g</mi><mo stretchy="false">)</mo></mrow></mrow><mo>¯</mo></mover></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">Since <math id="p3.m1" class="ltx_Math" alttext="\beta" display="inline"><mi>β</mi></math> is a class function, this is the same as</p>
+<table id="S0.Ex3" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex3.m1" class="ltx_Math" alttext="\frac{1}{\left\lvert G\right\rvert\left\lvert H\right\rvert}\sum_{%
+\begin{subarray}{c}t\in G\\
+g\in G\\
+t^{-1}gt\in H\end{subarray}}\alpha(t^{-1}gt)\overline{\beta(t^{-1}gt)}=\frac{1%
+}{\left\lvert G\right\rvert\left\lvert H\right\rvert}\sum_{h\in H}\sum_{%
+\begin{subarray}{c}t\in G\\
+g\in G\\
+t^{-1}gt=h\end{subarray}}\alpha(h)\overline{\beta(h)}" display="block"><mrow><mrow><mfrac><mn>1</mn><mrow><mrow><mo fence="true">|</mo><mi>G</mi><mo fence="true">|</mo></mrow><mo>⁢</mo><mrow><mo fence="true">|</mo><mi>H</mi><mo fence="true">|</mo></mrow></mrow></mfrac><mo>⁢</mo><mrow><munder><mo largeop="true" movablelimits="false" symmetric="true">∑</mo><mtable class="ltx_align_c" rowspacing="0.0pt"><mtr><mtd><mrow><mi>t</mi><mo>∈</mo><mi>G</mi></mrow></mtd></mtr><mtr><mtd><mrow><mi>g</mi><mo>∈</mo><mi>G</mi></mrow></mtd></mtr><mtr><mtd><mrow><mrow><msup><mi>t</mi><mrow><mo>-</mo><mn>1</mn></mrow></msup><mo>⁢</mo><mi>g</mi><mo>⁢</mo><mi>t</mi></mrow><mo>∈</mo><mi>H</mi></mrow></mtd></mtr></mtable></munder><mrow><mi>α</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><msup><mi>t</mi><mrow><mo>-</mo><mn>1</mn></mrow></msup><mo>⁢</mo><mi>g</mi><mo>⁢</mo><mi>t</mi></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mover accent="true"><mrow><mi>β</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><msup><mi>t</mi><mrow><mo>-</mo><mn>1</mn></mrow></msup><mo>⁢</mo><mi>g</mi><mo>⁢</mo><mi>t</mi></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>¯</mo></mover></mrow></mrow></mrow><mo>=</mo><mrow><mfrac><mn>1</mn><mrow><mrow><mo fence="true">|</mo><mi>G</mi><mo fence="true">|</mo></mrow><mo>⁢</mo><mrow><mo fence="true">|</mo><mi>H</mi><mo fence="true">|</mo></mrow></mrow></mfrac><mo>⁢</mo><mrow><munder><mo largeop="true" movablelimits="false" symmetric="true">∑</mo><mrow><mi>h</mi><mo>∈</mo><mi>H</mi></mrow></munder><mrow><munder><mo largeop="true" movablelimits="false" symmetric="true">∑</mo><mtable class="ltx_align_c" rowspacing="0.0pt"><mtr><mtd><mrow><mi>t</mi><mo>∈</mo><mi>G</mi></mrow></mtd></mtr><mtr><mtd><mrow><mi>g</mi><mo>∈</mo><mi>G</mi></mrow></mtd></mtr><mtr><mtd><mrow><mrow><msup><mi>t</mi><mrow><mo>-</mo><mn>1</mn></mrow></msup><mo>⁢</mo><mi>g</mi><mo>⁢</mo><mi>t</mi></mrow><mo>=</mo><mi>h</mi></mrow></mtd></mtr></mtable></munder><mrow><mi>α</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>h</mi><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mover accent="true"><mrow><mi>β</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>h</mi><mo stretchy="false">)</mo></mrow></mrow><mo>¯</mo></mover></mrow></mrow></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">Clearly for every <math id="p3.m2" class="ltx_Math" alttext="h\in H,t\in G" display="inline"><mrow><mrow><mi>h</mi><mo>∈</mo><mi>H</mi></mrow><mo>,</mo><mrow><mi>t</mi><mo>∈</mo><mi>G</mi></mrow></mrow></math> there is a unique <math id="p3.m3" class="ltx_Math" alttext="g\in G" display="inline"><mrow><mi>g</mi><mo>∈</mo><mi>G</mi></mrow></math> with <math id="p3.m4" class="ltx_Math" alttext="t^{-1}gt=h" display="inline"><mrow><mrow><msup><mi>t</mi><mrow><mo>-</mo><mn>1</mn></mrow></msup><mo>⁢</mo><mi>g</mi><mo>⁢</mo><mi>t</mi></mrow><mo>=</mo><mi>h</mi></mrow></math>, so every element of <math id="p3.m5" class="ltx_Math" alttext="H" display="inline"><mi>H</mi></math> is counted <math id="p3.m6" class="ltx_Math" alttext="\left\lvert G\right\rvert" display="inline"><mrow><mo fence="true">|</mo><mi>G</mi><mo fence="true">|</mo></mrow></math> times by the  sum. Thus the sum is equal to</p>
+<table id="S0.Ex4" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex4.m1" class="ltx_Math" alttext="\frac{\left\lvert G\right\rvert}{\left\lvert G\right\rvert\left\lvert H\right%
+\rvert}\sum_{h\in H}\alpha(h)\overline{\beta(h)}=\frac{1}{\left\lvert H\right%
+\rvert}\sum_{h\in H}\alpha(h)\overline{\beta(h)}=\langle\alpha,\beta%
+\negmedspace\downarrow_{H}^{G}\rangle_{H}" display="block"><mrow><mfrac><mrow><mo fence="true">|</mo><mi>G</mi><mo fence="true">|</mo></mrow><mrow><mrow><mo fence="true">|</mo><mi>G</mi><mo fence="true">|</mo></mrow><mo>⁢</mo><mrow><mo fence="true">|</mo><mi>H</mi><mo fence="true">|</mo></mrow></mrow></mfrac><munder><mo largeop="true" movablelimits="false" symmetric="true">∑</mo><mrow><mi>h</mi><mo>∈</mo><mi>H</mi></mrow></munder><mi>α</mi><mrow><mo stretchy="false">(</mo><mi>h</mi><mo stretchy="false">)</mo></mrow><mover accent="true"><mrow><mi>β</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>h</mi><mo stretchy="false">)</mo></mrow></mrow><mo>¯</mo></mover><mo>=</mo><mfrac><mn>1</mn><mrow><mo fence="true">|</mo><mi>H</mi><mo fence="true">|</mo></mrow></mfrac><munder><mo largeop="true" movablelimits="false" symmetric="true">∑</mo><mrow><mi>h</mi><mo>∈</mo><mi>H</mi></mrow></munder><mi>α</mi><mrow><mo stretchy="false">(</mo><mi>h</mi><mo stretchy="false">)</mo></mrow><mover accent="true"><mrow><mi>β</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>h</mi><mo stretchy="false">)</mo></mrow></mrow><mo>¯</mo></mover><mo>=</mo><msub><mrow><mo stretchy="false">⟨</mo><mi>α</mi><mo>,</mo><mi>β</mi><msubsup><mo>↓</mo><mi>H</mi><mi>G</mi></msubsup><mo stretchy="false">⟩</mo></mrow><mi>H</mi></msub></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">∎</p>
+</div>
+</div>
+<div id="p4" class="ltx_para ltx_align_right">
+<table class="ltx_tabular ltx_guessed_headers ltx_align_middle">
+<tbody class="ltx_tbody">
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l ltx_border_t">Title</th>
+<td class="ltx_td ltx_align_left ltx_border_r ltx_border_t">proof of Frobenius reciprocity</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Canonical name</th>
+<td class="ltx_td ltx_align_left ltx_border_r">ProofOfFrobeniusReciprocity</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Date of creation</th>
+<td class="ltx_td ltx_align_left ltx_border_r">2013-03-22 18:36:23</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Last modified on</th>
+<td class="ltx_td ltx_align_left ltx_border_r">2013-03-22 18:36:23</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Owner</th>
+<td class="ltx_td ltx_align_left ltx_border_r">rm50 (10146)</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Last modified by</th>
+<td class="ltx_td ltx_align_left ltx_border_r">rm50 (10146)</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Numerical id</th>
+<td class="ltx_td ltx_align_left ltx_border_r">5</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Author</th>
+<td class="ltx_td ltx_align_left ltx_border_r">rm50 (10146)</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Entry type</th>
+<td class="ltx_td ltx_align_left ltx_border_r">Proof</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_b ltx_border_l">Classification</th>
+<td class="ltx_td ltx_align_left ltx_border_b ltx_border_r">msc 20C99</td>
+</tr>
+</tbody>
+</table>
+</div>
+</article>
+</div>
+<footer class="ltx_page_footer">
+<div class="ltx_page_logo">Generated  on Fri Feb  9 19:22:38 2018 by <a href="http://dlmf.nist.gov/LaTeXML/">LaTeXML <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAsAAAAOCAYAAAD5YeaVAAAAAXNSR0IArs4c6QAAAAZiS0dEAP8A/wD/oL2nkwAAAAlwSFlzAAALEwAACxMBAJqcGAAAAAd0SU1FB9wKExQZLWTEaOUAAAAddEVYdENvbW1lbnQAQ3JlYXRlZCB3aXRoIFRoZSBHSU1Q72QlbgAAAdpJREFUKM9tkL+L2nAARz9fPZNCKFapUn8kyI0e4iRHSR1Kb8ng0lJw6FYHFwv2LwhOpcWxTjeUunYqOmqd6hEoRDhtDWdA8ApRYsSUCDHNt5ul13vz4w0vWCgUnnEc975arX6ORqN3VqtVZbfbTQC4uEHANM3jSqXymFI6yWazP2KxWAXAL9zCUa1Wy2tXVxheKA9YNoR8Pt+aTqe4FVVVvz05O6MBhqUIBGk8Hn8HAOVy+T+XLJfLS4ZhTiRJgqIoVBRFIoric47jPnmeB1mW/9rr9ZpSSn3Lsmir1fJZlqWlUonKsvwWwD8ymc/nXwVBeLjf7xEKhdBut9Hr9WgmkyGEkJwsy5eHG5vN5g0AKIoCAEgkEkin0wQAfN9/cXPdheu6P33fBwB4ngcAcByHJpPJl+fn54mD3Gg0NrquXxeLRQAAwzAYj8cwTZPwPH9/sVg8PXweDAauqqr2cDjEer1GJBLBZDJBs9mE4zjwfZ85lAGg2+06hmGgXq+j3+/DsixYlgVN03a9Xu8jgCNCyIegIAgx13Vfd7vdu+FweG8YRkjXdWy329+dTgeSJD3ieZ7RNO0VAXAPwDEAO5VKndi2fWrb9jWl9Esul6PZbDY9Go1OZ7PZ9z/lyuD3OozU2wAAAABJRU5ErkJggg==" alt="[LOGO]"></a>
+</div></footer>
+</div>
+</body>
+</html>

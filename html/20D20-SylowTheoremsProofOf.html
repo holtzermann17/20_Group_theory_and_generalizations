@@ -1,0 +1,213 @@
+<!DOCTYPE html><html>
+<head>
+<title>Sylow theorems, proof of</title>
+<!--Generated on Fri Feb  9 19:24:14 2018 by LaTeXML (version 0.8.2) http://dlmf.nist.gov/LaTeXML/.-->
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" href="LaTeXML.css" type="text/css">
+<link rel="stylesheet" href="ltx-article.css" type="text/css">
+<link rel="stylesheet" href="https://cdn.rawgit.com/holtzermann17/3f71ceeb3b055e1ddc3b6c11fb1f074c/raw/2bb23e3b173ff96840797fc0c3bcb8c54085df8e/LaTeXML.css" type="text/css">
+<link rel="stylesheet" href="https://cdn.rawgit.com/holtzermann17/4bda0365b30858ac2fb83623185fe3ec/raw/cedd84ed3e3ad597c5d293f443ecfe4803741c6b/ltx-article.css" type="text/css">
+<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=MML_HTMLorMML" type="text/javascript"></script>
+</head>
+<body>
+<div class="ltx_page_main">
+<div class="ltx_page_content">
+<article class="ltx_document ltx_authors_1line">
+<h1 class="ltx_title ltx_title_document">Sylow theorems, proof of</h1>
+
+<div id="p1" class="ltx_para">
+<br class="ltx_break">
+<p class="ltx_p">We let <math id="p1.m1" class="ltx_Math" alttext="G" display="inline"><mi>G</mi></math> be a group of order <math id="p1.m2" class="ltx_Math" alttext="p^{m}k" display="inline"><mrow><msup><mi>p</mi><mi>m</mi></msup><mo>⁢</mo><mi>k</mi></mrow></math> where <math id="p1.m3" class="ltx_Math" alttext="p\nmid k" display="inline"><mrow><mi>p</mi><mo>∤</mo><mi>k</mi></mrow></math> and prove Sylow’s theorems.</p>
+</div>
+<div id="p2" class="ltx_para">
+<p class="ltx_p">First, a fact which will be used several times in the proof:</p>
+</div>
+<div id="Thmproposition1" class="ltx_theorem ltx_theorem_proposition">
+<h6 class="ltx_title ltx_runin ltx_font_bold ltx_title_theorem">
+<span class="ltx_tag ltx_tag_theorem">Proposition 1</span>.</h6>
+<div id="Thmproposition1.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_italic">If <math id="Thmproposition1.p1.m1" class="ltx_Math" alttext="p" display="inline"><mi>p</mi></math> divides the size of every conjugacy class outside the center then <math id="Thmproposition1.p1.m2" class="ltx_Math" alttext="p" display="inline"><mi>p</mi></math> divides the order of the center.
+</span></p>
+</div>
+</div>
+<div class="ltx_proof">
+<h6 class="ltx_title ltx_runin ltx_font_italic ltx_title_proof">Proof.</h6>
+<div id="p3" class="ltx_para">
+<p class="ltx_p">This follows from the class equation:</p>
+<table id="S0.Ex1" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex1.m1" class="ltx_Math" alttext="|G|=|Z(G)|+\sum_{[a]\neq Z(G)}|[a]|" display="block"><mrow><mrow><mo stretchy="false">|</mo><mi>G</mi><mo stretchy="false">|</mo></mrow><mo>=</mo><mrow><mrow><mo stretchy="false">|</mo><mrow><mi>Z</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>G</mi><mo stretchy="false">)</mo></mrow></mrow><mo stretchy="false">|</mo></mrow><mo>+</mo><mrow><munder><mo largeop="true" movablelimits="false" symmetric="true">∑</mo><mrow><mrow><mo stretchy="false">[</mo><mi>a</mi><mo stretchy="false">]</mo></mrow><mo>≠</mo><mrow><mi>Z</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>G</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></munder><mrow><mo stretchy="false">|</mo><mrow><mo stretchy="false">[</mo><mi>a</mi><mo stretchy="false">]</mo></mrow><mo stretchy="false">|</mo></mrow></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">If <math id="p3.m1" class="ltx_Math" alttext="p" display="inline"><mi>p</mi></math> divides the left hand side, and divides all but one entry on the right hand side, it must divide every entry on the right side of the equation, so <math id="p3.m2" class="ltx_Math" alttext="p|Z(G)" display="inline"><mrow><mi>p</mi><mo stretchy="false">|</mo><mi>Z</mi><mrow><mo stretchy="false">(</mo><mi>G</mi><mo stretchy="false">)</mo></mrow></mrow></math>.
+∎</p>
+</div>
+</div>
+<div id="Thmproposition2" class="ltx_theorem ltx_theorem_proposition">
+<h6 class="ltx_title ltx_runin ltx_font_bold ltx_title_theorem">
+<span class="ltx_tag ltx_tag_theorem">Proposition 2</span>.</h6>
+<div id="Thmproposition2.p1" class="ltx_para">
+<p class="ltx_p"><math id="Thmproposition2.p1.m1" class="ltx_Math" alttext="G" display="inline"><mi>G</mi></math><span class="ltx_text ltx_font_italic"> has a Sylow p-subgroup</span></p>
+</div>
+</div>
+<div class="ltx_proof">
+<h6 class="ltx_title ltx_runin ltx_font_italic ltx_title_proof">Proof.</h6>
+<div id="p4" class="ltx_para">
+<p class="ltx_p">By induction on <math id="p4.m1" class="ltx_Math" alttext="|G|" display="inline"><mrow><mo stretchy="false">|</mo><mi>G</mi><mo stretchy="false">|</mo></mrow></math>. If <math id="p4.m2" class="ltx_Math" alttext="|G|=1" display="inline"><mrow><mrow><mo stretchy="false">|</mo><mi>G</mi><mo stretchy="false">|</mo></mrow><mo>=</mo><mn>1</mn></mrow></math> then there is no <math id="p4.m3" class="ltx_Math" alttext="p" display="inline"><mi>p</mi></math> which divides its order, so the condition is trivial.</p>
+</div>
+<div id="p5" class="ltx_para">
+<p class="ltx_p">Suppose <math id="p5.m1" class="ltx_Math" alttext="|G|=p^{m}k" display="inline"><mrow><mrow><mo stretchy="false">|</mo><mi>G</mi><mo stretchy="false">|</mo></mrow><mo>=</mo><mrow><msup><mi>p</mi><mi>m</mi></msup><mo>⁢</mo><mi>k</mi></mrow></mrow></math>, <math id="p5.m2" class="ltx_Math" alttext="p\nmid k" display="inline"><mrow><mi>p</mi><mo>∤</mo><mi>k</mi></mrow></math>, and the  holds for all groups of smaller order. Then we can consider whether <math id="p5.m3" class="ltx_Math" alttext="p" display="inline"><mi>p</mi></math> divides the order of the center, <math id="p5.m4" class="ltx_Math" alttext="Z(G)" display="inline"><mrow><mi>Z</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>G</mi><mo stretchy="false">)</mo></mrow></mrow></math>.</p>
+</div>
+<div id="p6" class="ltx_para">
+<p class="ltx_p">If it does, then by Cauchy’s theorem, there is an element <math id="p6.m1" class="ltx_Math" alttext="f" display="inline"><mi>f</mi></math> of <math id="p6.m2" class="ltx_Math" alttext="Z(G)" display="inline"><mrow><mi>Z</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>G</mi><mo stretchy="false">)</mo></mrow></mrow></math> of order <math id="p6.m3" class="ltx_Math" alttext="p" display="inline"><mi>p</mi></math>, and therefore a cyclic subgroup generated by <math id="p6.m4" class="ltx_Math" alttext="f" display="inline"><mi>f</mi></math>, <math id="p6.m5" class="ltx_Math" alttext="\langle f\rangle" display="inline"><mrow><mo stretchy="false">⟨</mo><mi>f</mi><mo stretchy="false">⟩</mo></mrow></math>, also of order <math id="p6.m6" class="ltx_Math" alttext="p" display="inline"><mi>p</mi></math>. Since this is a subgroup of the center, it is normal, so <math id="p6.m7" class="ltx_Math" alttext="G/\langle f\rangle" display="inline"><mrow><mi>G</mi><mo>/</mo><mrow><mo stretchy="false">⟨</mo><mi>f</mi><mo stretchy="false">⟩</mo></mrow></mrow></math> is well-defined and of order <math id="p6.m8" class="ltx_Math" alttext="p^{m-1}k" display="inline"><mrow><msup><mi>p</mi><mrow><mi>m</mi><mo>-</mo><mn>1</mn></mrow></msup><mo>⁢</mo><mi>k</mi></mrow></math>. By the inductive hypothesis, this group has a subgroup <math id="p6.m9" class="ltx_Math" alttext="P/\langle f\rangle" display="inline"><mrow><mi>P</mi><mo>/</mo><mrow><mo stretchy="false">⟨</mo><mi>f</mi><mo stretchy="false">⟩</mo></mrow></mrow></math> of order <math id="p6.m10" class="ltx_Math" alttext="p^{m-1}" display="inline"><msup><mi>p</mi><mrow><mi>m</mi><mo>-</mo><mn>1</mn></mrow></msup></math>. Then there is a corresponding subgroup <math id="p6.m11" class="ltx_Math" alttext="P" display="inline"><mi>P</mi></math> of <math id="p6.m12" class="ltx_Math" alttext="G" display="inline"><mi>G</mi></math> which has <math id="p6.m13" class="ltx_Math" alttext="|P|=|P/\langle f\rangle|\cdot|\langle f\rangle|=p^{m}" display="inline"><mrow><mrow><mo stretchy="false">|</mo><mi>P</mi><mo stretchy="false">|</mo></mrow><mo>=</mo><mrow><mrow><mo stretchy="false">|</mo><mrow><mi>P</mi><mo>/</mo><mrow><mo stretchy="false">⟨</mo><mi>f</mi><mo stretchy="false">⟩</mo></mrow></mrow><mo stretchy="false">|</mo></mrow><mo>⋅</mo><mrow><mo stretchy="false">|</mo><mrow><mo stretchy="false">⟨</mo><mi>f</mi><mo stretchy="false">⟩</mo></mrow><mo stretchy="false">|</mo></mrow></mrow><mo>=</mo><msup><mi>p</mi><mi>m</mi></msup></mrow></math>.</p>
+</div>
+<div id="p7" class="ltx_para">
+<p class="ltx_p">On the other hand, if <math id="p7.m1" class="ltx_Math" alttext="p\nmid|Z(G)|" display="inline"><mrow><mi>p</mi><mo>∤</mo><mrow><mo stretchy="false">|</mo><mrow><mi>Z</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>G</mi><mo stretchy="false">)</mo></mrow></mrow><mo stretchy="false">|</mo></mrow></mrow></math> then consider the conjugacy classes not in the center. By the proposition above, since <math id="p7.m2" class="ltx_Math" alttext="Z(G)" display="inline"><mrow><mi>Z</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>G</mi><mo stretchy="false">)</mo></mrow></mrow></math> is not divisible by <math id="p7.m3" class="ltx_Math" alttext="p" display="inline"><mi>p</mi></math>, at least one conjugacy class can’t be. If <math id="p7.m4" class="ltx_Math" alttext="a" display="inline"><mi>a</mi></math> is a representative of this class then we have <math id="p7.m5" class="ltx_Math" alttext="p\nmid|[a]|=[G:C(a)]" display="inline"><mrow><mi>p</mi><mo>∤</mo><mo stretchy="false">|</mo><mrow><mo stretchy="false">[</mo><mi>a</mi><mo stretchy="false">]</mo></mrow><mo stretchy="false">|</mo><mo>=</mo><mrow><mo stretchy="false">[</mo><mi>G</mi><mo>:</mo><mi>C</mi><mrow><mo stretchy="false">(</mo><mi>a</mi><mo stretchy="false">)</mo></mrow><mo stretchy="false">]</mo></mrow></mrow></math>, and since <math id="p7.m6" class="ltx_Math" alttext="|C(a)|\cdot[G:C(a)]=|G|" display="inline"><mrow><mo stretchy="false">|</mo><mi>C</mi><mrow><mo stretchy="false">(</mo><mi>a</mi><mo stretchy="false">)</mo></mrow><mo stretchy="false">|</mo><mo>⋅</mo><mrow><mo stretchy="false">[</mo><mi>G</mi><mo>:</mo><mi>C</mi><mrow><mo stretchy="false">(</mo><mi>a</mi><mo stretchy="false">)</mo></mrow><mo stretchy="false">]</mo></mrow><mo>=</mo><mo stretchy="false">|</mo><mi>G</mi><mo stretchy="false">|</mo></mrow></math>, <math id="p7.m7" class="ltx_Math" alttext="p^{m}\mid|C(a)|" display="inline"><mrow><msup><mi>p</mi><mi>m</mi></msup><mo>∣</mo><mo stretchy="false">|</mo><mi>C</mi><mrow><mo stretchy="false">(</mo><mi>a</mi><mo stretchy="false">)</mo></mrow><mo stretchy="false">|</mo></mrow></math>. But <math id="p7.m8" class="ltx_Math" alttext="C(a)\neq G" display="inline"><mrow><mrow><mi>C</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>a</mi><mo stretchy="false">)</mo></mrow></mrow><mo>≠</mo><mi>G</mi></mrow></math>, since <math id="p7.m9" class="ltx_Math" alttext="a\notin Z(G)" display="inline"><mrow><mi>a</mi><mo>∉</mo><mrow><mi>Z</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>G</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></math>, so <math id="p7.m10" class="ltx_Math" alttext="C(a)" display="inline"><mrow><mi>C</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>a</mi><mo stretchy="false">)</mo></mrow></mrow></math> has a subgroup of order <math id="p7.m11" class="ltx_Math" alttext="p^{m}" display="inline"><msup><mi>p</mi><mi>m</mi></msup></math>, and this is also a subgroup of <math id="p7.m12" class="ltx_Math" alttext="G" display="inline"><mi>G</mi></math>.
+∎</p>
+</div>
+</div>
+<div id="Thmproposition3" class="ltx_theorem ltx_theorem_proposition">
+<h6 class="ltx_title ltx_runin ltx_font_bold ltx_title_theorem">
+<span class="ltx_tag ltx_tag_theorem">Proposition 3</span>.</h6>
+<div id="Thmproposition3.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_italic">The intersection of a Sylow p-subgroup with the normalizer of a Sylow p-subgroup is the intersection of the subgroups. That is, <math id="Thmproposition3.p1.m1" class="ltx_Math" alttext="Q\cap N_{G}(P)=Q\cap P" display="inline"><mrow><mrow><mi>Q</mi><mo mathvariant="normal">∩</mo><mrow><msub><mi>N</mi><mi>G</mi></msub><mo mathvariant="italic">⁢</mo><mrow><mo mathvariant="normal" stretchy="false">(</mo><mi>P</mi><mo mathvariant="normal" stretchy="false">)</mo></mrow></mrow></mrow><mo mathvariant="normal">=</mo><mrow><mi>Q</mi><mo mathvariant="normal">∩</mo><mi>P</mi></mrow></mrow></math>.
+</span></p>
+</div>
+</div>
+<div class="ltx_proof">
+<h6 class="ltx_title ltx_runin ltx_font_italic ltx_title_proof">Proof.</h6>
+<div id="p8" class="ltx_para">
+<p class="ltx_p">If <math id="p8.m1" class="ltx_Math" alttext="P" display="inline"><mi>P</mi></math> and <math id="p8.m2" class="ltx_Math" alttext="Q" display="inline"><mi>Q</mi></math> are Sylow p-subgroups, consider <math id="p8.m3" class="ltx_Math" alttext="R=Q\cap N_{G}(P)" display="inline"><mrow><mi>R</mi><mo>=</mo><mrow><mi>Q</mi><mo>∩</mo><mrow><msub><mi>N</mi><mi>G</mi></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>P</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></mrow></math>. Obviously <math id="p8.m4" class="ltx_Math" alttext="Q\cap P\subseteq R" display="inline"><mrow><mrow><mi>Q</mi><mo>∩</mo><mi>P</mi></mrow><mo>⊆</mo><mi>R</mi></mrow></math>. In addition, since <math id="p8.m5" class="ltx_Math" alttext="R\subseteq N_{G}(P)" display="inline"><mrow><mi>R</mi><mo>⊆</mo><mrow><msub><mi>N</mi><mi>G</mi></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>P</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></math>, the second isomorphism theorem tells us that <math id="p8.m6" class="ltx_Math" alttext="RP" display="inline"><mrow><mi>R</mi><mo>⁢</mo><mi>P</mi></mrow></math> is a group, and <math id="p8.m7" class="ltx_Math" alttext="|RP|=\frac{|R|\cdot|P|}{|R\cap P|}" display="inline"><mrow><mrow><mo stretchy="false">|</mo><mrow><mi>R</mi><mo>⁢</mo><mi>P</mi></mrow><mo stretchy="false">|</mo></mrow><mo>=</mo><mfrac><mrow><mrow><mo stretchy="false">|</mo><mi>R</mi><mo stretchy="false">|</mo></mrow><mo>⋅</mo><mrow><mo stretchy="false">|</mo><mi>P</mi><mo stretchy="false">|</mo></mrow></mrow><mrow><mo stretchy="false">|</mo><mrow><mi>R</mi><mo>∩</mo><mi>P</mi></mrow><mo stretchy="false">|</mo></mrow></mfrac></mrow></math>. <math id="p8.m8" class="ltx_Math" alttext="P" display="inline"><mi>P</mi></math> is a subgroup of <math id="p8.m9" class="ltx_Math" alttext="RP" display="inline"><mrow><mi>R</mi><mo>⁢</mo><mi>P</mi></mrow></math>, so <math id="p8.m10" class="ltx_Math" alttext="p^{m}\mid|RP|" display="inline"><mrow><msup><mi>p</mi><mi>m</mi></msup><mo>∣</mo><mo stretchy="false">|</mo><mi>R</mi><mi>P</mi><mo stretchy="false">|</mo></mrow></math>. But <math id="p8.m11" class="ltx_Math" alttext="R" display="inline"><mi>R</mi></math> is a subgroup of <math id="p8.m12" class="ltx_Math" alttext="Q" display="inline"><mi>Q</mi></math> and <math id="p8.m13" class="ltx_Math" alttext="P" display="inline"><mi>P</mi></math> is a Sylow p-subgroup, so <math id="p8.m14" class="ltx_Math" alttext="|R|\cdot|P|" display="inline"><mrow><mrow><mo stretchy="false">|</mo><mi>R</mi><mo stretchy="false">|</mo></mrow><mo>⋅</mo><mrow><mo stretchy="false">|</mo><mi>P</mi><mo stretchy="false">|</mo></mrow></mrow></math> is a multiple of <math id="p8.m15" class="ltx_Math" alttext="p" display="inline"><mi>p</mi></math>. Then it must be that <math id="p8.m16" class="ltx_Math" alttext="|RP|=p^{m}" display="inline"><mrow><mrow><mo stretchy="false">|</mo><mrow><mi>R</mi><mo>⁢</mo><mi>P</mi></mrow><mo stretchy="false">|</mo></mrow><mo>=</mo><msup><mi>p</mi><mi>m</mi></msup></mrow></math>, and therefore <math id="p8.m17" class="ltx_Math" alttext="P=RP" display="inline"><mrow><mi>P</mi><mo>=</mo><mrow><mi>R</mi><mo>⁢</mo><mi>P</mi></mrow></mrow></math>, and so <math id="p8.m18" class="ltx_Math" alttext="R\subseteq P" display="inline"><mrow><mi>R</mi><mo>⊆</mo><mi>P</mi></mrow></math>. Obviously <math id="p8.m19" class="ltx_Math" alttext="R\subseteq Q" display="inline"><mrow><mi>R</mi><mo>⊆</mo><mi>Q</mi></mrow></math>, so <math id="p8.m20" class="ltx_Math" alttext="R\subseteq Q\cap P" display="inline"><mrow><mi>R</mi><mo>⊆</mo><mrow><mi>Q</mi><mo>∩</mo><mi>P</mi></mrow></mrow></math>.
+∎</p>
+</div>
+</div>
+<div id="p9" class="ltx_para">
+<p class="ltx_p">The following construction will be used in the remainder of the proof:</p>
+</div>
+<div id="p10" class="ltx_para">
+<p class="ltx_p">Given any Sylow p-subgroup <math id="p10.m1" class="ltx_Math" alttext="P" display="inline"><mi>P</mi></math>, consider the set of its conjugates <math id="p10.m2" class="ltx_Math" alttext="C" display="inline"><mi>C</mi></math>. Then
+<math id="p10.m3" class="ltx_Math" alttext="X\in C\leftrightarrow X=xPx^{-1}=\{xpx^{-1}|\forall p\in P\}" display="inline"><mrow><mrow><mi>X</mi><mo>∈</mo><mi>C</mi></mrow><mo>↔</mo><mrow><mi>X</mi><mo>=</mo><mrow><mi>x</mi><mo>⁢</mo><mi>P</mi><mo>⁢</mo><msup><mi>x</mi><mrow><mo>-</mo><mn>1</mn></mrow></msup></mrow><mo>=</mo><mrow><mo stretchy="false">{</mo><mrow><mi>x</mi><mo>⁢</mo><mi>p</mi><mo>⁢</mo><msup><mi>x</mi><mrow><mo>-</mo><mn>1</mn></mrow></msup></mrow><mo stretchy="false">|</mo><mrow><mrow><mo>∀</mo><mi>p</mi></mrow><mo>∈</mo><mi>P</mi></mrow><mo stretchy="false">}</mo></mrow></mrow></mrow></math> for some <math id="p10.m4" class="ltx_Math" alttext="x\in G" display="inline"><mrow><mi>x</mi><mo>∈</mo><mi>G</mi></mrow></math>. Observe that every <math id="p10.m5" class="ltx_Math" alttext="X\in C" display="inline"><mrow><mi>X</mi><mo>∈</mo><mi>C</mi></mrow></math> is a Sylow p-subgroup (and we will show that
+the converse holds as well). We let <math id="p10.m6" class="ltx_Math" alttext="G" display="inline"><mi>G</mi></math> act on <math id="p10.m7" class="ltx_Math" alttext="C" display="inline"><mi>C</mi></math> by conjugation:</p>
+<table id="S0.Ex2" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex2.m1" class="ltx_Math" alttext="g\cdot X=g\cdot xPx^{-1}=gxPx^{-1}g^{-1}=(gx)P(gx)^{-1}" display="block"><mrow><mrow><mi>g</mi><mo>⋅</mo><mi>X</mi></mrow><mo>=</mo><mrow><mrow><mi>g</mi><mo>⋅</mo><mi>x</mi></mrow><mo>⁢</mo><mi>P</mi><mo>⁢</mo><msup><mi>x</mi><mrow><mo>-</mo><mn>1</mn></mrow></msup></mrow><mo>=</mo><mrow><mi>g</mi><mo>⁢</mo><mi>x</mi><mo>⁢</mo><mi>P</mi><mo>⁢</mo><msup><mi>x</mi><mrow><mo>-</mo><mn>1</mn></mrow></msup><mo>⁢</mo><msup><mi>g</mi><mrow><mo>-</mo><mn>1</mn></mrow></msup></mrow><mo>=</mo><mrow><mrow><mo stretchy="false">(</mo><mrow><mi>g</mi><mo>⁢</mo><mi>x</mi></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mi>P</mi><mo>⁢</mo><msup><mrow><mo stretchy="false">(</mo><mrow><mi>g</mi><mo>⁢</mo><mi>x</mi></mrow><mo stretchy="false">)</mo></mrow><mrow><mo>-</mo><mn>1</mn></mrow></msup></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+</div>
+<div id="p11" class="ltx_para">
+<p class="ltx_p">This is clearly a group action, so we can consider the orbits of <math id="p11.m1" class="ltx_Math" alttext="P" display="inline"><mi>P</mi></math> under it; this remains true if we only consider elements from some subset of <math id="p11.m2" class="ltx_Math" alttext="G" display="inline"><mi>G</mi></math>. Of course, if all <math id="p11.m3" class="ltx_Math" alttext="G" display="inline"><mi>G</mi></math> is used then there is only one orbit, so we restrict the action to a Sylow p-subgroup <math id="p11.m4" class="ltx_Math" alttext="Q" display="inline"><mi>Q</mi></math>.  the orbits <math id="p11.m5" class="ltx_Math" alttext="O_{1},\ldots,O_{s}" display="inline"><mrow><msub><mi>O</mi><mn>1</mn></msub><mo>,</mo><mi mathvariant="normal">…</mi><mo>,</mo><msub><mi>O</mi><mi>s</mi></msub></mrow></math>, and let <math id="p11.m6" class="ltx_Math" alttext="P_{1},\ldots,P_{s}" display="inline"><mrow><msub><mi>P</mi><mn>1</mn></msub><mo>,</mo><mi mathvariant="normal">…</mi><mo>,</mo><msub><mi>P</mi><mi>s</mi></msub></mrow></math> be representatives of the corresponding orbits. By the orbit-stabilizer theorem, the size of an orbit is the index of the stabilizer, and under this action the stabilizer of any <math id="p11.m7" class="ltx_Math" alttext="P_{i}" display="inline"><msub><mi>P</mi><mi>i</mi></msub></math> is just <math id="p11.m8" class="ltx_Math" alttext="N_{Q}(P_{i})=Q\cap N_{G}(P_{i})=Q\cap P" display="inline"><mrow><mrow><msub><mi>N</mi><mi>Q</mi></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msub><mi>P</mi><mi>i</mi></msub><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mi>Q</mi><mo>∩</mo><mrow><msub><mi>N</mi><mi>G</mi></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msub><mi>P</mi><mi>i</mi></msub><mo stretchy="false">)</mo></mrow></mrow></mrow><mo>=</mo><mrow><mi>Q</mi><mo>∩</mo><mi>P</mi></mrow></mrow></math>, so <math id="p11.m9" class="ltx_Math" alttext="|O_{i}|=[Q:Q\cap P_{i}]" display="inline"><mrow><mo stretchy="false">|</mo><msub><mi>O</mi><mi>i</mi></msub><mo stretchy="false">|</mo><mo>=</mo><mrow><mo stretchy="false">[</mo><mi>Q</mi><mo>:</mo><mi>Q</mi><mo>∩</mo><msub><mi>P</mi><mi>i</mi></msub><mo stretchy="false">]</mo></mrow></mrow></math>.</p>
+</div>
+<div id="p12" class="ltx_para">
+<p class="ltx_p">There are two easy results on this construction. If <math id="p12.m1" class="ltx_Math" alttext="Q=P_{i}" display="inline"><mrow><mi>Q</mi><mo>=</mo><msub><mi>P</mi><mi>i</mi></msub></mrow></math> then <math id="p12.m2" class="ltx_Math" alttext="|O_{i}|=[P_{i}:P_{i}\cap P_{i}]=1" display="inline"><mrow><mo stretchy="false">|</mo><msub><mi>O</mi><mi>i</mi></msub><mo stretchy="false">|</mo><mo>=</mo><mrow><mo stretchy="false">[</mo><msub><mi>P</mi><mi>i</mi></msub><mo>:</mo><msub><mi>P</mi><mi>i</mi></msub><mo>∩</mo><msub><mi>P</mi><mi>i</mi></msub><mo stretchy="false">]</mo></mrow><mo>=</mo><mn>1</mn></mrow></math>. If <math id="p12.m3" class="ltx_Math" alttext="Q\neq P_{i}" display="inline"><mrow><mi>Q</mi><mo>≠</mo><msub><mi>P</mi><mi>i</mi></msub></mrow></math> then <math id="p12.m4" class="ltx_Math" alttext="[Q:Q\cap P_{i}]&gt;1" display="inline"><mrow><mrow><mo stretchy="false">[</mo><mi>Q</mi><mo>:</mo><mi>Q</mi><mo>∩</mo><msub><mi>P</mi><mi>i</mi></msub><mo stretchy="false">]</mo></mrow><mo>&gt;</mo><mn>1</mn></mrow></math>, and since the index of any subgroup of <math id="p12.m5" class="ltx_Math" alttext="Q" display="inline"><mi>Q</mi></math> divides <math id="p12.m6" class="ltx_Math" alttext="Q" display="inline"><mi>Q</mi></math>, <math id="p12.m7" class="ltx_Math" alttext="p\mid|O_{i}|" display="inline"><mrow><mi>p</mi><mo>∣</mo><mo stretchy="false">|</mo><msub><mi>O</mi><mi>i</mi></msub><mo stretchy="false">|</mo></mrow></math>.</p>
+</div>
+<div id="Thmproposition4" class="ltx_theorem ltx_theorem_proposition">
+<h6 class="ltx_title ltx_runin ltx_font_bold ltx_title_theorem">
+<span class="ltx_tag ltx_tag_theorem">Proposition 4</span>.</h6>
+<div id="Thmproposition4.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_italic">The number of conjugates of any Sylow p-subgroup of <math id="Thmproposition4.p1.m1" class="ltx_Math" alttext="G" display="inline"><mi>G</mi></math> is congruent to <math id="Thmproposition4.p1.m2" class="ltx_Math" alttext="1" display="inline"><mn mathvariant="normal">1</mn></math> modulo <math id="Thmproposition4.p1.m3" class="ltx_Math" alttext="p" display="inline"><mi>p</mi></math></span></p>
+</div>
+</div>
+<div id="p13" class="ltx_para">
+<p class="ltx_p">In the construction above, let <math id="p13.m1" class="ltx_Math" alttext="Q=P_{1}" display="inline"><mrow><mi>Q</mi><mo>=</mo><msub><mi>P</mi><mn>1</mn></msub></mrow></math>. Then <math id="p13.m2" class="ltx_Math" alttext="|O_{1}|=1" display="inline"><mrow><mrow><mo stretchy="false">|</mo><msub><mi>O</mi><mn>1</mn></msub><mo stretchy="false">|</mo></mrow><mo>=</mo><mn>1</mn></mrow></math> and <math id="p13.m3" class="ltx_Math" alttext="p\mid|O_{i}|" display="inline"><mrow><mi>p</mi><mo>∣</mo><mo stretchy="false">|</mo><msub><mi>O</mi><mi>i</mi></msub><mo stretchy="false">|</mo></mrow></math> for <math id="p13.m4" class="ltx_Math" alttext="i\neq 1" display="inline"><mrow><mi>i</mi><mo>≠</mo><mn>1</mn></mrow></math>. Since the number of conjugates of <math id="p13.m5" class="ltx_Math" alttext="P" display="inline"><mi>P</mi></math> is the sum of the number in each orbit, the number of conjugates is of the form <math id="p13.m6" class="ltx_Math" alttext="1+k_{2}p+k_{3}p+\cdots+k_{s}p" display="inline"><mrow><mn>1</mn><mo>+</mo><mrow><msub><mi>k</mi><mn>2</mn></msub><mo>⁢</mo><mi>p</mi></mrow><mo>+</mo><mrow><msub><mi>k</mi><mn>3</mn></msub><mo>⁢</mo><mi>p</mi></mrow><mo>+</mo><mi mathvariant="normal">⋯</mi><mo>+</mo><mrow><msub><mi>k</mi><mi>s</mi></msub><mo>⁢</mo><mi>p</mi></mrow></mrow></math>, which is obviously congruent to <math id="p13.m7" class="ltx_Math" alttext="1" display="inline"><mn>1</mn></math> modulo <math id="p13.m8" class="ltx_Math" alttext="p" display="inline"><mi>p</mi></math>.</p>
+</div>
+<div id="Thmproposition5" class="ltx_theorem ltx_theorem_proposition">
+<h6 class="ltx_title ltx_runin ltx_font_bold ltx_title_theorem">
+<span class="ltx_tag ltx_tag_theorem">Proposition 5</span>.</h6>
+<div id="Thmproposition5.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_italic">Any two Sylow p-subgroups are conjugate
+</span></p>
+</div>
+</div>
+<div class="ltx_proof">
+<h6 class="ltx_title ltx_runin ltx_font_italic ltx_title_proof">Proof.</h6>
+<div id="p14" class="ltx_para">
+<p class="ltx_p">Given a Sylow p-subgroup <math id="p14.m1" class="ltx_Math" alttext="P" display="inline"><mi>P</mi></math> and any other Sylow p-subgroup <math id="p14.m2" class="ltx_Math" alttext="Q" display="inline"><mi>Q</mi></math>, consider again the construction given above. If <math id="p14.m3" class="ltx_Math" alttext="Q" display="inline"><mi>Q</mi></math> is not conjugate to <math id="p14.m4" class="ltx_Math" alttext="P" display="inline"><mi>P</mi></math> then <math id="p14.m5" class="ltx_Math" alttext="Q\neq P_{i}" display="inline"><mrow><mi>Q</mi><mo>≠</mo><msub><mi>P</mi><mi>i</mi></msub></mrow></math> for every <math id="p14.m6" class="ltx_Math" alttext="i" display="inline"><mi>i</mi></math>, and therefore <math id="p14.m7" class="ltx_Math" alttext="p\mid|O_{i}|" display="inline"><mrow><mi>p</mi><mo>∣</mo><mo stretchy="false">|</mo><msub><mi>O</mi><mi>i</mi></msub><mo stretchy="false">|</mo></mrow></math> for every orbit. But then the number of conjugates of <math id="p14.m8" class="ltx_Math" alttext="P" display="inline"><mi>P</mi></math> is divisible by <math id="p14.m9" class="ltx_Math" alttext="p" display="inline"><mi>p</mi></math>, contradicting the previous result. Therefore <math id="p14.m10" class="ltx_Math" alttext="Q" display="inline"><mi>Q</mi></math> must be conjugate to <math id="p14.m11" class="ltx_Math" alttext="P" display="inline"><mi>P</mi></math>.
+∎</p>
+</div>
+</div>
+<div id="Thmproposition6" class="ltx_theorem ltx_theorem_proposition">
+<h6 class="ltx_title ltx_runin ltx_font_bold ltx_title_theorem">
+<span class="ltx_tag ltx_tag_theorem">Proposition 6</span>.</h6>
+<div id="Thmproposition6.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_italic">The number of subgroups of <math id="Thmproposition6.p1.m1" class="ltx_Math" alttext="G" display="inline"><mi>G</mi></math> of order <math id="Thmproposition6.p1.m2" class="ltx_Math" alttext="p^{m}" display="inline"><msup><mi>p</mi><mi>m</mi></msup></math> is congruent to <math id="Thmproposition6.p1.m3" class="ltx_Math" alttext="1" display="inline"><mn mathvariant="normal">1</mn></math> modulo <math id="Thmproposition6.p1.m4" class="ltx_Math" alttext="p" display="inline"><mi>p</mi></math> and is a factor of <math id="Thmproposition6.p1.m5" class="ltx_Math" alttext="k" display="inline"><mi>k</mi></math></span></p>
+</div>
+</div>
+<div class="ltx_proof">
+<h6 class="ltx_title ltx_runin ltx_font_italic ltx_title_proof">Proof.</h6>
+<div id="p15" class="ltx_para">
+<p class="ltx_p">Since conjugates of a Sylow p-subgroup are precisely the Sylow p-subgroups, and since a Sylow p-subgroup has <math id="p15.m1" class="ltx_Math" alttext="1" display="inline"><mn>1</mn></math> modulo <math id="p15.m2" class="ltx_Math" alttext="p" display="inline"><mi>p</mi></math> conjugates, there are <math id="p15.m3" class="ltx_Math" alttext="1" display="inline"><mn>1</mn></math> modulo <math id="p15.m4" class="ltx_Math" alttext="p" display="inline"><mi>p</mi></math> Sylow p-subgroups.</p>
+</div>
+<div id="p16" class="ltx_para">
+<p class="ltx_p">Since the number of conjugates is the index of the normalizer, it must be <math id="p16.m1" class="ltx_Math" alttext="|G:N_{G}(P)|" display="inline"><mrow><mo stretchy="false">|</mo><mi>G</mi><mo>:</mo><msub><mi>N</mi><mi>G</mi></msub><mrow><mo stretchy="false">(</mo><mi>P</mi><mo stretchy="false">)</mo></mrow><mo stretchy="false">|</mo></mrow></math>. Since <math id="p16.m2" class="ltx_Math" alttext="P" display="inline"><mi>P</mi></math> is a subgroup of its normalizer, <math id="p16.m3" class="ltx_Math" alttext="p^{m}\mid N_{G}(P)" display="inline"><mrow><msup><mi>p</mi><mi>m</mi></msup><mo>∣</mo><msub><mi>N</mi><mi>G</mi></msub><mrow><mo stretchy="false">(</mo><mi>P</mi><mo stretchy="false">)</mo></mrow></mrow></math>, and therefore <math id="p16.m4" class="ltx_Math" alttext="|G:N_{G}(P)|\mid k" display="inline"><mrow><mo stretchy="false">|</mo><mi>G</mi><mo>:</mo><msub><mi>N</mi><mi>G</mi></msub><mrow><mo stretchy="false">(</mo><mi>P</mi><mo stretchy="false">)</mo></mrow><mo stretchy="false">|</mo><mo>∣</mo><mi>k</mi></mrow></math>.
+∎</p>
+</div>
+</div>
+<div id="p17" class="ltx_para ltx_align_right">
+<table class="ltx_tabular ltx_guessed_headers ltx_align_middle">
+<tbody class="ltx_tbody">
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l ltx_border_t">Title</th>
+<td class="ltx_td ltx_align_left ltx_border_r ltx_border_t">Sylow theorems, proof of</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Canonical name</th>
+<td class="ltx_td ltx_align_left ltx_border_r">SylowTheoremsProofOf</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Date of creation</th>
+<td class="ltx_td ltx_align_left ltx_border_r">2013-03-22 12:51:02</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Last modified on</th>
+<td class="ltx_td ltx_align_left ltx_border_r">2013-03-22 12:51:02</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Owner</th>
+<td class="ltx_td ltx_align_left ltx_border_r">Henry (455)</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Last modified by</th>
+<td class="ltx_td ltx_align_left ltx_border_r">Henry (455)</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Numerical id</th>
+<td class="ltx_td ltx_align_left ltx_border_r">12</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Author</th>
+<td class="ltx_td ltx_align_left ltx_border_r">Henry (455)</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Entry type</th>
+<td class="ltx_td ltx_align_left ltx_border_r">Proof</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Classification</th>
+<td class="ltx_td ltx_align_left ltx_border_r">msc 20D20</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Related topic</th>
+<td class="ltx_td ltx_align_left ltx_border_r">SylowPSubgroup</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_b ltx_border_l">Related topic</th>
+<td class="ltx_td ltx_align_left ltx_border_b ltx_border_r">SylowsThirdTheorem</td>
+</tr>
+</tbody>
+</table>
+</div>
+</article>
+</div>
+<footer class="ltx_page_footer">
+<div class="ltx_page_logo">Generated  on Fri Feb  9 19:24:14 2018 by <a href="http://dlmf.nist.gov/LaTeXML/">LaTeXML <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAsAAAAOCAYAAAD5YeaVAAAAAXNSR0IArs4c6QAAAAZiS0dEAP8A/wD/oL2nkwAAAAlwSFlzAAALEwAACxMBAJqcGAAAAAd0SU1FB9wKExQZLWTEaOUAAAAddEVYdENvbW1lbnQAQ3JlYXRlZCB3aXRoIFRoZSBHSU1Q72QlbgAAAdpJREFUKM9tkL+L2nAARz9fPZNCKFapUn8kyI0e4iRHSR1Kb8ng0lJw6FYHFwv2LwhOpcWxTjeUunYqOmqd6hEoRDhtDWdA8ApRYsSUCDHNt5ul13vz4w0vWCgUnnEc975arX6ORqN3VqtVZbfbTQC4uEHANM3jSqXymFI6yWazP2KxWAXAL9zCUa1Wy2tXVxheKA9YNoR8Pt+aTqe4FVVVvz05O6MBhqUIBGk8Hn8HAOVy+T+XLJfLS4ZhTiRJgqIoVBRFIoric47jPnmeB1mW/9rr9ZpSSn3Lsmir1fJZlqWlUonKsvwWwD8ymc/nXwVBeLjf7xEKhdBut9Hr9WgmkyGEkJwsy5eHG5vN5g0AKIoCAEgkEkin0wQAfN9/cXPdheu6P33fBwB4ngcAcByHJpPJl+fn54mD3Gg0NrquXxeLRQAAwzAYj8cwTZPwPH9/sVg8PXweDAauqqr2cDjEer1GJBLBZDJBs9mE4zjwfZ85lAGg2+06hmGgXq+j3+/DsixYlgVN03a9Xu8jgCNCyIegIAgx13Vfd7vdu+FweG8YRkjXdWy329+dTgeSJD3ieZ7RNO0VAXAPwDEAO5VKndi2fWrb9jWl9Esul6PZbDY9Go1OZ7PZ9z/lyuD3OozU2wAAAABJRU5ErkJggg==" alt="[LOGO]"></a>
+</div></footer>
+</div>
+</body>
+</html>
